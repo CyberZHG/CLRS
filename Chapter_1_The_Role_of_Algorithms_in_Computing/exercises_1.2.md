@@ -1,3 +1,5 @@
+## Algorithm as a technology
+
 ### 1.2 - 1
 
 > Give an example of an application that requires algorithmic content at the application level, and discuss the function of the algorithms involved.
