@@ -1,4 +1,4 @@
-# Getting Started
+## Problems
 
 ### 2-1 Insertion sort on small arrays in merge sort
 
