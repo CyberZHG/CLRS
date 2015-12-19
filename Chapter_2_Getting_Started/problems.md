@@ -1,6 +1,6 @@
 # Getting Started
 
-### 2 - 1 Insertion sort on small arrays in merge sort
+### 2-1 Insertion sort on small arrays in merge sort
 
 > Although merge sort runs in $$\Theta(n \lg n)$$ worst-case time and insertion sort runs in $$\Theta(n^2)$$ worst-case time, the constant factors in insertion sort can make it faster in practice for small problem sizes on many machines. Thus, it makes sense to __coarsen__ the leaves of the recursion by using insertion sort within merge sort when subproblems become sufficiently small. Consider a modification to merge sort in which $$n=k$$ sublists of length $$k$$ are sorted using insertion sort and then merged using the standard merging mechanism, where $$k$$ is a value to be determined.
 
@@ -21,7 +21,7 @@ Since $$n \lg (n/k) <= n \lg n$$, thus $$nk = n\lg n$$, $$n=\lg n$$.
 
 Profiling with large data set.
 
-### 2 - 2 Correctness of bubblesort
+### 2-2 Correctness of bubblesort
 
 > Bubblesort is a popular, but inefficient, sorting algorithm. It works by repeatedly swapping adjacent elements that are out of order.
 ```
@@ -58,7 +58,7 @@ $$\Theta(n^2)$$
 
 For average case insertion sort is better.
 
-### 2 - 3 Correctness of Horner’s rule
+### 2-3 Correctness of Horner’s rule
 
 > The following code fragment implements Horner’s rule for evaluating a polynomial
 >
@@ -108,7 +108,7 @@ $$a_0, a_1, \cdots, a_n$$.
 
 $$\sum y_i = P(x)$$
 
-### 2 - 4 Inversions
+### 2-4 Inversions
 
 > Let $$A[1..n]$$ be an array of n distinct numbers. If $$i < j$$ and A[i] > A[j], then the pair $$(i, j)$$ is called an __inversion__ of A.
 
