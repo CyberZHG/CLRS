@@ -81,15 +81,12 @@ $$\Theta(n)$$
 
 > __b__. Write pseudocode to implement the naive polynomial-evaluation algorithm that computes each term of the polynomial from scratch. What is the running time of this algorithm? How does it compare to Horner’s rule?
 
-```
-POLYNOMIAL-EVALUATION(A, x)
-sum = 0
-for i = 1 to A.length
-    sub = 1
-    for j = 1 to i
-        sub = sub * x
-    sum = sum + A[i] * sub
-return sum
+```python
+def polynomial_evaluation(a, x):
+    sum = 0
+    for i in range(len(a)):
+        sum += a[i] * x ** i
+    return sum
 ```
 
 $$\Theta(n^2)$$
@@ -102,8 +99,14 @@ $$\Theta(n^2)$$
 >
 > Interpret a summation with no terms as equaling 0. Following the structure of the loop invariant proof presented in this chapter, use this loop invariant to show that, at termination, $$y=\sum_{k=0}^n a_k x^k$$.
 
+* Initialization: $$y=0$$
+* Maintenance: $$y=a_i+x\sum_{k=0}^{n-(i+1)} a_{k+i+1}x^k$$ $$=a_ix^0+\sum_{k=0}^{n-(i+1)} a_{k+i+1}x^{k+1}$$ $$=a_ix^0+\sum_{k=1}^{n-i} a_{k+i}x^{k}$$ $$=\sum_{k=0}^{n-i} a_{k+i}x^{k}$$
+* Termination: $$y=\sum_{k=0}^{n} a_{k}x^k$$
+
 > __d__. Conclude by arguing that the given code fragment correctly evaluates a polynomial characterized by the coefficients
 $$a_0, a_1, \cdots, a_n$$.
+
+$$\sum y_i = P(x)$$
 
 ### 2 - 4 Inversions
 
@@ -111,10 +114,45 @@ $$a_0, a_1, \cdots, a_n$$.
 
 > __a__. List the five inversions of the array $$\left \langle 2, 3, 8, 6, 1 \right \rangle$$.
 
+* $$(2, 1)$$
+* $$(3, 1)$$
+* $$(8, 6)$$
+* $$(8, 1)$$
+* $$(6, 1)$$
+
 > __b__. What array with elements from the set $$\{1,2,\cdots,n\}$$ has the most inversions? How many does it have?
+
+* Most: $$\{n,n-1,\cdots,1\}$$
+* How many: $$\frac{n(n-1)}{2}$$
 
 > __c__. What is the relationship between the running time of insertion sort and the number of inversions in the input array? Justify your answer.
 
+Equal
+
 > __d__. Give an algorithm that determines the number of inversions in any permutation on $$n$$ elements in $$\Theta(n \lg n)$$ worst-case time. (Hint: Modify merge sort.)
 
+```python
+def count_inversion_sub(arr, l, r):
+    if l >= r:
+        return 0
+    mid = (l + r) // 2
+    cnt = count_inversion_sub(arr, l, mid) + count_inversion_sub(arr, mid+1, r)
+    arr_l = [arr[i] for i in range(l, mid+1)]
+    arr_l.append(1e100)
+    arr_r = [arr[j] for j in range(mid+1, r+1)]
+    arr_r.append(1e100)
+    i, j = 0, 0
+    for k in range(l, r+1):
+        if arr_l[i] <= arr_r[j]:
+            arr[k] = arr_l[i]
+            i += 1
+        else:
+            arr[k] = arr_r[j]
+            j += 1
+            cnt += len(arr_l) - i - 1
+    return cnt
 
+
+def count_inversion(arr):
+    return count_inversion_sub(arr, 0, len(arr) - 1)
+```
