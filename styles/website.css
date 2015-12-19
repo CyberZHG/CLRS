@@ -1,1 +1,4 @@
 /* CSS for website */
+.book .book-summary ul.summary li {
+    list-style-type: none;
+}
