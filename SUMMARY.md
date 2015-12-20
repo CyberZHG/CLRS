@@ -11,6 +11,6 @@
     * [Designing algorithms](Chapter_2_Getting_Started/exercises_2.3.md)
     * [Problems](Chapter_2_Getting_Started/problems.md)
 * [Growth of Functions](Chapter_3_Growth_of_Functions/README.md)
-    * [Asymptotic notation](Chapter_3_Growth_of_Functions/exercises3.1.md)
-    * [Standard notations and common functions](Chapter_3_Growth_of_Functions/exercises3.2.md)
+    * [Asymptotic notation](Chapter_3_Growth_of_Functions/exercises_3.1.md)
+    * [Standard notations and common functions](Chapter_3_Growth_of_Functions/exercises_3.2.md)
     * [Problems](Chapter_3_Growth_of_Functions/problems.md)
