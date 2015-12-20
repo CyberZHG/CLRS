@@ -57,12 +57,12 @@ $$n!=n \cdot (n-1) \cdot \cdots \cdot 1 \ge 4 \cdot 2 \cdot \cdots \cdot 2 \cdot
 
 $$n!=n \cdot (n-1) \cdot \cdots \cdot 1 \le n \cdot n \cdot \cdots \cdot n = n^n$$
 
-### 3.2-4 $$\ast$$
+### 3.2-4 $$\star$$
 
 > Is the function $$\left \lceil \lg n \right \rceil!$$ polynomially bounded? Is the function $$\left \lceil \lg \lg n \right \rceil!$$ polynomially
 bounded?
 
-### 3.2-5 $$\ast$$
+### 3.2-5 $$\star$$
 
 > Which is asymptotically larger: $$\lg (\lg^{\ast}n)$$ or $$\lg^{\ast}(\lg n)$$?
 
