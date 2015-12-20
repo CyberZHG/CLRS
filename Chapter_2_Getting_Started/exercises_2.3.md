@@ -78,7 +78,7 @@ $$T(n)=T(n/2)+C$$
 
 No, still has to move the elements for $$\Theta(n)$$ in each iteration.
 
-### 2.3-7 $$\ast$$
+### 2.3-7 $$\star$$
 
 > Describe a $$\Theta(n\lg n)$$-time algorithm that, given a set $$S$$ of $$n$$ integers and another integer $$x$$, determines whether or not there exist two elements in $$S$$ whose sum is exactly $$x$$.
 
