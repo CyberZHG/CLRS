@@ -1,10 +1,12 @@
 ## Proof of the master theorem
 
-This section is skipped.
-
 ### 4.6-1 $$\star$$
 
 > Give a simple and exact expression for $$n_j$$ in equation (4.27) for the case in which b is a positive integer instead of an arbitrary real number.
+
+$$
+n_j=\left \lceil \frac{n}{b^j} \right \rceil
+$$
 
 ### 4.6-2 $$\star$$
 
