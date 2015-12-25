@@ -17,6 +17,15 @@ $$
 
 > Use a recursion tree to determine a good asymptotic upper bound on the recurrence $$T(n)=T(n/2)+n^2$$. Use the substitution method to verify your answer.
 
+$$
+\begin{array}{lll}
+T(n) & = & \sum_{i=0}^{\lg n - 1}(\frac{1}{2})^i n^2 + \Theta(1) \\
+& = & \frac{(1/2)^{\lg n}-1}{(1/2)-1}n^2 + \Theta(1) \\
+& = & 2n^2 - \frac{2}{n} + \Theta(1) \\
+& = & \Theta(n^2) \\
+\end{array}
+$$
+
 ### 4.4-3
 
 > Use a recursion tree to determine a good asymptotic upper bound on the recurrence $$T(n)=4T(n/2+2)+n$$. Use the substitution method to verify your answer.
