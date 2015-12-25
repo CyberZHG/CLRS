@@ -1,10 +1,17 @@
 ## The recursion-tree method for solving recurrences
 
-This section is skipped.
-
 ### 4.4-1
 
 > Use a recursion tree to determine a good asymptotic upper bound on the recurrence $$T(n)=3T(\left \lfloor n / 2 \right \rfloor) + n$$. Use the substitution method to verify your answer.
+
+$$
+\begin{array}{lll}
+T(n) & = & \sum_{i=0}^{\lg n - 1}(\frac{3}{2})^i n + \Theta(n^{\lg 3}) \\
+& = & \frac{(3/2)^{\lg n}-1}{(3/2)-1}n + \Theta(n^{\lg 3}) \\
+& = & 2n^{\lg 3} - 2n + \Theta({n^{\lg 3}}) \\
+& = & \Theta({n^{\lg 3}})
+\end{array}
+$$
 
 ### 4.4-2
 
