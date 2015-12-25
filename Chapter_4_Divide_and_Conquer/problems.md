@@ -247,9 +247,38 @@ Symmetric.
 
 > __b__. Consider the problem of finding a single good chip from among $$n$$ chips, assuming that more than $$n/2$$ of the chips are good. Show that $$\left \lfloor n / 2 \right \rfloor$$ pairwise tests are sufficient to reduce the problem to one of nearly half the size.
 
-Divide the chips in two groups, test each pair of chips with the same index from the two groups. If the result are both good, we keep one of chip; otherwise we remove both the chips. Repeat the step until there is only one chip left.
+First assume $$n$$ is even, then divide the chips in two groups, test each pair of chips with the same index from the two groups. If the result are is good, we keep one of chips; otherwise we remove both the chips. If $$n$$ is odd, if there are odd number of chips left after the selections, then there must be more good chips than bad chips, we can simply discard the odd chip; otherwise if there are even number of chips, then if there are equal number of good and bad chips, the odd one must be good, and if there are more good chips than bad chips, the difference must be larger or equal to 2, therefore we can safely add the odd one to the set for next iteration.
 
 $$T(n)=T(n/2)+n/2 = \sum_{i=0}^{\lg n - 1} \frac{n}{2^i} \le n/2$$
+
+```python
+class Chip:
+    def __init__(self, state):
+        self.state = state
+
+    def check(self, other):
+        if self.state:
+            return other.state
+        return random.randint(0, 1)
+
+
+def check(chip_a, chip_b):
+    return chip_a.check(chip_b) and chip_b.check(chip_a)
+
+
+def choose_good_chip(chips):
+    assert(len(chips) > 0)
+    if len(chips) == 1:
+        return chips[0]
+    mid = len(chips) // 2
+    next_chips = []
+    for i in range(mid):
+        if check(chips[i], chips[mid + i]):
+            next_chips.append(chips[i])
+    if len(chips) % 2 == 1 and len(next_chips) % 2 == 0:
+        next_chips.append(chips[-1])
+    return choose_good_chip(next_chips)
+```
 
 > __c__. Show that the good chips can be identified with $$\Theta(n)$$ pairwise tests, assuming that more than $$n/2$$ of the chips are good. Give and solve the recurrence that describes the number of tests.
 
