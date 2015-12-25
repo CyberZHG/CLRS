@@ -229,3 +229,28 @@ $$
 > __d__. Use part (c) to prove that $$F_i=\phi^i/\sqrt{5}$$ for $$i>0$$, rounded to the nearest integer. (Hint: Observe that $$| \hat{\phi} | < 1$$.)
 
 $$\frac{\hat{\phi^i}}{\sqrt{5}} \le 0.5$$
+
+### 4-5 Chip testing
+
+> Professor Diogenes has $$n$$ supposedly identical integrated-circuit chips that in principle are capable of testing each other. The professor’s test jig accommodates two chips at a time. When the jig is loaded, each chip tests the other and reports whether it is good or bad. A good chip always reports accurately whether the other chip is good or bad, but the professor cannot trust the answer of a bad chip. Thus, the four possible outcomes of a test are as follows:
+
+> | Chip A says | Chip B says | Conclusion |
+  |:------------|:------------|:-----------|
+  |B is good |A is good |both are good, or both are bad|
+  |B is good |A is bad |at least one is bad|
+  |B is bad |A is good |at least one is bad|
+  |B is bad |A is bad |at least one is bad|
+  
+> __a__. Show that if more than $$n/2$$ chips are bad, the professor cannot necessarily determine which chips are good using any strategy based on this kind of pairwise test. Assume that the bad chips can conspire to fool the professor.
+
+Symmetric.
+
+> __b__. Consider the problem of finding a single good chip from among $$n$$ chips, assuming that more than $$n/2$$ of the chips are good. Show that $$\left \lfloor n / 2 \right \rfloor$$ pairwise tests are sufficient to reduce the problem to one of nearly half the size.
+
+Divide the chips in two groups, test each pair of chips with the same index from the two groups. If the result are both good, we keep one of chip; otherwise we remove both the chips. Repeat the step until there is only one chip left.
+
+$$T(n)=T(n/2)+n/2 = \sum_{i=0}^{\lg n - 1} \frac{n}{2^i} \le n/2$$
+
+> __c__. Show that the good chips can be identified with $$\Theta(n)$$ pairwise tests, assuming that more than $$n/2$$ of the chips are good. Give and solve the recurrence that describes the number of tests.
+
+Based on master method, $$T(n)=T(n/2)+n/2=\Theta(n)$$
