@@ -254,3 +254,99 @@ $$T(n)=T(n/2)+n/2 = \sum_{i=0}^{\lg n - 1} \frac{n}{2^i} \le n/2$$
 > __c__. Show that the good chips can be identified with $$\Theta(n)$$ pairwise tests, assuming that more than $$n/2$$ of the chips are good. Give and solve the recurrence that describes the number of tests.
 
 Based on master method, $$T(n)=T(n/2)+n/2=\Theta(n)$$
+
+### 4-6 Monge arrays
+
+> An $$m \times n$$ array $$A$$ of real numbers is a __Monge array__ if for all $$i$$, $$j$$, $$k$$ and $$l$$ such that $$1 \le i < k \le m$$ and $$1 \le j < l \le n$$, we have
+
+> $$A[i,j]+A[k,l] \le A[i,l]+A[k,j]$$.
+
+> In other words, whenever we pick two rows and two columns of a Monge array and consider the four elements at the intersections of the rows and the columns, the sum of the upper-left and lower-right elements is less than or equal to the sum of the lower-left and upper-right elements. For example, the following array is Monge:
+
+> $$\begin{matrix}
+10 & 17 & 13 & 28 & 23 \\
+17 & 22 & 16 & 29 & 23 \\
+24 & 28 & 22 & 34 & 24 \\
+11 & 13 & 6 & 17 & 7 \\
+45 & 44 & 32 & 37 & 23 \\
+36 & 33 & 19 & 21 & 6 \\
+75 & 66 & 51 & 53 & 34 \\
+\end{matrix}$$
+
+> __a__. Prove that an array is Monge if and only if for all $$i=1,2,\dots,m-1$$ and $$j=1,2,\dots,n-1$$, we have
+
+> $$A[i,j]+A[i+1,j+1] \le A[i,j+1]+A[i+1,j]$$.
+
+> (Hint: For the "if" part, use induction separately on rows and columns.)
+
+If $$A[i,j]+A[i+1,j+1] \ge A[i,j+1]+A[i+1,j]$$, it contradicts the definition of Monge arrays.
+
+If $$A[i,j]+A[i+1,j+1] \le A[i,j+1]+A[i+1,j]$$, 
+
+suppose $$A[i,l-1]+A[k-1,l] \le A[i,l]+A[k-1,l-1]$$,
+
+since $$A[k-1,l-1]+A[k,l] \le A[k-1,l]+A[k,l-1]$$,
+
+therefore $$A[i,l-1]+A[k,l] \le A[i,l]+A[k,l-1]$$;
+
+suppose $$A[i, j]+A[k, l-1] \le A[i, l-1] + A[k, j]$$,
+
+since $$A[i,l-1]+A[k,l] \le A[i,l]+A[k,l-1]$$,
+
+therefore $$A[i,j]+A[k,l] \le A[i,l]+A[k,j]$$.
+
+> __b__. The following array is not Monge. Change one element in order to make it Monge. (Hint: Use part (a).)
+
+> $$\begin{matrix}
+37 & 23 & 22 & 32 \\
+21 & 6 & 7 & 10 \\
+53 & 34 & 30 & 31 \\
+32 & 13 & 9 & 6 \\
+43 & 21 & 15 & 8 \\
+\end{matrix}$$
+
+$$
+\begin{matrix}
+37 & 23 & \mathbf{24} & 32 \\
+21 & 6 & 7 & 10 \\
+53 & 34 & 30 & 31 \\
+32 & 13 & 9 & 6 \\
+43 & 21 & 15 & 8 \\
+\end{matrix}
+$$
+
+> __c__. Let $$f(i)$$ be the index of the column containing the leftmost minimum element of row $$i$$ . Prove that $$f(1) \le f(2) \le \dots \le f(m)$$ for any $$m \times n$$ Monge array.
+
+Let $$i$$ and $$j$$ be the index of leftmost minimal elements on row $$a$$ and $$b$$, suppose $$a < b$$ and $$i \ge j$$.
+
+$$A[a,i] \le A[a,j]$$,
+
+$$A[b,j] \le A[b,i]$$,
+
+$$A[a,j] + A[b,i] \le A[a,i]+ A[b,j]$$,
+
+the inequality is satisfied only when $$i = j$$, therefore $$i \le j$$.
+
+> __d__. Here is a description of a divide-and-conquer algorithm that computes the leftmost minimum element in each row of an $$m \times n$$ Monge array $$A$$:
+
+> > Construct a submatrix $$A'$$ of $$A$$ consisting of the even-numbered rows of $$A$$. Recursively determine the leftmost minimum for each row of $$A$$. Then compute the leftmost minimum in the odd-numbered rows of $$A$$.
+
+> Explain how to compute the leftmost minimum in the odd-numbered rows of $$A$$ (given that the leftmost minimum of the even-numbered rows is known) in $$O(m+n)$$ time.
+
+Search in the interval $$[f(i-1), f(i+1)]$$.
+
+$$c_1m/2 + c_2n = O(m+n)$$
+
+> __e__. Write the recurrence describing the running time of the algorithm described in part (d). Show that its solution is $$O(m+n\log m)$$.
+
+$$
+\begin{array}{rll}
+T(m,n)&=&T(m/2,n) + m + n \\
+&=&\sum_{i=0}^{\lg m - 1}(\frac{m}{2^i} + n) \\
+&=&\sum_{i=0}^{\lg m - 1}(\frac{m}{2^i} + n) \\
+&=&\frac{1}{1-1/2}m + n \lg m \\
+&=&2m + n \lg m \\
+&=&O(m+n\log m) \\
+\end{array}
+$$
+
