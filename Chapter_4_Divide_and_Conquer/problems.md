@@ -252,6 +252,9 @@ First assume $$n$$ is even, then divide the chips in two groups, test each pair 
 $$T(n)=T(n/2)+n/2 = \sum_{i=0}^{\lg n - 1} \frac{n}{2^i} \le n/2$$
 
 ```python
+import random
+
+
 class Chip:
     def __init__(self, state):
         self.state = state
@@ -379,3 +382,23 @@ T(m,n)&=&T(m/2,n) + m + n \\
 \end{array}
 $$
 
+```python
+def get_min_index(arr):
+    def get_min_index_rec(idx):
+        if len(idx) == 1:
+            min_idx = 0
+            for j in range(1, len(arr[0])):
+                if arr[idx[0]][j] < arr[idx[0]][min_idx]:
+                    min_idx = j
+            return [min_idx]
+        sub_idx = [idx[i] for i in range(len(idx)) if i % 2 == 0]
+        sub_min_idx = get_min_index_rec(sub_idx)
+        sub_min_idx.append(len(arr[0]) - 1)
+        min_idx = [sub_min_idx[i//2] for i in range(len(idx))]
+        for i in range(1, len(idx), 2):
+            for j in range(sub_min_idx[i//2] + 1, sub_min_idx[i//2 + 1] + 1):
+                if arr[idx[i]][j] < arr[idx[i]][min_idx[i]]:
+                    min_idx[i] = j
+        return min_idx
+    return get_min_index_rec([i for i in range(len(arr))])
+```
