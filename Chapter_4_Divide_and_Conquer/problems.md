@@ -146,3 +146,86 @@ $$\therefore$$ $$T(2^m)=\Theta(2^m \lg m)$$
 
 $$\therefore$$ $$T(n)=\Theta(n \lg \lg n)$$
 
+### 4-4 Fibonacci numbers
+
+> This problem develops properties of the Fibonacci numbers, which are defined by recurrence (3.22). We shall use the technique of generating functions to solve the Fibonacci recurrence. Define the __generating function__ (or __formal power series__) $$\mathcal{F}$$ as
+
+> $$
+\begin{array}{lll}
+\mathcal{F}(z) & = & \sum_{i=0}^\infty F_i z^i \\
+               & = & 0 + z + z^2 + 2z^3 + 3z^4 + 5z^5 + 8z^6 + 13z^7 + 21z^8+\dots
+\end{array}
+$$
+
+> where $$\mathcal{F}_i$$ is the $$i$$th Fibonacci number.
+
+> __a__. Show that $$\mathcal{F}(z) = z + z \mathcal{F}(z) + z^2\mathcal{F}(z)$$.
+
+$$
+\begin{array}{rll}
+z + z \mathcal{F}(z) + z^2\mathcal{F}(z) &=& z + z\sum_{i=0}^\infty F_i z^i + z^2\sum_{i=0}^\infty F_i z^i \\ 
+&=& z + \sum_{i=1}^\infty F_{i-1} z^i + \sum_{i=2}^\infty F_{i-2} z^i \\
+&=& z + z^2 + \sum_{i=2}^\infty(F_{i-1} + F_{i-2})z^i \\
+&=& z + z^2 + \sum_{i=2}^\infty F_iz^i \\
+&=& \sum_{i=0}^\infty F_iz^i \\
+& = & \mathcal{F}(z)
+\end{array}
+$$
+
+> __b__. Show that
+>
+> $$
+\begin{array}{lll}
+\mathcal{F}(z) & = & \frac{z}{1-z-z^2} \\
+               & = & \frac{z}{(1-\phi z)(1 - \hat{\phi}z)} \\
+               & = & \frac{1}{\sqrt{5}}(\frac{1}{1-\phi z}-\frac{1}{1-\hat{\phi} z}) \\
+\end{array}
+$$
+
+> $$\phi=\frac{1+\sqrt{5}}{2}=1.61803\dots$$
+
+> and
+
+> $$\hat{\phi}=\frac{1-\sqrt{5}}{2}=-0.61803\dots$$
+
+$$
+\begin{array}{rll}
+\mathcal{F}(z) &=& z + z \mathcal{F}(z) + z^2\mathcal{F}(z) \\
+(1-z-z^2)\mathcal{F}(z) &=& z \\
+\mathcal{F}(z) &=& \frac{z}{1-z-z^2}
+\end{array}
+$$
+
+$$
+\begin{array}{rll}
+(1-\phi z)(1 - \hat{\phi}z) &=& 1 - (\phi + \hat{\phi})z + \phi \hat{\phi} z^2 \\
+\phi + \hat{\phi} &=& 1 \\
+\phi \hat{\phi} &=& \frac{1-5}{4} = -1 \\
+\therefore (1-\phi z)(1 - \hat{\phi}z) &=& 1 - z - z^2 \\
+\therefore \mathcal{F}(z) & = & \frac{z}{(1-\phi z)(1 - \hat{\phi}z)}
+\end{array}
+$$
+
+$$
+\begin{array}{rll}
+\frac{1}{\sqrt{5}}(\frac{1}{1-\phi z}-\frac{1}{1-\hat{\phi} z}) &=& \frac{1}{\sqrt{5}}(\frac{(\hat{\phi} - \phi)z}{(1-\phi z)(1-\hat{\phi} z)}) \\
+\mathcal{F}(z) &=& \frac{1}{\sqrt{5}}(\frac{1}{1-\phi z}-\frac{1}{1-\hat{\phi} z}) \\
+\end{array}
+$$
+
+> __c__. Show that
+
+> $$\mathcal{F}(z)=\sum_{i=0}^{\infty}\frac{1}{\sqrt{5}}(\phi^i-\hat{\phi^i})z^i$$.
+
+$$\sum_{i=0}^\infty x^i=\frac{1}{1-x}$$,
+
+$$
+\begin{array}{rll}
+\mathcal{F}(z) &=& \frac{1}{\sqrt{5}}(\frac{1}{1-\phi z}-\frac{1}{1-\hat{\phi} z}) \\
+&=& \sum_{i=0}^{\infty}\frac{1}{\sqrt{5}}(\phi^i-\hat{\phi^i})z^i
+\end{array}
+$$
+
+> __d__. Use part (c) to prove that $$F_i=\phi^i/\sqrt{5}$$ for $$i>0$$, rounded to the nearest integer. (Hint: Observe that $$| \hat{\phi} | < 1$$.)
+
+$$\frac{\hat{\phi^i}}{\sqrt{5}} \le 0.5$$
