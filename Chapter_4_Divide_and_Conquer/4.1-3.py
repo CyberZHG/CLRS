@@ -19,6 +19,7 @@ def find_max_crossing_subarray(arr, low, mid, high):
             max_right = j
     return max_left, max_right, left_sum + right_sum
 
+
 def find_maximum_subarray(arr, low, high):
     if low >= high:
         return -1, -1, -1e100

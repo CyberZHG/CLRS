@@ -5,7 +5,7 @@ exit_code=0
 for i in "${!file_names[@]}"
 do
   if [ -d "${file_names[i]}" ]; then
-    if [ "${file_names[i]}" == ".git" ]; then
+    if [ "${file_names[i]}" == ".." ]; then
       continue
     fi
     sub_file_string=$(ls -a "${file_names[i]}")
@@ -14,7 +14,7 @@ do
     do
       extension="${sub_file_names[j]##*.}"
       if [ "$extension" == "py" ]; then
-        echo "python ${sub_file_names[j]}"
+        echo "${file_names[i]}/${sub_file_names[j]}"
         python "${file_names[i]}/${sub_file_names[j]}"
         if [ "$?" -ne 0 ]; then
           exit_code=1

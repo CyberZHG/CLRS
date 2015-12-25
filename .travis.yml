@@ -6,6 +6,6 @@ python:
   - "3.3"
   - "3.4"
   - "3.5"
-  - "3.5-dev"
-  - "nightly"
+install: pip install pep8
+before_script: pep8 --max-line-length=100 .
 script: sudo bash test.sh
