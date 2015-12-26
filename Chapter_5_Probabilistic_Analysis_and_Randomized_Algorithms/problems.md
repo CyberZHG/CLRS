@@ -9,14 +9,30 @@ value of the counter is $$0$$, representing a count of $$n_0 = 0$$. The INCREMEN
 operation increases the counter by 1 with probability $$1/(n_{i+1}-n_i)$$, and it leaves the counter unchanged with probability $$1-1/(n_{i+1}-n_i)$$.
 
 > If we select $$n_i = i$$ for all $$i \ge 0$$, then the counter is an ordinary one. More interesting situations arise if we select, say, $$n_i = 2^{i-1}$$ for $$i > 0$$ or $$n_i = F_i$$ (the
-$$i$$th Fibonacci number—see Section 3.2).
+$$i$$th Fibonacci number - see Section 3.2).
 
 > For this problem, assume that $$n_{2^b-1}$$ is large enough that the probability of an overflow error is negligible.
 
 > __*a*__. Show that the expected value represented by the counter after $$n$$ INCREMENT operations have been performed is exactly $$n$$.
 
+$$
+E[X_i] = \left ( n_{i+1}-n_i \right ) \cdot \left ( \frac{1}{n_{i+1}-n_i} \right ) + 0 \cdot \left ( 1 - \frac{1}{n_{i+1}-n_i} \right ) = 1
+$$
+
 > __*b*__. The analysis of the variance of the count represented by the counter depends on the sequence of the $$n_i$$. Let us consider a simple case: $$n_i = 100i$$ for all $$i \ge 0$$. Estimate the variance in the value represented by the register after $$n$$
 INCREMENT operations have been performed.
+
+$$
+\begin{array}{rll}
+Var[X_i] &=& E[X_i^2] - E[X_i]^2 \\
+&=& \displaystyle \left ( 100^2 \cdot \frac{1}{100} + 0^2 \cdot \frac{99}{100} \right ) - 1\\
+&=& 99
+\end{array}
+$$
+
+$$
+Var[X] = \sum_{i=1}^n Var[X_i] = 99n
+$$
 
 ### 5-2 Searching an unsorted array
 
