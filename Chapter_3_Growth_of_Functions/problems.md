@@ -10,23 +10,23 @@
 
 > __*a*__. If $$k \ge d$$, then $$p(n)=O(n^k)$$
 
-$$p(n)=\sum_{i=0}^d a_i n^i \le \sum_{i=0}^d a_i n^k$$
+$$\displaystyle p(n)=\sum_{i=0}^d a_i n^i \le \sum_{i=0}^d a_i n^k$$
 
 > __*b*__. If $$k \le d$$, then $$p(n)=\Omega(n^k)$$
 
-$$p(n)=\sum_{i=0}^d a_i n^i \ge \sum_{i=k}^d a_i n^i$$
+$$\displaystyle p(n)=\sum_{i=0}^d a_i n^i \ge \sum_{i=k}^d a_i n^i$$
 
 > __*c*__. If $$k = d$$, then $$p(n)=\Theta(n^k)$$
 
-$$p(n)=O(n^k)$$ and $$p(n)=\Theta(n^k)$$
+$$\displaystyle p(n)=O(n^k)$$ and $$p(n)=\Theta(n^k)$$
 
 > __*d*__. If $$k > d$$, then $$p(n)=o(n^k)$$
 
-$$p(n)=\sum_{i=0}^d a_i n^i < \sum_{i=0}^d a_i n^k$$
+$$\displaystyle p(n)=\sum_{i=0}^d a_i n^i < \sum_{i=0}^d a_i n^k$$
 
 > __*e*__. If $$k < d$$, then $$p(n)=\omega(n^k)$$
 
-$$p(n)=\sum_{i=0}^d a_i n^i > \sum_{i=k}^d a_i n^i$$
+$$\displaystyle p(n)=\sum_{i=0}^d a_i n^i > \sum_{i=k}^d a_i n^i$$
 
 ### 3-2 Relative asymptotic growths
 
@@ -86,7 +86,7 @@ True.
 
 $$f(n) \le cg(n)$$
 
-$$g(n) \ge \frac{1}{c}f(n)$$
+$$\displaystyle g(n) \ge \frac{1}{c}f(n)$$
 
 > __*g*__. $$f(n)=\Theta(f(n/2))$$.
 
