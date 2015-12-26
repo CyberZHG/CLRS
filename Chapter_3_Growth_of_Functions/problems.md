@@ -8,23 +8,23 @@
 > 
 > where $$a_d > 0$$, be a degree-$$d$$ polynomial in $$n$$, and let $$k$$ be a constant. Use the definitions of the asymptotic notations to prove the following properties.
 
-> __a__. If $$k \ge d$$, then $$p(n)=O(n^k)$$
+> __*a*__. If $$k \ge d$$, then $$p(n)=O(n^k)$$
 
 $$p(n)=\sum_{i=0}^d a_i n^i \le \sum_{i=0}^d a_i n^k$$
 
-> __b__. If $$k \le d$$, then $$p(n)=\Omega(n^k)$$
+> __*b*__. If $$k \le d$$, then $$p(n)=\Omega(n^k)$$
 
 $$p(n)=\sum_{i=0}^d a_i n^i \ge \sum_{i=k}^d a_i n^i$$
 
-> __c__. If $$k = d$$, then $$p(n)=\Theta(n^k)$$
+> __*c*__. If $$k = d$$, then $$p(n)=\Theta(n^k)$$
 
 $$p(n)=O(n^k)$$ and $$p(n)=\Theta(n^k)$$
 
-> __d__. If $$k > d$$, then $$p(n)=o(n^k)$$
+> __*d*__. If $$k > d$$, then $$p(n)=o(n^k)$$
 
 $$p(n)=\sum_{i=0}^d a_i n^i < \sum_{i=0}^d a_i n^k$$
 
-> __e__. If $$k < d$$, then $$p(n)=\omega(n^k)$$
+> __*e*__. If $$k < d$$, then $$p(n)=\omega(n^k)$$
 
 $$p(n)=\sum_{i=0}^d a_i n^i > \sum_{i=k}^d a_i n^i$$
 
@@ -44,11 +44,11 @@ should be in the form of the table with "yes" or "no" written in each box.
 
 ### 3-3 Ordering by asymptotic growth rates
 
-> __a__. Rank the following functions by order of growth; that is, find an arrangement $$g_1, g_2, \dots ,g_{30}$$ of the functions satisfying $$g_1 = \Omega(g2)$$, $$g_2 = \Omega(g3)$$, $$\dots$$ , $$g_{29} = \Omega(g_{30})$$. Partition your list into equivalence classes such that functions $$f(n)$$ and $$g(n)$$ are in the same class if and only if $$f(n) = \Theta(g(n))$$.
+> __*a*__. Rank the following functions by order of growth; that is, find an arrangement $$g_1, g_2, \dots ,g_{30}$$ of the functions satisfying $$g_1 = \Omega(g2)$$, $$g_2 = \Omega(g3)$$, $$\dots$$ , $$g_{29} = \Omega(g_{30})$$. Partition your list into equivalence classes such that functions $$f(n)$$ and $$g(n)$$ are in the same class if and only if $$f(n) = \Theta(g(n))$$.
 
 $$2^{2^{n+1}}$$ $$>$$ $$2^{2^n}$$ $$>$$ $$(n+1)!$$ $$>$$ $$n!$$ $$>$$ $$e^n$$ $$>$$ $$n \cdot 2^n$$ $$>$$ $$2^n$$ $$>$$ $$(\frac{3}{2})^n$$ $$>$$ $$n^{\lg \lg n}$$ $$=$$ $$(\lg n)^{\lg n}$$ $$(\lg n)!$$ $$>$$ $$n^3$$ $$n ^ 2$$ $$=$$ $$4^{\lg n}$$ $$>$$ $$n \ln n$$ $$>$$ $$=$$ $$\lg(n!)$$ $$>$$ $$n$$ $$=$$ $$2^{\lg n}$$ $$>$$ $$(\sqrt{2})^{\lg n}$$ $$>$$ $$2^{\sqrt{2 \lg n}}$$ $$>$$ $$\lg^2n$$ $$>$$ $$\ln n$$ $$>$$ $$\sqrt{\lg n}$$ $$>$$ $$\ln \ln n$$ $$>$$ $$2^{\lg^\ast n}$$ $$>$$ $$\lg^\ast (\lg n)$$ $$=$$ $$\lg^\ast n$$ $$>$$ $$\lg(\lg^\ast n)$$ $$>$$ $$1$$ $$=$$ $$n^{1/\lg n}$$
 
-> __b__. Give an example of a single nonnegative function $$f(n)$$ such that for all functions $$g_i(n)$$ in part (a), $$f(n)$$ is neither $$O(g_i(n))$$ nor $$\Omega(g_i(n))$$.
+> __*b*__. Give an example of a single nonnegative function $$f(n)$$ such that for all functions $$g_i(n)$$ in part (a), $$f(n)$$ is neither $$O(g_i(n))$$ nor $$\Omega(g_i(n))$$.
 
 $$n^{\sin n}$$
 
@@ -56,15 +56,15 @@ $$n^{\sin n}$$
 
 > Let $$f(n)$$ and $$g(n)$$ be asymptotically positive functions. Prove or disprove each of the following conjectures.
 
-> __a__. $$f(n)=O(g(n))$$ implies $$g(n)=O(f(n))$$.
+> __*a*__. $$f(n)=O(g(n))$$ implies $$g(n)=O(f(n))$$.
 
 False, $$f(n)=1$$, $$g(n)=n$$.
 
-> __b__. $$f(n)+g(n)=\Theta(\min(f(n), g(n)))$$.
+> __*b*__. $$f(n)+g(n)=\Theta(\min(f(n), g(n)))$$.
 
 False, $$f(n)=1$$, $$g(n)=n$$.
 
-> __c__. $$f(n)=O(g(n))$$ implies $$\lg(f(n))=O(\lg(g(n)))$$, where $$\lg(g(n)) \ge 1$$ and $$f(n) \ge 1$$ for all sufficiently large $$n$$.
+> __*c*__. $$f(n)=O(g(n))$$ implies $$\lg(f(n))=O(\lg(g(n)))$$, where $$\lg(g(n)) \ge 1$$ and $$f(n) \ge 1$$ for all sufficiently large $$n$$.
 
 True.
 
@@ -72,15 +72,15 @@ $$f(n) \le cg(n)$$
 
 $$\lg(f(n)) \le \lg c + \lg g(n) = O(\lg g(n))$$
 
-> __d__. $$f(n)=O(g(n))$$ implies $$2^{f(n)}=O(2^{g(n)})$$.
+> __*d*__. $$f(n)=O(g(n))$$ implies $$2^{f(n)}=O(2^{g(n)})$$.
 
 False, $$f(n)=2n$$, $$g(n)=n$$.
 
-> __e__. $$f(n)=O((f(n))^2)$$
+> __*e*__. $$f(n)=O((f(n))^2)$$
 
 False, $$f(n)=1/n$$.
 
-> __f__. $$f(n)=O(g(n))$$ implies $$g(n)=\Omega(f(n))$$.
+> __*f*__. $$f(n)=O(g(n))$$ implies $$g(n)=\Omega(f(n))$$.
 
 True.
 
@@ -88,11 +88,11 @@ $$f(n) \le cg(n)$$
 
 $$g(n) \ge \frac{1}{c}f(n)$$
 
-> __g__. $$f(n)=\Theta(f(n/2))$$.
+> __*g*__. $$f(n)=\Theta(f(n/2))$$.
 
 False, $$f(n)=4^n$$, $$f(n/2)=2^n$$.
 
-> __h__. $$f(n)+o(f(n))=\Theta(f(n))$$.
+> __*h*__. $$f(n)+o(f(n))=\Theta(f(n))$$.
 
 False.
 
