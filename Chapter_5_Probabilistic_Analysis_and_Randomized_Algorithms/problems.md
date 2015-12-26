@@ -42,24 +42,71 @@ $$
 
 > __*a*__. Write pseudocode for a procedure RANDOM-SEARCH to implement the strategy above. Be sure that your algorithm terminates when all indices into $$A$$ have been picked.
 
+```python
+import random
+
+
+def random_search(a, x):
+    n = len(a)
+    searched = {}
+    while len(searched) < n:
+        r = random.randint(0, n - 1)
+        if a[r] == x:
+            return r
+        if r not in searched.keys():
+            searched[r] = True
+    return -1
+```
+
 > __*b*__. Suppose that there is exactly one index $$i$$ such that $$A[i]=x$$. What is the expected number of indices into $$A$$ that we must pick before we find $$x$$ and RANDOM-SEARCH terminates?
+
+$$n$$
 
 > __*c*__. Generalizing your solution to part (b), suppose that there are $$k \ge 1$$ indices $$i$$ such that $$A[i]=x$$. What is the expected number of indices into $$A$$ that we must pick before we find $$x$$ and RANDOM-SEARCH terminates? Your answer should be a function of $$n$$ and $$k$$.
 
+$$n/k$$
+
 > __*d*__. Suppose that there are no indices $$i$$ such that $$A[i]=x$$. What is the expected number of indices into $$A$$ that we must pick before we have checked all elements of $$A$$ and RANDOM-SEARCH terminates?
 
+Same as section 5.4.2, $$n(\ln n + O(1))$$
 
 > Now consider a deterministic linear search algorithm, which we refer to as DETERMINISTIC-SEARCH. Specifically, the algorithm searches $$A$$ for $$x$$ in order, considering $$A[1], A[2], A[3], \dots, A[n]$$ until either it finds $$A[i]=x$$ or it reaches the end of the array. Assume that all possible permutations of the input array are equally likely.
 
 > __*e*__. Suppose that there is exactly one index $$i$$ such that $$A[i]=x$$. What is the average-case running time of DETERMINISTIC-SEARCH? What is the worst-case running time of DETERMINISTIC_SERACH?
 
-> __*f*__. Generalizing your solution to part (e), suppose that there are $$k \ge 1$$ indices $$i$$ such that $$A[i]=x$$. What is the average-case running time of DETERMINISTICSEARCH? What is the worst-case running time of DETERMINISTIC-SEARCH? Your answer should be a function of $$n$$ and $$k$$.
+Average: $$n/2$$
+
+Worst: $$n$$
+
+> __*f*__. Generalizing your solution to part (e), suppose that there are $$k \ge 1$$ indices $$i$$ such that $$A[i]=x$$. What is the average-case running time of DETERMINISTIC-SEARCH? What is the worst-case running time of DETERMINISTIC-SEARCH? Your answer should be a function of $$n$$ and $$k$$.
+
+Average:
+
+$$
+\begin{array}{rl}
+& \displaystyle \sum_{i=1}^n i \cdot \frac{\displaystyle \binom{n-i}{k-1}}{\displaystyle \binom{n}{k}}\\
+=& \displaystyle \frac{n+1}{k+1}
+\end{array}
+$$
+
+Worst: $$n - k + 1$$
 
 > __*g*__. Suppose that there are no indices $$i$$ such that $$A[i]=x$$. What is the average-case running time of DETERMINISTIC-SEARCH? What is the worst-case running time of DETERMINISTIC-SEARCH? 
+
+Average: $$n$$
+
+Worst: $$n$$
 
 > Finally, consider a randomized algorithm SCRAMBLE-SEARCH that works by first randomly permuting the input array and then running the deterministic linear search given above on the resulting permuted array.
 
 > __*h*__. Letting $$k$$ be the number of indices $$i$$ such that $$A[i]=x$$, give the worst-case and expected running times of SCRAMBLE-SEARCH for the cases in which $$k = 0$$ and $$k = 1$$. Generalize your solution to handle the case in which $$k \ge 1$$. 
 
+Same as DETERMINISTIC-SEARCH.
+
 > __*i*__. Which of the three searching algorithms would you use? Explain your answer.
 
+DETERMINISTIC-SEARCH
+
+* Easy to implement
+* $$O(1)$$ memory
+* Guarantee $$O(n)$$ running time
