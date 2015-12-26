@@ -60,12 +60,43 @@ At least 94 people.
 
 > What is the probability that a $$k$$-string over a set of size $$n$$ forms a $$k$$-permutation? How does this question relate to the birthday paradox?
 
+Complementary to the birthday paradox.
+
+$$
+Pr = 1 \cdot \frac{n-1}{n} \cdot \frac{n-2}{n} \cdot \cdots \cdot \frac{n-k + 1}{n}
+$$
+
 ### 5.4-6 $$\star$$
 
 > Suppose that $$n$$ balls are tossed into $$n$$ bins, where each toss is independent and the ball is equally likely to end up in any bin. What is the expected number of empty bins? What is the expected number of bins with exactly one ball?
+
+* the expected number of empty bins
+
+$$
+E[X_i] = \left ( 1 - \frac{1}{n} \right )^n \approx \frac{1}{e}
+$$
+
+$$
+\begin{array}{rll}
+E[X] &=& \sum_{i=1}^n E[X_i] \\
+&=& \sum_{i=1}^n \frac{1}{e} \\
+&=& n/e \\
+\end{array}
+$$
+
+* the expected number of bins with exactly one ball
+
+$$
+E[X_i] = \binom{n}{1}\frac{1}{n}\left ( 1 - \frac{1}{n} \right )^{n-1} = \left ( 1 - \frac{1}{n} \right )^n\frac{n}{n-1} \approx \frac{1}{e}
+$$
+
+$$
+E[X] = \frac{n}{e}
+$$
+
 
 ### 5.4-7 $$\star$$
 
 > Sharpen the lower bound on streak length by showing that in $$n$$ flips of a fair coin, the probability is less than $$1/n$$ that no streak longer than $$\lg n - 2 \lg \lg n$$ consecutive heads occurs.
 
-
+$$\dots$$
