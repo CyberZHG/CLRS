@@ -74,10 +74,10 @@ Therefore, harmonic series are $$\Theta(\lg n)$$
 
 $$
 \begin{array}{rll}
-T(n) & = & n\sum_{i=0}^{\log_3{n} - 1}\frac{1}{\lg \frac{n}{3^i}} \\
-& = & \Theta(n\sum_{i=0}^{\log_3{n} - 1}\frac{1}{\log_3 \frac{n}{3^i}}) \\
-& = & \Theta(n\sum_{i=1}^{\log_3{n}}\frac{1}{i}) \\
-& = & \Theta(n\lg \lg n)
+T(n) & = & \displaystyle n\sum_{i=0}^{\log_3{n} - 1}\frac{1}{\lg \frac{n}{3^i}} \\
+& = & \displaystyle \Theta(n\sum_{i=0}^{\log_3{n} - 1}\frac{1}{\log_3 \frac{n}{3^i}}) \\
+& = & \displaystyle \Theta(n\sum_{i=1}^{\log_3{n}}\frac{1}{i}) \\
+& = & \displaystyle \Theta(n\lg \lg n)
 \end{array}
 $$
 
@@ -103,8 +103,8 @@ $$\Theta(n)$$
 
 $$
 \begin{array}{rll}
-T(n) & = & \sum_{i=1}^n \frac{1}{i} \\
-& = & \Theta(\lg n)
+T(n) & = & \displaystyle \sum_{i=1}^n \frac{1}{i} \\
+& = & \displaystyle \Theta(\lg n)
 \end{array}
 $$
 
@@ -112,10 +112,10 @@ $$
 
 $$
 \begin{array}{rll}
-T(n) & = & \sum_{i=1}^n \lg{i} \\
-& = & \lg{n!} \\
-& \le & \lg{n^n} \\
-& = & \Theta(n\lg n)
+T(n) & = & \displaystyle \sum_{i=1}^n \lg{i} \\
+& = & \displaystyle \lg{n!} \\
+& \le & \displaystyle \lg{n^n} \\
+& = & \displaystyle \Theta(n\lg n)
 \end{array}
 $$
 
@@ -123,8 +123,8 @@ $$
 
 $$
 \begin{array}{rll}
-T(n) & = & \sum_{i=1}^{n/2} \frac{1}{\lg{2i}} \\
-& = & \Theta(\lg \lg n)
+T(n) & = & \displaystyle \sum_{i=1}^{n/2} \frac{1}{\lg{2i}} \\
+& = & \displaystyle \Theta(\lg \lg n)
 \end{array}
 $$
 
@@ -140,7 +140,7 @@ T(2^m) &=& 2^{m/2}T(2^{m/2}) + 2^m \\
 \end{array}
 $$
 
-Let $$S(m)=\frac{T(2^m)}{2^m}$$, $$ S(m) = S(m/2) + 1 = \Theta(\lg m)$$,
+Let $$\displaystyle S(m)=\frac{T(2^m)}{2^m}$$, $$ S(m) = S(m/2) + 1 = \Theta(\lg m)$$,
 
 $$\therefore$$ $$T(2^m)=\Theta(2^m \lg m)$$
 
@@ -176,9 +176,9 @@ $$
 >
 > $$
 \begin{array}{lll}
-\mathcal{F}(z) & = & \frac{z}{1-z-z^2} \\
-               & = & \frac{z}{(1-\phi z)(1 - \hat{\phi}z)} \\
-               & = & \frac{1}{\sqrt{5}}(\frac{1}{1-\phi z}-\frac{1}{1-\hat{\phi} z}) \\
+\mathcal{F}(z) & = & \displaystyle \frac{z}{1-z-z^2} \\
+               & = & \displaystyle \frac{z}{(1-\phi z)(1 - \hat{\phi}z)} \\
+               & = & \displaystyle \frac{1}{\sqrt{5}}(\frac{1}{1-\phi z}-\frac{1}{1-\hat{\phi} z}) \\
 \end{array}
 $$
 
@@ -190,9 +190,9 @@ $$
 
 $$
 \begin{array}{rll}
-\mathcal{F}(z) &=& z + z \mathcal{F}(z) + z^2\mathcal{F}(z) \\
-(1-z-z^2)\mathcal{F}(z) &=& z \\
-\mathcal{F}(z) &=& \frac{z}{1-z-z^2}
+\mathcal{F}(z) &=& \displaystyle z + z \mathcal{F}(z) + z^2\mathcal{F}(z) \\
+(1-z-z^2)\mathcal{F}(z) &=& \displaystyle z \\
+\mathcal{F}(z) &=& \displaystyle \frac{z}{1-z-z^2}
 \end{array}
 $$
 
@@ -200,16 +200,16 @@ $$
 \begin{array}{rll}
 (1-\phi z)(1 - \hat{\phi}z) &=& 1 - (\phi + \hat{\phi})z + \phi \hat{\phi} z^2 \\
 \phi + \hat{\phi} &=& 1 \\
-\phi \hat{\phi} &=& \frac{1-5}{4} = -1 \\
+\phi \hat{\phi} &=& \displaystyle \frac{1-5}{4} = -1 \\
 \therefore (1-\phi z)(1 - \hat{\phi}z) &=& 1 - z - z^2 \\
-\therefore \mathcal{F}(z) & = & \frac{z}{(1-\phi z)(1 - \hat{\phi}z)}
+\therefore \mathcal{F}(z) & = & \displaystyle \frac{z}{(1-\phi z)(1 - \hat{\phi}z)}
 \end{array}
 $$
 
 $$
 \begin{array}{rll}
-\frac{1}{\sqrt{5}}(\frac{1}{1-\phi z}-\frac{1}{1-\hat{\phi} z}) &=& \frac{1}{\sqrt{5}}(\frac{(\hat{\phi} - \phi)z}{(1-\phi z)(1-\hat{\phi} z)}) \\
-\mathcal{F}(z) &=& \frac{1}{\sqrt{5}}(\frac{1}{1-\phi z}-\frac{1}{1-\hat{\phi} z}) \\
+\displaystyle \frac{1}{\sqrt{5}}(\frac{1}{1-\phi z}-\frac{1}{1-\hat{\phi} z}) &=& \displaystyle \frac{1}{\sqrt{5}}(\frac{(\hat{\phi} - \phi)z}{(1-\phi z)(1-\hat{\phi} z)}) \\
+\mathcal{F}(z) &=& \displaystyle \frac{1}{\sqrt{5}}(\frac{1}{1-\phi z}-\frac{1}{1-\hat{\phi} z}) \\
 \end{array}
 $$
 
@@ -217,18 +217,18 @@ $$
 
 > $$\mathcal{F}(z)=\sum_{i=0}^{\infty}\frac{1}{\sqrt{5}}(\phi^i-\hat{\phi^i})z^i$$.
 
-$$\sum_{i=0}^\infty x^i=\frac{1}{1-x}$$,
+$$\displaystyle \sum_{i=0}^\infty x^i=\frac{1}{1-x}$$,
 
 $$
 \begin{array}{rll}
-\mathcal{F}(z) &=& \frac{1}{\sqrt{5}}(\frac{1}{1-\phi z}-\frac{1}{1-\hat{\phi} z}) \\
-&=& \sum_{i=0}^{\infty}\frac{1}{\sqrt{5}}(\phi^i-\hat{\phi^i})z^i
+\mathcal{F}(z) &=& \displaystyle \frac{1}{\sqrt{5}}(\frac{1}{1-\phi z}-\frac{1}{1-\hat{\phi} z}) \\
+&=& \displaystyle \sum_{i=0}^{\infty}\frac{1}{\sqrt{5}}(\phi^i-\hat{\phi^i})z^i
 \end{array}
 $$
 
 > __*d*__. Use part (c) to prove that $$F_i=\phi^i/\sqrt{5}$$ for $$i>0$$, rounded to the nearest integer. (Hint: Observe that $$| \hat{\phi} | < 1$$.)
 
-$$\frac{\hat{\phi^i}}{\sqrt{5}} \le 0.5$$
+$$\displaystyle \frac{\hat{\phi^i}}{\sqrt{5}} \le 0.5$$
 
 ### 4-5 Chip testing
 
@@ -249,7 +249,7 @@ Symmetric.
 
 First assume $$n$$ is even, then divide the chips in two groups, test each pair of chips with the same index from the two groups. If the result are is good, we keep one of chips; otherwise we remove both the chips. If $$n$$ is odd, if there are odd number of chips left after the selections, then there must be more good chips than bad chips, we can simply discard the odd chip; otherwise if there are even number of chips, then if there are equal number of good and bad chips, the odd one must be good, and if there are more good chips than bad chips, the difference must be larger or equal to 2, therefore we can safely add the odd one to the set for next iteration.
 
-$$T(n)=T(n/2)+n/2 = \sum_{i=0}^{\lg n - 1} \frac{n}{2^i} \le n/2$$
+$$\displaystyle T(n)=T(n/2)+n/2 = \sum_{i=0}^{\lg n - 1} \frac{n}{2^i} \le n/2$$
 
 ```python
 import random
@@ -373,12 +373,12 @@ $$c_1m/2 + c_2n = O(m+n)$$
 
 $$
 \begin{array}{rll}
-T(m,n)&=&T(m/2,n) + m + n \\
-&=&\sum_{i=0}^{\lg m - 1}(\frac{m}{2^i} + n) \\
-&=&\sum_{i=0}^{\lg m - 1}(\frac{m}{2^i} + n) \\
-&=&\frac{1}{1-1/2}m + n \lg m \\
-&=&2m + n \lg m \\
-&=&O(m+n\log m) \\
+T(m,n)&=&\displaystyle T(m/2,n) + m + n \\
+&=&\displaystyle \sum_{i=0}^{\lg m - 1}(\frac{m}{2^i} + n) \\
+&=&\displaystyle \sum_{i=0}^{\lg m - 1}(\frac{m}{2^i} + n) \\
+&=&\displaystyle \frac{1}{1-1/2}m + n \lg m \\
+&=&\displaystyle 2m + n \lg m \\
+&=&\displaystyle O(m+n\log m) \\
 \end{array}
 $$
 
