@@ -42,11 +42,11 @@ $$
 
 $$
 \begin{array}{rll}
-E[X] &=& E \left [ \sum_{i=1}^m \sum_{j=i+1}^m \sum_{k=j+1}^m X_{ijk} \right ] \\
-&=& \sum_{i=1}^m \sum_{j=i+1}^m \sum_{k=j+1}^m E \left [ X_{ijk} \right ] \\
-&=& \sum_{i=1}^m \sum_{j=i+1}^m \sum_{k=j+1}^m \frac{1}{n^2} \\
-&=& \binom{m}{3} \frac{1}{n^2} \\
-&=& \frac{m \cdot (m-1) \cdot (m-2)}{6n^2}
+E[X] &=& \displaystyle E \left [ \sum_{i=1}^m \sum_{j=i+1}^m \sum_{k=j+1}^m X_{ijk} \right ] \\
+&=& \displaystyle \sum_{i=1}^m \sum_{j=i+1}^m \sum_{k=j+1}^m E \left [ X_{ijk} \right ] \\
+&=& \displaystyle \sum_{i=1}^m \sum_{j=i+1}^m \sum_{k=j+1}^m \frac{1}{n^2} \\
+&=& \displaystyle \binom{m}{3} \frac{1}{n^2} \\
+&=& \displaystyle \frac{m \cdot (m-1) \cdot (m-2)}{6n^2}
 \end{array}
 $$
 
@@ -78,9 +78,9 @@ $$
 
 $$
 \begin{array}{rll}
-E[X] &=& \sum_{i=1}^n E[X_i] \\
-&=& \sum_{i=1}^n \frac{1}{e} \\
-&=& n/e \\
+E[X] &=& \displaystyle \sum_{i=1}^n E[X_i] \\
+&=& \displaystyle \sum_{i=1}^n \frac{1}{e} \\
+&=& \displaystyle \frac{n}{e} \\
 \end{array}
 $$
 
