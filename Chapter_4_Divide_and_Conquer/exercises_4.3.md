@@ -8,10 +8,10 @@ Suppose $$T(n) \le n^2$$
 
 $$
 \begin{array}{lll}
-T(n) & \le & (n-1)^2 + n  \\
-     &   = & n^2 - 2n + 1 + n \\
-     &   = & n^2 - n + 1 \\
-     & \le & n^2
+T(n) & \le & \displaystyle (n-1)^2 + n  \\
+     &   = & \displaystyle n^2 - 2n + 1 + n \\
+     &   = & \displaystyle n^2 - n + 1 \\
+     & \le & \displaystyle n^2
 \end{array}
 $$
 
@@ -23,11 +23,11 @@ Suppose $$T(n) \le c\lg(n-1)$$
 
 $$
 \begin{array}{llll}
-T(n) & \le & c\lg(\left \lceil n/2 \right \rceil - a) + 1 & \\
-     & \le & c\lg(\frac{n+1}{2} - a) + 1 & \\
-     &  =  & c\lg(n + 1 - 2a) - c + 1 & \\
-     & \le & c\lg(n - a) - c + 1 & (a \ge \frac{1}{3}) \\
-     & \le & c\lg(n - a) & (c \ge 1)
+T(n) & \le & \displaystyle c\lg(\left \lceil n/2 \right \rceil - a) + 1 & \\
+     & \le & \displaystyle c\lg(\frac{n+1}{2} - a) + 1 & \\
+     &  =  & \displaystyle c\lg(n + 1 - 2a) - c + 1 & \\
+     & \le & \displaystyle c\lg(n - a) - c + 1 & \displaystyle (a \ge \frac{1}{3}) \\
+     & \le & \displaystyle c\lg(n - a) & \displaystyle (c \ge 1)
 \end{array}
 $$
 
@@ -39,9 +39,9 @@ Suppose $$T(n) \ge cn \lg n$$
 
 $$
 \begin{array}{llll}
-T(n) & \ge & 2c(n/2)\lg(n/2)+n & \\
-     &  =  & cn\lg n - cn + n & \\
-     & \ge & cn\lg n & (c \le 1)
+T(n) & \ge & \displaystyle 2c(n/2)\lg(n/2)+n & \\
+     &  =  & \displaystyle cn\lg n - cn + n & \\
+     & \ge & \displaystyle cn\lg n & (c \le 1)
 \end{array}
 $$
 
@@ -53,8 +53,8 @@ Suppose $$T(n) \le cn \lg n + n$$
 
 $$
 \begin{array}{llll}
-T(n) & \le & cn\lg n - 2n + n & \\
-     & \le & cn\lg n + n &
+T(n) & \le & \displaystyle cn\lg n - 2n + n & \\
+     & \le & \displaystyle cn\lg n + n &
 \end{array}
 $$
 
@@ -78,8 +78,8 @@ Suppose $$T(n) \le c(n-a)\lg(n-a)$$
 
 $$
 \begin{array}{llll}
-T(n) & \le & c(n+34-2a)\lg(n+34-2a) & \\
-     & \le & c(n-a)\lg(n-a) & (a \ge 34)
+T(n) & \le & \displaystyle c(n+34-2a)\lg(n+34-2a) & \\
+     & \le & \displaystyle c(n-a)\lg(n-a) & (a \ge 34)
 \end{array}
 $$
 
@@ -97,8 +97,8 @@ Suppose $$T(n) \le cn^{\log_34} - an$$
 
 $$
 \begin{array}{llll}
-T(n) & \le & cn^{\log_34} + (1 - \frac{4}{3})n & \\
-     & \le & cn^{\log_34} - an & (a \ge 3)
+T(n) & \le & \displaystyle cn^{\log_34} + (1 - \frac{4}{3})n & \\
+     & \le & \displaystyle cn^{\log_34} - an & (a \ge 3)
 \end{array}
 $$
 
