@@ -104,7 +104,7 @@ $$
 \underbrace{\frac{n-1}{n}}_{i \in [1, n-1]} \underbrace{\cdot \frac{m-1}{n-1}}_{i \in S_{m-1}} + \underbrace{\frac{1}{n}}_{i=n} = \frac{m}{n}  
 $$
 
-the probability of $$i$$ $$(i < n)$$ is choosed is:
+the probability of $$k$$ $$(k < n)$$ is choosed is:
 
 $$
 \underbrace{\frac{1}{n}}_{i = k} \cdot \underbrace{\frac{(n-1)-(m-1)}{n-1}}_{k \notin S_{m-1}}+\underbrace{\frac{m-1}{n-1}}_{k \in S_{m-1}} = \frac{m}{n} 
