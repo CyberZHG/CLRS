@@ -32,10 +32,10 @@ $$
 
 $$
 \begin{array}{rll}
-E[X] &=& E[\sum_{i=1}^n X_i] \\
-&=& \sum_{i=1}^n E[X_i] \\
-&=& \sum_{i=1}^n 3.5 \\
-&=& 3.5n
+E[X] &=& \displaystyle E \left [ \sum_{i=1}^n X_i \right ] \\
+&=& \displaystyle \sum_{i=1}^n E[X_i] \\
+&=& \displaystyle \sum_{i=1}^n 3.5 \\
+&=& \displaystyle 3.5n
 \end{array}
 $$
 
