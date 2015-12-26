@@ -4,31 +4,31 @@
 
 > Give asymptotic upper and lower bounds for $$T(n)$$ in each of the following recurrences. Assume that $$T(n)$$ is constant for $$n \le 2$$. Make your bounds as tight as possible, and justify your answers.
 
-> __a__. $$T(n)=2T(n/2)+n^4$$.
+> __*a*__. $$T(n)=2T(n/2)+n^4$$.
 
 $$\Theta(n^4)$$
 
-> __b__. $$T(n)=T(7n/10)+n$$.
+> __*b*__. $$T(n)=T(7n/10)+n$$.
 
 $$\Theta(n)$$
 
-> __c__. $$T(n)=16T(n/4)+n^2$$.
+> __*c*__. $$T(n)=16T(n/4)+n^2$$.
 
 $$\Theta(n^2 \lg n)$$
 
-> __d__. $$T(n)=7T(n/3)+n^2$$.
+> __*d*__. $$T(n)=7T(n/3)+n^2$$.
 
 $$\Theta(n^2)$$
 
-> __e__. $$T(n)=7T(n/2)+n^2$$.
+> __*e*__. $$T(n)=7T(n/2)+n^2$$.
 
 $$\Theta(n^{\lg 7})$$
 
-> __f__. $$T(n)=2T(n/4)+\sqrt{n}$$.
+> __*f*__. $$T(n)=2T(n/4)+\sqrt{n}$$.
 
 $$\Theta(\sqrt{n}\lg n)$$
 
-> __g__. $$T(n)=T(n-2)+n^2$$.
+> __*g*__. $$T(n)=T(n-2)+n^2$$.
 
 $$\Theta(n^3)$$
 
@@ -42,13 +42,13 @@ $$\Theta(n^3)$$
 > 2. An array is passed by copying. Time $$=\Theta(N)$$ where $$N$$ is the size of the array.
 > 3. An array is passed by copying only the subrange that might be accessed by the called procedure. Time D $$=\Theta(q-p+1)$$ if the subarray $$A[p \dots q]$$ is passed.
 
-> a. Consider the recursive binary search algorithm for finding a number in a sorted array (see Exercise 2.3-5). Give recurrences for the worst-case running times of binary search when arrays are passed using each of the three methods above, and give good upper bounds on the solutions of the recurrences. Let $$N$$ be the size of the original problem and $$n$$ be the size of a subproblem.
+> __*a*__. Consider the recursive binary search algorithm for finding a number in a sorted array (see Exercise 2.3-5). Give recurrences for the worst-case running times of binary search when arrays are passed using each of the three methods above, and give good upper bounds on the solutions of the recurrences. Let $$N$$ be the size of the original problem and $$n$$ be the size of a subproblem.
 
 1. $$T(n)=T(n/2)+1=\Theta(\lg n)$$
 2. $$T(n)=T(n/2)+N=\Theta(n \lg n)$$
 3. $$T(n)=T(n/2)+n=\Theta(n)$$
 
-> b. Redo part (a) for the MERGE-SORT algorithm from Section 2.3.1.
+> __*b*__. Redo part (a) for the MERGE-SORT algorithm from Section 2.3.1.
 
 1. $$T(n)=2T(n/2)+n+c=2T(n/2)+n=\Theta(n\lg n)$$
 2. $$T(n)=2T(n/2)+n+N=2T(n/2)+N=\Theta(n^2)$$
@@ -58,11 +58,11 @@ $$\Theta(n^3)$$
 
 > Give asymptotic upper and lower bounds for $$T(n)$$ in each of the following recurrences. Assume that $$T(n)$$ is constant for sufficiently small $$n$$. Make your bounds as tight as possible, and justify your answers.
 
-> __a__. $$T(n) = 4T(n/3) + n\lg n$$.
+> __*a*__. $$T(n) = 4T(n/3) + n\lg n$$.
 
 $$\Theta(n^{\log_3^4})$$
 
-> __b__. $$T(n) = 3T(n/3) + n/\lg n$$.
+> __*b*__. $$T(n) = 3T(n/3) + n/\lg n$$.
 
 For harmonic series:
 
@@ -81,25 +81,25 @@ T(n) & = & n\sum_{i=0}^{\log_3{n} - 1}\frac{1}{\lg \frac{n}{3^i}} \\
 \end{array}
 $$
 
-> __c__. $$T(n) = 4T(n/2) + n^2\sqrt{n}$$.
+> __*c*__. $$T(n) = 4T(n/2) + n^2\sqrt{n}$$.
 
 $$\Theta(n^2\sqrt{n})$$
 
-> __d__. $$T(n) = 3T(n/3-2) + n/2$$.
+> __*d*__. $$T(n) = 3T(n/3-2) + n/2$$.
 
 $$\Theta(n\lg n)$$
 
-> __e__. $$T(n) = 2T(n/2) + n/\lg n$$.
+> __*e*__. $$T(n) = 2T(n/2) + n/\lg n$$.
 
-Same as __b__,
+Same as __*b*__,
 
 $$\Theta(n\lg \lg n)$$
 
-> __f__. $$T(n) = T(n/2) + T(n/4) + T(n/8) + n$$.
+> __*f*__. $$T(n) = T(n/2) + T(n/4) + T(n/8) + n$$.
 
 $$\Theta(n)$$
 
-> __g__. $$T(n) = T(n-1) + 1/n$$.
+> __*g*__. $$T(n) = T(n-1) + 1/n$$.
 
 $$
 \begin{array}{rll}
@@ -108,7 +108,7 @@ T(n) & = & \sum_{i=1}^n \frac{1}{i} \\
 \end{array}
 $$
 
-> __h__. $$T(n) = T(n-1) + \lg n$$.
+> __*h*__. $$T(n) = T(n-1) + \lg n$$.
 
 $$
 \begin{array}{rll}
@@ -119,7 +119,7 @@ T(n) & = & \sum_{i=1}^n \lg{i} \\
 \end{array}
 $$
 
-> __i__. $$T(n) = T(n-2) + 1/\lg n$$.
+> __*i*__. $$T(n) = T(n-2) + 1/\lg n$$.
 
 $$
 \begin{array}{rll}
@@ -128,7 +128,7 @@ T(n) & = & \sum_{i=1}^{n/2} \frac{1}{\lg{2i}} \\
 \end{array}
 $$
 
-> __j__. $$T(n) = \sqrt{n} T(\sqrt{n}) + n$$.
+> __*j*__. $$T(n) = \sqrt{n} T(\sqrt{n}) + n$$.
 
 Let $$n = 2^m$$,
 
@@ -159,7 +159,7 @@ $$
 
 > where $$\mathcal{F}_i$$ is the $$i$$th Fibonacci number.
 
-> __a__. Show that $$\mathcal{F}(z) = z + z \mathcal{F}(z) + z^2\mathcal{F}(z)$$.
+> __*a*__. Show that $$\mathcal{F}(z) = z + z \mathcal{F}(z) + z^2\mathcal{F}(z)$$.
 
 $$
 \begin{array}{rll}
@@ -172,7 +172,7 @@ z + z \mathcal{F}(z) + z^2\mathcal{F}(z) &=& z + z\sum_{i=0}^\infty F_i z^i + z^
 \end{array}
 $$
 
-> __b__. Show that
+> __*b*__. Show that
 >
 > $$
 \begin{array}{lll}
@@ -213,7 +213,7 @@ $$
 \end{array}
 $$
 
-> __c__. Show that
+> __*c*__. Show that
 
 > $$\mathcal{F}(z)=\sum_{i=0}^{\infty}\frac{1}{\sqrt{5}}(\phi^i-\hat{\phi^i})z^i$$.
 
@@ -226,7 +226,7 @@ $$
 \end{array}
 $$
 
-> __d__. Use part (c) to prove that $$F_i=\phi^i/\sqrt{5}$$ for $$i>0$$, rounded to the nearest integer. (Hint: Observe that $$| \hat{\phi} | < 1$$.)
+> __*d*__. Use part (c) to prove that $$F_i=\phi^i/\sqrt{5}$$ for $$i>0$$, rounded to the nearest integer. (Hint: Observe that $$| \hat{\phi} | < 1$$.)
 
 $$\frac{\hat{\phi^i}}{\sqrt{5}} \le 0.5$$
 
@@ -241,11 +241,11 @@ $$\frac{\hat{\phi^i}}{\sqrt{5}} \le 0.5$$
   |B is bad |A is good |at least one is bad|
   |B is bad |A is bad |at least one is bad|
   
-> __a__. Show that if more than $$n/2$$ chips are bad, the professor cannot necessarily determine which chips are good using any strategy based on this kind of pairwise test. Assume that the bad chips can conspire to fool the professor.
+> __*a*__. Show that if more than $$n/2$$ chips are bad, the professor cannot necessarily determine which chips are good using any strategy based on this kind of pairwise test. Assume that the bad chips can conspire to fool the professor.
 
 Symmetric.
 
-> __b__. Consider the problem of finding a single good chip from among $$n$$ chips, assuming that more than $$n/2$$ of the chips are good. Show that $$\left \lfloor n / 2 \right \rfloor$$ pairwise tests are sufficient to reduce the problem to one of nearly half the size.
+> __*b*__. Consider the problem of finding a single good chip from among $$n$$ chips, assuming that more than $$n/2$$ of the chips are good. Show that $$\left \lfloor n / 2 \right \rfloor$$ pairwise tests are sufficient to reduce the problem to one of nearly half the size.
 
 First assume $$n$$ is even, then divide the chips in two groups, test each pair of chips with the same index from the two groups. If the result are is good, we keep one of chips; otherwise we remove both the chips. If $$n$$ is odd, if there are odd number of chips left after the selections, then there must be more good chips than bad chips, we can simply discard the odd chip; otherwise if there are even number of chips, then if there are equal number of good and bad chips, the odd one must be good, and if there are more good chips than bad chips, the difference must be larger or equal to 2, therefore we can safely add the odd one to the set for next iteration.
 
@@ -283,13 +283,13 @@ def choose_good_chip(chips):
     return choose_good_chip(next_chips)
 ```
 
-> __c__. Show that the good chips can be identified with $$\Theta(n)$$ pairwise tests, assuming that more than $$n/2$$ of the chips are good. Give and solve the recurrence that describes the number of tests.
+> __*c*__. Show that the good chips can be identified with $$\Theta(n)$$ pairwise tests, assuming that more than $$n/2$$ of the chips are good. Give and solve the recurrence that describes the number of tests.
 
 Based on master method, $$T(n)=T(n/2)+n/2=\Theta(n)$$
 
 ### 4-6 Monge arrays
 
-> An $$m \times n$$ array $$A$$ of real numbers is a __Monge array__ if for all $$i$$, $$j$$, $$k$$ and $$l$$ such that $$1 \le i < k \le m$$ and $$1 \le j < l \le n$$, we have
+> An $$m \times n$$ array $$A$$ of real numbers is a __*Monge array*__ if for all $$i$$, $$j$$, $$k$$ and $$l$$ such that $$1 \le i < k \le m$$ and $$1 \le j < l \le n$$, we have
 
 > $$A[i,j]+A[k,l] \le A[i,l]+A[k,j]$$.
 
@@ -305,7 +305,7 @@ Based on master method, $$T(n)=T(n/2)+n/2=\Theta(n)$$
 75 & 66 & 51 & 53 & 34 \\
 \end{matrix}$$
 
-> __a__. Prove that an array is Monge if and only if for all $$i=1,2,\dots,m-1$$ and $$j=1,2,\dots,n-1$$, we have
+> __*a*__. Prove that an array is Monge if and only if for all $$i=1,2,\dots,m-1$$ and $$j=1,2,\dots,n-1$$, we have
 
 > $$A[i,j]+A[i+1,j+1] \le A[i,j+1]+A[i+1,j]$$.
 
@@ -327,7 +327,7 @@ since $$A[i,l-1]+A[k,l] \le A[i,l]+A[k,l-1]$$,
 
 therefore $$A[i,j]+A[k,l] \le A[i,l]+A[k,j]$$.
 
-> __b__. The following array is not Monge. Change one element in order to make it Monge. (Hint: Use part (a).)
+> __*b*__. The following array is not Monge. Change one element in order to make it Monge. (Hint: Use part (a).)
 
 > $$\begin{matrix}
 37 & 23 & 22 & 32 \\
@@ -347,7 +347,7 @@ $$
 \end{matrix}
 $$
 
-> __c__. Let $$f(i)$$ be the index of the column containing the leftmost minimum element of row $$i$$ . Prove that $$f(1) \le f(2) \le \dots \le f(m)$$ for any $$m \times n$$ Monge array.
+> __*c*__. Let $$f(i)$$ be the index of the column containing the leftmost minimum element of row $$i$$ . Prove that $$f(1) \le f(2) \le \dots \le f(m)$$ for any $$m \times n$$ Monge array.
 
 Let $$i$$ and $$j$$ be the index of leftmost minimal elements on row $$a$$ and $$b$$, suppose $$a < b$$ and $$i \ge j$$.
 
@@ -359,7 +359,7 @@ $$A[a,j] + A[b,i] \le A[a,i]+ A[b,j]$$,
 
 the inequality is satisfied only when $$i = j$$, therefore $$i \le j$$.
 
-> __d__. Here is a description of a divide-and-conquer algorithm that computes the leftmost minimum element in each row of an $$m \times n$$ Monge array $$A$$:
+> __*d*__. Here is a description of a divide-and-conquer algorithm that computes the leftmost minimum element in each row of an $$m \times n$$ Monge array $$A$$:
 
 > > Construct a submatrix $$A'$$ of $$A$$ consisting of the even-numbered rows of $$A$$. Recursively determine the leftmost minimum for each row of $$A$$. Then compute the leftmost minimum in the odd-numbered rows of $$A$$.
 
@@ -369,7 +369,7 @@ Search in the interval $$[f(i-1), f(i+1)]$$.
 
 $$c_1m/2 + c_2n = O(m+n)$$
 
-> __e__. Write the recurrence describing the running time of the algorithm described in part (d). Show that its solution is $$O(m+n\log m)$$.
+> __*e*__. Write the recurrence describing the running time of the algorithm described in part (d). Show that its solution is $$O(m+n\log m)$$.
 
 $$
 \begin{array}{rll}
