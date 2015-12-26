@@ -4,20 +4,20 @@
 
 > Although merge sort runs in $$\Theta(n \lg n)$$ worst-case time and insertion sort runs in $$\Theta(n^2)$$ worst-case time, the constant factors in insertion sort can make it faster in practice for small problem sizes on many machines. Thus, it makes sense to __coarsen__ the leaves of the recursion by using insertion sort within merge sort when subproblems become sufficiently small. Consider a modification to merge sort in which $$n=k$$ sublists of length $$k$$ are sorted using insertion sort and then merged using the standard merging mechanism, where $$k$$ is a value to be determined.
 
-> __a__. Show that insertion sort can sort the $$n/k$$ sublists, each of length $$k$$, in $$\Theta(nk)$$ worst-case time.
+> __*a*__. Show that insertion sort can sort the $$n/k$$ sublists, each of length $$k$$, in $$\Theta(nk)$$ worst-case time.
 
 $$\Theta(k^2) \cdot n/k = \Theta(nk)$$
 
-> __b__. Show how to merge the sublists in $$\Theta(n\lg(n/k))$$ worst-case time.
+> __*b*__. Show how to merge the sublists in $$\Theta(n\lg(n/k))$$ worst-case time.
 
 * Layers: $$\lg(n/k)$$
 * Each: $$n$$
 
-> __c__. Given that the modified algorithm runs in $$\Theta(nk+n\lg(n/k))$$ worst-case time, what is the largest value of k as a function of n for which the modified algorithm has the same running time as standard merge sort, in terms of $$\Theta$$-notation?
+> __*c*__. Given that the modified algorithm runs in $$\Theta(nk+n\lg(n/k))$$ worst-case time, what is the largest value of k as a function of n for which the modified algorithm has the same running time as standard merge sort, in terms of $$\Theta$$-notation?
 
 Since $$n \lg (n/k) <= n \lg n$$, thus $$nk = n\lg n$$, $$n=\lg n$$.
 
-> __d__. How should we choose $$k$$ in practice?
+> __*d*__. How should we choose $$k$$ in practice?
 
 Profiling with large data set.
 
@@ -32,7 +32,7 @@ BUBBLESORT(A)
 4             exchange A[j] with A[j - 1]
 ```
 
-> __a__. Let $$A'$$ denote the output of BUBBLESORT(A). To prove that BUBBLESORT is correct, we need to prove that it terminates and that
+> __*a*__. Let $$A'$$ denote the output of BUBBLESORT(A). To prove that BUBBLESORT is correct, we need to prove that it terminates and that
 >
 > $$A'[1] \le A'[2] \le \cdots \le A'[n]$$  (2.3)
 > 
@@ -40,19 +40,19 @@ BUBBLESORT(A)
 
 $$A'$$ is a permutation of $$A$$.
 
-> __b__. State precisely a loop invariant for the for loop in lines 2–4, and prove that this loop invariant holds. Your proof should use the structure of the loop invariant proof presented in this chapter.
+> __*b*__. State precisely a loop invariant for the for loop in lines 2–4, and prove that this loop invariant holds. Your proof should use the structure of the loop invariant proof presented in this chapter.
 
 * Initialization: A[1] is sorted
 * Maintenance: Move the smallest element to the left
 * Termination: A[1..i] is sorted with the next smallest element in A[i]
 
-> __c__. Using the termination condition of the loop invariant proved in part (b), state a loop invariant for the for loop in lines 1–4 that will allow you to prove inequality (2.3). Your proof should use the structure of the loop invariant proof presented in this chapter.
+> __*c*__. Using the termination condition of the loop invariant proved in part (b), state a loop invariant for the for loop in lines 1–4 that will allow you to prove inequality (2.3). Your proof should use the structure of the loop invariant proof presented in this chapter.
 
 * Initialization: A[1..i-1] is sorted with smallest elements
 * Maintenance: Move the next smallest element to A[i] and A[i - 1] <= A[i]
 * Termination: (2.3)
 
-> __d__. What is the worst-case running time of bubblesort? How does it compare to the running time of insertion sort?
+> __*d*__. What is the worst-case running time of bubblesort? How does it compare to the running time of insertion sort?
 
 $$\Theta(n^2)$$
 
@@ -75,11 +75,11 @@ P(x) & = & \sum_{k=0}^n a_k x^k \\
 > 3     y = ai + x y
 >```
 
-> __a__. In terms of $$\Theta$$-notation, what is the running time of this code fragment for Horner’s rule?
+> __*a*__. In terms of $$\Theta$$-notation, what is the running time of this code fragment for Horner’s rule?
 
 $$\Theta(n)$$
 
-> __b__. Write pseudocode to implement the naive polynomial-evaluation algorithm that computes each term of the polynomial from scratch. What is the running time of this algorithm? How does it compare to Horner’s rule?
+> __*b*__. Write pseudocode to implement the naive polynomial-evaluation algorithm that computes each term of the polynomial from scratch. What is the running time of this algorithm? How does it compare to Horner’s rule?
 
 ```python
 def polynomial_evaluation(a, x):
@@ -91,7 +91,7 @@ def polynomial_evaluation(a, x):
 
 $$\Theta(n^2)$$
 
-> __c__. Consider the following loop invariant:
+> __*c*__. Consider the following loop invariant:
 > 
 > At the start of each iteration of the for loop of lines 2–3,
 > 
@@ -103,16 +103,16 @@ $$\Theta(n^2)$$
 * Maintenance: $$y=a_i+x\sum_{k=0}^{n-(i+1)} a_{k+i+1}x^k$$ $$=a_ix^0+\sum_{k=0}^{n-(i+1)} a_{k+i+1}x^{k+1}$$ $$=a_ix^0+\sum_{k=1}^{n-i} a_{k+i}x^{k}$$ $$=\sum_{k=0}^{n-i} a_{k+i}x^{k}$$
 * Termination: $$y=\sum_{k=0}^{n} a_{k}x^k$$
 
-> __d__. Conclude by arguing that the given code fragment correctly evaluates a polynomial characterized by the coefficients
+> __*d*__. Conclude by arguing that the given code fragment correctly evaluates a polynomial characterized by the coefficients
 $$a_0, a_1, \cdots, a_n$$.
 
 $$\sum y_i = P(x)$$
 
 ### 2-4 Inversions
 
-> Let $$A[1..n]$$ be an array of n distinct numbers. If $$i < j$$ and A[i] > A[j], then the pair $$(i, j)$$ is called an __inversion__ of A.
+> Let $$A[1..n]$$ be an array of n distinct numbers. If $$i < j$$ and A[i] > A[j], then the pair $$(i, j)$$ is called an __*inversion*__ of A.
 
-> __a__. List the five inversions of the array $$\left \langle 2, 3, 8, 6, 1 \right \rangle$$.
+> __*a*__. List the five inversions of the array $$\left \langle 2, 3, 8, 6, 1 \right \rangle$$.
 
 * $$(2, 1)$$
 * $$(3, 1)$$
@@ -120,16 +120,16 @@ $$\sum y_i = P(x)$$
 * $$(8, 1)$$
 * $$(6, 1)$$
 
-> __b__. What array with elements from the set $$\{1,2,\cdots,n\}$$ has the most inversions? How many does it have?
+> __*b*__. What array with elements from the set $$\{1,2,\cdots,n\}$$ has the most inversions? How many does it have?
 
 * Most: $$\{n,n-1,\cdots,1\}$$
 * How many: $$\frac{n(n-1)}{2}$$
 
-> __c__. What is the relationship between the running time of insertion sort and the number of inversions in the input array? Justify your answer.
+> __*c*__. What is the relationship between the running time of insertion sort and the number of inversions in the input array? Justify your answer.
 
 Equal
 
-> __d__. Give an algorithm that determines the number of inversions in any permutation on $$n$$ elements in $$\Theta(n \lg n)$$ worst-case time. (Hint: Modify merge sort.)
+> __*d*__. Give an algorithm that determines the number of inversions in any permutation on $$n$$ elements in $$\Theta(n \lg n)$$ worst-case time. (Hint: Modify merge sort.)
 
 ```python
 def count_inversion_sub(arr, l, r):
