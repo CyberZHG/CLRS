@@ -1,4 +1,4 @@
-## Indicator random variables
+## 5.2 Indicator random variables
 
 ### 5.2-1
 
