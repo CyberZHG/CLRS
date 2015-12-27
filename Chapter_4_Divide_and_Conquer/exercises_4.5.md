@@ -1,4 +1,4 @@
-## The master method for solving recurrences
+## 4.5 The master method for solving recurrences
 
 ### 4.5-1
 
