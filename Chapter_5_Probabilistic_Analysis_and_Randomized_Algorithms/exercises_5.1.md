@@ -1,4 +1,4 @@
-## The hiring problem
+## 5.1 The hiring problem
 
 ### 5.1-1
 
