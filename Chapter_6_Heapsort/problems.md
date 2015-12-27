@@ -126,8 +126,7 @@ Transitive.
 
 ```python
 def extract_min(a):
-    m = len(a)
-    n = len(a[0])
+    m, n = len(a), len(a[0])
     val = a[0][0]
     a[0][0] = 1e8
 
@@ -154,8 +153,7 @@ $$
 
 ```python
 def insert(a, val):
-    m = len(a)
-    n = len(a[0])
+    m, n = len(a), len(a[0])
     a[m - 1][n - 1] = val
 
     def maintain(i, j):
