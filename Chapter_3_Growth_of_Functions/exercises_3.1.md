@@ -1,4 +1,4 @@
-## Asymptotic notation
+## 3.1 Asymptotic notation
 
 ### 3.1-1
 
