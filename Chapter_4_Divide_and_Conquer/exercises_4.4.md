@@ -1,4 +1,4 @@
-## The recursion-tree method for solving recurrences
+## 4.4 The recursion-tree method for solving recurrences
 
 ### 4.4-1
 
