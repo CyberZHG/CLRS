@@ -6,7 +6,15 @@
 
 Return 15 and $$A = \left \langle 1, 13, 9, 5, 12, 8, 7, 4, 0, 6, 2 \right \rangle$$,
 
+![](img/6.5-1_1.png)
+
 MAX-HEAPIFY$$(A)$$: $$A = \left \langle 13, 12, 9, 5, 6, 8, 7, 4, 0, 1, 2 \right \rangle$$.
+
+![](img/6.5-1_2.png)
+
+![](img/6.5-1_3.png)
+
+![](img/6.5-1_4.png)
 
 ### 6.5-2
 
@@ -14,13 +22,21 @@ MAX-HEAPIFY$$(A)$$: $$A = \left \langle 13, 12, 9, 5, 6, 8, 7, 4, 0, 1, 2 \right
 
 Insert: $$A = \left \langle15, 13, 9, 5, 12, 8, 7, 4, 0, 6, 2, 1, -\infty \right \rangle$$.
 
+![](img/6.5-2_1.png)
+
 Increase: $$A = \left \langle15, 13, 9, 5, 12, 8, 7, 4, 0, 6, 2, 1, 10 \right \rangle$$
+
+![](img/6.5-2_2.png)
 
 Heapify: 
 
 $$A = \left \langle15, 13, 9, 5, 12, 10, 7, 4, 0, 6, 2, 1, 8\right \rangle$$
 
+![](img/6.5-2_3.png)
+
 $$A = \left \langle15, 13, 10, 5, 12, 9, 7, 4, 0, 6, 2, 1, 8\right \rangle$$
+
+![](img/6.5-2_4.png)
 
 ### 6.5-3
 
