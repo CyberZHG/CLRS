@@ -1,4 +1,4 @@
-## Designing algorithms
+## 2.3 Designing algorithms
 
 ### 2.3-1
 
