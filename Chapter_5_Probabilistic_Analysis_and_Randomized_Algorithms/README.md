@@ -1,4 +1,4 @@
-# Probabilistic Analysis and Randomized Algorithms
+# 5 Probabilistic Analysis and Randomized Algorithms
 
 * [5.1 The hiring problem](exercises_5.1.md)
 * [5.2 Indicator random variables](exercises_5.2.md)
