@@ -6,21 +6,37 @@ Using Figure 6.4 as a model, illustrate the operation of HEAPSORT on the array $
 
 BUILD_MAX_HEAP$$(A)$$: $$A = \left \langle 25, 13, 20, 8, 7, 17, 2, 5, 4 \right \rangle$$
 
+![](img/6.4-1_1.png)
+
 HEAPSORT$$(A)$$:
 
 $$A = \left \langle 20, 13, 17, 8, 7, 4, 2, 5, | 25\right \rangle$$
 
+![](img/6.4-1_2.png)
+
 $$A = \left \langle 17, 13, 5, 8, 7, 4, 2, | 20, 25\right \rangle$$
+
+![](img/6.4-1_3.png)
 
 $$A = \left \langle 13, 8, 5, 2, 7, 4, | 17, 20, 25\right \rangle$$
 
+![](img/6.4-1_4.png)
+
 $$A = \left \langle 8, 7, 5, 2, 4, | 13, 17, 20, 25\right \rangle$$
+
+![](img/6.4-1_5.png)
 
 $$A = \left \langle 7, 4, 5, 2, | 8, 13, 17, 20, 25\right \rangle$$
 
+![](img/6.4-1_6.png)
+
 $$A = \left \langle 5, 4, 2, | 7, 8, 13, 17, 20, 25\right \rangle$$
 
+![](img/6.4-1_7.png)
+
 $$A = \left \langle 4, 2, | 5, 7, 8, 13, 17, 20, 25\right \rangle$$
+
+![](img/6.4-1_8.png)
 
 $$A = \left \langle 2, | 4, 5, 7, 8, 13, 17, 20, 25\right \rangle$$
 
