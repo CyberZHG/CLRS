@@ -1,4 +1,4 @@
-## Analyzing algorithms
+## 2.2 Analyzing algorithms
 
 ### 2.2-1
 
