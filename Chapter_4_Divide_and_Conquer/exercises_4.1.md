@@ -1,4 +1,4 @@
-## The maximum-subarray problem
+## 4.1 The maximum-subarray problem
 
 ### 4.1-1
 
