@@ -1,4 +1,4 @@
-## Algorithm as a technology
+## 1.2 Algorithm as a technology
 
 ### 1.2-1
 
