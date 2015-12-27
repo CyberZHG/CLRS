@@ -19,7 +19,11 @@ For $$\left \langle 1, 2, 3, 4, 5, 6\right \rangle$$,
 
 BUILD-MAX-HEAP: $$\left \langle 6,4,5,1,3,2 \right \rangle$$;
 
+![](img/6-1_1.png)
+
 BUILD-MAX-HEAP': $$\left \langle 6,5,3,4,2,1 \right \rangle$$.
+
+![](img/6-1_2.png)
 
 > __*b*__. Show that in the worst case, BUILD-MAX-HEAP' requires $$\Theta(n\lg n)$$ time to build an n-element heap.
 
