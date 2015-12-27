@@ -1,4 +1,4 @@
-## Proof of the master theorem
+## 4.6 Proof of the master theorem
 
 ### 4.6-1 $$\star$$
 
