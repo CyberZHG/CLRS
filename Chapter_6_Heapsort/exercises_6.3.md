@@ -4,23 +4,23 @@
 
 > Using Figure 6.3 as a model, illustrate the operation of BUILD-MAX-HEAP on the array $$A = \left \langle 5, 3, 17, 10, 84, 19, 6, 22, 9 \right \rangle$$.
 
-![](6.3-1_1.png)
+![](img/6.3-1_1.png)
 
 MAX-HEAPIFY$$(A, 4)$$: $$A = \left \langle 5, 3, 17, 22, 84, 19, 6, 10, 9 \right \rangle$$
 
-![](6.3-1_2.png)
+![](img/6.3-1_2.png)
 
 MAX-HEAPIFY$$(A, 3)$$: $$A = \left \langle 5, 3, 19, 22, 84, 17, 6, 10, 9 \right \rangle$$
 
-![](6.3-1_3.png)
+![](img/6.3-1_3.png)
 
 MAX-HEAPIFY$$(A, 2)$$: $$A = \left \langle 5, 84, 19, 22, 3, 17, 6, 10, 9 \right \rangle$$
 
-![](6.3-1_4.png)
+![](img/6.3-1_4.png)
 
 MAX-HEAPIFY$$(A, 1)$$: $$A = \left \langle 84, 22, 19, 10, 3, 17, 6, 5, 9 \right \rangle$$
 
-![](6.3-1_5.png)
+![](img/6.3-1_5.png)
 
 ### 6.3-2
 
