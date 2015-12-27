@@ -28,3 +28,12 @@
     * [Randomized algorithms](Chapter_5_Probabilistic_Analysis_and_Randomized_Algorithms/exercises_5.3.md)
     * [Probabilistic analysis and further uses of indicator random variables](Chapter_5_Probabilistic_Analysis_and_Randomized_Algorithms/exercises_5.4.md)
     * [Problems](Chapter_5_Probabilistic_Analysis_and_Randomized_Algorithms/problems.md)
+* [Heapsort](Chapter_6_Heapsort/README.md)
+    * [Heaps](Chapter_6_Heapsort/exercises_6.1.md)
+    * [Maintaining the heap property](Chapter_6_Heapsort/exercises_6.2.md)
+    * [Building a heap](Chapter_6_Heapsort/exercises_6.3.md)
+    * [The heapsort algorithm](Chapter_6_Heapsort/exercises_6.4.md)
+    * [Priority queues](Chapter_6_Heapsort/exercises_6.5.md)
+    * [Problems](Chapter_6_Heapsort/problems.md)
+
+
