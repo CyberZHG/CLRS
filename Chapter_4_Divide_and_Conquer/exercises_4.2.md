@@ -1,4 +1,4 @@
-## Strassen's algorithm for matrix multiplication
+## 4.2 Strassen's algorithm for matrix multiplication
 
 ### 4.2-1
 
