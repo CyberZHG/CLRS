@@ -1,4 +1,4 @@
-## Standard notations and common functions
+## 3.2 Standard notations and common functions
 
 
 ### 3.2-1
