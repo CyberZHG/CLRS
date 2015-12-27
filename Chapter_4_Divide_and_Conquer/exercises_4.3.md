@@ -1,4 +1,4 @@
-## The substitution method for solving recurrences
+## 4.3 The substitution method for solving recurrences
 
 ### 4.3-1
 
