@@ -76,5 +76,63 @@ def quicksort(a, p, r):
         quicksort(a, q + 1, r)
 ```
 
+### 7-2 Quicksort with equal element values
+
+> The analysis of the expected running time of randomized quicksort in Section 7.4.2 assumes that all element values are distinct. In this problem, we examine what happens when they are not.
+
+> __*a*__. Suppose that all element values are equal. What would be randomized quicksort’s running time in this case?
+
+
+$$\Theta(n^2)$$
+
+> __*b*__. The PARTITION procedure returns an index $$q$$ such that each element of $$A[p \dots q - 1]$$ is less than or equal to $$A[q]$$ and each element of $$A[q + 1 \dots r]$$ is greater than $$A[q]$$. Modify the PARTITION procedure to produce a procedure PARTITION'(A,p,r), which permutes the elements of $$A[p \dots r]$$ and returns two indices $$q$$ and $$t$$, where $$p \le q \le t \le r$$, such that
+
+> * all elements of $$A[q \dots t]$$ are equal,
+* each element of $$A[p \dots q - 1]$$ is less than $$A[q]$$, and
+* each element of $$A[t + 1 \dots r]$$ is greater than $$A[q]$$.
+
+> Like PARTITION, your PARTITION' procedure should take $$\Theta(r-p)$$ time.
+
+```python
+def partition(a, p, r):
+    x = a[r - 1]
+    i = p - 1
+    for k in range(p, r - 1):
+        if a[k] < x:
+            i += 1
+            a[i], a[k] = a[k], a[i]
+    i += 1
+    a[i], a[r - 1] = a[r - 1], a[i]
+    j = i
+    for k in range(i + 1, r):
+        if a[k] == x:
+            j += 1
+            a[j], a[k] = a[k], a[j]
+        k -= 1
+    return i, j
+```
+
+> __*c*__. Modify the RANDOMIZED-QUICKSORT procedure to call PARTITION0, and
+name the new procedure RANDOMIZED-QUICKSORT'. Then modify the QUICKSORT procedure to produce a procedure QUICKSORT'$$(p, r)$$ that calls RANDOMIZED-PARTITION' and recurses only on partitions of elements not
+known to be equal to each other.
+
+```
+def randomized_partition(a, p, r):
+    x = random.randint(p, r - 1)
+    a[x], a[r - 1] = a[r - 1], a[x]
+    return partition(a, p, r)
+
+
+def quicksort(a, p, r):
+    if p < r - 1:
+        q, t = randomized_partition(a, p, r)
+        quicksort(a, p, q)
+        quicksort(a, t + 1, r)
+```
+
+> __*d*__. Using QUICKSORT', how would you adjust the analysis in Section 7.4.2 to avoid the assumption that all elements are distinct?
+
+
+
 
 
