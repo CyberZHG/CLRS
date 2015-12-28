@@ -35,5 +35,10 @@
     * [The heapsort algorithm](Chapter_6_Heapsort/exercises_6.4.md)
     * [Priority queues](Chapter_6_Heapsort/exercises_6.5.md)
     * [Problems](Chapter_6_Heapsort/problems.md)
-
+* [Quicksort](Chapter_7_Quicksort/README.md)
+    * [Description of quicksort](Chapter_7_Quicksort/exercises_7.1.md)
+    * [Performance of quicksort](Chapter_7_Quicksort/exercises_7.2.md)
+    * [A randomized version of quicksort](Chapter_7_Quicksort/exercises_7.3.md)
+    * [Analysis of quicksort](Chapter_7_Quicksort/exercises_7.4.md)
+    * [Problems](Chapter_7_Quicksort/problems.md)
 
