@@ -194,5 +194,69 @@ $$
 \end{array}
 $$
 
+### 7-4 Stack depth for quicksort
+
+> The QUICKSORT algorithm of Section 7.1 contains two recursive calls to itself. After QUICKSORT calls PARTITION, it recursively sorts the left subarray and then it recursively sorts the right subarray. The second recursive call in QUICKSORT is not really necessary; we can avoid it by using an iterative control structure. This technique, called tail recursion, is provided automatically by good compilers. Consider the following version of quicksort, which simulates tail recursion:
+
+> ```
+TAIL-RECURSIVE-QUCIKSORT(A, p, r)
+1 while p < r
+2     // Partition and sort left subarray
+3     q = PARTITION(A, p, r)
+4     TAIL-RECURSIVE-QUCIKSORT(A, p, q - 1)
+5     p = q + 1
+```
+
+> __*a*__. Argue that TAIL-RECURSIVE-QUICKSORT$$(A, 1, A.length)$$ correctly sorts the array $$A$$.
+
+The function needs to call QUCIKSORT$$(A, q + 1, r)$$, set $$p$$ to $$q + 1$$ then go to line 1 is exactly the same form of calling the function.
+
+> Compilers usually execute recursive procedures by using a stack that contains pertinent information, including the parameter values, for each recursive call. The information for the most recent call is at the top of the stack, and the information for the initial call is at the bottom. Upon calling a procedure, its information is pushed onto the stack; when it terminates, its information is popped. Since we assume that array parameters are represented by pointers, the information for each procedure call on the stack requires $$O(1)$$ stack space. The stack depth is the maximum amount of stack space used at any time during a computation.
+
+> __*b*__. Describe a scenario in which TAIL-RECURSIVE-QUICKSORT’s stack depth is $$\Theta(n)$$ on an $$n$$-element input array.
+
+$$T(n)=T(1) + T(n-1) + \Theta(n)$$
+
+> __*c*__. Modify the code for TAIL-RECURSIVE-QUICKSORT so that the worst-case stack depth is $$\Theta(\lg n)$$. Maintain the $$O(n \lg n)$$ expected running time of the algorithm.
+
+```python
+def partition(a, p, r):
+    x = a[r - 1]
+    i = p - 1
+    for k in range(p, r - 1):
+        if a[k] < x:
+            i += 1
+            a[i], a[k] = a[k], a[i]
+    i += 1
+    a[i], a[r - 1] = a[r - 1], a[i]
+    j = i
+    for k in range(i + 1, r):
+        if a[k] == x:
+            j += 1
+            a[j], a[k] = a[k], a[j]
+        k -= 1
+    return i, j
+
+
+def randomized_partition(a, p, r):
+    x = random.randint(p, r - 1)
+    a[x], a[r - 1] = a[r - 1], a[x]
+    return partition(a, p, r)
+
+
+def quicksort(a, p, r):
+    while p < r - 1:
+        q, t = randomized_partition(a, p, r)
+        if q - p < r - t:
+            quicksort(a, p, q)
+            p = t + 1
+        else:
+            quicksort(a, t + 1, r)
+            r = q
+```
+
+
+
+
 
 
