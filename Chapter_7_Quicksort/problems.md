@@ -132,7 +132,67 @@ def quicksort(a, p, r):
 
 > __*d*__. Using QUICKSORT', how would you adjust the analysis in Section 7.4.2 to avoid the assumption that all elements are distinct?
 
+### 7-3 Alternative quicksort analysis
 
+> An alternative analysis of the running time of randomized quicksort focuses on the expected running time of each individual recursive call to RANDOMIZED-QUICKSORT, rather than on the number of comparisons performed.
+
+> __*a*__. Argue that, given an array of size $$n$$, the probability that any particular element is chosen as the pivot is $$1/n$$. Use this to define indicator random variables $$X_i = I \{i$$th smallest element is chosen as the pivot$$\}$$. What is $$\text{E}[X_i]$$?
+
+$$\text{E}[X_i] = 1/n$$
+
+> __*b*__. Let $$T(n)$$ be a random variable denoting the running time of quicksort on an array of size $$n$$. Argue that
+
+> $$
+\text{E}[T(n)] = \text{E} \left [ \sum_{q=1}^n X_q (T(q-1) + T(n-q) + \Theta(n)) \right ]
+$$
+
+Obviously.
+
+> __*c*__. Show that we can rewrite equation (7.5) as
+
+> $$
+\text{E}[T(n)] = \frac{2}{n} \sum_{q=2}^{n-1} \text{E}[T(q)] + \Theta(n)
+$$
+
+$$
+\begin{array}{rll}
+\text{E}[T(n)] &=& \displaystyle \text{E} \left [ \sum_{q=1}^n X_q (T(q-1) + T(n-q) + \Theta(n)) \right ] \\
+&=& \displaystyle \frac{1}{n} \left [ \sum_{q=1}^{n} \text{E}[T(q - 1)] + \sum_{q=1}^{n} \text{E}[T(n - q)] \right ] + \Theta(n) \\
+&=& \displaystyle \frac{1}{n} \left [ \sum_{q=0}^{n-1} \text{E}[T(q)] + \sum_{q=0}^{n-1} \text{E}[T(q)] \right ] + \Theta(n) \\
+&=& \displaystyle \frac{2}{n} \sum_{q=0}^{n-1} \text{E}[T(q)] + \Theta(n) \\
+&=& \displaystyle \frac{2}{n} \sum_{q=2}^{n-1} \text{E}[T(q)] + \Theta(n) \\
+\end{array}
+$$
+
+> __*d*__. Show that
+
+> $$
+\sum_{k=2}^{n-1}k \lg k \le \frac{1}{2} n^2 \lg n - \frac{1}{8} n^2
+$$
+
+$$
+\begin{array}{rll}
+\displaystyle \sum_{k=2}^{n-1} &=& \displaystyle \sum_{k=2}^{\left \lceil n / 2 \right \rceil - 1} k \lg k + \sum_{k=\left \lceil n / 2 \right \rceil}^{n-1} k \lg k \\
+&\le& \displaystyle \sum_{k=2}^{\left \lceil n / 2 \right \rceil - 1} k \lg (n/2) + \sum_{k=\left \lceil n / 2 \right \rceil}^{n-1} k \lg n \\
+&=& \displaystyle \frac{(1 + n/2)\cdot n/2}{2} ( \lg n - 1 ) + \frac{(n/2 + n)\cdot n/2}{2} \lg n\\
+&=& \displaystyle \frac{n^2 + 2n}{8} ( \lg n - 1 ) + \frac{3n^2}{8} \lg n \\
+&=& \displaystyle \frac{1}{2}n^2 \lg n - \frac{1}{8}n^2
+\end{array}
+$$
+
+> __*e*__. Using the bound from equation (7.7), show that the recurrence in equation (7.6) has the solution $$\text{E}[T(n)] = \Theta(n \lg n)$$.
+
+Suppose $$\text{E}[T(n)] \le cn \lg n$$,
+
+$$
+\begin{array}{rll}
+\text{E}[T(n)] &=& \displaystyle \frac{2}{n} \sum_{q=2}^{n-1} \text{E}[T(q)] + \Theta(n) \\
+&\le& \displaystyle \frac{2}{n} \sum_{q=2}^{n-1} cq\lg q + \Theta(n) \\
+&\le& \displaystyle \frac{2c}{n} \left ( \frac{1}{2}n^2 \lg n - \frac{1}{8}n^2 \right ) + \Theta(n) \\
+&=& \displaystyle cn \lg n - \frac{1}{4}cn + \Theta(n) \\
+&=& \displaystyle \Theta(n \lg n) \\
+\end{array}
+$$
 
 
 
