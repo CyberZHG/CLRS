@@ -255,7 +255,46 @@ def quicksort(a, p, r):
             r = q
 ```
 
+### 7-5 Median-of-3 partition
 
+> One way to improve the RANDOMIZED-QUICKSORT procedure is to partition
+around a pivot that is chosen more carefully than by picking a random element from the subarray. One common approach is the median-of-3 method: choose the pivot as the median (middle element) of a set of 3 elements randomly selected from the subarray. (See Exercise 7.4-6.) For this problem, let us assume that the elements in the input array $$A[1 \dots n]$$ are distinct and that $$n \ge 3$$. We denote the sorted output array by $$A'[1 \dots n]$$. Using the median-of-3 method to choose the pivot element $$x$$, define $$p_i = \text{Pr} \{ x = A'[i] \}$$.
+
+> __*a*__. Give an extract formula for $$p_i$$ as a function of $$n$$ and $$i$$ for $$i=2,3, \dots, n-1$$. (Note that $$p_1 = p_n = 0$$.)
+
+
+$$
+p_i = \binom{3}{1} \frac{1}{n} \cdot \binom{2}{1} \frac{i-1}{n-1} \cdot \frac{n-i}{n-2} = \frac{6(i-1)(n-i)}{n(n-1)(n-2)}
+$$
+
+> __*b*__. By what amount have we increased the likelihood of choosing the pivot as $$x = A'[\left \lfloor (n+1)/2 \right \rfloor]$$, the median of $$A[1 \dots n]$$, compared with the ordinary implementaiton? Assume that $$n \rightarrow \infty$$, and give the limiting ratio of these probabilities.
+
+$$
+p_{\left \lfloor (n+1)/2 \right \rfloor} \approx \frac{6(\frac{n+1}{2}-1)(n-\frac{n+1}{2})}{n(n-1)(n-2)}=\frac{3(n-1)}{2n(n-2)}
+$$
+
+$$
+\lim_{n \rightarrow \infty}\frac{\frac{3(n-1)}{2n(n-2)}}{\frac{1}{n}} = \lim_{n \rightarrow \infty} \frac{3(n-1)}{2(n-2)} = \frac{3}{2}
+$$
+
+
+> __*c*__. If we define a "good" split to mean choosing the pivot as $$x=A'[i]$$, where $$n/3 \le i \le 2n / 3$$, by what amount have we increased the likelihood of getting a good split compared with the ordinary implementation?
+
+$$
+\begin{array}{rll}
+\displaystyle \lim_{n \rightarrow \infty} \sum_{i=n/3}^{2n/3} \frac{6(i-1)(n-i)}{n(n-1)(n-2)} &=& \displaystyle \lim_{n \rightarrow \infty} \frac{6}{n(n-1)(n-2)} \sum_{i=n/3}^{2n/3} (i-1)(n-i) \\
+&\approx& \displaystyle \lim_{n \rightarrow \infty} \frac{6}{n(n-1)(n-2)} \int_{n/3}^{2n/3} (x-1)(n-x) dx \\
+&=& \displaystyle \lim_{n \rightarrow \infty} \frac{6}{n(n-1)(n-2)} \left (-\frac{1}{3}x^3+\frac{1}{2}(n+1)x^2-nx \right ) \Bigr|_{n/3}^{2n/3} \\
+&=& \displaystyle \lim_{n \rightarrow \infty} \frac{6}{n(n-1)(n-2)} \left ( -\frac{7}{81}n^3+\frac{1}{6}n^3 - \frac{1}{6}n^2 \right ) \\
+&=& \displaystyle \lim_{n \rightarrow \infty} \frac{1}{n(n-1)(n-2)} \left ( -\frac{14}{27}n^3+n^3 - n^2 \right ) \\
+&=& \displaystyle \lim_{n \rightarrow \infty} \frac{\frac{13}{27}n^3 - n^2}{n(n-1)(n-2)} \\
+&=& \frac{13}{27}
+\end{array}
+$$
+
+> __*d*__. Argue that in the $$\Omega(n \lg n)$$ running time of quicksort, the median-of-3 method affects only the constant factor.
+
+Even if median-of-3 choose the median of $$A[p \dots r]$$, the running time is still $$T(n)=2T(n/2)+\Theta(n)$$, which is $$\Omega(n \lg n)$$.
 
 
 
