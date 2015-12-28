@@ -302,6 +302,65 @@ Even if median-of-3 choose the median of $$A[p \dots r]$$, the running time is s
 
 > __*a*__. Design a randomized algorithm for fuzzy-sorting $$n$$ intervals. Your algorithm should have the general structure of an algorithm that quicksorts the left endpoints (the $$a_i$$ values), but it should take advantage of overlapping intervals to improve the running time. (As the intervals overlap more and more, the problem of fuzzy-sorting the intervals becomes progressively easier. Your algorithm should take advantage of such overlapping, to the extent that it exists.)
 
+Find the intervals that all have a common overlapping with the pivot, these intervals could be seen as equal since there is a $$c$$ in the common overlapping. The following is the same as 7.2.
+
+```python
+class Interval:
+    def __init__(self, l, r):
+        self.l = l
+        self.r = r
+
+    def __lt__(self, other):
+        return self.r < other.l
+
+    def __str__(self):
+        return '(' + str(self.l) + ', ' + str(self.r) + ')'
+
+    def get_intersect(self, interval):
+        return Interval(max(self.l, interval.l), min(self.r, interval.r))
+
+
+def partition(a, p, r):
+    x = a[r - 1]
+    for k in range(p, r - 1):
+        next_x = x.get_intersect(a[k])
+        if next_x.l <= next_x.r:
+            x = next_x
+    i = p - 1
+    for k in range(p, r - 1):
+        if a[k] < x:
+            i += 1
+            a[i], a[k] = a[k], a[i]
+    i += 1
+    a[i], a[r - 1] = a[r - 1], a[i]
+    j = i
+    inter = a[i]
+    for k in range(i + 1, r):
+        next_x = x.get_intersect(a[k])
+        if next_x.l <= next_x.r:
+            j += 1
+            a[j], a[k] = a[k], a[j]
+        k -= 1
+    return i, j
+
+
+def randomized_partition(a, p, r):
+    x = random.randint(p, r - 1)
+    a[x], a[r - 1] = a[r - 1], a[x]
+    return partition(a, p, r)
+
+
+def quicksort(a, p, r):
+    if p < r - 1:
+        q, t = randomized_partition(a, p, r)
+        quicksort(a, p, q)
+        quicksort(a, t + 1, r)
+```
+
 > __*b*__. Argue that your algorithm runs in expected time $$\Theta(n \lg n)$$ in general, but runs in expected time $$\Theta(n)$$ when all of the intervals overlap (i.e., when there exists a value $$x$$ such that $$x \in [a_i, b_i]$$ for all $$i$$ ). Your algorithm should not be checking
 for this case explicitly; rather, its performance should naturally improve as the amount of overlap increases.
+
+The algorithm is based on quick-sort, therefore it is $$\Theta(n \lg n)$$.
+
+If all of the intervals overlap, the partition returns $$(1, n)$$ immediately, there is no need for further recursion. Thus the expected time is the expected time of partition, which is $$\Theta(n)$$.
 
