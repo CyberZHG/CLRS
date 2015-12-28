@@ -296,6 +296,12 @@ $$
 
 Even if median-of-3 choose the median of $$A[p \dots r]$$, the running time is still $$T(n)=2T(n/2)+\Theta(n)$$, which is $$\Omega(n \lg n)$$.
 
+### 7-6 Fuzzy sorting of intervals
 
+> Consider a sorting problem in which we do not know the numbers exactly. Instead, for each number, we know an interval on the real line to which it belongs. That is, we are given $$n$$ closed intervals of the form $$[a_i, b_i]$$, where $$a_i \le b_i$$. We wish to __*fuzzy-sort*__ these intervals, i.e., to produce a permutation $$\left \langle i_1, i_2, \dots, i_n \right \rangle$$ of the intervals such that for $$j=1,2,\dots,n$$, there exist $$c_j \in [a_{ij}, b_{ij}]$$ satisfying $$c_1 \le c_2 \le \dots \le c_n$$.
 
+> __*a*__. Design a randomized algorithm for fuzzy-sorting $$n$$ intervals. Your algorithm should have the general structure of an algorithm that quicksorts the left endpoints (the $$a_i$$ values), but it should take advantage of overlapping intervals to improve the running time. (As the intervals overlap more and more, the problem of fuzzy-sorting the intervals becomes progressively easier. Your algorithm should take advantage of such overlapping, to the extent that it exists.)
+
+> __*b*__. Argue that your algorithm runs in expected time $$\Theta(n \lg n)$$ in general, but runs in expected time $$\Theta(n)$$ when all of the intervals overlap (i.e., when there exists a value $$x$$ such that $$x \in [a_i, b_i]$$ for all $$i$$ ). Your algorithm should not be checking
+for this case explicitly; rather, its performance should naturally improve as the amount of overlap increases.
 
