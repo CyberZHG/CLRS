@@ -43,3 +43,53 @@ $$
 > __*f*__. Show that for any randomized comparison sort $$B$$, there exists a deterministic comparison sort $$A$$ whose expected number of comparisons is no more than those made by $$B$$.
 
 $$\dots$$
+
+### 8-2 Sorting in place in linear time
+
+> Suppose that we have an array of $$n$$ data records to sort and that the key of each record has the value 0 or 1. An algorithm for sorting such a set of records might possess some subset of the following three desirable characteristics:
+1. The algorithm runs in $$O(n)$$ time.
+2. The algorithm is stable.
+3. The algorithm sorts in place, using no more than a constant amount of storage space in addition to the original array.
+
+> __*a*__. Give an algorithm that satisfies criteria 1 and 2 above.
+
+Counting sort.
+
+> __*b*__. Give an algorithm that satisfies criteria 1 and 3 above.
+
+Partition.
+
+> __*c*__. Give an algorithm that satisfies criteria 2 and 3 above.
+
+Insertion sort.
+
+> __*d*__. Can you use any of your sorting algorithms from parts (a)-(c) as the sorting method used in line 2 of RADIX-SORT, so that RADIX-SORT sorts n records with $$b$$-bit keys in $$O(bn)$$ time? Explain how or why not.
+
+First, stable and quick.
+
+> __*e*__. Suppose that the $$n$$ records have keys in the range from 1 to $$k$$. Show how to modify counting sort so that it sorts the records in place in $$O(n+k)$$ time. You may use $$O(k)$$ storage outside the input array. Is your algorithm stable?
+
+Same as permutation group:
+
+```python
+def counting_in_place(a):
+    k = max(a)
+    c = [0 for _ in range(k + 1)]
+    for v in a:
+        c[v] += 1
+    for i in range(1, k + 1):
+        c[i] += c[i - 1]
+    r = c[:]
+    for i in range(len(a)):
+        while True:
+            if a[i] == 0:
+                if i < r[0]:
+                    break
+            else:
+                if r[a[i] - 1] <= i < r[a[i]]:
+                    break
+            c[a[i]] -= 1
+            pos = c[a[i]]
+            a[i], a[pos] = a[pos], a[i]
+```
+
