@@ -315,3 +315,7 @@ We have to know the order of the two consecutive elements.
 > __*d*__. Use your answer to the previous part to show a lower bound of $$2n - 1$$ comparisons for merging two sorted lists.
 
 There are $$2n-1$$ pairs of consecutive elements.
+
+### 8-7 The 0-1 sorting lemma and columnsort
+
+$$\dots$$
