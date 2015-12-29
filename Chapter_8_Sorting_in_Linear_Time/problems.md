@@ -93,3 +93,110 @@ def counting_in_place(a):
             a[i], a[pos] = a[pos], a[i]
 ```
 
+Not stable.
+
+### 8-3 Sorting variable-length items
+
+> __*a*__. You are given an array of integers, where different integers may have different numbers of digits, but the total number of digits over all the integers in the array is $$n$$. Show how to sort the array in $$O(n)$$ time.
+
+Suppose the number of integers which have $$b_i$$ digits is $$n_i$$, divide the integers into different buckets using counting sort, the integers in the same bucket have the same $$b_i$$, then use radix sort in each bucket:
+
+$$
+\sum_{i} b_i n_i = n
+$$
+
+therefore the algorithm is $$O(n)$$.
+
+```python
+def counting_sort(a, m):
+    b = [0 for _ in range(len(a))]
+    k = 10
+    c = [0 for _ in range(k)]
+    for s in a:
+        c[ord(s[m]) - ord('0')] += 1
+    for i in range(1, k):
+        c[i] += c[i - 1]
+    for i in range(len(a) - 1, -1, -1):
+        c[ord(a[i][m]) - ord('0')] -= 1
+        b[c[ord(a[i][m]) - ord('0')]] = a[i]
+    return b
+
+
+def radix_sort(a):
+    for m in range(len(a[0]) - 1, -1, -1):
+        a = counting_sort(a, m)
+    return a
+
+
+def count_and_divide(a):
+    a = map(str, a)
+    b = [0 for _ in range(len(a))]
+    k = 0
+    for s in a:
+        k = max(k, len(s))
+    c = [0 for _ in range(k + 1)]
+    for s in a:
+        c[len(s)] += 1
+    for i in range(1, k + 1):
+        c[i] += c[i - 1]
+    r = c[:]
+    for i in range(len(a) - 1, -1, -1):
+        c[len(a[i])] -= 1
+        b[c[len(a[i])]] = a[i]
+    for i in range(k + 1):
+        if c[i] < r[i]:
+            b[c[i]:r[i]] = radix_sort(b[c[i]:r[i]])
+    return map(int, b)
+```
+
+> __*b*__. You are given an array of strings, where different strings may have different numbers of characters, but the total number of characters over all the strings is $$n$$. Show how to sort the strings in $$O(n)$$ time. (Note that the desired order here is the standard alphabetical order; for example, $$a < ab < b$$.)
+
+Sort the strings by their first characters with counting-sort, then divide the strings by their first characters, repeat the process in each new group. Since each character is used only once for sorting, the amortized running time is $$O(n)$$.
+
+```python
+def get_key(s, i):
+    if i >= len(s):
+        return 0
+    return ord(s[i]) - ord('a') + 1
+
+
+def counting_sort(a, p=0):
+    k = 27
+    b = ['' for _ in range(len(a))]
+    c = [0 for _ in range(k)]
+    for s in a:
+        c[get_key(s, p)] += 1
+    for i in range(1, k):
+        c[i] += c[i - 1]
+    r = c[:]
+    for i in range(len(a) - 1, -1, -1):
+        c[get_key(a[i], p)] -= 1
+        b[c[get_key(a[i], p)]] = a[i]
+    for i in range(1, k):
+        if c[i] < r[i]:
+            b[c[i]:r[i]] = counting_sort(b[c[i]:r[i]], p+1)
+    return b
+```
+
+### 8-4 Water jugs
+
+> Suppose that you are given $$n$$ red and $$n$$ blue water jugs, all of different shapes and sizes. All red jugs hold different amounts of water, as do the blue ones. Moreover, for every red jug, there is a blue jug that holds the same amount of water, and vice versa.
+
+> Your task is to find a grouping of the jugs into pairs of red and blue jugs that hold the same amount of water. To do so, you may perform the following operation: pick a pair of jugs in which one is red and one is blue, fill the red jug with water, and then pour the water into the blue jug. This operation will tell you whether the red or the blue jug can hold more water, or that they have the same volume. Assume that such a comparison takes one time unit. Your goal is to find an algorithm that makes a minimum number of comparisons to determine the grouping. Remember that you may not directly compare two red jugs or two blue jugs.
+
+> __*a*__. Describe a deterministic algorithm that uses $$\Theta(n^2)$$ comparisons to group the jugs into pairs.
+
+Compare each red jug with each blue jug.
+
+> __*b*__. Prove a lower bound of $$\Omega(n \lg n)$$ for the number of comparisons that an algorithm solving this problem must make.
+
+$$
+\begin{array}{rll}
+n! &\le& 3^h \\
+h &=& \Omega(n \lg n)
+\end{array}
+$$
+
+> __*c*__. Give a randomized algorithm whose expected number of comparisons is $$O(n \lg n)$$, and prove that this bound is correct. What is the worst-case number of comparisons for your algorithm?
+
+
