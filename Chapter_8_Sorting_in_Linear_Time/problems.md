@@ -280,3 +280,38 @@ Same as Exercise 6.5-9.
 $$
 \Omega(n \lg n/k) = \Omega(n \lg n) 
 $$
+
+### 8-6 Lower bound on merging sorted lists
+
+> The problem of merging two sorted lists arises frequently. We have seen a procedure for it as the subroutine MERGE in Section 2.3.1. In this problem, we will prove a lower bound of $$2n - 1$$ on the worst-case number of comparisons required to merge two sorted lists, each containing $$n$$ items.
+First we will show a lower bound of $$2n - o(n)$$ comparisons by using a decision tree.
+
+> __*a*__. Given $$2n$$ numbers, compute the number of possible ways to divide them into two sorted lists, each with $$n$$ numbers.
+
+$$
+\displaystyle \binom{2n}{n}
+$$
+
+> __*b*__. Using a decision tree and your answer to part (a), show that any algorithm that correctly merges two sorted lists must perform at least $$2n - o(n)$$ comparisons.
+
+Based on Exercise C.1.13, 
+
+$$
+\begin{array}{rll}
+\displaystyle \binom{2n}{n} &\le& \displaystyle 2^h \\
+h &\ge& \displaystyle \lg\frac{(2n)!}{(n!)^2} \\
+&=& \displaystyle \lg (2n!) - 2\lg (n!) \\
+&=& \displaystyle \Theta(2n\lg 2n) - 2\Theta(n \lg n) \\
+&=& \displaystyle \Theta(2n) \\
+\end{array}
+$$
+
+> Now we will show a slightly tighter $$2n - 1$$ bound.
+
+> __*c*__. Show that if two elements are consecutive in the sorted order and from different lists, then they must be compared.
+
+We have to know the order of the two consecutive elements.
+
+> __*d*__. Use your answer to the previous part to show a lower bound of $$2n - 1$$ comparisons for merging two sorted lists.
+
+There are $$2n-1$$ pairs of consecutive elements.
