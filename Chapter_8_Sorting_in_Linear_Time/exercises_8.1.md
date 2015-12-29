@@ -20,7 +20,7 @@ $$
 $$
 \begin{array}{rll}
 \displaystyle \sum_{k=1}^n\lg k &=& \displaystyle \sum_{k=2}^{n/2}\lg k + \sum_{k=n/2}^n\lg k \\
-&\ge& \displaystyle \sum_{k=2}^{n/2}1 + \sum_{k=n/2}^n\lg n/2 \\
+&\ge& \displaystyle \sum_{k=1}^{n/2}1 + \sum_{k=n/2}^n\lg n/2 \\
 &=& \displaystyle \frac{n}{2} + \frac{n}{2}(\lg n - 1) \\
 &=& \displaystyle \frac{n}{2}\lg n \\
 \end{array}
@@ -29,6 +29,38 @@ $$
 ### 8.1-3
 
 > Show that there is no comparison sort whose running time is linear for at least half of the $$n!$$ inputs of length $$n$$. What about a fraction of $$1/n$$ of the inputs of length $$n$$? What about a fraction $$1/2^n$$?
+
+$$
+\begin{array}{rll}
+\displaystyle \frac{n!}{2} &\le& 2^h \\
+h &\ge& \displaystyle \lg \left (\frac{n!}{2} \right ) \\
+&=& (\lg n!) - 1 \\
+&=& \Omega(n \lg n) - 1 \\
+&=& \Omega(n \lg n)\\
+\end{array}
+$$
+
+$$
+\begin{array}{rll}
+\displaystyle \frac{n!}{n} &\le& 2^h \\
+h &\ge& \displaystyle \lg \left (\frac{n!}{n} \right ) \\
+&=& (\lg n!) - \lg n \\
+&=& \Omega(n \lg n) - \lg n \\
+&=& \Omega(n \lg n)\\
+\end{array}
+$$
+
+$$
+\begin{array}{rll}
+\displaystyle \frac{n!}{2^n} &\le& 2^h \\
+h &\ge& \displaystyle \lg \left (\frac{n!}{2^n} \right ) \\
+&=& (\lg n!) - n \\
+&=& \Omega(n \lg n) - n \\
+&=& \Omega(n \lg n)\\
+\end{array}
+$$
+
+All of them have the lower-bound $$\Omega(n \lg n)$$.
 
 ### 8.1-4
 
