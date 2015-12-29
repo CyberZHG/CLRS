@@ -232,3 +232,51 @@ def quick_sort(a, b, p, r):
         quick_sort(a, b, p, q)
         quick_sort(a, b, q + 1, r)
 ```
+
+### 8-5 Average sorting
+
+> Suppose that, instead of sorting an array, we just require that the elements increase on average. More precisely, we call an $$n$$-element array $$A$$ __*k-sorted*__ if, for all $$i=1,2, \dots,n-k$$, the following holds:
+
+> $$
+\frac{\sum_{j=i}^{i+k-1}A[j]}{k} \le \frac{\sum_{j=i+1}^{i+k}A[j]}{k}
+$$
+
+> __*a*__. What does it mean for an array to be 1-sorted?
+
+Sorted.
+
+> __*b*__. Give a permutation of the numbers $$1,2,\dots,10$$ that is 2-sorted, but not sorted.
+
+1, 2, 1, 2, 1, 2
+
+> __*c*__. Prove that an $$n$$-element array is $$k$$-sorted if and only if $$A[i] \le A[i + k]$$ for all $$i=1,2,\dots,n-k$$.
+
+$$
+\begin{array}{rll}
+\displaystyle \frac{\sum_{j=i}^{i+k-1}A[j]}{k} &\le& \displaystyle \frac{\sum_{j=i+1}^{i+k}A[j]}{k} \\
+\displaystyle \sum_{j=i}^{i+k-1}A[j] &\le& \displaystyle \sum_{j=i+1}^{i+k}A[j] \\
+A[i] &\le& A[i + k]
+\end{array}
+$$
+
+> __*d*__. Give an algorithm that $$k$$-sorts an $$n$$-element array in $$O(n \lg (n / k))$$ time.
+
+We need to sort $$k$$ groups, each group has the same $$(i \mod k)$$. We can sort one group in $$O(n/k\lg (n/k))$$, to sort $$k$$ groups, it is $$O(n \lg (n/k)$$.
+
+```python
+def k_sort(a, k):
+    for i in range(k):
+        a[i:len(a):k] = sorted(a[i:len(a):k])
+```
+
+> We can also show a lower bound on the time to produce a $$k$$-sorted array, when $$k$$ is a constant.
+
+> __*e*__. Show that we can sort a $$k$$-sorted array of length $$n$$ in $$O(n\lg k)$$ time.
+
+Same as Exercise 6.5-9.
+
+> __*f*__. Show that when $$k$$ is a constant, $$k$$-sorting an $$n$$-element array requires $$\Omega(n \lg n)$$ time.
+
+$$
+\Omega(n \lg n/k) = \Omega(n \lg n) 
+$$
