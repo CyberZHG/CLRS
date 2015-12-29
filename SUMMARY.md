@@ -41,4 +41,10 @@
     * [A randomized version of quicksort](Chapter_7_Quicksort/exercises_7.3.md)
     * [Analysis of quicksort](Chapter_7_Quicksort/exercises_7.4.md)
     * [Problems](Chapter_7_Quicksort/problems.md)
+* [Sorting in Linear Time](Chapter_8_Sorting_in_Linear_Time/README.md)
+    * [Lower bounds for sorting](Chapter_8_Sorting_in_Linear_Time/exercises_8.1.md)
+    * [Counting sort](Chapter_8_Sorting_in_Linear_Time/exercises_8.2.md)
+    * [Radix sort](Chapter_8_Sorting_in_Linear_Time/exercises_8.3.md)
+    * [Bucket sort](Chapter_8_Sorting_in_Linear_Time/exercises_8.4.md)
+    * [Problems](Chapter_8_Sorting_in_Linear_Time/problems.md)
 
