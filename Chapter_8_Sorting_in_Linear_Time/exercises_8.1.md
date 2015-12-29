@@ -64,4 +64,14 @@ All of them have the lower-bound $$\Omega(n \lg n)$$.
 
 ### 8.1-4
 
-> Suppose that you are given a sequence of $$n$$ elements to sort. The input sequence consists of $$n/k$$ subsequences, each containing $$k$$ elements. The elements in a given subsequence are all smaller than the elements in the succeeding subsequence and larger than the elements in the preceding subsequence. Thus, all that is needed to sort the whole sequence of length n is to sort the $$k$$ elements in each of the $$n/k$$ subsequences. Show an $$\Omega(n\lg k)$$ lower bound on the number of comparisons needed to solve this variant of the sorting problem.
+> Suppose that you are given a sequence of $$n$$ elements to sort. The input sequence consists of $$n/k$$ subsequences, each containing $$k$$ elements. The elements in a given subsequence are all smaller than the elements in the succeeding subsequence and larger than the elements in the preceding subsequence. Thus, all that is needed to sort the whole sequence of length $$n$$ is to sort the $$k$$ elements in each of the $$n/k$$ subsequences. Show an $$\Omega(n\lg k)$$ lower bound on the number of comparisons needed to solve this variant of the sorting problem.
+
+$$
+\begin{array}{rll}
+(k!)^{n/k} &\le& 2^h \\
+n / k \lg(k!) &\le& h \\
+kh/n &\ge& \lg(k!) \\
+kh/n &=& \Omega(k \lg k) \\
+h &=& \Omega(n \lg k) \\
+\end{array}
+$$
