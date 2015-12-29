@@ -4,9 +4,27 @@
 
 > What is the smallest possible depth of a leaf in a decision tree for a comparison sort?
 
+For a permutation $$a_1 \le a_2 \le \dots \le a_n$$, there are $$n-1$$ pairs of relative ordering, thus the smallest possible depth is $$n-1$$.
+
 ### 8.1-2
 
 > Obtain asymptotically tight bounds on $$\lg(n!)$$ without using Stirling’s approximation. Instead, evaluate the summation $$\sum_{k=1}^n\lg k$$ using techniques from Section A.2.
+
+$$
+\begin{array}{rll}
+\displaystyle \sum_{k=1}^n\lg k &\le& \displaystyle \sum_{k=1}^n\lg n \\
+&=& n\lg n
+\end{array}
+$$
+
+$$
+\begin{array}{rll}
+\displaystyle \sum_{k=1}^n\lg k &=& \displaystyle \sum_{k=2}^{n/2}\lg k + \sum_{k=n/2}^n\lg k \\
+&\ge& \displaystyle \sum_{k=2}^{n/2}1 + \sum_{k=n/2}^n\lg n/2 \\
+&=& \displaystyle \frac{n}{2} + \frac{n}{2}(\lg n - 1) \\
+&=& \displaystyle \frac{n}{2}\lg n \\
+\end{array}
+$$
 
 ### 8.1-3
 
