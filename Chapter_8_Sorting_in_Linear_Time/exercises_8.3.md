@@ -44,7 +44,7 @@ $$\dots$$
 
 $$n$$-ary radix sort, including three $$O(n)$$ counting sort.
 
-#### 8.3-5 $$\star$$
+### 8.3-5 $$\star$$
 
 > In the first card-sorting algorithm in this section, exactly how many sorting passes are needed to sort $$d$$-digit decimal numbers in the worst case? How many piles of cards would an operator need to keep track of in the worst case?
 
