@@ -199,4 +199,36 @@ $$
 
 > __*c*__. Give a randomized algorithm whose expected number of comparisons is $$O(n \lg n)$$, and prove that this bound is correct. What is the worst-case number of comparisons for your algorithm?
 
+Random choose a red jug as pivot and partition blue rugs, and use the blue rug which is equal to the red rug as pivot and partition red rugs.
 
+Worst case is $$O(n^2)$$.
+
+```python
+def partition(a, b, p, r):
+    pos = random.randint(p, r - 1)
+    i = p - 1
+    for j in range(p, r):
+        if b[j] <= a[pos]:
+            i += 1
+            b[i], b[j] = b[j], b[i]
+            if b[i] == a[pos]:
+                k = i
+    b[i], b[k] = b[k], b[i]
+    pos = i
+    i = p - 1
+    for j in range(p, r):
+        if a[j] <= b[pos]:
+            i += 1
+            a[i], a[j] = a[j], a[i]
+            if a[i] == b[pos]:
+                k = i
+    a[i], a[k] = a[k], a[i]
+    return pos
+
+
+def quick_sort(a, b, p, r):
+    if p + 1 < r:
+        q = partition(a, b, p, r)
+        quick_sort(a, b, p, q)
+        quick_sort(a, b, q + 1, r)
+```
