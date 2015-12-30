@@ -24,9 +24,9 @@ $$
 
 $$
 \begin{array}{rll}
-\displaystyle \sum_{k=0}^{\lfloor \lg n \rfloor} \lceil n / 2^k \rceil &\le& \displaystyle \int_{-1}^{\lfloor \lg n \rfloor} -\frac{2^{-x}}{\log(2)}dx \\
-&\le& \displaystyle \frac{2}{\log(2)} - \frac{1}{\log(2) \cdot n} \\
-&<& \displaystyle \frac{2}{\log(2)}
+\displaystyle \sum_{k=0}^{\lfloor \lg n \rfloor} \lceil n / 2^k \rceil &\le& \displaystyle \int_{-1}^{\lfloor \lg n \rfloor} -\frac{2^{-x}}{\ln2}dx \\
+&\le& \displaystyle \frac{2}{\ln2} - \frac{1}{\ln) \cdot n} \\
+&<& \displaystyle \frac{2}{\ln2}
 \end{array}
 $$
 
@@ -44,3 +44,22 @@ $$
 \end{array}
 $$
 
+### A.2-4
+
+> Approximate $$\sum_{k=1}^n k^3$$ with an integral.
+
+$$k^3$$ is a monotonically increasing function,
+
+$$
+\begin{array}{rrlll}
+\displaystyle \int_{0}^n x^3 dx &\le& \displaystyle \sum_{k=1}^n k^3 &\le& \displaystyle \int_{1}^{n+1} x^3 dx \\
+\displaystyle \frac{1}{4}x^4 \Bigr|_{0}^n &\le& \displaystyle \sum_{k=1}^n k^3 &\le& \displaystyle \frac{1}{4}x^4 \Bigr|_{1}^{n+1} \\
+\displaystyle \frac{1}{4}n^4 &\le& \displaystyle \sum_{k=1}^n k^3 &\le& \displaystyle \frac{1}{4}(n+1)^4 - \frac{1}{4} \\
+\end{array}
+$$
+
+### A.2-5
+
+> Why didn’t we use the integral approximation (A.12) directly on $$\sum_{k=1}^n 1/k$$ to obtain an upper bound on the $$n$$th harmonic number?
+
+Because we cannot calculate $$\ln0$$.
