@@ -47,4 +47,195 @@
     * [Radix sort](Chapter_8_Sorting_in_Linear_Time/exercises_8.3.md)
     * [Bucket sort](Chapter_8_Sorting_in_Linear_Time/exercises_8.4.md)
     * [Problems](Chapter_8_Sorting_in_Linear_Time/problems.md)
+* [Medians and Order Statistics](Chapter_9_Medians_and_Order_Statistics/README.md)
+    * [Minimum and maximum](Chapter_9_Medians_and_Order_Statistics/exercises_9.1.md)
+    * [Selection in expected linear time](Chapter_9_Medians_and_Order_Statistics/exercises_9.2.md)
+    * [Selection in worst-case linear time](Chapter_9_Medians_and_Order_Statistics/exercises_9.3.md)
+    * [Problems](Chapter_9_Medians_and_Order_Statistics/problems.md)
+
+<div style="display:none">
+* Elementary Data Structures
+    * Stacks and queues
+    * Linked lists
+    * Implementing pointers and objects
+    * Representing rooted trees
+    * Problems
+* Hash Tables
+    * Direct-address tables
+    * Hash tables
+    * Hash functions
+    * Open addressing
+    * Perfect hashing
+    * Problems
+* Binary Search Trees
+    * What is a binary search tree?
+    * Querying a binary search tree
+    * Insertion and deletion
+    * Randomly built binary search trees
+    * Problems
+* Red-Black Trees
+    * Properties of red-black trees
+    * Rotations
+    * Insertion
+    * Deletion
+    * Problems
+* Augmenting Data Structures
+    * Dynamic order statistics
+    * How to augment a data structure
+    * Interval trees
+    * Problems
+* Dynamic Programming
+    * Rod cutting
+    * Matrix-chain multiplication
+    * Elements of dynamic programming
+    * Longest common subsequence
+    * Optimal binary search trees
+    * Problems
+* Greedy Algorithm
+    * An activity-selection problem
+    * Elements of the greedy strategy
+    * Huffman codes
+    * Matroids and greedy methods
+    * A task-scheduling problem as a matroid
+    * Problems
+* Amortized Analysis
+    * Aggregate analysis
+    * The accounting method
+    * The potential method
+    * Dynamic tables
+    * Problems
+* B-Trees
+    * Definition of B-trees
+    * Basic operations on B-trees
+    * Deleting a key from a B-tree
+    * Problems
+* Fibonacci Heaps
+    * Structure of Fibonacci heaps
+    * Mergeable-heap operations
+    * Decreasing a key and deleting a node
+    * Bounding the maximum degree
+    * Problems
+* van Emde Boas Trees
+    * Preliminary approaches
+    * A recursive structure
+    * The van Emde Boas tree
+    * Problems
+* Data Structures for Disjoint Sets
+    * Disjoint-set operations
+    * Linked-list representation of disjoint sets
+    * Disjoint-set forests
+    * Analysis of union by rank with path compression
+    * Problems
+* Elementary Graph Algorithms
+    * Representations of graphs
+    * Breadth-first search
+    * Depth-first search
+    * Topological sort
+    * Strongly connected components
+    * Problems
+* Minimum Spanning Trees
+    * Growing a minimum spanning tree
+    * The algorithms of Kruskal and Prim
+    * Problems
+* Single-Source Shortest Paths
+    * The Bellman-Ford algorithm
+    * Single-source shortest paths in directed acyclic graphs
+    * Dijkstra's algorithm
+    * Difference constraints and shortest paths
+    * Proofs of shortest-paths properties
+    * Problems
+* All-Pairs Shortest Paths
+    * Shortest paths and matrix multiplication
+    * The Floyd-Warshall algorithm
+    * Johnson's algorithm for sparse graphs
+    * Problems
+* Maximum Flow
+    * Flow networks
+    * The Ford-Fulkerson method
+    * Maximum bipartite matching
+    * Push-relabel algorithms
+    * The relabel-to-front algorithm
+    * Problems
+* Multithreaded Algorithms
+    * The basics of dynamic multithreading
+    * Multithreaded matrix multiplication
+    * Multithreaded merge sort
+    * Problems
+* Matrix Operations
+    * Solving systems of linear equations
+    * Inverting matrices
+    * Symmetric positive-definite matrices and least-squares approximation
+    * Problems
+* Linear Programming
+    * Standard and slack forms
+    * Formulating problems as linear programs
+    * The simplex algorithm
+    * Duality
+    * The initial basic feasible solution
+    * Problems
+* Polynomials and the FFT
+    * Representing polynomials
+    * The DFT and FFT
+    * Efficient FFT implementations
+    * Problems
+* Number-Theoretic Algorithms
+    * Elementary number-theoretic notions
+    * Greatest common divisor
+    * Modular arithmetic
+    * Solving modular linear equations
+    * The Chinese remainder theorem
+    * Powers of an element
+    * The RSA public-key cryptosystem
+    * Primality testing
+    * Integer factorization
+    * Problems
+* String Matching
+    * The naive string-matching algorithm
+    * The Rabin-Karp algorithm
+    * String matching with finite automata
+    * The Knuth-Morris-Pratt algorithm
+    * Problems
+* Computational Geometry
+    * Line-segment properties
+    * Determining whether any pair of segments intersects
+    * Finding the convex hull
+    * Finding the closest pair of points
+    * Problems
+* NP-Completeness
+    * Polynomial time
+    * Polynomial-time verification
+    * NP-completeness and reducibility
+    * NP-completeness proofs
+    * NP-complete problems
+    * Problems
+* Approximation Algorithms
+    * The vertex-cover problem
+    * The traveling-salesman problems
+    * The set-covering problem
+    * Randomization and linear programming
+    * The subset-sum problem
+    * Problems
+* Appendix A: Summations
+    * Summation formulas and properties
+    * Bounding summations
+    * Problems
+* Appendix B: Sets, Etc
+    * Sets
+    * Relations
+    * Functions
+    * Graphs
+    * Trees
+    * Problems
+* Appendix C: Counting and Probability
+    * Counting
+    * Probability
+    * Discrete random variables
+    * The geometric and binomial distributions
+    * The tails of the binomial distribution
+    * Problems
+* Appendix D: Matrices
+    * Matrices and matrix operations
+    * Basic matrix properties
+    * Problems
+</div>
 
