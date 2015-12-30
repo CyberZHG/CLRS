@@ -53,6 +53,12 @@
     * [Selection in worst-case linear time](Chapter_9_Medians_and_Order_Statistics/exercises_9.3.md)
     * [Problems](Chapter_9_Medians_and_Order_Statistics/problems.md)
 
+
+* [Appendix A: Summations](Appendix_A_Summations/README.md)
+    * [Summation formulas and properties](Appendix_A_Summations/exercises_A.1.md)
+    * [Bounding summations](Appendix_A_Summations/exercises_A.2.md)
+    * [Problems](Appendix_A_Summations/problems.md)
+
 <div style="display:none">
 * [Elementary Data Structures](Chapter_10_Elementary_Data_Structures/README.md)
     * [Stacks and queues](Chapter_10_Elementary_Data_Structures/exercises_10.1.md)
@@ -215,10 +221,6 @@
     * [Randomization and linear programming](Chapter_35_Approximation_Algorithms/exercises_35.4.md)
     * [The subset-sum problem](Chapter_35_Approximation_Algorithms/exercises_35.5.md)
     * [Problem](Chapter_35_Approximation_Algorithms/problems.md)
-* [Appendix A: Summations](Appendix_A_Summations/README.md)
-    * [Summation formulas and properties](Appendix_A_Summations/exercises_A.1.md)
-    * [Bounding summations](Appendix_A_Summations/exercises_A.2.md)
-    * [Problems](Appendix_A_Summations/problems.md)
 * [Appendix B: Sets, Etc](Appendix_B_Sets_Etc/README.md)
     * [Sets](Appendix_B_Sets_Etc/exercises_B.1.md)
     * [Relations](Appendix_B_Sets_Etc/exercises_B.2.md)
