@@ -54,188 +54,188 @@
     * [Problems](Chapter_9_Medians_and_Order_Statistics/problems.md)
 
 <div style="display:none">
-* Elementary Data Structures
-    * Stacks and queues
-    * Linked lists
-    * Implementing pointers and objects
-    * Representing rooted trees
-    * Problems
-* Hash Tables
-    * Direct-address tables
-    * Hash tables
-    * Hash functions
-    * Open addressing
-    * Perfect hashing
-    * Problems
-* Binary Search Trees
-    * What is a binary search tree?
-    * Querying a binary search tree
-    * Insertion and deletion
-    * Randomly built binary search trees
-    * Problems
-* Red-Black Trees
-    * Properties of red-black trees
-    * Rotations
-    * Insertion
-    * Deletion
-    * Problems
-* Augmenting Data Structures
-    * Dynamic order statistics
-    * How to augment a data structure
-    * Interval trees
-    * Problems
-* Dynamic Programming
-    * Rod cutting
-    * Matrix-chain multiplication
-    * Elements of dynamic programming
-    * Longest common subsequence
-    * Optimal binary search trees
-    * Problems
-* Greedy Algorithm
-    * An activity-selection problem
-    * Elements of the greedy strategy
-    * Huffman codes
-    * Matroids and greedy methods
-    * A task-scheduling problem as a matroid
-    * Problems
-* Amortized Analysis
-    * Aggregate analysis
-    * The accounting method
-    * The potential method
-    * Dynamic tables
-    * Problems
-* B-Trees
-    * Definition of B-trees
-    * Basic operations on B-trees
-    * Deleting a key from a B-tree
-    * Problems
-* Fibonacci Heaps
-    * Structure of Fibonacci heaps
-    * Mergeable-heap operations
-    * Decreasing a key and deleting a node
-    * Bounding the maximum degree
-    * Problems
-* van Emde Boas Trees
-    * Preliminary approaches
-    * A recursive structure
-    * The van Emde Boas tree
-    * Problems
-* Data Structures for Disjoint Sets
-    * Disjoint-set operations
-    * Linked-list representation of disjoint sets
-    * Disjoint-set forests
-    * Analysis of union by rank with path compression
-    * Problems
-* Elementary Graph Algorithms
-    * Representations of graphs
-    * Breadth-first search
-    * Depth-first search
-    * Topological sort
-    * Strongly connected components
-    * Problems
-* Minimum Spanning Trees
-    * Growing a minimum spanning tree
-    * The algorithms of Kruskal and Prim
-    * Problems
-* Single-Source Shortest Paths
-    * The Bellman-Ford algorithm
-    * Single-source shortest paths in directed acyclic graphs
-    * Dijkstra's algorithm
-    * Difference constraints and shortest paths
-    * Proofs of shortest-paths properties
-    * Problems
-* All-Pairs Shortest Paths
-    * Shortest paths and matrix multiplication
-    * The Floyd-Warshall algorithm
-    * Johnson's algorithm for sparse graphs
-    * Problems
-* Maximum Flow
-    * Flow networks
-    * The Ford-Fulkerson method
-    * Maximum bipartite matching
-    * Push-relabel algorithms
-    * The relabel-to-front algorithm
-    * Problems
-* Multithreaded Algorithms
-    * The basics of dynamic multithreading
-    * Multithreaded matrix multiplication
-    * Multithreaded merge sort
-    * Problems
-* Matrix Operations
-    * Solving systems of linear equations
-    * Inverting matrices
-    * Symmetric positive-definite matrices and least-squares approximation
-    * Problems
-* Linear Programming
-    * Standard and slack forms
-    * Formulating problems as linear programs
-    * The simplex algorithm
-    * Duality
-    * The initial basic feasible solution
-    * Problems
-* Polynomials and the FFT
-    * Representing polynomials
-    * The DFT and FFT
-    * Efficient FFT implementations
-    * Problems
-* Number-Theoretic Algorithms
-    * Elementary number-theoretic notions
-    * Greatest common divisor
-    * Modular arithmetic
-    * Solving modular linear equations
-    * The Chinese remainder theorem
-    * Powers of an element
-    * The RSA public-key cryptosystem
-    * Primality testing
-    * Integer factorization
-    * Problems
-* String Matching
-    * The naive string-matching algorithm
-    * The Rabin-Karp algorithm
-    * String matching with finite automata
-    * The Knuth-Morris-Pratt algorithm
-    * Problems
-* Computational Geometry
-    * Line-segment properties
-    * Determining whether any pair of segments intersects
-    * Finding the convex hull
-    * Finding the closest pair of points
-    * Problems
-* NP-Completeness
-    * Polynomial time
-    * Polynomial-time verification
-    * NP-completeness and reducibility
-    * NP-completeness proofs
-    * NP-complete problems
-    * Problems
-* Approximation Algorithms
-    * The vertex-cover problem
-    * The traveling-salesman problems
-    * The set-covering problem
-    * Randomization and linear programming
-    * The subset-sum problem
-    * Problems
-* Appendix A: Summations
-    * Summation formulas and properties
-    * Bounding summations
-    * Problems
-* Appendix B: Sets, Etc
-    * Sets
-    * Relations
-    * Functions
-    * Graphs
-    * Trees
-    * Problems
-* Appendix C: Counting and Probability
-    * Counting
-    * Probability
-    * Discrete random variables
-    * The geometric and binomial distributions
-    * The tails of the binomial distribution
-    * Problems
-* Appendix D: Matrices
-    * Matrices and matrix operations
-    * Basic matrix properties
-    * Problems
+* [Elementary Data Structures](Chapter_10_Elementary_Data_Structures/README.md)
+    * [Stacks and queues](Chapter_10_Elementary_Data_Structures/exercises_10.1.md)
+    * [Linked lists](Chapter_10_Elementary_Data_Structures/exercises_10.2.md)
+    * [Implementing pointers and objects](Chapter_10_Elementary_Data_Structures/exercises_10.3.md)
+    * [Representing rooted trees](Chapter_10_Elementary_Data_Structures/exercises_10.4.md)
+    * [Problems](Chapter_10_Elementary_Data_Structures/problems.md)
+* [Hash Tables](Chapter_11_Hash_Tables/README.md)
+    * [Direct-address tables](Chapter_11_Hash_Tables/exercises_11.1.md)
+    * [Hash tables](Chapter_11_Hash_Tables/exercises_11.2.md)
+    * [Hash functions](Chapter_11_Hash_Tables/exercises_11.3.md)
+    * [Open addressing](Chapter_11_Hash_Tables/exercises_11.4.md)
+    * [Perfect hashing](Chapter_11_Hash_Tables/exercises_11.5.md)
+    * [Problems](Chapter_11_Hash_Tables/problems.md)
+* [Binary Search Trees](Chapter_12_Binary_Search_Trees/README.md)
+    * [What is a binary search tree?](Chapter_12_Binary_Search_Trees/exercises_12.1.md)
+    * [Querying a binary search tree](Chapter_12_Binary_Search_Trees/exercises_12.2.md)
+    * [Insertion and deletion](Chapter_12_Binary_Search_Trees/exercises_12.3.md)
+    * [Randomly built binary search trees](Chapter_12_Binary_Search_Trees/exercises_12.4.md)
+    * [Problems](Chapter_12_Binary_Search_Trees/problems.md)
+* [Red-Black Trees](Chapter_13_Red-Black_Trees/README.md)
+    * [Properties of red-black trees](Chapter_13_Red-Black_Trees/exercises_13.1.md)
+    * [Rotations](Chapter_13_Red-Black_Trees/exercises_13.2.md)
+    * [Insertion](Chapter_13_Red-Black_Trees/exercises_13.3.md)
+    * [Deletion](Chapter_13_Red-Black_Trees/exercises_13.4.md)
+    * [Problems](Chapter_13_Red-Black_Trees/problems.md)
+* [Augmenting Data Structures](Chapter_14_Augmenting_Data_Structures/README.md)
+    * [Dynamic order statistics](Chapter_14_Augmenting_Data_Structures/exercises_14.1.md)
+    * [How to augment a data structure](Chapter_14_Augmenting_Data_Structures/exercises_14.2.md)
+    * [Interval trees](Chapter_14_Augmenting_Data_Structures/exercises_14.3.md)
+    * [Problems](Chapter_14_Augmenting_Data_Structures/problems.md)
+* [Dynamic Programming](Chapter_15_Dynamic_Programming/README.md)
+    * [Rod cutting](Chapter_15_Dynamic_Programming/exercises_15.1.md)
+    * [Matrix-chain multiplication](Chapter_15_Dynamic_Programming/exercises_15.2.md)
+    * [Elements of dynamic programming](Chapter_15_Dynamic_Programming/exercises_15.3.md)
+    * [Longest common subsequence](Chapter_15_Dynamic_Programming/exercises_15.4.md)
+    * [Optimal binary search trees](Chapter_15_Dynamic_Programming/exercises_15.5.md)
+    * [Problems](Chapter_15_Dynamic_Programming/problems.md)
+* [Greedy Algorithm](Chapter_16_Greedy_Algorithm/README.md)
+    * [An activity-selection problem](Chapter_16_Greedy_Algorithm/exercises_16.1.md)
+    * [Elements of the greedy strategy](Chapter_16_Greedy_Algorithm/exercises_16.2.md)
+    * [Huffman codes](Chapter_16_Greedy_Algorithm/exercises_16.3.md)
+    * [Matroids and greedy methods](Chapter_16_Greedy_Algorithm/exercises_16.4.md)
+    * [A task-scheduling problem as a matroid](Chapter_16_Greedy_Algorithm/exercises_16.5.md)
+    * [Problems](Chapter_16_Greedy_Algorithm/problems.md)
+* [Amortized Analysis](Chapter_17_Amortized_Analysis/README.md)
+    * [Aggregate analysis](Chapter_17_Amortized_Analysis/exercises_17.1.md)
+    * [The accounting method](Chapter_17_Amortized_Analysis/exercises_17.2.md)
+    * [The potential method](Chapter_17_Amortized_Analysis/exercises_17.3.md)
+    * [Dynamic tables](Chapter_17_Amortized_Analysis/exercises_17.4.md)
+    * [Problems](Chapter_17_Amortized_Analysis/problems.md)
+* [B-Trees](Chapter_18_B-Trees/README.md)
+    * [Definition of B-trees](Chapter_18_B-Trees/exercises_18.1.md)
+    * [Basic operations on B-trees](Chapter_18_B-Trees/exercises_18.2.md)
+    * [Deleting a key from a B-tree](Chapter_18_B-Trees/exercises_18.3.md)
+    * [Problems](Chapter_18_B-Trees/problems.md)
+* [Fibonacci Heaps](Chapter_19_Fibonacci_Heaps/README.md)
+    * [Structure of Fibonacci heaps](Chapter_19_Fibonacci_Heaps/exercises_19.1.md)
+    * [Mergeable-heap operations](Chapter_19_Fibonacci_Heaps/exercises_19.2.md)
+    * [Decreasing a key and deleting a node](Chapter_19_Fibonacci_Heaps/exercises_19.3.md)
+    * [Bounding the maximum degree](Chapter_19_Fibonacci_Heaps/exercises_19.4.md)
+    * [Problems](Chapter_19_Fibonacci_Heaps/problems.md)
+* [van Emde Boas Trees](Chapter_20_van_Emde_Boas_Trees/README.md)
+    * [Preliminary approaches](Chapter_20_van_Emde_Boas_Trees/exercises_20.1.md)
+    * [A recursive structure](Chapter_20_van_Emde_Boas_Trees/exercises_20.2.md)
+    * [The van Emde Boas tree](Chapter_20_van_Emde_Boas_Trees/exercises_20.3.md)
+    * [Problems](Chapter_20_van_Emde_Boas_Trees/problems.md)
+* [Data Structures for Disjoint Sets](Chapter_21_Data_Structures_for_Disjoint_Sets/README.md)
+    * [Disjoint-set operations](Chapter_21_Data_Structures_for_Disjoint_Sets/exercises_21.1.md)
+    * [Linked-list representation of disjoint sets](Chapter_21_Data_Structures_for_Disjoint_Sets/exercises_21.2.md)
+    * [Disjoint-set forests](Chapter_21_Data_Structures_for_Disjoint_Sets/exercises_21.3.md)
+    * [Analysis of union by rank with path compression](Chapter_21_Data_Structures_for_Disjoint_Sets/exercises_21.4.md)
+    * [Problems](Chapter_21_Data_Structures_for_Disjoint_Sets/problems.md)
+* [Elementary Graph Algorithms](Chapter_22_Elementary_Graph_Algorithms/README.md)
+    * [Representations of graphs](Chapter_22_Elementary_Graph_Algorithms/exercises_22.1.md)
+    * [Breadth-first search](Chapter_22_Elementary_Graph_Algorithms/exercises_22.2.md)
+    * [Depth-first search](Chapter_22_Elementary_Graph_Algorithms/exercises_22.3.md)
+    * [Topological sort](Chapter_22_Elementary_Graph_Algorithms/exercises_22.4.md)
+    * [Strongly connected components](Chapter_22_Elementary_Graph_Algorithms/exercises_22.5.md)
+    * [Problems](Chapter_22_Elementary_Graph_Algorithms/problems.md)
+* [Minimum Spanning Trees](Chapter_23_Minimum_Spanning_Trees/README.md)
+    * [Growing a minimum spanning tree](Chapter_23_Minimum_Spanning_Trees/exercises_23.1.md)
+    * [The algorithms of Kruskal and Prim](Chapter_23_Minimum_Spanning_Trees/exercises_23.2.md)
+    * [Problems](Chapter_23_Minimum_Spanning_Trees/problems.md)
+* [Single-Source Shortest Paths](Chapter_24_Single-Source_Shortest_Paths/README.md)
+    * [The Bellman-Ford algorithm](Chapter_24_Single-Source_Shortest_Paths/exercises_24.1.md)
+    * [Single-source shortest paths in directed acyclic graphs](Chapter_24_Single-Source_Shortest_Paths/exercises_24.2.md)
+    * [Dijkstra's algorithm](Chapter_24_Single-Source_Shortest_Paths/exercises_24.3.md)
+    * [Difference constraints and shortest paths](Chapter_24_Single-Source_Shortest_Paths/exercises_24.4.md)
+    * [Proofs of shortest-paths properties](Chapter_24_Single-Source_Shortest_Paths/exercises_24.5.md)
+    * [Problems](Chapter_24_Single-Source_Shortest_Paths/problems.md)
+* [All-Pairs Shortest Paths](Chapter_25_All-Pairs_Shortest_Paths/README.md)
+    * [Shortest paths and matrix multiplication](Chapter_25_All-Pairs_Shortest_Paths/exercises_25.1.md)
+    * [The Floyd-Warshall algorithm](Chapter_25_All-Pairs_Shortest_Paths/exercises_25.2.md)
+    * [Johnson's algorithm for sparse graphs](Chapter_25_All-Pairs_Shortest_Paths/exercises_25.3.md)
+    * [Problems](Chapter_25_All-Pairs_Shortest_Paths/problems.md)
+* [Maximum Flow](Chapter_26_Maximum_Flow/README.md)
+    * [Flow networks](Chapter_26_Maximum_Flow/exercises_26.1.md)
+    * [The Ford-Fulkerson method](Chapter_26_Maximum_Flow/exercises_26.2.md)
+    * [Maximum bipartite matching](Chapter_26_Maximum_Flow/exercises_26.3.md)
+    * [Push-relabel algorithms](Chapter_26_Maximum_Flow/exercises_26.4.md)
+    * [The relabel-to-front algorithm](Chapter_26_Maximum_Flow/exercises_26.5.md)
+    * [Problems](Chapter_26_Maximum_Flow/problems.md)
+* [Multithreaded Algorithms](Chapter_27_Multithreaded_Algorithms/README.md)
+    * [The basics of dynamic multithreading](Chapter_27_Multithreaded_Algorithms/exercises_27.1.md)
+    * [Multithreaded matrix multiplication](Chapter_27_Multithreaded_Algorithms/exercises_27.2.md)
+    * [Multithreaded merge sort](Chapter_27_Multithreaded_Algorithms/exercises_27.3.md)
+    * [Problems](Chapter_27_Multithreaded_Algorithms/problems.md)
+* [Matrix Operations](Chapter_28_Matrix_Operations/README.md)
+    * [Solving systems of linear equations](Chapter_28_Matrix_Operations/exercises_28.1.md)
+    * [Inverting matrices](Chapter_28_Matrix_Operations/exercises_28.2.md)
+    * [Symmetric positive-definite matrices and least-squares approximation](Chapter_28_Matrix_Operations/exercises_28.3.md)
+    * [Problems](Chapter_28_Matrix_Operations/problems.md)
+* [Linear Programming](Chapter_29_Linear_Programming/README.md)
+    * [Standard and slack forms](Chapter_29_Linear_Programming/exercises_29.1.md)
+    * [Formulating problems as linear programs](Chapter_29_Linear_Programming/exercises_29.2.md)
+    * [The simplex algorithm](Chapter_29_Linear_Programming/exercises_29.3.md)
+    * [Duality](Chapter_29_Linear_Programming/exercises_29.4.md)
+    * [The initial basic feasible solution](Chapter_29_Linear_Programming/exercises_29.5.md)
+    * [Problems](Chapter_29_Linear_Programming/problems.md)
+* [Polynomials and the FFT](Chapter_30_Polynomials_and_the_FFT/README.md)
+    * [Representing polynomials](Chapter_30_Polynomials_and_the_FFT/exercises_30.1.md)
+    * [The DFT and FFT](Chapter_30_Polynomials_and_the_FFT/exercises_30.2.md)
+    * [Efficient FFT implementations](Chapter_30_Polynomials_and_the_FFT/exercises_30.3.md)
+    * [Problems](Chapter_30_Polynomials_and_the_FFT/problems.md)
+* [Number-Theoretic Algorithms](Chapter_31_Number-Theoretic_Algorithms/README.md)
+    * [Elementary number-theoretic notions](Chapter_31_Number-Theoretic_Algorithms/exercises_31.1.md)
+    * [Greatest common divisor](Chapter_31_Number-Theoretic_Algorithms/exercises_31.2.md)
+    * [Modular arithmetic](Chapter_31_Number-Theoretic_Algorithms/exercises_31.3.md)
+    * [Solving modular linear equations](Chapter_31_Number-Theoretic_Algorithms/exercises_31.4.md)
+    * [The Chinese remainder theorem](Chapter_31_Number-Theoretic_Algorithms/exercises_31.5.md)
+    * [Powers of an element](Chapter_31_Number-Theoretic_Algorithms/exercises_31.6.md)
+    * [The RSA public-key cryptosystem](Chapter_31_Number-Theoretic_Algorithms/exercises_31.7.md)
+    * [Primality testing](Chapter_31_Number-Theoretic_Algorithms/exercises_31.8.md)
+    * [Integer factorization](Chapter_31_Number-Theoretic_Algorithms/exercises_31.9.md)
+    * [Problems](Chapter_31_Number-Theoretic_Algorithms/problems.md)
+* [String Matching](Chapter_32_String_Matching/README.md)
+    * [The naive string-matching algorithm](Chapter_32_String_Matching/exercises_32.1.md)
+    * [The Rabin-Karp algorithm](Chapter_32_String_Matching/exercises_32.2.md)
+    * [String matching with finite automata](Chapter_32_String_Matching/exercises_32.3.md)
+    * [The Knuth-Morris-Pratt algorithm](Chapter_32_String_Matching/exercises_32.4.md)
+    * [Problems](Chapter_32_String_Matching/problems.md)
+* [Computational Geometry](Chapter_33_Computational_Geometry/README.md)
+    * [Line-segment properties](Chapter_33_Computational_Geometry/exercises_33.1.md)
+    * [Determining whether any pair of segments intersects](Chapter_33_Computational_Geometry/exercises_33.2.md)
+    * [Finding the convex hull](Chapter_33_Computational_Geometry/exercises_33.3.md)
+    * [Finding the closest pair of points](Chapter_33_Computational_Geometry/exercises_33.4.md)
+    * [Problems](Chapter_33_Computational_Geometry/problems.md)
+* [NP-Completeness](Chapter_34_NP-Completeness/README.md)
+    * [Polynomial time](Chapter_34_NP-Completeness/exercises_34.1.md)
+    * [Polynomial-time verification](Chapter_34_NP-Completeness/exercises_34.2.md)
+    * [NP-completeness and reducibility](Chapter_34_NP-Completeness/exercises_34.3.md)
+    * [NP-completeness proofs](Chapter_34_NP-Completeness/exercises_34.4.md)
+    * [NP-complete problems](Chapter_34_NP-Completeness/exercises_34.5.md)
+    * [Problems](Chapter_34_NP-Completeness/problems.md)
+* [Approximation Algorithms](Chapter_35_Approximation_Algorithms/README.md)
+    * [The vertex-cover problem](Chapter_35_Approximation_Algorithms/exercises_35.1.md)
+    * [The traveling-salesman problems](Chapter_35_Approximation_Algorithms/exercises_35.2.md)
+    * [The set-covering problem](Chapter_35_Approximation_Algorithms/exercises_35.3.md)
+    * [Randomization and linear programming](Chapter_35_Approximation_Algorithms/exercises_35.4.md)
+    * [The subset-sum problem](Chapter_35_Approximation_Algorithms/exercises_35.5.md)
+    * [Problem](Chapter_35_Approximation_Algorithms/problems.md)
+* [Appendix A: Summations](Appendix_A_Summations/README.md)
+    * [Summation formulas and properties](Appendix_A_Summations/exercises_A.1.md)
+    * [Bounding summations](Appendix_A_Summations/exercises_A.2.md)
+    * [Problems](Appendix_A_Summations/problems.md)
+* [Appendix B: Sets, Etc](Appendix_B_Sets_Etc/README.md)
+    * [Sets](Appendix_B_Sets_Etc/exercises_B.1.md)
+    * [Relations](Appendix_B_Sets_Etc/exercises_B.2.md)
+    * [Functions](Appendix_B_Sets_Etc/exercises_B.3.md)
+    * [Graphs](Appendix_B_Sets_Etc/exercises_B.4.md)
+    * [Trees](Appendix_B_Sets_Etc/exercises_B.5.md)
+    * [Problems](Appendix_B_Sets_Etc/problems.md)
+* [Appendix C: Counting and Probability](Appendix_C_Counting_and_Probability/README.md)
+    * [Counting](Appendix_C_Counting_and_Probability/exercises_C.1.md)
+    * [Probability](Appendix_C_Counting_and_Probability/exercises_C.2.md)
+    * [Discrete random variables](Appendix_C_Counting_and_Probability/exercises_C.3.md)
+    * [The geometric and binomial distributions](Appendix_C_Counting_and_Probability/exercises_C.4.md)
+    * [The tails of the binomial distribution](Appendix_C_Counting_and_Probability/exercises_C.5.md)
+    * [Problems](Appendix_C_Counting_and_Probability/problems.md)
+* [Appendix D: Matrices](Appendix_D_Matrices/README.md)
+    * [Matrices and matrix operations](Appendix_D_Matrices/exercises_D.1.md)
+    * [Basic matrix properties](Appendix_D_Matrices/exercises_D.2.md)
+    * [Problems](Appendix_D_Matrices/problems.md)
 </div>
 
