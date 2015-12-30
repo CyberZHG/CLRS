@@ -29,6 +29,8 @@ $$
 
 > Show that $$\sum_{k=0}^\infty k^2 x^k = x(1+x)/(1-x)^3$$ for $$0 < |x| < 1$$.
 
+First we need:
+
 $$
 \begin{array}{rlllllll}
 \displaystyle \sum_{k=0}^\infty kx^k &=&x+ &2x^2 + &3x^3 + &4x^4 + \dots \\
@@ -38,6 +40,8 @@ $$
 \displaystyle \sum_{k=0}^\infty kx^k &=& \displaystyle \frac{x}{(1-x)^2}
 \end{array}
 $$
+
+Then:
 
 $$
 \begin{array}{rlllllll}
@@ -51,3 +55,28 @@ $$
 &=& \displaystyle \frac{x(1+x)}{(1-x)^3}
 \end{array}
 $$
+
+### A.1-4 $$\star$$
+
+> Show that $$\sum_{k=0}^\infty (k-1)/2^k=0$$.
+
+$$
+\sum_{k=0}^\infty \frac{1}{2^k} = 1 \cdot \frac{1}{1 - \frac{1}{2}} = 2
+$$
+
+$$
+\begin{array}{rll}
+\displaystyle \sum_{k=0}^\infty \frac{k}{2^k} &=& \displaystyle \frac{1}{2^1} + \frac{2}{2^2} + \frac{3}{2^3} + \dots \\
+\displaystyle \frac{1}{2} \left (\sum_{k=0}^\infty \frac{k}{2^k} \right ) &=& \displaystyle \frac{1}{2^2} + \frac{2}{2^3} + \frac{3}{2^4} + \dots \\
+&=& \displaystyle \frac{1}{2} \cdot \frac{1}{1 - \frac{1}{2}} \\
+&=& 1 \\
+\displaystyle \sum_{k=0}^\infty \frac{k}{2^k} &=& 2
+\end{array}
+$$
+
+$$
+\sum_{k=0}^\infty \frac{k-1}{2^k} = \left ( \sum_{k=0}^\infty \frac{k}{2^k} \right ) - \left ( \sum_{k=0}^\infty \frac{1}{2^k} \right ) = 2 - 2 = 0
+$$
+
+
+
