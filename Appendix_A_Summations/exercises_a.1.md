@@ -1,2 +1,53 @@
-# Summation formulas and properties
+## A.1 Summation formulas and properties
 
+### A.1-1
+
+> Find a simple formula for $$\sum_{k=1}^n(2k-1)$$.
+
+$$
+\begin{array}{rll}
+\displaystyle \sum_{k=1}^n(2k-1) &=& \displaystyle 2\sum_{k=1}^nk-\sum_{k=1}^n1 \\
+&=& \displaystyle 2 \cdot \frac{n(n+1)}{2} - n \\
+&=& n^2
+\end{array}
+$$
+
+### A.1-2 $$\star$$
+
+> Show that $$\sum_{k=1}^n 1/(2k-1) = \ln(\sqrt{n})+O(1)$$ by manipulating the harmonic series.
+
+$$
+\begin{array}{rll}
+\displaystyle \sum_{k=1}^n \frac{1}{2k-1} &=& \displaystyle \sum_{k=1}^{2n} \frac{1}{k} - \sum_{k=1}^n \frac{1}{2k} \\
+&=& \displaystyle \ln(2n) - \frac{1}{2}\ln n + O(1) \\
+&=& \displaystyle \frac{1}{2}\ln(n) + O(1) \\
+&=& \displaystyle \ln(\sqrt{n}) + O(1) \\
+\end{array}
+$$
+
+### A.1-3
+
+> Show that $$\sum_{k=0}^\infty k^2 x^k = x(1+x)/(1-x)^3$$ for $$0 < |x| < 1$$.
+
+$$
+\begin{array}{rlllllll}
+\displaystyle \sum_{k=0}^\infty kx^k &=&x+ &2x^2 + &3x^3 + &4x^4 + \dots \\
+\displaystyle \left (\sum_{k=0}^\infty kx^k\right)x &=& & x^2 + &2x^3 + &3x^4 + \dots \\
+\displaystyle \left (\sum_{k=0}^\infty kx^k\right) (1 - x) &=&x+ &x^2 + &x^3 + &x^4 + \dots \\
+\displaystyle \left (\sum_{k=0}^\infty kx^k\right) (1 - x) &=& \displaystyle \frac{x}{1-x} \\
+\displaystyle \sum_{k=0}^\infty kx^k &=& \displaystyle \frac{x}{(1-x)^2}
+\end{array}
+$$
+
+$$
+\begin{array}{rlllllll}
+\displaystyle \sum_{k=0}^\infty k^2 x^k &=& x + 4x^2 + 9x^3 + 16x^4 + \dots \\
+&=& x+ x^2 + x^3 + x^4 + \dots \\
+&& + 3x^2 + 3x^3 + 3x^4 + \dots \\
+&& + 5x^3 + 5x^4 + \dots \\
+&=& \displaystyle \sum_{k=0}^\infty (2k+1) \cdot \frac{x^{k+1}}{1-x} \\
+&=& \displaystyle \frac{x}{1-x} \left ( 2\sum_{k=0}^\infty k x^k + \sum_{k=0}^\infty x^k \right ) \\
+&=& \displaystyle \frac{x}{1-x} \left ( \frac{2x}{(1-x)^2} + \frac{1}{1-x} \right ) \\
+&=& \displaystyle \frac{x(1+x)}{(1-x)^3}
+\end{array}
+$$
