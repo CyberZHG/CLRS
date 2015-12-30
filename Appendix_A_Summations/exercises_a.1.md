@@ -98,4 +98,32 @@ $$
 \end{array}
 $$
 
+### A.1-6
 
+> Prove that $$\sum_{k=1}^n O(f_k(i)) = O(\sum_{k=1}^n f_k(i))$$ by using the linearity property of summations.
+
+$$
+\sum_{k=1}^n \Theta(f(k)) = \Theta(\sum_{k=1}^n f(k))
+$$
+
+### A.1-7
+
+> Evaluate the product $$\prod_{k=1}^n 2 \cdot 4^k$$.
+
+$$
+\prod_{k=1}^n 2 \cdot 4^k = 2^n \cdot 4^{\sum_{k=1}^n k} = 2^{n^2 + 2n}
+$$
+
+### A.1-8 $$\star$$
+
+> Evaluate the product $$\prod_{k=2}^n (1-1/k^2)$$.
+
+$$
+\begin{array}{rll}
+\displaystyle \prod_{k=2}^n (1-1/k^2) &=& \displaystyle \prod_{k=2}^n \frac{(k+1)(k-1)}{k^2} \\
+&=& \displaystyle \frac{1}{n!^2} \prod_{k=2}^n (k+1) \prod_{k=2}^n (k-1) \\ 
+&=& \displaystyle \frac{1}{n!^2} \prod_{k=3}^{n+1} k \prod_{k=1}^{n-1} k \\ 
+&=& \displaystyle \frac{1}{n!^2} \cdot \frac{n+1}{2n} \cdot \prod_{k=1}^{n} k \prod_{k=1}^{n} k \\ 
+&=& \displaystyle \frac{n+1}{2n}
+\end{array}
+$$
