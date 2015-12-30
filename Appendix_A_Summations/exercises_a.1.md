@@ -78,5 +78,24 @@ $$
 \sum_{k=0}^\infty \frac{k-1}{2^k} = \left ( \sum_{k=0}^\infty \frac{k}{2^k} \right ) - \left ( \sum_{k=0}^\infty \frac{1}{2^k} \right ) = 2 - 2 = 0
 $$
 
+### A.1-5 $$\star$$
+
+> Evaluate the sum $$\sum_{k=1}^\infty (2k + 1)x^{2k}$$.
+
+If $$|x| = 0$$, the result is $$0$$.
+
+If $$|x| \ge 1$$, the result is $$+\infty$$.
+
+If $$0 < |x| < 1$$:
+
+$$
+\begin{array}{rll}
+\displaystyle \sum_{k=1}^\infty (2k + 1)x^{2k} &=& 3x^2 + 5x^4 + 7x^6 + \dots \\
+\displaystyle x^2 \left ( \sum_{k=1}^\infty (2k + 1)x^{2k} \right ) &=& 3x^4 + 5x^6 + \dots \\
+\displaystyle (1-x^2) \left ( \sum_{k=1}^\infty (2k + 1)x^{2k} \right ) &=& 3x^2 + 2x^4 + 2x^6 + \dots \\
+&=& \displaystyle \frac{3x^2-x^4}{1-x^2} \\
+\displaystyle \sum_{k=1}^\infty (2k + 1)x^{2k} &=& \displaystyle \frac{3x^2-x^4}{(1-x^2)^2}
+\end{array}
+$$
 
 
