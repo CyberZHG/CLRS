@@ -54,6 +54,6 @@
    * [Problems](Chapter_9_Medians_and_Order_Statistics/problems.md)
 * [Appendix A: Summations](Appendix_A_Summations/README.md)
    * [Summation formulas and properties](Appendix_A_Summations/exercises_a.1.md)
-   * [Bounding summations](Appendix_A_Summations/exercises_A.2.md)
+   * [Bounding summations](Appendix_A_Summations/exercises_a.2.md)
    * [Problems](Appendix_A_Summations/problems.md)
 
