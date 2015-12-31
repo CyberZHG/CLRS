@@ -179,7 +179,7 @@ def black_box_kth(a, k):
 
 
 def black_box_median(a):
-    return black_box_kth(a, len(a) // 2)
+    return sorted(a)[(len(a) - 1) // 2]
 
 
 def k_closest(a, k):
@@ -197,3 +197,21 @@ def k_closest(a, k):
             break
     return closest
 ```
+
+### 9.3-8
+
+> Let $$X[1\dots n]$$ and $$Y[1\dots n]$$ be two arrays, each containing $$n$$ numbers already in sorted order. Give an $$O(\lg n)$$-time algorithm to find the median of all $$2n$$ elements in arrays $$X$$ and $$Y$$.
+
+We can find the median in $$O(1)$$ time in a sorted array, compare the medians of the two array, if the meidan of $$X$$ is less than the median of $$Y$$, then we know the median must located in the right side of $$X$$ or left side of $$Y$$. Do it recursively, when there is only one element left in each array, the smaller one is the median.
+
+```python
+def median_of_two(a, b):
+    if len(a) == 1:
+        return min(a[0], b[0])
+    mid = (len(a) - 1) // 2
+    k = mid + 1
+    if a[mid] <= b[mid]:
+        return median_of_two(a[-k:], b[:k])
+    return median_of_two(a[:k], b[-k:])
+```
+
