@@ -60,4 +60,13 @@ n &\ge& 140 \\
 \end{array}
 $$
 
+### 9.3-3
+
+> Show how quicksort can be made to run in $$O(n \lg n)$$ time in the worst case, assuming that all elements are distinct.
+
+Use median as pivot, since we can find median in $$O(n)$$, and based on Problem 7-2 (b), we have $$T(n)=T(n/2)+O(n)$$.
+
+
+
+
 
