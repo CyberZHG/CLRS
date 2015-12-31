@@ -237,6 +237,7 @@ $$
 And
 
 $$
+\displaystyle
 \sum_{j=k+1}^{n} \frac{j-k-1}{j-k+1} + \sum_{i=1}^{k-2} \frac{k-i-1}{k-i+1} \le \sum_{j=k+1}^{n} 1 + \sum_{i=1}^{k-2} 1 = n - k + k - 2 = n - 2 < n
 $$
 
