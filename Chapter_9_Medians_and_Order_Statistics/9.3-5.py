@@ -8,10 +8,16 @@ def black_box_median(a, p, r):
 
 def partition(a, p, r, x):
     i = p - 1
-    for k in range(p, r):
+    for k in range(p, r - 1):
+        if a[k] == x:
+            a[k], a[r - 1] = a[r - 1], a[k]
+            break
+    for k in range(p, r - 1):
         if a[k] < x:
             i += 1
             a[i], a[k] = a[k], a[i]
+    i += 1
+    a[i], a[r - 1] = a[r - 1], a[i]
     return i
 
 
@@ -21,8 +27,10 @@ def select(a, p, r, i):
     x = black_box_median(a, p, r)
     q = partition(a, p, r, x)
     k = q - p + 1
-    if i <= k:
-        return select(a, p, q + 1, i)
+    if i == k:
+        return a[q]
+    if i < k:
+        return select(a, p, q, i)
     return select(a, q + 1, r, i - k)
 
 
