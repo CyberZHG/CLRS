@@ -153,3 +153,95 @@ U_i(n) &=& n+O(T(2i)\lg(n/i)) \\
 &=& n+O(T(2n/k)\lg k) \\
 \end{array}
 $$
+
+### 9-4 Alternative analysis of randomized selection
+
+> In this problem, we use indicator random variables to analyze the RANDOMIZED-SELECT procedure in a manner akin to our analysis of RANDOMIZED-QUICKSORT in Section 7.4.2.
+
+> As in the quicksort analysis, we assume that all elements are distinct, and we rename the elements of the input array $$A$$ as $$z_1, z_2, \dots, z_n$$, where $$z_i$$ is the $$i$$th smallest element. Thus, the call RANDOMIZED-SELECT$$(A, 1, n, k)$$ returns $$z_k$$.
+
+> For $$1 \le i < j \le n$$, let 
+
+> $$X_{ijk} = I \{z_i$$ is compared with $$z_j$$ sometime during the execution of the algorithm to find $$z_k\}$$.
+
+> __*a*__. Give an exact expression for $$\text{E}[X_{ijk}]$$.
+
+$$
+\text{E}[X_{ijk}] = \left \{ 
+\begin{array}{ll}
+\displaystyle \frac{2}{j - k + 1} & (k \le i < j) \\
+\displaystyle \frac{2}{j - i + 1} & (i \le k \le j) \\
+\displaystyle \frac{2}{k - i + 1} & (i < j \le k) \\
+\end{array}
+\right .
+$$
+
+> __*b*__. Let $$X_k$$ denote the total number of comparisons between elements of array $$A$$ when finding $$z_k$$. Show that
+
+> $$
+\text{E}[X_k] \le 2 \left ( 
+\sum_{i=1}^{k}\sum_{j=k}^n \frac{1}{j-i+1} +
+\sum_{j=k+1}^{n} \frac{j-k-1}{j-k+1} +
+\sum_{i=1}^{k-2} \frac{k-i-1}{k-i+1}
+\right )
+$$
+
+$$
+\begin{array}{rll}
+\text{E}[X_k] &=& \displaystyle \sum_{i=1}^{n-1} \sum_{j=i+1}^n \text{E}[X_{ijk}] \\
+&=& \displaystyle \sum_{i=k+1}^{n-1} \sum_{j=i+1}^n \text{E}[X_{ijk}] +
+\sum_{i=1}^{k} \sum_{j=k}^n \text{E}[X_{ijk}] +
+\sum_{i=1}^{k-2} \sum_{j=i+1}^{k-1} \text{E}[X_{ijk}] \\
+&=& \displaystyle \sum_{i=k+1}^{n-1} \sum_{j=i+1}^n \frac{2}{j - k + 1} +
+\sum_{i=1}^{k} \sum_{j=k}^n \frac{2}{j - i + 1} +
+\sum_{i=1}^{k-2} \sum_{j=i+1}^{k-1} \frac{2}{k - i + 1} \\
+&=& 2 \cdot \left (
+\displaystyle \sum_{i=k+1}^{n-1} \sum_{j=i+1}^n \frac{1}{j - k + 1} +
+\sum_{i=1}^{k} \sum_{j=k}^n \frac{1}{j - i + 1} +
+\sum_{i=1}^{k-2} \sum_{j=i+1}^{k-1} \frac{1}{k - i + 1} 
+\right ) \\
+&=& 2 \left (
+\displaystyle \sum_{j=k+2}^{n-1} \sum_{i=k+1}^{j-1} \frac{1}{j - k + 1} +
+\sum_{i=1}^{k} \sum_{j=k}^n \frac{1}{j - i + 1} +
+\sum_{i=1}^{k-2} \sum_{j=i+1}^{k-1} \frac{1}{k - i + 1}
+\right ) \\
+&=& 2 \left (
+\displaystyle \sum_{j=k+2}^{n-1} \frac{j-k-1}{j - k + 1} +
+\sum_{i=1}^{k} \sum_{j=k}^n \frac{1}{j - i + 1} +
+\sum_{i=1}^{k-2} \frac{k-i-1}{k - i + 1}
+\right ) \\
+&\le& 2 \left (
+\displaystyle \sum_{j=k+1}^{n} \frac{j-k-1}{j - k + 1} +
+\sum_{i=1}^{k} \sum_{j=k}^n \frac{1}{j - i + 1} +
+\sum_{i=1}^{k-2} \frac{k-i-1}{k - i + 1}
+\right ) \\
+&=& 2 \left ( 
+\displaystyle 
+\sum_{i=1}^{k}\sum_{j=k}^n \frac{1}{j-i+1} +
+\sum_{j=k+1}^{n} \frac{j-k-1}{j-k+1} +
+\sum_{i=1}^{k-2} \frac{k-i-1}{k-i+1}
+\right )
+\end{array}
+$$
+
+> __*c*__. Show that $$E[X_k] \le 4n$$.
+
+Based on [StackExchange](http://math.stackexchange.com/questions/529208/inequality-sumk-i-1-sumn-j-k1-overj-i-1-le-n), 
+
+$$
+\begin{array}{rll}
+\displaystyle \sum_{i=1}^{k}\sum_{j=k}^n \frac{1}{j-i+1} &\le& n 
+\end{array}
+$$
+
+And
+
+$$
+\sum_{j=k+1}^{n} \frac{j-k-1}{j-k+1} + \sum_{i=1}^{k-2} \frac{k-i-1}{k-i+1} \le \sum_{j=k+1}^{n} 1 + \sum_{i=1}^{k-2} 1 = n - k + k - 2 = n - 2 < n
+$$
+
+Therefore $$E[X_k] \le 4n$$.
+
+> __*d*__. Conclude that, assuming all elements of array $$A$$ are distinct, RANDOMIZED-SELECT runs in expected time $$O(n)$$.
+
+$$O(4n) = O(n)$$.
