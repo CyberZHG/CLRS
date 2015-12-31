@@ -107,3 +107,49 @@ Same as Exercise 9.3-9.
 
 Since $$x$$ and $$y$$ are independent, the best solution is the medians of $$x$$ and $$y$$ separately.
 
+### 9-3 Small order statistics
+
+> We showed that the worst-case number $$T(n)$$ of comparisons used by SELECT to select the $$i$$th order statistic from $$n$$ numbers satisfies $$T(n)=\Theta(n)$$, but the constant hidden by the $$\Theta$$-notation is rather large. When $$i$$ is small relative to $$n$$, we can implement a different procedure that uses SELECT as a subroutine but makes fewer comparisons in the worst case.
+
+> __*a*__. Describe an algorithm that uses $$U_i(n)$$ comparisons to find the $$i$$th smallest of $$n$$ elements, where
+
+> $$\displaystyle U_i(n) = \left \{ \begin{array}{ll}
+T(n) & \text{if}~~i \ge n/2 \\
+\lfloor n / 2 \rfloor + U_i(\lceil n / 2 \rceil) + T(2i) & \text{otherwise}
+\end{array} \right .$$
+
+Divide elements into pairs and compare each pair. Recursively deal with the set with the smaller elements in each pair, and return the $$i$$ smallest elements by partition, then the $$i$$th element belong to the pairs that appeared in the $$i$$ smallest elements.
+
+> __*b*__. Show that, if $$i < n/2$$, then $$U_i(n)=n+O(T(2i)\lg(n/i))$$.
+
+Suppose $$U_i(n) \le n + cT(2i) \lg(n/i)$$,
+
+$$
+\begin{array}{rlll}
+T(n) &=& \lfloor n / 2 \rfloor + U_i(\lceil n / 2 \rceil) + T(2i) \\
+&\le& n/2 + n/2 + cT(2i) \lg(n/2i) + T(2i) \\
+&=& n + cT(2i) \lg(n/i) + T(2i)(1-c) \\
+&\le& n + cT(2i) \lg(n/i) & (c \ge 1) \\
+\end{array}
+$$
+
+> __*c*__. Show that if $$i$$ is a constant less than $$n/2$$, then $$U_i(n)= n + O(\lg n)$$.
+
+$$
+\begin{array}{rll}
+U_i(n) &=& n+O(T(2i)\lg(n/i)) \\
+&=& n + O(O(1)(\lg n - lg i)) \\
+&=& n + O(\lg n - O(1)) \\
+&=& n + O(\lg n) \\
+\end{array}
+$$
+
+> __*d*__. Show that if $$i=n/k$$ for $$k \ge 2$$, then $$U_i(n)=n+O(T(2n/k)\lg k)$$.
+
+$$
+\begin{array}{rll}
+U_i(n) &=& n+O(T(2i)\lg(n/i)) \\
+&=& n+O(T(2n/k)\lg(k/2)) \\
+&=& n+O(T(2n/k)\lg k) \\
+\end{array}
+$$
