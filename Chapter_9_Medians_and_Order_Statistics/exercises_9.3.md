@@ -47,3 +47,17 @@ $$
 
 Therefore SELECT does not run in linear time if groups of 3 are used.
 
+### 9.3-2
+
+> Analyze SELECT to show that if $$n \ge 140$$, then at least $$\lceil n/4 \rceil$$ elements are greater than the median-of-medians $$x$$ and at least $$\lceil n/4 \rceil$$ elements are less than $$x$$.
+
+$$
+\begin{array}{rll}
+\displaystyle \frac{3n}{10} - 6 &\ge& \displaystyle \left \lceil \frac{n}{4} \right \rceil \\
+\displaystyle \frac{3n}{10} - 6 &\ge& \displaystyle \frac{n}{4} + 1 \\
+12n - 240 &\ge& 10n + 40 \\
+n &\ge& 140 \\
+\end{array}
+$$
+
+
