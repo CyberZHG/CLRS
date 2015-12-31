@@ -167,3 +167,33 @@ def k_quantiles(a, k):
     return quantiles
 ```
 
+### 9.3-7
+
+> Describe an $$O(n)$$-time algorithm that, given a set $$S$$ of $$n$$ distinct numbers and a positive integer $$k \le n$$, determines the $$k$$ numbers in $$S$$ that are closest to the median of $$S$$.
+
+Find the median in $$O(n)$$; create a new array, each element is the absolute value of the original value subtract the median; find the $$k$$th smallest number in $$O(n)$$,  then the desired values are the elements whose absolute difference with the median is less than or equal to the $$k$$th smallest number in the new array.
+
+```python
+def black_box_kth(a, k):
+    return sorted(a)[k-1]
+
+
+def black_box_median(a):
+    return black_box_kth(a, len(a) // 2)
+
+
+def k_closest(a, k):
+    median = black_box_median(a)
+    b = [abs(a[i] - median) for i in xrange(len(a))]
+    kth = black_box_kth(b, k)
+    closest = []
+    for i in xrange(len(a)):
+        if abs(a[i] - median) < kth:
+            closest.append(a[i])
+    for i in xrange(len(a)):
+        if abs(a[i] - median) == kth:
+            closest.append(a[i])
+        if len(closest) >= k:
+            break
+    return closest
+```
