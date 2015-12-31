@@ -215,3 +215,9 @@ def median_of_two(a, b):
     return median_of_two(a[:k], b[-k:])
 ```
 
+### 9.3-9
+
+> Professor Olay is consulting for an oil company, which is planning a large pipeline running east to west through an oil field of $$n$$ wells. The company wants to connect a spur pipeline from each well directly to the main pipeline along a shortest route (either north or south), as shown in Figure 9.2. Given the $$x$$- and $$y$$-coordinates of the wells, how should the professor pick the optimal location of the main pipeline,
+which would be the one that minimizes the total length of the spurs? Show how to determine the optimal location in linear time.
+
+Find the median of $$y$$. Suppose $$n$$ is odd, if we move the main pipeline slightly, then the total distance will be increased by $$(n+1)/2 \cdot d$$ for one side and decreased by $$(n-1)/2\cdot d$$ for the other side, thus the total distance is increased by $$d$$.
