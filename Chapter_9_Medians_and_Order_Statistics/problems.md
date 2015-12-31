@@ -97,3 +97,13 @@ def weighted_median(a, p, r, w=0.5):
     return weighted_median(a, q + 1, r, w - s)
 ```
 
+> The __*post-office location problem*__ is defined as follows. We are given $$n$$ points $$p_1, p_2, \dots, p_n$$ with associated wegihts $$w_1, w_2, \dots, w_n$$. We wish to find a point $$p$$ that minimizes the sum $$\sum_{i=1}^n w_i d(p, p_i)$$, where $$d(a,b)$$ is the distance between points $$a$$ and $$b$$.
+
+> __*d*__. Argue that the weighted median is a best solution for the 1-dimensional postoffice location problem, in which points are simply real numbers and the distance between points $$a$$ and $$b$$ is $$d(a, b) = |a - b|$$.
+
+Same as Exercise 9.3-9.
+
+> __*e*__. Find the best solution for the 2-dimensional post-office location problem, in which the points are $$(x,y)$$ coordinate pairs and the distance between points $$a=(x_1, y-1)$$ and $$b=(x_2, y_2)$$ is the __*Manhattan distance*__ given by $$d(a,b)=|x_1-x_2|+|y_1-y_2|$$.
+
+Since $$x$$ and $$y$$ are independent, the best solution is the medians of $$x$$ and $$y$$ separately.
+
