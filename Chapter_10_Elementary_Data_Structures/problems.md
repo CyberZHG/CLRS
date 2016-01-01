@@ -162,3 +162,20 @@ class MergeableHeap:
 
 Same as __*b*__.
 
+### 10-3 Searching a sorted compact list
+
+> __*a*__. Suppose that COMPACT-LIST-SEARCH$$(L, n, k)$$ takes $$t$$ iterations of the while loop of lines 2–8. Argue that COMPACT-LIST-SEARCH'$$(L, n, k, t)$$ returns the same answer and that the total number of iterations of both the for and while loops within COMPACT-LIST-SEARCH' is at least $$t$$.
+
+> __*b*__. Argue that the expected running time of COMPACT-LIST-SEARCH'$$(L, n, k, t)$$ is $$O(t+\text{E}[X_t])$$.
+
+> __*c*__. Show that $$\text{E}[X_t] \le \sum_{r=1}^n (1-r/n)^t$$.
+
+> __*d*__. Show that $$\sum_{r=0}^{n-1} r^t \le n^{t+1}/(t+1)$$.
+
+> __*e*__. Prove that $$\text{E}[X_t] \le n/(t+1)$$.
+
+> __*f*__. Show that COMPACT-LIST-SEARCH'$$(L, n, k, t)$$ runs in $$O(t+n/t)$$ expected time.
+
+> __*g*__. Conclude that COMPACT-LIST-SEARCH runs in $$O(\sqrt{n})$$ expected time.
+
+> __*h*__. Why do we assume that all keys are distinct in COMPACT-LIST-SEARCH? Argue that random skips do not necessarily help asymptotically when the list contains repeated key values.
