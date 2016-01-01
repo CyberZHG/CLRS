@@ -6,3 +6,4 @@
 * [6.4 The heapsort algorithm](exercises_6.4.md)
 * [6.5 Priority queues](exercises_6.5.md)
 * [Problems](problems.md)
+
