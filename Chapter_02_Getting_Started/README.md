@@ -4,3 +4,4 @@
 * [2.2 Analyzing algorithms](exercises_2.2.md)
 * [2.3 Designing algorithms](exercises_2.3.md)
 * [Problems](problems.md)
+
