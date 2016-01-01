@@ -145,9 +145,91 @@ class Deque:
 
 > Show how to implement a queue using two stacks. Analyze the running time of the queue operations.
 
-Push: $$\Theta(1)$$, Pop: amortized $$\Theta(1)$$.
+Enqueue: $$\Theta(1)$$. 
+
+Dequeue: worst $$O(n)$$, amortized $$\Theta(1)$$.
+
+```python
+class BlackBoxStack:
+    def __init__(self):
+        self.s = []
+
+    def is_empty(self):
+        return len(self.s) == 0
+
+    def push(self, x):
+        self.s.append(x)
+
+    def pop(self):
+        x = self.s[-1]
+        del self.s[-1]
+        return x
+
+
+class Queue:
+    def __init__(self):
+        self.stack_in = BlackBoxStack()
+        self.stack_out = BlackBoxStack()
+
+    def is_empty(self):
+        return self.stack_in.is_empty() and self.stack_out.is_empty()
+
+    def enqueue(self, x):
+        self.stack_in.push(x)
+
+    def dequeue(self):
+        if self.stack_out.is_empty():
+            if self.stack_in.is_empty():
+                raise Exception('underflow')
+            while not self.stack_in.is_empty():
+                self.stack_out.push(self.stack_in.pop())
+        return self.stack_out.pop()
+```
 
 ### 10.1-7
 
 > Show how to implement a stack using two queues. Analyze the running time of the stack operations.
 
+Push: $$\Theta(1)$$. 
+
+Pop: $$\Theta(n)$$.
+
+```python
+class BlackBoxQueue:
+    def __init__(self):
+        self.s = []
+
+    def is_empty(self):
+        return len(self.s) == 0
+
+    def enqueue(self, x):
+        self.s.append(x)
+
+    def dequeue(self):
+        x = self.s[0]
+        del self.s[0]
+        return x
+
+
+class Stack:
+    def __init__(self):
+        self.queue_in = BlackBoxQueue()
+        self.queue_out = BlackBoxQueue()
+
+    def is_empty(self):
+        return self.queue_in.is_empty()
+
+    def push(self, x):
+        self.queue_in.enqueue(x)
+
+    def pop(self):
+        if self.queue_in.is_empty():
+            raise Exception('underflow')
+        while True:
+            x = self.queue_in.dequeue()
+            if self.queue_in.is_empty():
+                break
+            self.queue_out.enqueue(x)
+        self.queue_in, self.queue_out = self.queue_out, self.queue_in
+        return x
+```
