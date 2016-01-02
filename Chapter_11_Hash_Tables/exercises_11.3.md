@@ -57,20 +57,20 @@ Suppose $$n_i$$ is the number of elements in slot $$i$$, then the total number o
 $$
 \begin{array}{rll}
 \displaystyle \sum_{i=1}^{|B|} \frac{n_i (n_i - 1)}{2}
-&=& \displaystyle \frac{1}{2}\sum_{i=1}^{|B|} n_i^2 + \frac{1}{2}\sum_{i=1}^{|B|} n_i \\
-&\ge& \displaystyle \frac{1}{2}\sum_{i=1}^{|B|} \left (\frac{|U|}{|B|} \right )^2 + \frac{|U|}{2} \\
-&=& \displaystyle \frac{{|U|}^2}{2{|B|}} + \frac{|U|}{2} \\
+&=& \displaystyle \frac{1}{2}\sum_{i=1}^{|B|} n_i^2 - \frac{1}{2}\sum_{i=1}^{|B|} n_i \\
+&\ge& \displaystyle \frac{1}{2}\sum_{i=1}^{|B|} \left (\frac{|U|}{|B|} \right )^2 - \frac{|U|}{2} \\
+&=& \displaystyle \frac{{|U|}^2}{2{|B|}} - \frac{|U|}{2} \\
 \end{array}
 $$
 
 $$
 \begin{array}{rll}
 \displaystyle \epsilon &\ge& \displaystyle \frac{\displaystyle \sum_{i=1}^{|B|} \frac{n_i (n_i - 1)}{2}}{\displaystyle \frac{|U|(|U|-1)}{2}} \\
-&=& \displaystyle \frac{\displaystyle \frac{{|U|}^2}{|B|} + |U|}{|U|(|U|-1)} \\
-&=& \displaystyle \frac{|U| + |B|}{|B|(|U| - 1)} \\
-&=& \displaystyle \frac{|U|}{|B|(|U| - 1)} + \frac{1}{|U| - 1} \\
-&\ge& \displaystyle \frac{|U|}{|B||U|} + \frac{1}{|U|} \\
-&=& \displaystyle \frac{1}{|B|} + \frac{1}{|U|} \\
+&=& \displaystyle \frac{\displaystyle \frac{{|U|}^2}{|B|} - |U|}{|U|(|U|-1)} \\
+&=& \displaystyle \frac{|U| - |B|}{|B|(|U| - 1)} \\
+&=& \displaystyle \frac{|U|}{|B|(|U| - 1)} - \frac{1}{|U| - 1} \\
+&\ge& \displaystyle \frac{|U|}{|B||U|} - \frac{1}{|U|} \\
+&=& \displaystyle \frac{1}{|B|} - \frac{1}{|U|} \\
 \end{array}
 $$
 
