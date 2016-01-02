@@ -1,6 +1,8 @@
 # Summary
 
 * [Introduction](README.md)
+
+
 * [The Role of Algorithms in Computing](Chapter_01_The_Role_of_Algorithms_in_Computing/README.md)
    * [Algorithms](Chapter_01_The_Role_of_Algorithms_in_Computing/exercises_1.1.md)
    * [Algorithms as a technology](Chapter_01_The_Role_of_Algorithms_in_Computing/exercises_1.2.md)
@@ -28,6 +30,8 @@
    * [Randomized algorithms](Chapter_05_Probabilistic_Analysis_and_Randomized_Algorithms/exercises_5.3.md)
    * [Probabilistic analysis and further uses of indicator random variables](Chapter_05_Probabilistic_Analysis_and_Randomized_Algorithms/exercises_5.4.md)
    * [Problems](Chapter_05_Probabilistic_Analysis_and_Randomized_Algorithms/problems.md)
+
+
 * [Heapsort](Chapter_06_Heapsort/README.md)
    * [Heaps](Chapter_06_Heapsort/exercises_6.1.md)
    * [Maintaining the heap property](Chapter_06_Heapsort/exercises_6.2.md)
@@ -52,14 +56,24 @@
    * [Selection in expected linear time](Chapter_09_Medians_and_Order_Statistics/exercises_9.2.md)
    * [Selection in worst-case linear time](Chapter_09_Medians_and_Order_Statistics/exercises_9.3.md)
    * [Problems](Chapter_09_Medians_and_Order_Statistics/problems.md)
+
+
 * [Elementary Data Structures](Chapter_10_Elementary_Data_Structures/README.md)
    * [Stacks and queues](Chapter_10_Elementary_Data_Structures/exercises_10.1.md)
    * [Linked lists](Chapter_10_Elementary_Data_Structures/exercises_10.2.md)
    * [Implementing pointers and objects](Chapter_10_Elementary_Data_Structures/exercises_10.3.md)
    * [Representing rooted trees](Chapter_10_Elementary_Data_Structures/exercises_10.4.md)
    * [Problems](Chapter_10_Elementary_Data_Structures/problems.md)
+* [Hash Tables](Chapter_11_Hash_Tables/README.md)
+   * [Direct-address tables](Chapter_11_Hash_Tables/exercises_11.1.md)
+   * [Hash tables](Chapter_11_Hash_Tables/exercises_11.2.md)
+   * [Hash functions](Chapter_11_Hash_Tables/exercises_11.3.md)
+   * [Open addressing](Chapter_11_Hash_Tables/exercises_11.4.md)
+   * [Perfect hashing](Chapter_11_Hash_Tables/exercises_11.5.md)
+   * [Problems](Chapter_11_Hash_Tables/problems.md)
+
+
 * [Appendix A: Summations](Appendix_A_Summations/README.md)
    * [Summation formulas and properties](Appendix_A_Summations/exercises_a.1.md)
    * [Bounding summations](Appendix_A_Summations/exercises_a.2.md)
    * [Problems](Appendix_A_Summations/problems.md)
-
