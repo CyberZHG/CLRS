@@ -42,3 +42,37 @@ $$h(64)=554$$
 
 $$h(65)=172$$
 
+### 11.3-5 $$\star$$
+
+> Define a family $$\mathcal{H}$$ of hash functions from a finite set $$U$$ to a finite set $$B$$ to be __*$$\epsilon$$-universal*__ if for all pairs of distinct elements $$k$$ and $$l$$ in $$U$$,
+
+> $$\text{Pr}\{h(k)=h(l)\} \le \epsilon$$,
+
+> where the probability is over the choice of the hash function $$h$$ drawn at random from the family $$\mathcal{H}$$. Show that an $$\epsilon$$-universal family of hash functions must have
+
+> $$\displaystyle \epsilon \ge \frac{1}{|B|} - \frac{1}{|U|}$$.
+
+Suppose $$n_i$$ is the number of elements in slot $$i$$, then the total number of collisions is:
+
+$$
+\begin{array}{rll}
+\displaystyle \sum_{i=1}^{|B|} \frac{n_i (n_i - 1)}{2}
+&=& \displaystyle \frac{1}{2}\sum_{i=1}^{|B|} n_i^2 + \frac{1}{2}\sum_{i=1}^{|B|} n_i \\
+&\ge& \displaystyle \frac{1}{2}\sum_{i=1}^{|B|} \left (\frac{|U|}{|B|} \right )^2 + \frac{|U|}{2} \\
+&=& \displaystyle \frac{{|U|}^2}{2{|B|}} + \frac{|U|}{2} \\
+\end{array}
+$$
+
+$$
+\begin{array}{rll}
+\displaystyle \epsilon &\ge& \displaystyle \frac{\displaystyle \sum_{i=1}^{|B|} \frac{n_i (n_i - 1)}{2}}{\displaystyle \frac{|U|(|U|-1)}{2}} \\
+&=& \displaystyle \frac{\displaystyle \frac{{|U|}^2}{|B|} + |U|}{|U|(|U|-1)} \\
+&=& \displaystyle \frac{|U| + |B|}{|B|(|U| - 1)} \\
+&=& \displaystyle \frac{|U|}{|B|(|U| - 1)} + \frac{1}{|U| - 1} \\
+&\ge& \displaystyle \frac{|U|}{|B||U|} + \frac{1}{|U|} \\
+&=& \displaystyle \frac{1}{|B|} + \frac{1}{|U|} \\
+\end{array}
+$$
+
+
+
