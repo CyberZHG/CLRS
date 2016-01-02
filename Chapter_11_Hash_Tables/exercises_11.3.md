@@ -74,5 +74,12 @@ $$
 \end{array}
 $$
 
+### 11.3-6 $$\star$$
 
+> Let $$U$$ be the set of $$n$$-tuples of values drawn from $$\mathbb{Z}_p$$, and let $$B=\mathbb{Z}_p$$, where $$p$$ is prime. Define the hash function $$h_b$$: $$U \rightarrow B$$ for $$b \in \mathbb{Z}_p$$ on an input $$n$$-tuple $$\langle a_0, a_1, \dots, a_{n-1} \rangle$$ from $$U$$ as
 
+> $$\displaystyle h_b(\langle a_0, a_1, \dots, a_{n-1} \rangle)=\left ( \sum_{j=0}^{n-1}a_jb^j \right ) ~\text{mod}~p$$,
+
+> and let $$\mathcal{H}=\{ h_b : b \in \mathbb{Z}_p \}$$. Argue that $$\mathcal{H}$$ is $$((n-1)/p)$$-universal according to the definition of $$\epsilon$$-universal in Exercise 11.3-5.
+
+$$\dots$$
