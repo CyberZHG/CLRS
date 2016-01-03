@@ -61,14 +61,14 @@ $$
 \displaystyle \sum_{i=1}^{m} \frac{n_i (n_i - 1)}{2}
 &=& \displaystyle \frac{1}{2}\sum_{i=1}^{m} n_i^2 - \frac{1}{2}\sum_{i=1}^{m} n_i \\
 &\ge& \displaystyle \frac{1}{2}\sum_{i=1}^{m} \left (\frac{n}{m} \right )^2 - \frac{n}{2} \\
-&=& \displaystyle \frac{{n}^2}{2{m}} - \frac{n}{2} \\
+&=& \displaystyle \frac{n^2}{2{m}} - \frac{n}{2} \\
 \end{array}
 $$
 
 $$
 \begin{array}{rll}
 \displaystyle \epsilon &\ge& \displaystyle \frac{\displaystyle \sum_{i=1}^{m} \frac{n_i (n_i - 1)}{2}}{\displaystyle \frac{n(n-1)}{2}} \\
-&=& \displaystyle \frac{\displaystyle \frac{{n}^2}{m} - n}{n(n-1)} \\
+&=& \displaystyle \frac{\displaystyle \frac{n^2}{m} - n}{n(n-1)} \\
 &=& \displaystyle \frac{n - m}{m(n - 1)} \\
 &=& \displaystyle \frac{n}{m(n - 1)} - \frac{1}{n - 1} \\
 &\ge& \displaystyle \frac{n}{mn} - \frac{1}{n} \\
