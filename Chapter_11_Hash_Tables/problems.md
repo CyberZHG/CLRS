@@ -116,4 +116,47 @@ $$
 \left ( \lim_{n \rightarrow \infty} \frac{\frac{1}{n}}{\frac{\lg n}{\lg \lg n}} = \lim_{n \rightarrow \infty} \frac{\lg (\lg n)}{\lg (n^n)} = 0 \right )
 $$
 
+### 11-3 Quadratic probing
+
+> Suppose that we are given a key $$k$$ to search for in a hash table with positions $$0,1,\dots, m-1$$, and suppose that we have a hash function $$h$$ mapping the key space into the set $$\{0,1,\dots,m-1\}$$. The search scheme is as follows:
+
+> 1. Compute the value $$j=h(k)$$, and set $$i=0$$.
+> 2. Probe in position $$j$$ for the desired key $$k$$. If you find it, or if this position is empty, terminate the search.
+> 3. Set $$i = i + 1$$. If $$i$$ now equals $$m$$, the table is full, so terminate the search. Otherwise, set $$j = (i + j) ~\text{mod}~ m$$, and return to step 2.
+
+> Assume that $$m$$ is a power of 2.
+
+> __*a*__. Show that this scheme is an instance of the general "quadratic probing" scheme by exhibiting the appropriate constants $$c_1$$ and $$c_2$$ for equation (11.5).
+
+The $$i$$th probing is equivalent to $$(j + \frac{i(i+1)}{2}) ~\text{mod}~ m$$, thus $$c_1 = 1/2$$, $$c_2 = 1/2$$.
+
+> __*b*__. Prove that this algorithm examines every table position in the worst case.
+
+Suppose there are two probing $$i$$ and $$j$$, and $$0 \le j < i < m$$.
+
+Suppose the two probing examine the same position, then:
+
+$$
+\begin{array}{rlll}
+(i + i^2) - (j + j^2) &=& 2km &(k \ge 0) \\
+(i+j+1)(i-j) &=& 2km
+\end{array}
+$$
+
+Since $$i > j$$, then $$k \ne 0$$.
+
+Note that $$m$$ is a power of 2.
+
+If $$i$$ and $$j$$ are both even or both odd, then only $$(i-j)$$ could be even, since $$i < m$$, $$(i - j) < m < 2m$$, thus $$2m$$ could not be a factor of $$(i - j)$$.
+
+If one of $$i$$ and $$j$$ is odd and the other is even, then only $$(i + j + 1)$$ could be even, since $$i < m$$, $$(i + j + 1) < 2m$$, thus $$2m$$ could not be a factor of $$(i + j + 1)$$.
+
+Therefore $$i$$ and $$j$$ could not probing the same position, this algorithm examines every table position in the worst case.
+
+
+
+
+
+
+
 
