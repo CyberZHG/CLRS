@@ -39,7 +39,7 @@ Obviously
 
 > We can sort a given set of $$n$$ numbers by first building a binary search tree containing these numbers (using TREE-INSERT repeatedly to insert the numbers one by one) and then printing the numbers by an inorder tree walk. What are the worstcase and best-case running times for this sorting algorithm?
 
-Worst: a linked list, $$O(n^2)$$.
+Worst: chain, $$O(n^2)$$.
 
 Best: $$\Theta(n \lg n)$$.
 
