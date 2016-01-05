@@ -71,6 +71,12 @@
    * [Open addressing](Chapter_11_Hash_Tables/exercises_11.4.md)
    * [Perfect hashing](Chapter_11_Hash_Tables/exercises_11.5.md)
    * [Problems](Chapter_11_Hash_Tables/problems.md)
+* [Binary Search Trees](Chapter_12_Binary_Search_Trees/README.md)
+   * [What is a binary search tree?](Chapter_12_Binary_Search_Trees/exercises_12.1.md)
+   * [Querying a binary search tree](Chapter_12_Binary_Search_Trees/exercises_12.2.md)
+   * [Insertion and deletion](Chapter_12_Binary_Search_Trees/exercises_12.3.md)
+   * [Randomly built binary search trees](Chapter_12_Binary_Search_Trees/exercises_12.4.md)
+   * [Problems](Chapter_12_Binary_Search_Trees/problems.md)
 
 
 * [Appendix A: Summations](Appendix_A_Summations/README.md)
