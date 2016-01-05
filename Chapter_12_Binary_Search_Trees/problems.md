@@ -214,3 +214,16 @@ Therefore $$\displaystyle b_n = \frac{1}{n+1} \binom{2n}{n}$$.
 > __*d*__. Show that
 
 > $$\displaystyle b_n = \frac{4^n}{\sqrt{\pi}n^{3/2}} (1 + O(1/n))$$.
+
+Based on Stirling's approximation $$\displaystyle n! \approx \sqrt{2 \pi n} \left ( \frac{n}{e} \right )^n$$,
+
+$$
+\begin{array}{rll}
+b_n &=& \displaystyle \frac{1}{n+1} \frac{\displaystyle (2n)!}{\displaystyle n!n!} \\
+&\approx& \displaystyle \frac{1}{n+1} \frac{\sqrt{4 \pi n}(2n / e)^{2n}}{2 \pi n (n/e)^{2n}} \\
+&=& \displaystyle \frac{1}{n+1} \frac{4^n}{\sqrt{\pi n} } \\
+&=& \displaystyle \left ( \frac{1}{n} + \left ( \frac{1}{n+1} - \frac{1}{n} \right ) \right ) \frac{4^n}{\sqrt{\pi n} } \\
+&=& \displaystyle \left ( \frac{1}{n} - \frac{1}{n^2+n} \right ) \frac{4^n}{\sqrt{\pi n} } \\
+&=& \displaystyle \frac{4^n}{\sqrt{\pi}n^{3/2}} (1 + O(1/n))
+\end{array}
+$$
