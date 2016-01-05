@@ -224,6 +224,7 @@ b_n &=& \displaystyle \frac{1}{n+1} \frac{\displaystyle (2n)!}{\displaystyle n!n
 &=& \displaystyle \frac{1}{n+1} \frac{4^n}{\sqrt{\pi n} } \\
 &=& \displaystyle \left ( \frac{1}{n} + \left ( \frac{1}{n+1} - \frac{1}{n} \right ) \right ) \frac{4^n}{\sqrt{\pi n} } \\
 &=& \displaystyle \left ( \frac{1}{n} - \frac{1}{n^2+n} \right ) \frac{4^n}{\sqrt{\pi n} } \\
+&=& \displaystyle \frac{1}{n} \left (1  - \frac{1}{n+1} \right ) \frac{4^n}{\sqrt{\pi n} } \\
 &=& \displaystyle \frac{4^n}{\sqrt{\pi}n^{3/2}} (1 + O(1/n))
 \end{array}
 $$
