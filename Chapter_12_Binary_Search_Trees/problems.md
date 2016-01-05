@@ -31,6 +31,8 @@ than string $$b$$ if either
 
 > The radix tree data structure shown in Figure 12.5 stores the bit strings 1011, 10, 011, 100, and 0. When searching for a key $$a = a_0a_1 \dots a_p$$, we go left at a node of depth $$i$$ if $$a_i = 0$$ and right if $$a_i = 1$$. Let $$S$$ be a set of distinct bit strings whose lengths sum to $$n$$. Show how to use a radix tree to sort $$S$$ lexicographically in $$\Theta(n)$$ time. For the example in Figure 12.5, the output of the sort should be the sequence 0, 011, 10, 100, 1011.
 
+Insert all the bit strings into radix tree costs $$\Theta(n)$$, then use preorder tree walk to sort the strings costs $$\Theta(n)$$, the total cost is still $$\Theta(n)$$.
+
 ```python
 class TreeNode:
     def __init__(self, val, left=None, right=None):
@@ -81,4 +83,46 @@ def sort_strings(strs):
     return radix_tree.sorted()
 ```
 
+### 12-3 Average node depth in a randomly built binary search tree
 
+> In this problem, we prove that the average depth of a node in a randomly built binary search tree with n nodes is $$O(\lg n)$$. Although this result is weaker than that of Theorem 12.4, the technique we shall use reveals a surprising similarity between the building of a binary search tree and the execution of RANDOMIZED-QUICKSORT from Section 7.3.
+
+> We define the __*total path length*__ $$P(T)$$ of a binary tree $$T$$ as the sum, over all nodes $$x$$ in $$T$$ , of the depth of node $$x$$, which we denote by $$d(x, T)$$.
+
+> __*a*__. Argue that the average depth of a node in $$T$$ is
+
+> $$\displaystyle \frac{1}{n} \sum_{x \in T} d(x, T) = \frac{1}{n} P(T)$$.
+
+Obviously.
+
+> Thus, we wish to show that the expected value of $$P(T)$$ is $$O(n \lg n)$$.
+
+> __*b*__. Let $$T_L$$ and $$T_R$$ denote the left and right subtrees of tree $$T$$, respectively. Argue that if $$T$$ has $$n$$ nodes, then
+
+> $$P(T) = P(T_L) + P(T_R) + n - 1$$.
+
+There are $$n-1$$ nodes in $$P(T_L)$$ and $$P(T_R)$$, each increase by 1.
+
+> __*c*__. Let $$P(n)$$ denote the average total path length of a randomly built binary search tree with n nodes. Show that
+
+> $$\displaystyle P(n) = \frac{1}{n} \sum_{i=0}^{n-1} (P(i) + P(n-i-1) + n - 1)$$.
+
+The root is equally likely to be the rank in $$[1, n]$$.
+
+> __*d*__. Show how to rewrite $$P(n)$$ as
+
+> $$\displaystyle P(n) = \frac{2}{n} \sum_{k=1}^{n-1} P(k) + \Theta(n)$$.
+
+Each item $$P(1), P(2), \dots, P(n)$$ appears twice in the summation, and
+
+$$
+\frac{1}{n} \sum_{i=0}^{n-1} n - 1 = \frac{(n-3)n}{2n} = \Theta(n)
+$$
+
+> __*e*__. Recalling the alternative analysis of the randomized version of quicksort given in Problem 7-3, conclude that $$P(n) = O(n \lg n)$$.
+
+Based on Problem 7-3,  $$P(n) = O(n \lg n)$$.
+
+> __*f*__. Describe an implementation of quicksort in which the comparisons to sort a set of elements are exactly the same as the comparisons to insert the elements into a binary search tree.
+
+Choose the pivot that it has the lowest index in the original list.
