@@ -186,9 +186,30 @@ $$
 
 Let $$f(x) = \sqrt{1-4x}$$,
 
-$$\displaystyle f^{(k)}(x) = \displaystyle -\frac{\displaystyle \frac{2 \cdot (2(k-1))!}{(k-1)!}}{(1-4x)^{2k - 1}} ~~(k > 0)$$
+The numerator of the derivative is 
 
-$$\displaystyle f^{(a)}(0) = \displaystyle \displaystyle \frac{2 \cdot (2(a-1))!}{(a-1)!}$$
+$$\begin{array}{rll}
+2 \cdot (1 \cdot 2) \cdot (3 \cdot 2) \cdot (5 \cdot 2)\cdots &=&
+\displaystyle 2^k \cdot \prod_{i=0}^{k - 2}(2k+1) \\
+&=& 2^k \cdot \frac{\displaystyle (2(k-1))!}{\displaystyle 2^{k-1}(k-1)!} \\
+&=& \frac{\displaystyle 2(2(k-1))!}{\displaystyle (k-1)!} \\
+\end{array}
+$$
+
+$$\displaystyle f(x) = 1 - 2x - 2x^2 - 4 x^3 - 10x^4 - 28x^5 - \dots$$
+
+The coefficient is $$\frac{\displaystyle 2(2(k-1))!}{\displaystyle k!(k-1)!}$$.
+
+$$\begin{array}{rll}
+B(x) &=& \displaystyle \frac{1}{2x}(1-f(x)) \\
+&=& 1 + x + 2x^2 + 5x^3 + 14x^4 + \dots \\
+&=& \displaystyle \sum_{n=0}^\infty \frac{\displaystyle (2n)!}{\displaystyle (n+1)!n!} x \\
+&=& \displaystyle \sum_{n=0}^\infty \frac{1}{n+1} \frac{\displaystyle (2n)!}{\displaystyle n!n!} x \\
+&=& \displaystyle \sum_{n=0}^\infty \frac{1}{n+1} \binom{2n}{n} x
+\end{array}
+$$
+
+Therefore $$\displaystyle b_n = \frac{1}{n+1} \binom{2n}{n}$$.
 
 > __*d*__. Show that
 
