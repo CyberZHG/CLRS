@@ -141,9 +141,36 @@ A root with two subtree.
 
 > $$\displaystyle B(x) = \sum_{n=0}^\infty b_n x^n$$.
 
+$$
+\begin{array}{rll}
+B(x)^2 &=& (b_0 x^0 + b_1 x^1 + b_2 x^2 + \dots) ^ 2 \\
+&=& b_0^2 x^0 + (b_0 b_1 + b_1 b_0) x^1 + (b_0 b_2 + b_1 b_1 + b_2 b_0) x^2 + \dots \\
+&=& \displaystyle \sum_{k=0}^0 b_k b_{0-k} x^0 + \sum_{k=0}^1 b_k b_{1-k} x^1 + \sum_{k=0}^2 b_k b_{2-k} x^2 + \dots \\
+\end{array}
+$$
+
+$$
+\begin{array}{rll}
+xB(x)^2 + 1 &=& \displaystyle 1 + \sum_{k=0}^0 b_k b_{1-1-k} x^1 + \sum_{k=0}^2 b_k b_{2-1-k} x^3 + \sum_{k=0}^2 b_k b_{3-1-k} x^2 + \dots \\
+&=& 1 + b_1 x^1 + b_2 x^2 + b_3 x^3 + \dots \\
+&=& b_0 x^0 + b_1 x^1 + b_2 x^2 + b_3 x^3 + \dots \\
+&=& \displaystyle \sum_{n=0}^\infty b_n x^n \\
+&=& B(x)
+\end{array}
+$$
+
 > Show that $$B(x) = x B(x)^2 + 1$$, and hence one way to express $$B(x)$$ in closed form is
 
 > $$\displaystyle B(x) = \frac{1}{2x} (1 - \sqrt{1 - 4x})$$.
+
+$$
+\begin{array}{rll}
+x B(x)^2 + 1 &=& \displaystyle x \cdot \frac{1}{4x^2} (1 + 1 - 4x - 2\sqrt{1 - 4x}) + 1 \\
+&=& \displaystyle \frac{1}{4x} (2 - 2\sqrt{1 - 4x}) - 1 + 1 \\
+&=& \displaystyle \frac{1}{2x} (1 - \sqrt{1 - 4x}) \\
+&=& B(x)
+\end{array}
+$$
 
 > The __*Taylor expansion*__ of $$f(x)$$ around the point $$x=a$$ is given by
 
@@ -156,6 +183,12 @@ A root with two subtree.
 > $$\displaystyle b_n = \frac{1}{n+1} \binom{2n}{n}$$
 
 > (the $$n$$th Catalan number) by using the Taylor expansion of $$\sqrt{1-4x}$$ around $$x=0$$. 
+
+Let $$f(x) = \sqrt{1-4x}$$,
+
+$$\displaystyle f^{(k)}(x) = \displaystyle -\frac{\displaystyle \frac{2 \cdot (2(k-1))!}{(k-1)!}}{(1-4x)^{2k - 1}} ~~(k > 0)$$
+
+$$\displaystyle f^{(a)}(0) = \displaystyle \displaystyle \frac{2 \cdot (2(a-1))!}{(a-1)!}$$
 
 > __*d*__. Show that
 
