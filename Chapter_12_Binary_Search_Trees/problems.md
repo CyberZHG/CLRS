@@ -126,3 +126,37 @@ Based on Problem 7-3,  $$P(n) = O(n \lg n)$$.
 > __*f*__. Describe an implementation of quicksort in which the comparisons to sort a set of elements are exactly the same as the comparisons to insert the elements into a binary search tree.
 
 Choose the pivot that it has the lowest index in the original list.
+
+### 12-4 Number of different binary trees
+
+> Let $$b_n$$ denote the number of different binary trees with $$n$$ nodes. In this problem, you will find a formula for $$b_n$$, as well as an asymptotic estimate.
+
+> __*a*__. Show that $$b_0 = 1$$ and that, for $$n \ge 1$$,
+
+> $$\displaystyle b_n = \sum_{k=0}^{n-1} b_k b_{n-1-k}$$.
+
+A root with two subtree.
+
+> __*b*__. Referring to Problem 4-4 for the definition of a generating function, let $$B(x)$$ be the generating function
+
+> $$\displaystyle B(x) = \sum_{n=0}^\infty b_n x^n$$.
+
+> Show that $$B(x) = x B(x)^2 + 1$$, and hence one way to express $$B(x)$$ in closed form is
+
+> $$\displaystyle B(x) = \frac{1}{2x} (1 - \sqrt{1 - 4x})$$.
+
+> The __*Taylor expansion*__ of $$f(x)$$ around the point $$x=a$$ is given by
+
+> $$\displaystyle f(x) = \sum_{k=0}^\infty \frac{f^{(k)}(a)}{k!} (x - a)^k$$,
+
+> where $$f^{(k)}(a)$$ is the $$k$$th derivative of $$f$$ evaluated at $$x$$.
+
+> __*c*__. Show that
+
+> $$\displaystyle b_n = \frac{1}{n+1} \binom{2n}{n}$$
+
+> (the $$n$$th Catalan number) by using the Taylor expansion of $$\sqrt{1-4x}$$ around $$x=0$$. 
+
+> __*d*__. Show that
+
+> $$\displaystyle b_n = \frac{4^n}{\sqrt{\pi}n^{3/2}} (1 + O(1/n))$$.
