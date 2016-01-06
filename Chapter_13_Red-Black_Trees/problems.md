@@ -196,4 +196,146 @@ $$O(\lg n)$$: the length of path from root to the inserted node.
 
 $$O(1)$$: the height will decrease by 1 after the rotation, therefore the ancestors will not be affected.
 
+### 13-4 Treaps
 
+> If we insert a set of $$n$$ items into a binary search tree, the resulting tree may be horribly unbalanced, leading to long search times. As we saw in Section 12.4, however, randomly built binary search trees tend to be balanced. Therefore, one strategy that, on average, builds a balanced tree for a fixed set of items would be to randomly permute the items and then insert them in that order into the tree.
+
+> __*a*__. Show that given a set of nodes $$x_1, x_2, \dots, x_n$$, with associated keys and priorities, all distinct, the treap associated with these nodes is unique.
+
+The root is the node with smallest priority, the root divides the sets into two subsets based on the key. In each subset, the node with smallest priority is selected as the root, thus we can uniquely determine a treap with a specific input.
+
+> __*b*__. Show that the expected height of a treap is $$\Theta(\lg n)$$, and hence the expected time to search for a value in the treap is $$\Theta(\lg n)$$.
+
+Same as randomly built BST.
+
+> __*c*__. Explain how TREAP-INSERT works. Explain the idea in English and give pseudocode.
+
+```python
+class TreapNode:
+    def __init__(self, key, left=None, right=None):
+        self.key = key
+        self.priority = random.random()
+        self.p = None
+        self.left = left
+        self.right = right
+        if self.left is not None:
+            self.left.p = self
+        if self.right is not None:
+            self.right.p = self
+
+
+class Treap:
+    def __init__(self):
+        self.root = None
+
+    def left_rotate(self, x):
+        y = x.right
+        x.right = y.left
+        if y.left is not None:
+            y.left.p = x
+        y.p = x.p
+        if x.p is None:
+            self.root = y
+        elif x == x.p.left:
+            x.p.left = y
+        else:
+            x.p.right = y
+        y.left = x
+        x.p = y
+
+    def right_rotate(self, x):
+        y = x.left
+        x.left = y.right
+        if y.right is not None:
+            y.right.p = x
+        y.p = x.p
+        if x.p is None:
+            self.root = y
+        elif x == x.p.left:
+            x.p.left = y
+        else:
+            x.p.right = y
+        y.right = x
+        x.p = y
+
+    def insert(self, x):
+        self.root = self.insert_rec(self.root, x)
+
+    def insert_rec(self, root, x):
+        if root is None:
+            return TreapNode(x)
+        if root.key > x:
+            root.left = self.insert_rec(root.left, x)
+            root.left.p = root
+            if root.left.priority < root.priority:
+                self.right_rotate(root)
+                root = root.p
+        else:
+            root.right = self.insert_rec(root.right, x)
+            root.right.p = root
+            if root.right.priority < root.priority:
+                self.left_rotate(root)
+                root = root.p
+        return root
+```
+
+> __*d*__. Show that the expected running time of TREAP-INSERT is $$\Theta(\lg n)$$.
+
+Rotation is $$\Theta(1)$$, at most $$h$$ rotations, therefore the expected running time is $$\Theta(\lg n)$$.
+
+> __*e*__. Consider the treap $$T$$ immediately after TREAP-INSERT has inserted node $$x$$. Let $$C$$ be the length of the right spine of the left subtree of $$x$$. Let $$D$$ be the length of the left spine of the right subtree of $$x$$. Prove that the total number of rotations that were performed during the insertion of $$x$$ is equal to $$C + D$$.
+
+Left rotation increase $$C$$ by 1, right rotation increase $$D$$ by 1.
+
+> __*f*__. Show that $$X_{ik} = 1$$ if and only if $$y.priority > x.priority$$, $$y.key < x.key$$, and, for every $$z$$ such that $$y.key < z.key < x.key$$, we have $$y.priority < z.priority$$.
+
+The first two are obvious.
+
+The min-heap property will not hold if $$y.priority > z.priority$$.
+
+> __*g*__. Show that
+
+> $$\begin{array}{rll}
+\text{Pr}\{X_{ik}=1\} &=&
+\displaystyle \frac{(k-i-1)!}{(k-i+1)!} \\
+&=& \displaystyle \frac{1}{(k-i+1)(k-i)} \\
+\end{array}
+$$
+
+Total number of permutations: $$(k-i+1)!$$
+
+Permutations satisfy the condition: $$(k-i-1)!$$
+
+> __*h*__. Show that
+
+> $$\begin{array}{rll}
+\text{E}[C] &=&
+\displaystyle \sum_{j=1}^{k-1} \frac{1}{j(j+1)} \\
+&=& \displaystyle 1 - \frac{1}{k} \\
+\end{array}
+$$
+
+$$
+\begin{array}{rll}
+\text{E}[C] 
+&=& \displaystyle \sum_{j=1}^{k-1} \frac{1}{(k-i+1)(k-i)} \\
+&=& \displaystyle \sum_{j=1}^{k-1} \left ( \frac{1}{k-i} - \frac{1}{k-i+1} \right ) \\
+&=& \displaystyle 1 - \frac{1}{k} 
+\end{array}
+$$
+
+> __*i*__. Use a symmetry argument to show that
+
+> $$\displaystyle \text{E}[D] = 1 - \frac{1}{n-k+1}$$
+
+$$
+\begin{array}{rll}
+\text{E}[D] 
+&=& \displaystyle \sum_{j=1}^{n-k} \frac{1}{(k-i+1)(k-i)} \\
+&=& \displaystyle 1 - \frac{1}{n-k+1}
+\end{array}
+$$
+
+> __*j*__. Conclude that the expected number of rotations performed when inserting a node into a treap is less than 2.
+
+$$\text{E}[C] + \text{E}[D] \le 2$$
