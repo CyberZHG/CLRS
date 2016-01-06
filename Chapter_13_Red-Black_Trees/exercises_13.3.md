@@ -81,3 +81,133 @@ In case 1, we pop $$z.p$$ and $$z.p.p$$.
 In case 2, we pop $$z.p$$ and $$z.p.p$$, then push $$z.p.p$$ and $$z$$.
 
 In case 3, we pop $$z.p$$, $$z.p.p$$ and $$z.p.p.p$$, then push $$z.p$$.
+
+```python
+RED = 0
+BLACK = 1
+
+
+class Stack:
+    def __init__(self):
+        self.vals = []
+
+    def push(self, x):
+        self.vals.append(x)
+
+    def pop(self):
+        if len(self.vals) == 0:
+            return None
+        x = self.vals[-1]
+        del self.vals[-1]
+        return x
+
+
+class RedBlackTreeNode:
+    def __init__(self, key, left=None, right=None):
+        self.color = BLACK
+        self.key = key
+        self.left = left
+        self.right = right
+
+
+class RedBlackTree:
+    def __init__(self):
+        self.nil = RedBlackTreeNode(None)
+        self.nil.color = BLACK
+        self.nil.left = self.nil
+        self.nil.right = self.nil
+        self.root = self.nil
+
+
+def left_rotate(T, x, p):
+    y = x.right
+    x.right = y.left
+    if p == T.nil:
+        T.root = y
+    elif x == p.left:
+        p.left = y
+    else:
+        p.right = y
+    y.left = x
+
+
+def right_rotate(T, x, p):
+    y = x.left
+    x.left = y.right
+    if p == T.nil:
+        T.root = y
+    elif x == p.right:
+        p.right = y
+    else:
+        p.left = y
+    y.right = x
+
+
+def rb_insert_fixup(T, z, stack):
+    while True:
+        p = stack.pop()
+        if p.color == BLACK:
+            break
+        pp = stack.pop()
+        if p == pp.left:
+            y = pp.right
+            if y.color == RED:
+                p.color = BLACK
+                y.color = BLACK
+                pp.color = RED
+                z = pp
+            elif z == p.right:
+                stack.push(pp)
+                stack.push(z)
+                z = p
+                left_rotate(T, z, pp)
+            else:
+                ppp = stack.pop()
+                stack.push(p)
+                p.color = BLACK
+                pp.color = RED
+                right_rotate(T, pp, ppp)
+        else:
+            y = pp.left
+            if y.color == RED:
+                p.color = BLACK
+                y.color = BLACK
+                pp.color = RED
+                z = pp
+            elif z == p.left:
+                stack.push(pp)
+                stack.push(z)
+                z = p
+                right_rotate(T, z, pp)
+            else:
+                ppp = stack.pop()
+                stack.push(p)
+                p.color = BLACK
+                pp.color = RED
+                left_rotate(T, pp, ppp)
+    T.root.color = BLACK
+
+
+def rb_insert(T, z):
+    stack = Stack()
+    stack.push(T.nil)
+    y = T.nil
+    x = T.root
+    while x != T.nil:
+        stack.push(x)
+        y = x
+        if z.key < x.key:
+            x = x.left
+        else:
+            x = x.right
+    if y == T.nil:
+        T.root = z
+    elif z.key < y.key:
+        y.left = z
+    else:
+        y.right = z
+    z.left = T.nil
+    z.right = T.nil
+    z.color = RED
+    rb_insert_fixup(T, z, stack)
+```
