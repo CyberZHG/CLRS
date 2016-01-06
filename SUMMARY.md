@@ -77,6 +77,12 @@
    * [Insertion and deletion](Chapter_12_Binary_Search_Trees/exercises_12.3.md)
    * [Randomly built binary search trees](Chapter_12_Binary_Search_Trees/exercises_12.4.md)
    * [Problems](Chapter_12_Binary_Search_Trees/problems.md)
+* [Red-Black Trees](Chapter_13_Red-Black_Trees/README.md)
+   * [Properties of red-black trees](Chapter_13_Red-Black_Trees/exercises_13.1.md)
+   * [Rotations](Chapter_13_Red-Black_Trees/exercises_13.2.md)
+   * [Insertion](Chapter_13_Red-Black_Trees/exercises_13.3.md)
+   * [Deletion](Chapter_13_Red-Black_Trees/exercises_13.4.md)
+   * [Problems](Chapter_13_Red-Black_Trees/problems.md)
 
 
 * [Appendix A: Summations](Appendix_A_Summations/README.md)
