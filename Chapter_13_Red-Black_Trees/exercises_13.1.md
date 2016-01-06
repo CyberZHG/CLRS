@@ -4,17 +4,17 @@
 
 > In the style of Figure 13.1(a), draw the complete binary search tree of height 3 on the keys $$\{1,2, \dots ,15\}$$. Add the NIL leaves and color the nodes in three different ways such that the black-heights of the resulting red-black trees are 2, 3, and 4.
 
-![](/img/13.1-1_1.png)
+![](img/13.1-1_1.png)
 
-![](/img/13.1-1_2.png)
+![](img/13.1-1_2.png)
 
-![](/img/13.1-1_3.png)
+![](img/13.1-1_3.png)
 
 ### 13.1-2
 
 > Draw the red-black tree that results after TREE-INSERT is called on the tree in Figure 13.1 with key 36. If the inserted node is colored red, is the resulting tree a red-black tree? What if it is colored black?
 
-![](/img/13.1-2.png)
+![](img/13.1-2.png)
 
 If it is colored red, the tree doesn't satisfy property 4.
 
