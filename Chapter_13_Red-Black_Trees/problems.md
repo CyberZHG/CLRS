@@ -81,3 +81,119 @@ Symmetric.
 
 $$O(1) + O(\lg n) = O(\lg n)$$
 
+### 13-3 AVL trees
+
+> An __*AVL tree*__ is a binary search tree that is __*height balanced*__: for each node $$x$$, the heights of the left and right subtrees of $$x$$ differ by at most 1. To implement an AVL tree, we maintain an extra attribute in each node: $$x.h$$ is the height of node $$x$$. As for any other binary search tree $$T$$, we assume that $$T.root$$ points to the root node.
+
+> __*a*__. Prove that an AVL tree with $$n$$ nodes has height $$O(\lg n)$$.
+
+$$T(h) = T(h-1) + T(h-2)$$.
+
+> __*b*__. To insert into an AVL tree, we first place a node into the appropriate place in binary search tree order. Afterward, the tree might no longer be height balanced. Specifically, the heights of the left and right children of some node might differ by 2. Describe a procedure BALANCE$$(x)$$, which takes a subtree rooted at $$x$$ whose left and right children are height balanced and have heights that differ by at most 2, i.e., $$|x.right.h - x.left.hj|\le 2$$, and alters the subtree rooted at $$x$$ to be height balanced.
+
+See __*c*__.
+
+> __*c*__. Using part (b), describe a recursive procedure AVL-INSERT$$(x, z)$$ that takes a node $$x$$ within an AVL tree and a newly created node $$z$$ (whose key has already been filled in), and adds $$z$$ to the subtree rooted at $$x$$, maintaining the property that $$x$$ is the root of an AVL tree. As in TREE-INSERT from Section 12.3, assume that $$z.key$$ has already been filled in and that $$z.left = NIL$$ and $$z.right = NIL$$; also assume that $$z.h = 0$$. Thus, to insert the node $$z$$ into the AVL tree $$T$$, we call AVL-INSERT$$(T.root, z)$$.
+
+
+```python
+class AVLTreeNode:
+    def __init__(self, key, left=None, right=None):
+        self.key = key
+        self.h = 0
+        self.p = None
+        self.left = left
+        self.right = right
+        if self.left is not None:
+            self.left.p = self
+        if self.right is not None:
+            self.right.p = self
+
+
+class AVL:
+    def __init__(self):
+        self.root = None
+
+    def left_rotate(self, x):
+        y = x.right
+        x.right = y.left
+        if y.left is not None:
+            y.left.p = x
+        y.p = x.p
+        if x.p is None:
+            self.root = y
+        elif x == x.p.left:
+            x.p.left = y
+        else:
+            x.p.right = y
+        y.left = x
+        x.p = y
+
+    def right_rotate(self, x):
+        y = x.left
+        x.left = y.right
+        if y.right is not None:
+            y.right.p = x
+        y.p = x.p
+        if x.p is None:
+            self.root = y
+        elif x == x.p.left:
+            x.p.left = y
+        else:
+            x.p.right = y
+        y.right = x
+        x.p = y
+
+    def get_height(self, node):
+        if node is None:
+            return -1
+        return node.h
+
+    def update_height(self, node):
+        if node is None:
+            return
+        node.h = max(self.get_height(node.left), self.get_height(node.right))+1
+
+    def balance_factor(self, node):
+        return self.get_height(node.left) - self.get_height(node.right)
+
+    def avl_insert(self, x):
+        self.root = self.avl_insert_rec(self.root, x)
+
+    def avl_insert_rec(self, root, x):
+        if root is None:
+            return AVLTreeNode(x)
+        if root.key > x:
+            root.left = self.avl_insert_rec(root.left, x)
+            root.left.p = root
+        else:
+            root.right = self.avl_insert_rec(root.right, x)
+            root.right.p = root
+        if self.balance_factor(root) == 2:
+            if self.balance_factor(root.left) == -1:
+                self.left_rotate(root.left)
+            self.right_rotate(root)
+            root = root.p
+            self.update_height(root.left)
+            self.update_height(root.right)
+            self.update_height(root)
+        elif self.balance_factor(root) == -2:
+            if self.balance_factor(root.right) == 1:
+                self.right_rotate(root.right)
+            self.left_rotate(root)
+            root = root.p
+            self.update_height(root.left)
+            self.update_height(root.right)
+            self.update_height(root)
+        else:
+            self.update_height(root)
+        return root
+```
+
+> __*d*__. Show that AVL-INSERT, run on an n-node AVL tree, takes $$O(\lg n)$$ time and performs $$O(1)$$ rotations.
+
+$$O(\lg n)$$: the length of path from root to the inserted node.
+
+$$O(1)$$: the height will decrease by 1 after the rotation, therefore the ancestors will not be affected.
+
+
