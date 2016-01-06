@@ -2,17 +2,21 @@ PGraphics graphics;
 PFont font;
 float margin_x = 80.0;
 float margin_y = 80.0;
-float layer_height = 100.0;
-float leaf_margin = 40.0;
+float layer_height = 80.0;
+float leaf_margin = 25.0;
 float nil_margin = 20.0;
 
 Node[] nodes;
-int[] vals = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
-int[] reds = new int[] {1, 3, 5, 7, 9, 11, 13, 15, 4, 12};
-int root = 8;
-int[][] edges = new int[][] {{0, 8, 4}, {1, 8, 12}, {0, 4, 2}, {1, 4, 6}, {0, 12, 10}, {1, 12, 14}, 
-                             {0, 2, 1}, {1, 2, 3}, {0, 6, 5}, {1, 6, 7}, {0, 10, 9}, {1, 10, 11}, {0, 14, 13}, {1, 14, 15}};
-String save_name = "13.1-1_1.png";
+int[] vals = new int[] {41, 38, 31, 12, 19, 8};
+int[] reds = new int[] {19, 8};
+int root = 38;
+int[][] edges = new int[][] {{38, 19},
+                             {38, 41},
+                             {19, 12},
+                             {19, 31},
+                             {12, 8}
+                            };
+String save_name = "13.3-2_11.png";
 
 class Node {
   String name;
@@ -131,8 +135,12 @@ float initLocations(Node node, int h, int idx, float maxWidth, int maxHeight) {
   float x = 0.0;
   int nodeNum = int(pow(2, float(h)));
   if (h == maxHeight) {
-    float div = maxWidth / (nodeNum - 1);
-    x = margin_x + div * idx;
+    if (h == 0) {
+      x = margin_x + maxWidth * 0.5;
+    } else {
+      float div = maxWidth / (nodeNum - 1);
+      x = margin_x + div * idx;
+    }
     if (node != null) {
       node.setLocation(x, y);
     }
@@ -170,10 +178,10 @@ void initNodes() {
     }
   }
   for (int i = 0; i < edges.length; ++i) {
-    if (edges[i][0] == 0) {
-      nodes[indexOf(vals, edges[i][1])].left = nodes[indexOf(vals, edges[i][2])];
+    if (edges[i][0] >= edges[i][1]) {
+      nodes[indexOf(vals, edges[i][0])].left = nodes[indexOf(vals, edges[i][1])];
     } else {
-      nodes[indexOf(vals, edges[i][1])].right = nodes[indexOf(vals, edges[i][2])];
+      nodes[indexOf(vals, edges[i][0])].right = nodes[indexOf(vals, edges[i][1])];
     }
   }
 }
