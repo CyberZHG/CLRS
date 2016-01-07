@@ -83,6 +83,11 @@
    * [Insertion](Chapter_13_Red-Black_Trees/exercises_13.3.md)
    * [Deletion](Chapter_13_Red-Black_Trees/exercises_13.4.md)
    * [Problems](Chapter_13_Red-Black_Trees/problems.md)
+* [Augmenting Data Structures](Chapter_14_Augmenting_Data_Structures/README.md)
+   * [Dynamic order statistics](Chapter_14_Augmenting_Data_Structures/exercises_14.1.md)
+   * [How to augment a data structure](Chapter_14_Augmenting_Data_Structures/exercises_14.2.md)
+   * [Interval trees](Chapter_14_Augmenting_Data_Structures/exercises_14.3.md)
+   * [Problems](Chapter_14_Augmenting_Data_Structures/problems.md)
 
 
 * [Appendix A: Summations](Appendix_A_Summations/README.md)
