@@ -1,2 +1,33 @@
-# How to augment a data structure
+## 14.2 How to augment a data structure
 
+### 14.2-1
+
+> Show, by adding pointers to the nodes, how to support each of the dynamic-set queries MINIMUM, MAXIMUM, SUCCESSOR, and PREDECESSOR in $$O(1)$$worstcase time on an augmented order-statistic tree. The asymptotic performance of other operations on order-statistic trees should not be affected.
+
+MINIMUM: A pointer points to the minimum node, if the node is being deleted, move the pointer to its successor.
+
+MAXIMUM: Similar to MINIMUM.
+
+SUCCESSOR: Every node records its successor, the insertion and deletion is similar to that in linked list.
+
+PREDECESSOR: Similar to MAXIMUM.
+
+### 14.2-2
+
+> Can we maintain the black-heights of nodes in a red-black tree as attributes in the nodes of the tree without affecting the asymptotic performance of any of the redblack tree operations? Show how, or argue why not. How about maintaining the depths of nodes?
+
+$$x.h = max(x.left.h, y.left.h) + 1$$
+
+### 14.2-3 $$\star$$
+
+> Let $$\otimes$$ be an associative binary operator, and let $$a$$ be an attribute maintained in each node of a red-black tree. Suppose that we want to include in each node $$x$$ an additional attribute $$f$$ such that $$x.f = x_1.a \otimes x_2.a \otimes \cdots \otimes x_m.a$$, where $$x_1, x_2, \dots ,x_m$$ is the inorder listing of nodes in the subtree rooted at $$x$$. Show how to update the $$f$$ attributes in $$O(1)$$ time after a rotation. Modify your argument slightly to apply it to the size attributes in order-statistic trees.
+
+$$x.f = x.left.f \otimes x.a \otimes x.right.f$$
+
+### 14.2-4 $$\star$$
+
+> We wish to augment red-black trees with an operation RB-ENUMERATE$$(x, a, b)$$ that outputs all the keys $$k$$ such that $$a \le k \le b$$ in a red-black tree rooted at $$x$$. Describe how to implement RB-ENUMERATE in $$\Theta(m+\lg n)$$ time, where $$m$$ is the number of keys that are output and $$n$$ is the number of internal nodes in the tree.
+
+$$\Theta(\lg n)$$: Find the smallest key that larger than or equal to $$a$$.
+
+$$\Theta(m)$$: Based on Exercise 14.2-1, find the $$m$$ successor.
