@@ -14,4 +14,56 @@
 
 > __*a*__. Suppose that $$m$$ is a constant. Describe an $$O(n)$$-time algorithm that, given an integer $$n$$, outputs the $$(n,m)$$-Josephus permutation.
 
+Use doubly linked list, the time is $$O(nm)$$, since $$m$$ is a constant, $$O(nm)$$ = $$O(n)$$.
+
+```python
+class LinkedListNode:
+    def __init__(self, key):
+        self.key = key
+        self.prev = None
+        self.next = None
+
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def insert(self, key):
+        x = LinkedListNode(key)
+        if self.head is None:
+            self.head = x
+            x.next = x
+            x.prev = x
+        else:
+            x.prev = self.head.prev
+            x.next = self.head
+            x.prev.next = x
+            x.next.prev = x
+
+    def remove(self):
+        if self.head.next == self.head:
+            self.head = None
+        else:
+            self.head.next.prev = self.head.prev
+            self.head.prev.next = self.head.next
+            self.head = self.head.next
+
+    def forward(self, step):
+        while step > 0:
+            step -= 1
+            self.head = self.head.next
+
+
+def josephus_permutation(n, m):
+    lst = LinkedList()
+    for i in xrange(1, n + 1):
+        lst.insert(i)
+    perm = []
+    while lst.head is not None:
+        lst.forward(m - 1)
+        perm.append(lst.head.key)
+        lst.remove()
+    return perm
+```
+
 > __*b*__. Suppose that $$m$$ is not a constant. Describe an $$O(n \lg n)$$-time algorithm that, given integers $$n$$ and $$m$$, outputs the $$(n,m)$$-Josephus permutation.
