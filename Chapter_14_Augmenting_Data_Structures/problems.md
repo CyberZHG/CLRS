@@ -67,3 +67,102 @@ def josephus_permutation(n, m):
 ```
 
 > __*b*__. Suppose that $$m$$ is not a constant. Describe an $$O(n \lg n)$$-time algorithm that, given integers $$n$$ and $$m$$, outputs the $$(n,m)$$-Josephus permutation.
+
+Build a balanced binary search tree in $$O(n \lg n)$$, maintain $$size$$ to support order-statistics. In each iteration, we select and delete the $$(r + m - 1) ~\text{mod}~ T.root.size + 1$$th element.
+
+```python
+class TreeNode:
+    def __init__(self, key, left=None, right=None):
+        self.key = key
+        self.color = BLACK
+        self.size = 1
+        self.p = None
+        self.left = left
+        self.right = right
+        if left is not None:
+            left.p = self
+            self.size += left.size
+        if right is not None:
+            right.p = self
+            self.size += right.size
+
+
+class BinarySearchTree:
+    def __init__(self, a):
+        self.root = self.build(a, 0, len(a))
+
+    def build(self, a, l, r):
+        if l >= r:
+            return None
+        mid = (l + r) // 2
+        return TreeNode(a[mid], self.build(a, l, mid), self.build(a, mid+1, r))
+
+    def get_size(self, x):
+        if x is None:
+            return 0
+        return x.size
+
+    def update_size(self, x):
+        if x is not None:
+            x.size = 1 + self.get_size(x.left) + self.get_size(x.right)
+
+    def select(self, x, i):
+        r = self.get_size(x.left) + 1
+        if i == r:
+            return x
+        elif i < r:
+            return self.select(x.left, i)
+        else:
+            return self.select(x.right, i - r)
+
+    def minimum(self, x):
+        while x.left is not None:
+            x = x.left
+        return x
+
+    def transplant(self, u, v):
+        if u.p is None:
+            self.root = v
+        elif u == u.p.left:
+            u.p.left = v
+        else:
+            u.p.right = v
+        if v is not None:
+            v.p = u.p
+
+    def delete(self, z):
+        if z.left is None:
+            self.transplant(z, z.right)
+        elif z.right is None:
+            self.transplant(z, z.left)
+        else:
+            y = self.minimum(z.right)
+            p = y.p
+            if y.p != z:
+                self.transplant(y, y.right)
+                y.right = z.right
+                y.right.p = y
+            self.transplant(z, y)
+            y.left = z.left
+            y.left.p = y
+            while p != z and p != y:
+                self.update_size(p)
+                p = p.p
+            self.update_size(y)
+        while z.p is not None:
+            z = z.p
+            self.update_size(z)
+
+
+def josephus_permutation(n, m):
+    tree = BinarySearchTree(range(1, n + 1))
+    perm = []
+    rank = 0
+    while n > 0:
+        rank = (rank + m - 1) % n
+        x = tree.select(tree.root, rank + 1)
+        perm.append(x.key)
+        tree.delete(x)
+        n -= 1
+    return perm
+```
