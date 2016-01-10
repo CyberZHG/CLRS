@@ -5,7 +5,6 @@ import unittest
 class TreeNode:
     def __init__(self, key, left=None, right=None):
         self.key = key
-        self.color = BLACK
         self.size = 1
         self.p = None
         self.left = left
