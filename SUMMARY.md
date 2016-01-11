@@ -90,6 +90,15 @@
    * [Problems](Chapter_14_Augmenting_Data_Structures/problems.md)
 
 
+* [Dynamic Programming](Chapter_15_Dynamic_Programming/README.md)
+    * [Rod cutting](Chapter_15_Dynamic_Programming/exercises_15.1.md)
+    * [Matrix-chain multiplication](Chapter_15_Dynamic_Programming/exercises_15.2.md)
+    * [Elements of dynamic programming](Chapter_15_Dynamic_Programming/exercises_15.3.md)
+    * [Longest common subsequence](Chapter_15_Dynamic_Programming/exercises_15.4.md)
+    * [Optimal binary search trees](Chapter_15_Dynamic_Programming/exercises_15.5.md)
+    * [Problems](Chapter_15_Dynamic_Programming/problems.md)
+
+
 * [Appendix A: Summations](Appendix_A_Summations/README.md)
    * [Summation formulas and properties](Appendix_A_Summations/exercises_a.1.md)
    * [Bounding summations](Appendix_A_Summations/exercises_a.2.md)
