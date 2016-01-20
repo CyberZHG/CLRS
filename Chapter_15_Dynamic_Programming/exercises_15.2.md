@@ -36,3 +36,23 @@ P(n) &\ge& \displaystyle \sum_{k=1}^{n-1} c2^k \cdot c2^{n-k} \\
 &\ge& \displaystyle c 2^n & (0 < c \le 1)
 \end{array}
 $$
+### 15.2-4
+
+> Describe the subproblem graph for matrix-chain multiplication with an input chain of length $$n$$. How many vertices does it have? How many edges does it have, and which edges are they?
+
+Vertice: $$O(n^2)$$, edges: $$O(n^3)$$.
+
+### 15.2-5
+
+> Let $$R(i, j)$$ be the number of times that table entry $$m[i, j]$$ is referenced while computing other table entries in a call of MATRIX-CHAIN-ORDER. Show that the total number of references for the entire table is
+> $$\displaystyle \sum_{i=1}^n \sum_{j=i}^n R(i, j) = \frac{n^3 - n}{3}$$.
+
+$$
+\sum_{i=1}^n \sum_{j=i}^n R(i, j) = \sum_{l=2}^n 2 (n - l + 1) (l - 1) = \frac{n^3 - n}{3}
+$$
+### 15.2-6
+
+> Show that a full parenthesization of an $$n$$-element expression has exactly $$n-1$$ pairs
+of parentheses.
+
+$$n - 1$$ multiplications.
