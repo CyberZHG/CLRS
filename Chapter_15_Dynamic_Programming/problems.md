@@ -147,3 +147,20 @@ dp[j-1][i] \cdot r_{ij} + f_1
 $$
 
 > __*d*__. Suppose that Amalgamated Investments imposed the additional restriction that, at any point, you can have no more than $15,000 in any one investment. Show that the problem of maximizing your income at the end of 10 years no longer exhibits optimal substructure.
+
+### 15-11 Inventory planning
+
+> The Rinky Dink Company makes machines that resurface ice rinks. The demand for such products varies from month to month, and so the company needs to develop a strategy to plan its manufacturing given the fluctuating, but predictable, demand. The company wishes to design a plan for the next $$n$$ months. For each month $$i$$, the company knows the demand $$d_i$$, that is, the number of machines that it will sell. Let $$D = \sum_{i=1}^n d_i$$ be the total demand over the next $$n$$ months. The company keeps a full-time staff who provide labor to manufacture up to $$m$$ machines per month. If the company needs to make more than $$m$$ machines in a given month, it can hire additional, part-time labor, at a cost that works out to $$c$$ dollars per machine. Furthermore, if, at the end of a month, the company is holding any unsold machines, it must pay inventory costs. The cost for holding $$j$$ machines is given as a function $$h(j)$$ for $$j = 1, 2, \dots, D$$, where $$h(j) \ge 0$$ for $$1 \le j \le D$$ and $$h(j) \le h(j + 1)$$ for $$1 \le j \le D - 1$$. 
+
+> Give an algorithm that calculates a plan for the company that minimizes its costs while fulfilling all the demand. The running time should be polyomial in $$n$$ and $$D$$.
+
+Let $$dp[i][j]$$ be the minimal cost after month $$i$$ with $$j$$ machines remained.
+
+$$
+dp[i][0] = \left \{ \begin{matrix}
+\min_{j} dp[i-1][j] & (j \le d_i ~\text{and}~ j + m \ge d_i) \\
+\min_{j} dp[i-1][j] + c \cdot (d_i - j - m) & (j + m \le d_i)
+\end{matrix} \right .
+$$$$
+dp[i][j] = \min_k dp[i-1][k] + h(k+m-d_i)
+$$
