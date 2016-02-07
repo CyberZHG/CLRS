@@ -37,5 +37,38 @@ cost(i, j) = \left \{
 \end{matrix}
 \right .
 $$
+### 15-5 Edit distance
 
+> In order to transform one source string of text $$x[1 \dots m]$$ to a target string $$y[1 \dots n]$$, we can perform various transformation operations. Our goal is, given $$x$$ and $$y$$, to produce a series of transformations that change $$x$$ to $$y$$. We use an array $$z$$—assumed to be large enough to hold all the characters it will need—to hold the intermediate results. Initially, $$z$$ is empty, and at termination, we should have $$z[j] = y[j]$$ for $$j = 1,2, \dots ,n$$. We maintain current indices $$i$$ into $$x$$ and $$j$$ into $$z$$, and the operations are allowed to alter $$z$$ and these indices. Initially, $$i = j = 1$$. We are required to examine every character in $$x$$ during the transformation, which means that at the end of the sequence of transformation operations, we must have $$i = m + 1$$.
 
+> We may choose from among six transformation operations:
+
+> __Copy__ a character from $$x$$ to $$z$$ by setting $$z[j]=x[i]$$ and then incrementing both $$i$$ and $$j$$. This operation examines $$x[i]$$.
+
+> __Replace__ a character from $$x$$ by another character $$c$$, by setting $$z[j] = c$$, and then incrementing both $$i$$ and $$j$$. This operation examines $$x[i]$$.
+
+> __Delete__ a character from $$x$$ by incrementing $$i$$ but leaving $$j$$ alone. This operation examines $$x[i]$$.
+
+> __Insert__ the character $$c$$ into $$z$$ by setting $$z[j] = c$$ and then incrementing $$j$$, but leaving $$i$$ alone. This operation examines no characters of $$x$$.
+
+> __Twiddle__ (i.e., exchange) the next two characters by copying them from $$x$$ to $$z$$ but in the opposite order; we do so by setting $$z[j] = x[i+1]$$ and $$z[j+1] = x[i]$$ and then setting $$i=i+2$$ and $$j=j+2$$. This operation examines $$x[i]$$ and $$x[i+1]$$.
+
+> __Kill__ the remainder of $$x$$ by setting $$i=m+1$$. This operation examines all characters in $$x$$ that have not yet been examined. This operation, if performed, must be the final operation.
+
+> __*a*__. Given two sequences $$x[1 \dots m]$$ and $$y[1 \dots n]$$ and set of transformation-operation costs, the __*edit distance*__ from $$x$$ to $$y$$ is the cost of the least expensive operatoin sequence that transforms $$x$$ to $$y$$. Describe a dynamic-programming algorithm that finds the edit distance from $$x[1 \dots m]$$ to $$y[1 \dots n]$$ and prints an optimal opeartion sequence. Analyze the running time and space requirements of your algorithm.
+
+* __Copy__: $$dp[i][j] = dp[i - 1][j - 1] + cost(copy)$$ if $$x[i] = y[j]$$. 
+* __Replace__: $$dp[i][j] = dp[i-1][j-1] + cost(replace)$$ if $$x[i] \ne y[j]$$.
+* __Delete__: $$dp[i][j] = dp[i-1][j] + cost(delete)$$.
+* __Insert__: $$dp[i][j] = dp[i][j-1] + cost(insert)$$.
+* __Twiddle__: $$dp[i][j] = dp[i-2][j-2] + cost(twiddle)$$ if $$x[i-1] = y[j]$$ and $$x[i] = y[j-1]$$.
+* __Kill__: $$dp[i][j] = \min_{k=1}^{i} dp[k][j] + cost(kill)$$ if $$j = n$$.
+
+> The edit-distance problem generalizes the problem of aligning two DNA sequences (see, for example, Setubal and Meidanis [310, Section 3.2]). There are several methods for measuring the similarity of two DNA sequences by aligning them. One such method to align two sequences $$x$$ and $$y$$ consists of inserting spaces at arbitrary locations in the two sequences (including at either end) so that the resulting sequences $$x'$$ and $$y'$$ have the same length but do not have a space in the same position (i.e., for no position $$j$$ are both $$x'[j]$$ and $$y'[j]$$ a space). Then we assign a "score" to each position. Position $$j$$ receives a score as follows:
+> * +1 if $$x'[j] = y'[j]$$ and neither is a space,
+> * -1 if $$x'[j] \ne y'[j]$$ and neither is a space,
+> * -2 if eigher $$x'[j]$$ or $$y'[j]$$ is a space.
+
+> __*b*__. Explain how to cast the problem of finding an optimal alignment as an edit distance problem using a subset of the transformation operations copy, replace, delete, insert, twiddle, and kill.
+
+$$cost(copy) = +1$$, $$cost(replace)=-1$$, $$cost(delete)=cost(insert)=1$$.
