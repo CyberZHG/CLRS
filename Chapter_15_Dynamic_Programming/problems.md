@@ -121,7 +121,7 @@ $$dp[i,j] = d[i,j] + \min (dp[i-1,j-1], dp[i-1,j], dp[i-1,j+1])$$.
 
 ### 15-9 Breaking a string
 
-A certain string-processing language allows a programmer to break a string into two pieces. Because this operation copies the string, it costs $$n$$ time units to break a string of $$n$$ characters into two pieces. Suppose a programmer wants to break a string into many pieces. The order in which the breaks occur can affect the total amount of time used. For example, suppose that the programmer wants to break a 20-character string after characters 2, 8, and 10 (numbering the characters in ascending order from the left-hand end, starting from 1). If she programs the breaks to occur in left-to-right order, then the first break costs 20 time units, the second break costs 18 time units (breaking the string from characters 3 to 20 at character 8), and the third break costs 12 time units, totaling 50 time units. If she programs the breaks to occur in right-to-left order, however, then the first break costs 20 time units, the second break costs 10 time units, and the third break costs 8 time units, totaling 38 time units. In yet another order, she could break first at 8 (costing 20), then break the left piece at 2 (costing 8), and finally the right piece at 10 (costing 12), for a total cost of 40.
+> A certain string-processing language allows a programmer to break a string into two pieces. Because this operation copies the string, it costs $$n$$ time units to break a string of $$n$$ characters into two pieces. Suppose a programmer wants to break a string into many pieces. The order in which the breaks occur can affect the total amount of time used. For example, suppose that the programmer wants to break a 20-character string after characters 2, 8, and 10 (numbering the characters in ascending order from the left-hand end, starting from 1). If she programs the breaks to occur in left-to-right order, then the first break costs 20 time units, the second break costs 18 time units (breaking the string from characters 3 to 20 at character 8), and the third break costs 12 time units, totaling 50 time units. If she programs the breaks to occur in right-to-left order, however, then the first break costs 20 time units, the second break costs 10 time units, and the third break costs 8 time units, totaling 38 time units. In yet another order, she could break first at 8 (costing 20), then break the left piece at 2 (costing 8), and finally the right piece at 10 (costing 12), for a total cost of 40.
 
 Design an algorithm that, given the numbers of characters after which to break, determines a least-cost way to sequence those breaks. More formally, given a string $$S$$ with $$n$$ characters and an array $$L[1 \dots m]$$ containing the break points, compute the lowest cost for a sequence of breaks, along with a sequence of breaks that achieves this cost.
 
@@ -132,6 +132,11 @@ $$
 
 > Your knowledge of algorithms helps you obtain an exciting job with the Acme Computer Company, along with a $10,000 signing bonus. You decide to invest this money with the goal of maximizing your return at the end of 10 years. You decide to use the Amalgamated Investment Company to manage your investments. Amalgamated Investments requires you to observe the following rules. It offers $$n$$ different investments, numbered $$1$$ through $$n$$. In each year $$j$$, investment $$i$$ provides a return rate of $$r_{ij}$$ . In other words, if you invest $$d$$ dollars in investment $$i$$ in year $$j$$, then at the end of year $$j$$ , you have $$dr_{ij}$$ dollars. The return rates are guaranteed, that is, you are given all the return rates for the next 10 years for each investment. You make investment decisions only once per year. At the end of each year, you can leave the money made in the previous year in the same investments, or you can shift money to other investments, by either shifting money between existing investments or moving money to a new investement. If you do not move your money between two consecutive years, you pay a fee of $$f_1$$ dollars, whereas if you switch your money, you pay a fee of $$f_2$$ dollars, where $$f_2 > f_1$$.
 
+> __*a*__. The problem, as stated, allows you to invest your money inmultiple investments in each year. Prove that there exists an optimal investment strategy that, in each year, puts all the money into a single investment. (Recall that an optimal investment strategy maximizes the amount of money after 10 years and is not concerned with any other objectives, such as minimizing risk.)
+
+> __*b*__. Prove that the problem of planning your optimal investment strategy exhibits optimal substructure.
+
+> __*c*__. Design an algorithm that plans your optimal investment strategy. What is the running time of your algorithm?
 Let $$dp[j][i]$$ be the maximal profit in year $$j$$ with the last investment $$i$$.
 
 $$
@@ -140,3 +145,5 @@ dp[j-1][k] \cdot r_{kj} + f_2 & (k \ne i) \\
 dp[j-1][i] \cdot r_{ij} + f_1
 \end{matrix} \right .
 $$
+
+> __*d*__. Suppose that Amalgamated Investments imposed the additional restriction that, at any point, you can have no more than $15,000 in any one investment. Show that the problem of maximizing your income at the end of 10 years no longer exhibits optimal substructure.
