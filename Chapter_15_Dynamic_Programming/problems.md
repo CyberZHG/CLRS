@@ -128,3 +128,15 @@ Design an algorithm that, given the numbers of characters after which to break, 
 $$
 dp[i][j] = len(i, j) + \min_{k=i+1}^{j-1} (dp[i][k] + dp[k+1][j])
 $$
+### 15-10 Planning an investment strategy
+
+> Your knowledge of algorithms helps you obtain an exciting job with the Acme Computer Company, along with a $10,000 signing bonus. You decide to invest this money with the goal of maximizing your return at the end of 10 years. You decide to use the Amalgamated Investment Company to manage your investments. Amalgamated Investments requires you to observe the following rules. It offers $$n$$ different investments, numbered $$1$$ through $$n$$. In each year $$j$$, investment $$i$$ provides a return rate of $$r_{ij}$$ . In other words, if you invest $$d$$ dollars in investment $$i$$ in year $$j$$, then at the end of year $$j$$ , you have $$dr_{ij}$$ dollars. The return rates are guaranteed, that is, you are given all the return rates for the next 10 years for each investment. You make investment decisions only once per year. At the end of each year, you can leave the money made in the previous year in the same investments, or you can shift money to other investments, by either shifting money between existing investments or moving money to a new investement. If you do not move your money between two consecutive years, you pay a fee of $$f_1$$ dollars, whereas if you switch your money, you pay a fee of $$f_2$$ dollars, where $$f_2 > f_1$$.
+
+Let $$dp[j][i]$$ be the maximal profit in year $$j$$ with the last investment $$i$$.
+
+$$
+dp[j][i] = \left \{ \begin{matrix}
+dp[j-1][k] \cdot r_{kj} + f_2 & (k \ne i) \\
+dp[j-1][i] \cdot r_{ij} + f_1
+\end{matrix} \right .
+$$
