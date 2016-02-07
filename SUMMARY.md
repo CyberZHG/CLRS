@@ -97,6 +97,13 @@
     * [Longest common subsequence](Chapter_15_Dynamic_Programming/exercises_15.4.md)
     * [Optimal binary search trees](Chapter_15_Dynamic_Programming/exercises_15.5.md)
     * [Problems](Chapter_15_Dynamic_Programming/problems.md)
+* [Greedy Algorithm](Chapter_16_Greedy_Algorithm/README.md)
+    * [An activity-selection problem](Chapter_16_Greedy_Algorithm/exercises_16.1.md)
+    * [Elements of the greedy strategy](Chapter_16_Greedy_Algorithm/exercises_16.2.md)
+    * [Huffman codes](Chapter_16_Greedy_Algorithm/exercises_16.3.md)
+    * [Matroids and greedy methods](Chapter_16_Greedy_Algorithm/exercises_16.4.md)
+    * [A task-scheduling problem as a matroid](Chapter_16_Greedy_Algorithm/exercises_16.5.md)
+    * [Problems](Chapter_16_Greedy_Algorithm/problems.md)
 
 
 * [Appendix A: Summations](Appendix_A_Summations/README.md)
