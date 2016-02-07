@@ -105,3 +105,17 @@ $$dp[0][v_0] = 1.0$$.
 $$
 dp[i][j] = \max_{dp[i-1][k]=1 ~\text{and}~ \sigma(k, i) = \sigma_i} dp[i-1][k] \cdot p(k, i)
 $$
+### 15-8 Image compression by seam carving
+
+> We are given a color picture consisting of an $$m \times n$$ array $$A[1 \dots m, 1 \dots n]$$ of pixels, where each pixel specifies a triple of red, green, and blue (RGB) intensities. Suppose that we wish to compress this picture slightly. Specifically, we wish to remove one pixel from each of the $$m$$ rows, so that the whole picture becomes one pixel narrower. To avoid disturbing visual effects, however, we require that the pixels removed in two adjacent rows be in the same or adjacent columns; the pixels removed form a "seam" from the top row to the bottom row where successive pixels in the seam are adjacent vertically or diagonally.
+
+> __*a*__. Show that the number of such possible seams grows at least exponentially in $$m$$, assuming that $$n > 1$$.
+
+num$$\ge 2^n$$.
+
+> __*b*__. Suppose now that along with each pixel $$A[i, j]$$, we have calculated a real-valued disruption measure $$d[i, j]$$, indicating how disruptive it would be to remove pixel $$A[i, j]$$. Intuitively, the lower a pixel's disruption measure, the more similar the pixel is to its neighbors. Suppose further that we define the disruption measure of a seam to be the sum of the disruption measures of its pixels.
+
+> Give an algorithm to find a seam with the lowest disruption measure. How efficient is your algorithm?
+
+$$dp[i,j] = d[i,j] + \min (dp[i-1,j-1], dp[i-1,j], dp[i-1,j+1])$$.
+
