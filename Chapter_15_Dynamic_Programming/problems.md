@@ -81,3 +81,27 @@ $$cost(copy) = +1$$, $$cost(replace)=-1$$, $$cost(delete)=cost(insert)=1$$.
 
 Let $$dp[i][j]$$ be the maximal sum rooted at $$i$$, $$j=0$$ means $$i$$ will not attend, $$j=1$$ means $$i$$ will attend. $$dp[i][0] = \max_{j} (dp[j][0], dp[j][1])$$, $$dp[i][1] = \max_j dp[j][0]$$.
 
+### 15-7 Viterbi algorithm
+
+> We can use dynamic programming on a directed graph $$G = (V, E)$$ for speech recognition. Each edge $$(u, v) \in E$$ is labeled with a sound $$\sigma(u, v)$$ from a finite set $$\Sigma$$ of sounds. The labeled graph is a formal model of a person speaking a restricted language. Each path in the graph starting from a distinguished vertex $$v_0 \in V$$ corresponds to a possible sequence of sounds producted by the model. We define the label of a directed path to be the concatenation of the labels of the edges on that path.
+
+> __*a*__. Describe an efficient algorithm that, given an edge-labeled graph $$G$$ with distinguished vertex $$v_0$$ and a sequence $$s = \left \langle \sigma_1, \sigma_2, \dots \sigma_k \right \rangle$$ of sounds from $$\Sigma$$, returns a path in $$G$$ that begins at $$v_0$$ and has $$s$$ as its label, if any such path exists. Otherwise, the algorithm should return NO-SUCH-PATH. Analyze the running time of your algorithm.
+
+Let $$dp[i][j]$$ be the state of vertex $$j$$ in iteration $$i$$, $$dp[0][v_0] = true$$.
+
+$$
+dp[i][j] = \left \{ \begin{matrix}
+1 & \exists_{k} dp[i-1][k]=1 ~\text{and}~ \sigma(k, i) = \sigma_i \\
+0 & \text{otherwise}
+\end{matrix} \right .
+$$
+
+> Now, suppose that every edge $$(u, v) \in E$$ has an associated nonnegatve probability $$p(u, v)$$ of traversing the edge $$(u, v)$$ from vertex $$u$$ and thus producing the corresponding sound. The sum of the probabilities of the edges leaving any vertex equals $$1$$. The probability of a path is defined to the product of the probabilities of its edges. We can view the probability of a path beginning at $$v_0$$ as the probability that a "random walk" beginning at $$v_0$$ will follow the specified path, where we randomly choose which edge to take leaving a vertex $$u$$ according to the probabilities of the available edges leaving $$u$$.
+
+> __*b*__. Extend your answer to part (a) so that if a path is returned, it is a _most probable path_ starting at $$v_0$$ and having label $$s$$. Analyze the running time of your algorithm.
+
+$$dp[0][v_0] = 1.0$$.
+
+$$
+dp[i][j] = \max_{dp[i-1][k]=1 ~\text{and}~ \sigma(k, i) = \sigma_i} dp[i-1][k] \cdot p(k, i)
+$$
