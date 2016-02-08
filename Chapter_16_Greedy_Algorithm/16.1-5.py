@@ -53,7 +53,7 @@ class ProblemTestCase(unittest.TestCase):
     def test_random(self):
         for _ in xrange(1000):
             s, f, v = self.random_activity()
-            self.assertEqual(activity_selection(s, f, v), self.brute_force(s, f ,v))
+            self.assertEqual(activity_selection(s, f, v), self.brute_force(s, f, v))
 
 
 if __name__ == '__main__':
