@@ -31,3 +31,31 @@ Earliest start: [1, 6], [5, 10], [2, 4]
 > (This problem is also known as the __*interval-graph coloring problem*__. We can create an interval graph whose vertices are the given activities and whose edges connect incompatible activities. The smallest number of colors required to color every vertex so that no two adjacent vertices have the same color corresponds to finding the fewest lecture halls needed to schedule all of the given activities.)
 
 Sort the intervals by start time, if the start time of one interval is the same as the finish time of the other interval, we should assume the finish time is less than the start time. From left to right, add 1 when there is a start time and subtract 1 when there is a finish time, the number of halls needed is the maximum number of the count.
+
+### 16.1-5
+
+> Consider a modification to the activity-selection problem in which each activity $$a_i$$ has, in addition to a start and finish time, a value $$v_i$$. The objective is no longer to maximize the number of activities scheduled, but instead to maximize the total value of the activities scheduled. That is, we wish to choose a set $$A$$ of compatible activities such that $$\sum_{a_k \in A} v_k$$ is maximized. Give a polynomial-time algorithm for this problem.
+
+Let $$dp[i]$$ be the maximum total value before time $$i$$,
+
+$$
+dp[i] = \max(dp[i-1], \max_{f_j \le i} dp[s_j] + v_j)
+$$
+```python
+def activity_selection(s, f, v):
+    dp = {}
+    n = len(s)
+    last = None
+    for i in sorted(list(set(s + f))):
+        if last is None:
+            dp[i] = 0
+        else:
+            dp[i] = last
+            for j in range(n):
+                if f[j] <= i:
+                    dp[i] = max(dp[i], dp[s[j]] + v[j])
+        last = dp[i]
+    return last
+```
+
+$$\Theta(n^2)$$
