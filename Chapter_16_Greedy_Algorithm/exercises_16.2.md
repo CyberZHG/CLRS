@@ -32,11 +32,18 @@ Suppose in an optimal solution we take an item with $$v_1$$, $$w_1$$, and drop a
 
 > The professor's goal is to minimize the number of water stops along his route across the state. Give an efficient method by which he can determine which water stops he should make. Prove that your strategy yields an optimal solution, and give its running time.
 
-Greedy, go to the furthest stop within $$m$$ miles each time.
+Go to the furthest stop within $$m$$ miles in each iteration.
 
 ### 16.2-5
 
 > Describe an efficient algorithm that, given a set $$\{ x_1, x_2, \dots, x_n \}$$ of points on the real line, determines the smallest set of unit-length closed intervals that contains all of the given points. Argue that your algorithm is correct.
 
-Greedy, place the left side of the unit-interval to the first left-most uncovered point.
+Place the left side of the unit-interval to the first left-most uncovered point in each iteration.
+
+### 16.2-6 $$\star$$
+
+> Show how to solve the fractional knapsack problem in $$O(n)$$ time.
+
+Choose the median of $$v_i / w_i$$ in $$O(n)$$, partition the sequence with the median in $$O(n)$$, if the sum of weights in the more valuable side is less or equal to $$W$$, we take all the items in this side and repeat the steps in the other side; otherwise we repeat the steps in the more valuable side. The algorithm runs in $$T(n) = T(n/2) + O(n)$$, which is $$O(n)$$.
+
 
