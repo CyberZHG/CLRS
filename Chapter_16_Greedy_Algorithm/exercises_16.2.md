@@ -46,4 +46,8 @@ Place the left side of the unit-interval to the first left-most uncovered point 
 
 Choose the median of $$v_i / w_i$$ in $$O(n)$$, partition the sequence with the median in $$O(n)$$, if the sum of weights in the more valuable side is less or equal to $$W$$, we take all the items in this side and repeat the steps in the other side; otherwise we repeat the steps in the more valuable side. The algorithm runs in $$T(n) = T(n/2) + O(n)$$, which is $$O(n)$$.
 
+### 16.2-7
 
+> Suppose you are given two sets $$A$$ and $$B$$, each containing $$n$$ positive integers. You can choose to reorder each set however you like. After reordering, let $$a_i$$ be the $$i$$th element of set $$A$$, and let $$b_i$$ be the $$i$$ th element of set $$B$$. You then receive a payoff of $$\prod_{i=1}^n a_i^{b_i}$$ . Give an algorithm that will maximize your payoff. Prove that your algorithm maximizes the payoff, and state its running time.
+
+Sort $$A$$ and $$B$$ into monotonically increasing/decreasing order.
