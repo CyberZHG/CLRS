@@ -24,3 +24,19 @@ def zero_one_knapsack(v, w, W):
 
 > Suppose that in a 0-1 knapsack problem, the order of the items when sorted by increasing weight is the same as their order when sorted by decreasing value. Give an efficient algorithm to find an optimal solution to this variant of the knapsack problem, and argue that your algorithm is correct.
 
+Suppose in an optimal solution we take an item with $$v_1$$, $$w_1$$, and drop an item with $$v_2$$, $$w_2$$, and $$w_1 > w_2$$, $$v_1 < v_2$$, we can substitude $$1$$ with $$2$$ and get a better solution. Therefore we should always choose the items with the greatest values.
+
+### 16.2-4
+
+> Professor Gekko has always dreamed of inline skating across North Dakota. He plans to cross the state on highway U.S. 2, which runs from Grand Forks, on the eastern border with Minnesota, to Williston, near the western border withMontana. The professor can carry two liters of water, and he can skate $$m$$ miles before running out of water. (Because North Dakota is relatively flat, the professor does not have to worry about drinking water at a greater rate on uphill sections than on flat or downhill sections.) The professor will start in Grand Forks with two full liters of water. His official North Dakota state map shows all the places along U.S. 2 at which he can refill his water and the distances between these locations.
+
+> The professor's goal is to minimize the number of water stops along his route across the state. Give an efficient method by which he can determine which water stops he should make. Prove that your strategy yields an optimal solution, and give its running time.
+
+Greedy, go to the furthest stop within $$m$$ miles each time.
+
+### 16.2-5
+
+> Describe an efficient algorithm that, given a set $$\{ x_1, x_2, \dots, x_n \}$$ of points on the real line, determines the smallest set of unit-length closed intervals that contains all of the given points. Argue that your algorithm is correct.
+
+Greedy, place the left side of the unit-interval to the first left-most uncovered point.
+
