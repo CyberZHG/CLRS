@@ -28,5 +28,10 @@ Sort the denominations into decreasing order, for $$i=k$$ to $$1$$, choose $$n /
 
 > __*a*__. Give an algorithm that schedules the tasks so as to minimize the average completion time. Each task must run non-preemptively, that is, once task $$a_i$$ starts, it must run continuously for $$p_i$$ units of time. Prove that your algorithm minimizes the average completion time, and state the running time of your algorithm.
 
+Suppose a permutation of $$S$$ is $$\langle r_1, r_2, \dots, r_n \rangle$$, the total completion time is $$\displaystyle \sum_{i=1}^n (n - i + 1) \cdot p_{r_i}$$.
+The optimal solution is to sort $$p_i$$ into increasing order.
+
 > __*b*__. Suppose now that the tasks are not all available at once. That is, each task cannot start until its __*release time*__ $$r_i$$ . Suppose also that we allow __*preemption*__, so that a task can be suspended and restarted at a later time. For example, a task $$a_i$$ with processing time $$p_i = 6$$ and release time $$r_i = 1$$ might start running at time $$1$$ and be preempted at time $$4$$. It might then resume at time $$10$$ but be preempted at time $$11$$, and it might finally resume at time $$13$$ and complete at time $$15$$. Task $$a_i$$ has run for a total of $$6$$ time units, but its running time has been divided into three pieces. In this scenario, $$a_i$$'s completion time is $$15$$. Give an algorithm that schedules the tasks so as to minimize the average completion time in this new scenario. Prove that your algorithm minimizes the average completion time, and state the running time of your algorithm.
 
+Preemption will not yield a better solution if there is no new task.
+Each time there is a new task, assume that the current running task is preempted, let the current condition be a new scheduling task without preemption.
