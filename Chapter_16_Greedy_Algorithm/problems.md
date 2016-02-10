@@ -35,3 +35,7 @@ The optimal solution is to sort $$p_i$$ into increasing order.
 
 Preemption will not yield a better solution if there is no new task.
 Each time there is a new task, assume that the current running task is preempted, let the current condition be a new scheduling task without preemption.
+
+### 16-3 Acyclic subgraphs
+
+__*a*__. The __*incidence matrix*__ for an undirected graph $$G = (V, E)$$ is a $$|V| \times |E|$$ matrix $$M$$ such that $$M_{ve} = 1$$ if edge $$e$$ is incident on vertex $$v$$, and $$M_{ve} = 0$$ otherwise. Argue that a set of columns of $$M$$ is linearly independent over the field of integers modulo 2 if and only if the corresponding set of edges is acyclic. Then, use the result of Exercise 16.4-2 to provide an alternate proof that $$(E, I)$$ of part (a) is a matroid.
