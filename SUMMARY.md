@@ -104,6 +104,12 @@
     * [Matroids and greedy methods](Chapter_16_Greedy_Algorithm/exercises_16.4.md)
     * [A task-scheduling problem as a matroid](Chapter_16_Greedy_Algorithm/exercises_16.5.md)
     * [Problems](Chapter_16_Greedy_Algorithm/problems.md)
+* [Amortized Analysis](Chapter_17_Amortized_Analysis/README.md)
+    * [Aggregate analysis](Chapter_17_Amortized_Analysis/exercises_17.1.md)
+    * [The accounting method](Chapter_17_Amortized_Analysis/exercises_17.2.md)
+    * [The potential method](Chapter_17_Amortized_Analysis/exercises_17.3.md)
+    * [Dynamic tables](Chapter_17_Amortized_Analysis/exercises_17.4.md)
+    * [Problems](Chapter_17_Amortized_Analysis/problems.md)
 
 
 * [Appendix A: Summations](Appendix_A_Summations/README.md)
