@@ -20,7 +20,7 @@ For 18, the greedy algorithm yields 9 coins, the optimal solution is $$\langle 9
 
 > __*d*__. Give an $$O(nk)$$-time algorithm that makes change for any set of $$k$$ different coin denominations, assuming that one of the coins is a penny.
 
-Sort the denominations into decreasing order, for $$i=k$$ to $$1$$, choose $$n / c_i$$ coins, remaining $$n~\text{mod}~c_i$$.
+Let $$dp[i]$$ be the minimal number of coins of amount $$i$$, $$dp[i] = 1 + \min_j dp[i - c_j]$$.
 
 ### 16-2 Scheduling to minimize average completion time
 
@@ -38,4 +38,30 @@ Each time there is a new task, assume that the current running task is preempted
 
 ### 16-3 Acyclic subgraphs
 
-__*a*__. The __*incidence matrix*__ for an undirected graph $$G = (V, E)$$ is a $$|V| \times |E|$$ matrix $$M$$ such that $$M_{ve} = 1$$ if edge $$e$$ is incident on vertex $$v$$, and $$M_{ve} = 0$$ otherwise. Argue that a set of columns of $$M$$ is linearly independent over the field of integers modulo 2 if and only if the corresponding set of edges is acyclic. Then, use the result of Exercise 16.4-2 to provide an alternate proof that $$(E, I)$$ of part (a) is a matroid.
+> __*a*__. The __*incidence matrix*__ for an undirected graph $$G = (V, E)$$ is a $$|V| \times |E|$$ matrix $$M$$ such that $$M_{ve} = 1$$ if edge $$e$$ is incident on vertex $$v$$, and $$M_{ve} = 0$$ otherwise. Argue that a set of columns of $$M$$ is linearly independent over the field of integers modulo 2 if and only if the corresponding set of edges is acyclic. Then, use the result of Exercise 16.4-2 to provide an alternate proof that $$(E, I)$$ of part (a) is a matroid.
+
+> __*b*__. Suppose that we associate a nonnegative weight $$w(e)$$ with each edge in an undirected graph $$G = (V, E)$$. Give an efficient algorithm to find an acyclic subset of $$E$$ of maximum total weight.
+
+Maximum spanning tree.
+
+> __*c*__. Let $$G(V, E)$$ be an arbitrary directed graph, and let $$(E, I)$$ be defined so that $$A \in I$$ if and only if $$A$$ does not contain any directed cycles. Give an example of a directed graph $$G$$ such that the associated system $$(E, I)$$ is not a matroid. Specify which defining condition for a matroid fails to hold.
+
+> __*d*__. The __*incidence matrix*__ for a directed graph $$G = (V, E)$$ with no self-loops is a $$|V| \times |E|$$ matrix $$M$$ such that $$M_{ve} = -1$$ if edge $$e$$ leaves vertex $$v$$, $$M_{ve} = 1$$ if edge $$e$$ enters vertex $$v$$, and $$M_{ve} = 0$$ otherwise. Argue that if a set of columns of $$M$$ is linearly independent, then the corresponding set of edges does not contain a directed cycle.
+
+> __*e*__. Exercise 16.4-2 tells us that the set of linearly independent sets of columns of any matrix $$M$$ forms a matroid. Explain carefully why the results of parts (d) and (e) are not contradictory. How can there fail to be a perfect correspondence between the notion of a set of edges being acyclic and the notion of the associated set of columns of the incidence matrix being linearly independent?
+
+### 16-4 Scheduling variations
+
+> Consider the following algorithm for the problem from Section 16.5 of scheduling unit-time tasks with deadlines and penalties. Let all $$n$$ time slots be initially empty, where time slot $$i$$ is the unit-length slot of time that finishes at time $$i$$. We consider the tasks in order of monotonically decreasing penalty. When considering task $$a_j$$, if there exists a time slot at or before $$a_j$$'s deadline $$d_j$$ that is still empty, assign $$a_j$$ to the latest such slot, filling it. If there is no such slot, assign task $$a_j$$ to the latest of the as yet unfilled slots.
+
+> __*a*__. Argue that this algorithm always gives an optimal answer.
+
+> __*b*__. Use the fast disjoint-set forest presented in Section 21.3 to implement the algorithm efficiently. Assume that the set of input tasks has already been sorted into monotonically decreasing order by penalty. Analyze the running time of your implementation.
+
+### 16-5 Off-line caching
+
+> __*a*__. Write pseudocode for a cache manager that uses the furthest-in-future strategy. The input should be a sequence $$\langle r_1, r2, \dots, r_n \rangle$$ of requests and a cache size $$k$$, and the output should be a sequence of decisions about which data element (if any) to evict upon each request. What is the running time of your algorithm?
+
+> __*b*__. Show that the off-line caching problem exhibits optimal substructure.
+
+> __*c*__. Prove that furthest-in-future produces the minimum possible number of cache misses.
