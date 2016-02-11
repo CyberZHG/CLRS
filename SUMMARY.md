@@ -1,8 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-
-
 * [The Role of Algorithms in Computing](Chapter_01_The_Role_of_Algorithms_in_Computing/README.md)
    * [Algorithms](Chapter_01_The_Role_of_Algorithms_in_Computing/exercises_1.1.md)
    * [Algorithms as a technology](Chapter_01_The_Role_of_Algorithms_in_Computing/exercises_1.2.md)
@@ -30,8 +28,6 @@
    * [Randomized algorithms](Chapter_05_Probabilistic_Analysis_and_Randomized_Algorithms/exercises_5.3.md)
    * [Probabilistic analysis and further uses of indicator random variables](Chapter_05_Probabilistic_Analysis_and_Randomized_Algorithms/exercises_5.4.md)
    * [Problems](Chapter_05_Probabilistic_Analysis_and_Randomized_Algorithms/problems.md)
-
-
 * [Heapsort](Chapter_06_Heapsort/README.md)
    * [Heaps](Chapter_06_Heapsort/exercises_6.1.md)
    * [Maintaining the heap property](Chapter_06_Heapsort/exercises_6.2.md)
@@ -56,8 +52,6 @@
    * [Selection in expected linear time](Chapter_09_Medians_and_Order_Statistics/exercises_9.2.md)
    * [Selection in worst-case linear time](Chapter_09_Medians_and_Order_Statistics/exercises_9.3.md)
    * [Problems](Chapter_09_Medians_and_Order_Statistics/problems.md)
-
-
 * [Elementary Data Structures](Chapter_10_Elementary_Data_Structures/README.md)
    * [Stacks and queues](Chapter_10_Elementary_Data_Structures/exercises_10.1.md)
    * [Linked lists](Chapter_10_Elementary_Data_Structures/exercises_10.2.md)
@@ -88,31 +82,28 @@
    * [How to augment a data structure](Chapter_14_Augmenting_Data_Structures/exercises_14.2.md)
    * [Interval trees](Chapter_14_Augmenting_Data_Structures/exercises_14.3.md)
    * [Problems](Chapter_14_Augmenting_Data_Structures/problems.md)
-
-
 * [Dynamic Programming](Chapter_15_Dynamic_Programming/README.md)
-    * [Rod cutting](Chapter_15_Dynamic_Programming/exercises_15.1.md)
-    * [Matrix-chain multiplication](Chapter_15_Dynamic_Programming/exercises_15.2.md)
-    * [Elements of dynamic programming](Chapter_15_Dynamic_Programming/exercises_15.3.md)
-    * [Longest common subsequence](Chapter_15_Dynamic_Programming/exercises_15.4.md)
-    * [Optimal binary search trees](Chapter_15_Dynamic_Programming/exercises_15.5.md)
-    * [Problems](Chapter_15_Dynamic_Programming/problems.md)
+   * [Rod cutting](Chapter_15_Dynamic_Programming/exercises_15.1.md)
+   * [Matrix-chain multiplication](Chapter_15_Dynamic_Programming/exercises_15.2.md)
+   * [Elements of dynamic programming](Chapter_15_Dynamic_Programming/exercises_15.3.md)
+   * [Longest common subsequence](Chapter_15_Dynamic_Programming/exercises_15.4.md)
+   * [Optimal binary search trees](Chapter_15_Dynamic_Programming/exercises_15.5.md)
+   * [Problems](Chapter_15_Dynamic_Programming/problems.md)
 * [Greedy Algorithm](Chapter_16_Greedy_Algorithm/README.md)
-    * [An activity-selection problem](Chapter_16_Greedy_Algorithm/exercises_16.1.md)
-    * [Elements of the greedy strategy](Chapter_16_Greedy_Algorithm/exercises_16.2.md)
-    * [Huffman codes](Chapter_16_Greedy_Algorithm/exercises_16.3.md)
-    * [Matroids and greedy methods](Chapter_16_Greedy_Algorithm/exercises_16.4.md)
-    * [A task-scheduling problem as a matroid](Chapter_16_Greedy_Algorithm/exercises_16.5.md)
-    * [Problems](Chapter_16_Greedy_Algorithm/problems.md)
-* [Amortized Analysis](Chapter_17_Amortized_Analysis/README.md)
-    * [Aggregate analysis](Chapter_17_Amortized_Analysis/exercises_17.1.md)
-    * [The accounting method](Chapter_17_Amortized_Analysis/exercises_17.2.md)
-    * [The potential method](Chapter_17_Amortized_Analysis/exercises_17.3.md)
-    * [Dynamic tables](Chapter_17_Amortized_Analysis/exercises_17.4.md)
-    * [Problems](Chapter_17_Amortized_Analysis/problems.md)
-
-
+   * [An activity-selection problem](Chapter_16_Greedy_Algorithm/exercises_16.1.md)
+   * [Elements of the greedy strategy](Chapter_16_Greedy_Algorithm/exercises_16.2.md)
+   * [Huffman codes](Chapter_16_Greedy_Algorithm/exercises_16.3.md)
+   * [Matroids and greedy methods](Chapter_16_Greedy_Algorithm/exercises_16.4.md)
+   * [A task-scheduling problem as a matroid](Chapter_16_Greedy_Algorithm/exercises_16.5.md)
+   * [Problems](Chapter_16_Greedy_Algorithm/problems.md)
+* [Amortized Analysis](Chapter_17_Amortized_Analysis/READMD.md)
+   * [Aggregate analysis](Chapter_17_Amortized_Analysis/exercises_17.1.md)
+   * [The accounting method](Chapter_17_Amortized_Analysis/exercises_17.2.md)
+   * [The potential method](Chapter_17_Amortized_Analysis/exercises_17.3.md)
+   * [Dynamic tables](Chapter_17_Amortized_Analysis/exercises_17.4.md)
+   * [Problems](Chapter_17_Amortized_Analysis/problems.md)
 * [Appendix A: Summations](Appendix_A_Summations/README.md)
    * [Summation formulas and properties](Appendix_A_Summations/exercises_a.1.md)
    * [Bounding summations](Appendix_A_Summations/exercises_a.2.md)
    * [Problems](Appendix_A_Summations/problems.md)
+
