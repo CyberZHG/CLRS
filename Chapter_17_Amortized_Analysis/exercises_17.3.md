@@ -10,6 +10,8 @@ $$\Phi'(D_i) = \Phi(D_i) - \Phi(D_0)$$
 
 > Redo Exercise 17.1-3 using a potential method of analysis.
 
+$$\Phi(D_i) = 2 \cdot 2 ^ {\lceil \lg i \rceil} - i$$
+
 ### 17.3-3
 
 > Consider an ordinary binary min-heap data structure with $$n$$ elements supporting the instructions INSERT and EXTRACT-MIN in $$O(\lg n)$$ worst-case time. Give a potential function $$\Phi$$ such that the amortized cost of INSERT is $$O(\lg n)$$ and the amortized cost of EXTRACT-MIN is $$O(1)$$, and show that it works.
