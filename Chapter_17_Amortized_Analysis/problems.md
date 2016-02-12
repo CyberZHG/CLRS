@@ -65,5 +65,19 @@ class BitReversedCounter:
         return self.c
 ```
 
+### 17-2 Making binary search dynamic
 
+> Binary search of a sorted array takes logarithmic search time, but the time to insert a new element is linear in the size of the array. We can improve the time for insertion by keeping several sorted arrays.
+
+> Specifically, suppose that we wish to support SEARCH and INSERT on a set of $$n$$ elements. Let $$k = \lceil \lg(n + 1) \rceil$$, and let the binary representation of $$n$$ be $$\langle n_{k-1}, n_{k-2}, \dots, n_0 \rangle$$. We have $$k$$ sorted arrays $$A_0, A_1, \dots, A_{k-1}$$, where for $$i = 0, 1, \dots, k - 1$$, the length of array $$A_i$$ is $$2^i$$. Each array is either full or empty, depending on whether $$n_i = 1$$ or $$n_i = 0$$, respectively. The total number of elements held in all $$k$$ arrays is therefore $$\sum_{i=0}^{k-1} n_i 2^i = n$$. Although each individual array is sorted, elements in different arrays bear no particular relationship to each other.
+
+> __*a*__. Describe how to perform the SEARCH operation for this data structure. Analyze its worst-case running time.
+
+$$O(\lg^2 n)$$
+
+> __*b*__. Describe how to perform the INSERT operation. Analyze its worst-case and amortized running times.
+
+
+
+> __*c*__. Discuss how to implement DELETE.
 
