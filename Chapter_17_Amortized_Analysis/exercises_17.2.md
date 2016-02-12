@@ -10,6 +10,8 @@ PUSH: $$2$$, POP: $$2$$, COPY: $$0$$.
 
 > Redo Exercise 17.1-3 using an accounting method of analysis.
 
+Insert: $$3$$.
+
 ### 17.2-3
 
 > Suppose we wish not only to increment a counter but also to reset it to zero (i.e., make all bits in it 0). Counting the time to examine or modify a bit as $$\Theta(1)$$, show how to implement a counter as an array of bits so that any sequence of $$n$$ INCREMENT and RESET operations takes time $$O(n)$$ on an initially zero counter.
