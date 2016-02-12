@@ -48,3 +48,22 @@ class BitReversedCounter:
 
 > __*c*__. Suppose that you can shift a word left or right by only one bit in unit time. Is it still possible to implement an $$O(n)$$-time bit-reversal permutation?
 
+```python
+class BitReversedCounter:
+    def __init__(self, k):
+        self.k = k
+        self.c = 0
+        self.n = 1 << (self.k - 1)
+
+    def increment(self):
+        i = self.n
+        for _ in xrange(self.k - 1, -1, -1):
+            self.c ^= i
+            if self.c & i > 0:
+                break
+            i >>= 1
+        return self.c
+```
+
+
+
