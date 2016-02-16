@@ -77,7 +77,9 @@ $$O(\lg^2 n)$$
 
 > __*b*__. Describe how to perform the INSERT operation. Analyze its worst-case and amortized running times.
 
+Worst: $$O(n \lg n)$$
 
+Amortized: $$O(\lg n)$$
 
 > __*c*__. Discuss how to implement DELETE.
 
