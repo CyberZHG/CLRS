@@ -83,3 +83,15 @@ Amortized: $$O(\lg n)$$
 
 > __*c*__. Discuss how to implement DELETE.
 
+### 17-3 Amortized weight-balanced trees
+
+> Consider an ordinary binary search tree augmented by adding to each node $$x$$ the attribute $$x.size$$ giving the number of keys stored in the subtree rooted at $$x$$. Let $$\alpha$$ be a constant in the range $$1/2 \le \alpha < 1$$. We say that a given node $$x$$ is __*$$\alpha$$-balanced*__ if $$x.left.size \le \alpha \cdot x.size$$ and $$x.right.size \le \alpha \cdot x.size$$. The tree as a whole is __*$$\alpha$$-balanced*__ if every node in the tree is $$\alpha$$-balanced. The following amortized approach to maintaining weight-balanced trees was suggested by G. Varghese.
+
+__*a*__. A $$1/2$$-balanced tree is, in a sense, as balanced as it can be. Given a node $$x$$ in an arbitrary binary search tree, show how to rebuild the subtree rooted at $$x$$ so that it becomes $$1/2$$-balanced. Your algorithm should run in time $$\Theta(x.size)$$, and it can use $$O(x.size)$$ auxiliary storage.
+
+Choose the middle node as the root.
+
+__*b*__. Show that performing a search in an $$n$$-node $$\alpha$$-balanced binary search tree takes $$O(\lg n)$$ worst-case time.
+
+Let $$\beta = 1 / \alpha$$, $$\beta^k = n$$, $$k = \log_\beta n = O(\log n) = O(\lg n)$$.
+
