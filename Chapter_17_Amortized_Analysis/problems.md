@@ -115,4 +115,9 @@ $$1/2$$-balanced: $$\Delta(x) \le 1$$, $$\Phi(T) = 0$$.
 
 > __*d*__. Suppose that $$m$$ units of potential can pay for rebuilding an $$m$$-node subtree. How large must $$c$$ be in terms of $$\alpha$$ in order for it to take $$O(1)$$ amortized time to rebuild a subtree that is not $$\alpha$$-balanced?
 
+> __*e*__. Show that inserting a node into or deleting a node from an $$n$$-node $$\alpha$$-balanced tree costs $$O(\lg n)$$ amortized time.
+
+### 17-4 The cost of restructuring red-black trees
+
+### 17-5 Competitive analysis of self-organizing lists with move-to-front
 
