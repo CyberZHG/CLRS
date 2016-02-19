@@ -212,3 +212,17 @@ $$O(m)$$
 
 ### 17-5 Competitive analysis of self-organizing lists with move-to-front
 
+> A __*self-organizing*__ list is a linked list of $$n$$ elements, in which each element has a unique key. When we search for an element in the list, we are given a key, and we want to find an element with that key.
+
+> A self-organizing list has two important properties:
+
+> 1\. To find an element in the list, given its key, we must traverse the list from the beginning until we encounter the element with the given key. If that element is the $$k$$th element from the start of the list, then the cost to find the element is $$k$$.
+
+> 2\. We may reorder the list elements after any operation, according to a given rule with a given cost. We may choose any heuristic we like to decide how to reorder the list.
+
+> Assume that we start with a given list of $$n$$ elements, and we are given an access sequence $$\sigma = \langle \sigma_1, \sigma_2, \dots, \sigma_m \rangle$$ of keys to find, in order. The cost of the sequence is the sum of the costs of the individual accesses in the sequence.
+
+> Out of the various possible ways to reorder the list after an operation, this problem focuses on transposing adjacent list elements-switching their positions in the list—with a unit cost for each transpose operation. You will show, by means of a potential function, that a particular heuristic for reordering the list, move-to-front, entails a total cost no worse than 4 times that of any other heuristic for maintaining the list order—even if the other heuristic knows the access sequence in advance! We call this type of analysis a competitive analysis.
+
+> For a heuristic $$H$$ and a given initial ordering of the list, denote the access cost of
+sequence $$\sigma$$ by $$C_H(\sigma)$$ Let $$m$$ be the number of accesses in $$\sigma$$.
