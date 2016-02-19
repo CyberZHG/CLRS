@@ -77,7 +77,9 @@ $$O(\lg^2 n)$$
 
 > __*b*__. Describe how to perform the INSERT operation. Analyze its worst-case and amortized running times.
 
-Worst: $$O(n \lg n)$$
+Merge sort.
+
+Worst: $$O(n)$$
 
 Amortized: $$O(\lg n)$$
 
@@ -115,9 +117,98 @@ $$1/2$$-balanced: $$\Delta(x) \le 1$$, $$\Phi(T) = 0$$.
 
 > __*d*__. Suppose that $$m$$ units of potential can pay for rebuilding an $$m$$-node subtree. How large must $$c$$ be in terms of $$\alpha$$ in order for it to take $$O(1)$$ amortized time to rebuild a subtree that is not $$\alpha$$-balanced?
 
+$$
+\begin{array}{rll}
+\hat{c_i} &=& c_i + \Phi(D_i) - \Phi(D_{i-1}) \\
+O(1) &=& m + \Phi(D_i) - \Phi(D_{i-1}) \\
+\Phi(D_{i-1}) &=& m + \Phi(D_i) \\
+\Phi(D_{i-1}) &\ge& m
+\end{array}
+$$
+
+$$
+\begin{array}{rll}
+\Delta(x) &=& x.left.size - x.right.size \\
+&\ge& \alpha \cdot m - ((1 - \alpha) m - 1) \\
+&=& (2\alpha - 1)m + 1
+\end{array}
+$$
+
+$$
+\begin{array}{rll}
+m &\le& c((2\alpha - 1)m + 1) \\
+c &\ge& \displaystyle \frac{m}{(2\alpha - 1)m + 1} \\
+&\ge& \displaystyle \frac{1}{2\alpha}
+\end{array}
+$$
+
 > __*e*__. Show that inserting a node into or deleting a node from an $$n$$-node $$\alpha$$-balanced tree costs $$O(\lg n)$$ amortized time.
 
 ### 17-4 The cost of restructuring red-black trees
+
+> There are four basic operations on red-black trees that perform __*structural modifications*__: node insertions, node deletions, rotations, and color changes. We have seen that RB-INSERT and RB-DELETE use only $$O(1)$$ rotations, node insertions, and node deletions to maintain the red-black properties, but they may make many more color changes.
+
+> __*a*__. Describe a legal red-black tree with $$n$$ nodes such that calling RB-INSERT to add the $$(n + 1)$$st node causes $$\Omega(\lg n)$$ color changes. Then describe a legal red-black tree with $$n$$ nodes for which calling RB-DELETE on a particular node causes $$\Omega(\lg n)$$ color changes.
+
+Insert: a complete red-black tree in which all nodes have different color with their parents.
+
+Delete: a complete red-black tree in which all nodes are black.
+
+> Although the worst-case number of color changes per operation can be logarithmic, we shall prove that any sequence of $$m$$ RB-INSERT and RB-DELETE operations on an initially empty red-black tree causes $$O(m)$$ structural modifications in the worst case. Note that we count each color change as a structural modification.
+
+> __*b*__. Some of the cases handled by the main loop of the code of both RB-INSERT-FIXUP and RB-DELETE-FIXUP are terminating: once encountered, they cause the loop to terminate after a constant number of additional operations. For each of the cases of RB-INSERT-FIXUP and RB-DELETE-FIXUP, specify which are terminating and which are not.
+
+RB-INSERT-FIXUP: all cases except for case 1.
+
+RB-DELETE-FIXUP: case 2.
+
+> We shall first analyze the structural modifications when only insertions are performed. Let $$T$$ be a red-black tree, and define $$\Phi(T)$$ to be the number of red nodes in $$T$$. Assume that 1 unit of potential can pay for the structural modifications performed by any of the three cases of RB-INSERT-FIXUP.
+
+> __*c*__. Let $$T'$$ be the result of applying Case 1 of RB-INSERT-FIXUP to $$T$$. Argue that $$\Phi(T') = \Phi(T) - 1$$.
+
+Parent and uncle: red to black.
+
+Grandparent: black to red.
+
+> __*d*__. When we insert a node into a red-black tree using RB-INSERT, we can break the operation into three parts. List the structural modifications and potential changes resulting from lines 1–16 of RB-INSERT, from nonterminating cases of RB-INSERT-FIXUP, and from terminating cases of RB-INSERT-FIXUP.
+
+Case 1: decrease by 1.
+
+Case 2 & 3: no effect.
+
+> __*e*__. Using part (d), argue that the amortized number of structural modifications performed by any call of RB-INSERT is $$O(1)$$.
+
+$$O(1)$$
+
+> We now wish to prove that there are $$O(m)$$ structural modifications when there are both insertions and deletions. Let us define, for each node $$x$$,
+
+> $$\displaystyle w(x) = \left \{
+\begin{array}{ll}
+0 & \text{if}~x~\text{is red,} \\
+1 & \text{if}~x~\text{is black and has no red children,} \\
+0 & \text{if}~x~\text{is black and has one red children,} \\
+2 & \text{if}~x~\text{is black and has two red children,} \\
+\end{array}
+\right .
+$$
+
+> Now we redefine the potential of a red-black tree $$T$$ as
+
+> $$\displaystyle \Phi(T) = \sum_{x \in T} w(x)$$,
+
+> and let $$T'$$ be the tree that results from applying any nonterminating case of RB-INSERT-FIXUP or RB-DELETE-FIXUP to $$T$$.
+
+> __*f*__. Show that $$\Phi(T') \le \Phi(T) - 1$$ for all nonterminating cases of RB-INSERT-FIXUP. Argue that the amortized number of structural modifications performed by any call of RB-INSERT-FIXUP is $$O(1)$$.
+
+$$O(1)$$
+
+> __*g*__. Show that $$\Phi(T') \le \Phi(T) - 1$$ for all nonterminating cases of RB-DELETE-FIXUP. Argue that the amortized number of structural modifications performed by any call of RB-DELETE-FIXUP is $$O(1)$$.
+
+$$O(1)$$
+
+> __*h*__. Complete the proof that in the worst case, any sequence of $$m$$ RB-INSERT and RB-DELETE operations performs $$O(m)$$ structural modifications.
+
+$$O(m)$$
 
 ### 17-5 Competitive analysis of self-organizing lists with move-to-front
 
