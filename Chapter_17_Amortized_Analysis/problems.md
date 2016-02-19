@@ -280,4 +280,13 @@ Precede.
 
 > __*g*__. Show that the amortized cost $$\hat{c_i}$$ of access $$\sigma_i$$ is bounded from above by $$4c_i^*$$.
 
+$$
+\begin{array}{rll}
+\hat{c_i} &\le& 2(|A| + |B| + 1) - 1 + 2(|A| - |B| + t_i^*) \\
+&=& 4|A| + 1 + 2 t_i^* \\
+&\le& 4(|A| + |C| + 1 + t_i^*) \\
+&=& 4 c_i^*
+\end{array}
+$$
+
 > __*h*__. Conclude that the cost $$C_{MTF}(\sigma)$$ of access sequence $$\sigma$$ with move-to-front is at most 4 times the cost $$C_H(\sigma)$$ of $$\sigma$$ withany other heuristic $$\text{H}$$, assuming that both heuristics start with the same list.
