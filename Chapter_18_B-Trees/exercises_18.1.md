@@ -30,4 +30,4 @@ $$
 
 > Describe the data structure that would result if each black node in a red-black tree were to absorb its red children, incorporating their children with its own.
 
-$$t=2$$, 2-3-4 tree.
+$$t=2$$, 2-3-4 tree
