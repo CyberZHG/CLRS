@@ -3,19 +3,28 @@ PFont font;
 float margin_x = 160.0;
 float margin_y = 80.0;
 float layer_height = 140.0;
-float leaf_margin = 180.0;
+float leaf_margin = 200.0;
 float rect_size = 40.0;
 
 float max_x = -1e20f, min_x = 1e20f;
 
 Node[] nodes;
 int degree = 2;
-String[] vals = new String[] {"2 4", "1", "3", "5"};
-String root = "2 4";
-String[][] edges = new String[][] {{"2 4", "0", "1"},
-                                   {"2 4", "1", "3"},
-                                   {"2 4", "2", "5"}};
-String save_name = "18.1-3_4.png";
+String[] vals = new String[] {"K Q", "B F", "M", "T W", "A", "C D E", "H", "L", "N P",
+                              "R S", "V", "X Y Z"};
+String root = "K Q";
+String[][] edges = new String[][] {{"K Q", "0", "B F"},
+                                   {"K Q", "1", "M"},
+                                   {"K Q", "2", "T W"},
+                                   {"B F", "0", "A"},
+                                   {"B F", "1", "C D E"},
+                                   {"B F", "2", "H"},
+                                   {"M", "0", "L"},
+                                   {"M", "1", "N P"},
+                                   {"T W", "0", "R S"},
+                                   {"T W", "1", "V"},
+                                   {"T W", "2", "X Y Z"}};
+String save_name = "18.2-1_4.png";
 
 class Node {
   float x_pos, y_pos;
@@ -99,7 +108,7 @@ void initLocations(Node node, int h, float x, float margin, float maxWidth, int 
   node.setLocation(x, y);
   float subMargin = margin / node.n;
   for (int i = 0; i <= node.n; ++i) {
-    initLocations(node.children[i], h + 1, x - margin * 0.5 + subMargin * i, margin * 0.5, maxWidth, maxHeight);
+    initLocations(node.children[i], h + 1, x - margin * 0.5 + subMargin * i, margin * 0.35, maxWidth, maxHeight);
   }
 }
 
