@@ -16,6 +16,15 @@ No key.
 
 > Show all legal B-trees of minimum degree 2 that represent $$\{1, 2, 3, 4, 5\}$$.
 
+![](./img/18.1-3_1.png)
+
+![](./img/18.1-3_2.png)
+
+![](./img/18.1-3_3.png)
+
+
+![](./img/18.1-3_4.png)
+
 ### 18.1-4
 
 > As a function of the minimum degree $$t$$, what is the maximum number of keys that can be stored in a B-tree of height $$h$$?
