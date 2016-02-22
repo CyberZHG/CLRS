@@ -8,3 +8,13 @@
 
 > in order into an empty B-tree with minimum degree 2. Draw only the configurations of the tree just before some node must split, and also draw the final configuration.
 
+![](./img/18.2-1_1.png)
+
+![](./img/18.2-1_2.png)
+
+![](./img/18.2-1_3.png)
+
+![](./img/18.2-1_4.png)
+
+
+
