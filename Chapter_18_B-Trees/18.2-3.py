@@ -109,7 +109,7 @@ class BTree:
         def display_sub(x, space):
             if x is None:
                 return
-            print(' ' * space + '[' + ' '.join(x.key[:x.n]) + ']')
+            print(' ' * space + '[' + ' '.join(map(str, x.key[:x.n])) + ']')
             for c in x.c[:x.n + 1]:
                 display_sub(c, space + 4)
         display_sub(self.root, 0)
