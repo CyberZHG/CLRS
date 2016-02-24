@@ -3,28 +3,31 @@ PFont font;
 float margin_x = 160.0;
 float margin_y = 80.0;
 float layer_height = 140.0;
-float leaf_margin = 200.0;
+float leaf_margin = 120.0;
 float rect_size = 40.0;
+float child_size = 10.0;
 
 float max_x = -1e20f, min_x = 1e20f;
 
 Node[] nodes;
 int degree = 2;
-String[] vals = new String[] {"K Q", "B F", "M", "T W", "A", "C D E", "H", "L", "N P",
-                              "R S", "V", "X Y Z"};
+String[] vals = new String[] {"K Q", "B F", "M", "T W", "A", "C D E", "H", "L", "N P", "R S", "V", "X Y Z"};
 String root = "K Q";
-String[][] edges = new String[][] {{"K Q", "0", "B F"},
-                                   {"K Q", "1", "M"},
-                                   {"K Q", "2", "T W"},
-                                   {"B F", "0", "A"},
-                                   {"B F", "1", "C D E"},
-                                   {"B F", "2", "H"},
-                                   {"M", "0", "L"},
-                                   {"M", "1", "N P"},
-                                   {"T W", "0", "R S"},
-                                   {"T W", "1", "V"},
-                                   {"T W", "2", "X Y Z"}};
-String save_name = "18.2-1_4.png";
+String active = "";
+String[][] edges = new String[][] {
+  {"K Q", "0", "B F"},
+  {"K Q", "1", "M"},
+  {"K Q", "2", "T W"},
+  {"B F", "0", "A"},
+  {"B F", "1", "C D E"},
+  {"B F", "2", "H"},
+  {"M", "0", "L"},
+  {"M", "1", "N P"},
+  {"T W", "0", "R S"},
+  {"T W", "1", "V"},
+  {"T W", "2", "X Y Z"},
+};
+String save_name = "18.2-1_21.png";
 
 class Node {
   float x_pos, y_pos;
@@ -56,27 +59,35 @@ class Node {
   }
   
   int getLeftPos() {
-    return (int)(x_pos - rect_size * (2 * n + 1) / 2);
+    return (int)(x_pos - (rect_size * n + child_size * (n + 1)) / 2);
   }
   
   int getCenter(int i) {
-    return (int)(getLeftPos() + rect_size / 2 + i * rect_size);
+    if (i % 2 == 0) {
+      return (int)(getLeftPos() + child_size / 2 + i / 2 * (rect_size + child_size));
+    }
+    return (int)(getLeftPos() + rect_size / 2 + i / 2 * rect_size + (i / 2 + 1) * child_size);
   }
   
   void display() {
     for (int i = 0; i < n + 1; ++i) {
       graphics.beginDraw();
         graphics.strokeWeight(2);
-        graphics.stroke(65, 113, 156);
+        graphics.stroke(91, 155, 213);
         graphics.fill(164, 194, 229);
-        graphics.rect(getCenter(i * 2) - rect_size * 0.5, y_pos - rect_size * 0.5, rect_size, rect_size);
+        graphics.rect(getCenter(i * 2) - child_size * 0.5, y_pos - rect_size * 0.5, child_size, rect_size);
       graphics.endDraw();
     }
     for (int i = 0; i < n; ++i) {
       graphics.beginDraw();
         graphics.strokeWeight(2);
-        graphics.stroke(65, 113, 156);
-        graphics.fill(91, 155, 213);
+        if (keys[i].equals(active)) {
+          graphics.stroke(220, 97, 65);
+          graphics.fill(220, 97, 65);
+        } else {
+          graphics.stroke(91, 155, 213);
+          graphics.fill(91, 155, 213);
+        }
         graphics.rect(getCenter(i * 2 + 1) - rect_size * 0.5, y_pos - rect_size * 0.5, rect_size, rect_size);
       graphics.endDraw();
       graphics.beginDraw();
@@ -168,13 +179,14 @@ void draw() {
   graphics.beginDraw();
     graphics.stroke(30);
     graphics.strokeWeight(1.5);
+    graphics.stroke(91, 155, 213);
     for (Node node : nodes) {
       if (node == null) {
         continue;
       }
       for (int i = 0; i <= node.n; ++i) {
         if (node.children[i] != null) {
-          graphics.line(node.getCenter(i * 2), node.y_pos, node.children[i].x_pos, node.children[i].y_pos);
+          graphics.line(node.getCenter(i * 2), node.y_pos + rect_size * 0.5, node.children[i].x_pos, node.children[i].y_pos - rect_size * 0.5);
         }
       }
     }
