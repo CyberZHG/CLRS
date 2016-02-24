@@ -187,16 +187,18 @@ $$\log_{t} n \cdot \lg t = \lg n$$
 
 > Suppose that disk hardware allows us to choose the size of a disk page arbitrarily, but that the time it takes to read the disk page is $$a + bt$$, where $$a$$ and $$b$$ are specified constants and $$t$$ is the minimum degree for a B-tree using pages of the selected size. Describe how to choose $$t$$ so as to minimize (approximately) the B-tree search time. Suggest an optimal value of $$t$$ for the case in which $$a = 5$$ milliseconds and $$b = 10$$ microseconds.
 
-$$\min \log_t n \cdot (a + bt)$$
+$$
+\min \log_t n \cdot (a + bt) = \min \frac{a + bt}{\ln t}
+$$
 
 $$
-\frac{\partial}{\partial t} \left ( \log_t n \cdot (a + bt) \right ) = - \frac{\ln n (a + bt - bt \ln t)}{t \ln^2 t}
+\frac{\partial}{\partial t} \left ( \frac{a + bt}{\ln t} \right ) = - \frac{a + bt - bt \ln t}{t \ln^2 t}
 $$
 $$
 \begin{array}{rll}
 a + bt &=& bt \ln t \\
 5 + 10t &=& 10t \ln t \\
-t &=& e^{W \left ( \frac{1}{2e} \right ) + 1} \\
+t &=& \displaystyle e^{W \left ( \frac{1}{2e} \right ) + 1} \\
 \end{array}
 $$
 
