@@ -50,5 +50,15 @@
 
 ![](./img/18.2-1_21.png)
 
+### 18.2-2
+
+> Explain under what circumstances, if any, redundant DISK-READ or DISK-WRITE operations occur during the course of executing a call to B-TREE-INSERT. (A redundant DISK-READ is a DISK-READ for a page that is already in memory. A redundant DISK-WRITE writes to disk a page of information that is identical to what is already stored there.)
+
+No redundant.
+
+### 18.2-3
+
+> Explain how to find the minimum key stored in a B-tree and how to find the predecessor of a given key stored in a B-tree.
+
 
 
