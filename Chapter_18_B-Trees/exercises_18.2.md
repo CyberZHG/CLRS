@@ -153,16 +153,31 @@ class BTree:
         def predecessor_sub(x):
             if x is None:
                 return None
-            for i in xrange(x.n):
-                if k < x.key[i]:
-                    c = predecessor_sub(x.c[i])
+            for i in xrange(x.n - 1, -1, -1):
+                if k > x.key[i]:
+                    c = predecessor_sub(x.c[i + 1])
                     if c is None:
                         return x.key[i]
-                    return min(c, x.key[i])
-            return predecessor_sub(x.c[x.n])
+                    return max(c, x.key[i])
+            return predecessor_sub(x.c[0])
         if self.root.n == 0:
             return None
         return predecessor_sub(self.root)
+
+    def successor(self, k):
+        def successor_sub(x):
+            if x is None:
+                return None
+            for i in xrange(x.n):
+                if k < x.key[i]:
+                    c = successor_sub(x.c[i])
+                    if c is None:
+                        return x.key[i]
+                    return min(c, x.key[i])
+            return successor_sub(x.c[x.n])
+        if self.root.n == 0:
+            return None
+        return successor_sub(self.root)
 ```
 
 ### 18.2-4 $$\star$$
