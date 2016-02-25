@@ -14,3 +14,5 @@
 
 > Write pseudocode for B-TREE-DELETE.
 
+$$\dots$$
+
