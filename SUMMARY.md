@@ -115,7 +115,7 @@
    * [Basic operations on B-trees](Chapter_18_B-Trees/exercises_18.2.md)
    * [Deleting a key from a B-tree](Chapter_18_B-Trees/exercises_18.3.md)
    * [Problems](Chapter_18_B-Trees/problems.md)
- * [Fibonacci Heaps](Chapter_19_Fibonacci_Heaps/README.md)
+* [Fibonacci Heaps](Chapter_19_Fibonacci_Heaps/README.md)
    * [Structure of Fibonacci heaps](Chapter_19_Fibonacci_Heaps/exercises_19.1.md)
    * [Mergeable-heap operations](Chapter_19_Fibonacci_Heaps/exercises_19.2.md)
    * [Decreasing a key and deleting a node](Chapter_19_Fibonacci_Heaps/exercises_19.3.md)
