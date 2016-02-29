@@ -11,4 +11,3 @@ Iteration: insert 3 numbers, in which at least two numbers are less than the roo
 ### 19.4-2
 
 > Suppose we generalize the cascading-cut rule to cut a node $$x$$ from its parent as soon as it loses its $$k$$th child, for some integer constant $$k$$. (The rule in Section 19.3 uses $$k = 2$$.) For what values of $$k$$ is $$D(n) = O(\lg n)$$?
-
