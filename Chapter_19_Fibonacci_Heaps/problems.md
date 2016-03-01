@@ -31,3 +31,4 @@ $$\Phi(H') = [t(H) + x.degree + c] + 2 [m(H) - c + 2]$$.
 > __*d*__. Conclude that the amortized time for PISANO-DELETE is asymptotically no better than for FIB-HEAP-DELETE, evenwhen $$x \ne H.min$$.
 
 $$O(x.degree + c) + x.degree + 4 - c = O(x.degree + c) = O(\lg n)$$ is worse than $$O(1)$$.
+
