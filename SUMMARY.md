@@ -121,6 +121,11 @@
    * [Decreasing a key and deleting a node](Chapter_19_Fibonacci_Heaps/exercises_19.3.md)
    * [Bounding the maximum degree](Chapter_19_Fibonacci_Heaps/exercises_19.4.md)
    * [Problems](Chapter_19_Fibonacci_Heaps/problems.md)
+* [van Emde Boas Trees](Chapter_20_van_Emde_Boas_Trees/README.md)
+   * [Preliminary approaches](Chapter_20_van_Emde_Boas_Trees/exercises_20.1.md)
+   * [A recursive structure](Chapter_20_van_Emde_Boas_Trees/exercises_20.2.md)
+   * [The van Emde Boas tree](Chapter_20_van_Emde_Boas_Trees/exercises_20.3.md)
+   * [Problems](Chapter_20_van_Emde_Boas_Trees/problems.md)
 
 
 * [Appendix A: Summations](Appendix_A_Summations/README.md)
