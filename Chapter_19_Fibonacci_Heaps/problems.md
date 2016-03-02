@@ -66,3 +66,30 @@ The same as the binary representation of $$n$$.
 
 > __*e*__. Professor McGee has devised a new data structure based on Fibonacci heaps. A McGee heap has the same structure as a Fibonacci heap and supports just the mergeable-heap operations. The implementations of the operations are the same as for Fibonacci heaps, except that insertion and union consolidate the root list as their last step. What are the worst-case running times of operations on McGee heaps?
 
+### 19-3 More Fibonacci-heap operations
+
+> We wish to augment a Fibonacci heap $$H$$ to support two new operations without changing the amortized running time of any other Fibonacci-heap operations.
+
+> __*a*__. The operation FIB-HEAP-CHANGE-KEY$$(H, x, k)$$ changes the key of node $$x$$ to the value $$k$$. Give an efficient implementation of FIB-HEAP-CHANGE-KEY, and analyze the amortized running time of your implementation for the cases in which $$k$$ is greater than, less than, or equal to $$x.key$$.
+
+> __*b*__. Give an efficient implementation of FIB-HEAP-PRUNE$$(H, r)$$, which deletes $$q = \min(r, H.n)$$ nodes from $$H$$. You may choose any $$q$$ nodes to delete. Analyze the amortized running time of your implementation. (Hint: You may need to modify the data structure and potential function.)
+
+### 19-4 2-3-4 heaps
+
+> Chapter 18 introduced the 2-3-4 tree, in which every internal node (other than possibly the root) has two, three, or four children and all leaves have the same depth. In this problem, we shall implement __*2-3-4 heaps*__, which support the mergeable-heap operations.
+
+> The 2-3-4 heaps differ from 2-3-4 trees in the following ways. In 2-3-4 heaps, only leaves store keys, and each leaf $$x$$ stores exactly one key in the attribute $$x.key$$. The keys in the leaves may appear in any order. Each internal node $$x$$ contains a value $$x.small$$ that is equal to the smallest key stored in any leaf in the subtree rooted at $$x$$. The root $$r$$ contains an attribute $$r.height$$ that gives the height of the tree. Finally, 2-3-4 heaps are designed to be kept in main memory, so that disk reads and writes are not needed.
+
+> Implement the following 2-3-4 heap operations. In parts (a)–(e), each operation should run in $$O(\lg n)$$ time on a 2-3-4 heap with $$n$$ elements. The UNION operation in part (f) should run in $$O(\lg n)$$ time, where $$n$$ is the number of elements in the two input heaps.
+
+> __*a*__. MINIMUM, which returns a pointer to the leaf with the smallest key.
+
+> __*b*__. DECREASE-KEY, which decreases the key of a given leaf $$x$$ to a given value $$k \le x.key$$.
+
+> __*c*__. INSERT, which inserts leaf $$x$$ with key $$k$$.
+
+> __*d*__. DELETE, which deletes a given leaf $$x$$.
+
+> __*e*__. EXTRACT-MIN, which extracts the leaf with the smallest key.
+
+> __*f*__. UNION, which unites two 2-3-4 heaps, returning a single 2-3-4 heap and destroying the input heaps.
