@@ -84,12 +84,24 @@ The same as the binary representation of $$n$$.
 
 > __*a*__. MINIMUM, which returns a pointer to the leaf with the smallest key.
 
+Choose the smallest child in each layer.
+
 > __*b*__. DECREASE-KEY, which decreases the key of a given leaf $$x$$ to a given value $$k \le x.key$$.
+
+Decrease the key and update $$x.small$$ upwards to the root.
 
 > __*c*__. INSERT, which inserts leaf $$x$$ with key $$k$$.
 
+Insert just like the insertion in B-trees and update $$x.small$$ is the inserted key is less than $$x.small$$. 
+
 > __*d*__. DELETE, which deletes a given leaf $$x$$.
+
+Delete the key and recalculate $$x.small$$ upwards. Since an internal node has at most 4 children, which is a constant, it still runs in $$O(\lg n)$$.
 
 > __*e*__. EXTRACT-MIN, which extracts the leaf with the smallest key.
 
+MINIMUM and DELETE.
+
 > __*f*__. UNION, which unites two 2-3-4 heaps, returning a single 2-3-4 heap and destroying the input heaps.
+
+Based on problem 18-2.
