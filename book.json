@@ -5,7 +5,8 @@
         "fancybox",
         "anchors",
         "disqus",
-        "github"
+        "github",
+        "rss"
     ],
     "pluginsConfig": {
         "disqus": {
