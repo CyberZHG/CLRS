@@ -1,5 +1,9 @@
 {
-    "plugins": ["mathjax", 
-                "scrollablecode",
-                "fancybox"]
+    "plugins": [
+        "mathjax",
+        "scrollablecode",
+        "fancybox",
+        "anchors"
+    ],
+    "pluginsConfig": {}
 }
