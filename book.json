@@ -3,7 +3,8 @@
         "mathjax",
         "scrollablecode",
         "fancybox",
-        "anchors"
+        "anchors",
+        "disqus"
     ],
     "pluginsConfig": {}
 }
