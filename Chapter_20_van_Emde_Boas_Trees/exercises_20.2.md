@@ -113,6 +113,18 @@ class ProtoVEB:
             for c in self.cluster:
                 c.display(space + 2)
 ```
+### 20.2-2
 
+> Write pseudocode for PROTO-VEB-DELETE. It should update the appropriate summary bit by scanning the related bits within the cluster. What is the worst-case running time of your procedure?
 
+```python
+    def delete(self, x):
+        if self.is_leaf():
+            self.a[x] = 0
+        else:
+            self.cluster[self.high(x)].delete(self.low(x))
+            if self.cluster[self.high(x)].minimum() is None:
+                self.summary.delete(self.high(x))
+```
 
+$$T(u) = 2T(\sqrt{u}) + \Theta(\lg \sqrt{u}) = \Theta(\lg u \lg \lg u)$$
