@@ -128,3 +128,41 @@ class ProtoVEB:
 ```
 
 $$T(u) = 2T(\sqrt{u}) + \Theta(\lg \sqrt{u}) = \Theta(\lg u \lg \lg u)$$
+
+### 20.2-3
+
+> Add the attribute $$n$$ to each proto-vEB structure, giving the number of elements currently in the set it represents, and write pseudocode for PROTO-VEB-DELETE that uses the attribute $$n$$ to decide when to reset summary bits to 0. What is the worst-case running time of your procedure? What other procedures need to change because of the new attribute? Do these changes affect their running times?
+
+```python
+    def insert(self, x):
+        if self.is_leaf():
+            if self.a[x] == 0:
+                self.a[x] = 1
+                self.n += 1
+                return True
+            return False
+        new_elem = self.cluster[self.high(x)].insert(self.low(x))
+        if new_elem:
+            self.n += 1
+        self.summary.insert(self.high(x))
+        return new_elem
+
+    def delete(self, x):
+        if self.is_leaf():
+            if self.a[x] == 1:
+                self.a[x] = 0
+                self.n -= 1
+                return True
+            return False
+        del_elem = self.cluster[self.high(x)].delete(self.low(x))
+        if del_elem:
+            self.n -= 1
+        if self.cluster[self.high(x)].n == 0:
+            self.summary.delete(self.high(x))
+        return del_elem
+```
+
+Worst-case: $$T(u) = 2T(\sqrt{u}) + O(1) = \Theta(\lg n)$$
+
+
+
