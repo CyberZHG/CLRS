@@ -11,6 +11,9 @@
         "disqus": {
             "shortName": "clrssolution",
             "useIdentifier": false
+        },
+        "github": {
+            "url": "https://github.com/CyberZHG/CLRS-Solution"
         }
     }
 }
