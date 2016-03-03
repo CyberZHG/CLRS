@@ -251,13 +251,6 @@ class ProblemTestCase(unittest.TestCase):
                     if v > i:
                         expect = v
                         break
-                if succ != expect:
-                    veb.display()
-                    print i
-                    print a
-                    print b
-                    print c
-                    print d
                 self.assertEqual(succ, expect)
                 pred = veb.predecessor(i)
                 expect = None
