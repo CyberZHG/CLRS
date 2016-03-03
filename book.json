@@ -3,10 +3,8 @@
         "mathjax",
         "scrollablecode",
         "fancybox",
-        "anchors",
         "disqus",
         "github",
-        "-rss",
         "search"
     ],
     "pluginsConfig": {
