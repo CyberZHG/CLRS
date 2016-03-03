@@ -7,6 +7,8 @@ GitHub Source: [https://github.com/CyberZHG/CLRS-Solution](https://github.com/Cy
 
 GitBook Page: [https://cyberzhg.gitbooks.io/clrs_solution/content/](https://cyberzhg.gitbooks.io/clrs_solution/content/)
 
-__Trying__ to solve the exercises and problems in __*Introduction to Algorithms*__ 3rd edition.
+__Trying__ to solve the exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd edition.
 
+The implementations should pass all the test cases in both Python 2.x and Python 3.x.
 
+The visualizations are written in [Processing 3](https://processing.org/).
