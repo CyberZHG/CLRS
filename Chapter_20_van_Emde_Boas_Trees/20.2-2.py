@@ -34,9 +34,9 @@ class ProtoVEB:
 
     def minimum(self):
         if self.is_leaf():
-            if self.a[0]:
+            if self.a[0] > 0:
                 return 0
-            if self.a[1]:
+            if self.a[1] > 0:
                 return 1
             return None
         min_idx = self.summary.minimum()
@@ -47,9 +47,9 @@ class ProtoVEB:
 
     def maximum(self):
         if self.is_leaf():
-            if self.a[1]:
+            if self.a[1] > 0:
                 return 1
-            if self.a[0]:
+            if self.a[0] > 0:
                 return 0
             return None
         max_idx = self.summary.maximum()
