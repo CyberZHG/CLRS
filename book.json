@@ -6,7 +6,7 @@
         "anchors",
         "disqus",
         "github",
-        "rss"
+        "-rss"
     ],
     "pluginsConfig": {
         "disqus": {
