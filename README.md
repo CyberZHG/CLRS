@@ -9,6 +9,6 @@ GitBook Page: [https://cyberzhg.gitbooks.io/clrs_solution/content/](https://cybe
 
 __Trying__ to solve the exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd edition.
 
-The implementations should pass all the test cases in both Python 2.x and Python 3.x.
+The implementations should pass PEP8 and all the test cases in both Python 2.x and Python 3.x.
 
 The visualizations are written in [Processing 3](https://processing.org/).
