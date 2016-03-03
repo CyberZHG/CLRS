@@ -143,8 +143,9 @@ class ProblemTestCase(unittest.TestCase):
             for i in xrange(256):
                 if c[i] > 0:
                     d.append(i)
-            self.assertEqual(veb.minimum(), d[0])
-            self.assertEqual(veb.maximum(), d[-1])
+            if len(d) > 0:
+                self.assertEqual(veb.minimum(), d[0])
+                self.assertEqual(veb.maximum(), d[-1])
             for i in xrange(256):
                 succ = veb.successor(i)
                 expect = None
