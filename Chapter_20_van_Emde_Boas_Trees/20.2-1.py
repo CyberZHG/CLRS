@@ -96,14 +96,14 @@ class ProtoVEB:
     def display(self, space=0, summary=False):
         if self.is_leaf():
             if summary:
-                print ' ' * space + 'S ' + str(self.u) + ' ' + str(self.a)
+                print(' ' * space + 'S ' + str(self.u) + ' ' + str(self.a))
             else:
-                print ' ' * space + 'C ' + str(self.u) + ' ' + str(self.a)
+                print(' ' * space + 'C ' + str(self.u) + ' ' + str(self.a))
         else:
             if summary:
-                print ' ' * space + 'S ' + str(self.u)
+                print(' ' * space + 'S ' + str(self.u))
             else:
-                print ' ' * space + 'C ' + str(self.u)
+                print(' ' * space + 'C ' + str(self.u))
             self.summary.display(space + 2, True)
             for c in self.cluster:
                 c.display(space + 2)
