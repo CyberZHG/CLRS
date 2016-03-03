@@ -39,9 +39,9 @@ class ProtoVEB:
 
     def minimum(self):
         if self.is_leaf():
-            if self.a[0]:
+            if self.a[0] > 0:
                 return 0
-            if self.a[1]:
+            if self.a[1] > 0:
                 return 1
             return None
         min_idx = self.summary.minimum()
@@ -52,9 +52,9 @@ class ProtoVEB:
 
     def maximum(self):
         if self.is_leaf():
-            if self.a[1]:
+            if self.a[1] > 0:
                 return 1
-            if self.a[0]:
+            if self.a[0] > 0:
                 return 0
             return None
         max_idx = self.summary.maximum()
@@ -164,5 +164,263 @@ $$T(u) = 2T(\sqrt{u}) + \Theta(\lg \sqrt{u}) = \Theta(\lg u \lg \lg u)$$
 
 Worst-case: $$T(u) = 2T(\sqrt{u}) + O(1) = \Theta(\lg n)$$
 
+### 20.2-4
 
+> Modify the proto-vEB structure to support duplicate keys.
+
+```python
+class ProtoVEB:
+    def __init__(self, u):
+        self.u = u
+        self.n = 0
+        self.sqrt = int(math.sqrt(u))
+        if self.is_leaf():
+            self.a = [0, 0]
+        else:
+            self.summary = ProtoVEB(self.sqrt)
+            self.cluster = []
+            for _ in xrange(self.sqrt):
+                self.cluster.append(ProtoVEB(self.sqrt))
+
+    def is_leaf(self):
+        return self.u == 2
+
+    def high(self, x):
+        return x / self.sqrt
+
+    def low(self, x):
+        return x % self.sqrt
+
+    def index(self, x, y):
+        return x * self.sqrt + y
+
+    def member(self, x):
+        if self.is_leaf():
+            return self.a[x]
+        return self.cluster[self.high(x)].member(self.low(x))
+
+    def minimum(self):
+        if self.is_leaf():
+            if self.a[0] > 0:
+                return 0
+            if self.a[1] > 0:
+                return 1
+            return None
+        min_idx = self.summary.minimum()
+        if min_idx is None:
+            return None
+        offset = self.cluster[min_idx].minimum()
+        return self.index(min_idx, offset)
+
+    def maximum(self):
+        if self.is_leaf():
+            if self.a[1] > 0:
+                return 1
+            if self.a[0] > 0:
+                return 0
+            return None
+        max_idx = self.summary.maximum()
+        if max_idx is None:
+            return None
+        offset = self.cluster[max_idx].maximum()
+        return self.index(max_idx, offset)
+
+    def predecessor(self, x):
+        if self.is_leaf():
+            if self.a[0] > 0 and x == 1:
+                return 0
+            return None
+        offset = self.cluster[self.high(x)].predecessor(self.low(x))
+        if offset is not None:
+            return self.index(self.high(x), offset)
+        pred_idx = self.summary.predecessor(self.high(x))
+        if pred_idx is None:
+            return None
+        offset = self.cluster[pred_idx].maximum()
+        return self.index(pred_idx, offset)
+
+    def successor(self, x):
+        if self.is_leaf():
+            if x == 0 and self.a[1] > 0:
+                return 1
+            return None
+        offset = self.cluster[self.high(x)].successor(self.low(x))
+        if offset is not None:
+            return self.index(self.high(x), offset)
+        succ_idx = self.summary.successor(self.high(x))
+        if succ_idx is None:
+            return None
+        offset = self.cluster[succ_idx].minimum()
+        return self.index(succ_idx, offset)
+
+    def insert(self, x):
+        self.n += 1
+        if self.is_leaf():
+            self.a[x] += 1
+        else:
+            self.cluster[self.high(x)].insert(self.low(x))
+            self.summary.insert(self.high(x))
+
+    def delete(self, x):
+        if self.is_leaf():
+            if self.a[x] > 0:
+                self.a[x] -= 1
+                self.n -= 1
+                return True
+            return False
+        del_elem = self.cluster[self.high(x)].delete(self.low(x))
+        if del_elem:
+            self.n -= 1
+            self.summary.delete(self.high(x))
+        return del_elem
+```
+
+### 20.2-5
+
+> Modify the proto-vEB structure to support keys that have associated satellite data.
+
+```python
+class ProtoVEB:
+    def __init__(self, u):
+        self.u = u
+        self.n = 0
+        self.sqrt = int(math.sqrt(u))
+        if self.is_leaf():
+            self.a = [0, 0]
+            self.data = [None, None]
+        else:
+            self.summary = ProtoVEB(self.sqrt)
+            self.cluster = []
+            for _ in xrange(self.sqrt):
+                self.cluster.append(ProtoVEB(self.sqrt))
+
+    def is_leaf(self):
+        return self.u == 2
+
+    def high(self, x):
+        return x / self.sqrt
+
+    def low(self, x):
+        return x % self.sqrt
+
+    def index(self, x, y):
+        return x * self.sqrt + y
+
+    def member(self, x):
+        if self.is_leaf():
+            return self.a[x]
+        return self.cluster[self.high(x)].member(self.low(x))
+
+    def get_data(self, x):
+        if self.is_leaf():
+            return self.data[x]
+        return self.cluster[self.high(x)].get_data(self.low(x))
+
+    def minimum(self):
+        if self.is_leaf():
+            if self.a[0] == 1:
+                return 0
+            if self.a[1] == 1:
+                return 1
+            return None
+        min_idx = self.summary.minimum()
+        if min_idx is None:
+            return None
+        offset = self.cluster[min_idx].minimum()
+        return self.index(min_idx, offset)
+
+    def maximum(self):
+        if self.is_leaf():
+            if self.a[1] == 1:
+                return 1
+            if self.a[0] == 1:
+                return 0
+            return None
+        max_idx = self.summary.maximum()
+        if max_idx is None:
+            return None
+        offset = self.cluster[max_idx].maximum()
+        return self.index(max_idx, offset)
+
+    def predecessor(self, x):
+        if self.is_leaf():
+            if self.a[0] == 1 and x == 1:
+                return 0
+            return None
+        offset = self.cluster[self.high(x)].predecessor(self.low(x))
+        if offset is not None:
+            return self.index(self.high(x), offset)
+        pred_idx = self.summary.predecessor(self.high(x))
+        if pred_idx is None:
+            return None
+        offset = self.cluster[pred_idx].maximum()
+        return self.index(pred_idx, offset)
+
+    def successor(self, x):
+        if self.is_leaf():
+            if x == 0 and self.a[1] == 1:
+                return 1
+            return None
+        offset = self.cluster[self.high(x)].successor(self.low(x))
+        if offset is not None:
+            return self.index(self.high(x), offset)
+        succ_idx = self.summary.successor(self.high(x))
+        if succ_idx is None:
+            return None
+        offset = self.cluster[succ_idx].minimum()
+        return self.index(succ_idx, offset)
+
+    def insert(self, x, data):
+        if self.is_leaf():
+            if self.a[x] == 0:
+                self.a[x] = 1
+                self.data[x] = data
+                self.n += 1
+                return True
+            return False
+        new_elem = self.cluster[self.high(x)].insert(self.low(x), data)
+        if new_elem:
+            self.n += 1
+        self.summary.insert(self.high(x), None)
+        return new_elem
+
+    def delete(self, x):
+        if self.is_leaf():
+            if self.a[x] == 1:
+                self.a[x] = 0
+                self.data[x] = None
+                self.n -= 1
+                return True
+            return False
+        del_elem = self.cluster[self.high(x)].delete(self.low(x))
+        if del_elem:
+            self.n -= 1
+        if self.cluster[self.high(x)].n == 0:
+            self.summary.delete(self.high(x))
+        return del_elem
+```
+
+### 20.2-6
+
+> Write pseudocode for a procedure that creates a proto-vEB$$(u)$$ structure.
+
+See exercise 20.2-1.
+
+### 20.2-7
+
+> Argue that if line 9 of PROTO-VEB-MINIMUM is executed, then the proto-vEB structure is empty.
+
+Obviously.
+
+### 20.2-8
+
+> Suppose that we designed a proto-vEB structure in which each _cluster_ array had only $$u^{1/4}$$ elements. What would the running times of each operation be?
+
+There are $$u^{3/4}$$ clusters in each proto-vEB.
+
+MEMBER/INSRT: $$T(u) = T(u^{1/4}) + O(1) = \Theta(\lg \log_4 u) = \Theta(\lg \lg u)$$.
+
+MINIMUM/MAXIMUM: $$T(u) = T(u^{1/4}) + T(u^{3/4}) + O(1) = \Theta(\lg u)$$.
+
+SUCCESSOR/PREDECESSOR/DELETE: $$T(u) = T(u^{1/4}) + T(u^{3/4}) + \Theta(\lg u^{1/4}) = \Theta(\lg u \lg \lg u)$$.
 
