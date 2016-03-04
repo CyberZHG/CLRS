@@ -28,3 +28,34 @@ P(u) &=& (\sqrt{u} + 1) P(\sqrt{u}) + \Theta(\sqrt{u}) \\
 &\le& cu
 \end{array}
 $$
+> In order to reduce the space requirements, let us define a __*reduced-space van Emde Boas tree*__, or __*RS-vEB tree*__, as a __*vEB tree*__ $$V$$ but with the following changes:
+
+> * The attribute $$V.cluster$$, rather than being stored as a simple array of pointers to vEB trees with universe size $$\sqrt{u}$$, is a hash table (see Chapter 11) stored as a dynamic table (see Section 17.4). Corresponding to the array version of $$V.cluster$$, the hash table stores pointers to RS-vEB trees with universe size $$\sqrt{u}$$. To find the $$i$$th cluster, we look up the key $$i$$ in the hash table, so that we can find the $$i$$th cluster by a single search in the hash table.
+> * The hash table stores only pointers to nonempty clusters. A search in the hash table for an empty cluster returns NIL, indicating that the cluster is empty.
+> * The attribute $$V.summary$$ is NIL if all clusters are empty. Otherwise, $$V.summary$$ points to an RS-vEB tree with universe size $$\sqrt{u}$$.
+
+> Because the hash table is implemented with a dynamic table, the space it requires is proportional to the number of nonempty clusters.
+
+> When we need to insert an element into an empty RS-vEB tree, we create the RS-vEB tree by calling the following procedure, where the parameter u is the universe size of the RS-vEB tree:
+
+> ```
+CREATE-NEW-RS-VEB-TREE(u)
+1  allocate a new vEB tree V
+2  V.u = u
+3  V.min = NIL
+4  V.max = NIL
+5  V.summary = NIL
+6  create V.cluster as an empty dynamic hash table
+7  return V
+```
+
+> __*c*__. Modify the VEB-TREE-INSERT procedure to produce pseudocode for the procedure RS-VEB-TREE-INSERT$$(V, x)$$, which inserts $$x$$ into the RS-vEB tree $$V$$, calling CREATE-NEW-RS-VEB-TREE as appropriate.
+
+> __*d*__. Modify the VEB-TREE-SUCCESSOR procedure to produce pseudocode for the procedure RS-VEB-TREE-SUCCESSOR$$(V, x)$$, which returns the successor of $$x$$ in RS-vEB tree $$V$$ , or NIL if $$x$$ has no successor in $$V$$.
+
+> __*e*__. Prove that, under the assumption of simple uniform hashing, your RS-VEBTREE-INSERT and RS-VEB-TREE-SUCCESSOR procedures run in $$O(\lg \lg u)$$ expected time.
+
+> __*f*__. Assuming that elements are never deleted from a vEB tree, prove that the space requirement for the RS-vEB tree structure is $$O(n)$$, where $$n$$ is the number of elements actually stored in the RS-vEB tree.
+
+> __*g*__. RS-vEB trees have another advantage over vEB trees: they require less time to create. How long does it take to create an empty RS-vEB tree?
+
