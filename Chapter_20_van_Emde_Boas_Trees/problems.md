@@ -51,11 +51,61 @@ CREATE-NEW-RS-VEB-TREE(u)
 
 > __*c*__. Modify the VEB-TREE-INSERT procedure to produce pseudocode for the procedure RS-VEB-TREE-INSERT$$(V, x)$$, which inserts $$x$$ into the RS-vEB tree $$V$$, calling CREATE-NEW-RS-VEB-TREE as appropriate.
 
-> __*d*__. Modify the VEB-TREE-SUCCESSOR procedure to produce pseudocode for the procedure RS-VEB-TREE-SUCCESSOR$$(V, x)$$, which returns the successor of $$x$$ in RS-vEB tree $$V$$ , or NIL if $$x$$ has no successor in $$V$$.
+```python
+    def get_cluster(self, x):
+        if self.cluster[x] is None:
+            self.cluster[x] = VanEmdeBoasTree(self.sqrt_l)
+        return self.cluster[x]
+
+    def get_summary(self):
+        if self.summary is None:
+            self.summary = VanEmdeBoasTree(self.sqrt_h)
+        return self.summary
+        
+    def insert(self, x):
+        if self.min is None:
+            self.insert_empty(x)
+        else:
+            if x < self.min:
+                x, self.min = self.min, x
+            if not self.is_leaf():
+                if self.get_cluster(self.high(x)).minimum() is None:
+                    self.get_summary().insert(self.high(x))
+                    self.get_cluster(self.high(x)).insert_empty(self.low(x))
+                else:
+                    self.get_cluster(self.high(x)).insert(self.low(x))
+            if x > self.max:
+                self.max = x
+```
+
+> __*d*__. Modify the VEB-TREE-SUCCESSOR procedure to produce pseudocode for the procedure RS-VEB-TREE-SUCCESSOR$$(V, x)$$, which returns the successor of $$x$$ in RS-vEB tree $$V$$, or NIL if $$x$$ has no successor in $$V$$.
+
+```python
+    def successor(self, x):
+        if self.is_leaf():
+            if x == 0 and self.max == 1:
+                return 1
+            return None
+        if self.min is not None and x < self.min:
+            return self.min
+        max_low = self.get_cluster(self.high(x)).maximum()
+        if max_low is not None and self.low(x) < max_low:
+            offset = self.get_cluster(self.high(x)).successor(self.low(x))
+            return self.index(self.high(x), offset)
+        succ_cluster = self.get_summary().successor(self.high(x))
+        if succ_cluster is None:
+            return None
+        offset = self.cluster[succ_cluster].minimum()
+        return self.index(succ_cluster, offset)
+```
 
 > __*e*__. Prove that, under the assumption of simple uniform hashing, your RS-VEBTREE-INSERT and RS-VEB-TREE-SUCCESSOR procedures run in $$O(\lg \lg u)$$ expected time.
+
+The hashing tasks about $$\Theta(1)$$ time, thus the procedures run in $$O(\lg \lg u)$$.
 
 > __*f*__. Assuming that elements are never deleted from a vEB tree, prove that the space requirement for the RS-vEB tree structure is $$O(n)$$, where $$n$$ is the number of elements actually stored in the RS-vEB tree.
 
 > __*g*__. RS-vEB trees have another advantage over vEB trees: they require less time to create. How long does it take to create an empty RS-vEB tree?
+
+$$\Theta(\sqrt{u})$$ to create the hash table.
 
