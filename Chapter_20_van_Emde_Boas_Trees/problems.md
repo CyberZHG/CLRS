@@ -31,7 +31,9 @@ $$
 > In order to reduce the space requirements, let us define a __*reduced-space van Emde Boas tree*__, or __*RS-vEB tree*__, as a __*vEB tree*__ $$V$$ but with the following changes:
 
 > * The attribute $$V.cluster$$, rather than being stored as a simple array of pointers to vEB trees with universe size $$\sqrt{u}$$, is a hash table (see Chapter 11) stored as a dynamic table (see Section 17.4). Corresponding to the array version of $$V.cluster$$, the hash table stores pointers to RS-vEB trees with universe size $$\sqrt{u}$$. To find the $$i$$th cluster, we look up the key $$i$$ in the hash table, so that we can find the $$i$$th cluster by a single search in the hash table.
+
 > * The hash table stores only pointers to nonempty clusters. A search in the hash table for an empty cluster returns NIL, indicating that the cluster is empty.
+
 > * The attribute $$V.summary$$ is NIL if all clusters are empty. Otherwise, $$V.summary$$ points to an RS-vEB tree with universe size $$\sqrt{u}$$.
 
 > Because the hash table is implemented with a dynamic table, the space it requires is proportional to the number of nonempty clusters.
@@ -109,3 +111,39 @@ The hashing tasks about $$\Theta(1)$$ time, thus the procedures run in $$O(\lg \
 
 $$\Theta(\sqrt{u})$$ to create the hash table.
 
+### 20-2 y-fast tries
+
+> This problem investigates D. Willard's "y-fast tries" which, like van Emde Boas trees, perform each of the operations MEMBER, MINIMUM, MAXIMUM, PREDECESSOR, and SUCCESSOR on elements drawn from a universe with size $$u$$ in $$O(\lg\lg u)$$ worst-case time. The INSERT and DELETE operations take $$O(\lg\lg u)$$ amortized time. Like reduced-space van Emde Boas trees (see Problem 20-1), yfast tries use only $$O(n)$$ space to store $$n$$ elements. The design of y-fast tries relies on perfect hashing (see Section 11.5).
+
+> As a preliminary structure, suppose that we create a perfect hash table containing not only every element in the dynamic set, but every prefix of the binary representation of every element in the set. For example, if $$u = 16$$, so that $$\lg u = 4$$, and $$x = 13$$ is in the set, then because the binary representation of $$13$$ is $$1101$$, the perfect hash table would contain the strings $$1$$, $$11$$, $$110$$, and $$1101$$. In addition to the hash table, we create a doubly linked list of the elements currently in the set, in increasing order.
+
+> __*a*__. How much space does this structure require?
+
+$$O(u)$$
+
+> __*b*__. Show how to perform the MINIMUM and MAXIMUM operations in $$O(1)$$ time; the MEMBER, PREDECESSOR, and SUCCESSOR operations in $$O(\lg \lg u)$$ time; and the INSERT and DELETE operations in $$O(\lg u)$$ time.
+
+> To reduce the space requirement to $$O(n)$$, we make the following changes to the data structure:
+
+> * We cluster the $$n$$ elements into $$n / \lg u$$ groups of size $$\lg u$$. (Assume for now that $$\lg u$$ divides $$n$$.) The first group consists of the $$\lg u$$ smallest elements in the set, the second group consists of the next $$\lg u$$ smallest elements, and so on.
+
+> * We designate a "representative" value for each group. The representative of the $$i$$th group is at least as large as the largest element in the $$i$$th group, and it is smaller than every element of the $$(i+1)$$st group. (The representative of the last group can be the maximum possible element $$u - 1$$.) Note that a representative might be a value not currently in the set.
+
+> * We store the $$\lg u$$ elements of each group in a balanced binary search tree, such as a red-black tree. Each representative points to the balanced binary search tree for its group, and each balanced binary search tree points to its group's representative.
+
+> * The perfect hash table stores only the representatives, which are also stored in a doubly linked list in increasing order.
+
+> We call this structure a __*y-fast trie*__.
+
+> __*c*__. Show that a y-fast trie requires only $$O(n)$$ space to store $$n$$ elements.
+ 
+> __*d*__. Show how to perform the MINIMUM and MAXIMUM operations in $$O(\lg lg u)$$ time with a y-fast trie.
+
+> __*e*__. Show how to perform the MEMBER operation in $$O(\lg \lg u)$$ time.
+
+> __*f*__. Show how to perform the PREDECESSOR and SUCCESSOR operations in
+$$O(\lg \lg u)$$ time.
+
+> __*g*__. Explain why the INSERT and DELETE operations take $$\Omega(\lg \lg u)$$ time.
+
+> __*h*__. Show how to relax the requirement that each group in a y-fast trie has exactly $$\lg u$$ elements to allow INSERT and DELETE to run in $$O(\lg \lg u)$$ amortized time without affecting the asymptotic running times of the other operations.
