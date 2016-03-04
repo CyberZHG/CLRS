@@ -119,7 +119,7 @@ $$\Theta(\sqrt{u})$$ to create the hash table.
 
 > __*a*__. How much space does this structure require?
 
-$$O(u)$$
+$$O(n \lg u)$$.
 
 > __*b*__. Show how to perform the MINIMUM and MAXIMUM operations in $$O(1)$$ time; the MEMBER, PREDECESSOR, and SUCCESSOR operations in $$O(\lg \lg u)$$ time; and the INSERT and DELETE operations in $$O(\lg u)$$ time.
 
@@ -136,6 +136,8 @@ $$O(u)$$
 > We call this structure a __*y-fast trie*__.
 
 > __*c*__. Show that a y-fast trie requires only $$O(n)$$ space to store $$n$$ elements.
+
+The doubly linked list has less than $$n$$ elements, while the binary search trees contains $$n$$ nodes, thus a y-fast trie requires $$O(n)$$ space.
  
 > __*d*__. Show how to perform the MINIMUM and MAXIMUM operations in $$O(\lg \lg u)$$ time with a y-fast trie.
 
@@ -155,3 +157,5 @@ SUCCESSOR: Find the smallest representative greater than $$k$$ with binary searc
 Same as __*e*__, we need to find the cluster in $$\Theta(\lg \lg u)$$, then the operations in the binary search tree takes $$O(\lg \lg u)$$.
 
 > __*h*__. Show how to relax the requirement that each group in a y-fast trie has exactly $$\lg u$$ elements to allow INSERT and DELETE to run in $$O(\lg \lg u)$$ amortized time without affecting the asymptotic running times of the other operations.
+
+Fixed representatives.
