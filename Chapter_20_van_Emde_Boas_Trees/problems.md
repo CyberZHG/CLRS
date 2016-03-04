@@ -137,13 +137,21 @@ $$O(u)$$
 
 > __*c*__. Show that a y-fast trie requires only $$O(n)$$ space to store $$n$$ elements.
  
-> __*d*__. Show how to perform the MINIMUM and MAXIMUM operations in $$O(\lg lg u)$$ time with a y-fast trie.
+> __*d*__. Show how to perform the MINIMUM and MAXIMUM operations in $$O(\lg \lg u)$$ time with a y-fast trie.
+
+MINIMUM: Find the minimum representative in the doubly linked list in $$\Theta(1)$$, then find the minimum element in the binary search tree in $$O(\lg \lg u)$$.
 
 > __*e*__. Show how to perform the MEMBER operation in $$O(\lg \lg u)$$ time.
+
+Find the smallest representative greater than $$k$$ with binary searching in $$\Theta(\lg \lg u)$$, find the element in the binary search tree in $$O(\lg \lg u)$$.
 
 > __*f*__. Show how to perform the PREDECESSOR and SUCCESSOR operations in
 $$O(\lg \lg u)$$ time.
 
+SUCCESSOR: Find the smallest representative greater than $$k$$ with binary searching in $$\Theta(\lg \lg u)$$, then find whether there is an element in this cluster that is larger than $$k$$ in $$O(\lg \lg u)$$. If there is on element greater than $$k$$ in the representative's cluster, then the successor is in the next representative's cluster, we can locate the next representative with the doubly linked list in $$\Theta(1)$$.
+
 > __*g*__. Explain why the INSERT and DELETE operations take $$\Omega(\lg \lg u)$$ time.
+
+Same as __*e*__, we need to find the cluster in $$\Theta(\lg \lg u)$$, then the operations in the binary search tree takes $$O(\lg \lg u)$$.
 
 > __*h*__. Show how to relax the requirement that each group in a y-fast trie has exactly $$\lg u$$ elements to allow INSERT and DELETE to run in $$O(\lg \lg u)$$ amortized time without affecting the asymptotic running times of the other operations.
