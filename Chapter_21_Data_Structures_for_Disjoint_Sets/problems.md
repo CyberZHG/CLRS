@@ -36,7 +36,41 @@ Greedy.
 
 > __*c*__. Describe how to implement OFF-LINE-MINIMUM efficiently with a disjoint-set data structure. Give a tight bound on the worst-case running time of your implementation.
 
-Disjoint-set forest.
+```python
+class DisjointSetForest:
+    def __init__(self, n):
+        self.p = list(range(n))
+
+    def union(self, x, y):
+        self.link(self.find_set(x), self.find_set(y))
+
+    def link(self, x, y):
+        self.p[x] = y
+
+    def find_set(self, x):
+        if x != self.p[x]:
+            self.p[x] = self.find_set(self.p[x])
+        return self.p[x]
+
+
+def off_line_minimum(q, n):
+    m = len([0 for v in q if v == 'E'])
+    ds = DisjointSetForest(m + 1)
+    pos = [-1] * (n + 1)
+    i = 0
+    for v in q:
+        if v == 'E':
+            i += 1
+        else:
+            pos[v] = i
+    extracted = [None] * m
+    for i in xrange(1, n + 1):
+        j = ds.find_set(pos[i])
+        if j < m:
+            extracted[j] = i
+            ds.link(j, j + 1)
+    return extracted
+```
 
 ### 21-2 Depth determination
 
