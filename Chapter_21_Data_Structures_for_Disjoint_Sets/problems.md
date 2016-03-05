@@ -72,15 +72,15 @@ $$m/3$$ MAKE-TREE, $$m/3$$ GRAFT to make a chain, $$m/3$$ FIND-DEPTH.
 
 > ```
 LCA(u)
-1   MAKE-SET(u)
-2   FIND-SET(u).ancestor = u
-3   for each child v of u in T
-4        LCA(v)
-5        UNION(u, v)
-6        FIND-SET(u).ancestor = u
-7   u.color = BLACK
-8   for each node v such that {u, v} \in P
-9        if v.color == BLACK
+ 1  MAKE-SET(u)
+ 2  FIND-SET(u).ancestor = u
+ 3  for each child v of u in T
+ 4       LCA(v)
+ 5       UNION(u, v)
+ 6       FIND-SET(u).ancestor = u
+ 7  u.color = BLACK
+ 8  for each node v such that {u, v} \in P
+ 9       if v.color == BLACK
 10            print "The least common ancestor of"
                     u "and" v "is" FIND-SET(v).ancestor
 ```
