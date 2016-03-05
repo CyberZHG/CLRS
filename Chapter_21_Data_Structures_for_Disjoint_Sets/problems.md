@@ -32,4 +32,10 @@ OFF-LINE-MINIMUM(m, n)
 
 > __*b*__. Argue that the array extracted returned by OFF-LINE-MINIMUM is correct.
 
+Greedy.
+
 > __*c*__. Describe how to implement OFF-LINE-MINIMUM efficiently with a disjoint-set data structure. Give a tight bound on the worst-case running time of your implementation.
+
+Disjoint-set forest.
+
+
