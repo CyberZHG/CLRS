@@ -92,11 +92,46 @@ $$m/3$$ MAKE-TREE, $$m/3$$ GRAFT to make a chain, $$m/3$$ FIND-DEPTH.
 
 > __*b*__. Give an implementation of MAKE-TREE.
 
+```python
+class TreeNode:
+    def __init__(self):
+        self.d = 0
+        self.p = self
+        self.rank = 0
+```
+
 > __*c*__. Show how to modify FIND-SET to implement FIND-DEPTH. Your implementation should perform path compression, and its running time should be linear in the length of the find path. Make sure that your implementation updates pseudodistances correctly.
+
+```python
+def find_depth(v):
+    if v == v.p:
+        return (v.d, v)
+    (pd, p) = find_depth(v.p)
+    d = v.d + pd
+    v.d = d - p.d
+    v.p = p
+    return (d, p)
+```
 
 > __*d*__. Show how to implement GRAFT$$(r, v)$$, which combines the sets containing $$r$$ and $$v$$, by modifying the UNION and LINK procedures. Make sure that your implementation updates pseudodistances correctly. Note that the root of a set $$S_i$$ is not necessarily the root of the corresponding tree $$T_i$$.
 
+```python
+def graft(r, v):
+    (vd, vp) = find_depth(v)
+    if r.rank <= vp.rank:
+        r.d = vd + 1
+        r.p = vp
+        if r.rank == vp.rank:
+            vp.rank += 1
+    else:
+        r.d = vd + 1
+        vp.d = vp.d - r.d
+        vp.p = r
+```
+
 > __*e*__. Give a tight bound on the worst-case running time of a sequence of $$m$$ MAKE-TREE, FIND-DEPTH, and GRAFT operations, $$n$$ of which are MAKE-TREE operations.
+
+$$O(m\alpha(n))$$.
 
 ### 21-3 Tarjan's off-line least-common-ancestors algorithm
 
