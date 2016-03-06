@@ -156,9 +156,17 @@ LCA(u)
 
 > __*a*__. Argue that line 10 executes exactly once for each pair $$\{u, v\} \in P$$.
 
+Each node is visited exactly once, if $$u$$ is visited before $$v$$, then $$v$$ is WHITE, line 10 will not be executed.
+
 > __*b*__. Argue that at the time of the call LCA$$(u)$$, the number of sets in the disjoint-set data structure equals the depth of $$u$$ in $$T$$.
+
+LCA(v) increase the number of sets by 1, UNION(u, v) decrease the number of sets by 1.
 
 > __*c*__. Prove that LCA correctly prints the least common ancestor of $$u$$ and $$v$$ for each pair $$\{u, v\} \in P$$.
 
+The visited nodes always point to the current chain of search path.
+
 > __*d*__. Analyze the running time of LCA, assuming that we use the implementation of the disjoint-set data structure in Section 21.3.
+
+$$O(n^2 \alpha(n))$$
 
