@@ -67,5 +67,5 @@ $$
 
 > Argue that for any constant $$0 < \alpha \le 1/2$$, the probability is approximately $$1 - 2\alpha$$, that on a random input array, PARTITION produces a split more balanced than $$1-\alpha$$ to $$\alpha$$.
 
-In order to make a bad partition, the pivot should belong to either the largest $$\alpha n$$ elements or the smallest $$\alpha n$$ elements. Thus a better partition is approximately $$\displaystyle \frac{n-2\alpha n}{n} = 1 - 2\alpha$$.
+In order to make a partition which is less balanced, the pivot should belong to either the largest $$\alpha n$$ elements or the smallest $$\alpha n$$ elements. Thus a better partition is approximately $$\displaystyle \frac{n-2\alpha n}{n} = 1 - 2\alpha$$.
 
