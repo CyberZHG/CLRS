@@ -1,12 +1,11 @@
 {
     "plugins": [
-        "-mathjax",
+        "mathjax",
         "scrollablecode",
         "fancybox",
         "disqus",
         "github",
-        "search",
-        "katex"
+        "search"
     ],
     "pluginsConfig": {
         "disqus": {
