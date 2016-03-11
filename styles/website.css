@@ -1,11 +1,20 @@
 /* CSS for website */
 
+.book .book-body .page-wrapper .page-inner section.normal blockquote, .book .book-body .page-wrapper .page-inner section.normal dl, .book .book-body .page-wrapper .page-inner section.normal ol, .book .book-body .page-wrapper .page-inner section.normal p, .book .book-body .page-wrapper .page-inner section.normal table, .book .book-body .page-wrapper .page-inner section.normal ul {
+    margin-top: 0;
+    margin-bottom: .85em;
+    text-shadow: 0px 0px 1px #b0b0b0;
+    font-family: SANS-SERIF;
+}
+
 .book .book-body .page-wrapper .page-inner section.normal blockquote {
     margin: 0 0 .85em;
-    padding: 0 15px;
-    color: #858585;
-    border-left: 4px solid #e5e5e5;
-    background: #f5f5f5;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    color: #656565;
+    border-left: 4px solid #959595;
+    background: #e5e5e5;
 }
 
 .book .book-body .page-wrapper .page-inner section.normal pre .hljs-keyword, .book .book-body .page-wrapper .page-inner section.normal code .hljs-keyword {
