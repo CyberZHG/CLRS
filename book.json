@@ -1,6 +1,6 @@
 {
     "plugins": [
-        "mathjax",
+        "-mathjax",
         "scrollablecode",
         "fancybox",
         "disqus",
