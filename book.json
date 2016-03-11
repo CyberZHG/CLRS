@@ -5,8 +5,7 @@
         "fancybox",
         "disqus",
         "github",
-        "search",
-        "customtheme"
+        "search"
     ],
     "pluginsConfig": {
         "disqus": {
@@ -15,9 +14,6 @@
         },
         "github": {
             "url": "https://github.com/CyberZHG/CLRS-Solution"
-        },
-        "customtheme": {
-            "css": ["styles/website.css"]
         }
     }
 }
