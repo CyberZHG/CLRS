@@ -17,7 +17,7 @@
             "url": "https://github.com/CyberZHG/CLRS-Solution"
         },
         "customtheme": {
-            "css": ['styles/website.css'],
+            "css": ["styles/website.css"]
         }
     }
 }
