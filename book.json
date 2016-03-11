@@ -5,7 +5,8 @@
         "fancybox",
         "disqus",
         "github",
-        "search"
+        "search",
+        "customtheme"
     ],
     "pluginsConfig": {
         "disqus": {
