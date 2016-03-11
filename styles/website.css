@@ -1,6 +1,6 @@
 /* CSS for website */
 
-.book .book-body .page-wrapper .page-inner section.normal blockquote {
+blockquote {
     margin: 0 0 .85em;
     padding: 0 15px;
     color: #858585;
