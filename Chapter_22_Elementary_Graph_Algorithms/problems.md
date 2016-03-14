@@ -1,2 +1,17 @@
-# Problems
+## Problems
+
+### 22-1 Classifying edges by breadth-first search
+
+> A depth-first forest classifies the edges of a graph into tree, back, forward, and cross edges. A breadth-first tree can also be used to classify the edges reachable from the source of the search into the same four categories.
+
+> __*a*__. Prove that in a breadth-first search of an undirected graph, the following properties hold:
+> 1. There are no back edges and no forward edges.
+> 2. For each tree edge $$(u, v)$$, we have $$v.d = u.d + 1$$.
+> 3. For each cross edge $$(u, v)$$, we have $$v.d = u.d$$ or $$v.d = u.d + 1$$. 
+
+> __*b*__. Prove that in a breadth-first search of a directed graph, the following properties hold:
+> 1. There are no forward edges.
+> 2. For each tree edge $$(u, v)$$, we have $$v.d = u.d + 1$$.
+> 3. For each cross edge $$(u, v)$$, we have $$v.d \le u.d + 1$$.
+> 4. For each back edge $$(u, v)$$, we have $$0 \le v.d \le u.d$$.
 
