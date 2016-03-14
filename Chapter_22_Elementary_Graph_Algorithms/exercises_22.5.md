@@ -36,9 +36,13 @@ Add edge $$(u', v')$$ if $$u \in C_{u'}$$, $$v \in C_{v'}$$ and there is an edge
 
 > Given a directed graph $$G = (V, E)$$, explain how to create another graph $$G' = (V, E')$$ such that (a) $$G'$$ has the same strongly connected components as $$G$$, (b) $$G'$$ has the same component graph as $$G$$, and (c) $$E'$$ is as small as possible. Describe a fast algorithm to compute $$G'$$.
 
+Calculate SCCs, create a loop in each SCC, connect SCCs with one edge.
+
 ### 22.5-7 
 
 > A directed graph $$G = (V, E)$$ is __*semiconnected*__ if, for all pairs of vertices $$u, v \in V$$, we have $$u \leadsto v$$ or $$v \leadsto u$$. Give an efficient algorithm to determine whether or not $$G$$ is semiconnected. Prove that your algorithm is correct, and analyze its running time.
+
+If $$\forall i \in [1, K)$$, there is an edge $$(u,v) \in E$$, $$u \in C_i$$, $$v \in C_{i+1}$$, then the graph is semiconnected, $$O(V + E)$$.
 
 
 
