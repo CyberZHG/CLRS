@@ -60,4 +60,15 @@ $$v.low > u.d$$.
 
 Delete bridges then DFS/BFS.
 
+### 22-3 Euler tour
+
+> An Euler tour of a strongly connected, directed graph $$G = (V, E)$$ is a cycle that traverses each edge of $$G$$ exactly once, although it may visit a vertex more than once.
+
+> __*a*__. Show that $$G$$ has an Euler tour if and only if in-degree$$(v)=$$out-degree$$(v)$$ for each vertex $$v \in V$$.
+
+> __*b*__. Describe an $$O(E)$$-time algorithm to find an Euler tour of $$G$$ if one exists. (Hint: Merge edge-disjoint cycles.)
+
+### 22-4 Reachability
+
+> Let $$G = (V, E)$$ be a directed graph in which each vertex $$u \in V$$ is labeled with a unique integer $$L(U)$$ from the set $$\{1, 2, \dots, |V|\}$$. For each vertex $$u \in V$$, let $$R(u) = \{v \in V: u \leadsto v \}$$ be the set of vertices that are reachable from $$u$$. Define $$\min(u)$$ to be the vertex in $$R(u)$$ whose label is minimum, i.e., $$\min(u)$$ is the vertex $$v$$ such that $$L(v) = \min \{L(w): w \in R(u) \}$$. Give an $$O(V + E)$$-time algorithm that computes $$\min(u)$$ for all vertices $$u \in V$$.
 
