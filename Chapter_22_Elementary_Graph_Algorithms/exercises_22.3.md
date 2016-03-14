@@ -24,16 +24,7 @@ Undirected:
 
 > Show how depth-first search works on the graph of Figure 22.6. Assume that the __*for*__ loop of lines 5–7 of the DFS procedure considers the vertices in alphabetical order, and assume that each adjacency list is ordered alphabetically. Show the discovery and finishing times for each vertex, and show the classification of each edge.
 
-* q: 1, 16
-* r: 17, 20
-* s: 2, 7
-* t: 8, 15
-* u: 18, 19
-* v: 3, 6
-* w: 4, 5
-* x: 9, 12
-* y: 13, 14
-* z: 10, 11
+![](./img/22.3-2_1.png)
 
 
 * Tree edges: (q, s) (s, v) (v, w) (q, t) (t, x) (x, z) (t, y) (r, u)
