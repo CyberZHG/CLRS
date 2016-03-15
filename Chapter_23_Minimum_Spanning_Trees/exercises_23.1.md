@@ -48,9 +48,13 @@ Nonpositive: $$E = \{(u, v), (v, w), (w, u)\}$$ with the same weight -1.
 
 > Let $$T$$ be a minimum spanning tree of a graph $$G$$, and let $$L$$ be the sorted list of the edge weights of $$T$$. Show that for any other minimum spanning tree $$T'$$ of $$G$$, the list $$L$$ is also the sorted list of edge weights of $$T'$$.
 
+$$\dots$$
+
 ### 23.1-9
 
 > Let $$T$$ be a minimum spanning tree of a graph $$G = (V, E)$$, and let $$V'$$ be a subset of $$V$$. Let $$T'$$ be the subgraph of $$T$$ induced by $$V'$$, and let $$G'$$ be the subgraph of $$G$$ induced by $$V'$$. Show that if $$T'$$ is connected, then $$T'$$ is a minimum spanning tree of $$G'$$.
+
+Cut $$V'$$.
 
 ### 23.1-10
 
@@ -67,6 +71,10 @@ $$
 
 > Show that $$T$$ is a minimum spanning tree for $$G$$ with edge weights given by $$w'$$.
 
+Lighter.
+
 ### 23.1-11 $$\star$$
 
 > Given a graph $$G$$ and a minimum spanning tree $$T$$, suppose that we decrease the weight of one of the edges not in $$T$$. Give an algorithm for finding the minimum spanning tree in the modified graph.
+
+If the edge $$(u, v)$$ is not in $$T$$ and its weight is less than some edge in the path from $$u$$ to $$v$$, then replace the edge with maximum weight in the path with $$(u, v)$$.
