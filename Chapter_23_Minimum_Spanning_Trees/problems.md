@@ -59,3 +59,51 @@ MST-REDUCE(G, T)
 
 > __*f*__. For what values of $$|E|$$ (in terms of $$|V|$$) does Prim's algorithm with preprocessing asymptotically beat Prim's algorithm without preprocessing?
 
+### 23-3 Bottleneck spanning tree
+
+> A bottleneck spanning tree $$T$$ of an undirected graph $$G$$ is a spanning tree of $$G$$ whose largest edge weight is minimum over all spanning trees of $$G$$. We say that the value of the bottleneck spanning tree is the weight of the maximum-weight edge in $$T$$.
+
+> __*a*__. Argue that a minimum spanning tree is a bottleneck spanning tree. 
+
+> Part (a) shows that finding a bottleneck spanning tree is no harder than finding a minimum spanning tree. In the remaining parts, we will show how to find a bottleneck spanning tree in linear time.
+
+> __*b*__. Give a linear-time algorithm that given a graph $$G$$ and an integer $$b$$, determines whether the value of the bottleneck spanning tree is at most $$b$$.
+
+> __*c*__. Use your algorithm for part (b) as a subroutine in a linear-time algorithm for the bottleneck-spanning-tree problem. (Hint: You may want to use a subroutine that contracts sets of edges, as in the MST-REDUCE procedure described in Problem 23-2.)
+
+### 23-4 Alternative minimum-spanning-tree algorithms
+
+> In this problem, we give pseudocode for three different algorithms. Each one takes a connected graph and a weight function as input and returns a set of edges $$T$$. For each algorithm, either prove that $$T$$ is a minimum spanning tree or prove that $$T$$ is not a minimum spanning tree. Also describe the most efficient implementation of each algorithm, whether or not it computes a minimum spanning tree.
+
+> __*a*__. 
+> ```
+MAYBE-MST-A(G, w)
+1  sort the edges into nonincreasing order of edge weights w
+2  T = E
+3  for each edge e, taken in nonincreasing order by weight
+4       if T - {e} is a connected graph
+5            T = T - {e}
+6  return T
+```
+
+> __*b*__. 
+> ```
+MAYBE-MST-B(G, w)
+1  T = {}
+2  for each edge e, taken in arbitrary order
+3       if T U {e} has no cycles
+4            T = T U {e}
+5  return T
+```
+
+> __*c*__. 
+> ```
+MAYBE-MST-C(G, w)
+1  T = {}
+2  for each edge e, taken in arbitrary order
+3       T = T U {e}
+4       if T has a cycle c
+5            let e’ be a maximum-weight edge on c
+6            T = T - {e}
+7  return T
+```
