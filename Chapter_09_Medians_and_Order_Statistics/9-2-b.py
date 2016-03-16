@@ -25,8 +25,8 @@ class ProblemTestCase(unittest.TestCase):
                     s1 += v
                 elif v > w:
                     s2 += v
-            self.assertTrue(s1 < 0.5)
-            self.assertTrue(s2 <= 0.5)
+            self.assertTrue(s1 < 0.5 - 1e-8)
+            self.assertTrue(s2 <= 0.5 - 1e-8)
 
 
 if __name__ == '__main__':
