@@ -8,9 +8,13 @@
 
 > __*a*__. Show that the minimum spanning tree is unique, but that the second-best minimum spanning tree need not be unique.
 
+![](./img/23-1_1.png)
+
 > __*b*__. Let $$T$$ be the minimum spanning tree of $$G$$. Prove that $$G$$ contains edges $$(u, v) \in T$$ and $$(x, y) \notin T$$ such that $$T - \{(u, v)\} \cup \{(x, y)\}$$ is a second-best minimum spanning tree of $$G$$.
 
-> __*c*__. Let $$T$$ be a spanning tree of $$G$$ and, for any two verticces $$u, v \in V$$, let $$max[u,v]$$ denote an edge of maximum weight on the unique simple path between $$u$$ and $$v$$ in $$T$$. Describe an $$O(V^2)$$-time algorithm that, given $$T$$, computes $$max[u, v]$$ for all $$u, v \in V$$.
+
+
+> __*c*__. Let $$T$$ be a spanning tree of $$G$$ and, for any two vertices $$u, v \in V$$, let $$max[u,v]$$ denote an edge of maximum weight on the unique simple path between $$u$$ and $$v$$ in $$T$$. Describe an $$O(V^2)$$-time algorithm that, given $$T$$, computes $$max[u, v]$$ for all $$u, v \in V$$.
 
 > __*d*__. Give an efficient algorithm to compute the second-best minimum spanning tree of $$G$$.
 
