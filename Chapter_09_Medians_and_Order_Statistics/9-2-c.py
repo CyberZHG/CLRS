@@ -38,8 +38,8 @@ def weighted_median(a, p, r, w=0.5):
 class ProblemTestCase(unittest.TestCase):
 
     def test_random(self):
-        for _ in range(1000):
-            a = random.sample(range(10000), 1000)
+        for _ in xrange(1000):
+            a = random.sample(xrange(10000), 1000)
             s = sum(a)
             x = [float(v) / s for v in a]
             w = weighted_median(x, 0, len(x))
@@ -49,8 +49,8 @@ class ProblemTestCase(unittest.TestCase):
                     s1 += v
                 elif v > w:
                     s2 += v
-            self.assertTrue(s1 < 0.5 - 1e-8)
-            self.assertTrue(s2 <= 0.5 - 1e-8)
+            self.assertTrue(s1 < 0.5 + 1e-8)
+            self.assertTrue(s2 <= 0.5 + 1e-8)
 
 
 if __name__ == '__main__':
