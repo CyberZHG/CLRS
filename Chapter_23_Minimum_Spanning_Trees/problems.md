@@ -73,11 +73,17 @@ MST-REDUCE(G, T)
 
 > __*a*__. Argue that a minimum spanning tree is a bottleneck spanning tree. 
 
+Based on exercise 23.1-8, all MSTs have the same sorted weight list, thus they have the same bottleneck.
+
 > Part (a) shows that finding a bottleneck spanning tree is no harder than finding a minimum spanning tree. In the remaining parts, we will show how to find a bottleneck spanning tree in linear time.
 
 > __*b*__. Give a linear-time algorithm that given a graph $$G$$ and an integer $$b$$, determines whether the value of the bottleneck spanning tree is at most $$b$$.
 
+DFS on the graph with the edges that their weights are less or equal to $$b$$.
+
 > __*c*__. Use your algorithm for part (b) as a subroutine in a linear-time algorithm for the bottleneck-spanning-tree problem. (Hint: You may want to use a subroutine that contracts sets of edges, as in the MST-REDUCE procedure described in Problem 23-2.)
+
+Binary search for $$b$$.
 
 ### 23-4 Alternative minimum-spanning-tree algorithms
 
