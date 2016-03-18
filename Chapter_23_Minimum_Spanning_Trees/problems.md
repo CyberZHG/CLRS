@@ -100,6 +100,8 @@ MAYBE-MST-A(G, w)
 6  return T
 ```
 
+It's a MST.
+
 > __*b*__. 
 > ```
 MAYBE-MST-B(G, w)
@@ -110,6 +112,8 @@ MAYBE-MST-B(G, w)
 5  return T
 ```
 
+Not.
+
 > __*c*__. 
 > ```
 MAYBE-MST-C(G, w)
@@ -117,7 +121,9 @@ MAYBE-MST-C(G, w)
 2  for each edge e, taken in arbitrary order
 3       T = T U {e}
 4       if T has a cycle c
-5            let e’ be a maximum-weight edge on c
+5            let e' be a maximum-weight edge on c
 6            T = T - {e}
 7  return T
 ```
+
+It's a MST.
