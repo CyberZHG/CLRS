@@ -12,11 +12,15 @@
 
 > __*b*__. Let $$T$$ be the minimum spanning tree of $$G$$. Prove that $$G$$ contains edges $$(u, v) \in T$$ and $$(x, y) \notin T$$ such that $$T - \{(u, v)\} \cup \{(x, y)\}$$ is a second-best minimum spanning tree of $$G$$.
 
-
+$$\dots$$
 
 > __*c*__. Let $$T$$ be a spanning tree of $$G$$ and, for any two vertices $$u, v \in V$$, let $$max[u,v]$$ denote an edge of maximum weight on the unique simple path between $$u$$ and $$v$$ in $$T$$. Describe an $$O(V^2)$$-time algorithm that, given $$T$$, computes $$max[u, v]$$ for all $$u, v \in V$$.
 
+Search from each vertex.
+
 > __*d*__. Give an efficient algorithm to compute the second-best minimum spanning tree of $$G$$.
+
+Find an edge $$(u, v) \notin T$$ with weight $$w$$ that minimizes $$w - max[u,v]$$. The time is $$O(V^2)$$.
 
 ### 23-2 Minimum spanning tree in sparse graphs
 
