@@ -39,6 +39,15 @@ if v.d > u.d + w(u, v)
 
 > Let $$G = (V, E)$$ be a weighted, directed graph with weight function $$w : E \rightarrow \mathbb{R}$$. Give an $$O(VE)$$-time algorithm to find, for each vertex $$v \in V$$, the value $$\delta^*(v)=\min_{u \in V} \{ \delta(u, v) \}$$.
 
+```
+RELAX(u, v, w)
+1 if v.d > min(w(u, v), w(u, v) + u.d)
+2      v.d > min(w(u, v), w(u, v) + u.d)
+3      v.pi = u.pi
+```
+
 ### 24.1-6 $$\star$$
 
 > Suppose that a weighted, directed graph $$G = (V, E)$$ has a negative-weight cycle. Give an efficient algorithm to list the vertices of one such cycle. Prove that your algorithm is correct.
+
+Based on exercise 24.1-4, DFS from a vertex $$u$$ that $$u.d = -\infty$$, if the weight sum on the search path is negative and the next vertex is BLACK, then the search path forms a negative-weight cycle.
