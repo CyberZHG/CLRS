@@ -37,12 +37,11 @@ def slow_all_pairs_shortest_paths(w):
 
 def fast_all_pairs_shortest_paths(w):
     n = len(w)
-    l = w
     m = 1
     while m < n - 1:
-        l = extend_shortest_paths(l, l)
+        w = extend_shortest_paths(w, w)
         m *= 2
-    return l
+    return w
 
 
 class ProblemTestCase(unittest.TestCase):
