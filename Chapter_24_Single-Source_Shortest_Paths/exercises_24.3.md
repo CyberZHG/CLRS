@@ -1,2 +1,2 @@
-# Dijkstra's algorithm
+## 24.3 Dijkstra's algorithm
 
