@@ -16,23 +16,15 @@ Two connected components.
 
 If $$(a, u)$$ is true, $$(a, v)$$ is not true and $$(v, b)$$ is true, then $$(a, b)$$ is true.
 
-### 25-2 Shortest paths in -dense graphs
+### 25-2 Shortest paths in $$\epsilon$$-dense graphs
 
-A graph G D .V;E/ is -dense if jEj D ‚.V 1C/ for some constant  in the
-range 0 <   1. By using d-ary min-heaps (see Problem 6-2) in shortest-paths
-algorithms on -dense graphs, we can match the running times of Fibonacci-heapbased
-algorithms without using as complicated a data structure.
-a. What are the asymptotic running times for INSERT, EXTRACT-MIN, and
-DECREASE-KEY, as a function of d and the number n of elements in a d-ary
-min-heap? What are these running times if we choose d D ‚.n˛/ for some
-constant 0 < ˛  1? Compare these running times to the amortized costs of
-these operations for a Fibonacci heap.
-b. Show how to compute shortest paths from a single source on an -dense directed
-graph G D .V;E/ with no negative-weight edges in O.E/ time. (Hint: Pick d
-as a function of .)
-c. Show how to solve the all-pairs shortest-paths problem on an -dense directed
-graph G D .V;E/ with no negative-weight edges in O.VE/ time.
-d. Show how to solve the all-pairs shortest-paths problem in O.VE/ time on an
--dense directed graph G D .V;E/ that may have negative-weight edges but
-has no negative-weight cycles.
+> A graph $$G = (V, E)$$ is __*$$\epsilon$$-dense*__ if $$|E| = \Theta(V^{1 + \epsilon})$$ for some constant $$\epsilon$$ in the range $$0 < \epsilon \le 1$$. By using $$d$$-ary min-heaps (see Problem 6-2) in shortest-paths algorithms on $$\epsilon$$-dense graphs, we can match the running times of Fibonacci-heap-based algorithms without using as complicated a data structure.
+
+> __*a*__. What are the asymptotic running times for INSERT, EXTRACT-MIN, and DECREASE-KEY, as a function of $$d$$ and the number $$n$$ of elements in a $$d$$-ary min-heap? What are these running times if we choose $$d = \Theta(n^\alpha)$$ for some constant $$0 < \alpha \le 1$$? Compare these running times to the amortized costs of these operations for a Fibonacci heap.
+
+> __*b*__. Show how to compute shortest paths from a single source on an $$\epsilon$$-dense directed graph $$G = (V, E)$$ with no negative-weight edges in $$O(E)$$ time. (Hint: Pick $$d$$ as a function of $$\epsilon$$.)
+
+> __*c*__. Show how to solve the all-pairs shortest-paths problem on an $$\epsilon$$-dense directed graph $$G = (V, E)$$ with no negative-weight edges in $$O(VE)$$ time. 
+
+> __*d*__. Show how to solve the all-pairs shortest-paths problem in $$O(VE)$$ time on an $$\epsilon$$-dense directed graph $$G = (V， E)$$ that may have negative-weight edges but has no negative-weight cycles.
 
