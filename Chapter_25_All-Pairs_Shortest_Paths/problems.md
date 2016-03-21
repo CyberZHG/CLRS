@@ -22,9 +22,28 @@ If $$(a, u)$$ is true, $$(a, v)$$ is not true and $$(v, b)$$ is true, then $$(a,
 
 > __*a*__. What are the asymptotic running times for INSERT, EXTRACT-MIN, and DECREASE-KEY, as a function of $$d$$ and the number $$n$$ of elements in a $$d$$-ary min-heap? What are these running times if we choose $$d = \Theta(n^\alpha)$$ for some constant $$0 < \alpha \le 1$$? Compare these running times to the amortized costs of these operations for a Fibonacci heap.
 
+* INSERT: $$\Theta(\log_d n) = \Theta(1/\alpha)$$.
+* EXTRACT-MIN: $$\Theta(d \log_d n) = \Theta(n^\alpha / \alpha)$$.
+* DECREASE-KEY: $$\Theta(\log_d n) = \Theta(1/\alpha)$$.
+
 > __*b*__. Show how to compute shortest paths from a single source on an $$\epsilon$$-dense directed graph $$G = (V, E)$$ with no negative-weight edges in $$O(E)$$ time. (Hint: Pick $$d$$ as a function of $$\epsilon$$.)
+
+Dijkstra, $$O(d \log_d V \cdot V + \log_d V \cdot E)$$, if $$d = V^\epsilon$$, then
+
+$$
+\begin{array}{ll}
+& O(d \log_d V \cdot V + \log_d V \cdot E) \\
+=& O(V^\epsilon \cdot V / \epsilon + E / \epsilon) \\
+=& O((V^{1+\epsilon} + E) / \epsilon) \\
+=& O((E + E) / \epsilon) \\
+=& O(E)
+\end{array}
+$$
 
 > __*c*__. Show how to solve the all-pairs shortest-paths problem on an $$\epsilon$$-dense directed graph $$G = (V, E)$$ with no negative-weight edges in $$O(VE)$$ time. 
 
-> __*d*__. Show how to solve the all-pairs shortest-paths problem in $$O(VE)$$ time on an $$\epsilon$$-dense directed graph $$G = (V， E)$$ that may have negative-weight edges but has no negative-weight cycles.
+Run $$|V|$$ times Dijkstra, since the algorithm is $$O(E)$$ based on __*b*__, the total time is $$O(VE)$$.
 
+> __*d*__. Show how to solve the all-pairs shortest-paths problem in $$O(VE)$$ time on an $$\epsilon$$-dense directed graph $$G = (V, E)$$ that may have negative-weight edges but has no negative-weight cycles.
+
+Johnson's reweight is $$O(VE)$$.
