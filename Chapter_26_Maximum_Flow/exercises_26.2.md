@@ -60,6 +60,8 @@ Find the minimum cut.
 
 > The __*edge connectivity*__ of an undirected graph is the minimum number $$k$$ of edges that must be removed to disconnect the graph. For example, the edge connectivity of a tree is 1, and the edge connectivity of a cyclic chain of vertices is 2. Show how to determine the edge connectivity of an undirected graph $$G = (V, E)$$ by running a maximum-flow algorithm on at most $$|V|$$ flow networks, each having $$O(V)$$ vertices and $$O(E)$$ edges.
 
+Use each $$v$$ as the source, find the minimum minimum cut.
+
 ### 26.2-12
 
 > Suppose that you are given a flow network $$G$$, and $$G$$ has edges entering the source $$s$$. Let $$f$$ be a flow in $$G$$ in which one of the edges $$(v, s)$$ entering the source has $$f(v, s) = 1$$. Prove that there must exist another flow $$f'$$ with $$f'(v, s) = 0$$ such that $$|f|=|f'|$$. Give an $$O(E)$$-time algorithm to compute $$f'$$, given $$f$$, and assuming that all edge capacities are integers.
@@ -67,3 +69,4 @@ Find the minimum cut.
 ### 26.2-13
 
 > Suppose that you wish to find, among all minimum cuts in a flow network $$G$$ with integral capacities, one that contains the smallest number of edges. Show how to modify the capacities of $$G$$ to create a new flow network $$G'$$ in which any minimum cut in $$G'$$ is a minimum cut with the smallest number of edges in $$G$$.
+
