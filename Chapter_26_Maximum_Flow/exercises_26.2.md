@@ -26,9 +26,13 @@ $$c(S, T) = c(s, v_1) + c(v_2, v_1) + c(v_4, v_3) + c(v_4, t) = 16 + 4 + 7 + 4 =
 
 > Recall that the construction in Section 26.1 that converts a flow network with multiple sources and sinks into a single-source, single-sink network adds edges with infinite capacity. Prove that any flow in the resulting network has a finite value if the edges of the original network with multiple sources and sinks have finite capacity.
 
+Flow in equals flow out.
+
 ### 26.2-6
 
-> Suppose that each source $$s_i$$ in a flow network with multiple sources and sinks produces exactly $$p_i$$ units of flow, so that $$\sum_{v \in V} f(s_i, v) = p_i$$. Suppose also that each sink $$t_j$$ consumes exactly $$q_j$$ units, so that $$\sum_{v \in V} f(v, t_j) = q_j$$, where $$\sum_i p_i = \sum_j q_j$$. Show how to convert the problem of finding a flow f that obeys these additional constraints into the problem of finding a maximum flow in a single-source, single-sink flow network.
+> Suppose that each source $$s_i$$ in a flow network with multiple sources and sinks produces exactly $$p_i$$ units of flow, so that $$\sum_{v \in V} f(s_i, v) = p_i$$. Suppose also that each sink $$t_j$$ consumes exactly $$q_j$$ units, so that $$\sum_{v \in V} f(v, t_j) = q_j$$, where $$\sum_i p_i = \sum_j q_j$$. Show how to convert the problem of finding a flow $$f$$ that obeys these additional constraints into the problem of finding a maximum flow in a single-source, single-sink flow network.
+
+$$c(s, s_i) = p_i$$, $$c(t_j, t) = q_j$$.
 
 ### 26.2-7
 
@@ -38,13 +42,19 @@ $$c(S, T) = c(s, v_1) + c(v_2, v_1) + c(v_4, v_3) + c(v_4, t) = 16 + 4 + 7 + 4 =
 
 > Suppose that we redefine the residual network to disallow edges into $$s$$. Argue that the procedure FORD-FULKERSON still correctly computes a maximum flow.
 
+Correct.
+
 ### 26.2-9
 
 > Suppose that both $$f$$ and $$f'$$ are flows in a network $$G$$ and we compute flow $$f \uparrow f'$$. Does the augmented flow satisfy the flow conservation property? Does it satisfy the capacity constraint?
 
+It satisfies the flow conservation property and doesn't satisfy the capacity constraint.
+
 ### 26.2-10
 
 > Show how to find a maximum flow in a network $$G = (V, E)$$ by a sequence of at most $$|E|$$ augmenting paths. (Hint: Determine the paths after finding the maximum flow.)
+
+Find the minimum cut.
 
 ### 26.2-11
 
