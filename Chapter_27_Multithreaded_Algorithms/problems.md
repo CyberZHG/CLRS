@@ -177,11 +177,37 @@ $$b^2 \le 2b - 1$$, $$(b - 1)^2 \le 0$$, since $$b \ge 2$$, the parallelism must
 
 > __*a*__. Explain how to modify the work law (27.2), span law (27.3), and greedy scheduler bound (27.4) to work with expectations when $$T_P$$, $$T_1$$, and $$T_\infty$$ are all random variables.
 
-> __*b*__. Consider a randomized multithreaded algorithm for which 1% of the time we have $$T_1 = 10^4$$ and $$T_{10,000} = 1$$, but for 99% of the time we have $$T_{10,000} = 10^9$$. Argue that the __*speedup*__ of a randomized multithreaded algorithm should be defined as $$E[T_1]/E[T_P]$$, rather than $$E[T_1 / T_P]$$.
+$$\text{E}[T_P] \ge \text{E}[T_1] / P$$
 
-> __*c*__. Argue that the __*parallelism*__ of a randomized multithreaded algorithm should be defined as the ratio $$E[T_1] / E[T_\infty]$$.
+$$\text{E}[T_P] \ge \text{E}[T_\infty]$$
+
+$$\text{E}[T_P] \le \text{E}[T_1]/P + \text{E}[T_\infty]$$
+
+> __*b*__. Consider a randomized multithreaded algorithm for which 1% of the time we have $$T_1 = 10^4$$ and $$T_{10,000} = 1$$, but for 99% of the time we have $$T_1 = T_{10,000} = 10^9$$. Argue that the __*speedup*__ of a randomized multithreaded algorithm should be defined as $$\text{E}[T_1]/\text{E}[T_P]$$, rather than $$\text{E}[T_1 / T_P]$$.
+
+$$\text{E}[T_1] \approx \text{E}[T_{10,000}] \approx 9.9 \times 10^8$$, $$\text{E}[T_1]/\text{E}[T_P] = 1$$.
+
+$$\text{E}[T_1 / T_{10,000}] = 10^4 * 0.01 + 0.99 = 100.99$$.
+
+> __*c*__. Argue that the __*parallelism*__ of a randomized multithreaded algorithm should be defined as the ratio $$\text{E}[T_1] / \text{E}[T_\infty]$$.
+
+Same as the above.
 
 > __*d*__. Multithread the RANDOMIZED-QUICKSORT algorithm on page 179 by using nested parallelism. (Do not parallelize RANDOMIZED-PARTITION.) Give the pseudocode for your P-RANDOMIZED-QUICKSORT algorithm.
 
+```
+RANDOMIZED-QUICKSORT(A, p, r)
+1  if p < r
+2       q = RANDOM-PARTITION(A, p, r)
+3  spawn RANDOMIZED-QUICKSORT(A, p, q - 1)
+4  RANDOMIZED-QUICKSORT(A, q + 1, r)
+5  sync
+```
+
 > __*e*__. Analyze your multithreaded algorithm for randomized quicksort. (Hint: Review the analysis of RANDOMIZED-SELECT on page 216.)
 
+$$\text{E}[T_1] = O(n \lg n)$$
+
+$$\text{E}[T_\infty] = O(\lg n)$$
+
+$$\text{E}[T_1] / \text{E}[T_\infty] = O(n)$$
