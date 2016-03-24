@@ -28,13 +28,43 @@ $$T_1 - T_\infty$$ is the number of  strands that are not belong to the longest 
 
 > Construct a computation dag for which one execution of a greedy scheduler can take nearly twice the time of another execution of a greedy scheduler on the same number of processors. Describe how the two executions would proceed.
 
+The critical path is twice the length of the other path.
+
 ### 27.1-5
 
-> Professor Karan measures her deterministic multithreaded algorithm on 4, 10, and 64 processors of an ideal parallel computer using a greedy scheduler. She claims that the three runs yielded $$T_4 = 80$$ seconds, $$T_{10} = 42$$ seconds, and $$T_{64} = 10$$ seconds. Argue that the professor is either lying or incompetent. (Hint: Use the work law (27.2), the span law (27.3), and inequality (27.5) from Exercise 27.1-3.)
+> Professor Karan measures her deterministic multithreaded algorithm on $$4$$, $$10$$, and $$64$$ processors of an ideal parallel computer using a greedy scheduler. She claims that the three runs yielded $$T_4 = 80$$ seconds, $$T_{10} = 42$$ seconds, and $$T_{64} = 10$$ seconds. Argue that the professor is either lying or incompetent. (Hint: Use the work law (27.2), the span law (27.3), and inequality (27.5) from Exercise 27.1-3.)
+
+Based on span law:
+
+$$T_\infty \le T_P = \min\{ 80, 42, 10 \} = 10$$
+
+Based on inequality (27.5):
+
+$$\left \{ 
+\begin{array}{rll}
+T_1 + 3T_\infty &\ge& 320 \\
+T_1 + 9T_\infty &\ge& 420
+\end{array}
+\right .$$
+
+$$6 T_\infty \ge 100$$, $$T_\infty \ge 16$$, which contradicts the span law.
 
 ### 27.1-6
 
 > Give a multithreaded algorithm to multiply an $$n \times n$$ matrix by an $$n$$-vector that achieves $$\Theta(n^2 / \lg n)$$ parallelism while maintaining $$\Theta(n^2)$$ work.
+
+```
+VEC-TIMES-VEC(a, b, l, r)
+1  if l == r
+2      return a[l] * b[r]
+2  m = floor((l + r) / 2)
+3  spawn sum_l = VEC-TIMES-VEC(a, b, l, m)
+4  spawn sum_r = VEC-TIMES-VEC(a, b, m + 1, r)
+5  sync
+6  return sum_l + sum_r
+```
+
+The multiply of two vector is thus $$\Theta(\lg n)$$, there are $$n$$ vectors to multiply, therefore $$T_\infty = \Theta(n \lg n)$$, since $$T_1 = \Theta(n^3)$$, then the parallelism $$T_1 / T_\infty = \Theta(n^2 / \lg n)$$.
 
 ### 27.1-7
 
@@ -45,18 +75,32 @@ P-TRANSPOSE(A)
 1  n = A.rows
 2  parallel for j = 2 to n
 3      parallel for i = 1 to j - 1
-4  exchange a_ij with a_ji
+4          exchange a_ij with a_ji
 ```
 >
 > Analyze the work, span, and parallelism of this algorithm.
+
+* Work: $$T_1 = \Theta(n^2)$$.
+* Span: $$T_\infty = \Theta(1)$$.
+* Parallelism: $$T_1 / T_\infty = \Theta(n^2)$$.
 
 ### 27.1-8
 
 > Suppose that we replace the__*parallel for*__ loop in line 3 of P-TRANSPOSE (see Exercise 27.1-7) with an ordinary __*for*__ loop. Analyze the work, span, and parallelism of the resulting algorithm.
 
+* Work: $$T_1 = \Theta(n^2)$$.
+* Span: $$T_\infty = \Theta(n)$$.
+* Parallelism: $$T_1 / T_\infty = \Theta(n)$$.
+
 ### 27.1-9
 
 > For how many processors do the two versions of the chess programs run equally fast, assuming that $$T_P = T_1 / P + T_\infty$$?
 
-
-
+$$
+\begin{array}{rll}
+T_1 / P + T_\infty &=& T_1' / P + T_\infty' \\
+2048 + P &=& 1024 + 8P \\
+P &=& 1024 / 7 \\
+&\approx & 146
+\end{array}
+$$
