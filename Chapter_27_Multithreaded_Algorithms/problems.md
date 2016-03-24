@@ -57,3 +57,74 @@ Parallelism: $$T_1 / T_\infty = \Theta(n^2) = 1000^2 = 10^6$$.
 
 Most parallel computers still have far fewer than 1 million processors.
 
+### 27-3 Multithreaded matrix algorithms
+
+> __*a*__. Parallelize the LU-DECOMPOSITION procedure on page 821 by giving pseudocode for a multithreaded version of this algorithm. Make your implementation as parallel as possible, and analyze its work, span, and parallelism.
+
+> __*b*__. Do the same for LUP-DECOMPOSITION on page 824.
+
+> __*c*__. Do the same for LUP-SOLVE on page 817.
+
+> __*d*__. Do the same for a multithreaded algorithm based on equation (28.13) for inverting a symmetric positive-definite matrix.
+
+### 27-4 Multithreading reductions and prefix computations
+
+> A __*$$\otimes$$-reduction*__ of an array $$x[1 \dots n]$$, where $$\otimes$$ is an associative operator, is the value 
+
+> $$y = x[1] \otimes x[2] \otimes \cdots \otimes x[n]$$
+
+> The following procedure computes the $$\otimes$$-reduction of a subarray $$x[i \dots j]$$ serially.
+
+> ```
+REDUCE(x, i, j)
+1  y = x[i]
+2  for k = i + 1 to j
+3       y = y \otimes x[k]
+4  return y
+```
+
+> __*a*__. Use nested parallelism to implement a multithreaded algorithm P-REDUCE, which performs the same function with $$\Theta(n)$$ work and $$\Theta(\lg n)$$ span. Analyze your algorithm.
+
+```
+REDUCE(x, i, j)
+1  if i == j
+2      return x[i]
+3  else if i + 1 == j
+4      return x[i] \otimes x[j]
+5  mid = (i + j) / 2
+6  spawn y1 = REDUCE(x, i, mid)
+7  y2 = REDUCE(x, mid + 1, j)
+8  sync
+9  return y1 \otimes y2
+```
+
+> A related problem is that of computing a __*$$\otimes$$-prefix*__ computation, sometimes called a __*$$\otimes$$-scan*__, on an array $$x[1 \dots n]$$, where $$\otimes$$ is once again an associative operator. The $$\otimes$$-scan produces the array $$y[1 \dots n]$$.
+
+> Unfortunately, multithreading SCAN is not straightforward. For example, changing the __for__ loop to a __parallel for__ loop would create races, since each iteration of the loop body depends on the previous iteration. The following procedure P-SCAN-1 performs the $$\otimes$$-prefix computation in parallel, albeit inefficiently.
+
+> __*b*__. Analyze the work, span, and parallelism of P-SCAN-1.
+
+* Work: $$T_1 = \Theta(n^2)$$.
+* Span: $$T_\infty = \Theta(\lg n) + \Theta(\lg n) = \Theta(\lg n)$$.
+* Parallelism: $$T_1 / T_\infty = \Theta(n^2 / \lg n)$$.
+
+> By using nested parallelism, we can obtain a more efficient $$\otimes$$-prefix computation
+
+> __*c*__. Argue that P-SCAN-2 is correct, and analyze its work, span, and parallelism.
+
+* Work: $$T_1(n) = 2 T_1(n / 2) + \Theta(n) = \Theta(n \lg n)$$.
+* Span: $$T_\infty(n) = T_\infty(n / 2) + \Theta(\lg n) = \Theta(\lg^2n)$$.
+* Parallelism: $$T_1 / T_\infty = \Theta(n / \lg n)$$.
+
+> __*d*__. Fill in the three missing expressions in line 8 of P-SCAN-UP and lines 5 and 6 of P-SCAN-DOWN. Argue that with expressions you supplied, P-SCAN-3 is correct.
+
+* 8: t[k] * right
+* 5: v
+* 6: t[k]
+
+> __*e*__. Analyze the work, span, and parallelism of P-SCAN-3.
+
+* Work: $$T_1 = \Theta(n)$$.
+* Span: $$T_\infty = \Theta(\lg n)$$.
+* Parallelism: $$T_1 / T_\infty = \Theta(n / \lg n)$$.
+
