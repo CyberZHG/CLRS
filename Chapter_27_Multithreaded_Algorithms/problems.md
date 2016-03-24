@@ -128,3 +128,60 @@ REDUCE(x, i, j)
 * Span: $$T_\infty = \Theta(\lg n)$$.
 * Parallelism: $$T_1 / T_\infty = \Theta(n / \lg n)$$.
 
+### 27-5 Multithreading a simple stencil calculation
+
+> Computational science is replete with algorithms that require the entries of an array to be filled in with values that depend on the values of certain already computed neighboring entries, along with other information that does not change over the course of the computation. The pattern of neighboring entries does not change during the computation and is called a __*stencil*__.
+
+> __*a*__. a. Give multithreaded pseudocode that performs this simple stencil calculation using a divide-and-conquer algorithm SIMPLE-STENCIL based on the decomposition (27.11) and the discussion above. (Don't worry about the details of the base case, which depends on the specific stencil.) Give and solve recurrences for the work and span of this algorithm in terms of $$n$$. What is the parallelism?
+
+```
+SIMPLE-STENCIL(A)
+1  SIMPLE-STENCIL(A11)
+2  spawn SIMPLE-STENCIL(A12)
+3  SIMPLE-STENCIL(A21)
+3  sync
+5  SIMPLE-STENCIL(A22)
+```
+
+* Work: $$T_1 = \Theta(n^2)$$.
+* Span: $$T_\infty(n) = 3 T_\infty(n / 2) + \Theta(1) = \Theta(n^{\lg 3}) \approx \Theta(n^{1.58})$$.
+* Parallelism: $$T_1 / T_\infty = \Theta(n^{2/\lg 3}) \approx \Theta(n^{1.26})$$.
+
+> __*b*__. Modify your solution to part (a) to divide an $$n \times n$$ array into nine $$n / 3 \times n / 3$$ subarrays, again recursing with as much parallelism as possible. Analyze this algorithm. How much more or less parallelism does this algorithm have compared with the algorithm from part (a)?
+
+```
+11
+spawn 12 21 sync
+spawn 13 22 31 sync
+spawn 23 32 sync
+33
+```
+
+* Work: $$T_1 = \Theta(n^2)$$.
+* Span: $$T_\infty(n) = 5 T_\infty(n / 3) + \Theta(1) = \Theta(n^{\log_3 5}) \approx \Theta(n^{1.46})$$.
+* Parallelism: $$T_1 / T_\infty = \Theta(n^{2/\log_3 5}) \approx \Theta(n^{1.37})$$.
+
+> __*c*__. Generalize your solutions to parts (a) and (b) as follows. Choose an integer $$b \ge 2$$. Divide an $$n \times n$$ array into $$b^2$$ subarrays, each of size $$n / b \times n / b$$, recursing with as much parallelism as possible. In terms of $$n$$ and $$b$$, what are the work, span, and parallelism of your algorithm? Argue that, using this approach, the parallelism must be $$o(n)$$ for any choice of $$b \ge 2$$. (Hint: For this last argument, show that the exponent of $$n$$ in the parallelism is strictly less than 1 for any choice of $$b \ge 2$$.)
+
+* Work: $$T_1 = \Theta(n^2)$$.
+* Span: $$T_\infty(n) = (2b - 1) T_\infty(n / b) + \Theta(1) = \Theta(n^{\log_b (2b - 1)})$$.
+* Parallelism: $$T_1 / T_\infty = \Theta(n^{2/\log_b (2b-1)}) = \Theta(n^{\log_{2b - 1}b^2})$$.
+
+$$b^2 \le 2b - 1$$, $$(b - 1)^2 \le 0$$, since $$b \ge 2$$, the parallelism must be $$o(n)$$.
+
+> __*d*__. Give pseudocode for a multithreaded algorithm for this simple stencil calculation that achieves $$\Theta(n \lg n)$$ parallelism. Argue using notions of work and span that the problem, in fact, has $$\Theta(n)$$ inherent parallelism. As it turns out, the divide-and-conquer nature of our multithreaded pseudocode does not let us achieve this maximal parallelism.
+
+### 27-6 Randomized multithreaded algorithms
+
+> Just as with ordinary serial algorithms, we sometimes want to implement randomized multithreaded algorithms. This problem explores how to adapt the various performance measures in order to handle the expected behavior of such algorithms. It also asks you to design and analyze a multithreaded algorithm for randomized quicksort.
+
+> __*a*__. Explain how to modify the work law (27.2), span law (27.3), and greedy scheduler bound (27.4) to work with expectations when $$T_P$$, $$T_1$$, and $$T_\infty$$ are all random variables.
+
+> __*b*__. Consider a randomized multithreaded algorithm for which 1% of the time we have $$T_1 = 10^4$$ and $$T_{10,000} = 1$$, but for 99% of the time we have $$T_{10,000} = 10^9$$. Argue that the __*speedup*__ of a randomized multithreaded algorithm should be defined as $$E[T_1]/E[T_P]$$, rather than $$E[T_1 / T_P]$$.
+
+> __*c*__. Argue that the __*parallelism*__ of a randomized multithreaded algorithm should be defined as the ratio $$E[T_1] / E[T_\infty]$$.
+
+> __*d*__. Multithread the RANDOMIZED-QUICKSORT algorithm on page 179 by using nested parallelism. (Do not parallelize RANDOMIZED-PARTITION.) Give the pseudocode for your P-RANDOMIZED-QUICKSORT algorithm.
+
+> __*e*__. Analyze your multithreaded algorithm for randomized quicksort. (Hint: Review the analysis of RANDOMIZED-SELECT on page 216.)
+
