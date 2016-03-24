@@ -64,7 +64,7 @@ VEC-TIMES-VEC(a, b, l, r)
 6  return sum_l + sum_r
 ```
 
-The multiply of two vectors is thus $$\Theta(\lg n)$$, there are $$n$$ vectors to multiply simultaneously, and the outer parallel for is optimized to $$\Theta(\lg n)$$, therefore $$T_\infty = \Theta(\lg n)$$, since $$T_1 = \Theta(n^2)$$, then the parallelism $$T_1 / T_\infty = \Theta(n^2 / \lg n)$$.
+The multiply of two vectors is thus $$\Theta(\lg n)$$, there are $$n$$ vectors to multiply simultaneously, and the outer parallel for is optimized to $$\Theta(\lg n)$$, therefore $$T_\infty = \Theta(\lg n) + \Theta(\lg n) = \Theta(\lg n)$$, since $$T_1 = \Theta(n^2)$$, then the parallelism $$T_1 / T_\infty = \Theta(n^2 / \lg n)$$.
 
 ### 27.1-7
 
@@ -81,7 +81,7 @@ P-TRANSPOSE(A)
 > Analyze the work, span, and parallelism of this algorithm.
 
 * Work: $$T_1 = \Theta(n^2)$$.
-* Span: $$T_\infty = \Theta(\lg n)$$.
+* Span: $$T_\infty = \Theta(\lg n) + \Theta(\lg n) + \Theta(1) = \Theta(\lg n)$$.
 * Parallelism: $$T_1 / T_\infty = \Theta(n^2 / \lg n)$$.
 
 ### 27.1-8
@@ -89,7 +89,7 @@ P-TRANSPOSE(A)
 > Suppose that we replace the__*parallel for*__ loop in line 3 of P-TRANSPOSE (see Exercise 27.1-7) with an ordinary __*for*__ loop. Analyze the work, span, and parallelism of the resulting algorithm.
 
 * Work: $$T_1 = \Theta(n^2)$$.
-* Span: $$T_\infty = \Theta(n)$$.
+* Span: $$T_\infty = \Theta(\lg n) + \Theta(n) = \Theta(n)$$.
 * Parallelism: $$T_1 / T_\infty = \Theta(n)$$.
 
 ### 27.1-9
