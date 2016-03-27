@@ -1,2 +1,2 @@
-# Formulating problems as linear programs
+## 29.2 Formulating problems as linear programs
 
