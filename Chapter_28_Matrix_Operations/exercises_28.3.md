@@ -1,2 +1,2 @@
-# Symmetric positive-definite matrices and least-squares approximation
+## 28.3 Symmetric positive-definite matrices and least-squares approximation
 
