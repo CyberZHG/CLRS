@@ -28,6 +28,8 @@
    * [Randomized algorithms](Chapter_05_Probabilistic_Analysis_and_Randomized_Algorithms/exercises_5.3.md)
    * [Probabilistic analysis and further uses of indicator random variables](Chapter_05_Probabilistic_Analysis_and_Randomized_Algorithms/exercises_5.4.md)
    * [Problems](Chapter_05_Probabilistic_Analysis_and_Randomized_Algorithms/problems.md)
+
+
 * [Heapsort](Chapter_06_Heapsort/README.md)
    * [Heaps](Chapter_06_Heapsort/exercises_6.1.md)
    * [Maintaining the heap property](Chapter_06_Heapsort/exercises_6.2.md)
@@ -52,6 +54,8 @@
    * [Selection in expected linear time](Chapter_09_Medians_and_Order_Statistics/exercises_9.2.md)
    * [Selection in worst-case linear time](Chapter_09_Medians_and_Order_Statistics/exercises_9.3.md)
    * [Problems](Chapter_09_Medians_and_Order_Statistics/problems.md)
+
+
 * [Elementary Data Structures](Chapter_10_Elementary_Data_Structures/README.md)
    * [Stacks and queues](Chapter_10_Elementary_Data_Structures/exercises_10.1.md)
    * [Linked lists](Chapter_10_Elementary_Data_Structures/exercises_10.2.md)
@@ -82,6 +86,8 @@
    * [How to augment a data structure](Chapter_14_Augmenting_Data_Structures/exercises_14.2.md)
    * [Interval trees](Chapter_14_Augmenting_Data_Structures/exercises_14.3.md)
    * [Problems](Chapter_14_Augmenting_Data_Structures/problems.md)
+
+
 * [Dynamic Programming](Chapter_15_Dynamic_Programming/README.md)
    * [Rod cutting](Chapter_15_Dynamic_Programming/exercises_15.1.md)
    * [Matrix-chain multiplication](Chapter_15_Dynamic_Programming/exercises_15.2.md)
@@ -102,6 +108,8 @@
    * [The potential method](Chapter_17_Amortized_Analysis/exercises_17.3.md)
    * [Dynamic tables](Chapter_17_Amortized_Analysis/exercises_17.4.md)
    * [Problems](Chapter_17_Amortized_Analysis/problems.md)
+
+
 * [B-Trees](Chapter_18_B-Trees/README.md)
    * [Definition of B-trees](Chapter_18_B-Trees/exercises_18.1.md)
    * [Basic operations on B-trees](Chapter_18_B-Trees/exercises_18.2.md)
@@ -124,6 +132,8 @@
    * [Disjoint-set forests](Chapter_21_Data_Structures_for_Disjoint_Sets/exercises_21.3.md)
    * [Analysis of union by rank with path compression](Chapter_21_Data_Structures_for_Disjoint_Sets/exercises_21.4.md)
    * [Problems](Chapter_21_Data_Structures_for_Disjoint_Sets/problems.md)
+
+
 * [Elementary Graph Algorithms](Chapter_22_Elementary_Graph_Algorithms/README.md)
    * [Representations of graphs](Chapter_22_Elementary_Graph_Algorithms/exercises_22.1.md)
    * [Breadth-first search](Chapter_22_Elementary_Graph_Algorithms/exercises_22.2.md)
@@ -154,11 +164,25 @@
    * [Push-relabel algorithms](Chapter_26_Maximum_Flow/exercises_26.4.md)
    * [The relabel-to-front algorithm](Chapter_26_Maximum_Flow/exercises_26.5.md)
    * [Problems](Chapter_26_Maximum_Flow/problems.md)
+
+
 * [Multithreaded Algorithms](Chapter_27_Multithreaded_Algorithms/README.md)
    * [The basics of dynamic multithreading](Chapter_27_Multithreaded_Algorithms/exercises_27.1.md)
    * [Multithreaded matrix multiplication](Chapter_27_Multithreaded_Algorithms/exercises_27.2.md)
    * [Multithreaded merge sort](Chapter_27_Multithreaded_Algorithms/exercises_27.3.md)
    * [Problems](Chapter_27_Multithreaded_Algorithms/problems.md)
+* [Matrix Operations](Chapter_28_Matrix_Operations/README.md)
+   * [Solving systems of linear equations](Chapter_28_Matrix_Operations/exercises_28.1.md)
+   * [Inverting matrices](Chapter_28_Matrix_Operations/exercises_28.2.md)
+   * [Symmetric positive-definite matrices and least-squares approximation](Chapter_28_Matrix_Operations/exercises_28.3.md)
+   * [Problems](Chapter_28_Matrix_Operations/problems.md)
+* [Linear Programming](Chapter_29_Linear_Programming/README.md)
+   * [Standard and slack forms](Chapter_29_Linear_Programming/exercises_29.1.md)
+   * [Formulating problems as linear programs](Chapter_29_Linear_Programming/exercises_29.2.md)
+   * [The simplex algorithm](Chapter_29_Linear_Programming/exercises_29.3.md)
+   * [Duality](Chapter_29_Linear_Programming/exercises_29.4.md)
+   * [The initial basic feasible solution](Chapter_29_Linear_Programming/exercises_29.5.md)
+   * [Problems](Chapter_29_Linear_Programming/problems.md)
 * [Polynomials and the FFT](Chapter_30_Polynomials_and_the_FFT/README.md)
    * [Representing polynomials](Chapter_30_Polynomials_and_the_FFT/exercises_30.1.md)
    * [The DFT and FFT](Chapter_30_Polynomials_and_the_FFT/exercises_30.2.md)
@@ -201,4 +225,3 @@
    * [Randomization and linear programming](Chapter_35_Approximation_Algorithms/exercises_35.4.md)
    * [The subset-sum problem](Chapter_35_Approximation_Algorithms/exercises_35.5.md)
    * [Problem](Chapter_35_Approximation_Algorithms/problems.md)
-
