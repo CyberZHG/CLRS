@@ -160,7 +160,7 @@
    * [Multithreaded merge sort](Chapter_27_Multithreaded_Algorithms/exercises_27.3.md)
    * [Problems](Chapter_27_Multithreaded_Algorithms/problems.md)
 * [Matrix Operations](Chapter_28_Matrix_Operations/README.md)
-   * [Solving systems of linear equations](Chapter_28_Matrix_Operations/exercises28_1md.md)
+   * [Solving systems of linear equations](Chapter_28_Matrix_Operations/exercises_28.1.md)
    * [Inverting matrices](Chapter_28_Matrix_Operations/exercises_28.2.md)
    * [Symmetric positive-definite matrices and least-squares approximation](Chapter_28_Matrix_Operations/exercises_28.3.md)
    * [Problems](Chapter_28_Matrix_Operations/problems.md)
