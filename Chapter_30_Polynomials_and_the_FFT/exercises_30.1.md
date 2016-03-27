@@ -1,2 +1,2 @@
-# Representing polynomials
+## 30.1 Representing polynomials
 
