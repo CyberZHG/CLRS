@@ -1,2 +1,2 @@
-# The simplex algorithm
+## 29.3 The simplex algorithm
 
