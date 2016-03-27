@@ -1,2 +1,2 @@
-# Duality
+## 29.4 Duality
 
