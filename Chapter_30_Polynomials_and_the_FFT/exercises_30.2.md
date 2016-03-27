@@ -1,2 +1,2 @@
-# The DFT and FFT
+## 30.2 The DFT and FFT
 
