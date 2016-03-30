@@ -119,3 +119,5 @@ Suppose $$n_1 n_2 x + n_3 n_4 y = 1$$, then $$n_1 (n_2 x) + n_3 (n_4 y) = 1$$, t
 
 General: in the first round, divide the elements into two sets with equal number of elements, calculate the products of the two set separately, if the two products are relatively prime, then the element in one set is pairwise relatively prime with the element in the other set. In the next iterations, for each set, we divide the elements into two subsets, suppose we have subsets $$\{ (s_1, s_2), (s_3, s_4), \dots \}$$, then we calculate the products of $$\{s_1, s_3, \dots\}$$ and $$\{s_2, s_4, \dots\}$$, if the two products are relatively prime, then all the pairs of subset are pairwise relatively prime similar to the first round. In each iteration, the number of elements in a subset is half of the original set, thus there are $$\lceil \lg k \rceil$$ pairs of products.
 
+To choose the subsets efficiently, in the $$k$$th iteration, we could divide the numbers based on the value of the index's $$k$$th bit.
+
