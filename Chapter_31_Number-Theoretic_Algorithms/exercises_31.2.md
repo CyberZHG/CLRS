@@ -56,32 +56,62 @@ Since $$d \cdot a ~\text{mod}~ d \cdot b = d \cdot (a ~\text{mod}~ b)$$, $$\text
 * If $$k$$ is odd, then $$(1, -F_{k-2}, F_{k-1})$$.
 * If $$k$$ is even, then $$(1, F_{k-2}, -F_{k-1})$$.
 
-If $$k = 2$$, then $$F_2 = 2$$, $$F_3 = 3$$, $$1 \cdot 3 - 1 \cdot 2 = 1$$.
+### 31.2-7
 
-If $$k$$ is odd, 
+> Define the $$\text{gcd}$$ function for more than two arguments by the recursive equation $$\text{gcd}(a_0, a_1, \cdots, a_n) = \text{gcd}(a_0, \text{gcd}(a_1, a_2, \cdots, a_n))$$. Show that the $$\text{gcd}$$ function returns the same answer independent of the order in which its arguments are specified. Also show how to find integers $$x_0, x_1, \cdots, x_n$$ such that $$\text{gcd}(a_0, a_1, \dots, a_n) = a_0 x_0 + a_1 x_1 + \cdots + a_n x_n$$. Show that the number of divisions performed by your algorithm is $$O(n + \lg (max \{a_0, a_1, \cdots, a_n \}))$$.
 
-$$
-\begin{array}{ll}
-& -F_{k-2} \cdot F_{k+1} + F_{k-1} \cdot F_{k} \\
-=& -F_{k-2} \cdot (F_{k} + F_{k-1} ) + F_{k-1} \cdot F_k \\ 
-\end{array}
-$$
+Suppose $$\text{gcd}(a_0, \text{gcd}(a_1, a_2, \cdots, a_n))  = a_0 \cdot x + \text{gcd}(a_1, a_2, \cdots, a_n) \cdot y$$ and $$\text{gcd}(a_1, \text{gcd}(a_2, a_3, \cdots, a_n))  = a_1 \cdot x' + \text{gcd}(a_2, a_3, \cdots, a_n) \cdot y'$$, then the coefficient of $$a_1$$ is $$y \cdot x'$$.
+
+```python
+def extended_euclid(a, b):
+    if b == 0:
+        return (a, 1, 0)
+    d, x, y = extended_euclid(b, a % b)
+    return (d, y, x - (a // b) * y)
 
 
-31.2-7
-Define the gcd function for more than two arguments by the recursive equation
-gcd.a0; a1; : : : ;an/ D gcd.a0; gcd.a1; a2; : : : ;an//. Show that the gcd function
-returns the same answer independent of the order in which its arguments are specified.
-Also show how to find integers x0; x1; : : : ;xn such that gcd.a0; a1; : : : ;an/ D
-a0x0 C a1x1 C  Canxn. Show that the number of divisions performed by your
-algorithm is O.n C lg.max fa0; a1; : : : ;ang//.
-31.2-8
-Define lcm.a1; a2; : : : ;an/ to be the least common multiple of the n integers
-a1; a2; : : : ;an, that is, the smallest nonnegative integer that is a multiple of each ai .
-Show how to compute lcm.a1; a2; : : : ;an/ efficiently using the (two-argument) gcd
-operation as a subroutine.
-31.2-9
-Prove that n1, n2, n3, and n4 are pairwise relatively prime if and only if
-gcd.n1n2; n3n4/ D gcd.n1n3; n2n4/ D 1 :
-More generally, show that n1; n2; : : : ;nk are pairwise relatively prime if and only
-if a set of dlg ke pairs of numbers derived from the ni are relatively prime.
+def extended_eculid_multi(a):
+    if len(a) == 1:
+        return (a[0], [1])
+    g = a[-1]
+    xs = [1] * len(a)
+    ys = [0] * len(a)
+    for i in xrange(len(a) - 2, -1, -1):
+        g, xs[i], ys[i + 1] = extended_euclid(a[i], g)
+    m = 1
+    for i in xrange(1, len(a)):
+        m *= ys[i]
+        xs[i] *= m
+    return (g, xs)
+```
+
+### 31.2-8
+
+> Define $$\text{lcm}(a_1, a_2, \dots, a_n)$$ to be the __*least common multiple*__ of the $$n$$ integers $$a_1, a_2, \dots, a_n$$, that is, the smallest nonnegative integer that is a multiple of each $$a_i$$. Show how to compute $$\text{lcm}(a_1, a_2, \dots, a_n)$$ efficiently using the (two-argument) $$\text{gcd}$$ operation as a subroutine.
+
+```python
+def gcd(a, b):
+    if b == 0:
+        return a
+    return gcd(b, a % b)
+
+
+def lcm(a, b):
+    return a / gcd(a, b) * b
+
+
+def lcm_multi(lst):
+    l = lst[0]
+    for i in xrange(1, len(lst)):
+        l = lcm(l, lst[i])
+    return l
+```
+
+### 31.2-9
+
+> Prove that $$n_1$$, $$n_2$$, $$n_3$$, and $$n_4$$ are pairwise relatively prime if and only if
+> 
+> $$\text{gcd}(n_1n_2,n_3n_4) = \text{gcd}(n_1n_3, n_2n_4) = 1$$
+> 
+> More generally, show that $$n_1, n_2, \dots, n_k$$ are pairwise relatively prime if and only if a set of $$\lceil \lg k \rceil$$ pairs of numbers derived from the $$n_i$$ are relatively prime.
+
