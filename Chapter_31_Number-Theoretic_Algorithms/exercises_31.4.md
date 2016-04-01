@@ -10,14 +10,23 @@ $$\{6, 16, 26, 36, 46\}$$.
 
 > Prove that the equation $$ax \equiv ay ~(\text{mod}~n)$$ implies $$x \equiv y ~(\text{mod}~n)$$ whenever $$\text{gcd}(a, n) = 1$$. Show that the condition $$\text{gcd}(a, n) = 1$$ is necessary by supplying a counterexample with $$\text{gcd}(a, n) > 1$$.
 
+$$d = \text{gcd}(ax, n) = \text{gcd}(x, n)$$
+
+Since $$ax \cdot x' + n \cdot y' = d$$, then $$x \cdot (ax') + n \cdot y' = d$$.
+
+$$x_0 = x'(ay / d)$$,
+
+$$x_0' = (ax')(y / d) = x'(ay / d) = x_0$$.
+
 ### 31.4-3
 
-> Consider the following change to line 3 of the procedure MODULAR-LINEAREQUATION-SOLVER: 
+> Consider the following change to line 3 of the procedure MODULAR-LINEAR-EQUATION-SOLVER: 
 > 
 > ```
 3 x0 = x'(b/d) mod (n/d) 
 ```
-> Will this work? Explain why or why not.
+
+Assume that $$x_0 \ge n / d$$, then the largest solution is $$x_0 + (d - 1) * (n / d) \ge d * n / d \ge n$$, which is impossible, therefore $$x_0 < n / d$$.
 
 ### 31.4-4 $$\star$$
 
