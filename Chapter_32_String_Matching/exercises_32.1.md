@@ -73,3 +73,4 @@ And since $$d \ge 2$$, $$1 - d^{-1} \ge 0.5$$, and since $$1 - d^{-m} < 1$$, $$\
 
 > Note that the gap character may occur an arbitrary number of times in the pattern but not at all in the text. Give a polynomial-time algorithm to determine whether such a pattern $$P$$ occurs in a given text $$T$$, and analyze the running time of your algorithm.
 
+Dynamic programming, $$\Theta(n^2 m)$$.
