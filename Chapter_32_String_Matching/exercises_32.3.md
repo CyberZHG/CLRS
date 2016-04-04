@@ -42,12 +42,16 @@ $$ababbabbababbababbabb$$ over the alphabet $$\sigma = \{a, b\}$$.
 
 > We call a pattern $$P$$ __*nonoverlappable*__ if $$P_k \sqsupset P_q$$ implies $$k = 0$$ or $$k = q$$. Describe the state-transition diagram of the string-matching automaton for a nonoverlappable pattern.
 
+$$\delta(q, a) \in \{q+1, 0\}$$.
+
 ### 32.3-4 $$\star$$
 
 > Given two patterns $$P$$ and $$P'$$, describe how to construct a finite automaton that determines all occurrences of either pattern. Try to minimize the number of states in your automaton.
+
+Combine the common prefix and suffix.
 
 ### 32.3-5
 
 > Given a pattern $$P$$ containing gap characters (see Exercise 32.1-4), show how to build a finite automaton that can find an occurrence of $$P$$ in a text $$T$$ in $$O(n)$$ matching time, where $$n = |T|$$.
 
-
+Split the string with the gap characters, build finite automatons for each substring. When a substring is matched, moved to the next finite automaton.
