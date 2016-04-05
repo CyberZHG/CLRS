@@ -46,11 +46,16 @@ $$
 
 > Explain why the modified algorithm is correct, and explain in what sense this change constitutes an improvement.
 
+If $$P[q + 1] \ne T[i]$$, then if $$P[\pi[q] + q] = P[q + 1] \ne T[i]$$, there is no need to compare $$P[\pi[q] + q]$$ with $$T[i]$$.
+
 ### 32.4-7
 
 > Give a linear-time algorithm to determine whether a text $$T$$ is a cyclic rotation of another string $$T'$$. For example, $$arc$$ and $$car$$ are cyclic rotations of each other.
+
+Find $$T'$$ in $$TT$$.
 
 ### 32.4-8 $$\star$$
 
 > Give an $$O(m|\Sigma|)$$-time algorithm for computing the transition function $$\delta$$ for the string-matching automaton corresponding to a given pattern $$P$$. (Hint: Prove that $$\delta(q, a) = \delta(\pi[q], a)$$ if $$q = m$$ or $$P[q + 1] \ne a$$.)
 
+Compute the prefix function $$m$$ times.
