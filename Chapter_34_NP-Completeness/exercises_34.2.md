@@ -1,2 +1,2 @@
-# Polynomial-time verification
+## 34.2 Polynomial-time verification
 
