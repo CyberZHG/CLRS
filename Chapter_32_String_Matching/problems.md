@@ -6,7 +6,23 @@
 
 > __*a*__. Give an efficient algorithm that takes as input a pattern $$P[1 \dots m]$$ and computes the value $$\rho(P_i)$$ for $$i = 1, 2, \dots, m$$. What is the running time of your algorithm?
 
+Compute $$\pi$$, let $$l = m - \pi[m]$$, if $$m ~\text{mod}~ l = 0$$ and for all $$p = m - i \cdot l > 0$$, $$p - \pi[p] = l$$, then $$\rho(P_i) = m / l$$, otherwise $$\rho(P_i) = 1$$.  The running time is $$\Theta(n)$$.
+
 > __*b*__. For any pattern $$P[1 \dots m]$$, let $$\rho^*(P)$$ be defined as $$\max_{1 \le i \le m} \rho(P_i)$$. Prove that if the pattern $$P$$ is chosen randomly from the set of all binary strings of length $$m$$, then the expected value of $$\rho^*(P)$$ is $$O(1)$$.
+
+$$P(\rho^*(P) \ge 2)=\frac{1}{2} + \frac{1}{8} + \frac{1}{32} + \cdots \approx \frac{2}{3}$$
+
+$$P(\rho^*(P) \ge 3)=\frac{1}{4} + \frac{1}{32} + \frac{1}{256} + \cdots \approx \frac{2}{7}$$
+
+$$P(\rho^*(P) \ge 4)=\frac{1}{8} + \frac{1}{128} + \frac{1}{2048} + \cdots \approx \frac{2}{15}$$
+
+$$P(\rho^*(P) = 1) = \frac{1}{3}$$
+
+$$P(\rho^*(P) = 2) = \frac{8}{21}$$
+
+$$P(\rho^*(P) = 3) = \frac{16}{105}$$
+
+$$\text{E}[\rho^*(P)] = 1 \cdot \frac{1}{3} + 2 \cdot \frac{8}{21} + 3 \cdot \frac{16}{105} + \dots \approx 2.21 $$
 
 > __*c*__. Argue that the following string-matching algorithm correctly finds all occurrences of pattern $$P$$ in a text $$T[1 \dots n]$$ in time $$O(\rho^*(P)n + m)$$:
 
