@@ -1,2 +1,2 @@
-# NP-completeness and reducibility
+## 34.3 NP-completeness and reducibility
 
