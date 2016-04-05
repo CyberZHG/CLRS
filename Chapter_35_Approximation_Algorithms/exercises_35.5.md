@@ -1,2 +1,2 @@
-# The subset-sum problem
+## 35.5 The subset-sum problem
 
