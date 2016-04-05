@@ -1,2 +1,2 @@
-# Randomization and linear programming
+## 35.4 Randomization and linear programming
 
