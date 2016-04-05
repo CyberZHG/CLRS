@@ -2,7 +2,7 @@
 
 ### 32.4-1
 
-> Compute the prefix function $$\pi$$ for the pattern $$ababbabbabbababbabb$$.
+> Compute the prefix function $$\pi$$ for the pattern $$\text{ababbabbabbababbabb}$$.
 
 $$\pi = \{ 0, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 3, 4, 5, 6, 7, 8 \}$$.
 
@@ -50,7 +50,7 @@ If $$P[q + 1] \ne T[i]$$, then if $$P[\pi[q] + q] = P[q + 1] \ne T[i]$$, there i
 
 ### 32.4-7
 
-> Give a linear-time algorithm to determine whether a text $$T$$ is a cyclic rotation of another string $$T'$$. For example, $$arc$$ and $$car$$ are cyclic rotations of each other.
+> Give a linear-time algorithm to determine whether a text $$T$$ is a cyclic rotation of another string $$T'$$. For example, $$\text{arc}$$ and $$\text{car}$$ are cyclic rotations of each other.
 
 Find $$T'$$ in $$TT$$.
 
