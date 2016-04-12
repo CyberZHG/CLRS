@@ -15,6 +15,7 @@
 > e. 935, 278, 347, 621, 299, 392, 358, 363.
 
 c is impossible since 911 < 912.
+e is impossible since 299 < 347.
 
 ### 12.2-2
 
