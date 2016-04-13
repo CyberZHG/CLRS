@@ -4,18 +4,18 @@
 
 > Suppose that we have numbers between 1 and 1000 in a binary search tree, and we want to search for the number 363. Which of the following sequences could not be the sequence of nodes examined?
 
-> a. 2, 252, 401, 398, 330, 344, 397, 363.
+> __*a*__. 2, 252, 401, 398, 330, 344, 397, 363.
 
-> b. 924, 220, 911, 244, 898, 258, 362, 363.
+> __*b*__. 924, 220, 911, 244, 898, 258, 362, 363.
 
-> c. 925, 202, 911, 240, 912, 245, 363.
+> __*c*__. 925, 202, 911, 240, 912, 245, 363.
 
-> d. 2, 399, 387, 219, 266, 382, 381, 278, 363.
+> __*d*__. 2, 399, 387, 219, 266, 382, 381, 278, 363.
 
-> e. 935, 278, 347, 621, 299, 392, 358, 363.
+> __*e*__. 935, 278, 347, 621, 299, 392, 358, 363.
 
-c is impossible since 911 < 912.
-e is impossible since 299 < 347.
+* __*c*__ is impossible since 911 < 912.
+* __*e*__ is impossible since 299 < 347.
 
 ### 12.2-2
 
