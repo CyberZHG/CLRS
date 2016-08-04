@@ -6,7 +6,8 @@
         "disqus",
         "github",
         "search",
-        "ga"
+        "ga",
+        "katex"
     ],
     "pluginsConfig": {
         "disqus": {
