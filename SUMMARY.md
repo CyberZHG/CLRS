@@ -107,7 +107,8 @@
    * [The accounting method](Chapter_17_Amortized_Analysis/exercises_17.2.md)
    * [The potential method](Chapter_17_Amortized_Analysis/exercises_17.3.md)
    * [Dynamic tables](Chapter_17_Amortized_Analysis/exercises_17.4.md)
-   * [Problems](Chapter_17_Amortized_Analysis/problems.md)
+   * [Problems 1](Chapter_17_Amortized_Analysis/problems_1.md)
+   * [Problems 2](Chapter_17_Amortized_Analysis/problems_2.md)
 
 
 * [B-Trees](Chapter_18_B-Trees/README.md)
