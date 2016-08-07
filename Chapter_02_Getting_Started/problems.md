@@ -15,7 +15,7 @@ $$\Theta(k^2) \cdot n/k = \Theta(nk)$$
 
 > __*c*__. Given that the modified algorithm runs in $$\Theta(nk+n\lg(n/k))$$ worst-case time, what is the largest value of k as a function of n for which the modified algorithm has the same running time as standard merge sort, in terms of $$\Theta$$-notation?
 
-Since $$n \lg (n/k) <= n \lg n$$, thus $$nk = n\lg n$$, $$n=\lg n$$.
+Since $$n \lg (n/k) <= n \lg n$$, thus $$nk = n\lg n$$, $$k=\lg n$$.
 
 > __*d*__. How should we choose $$k$$ in practice?
 
