@@ -10,11 +10,11 @@ $$0.5 \cdot (f(n) + g(n)) \le \max(f(n), g(n)) \le 1 \cdot (f(n) + g(n))$$
 
 > Show that for any real constants $$a$$ and $$b$$, where $$b>0$$, $$(n+a)^b=\Theta(n^b)$$.
 
-If $$a > 0$$, $$(n + a) ^ b < (n + n) ^ b = (2 n)^b$$;
+If $$a > 0$$, then $$(n + a) ^ b < (n + n) ^ b = (2 n)^b = 2^b \cdot n^b$$;
 
-If $$a < 0$$, let $$a := -a$$, $$(n - a) ^ b > (n - 0.5n) ^ b = (0.5 n)^b$$,
+If $$a < 0$$, let $$a := -a$$, then $$(n - a) ^ b > (n - 0.5n) ^ b = (0.5 n)^b = 0.5^b \cdot n^b$$,
 
-$$(0.5 n)^b \le (n+a)^b \le (2 n)^b$$, thus $$(n+a)^b=\Theta(n^b)$$.
+Since $$0.5^b \cdot n^b \le (n+a)^b \le 2^b \cdot n^b$$, therefore $$(n+a)^b=\Theta(n^b)$$.
 
 ### 3.1-3
 
