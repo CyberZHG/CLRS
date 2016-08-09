@@ -1,7 +1,6 @@
 ## Introduction
 
 [![travis-ci](https://travis-ci.org/CyberZHG/CLRS.svg)](https://travis-ci.org/CyberZHG/CLRS)
-[![Build Status](https://www.gitbook.io/button/status/book/cyberzhg/clrs_solution)](https://www.gitbook.io/book/cyberzhg/clrs_solution/activity) 
 
 Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd edition.
 
