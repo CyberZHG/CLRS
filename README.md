@@ -6,10 +6,10 @@ Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd editi
 
 ## Plugins
 
-If you are browsing the files on GitHub, you can use the following extension to show LaTeX formulas.
+If you are browsing the files on GitHub, you can use the following extension to show LaTeX formulas:
 
-Chrome: [LaTeX GitHub Markdown](https://chrome.google.com/webstore/detail/latex-github-markdown/bembdpjahbkabjdpdgdmalckbbcglhjb)
+[![Chrome Web Store](https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_206x58.png)](https://chrome.google.com/webstore/detail/latex-github-markdown/bembdpjahbkabjdpdgdmalckbbcglhjb)
 
-You can see a LaTeX button in the right-top of the file preview:
+You can see a LaTeX button in the right-top corner of the rendered Markdown file:
 
 ![LaTeX Button](https://cloud.githubusercontent.com/assets/853842/17434431/f2aab41a-5b3c-11e6-824a-bcecceaa9733.png)
