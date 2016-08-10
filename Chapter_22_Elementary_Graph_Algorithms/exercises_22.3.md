@@ -64,7 +64,7 @@ $$v$$ is visited before $$u$$.
 
 > Show that in an undirected graph, classifying an edge $$(u, v)$$ as a tree edge or a back edge according to whether $$(u, v)$$ or $$(v, u)$$ is encountered first during the depth-first search is equivalent to classifying it according to the ordering of the four types in the classification scheme.
 
-Obviously.
+By changing an undirected graph into a directed graph with two-way edges, an equivalent result is produced. 
 
 ### 22.3-7
 
