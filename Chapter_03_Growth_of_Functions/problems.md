@@ -113,11 +113,11 @@ integers $$n$$.
 
 |$$f(n)$$|$$c$$|$$f_c^\ast(n)$$|
 |:-:|:-:|:-:|
-|$$n-1$$|0|$$n$$|
-|$$\lg n$$|1|$$\lg^\ast n$$|
-|$$n/2$$|1|$$\lg n$$|
-|$$n/2$$|2|$$(\lg n)-1$$|
-|$$\sqrt{n}$$|2|$$2 \log_n2$$|
-|$$\sqrt{n}$$|1|$$2 \log_n1$$|
-|$$n^{1/3}$$|2|$$3 \log_n2$$|
-|$$n/\lg n$$|2|$$?$$|
+|$$n-1$$|0|$$\Theta(n)$$|
+|$$\lg n$$|1|$$\Theta(\lg^\ast n)$$|
+|$$n/2$$|1|$$\Theta(\lg n)$$|
+|$$n/2$$|2|$$\Theta(\lg n)$$|
+|$$\sqrt{n}$$|2|$$\Theta(\lg\lg n)$$|
+|$$\sqrt{n}$$|1|not converge|
+|$$n^{1/3}$$|2|$$\Theta(\log_3 \lg n)$$|
+|$$n/\lg n$$|2|$$\omega(\lg\lg n) o(\lg n)$$|
