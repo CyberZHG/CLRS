@@ -73,7 +73,7 @@ $$x$$'s parent is $$T_y$$'s parent, $$x$$'s left child is $$T_y$$ and its right 
 
 Red. RB-INSERT-FIXUP(T, x).
 
-> __*e*__. Argue that no generality is lost by making the assumption in part (b). Describe the symmetric situation that arises when $$T1.bh \le T2.bh$$.
+> __*e*__. Argue that no generality is lost by making the assumption in part (b). Describe the symmetric situation that arises when $$T_1.bh \le T_2.bh$$.
 
 Symmetric.
 
