@@ -1,9 +1,9 @@
 ## Introduction
 
-[![GitHub forks](https://img.shields.io/github/forks/CyberZHG/CLRS.svg?style=social&label=Fork&maxAge=2592000)](https://travis-ci.org/CyberZHG/CLRS)
-[![GitHub stars](https://img.shields.io/github/stars/CyberZHG/CLRS.svg?style=social&label=Star&maxAge=2592000)](https://travis-ci.org/CyberZHG/CLRS)
-[![GitHub watchers](https://img.shields.io/github/watchers/CyberZHG/CLRS.svg?style=social&label=Watch&maxAge=2592000)](https://travis-ci.org/CyberZHG/CLRS)
-[![GitHub followers](https://img.shields.io/github/followers/CyberZHG.svg?style=social&label=Follow&maxAge=2592000)](https://travis-ci.org/CyberZHG)
+[![GitHub forks](https://img.shields.io/github/forks/CyberZHG/CLRS.svg?style=social&label=Fork&maxAge=2592000)](https://github.com/CyberZHG/CLRS)
+[![GitHub stars](https://img.shields.io/github/stars/CyberZHG/CLRS.svg?style=social&label=Star&maxAge=2592000)](https://github.com/CyberZHG/CLRS)
+[![GitHub watchers](https://img.shields.io/github/watchers/CyberZHG/CLRS.svg?style=social&label=Watch&maxAge=2592000)](https://github.com/CyberZHG/CLRS)
+[![GitHub followers](https://img.shields.io/github/followers/CyberZHG.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/CyberZHG)
 
 [![travis-ci](https://travis-ci.org/CyberZHG/CLRS.svg)](https://travis-ci.org/CyberZHG/CLRS)
 [![GitHub issues](https://img.shields.io/github/issues/CyberZHG/CLRS.svg?maxAge=2592000)](https://github.com/CyberZHG/CLRS/issues)
