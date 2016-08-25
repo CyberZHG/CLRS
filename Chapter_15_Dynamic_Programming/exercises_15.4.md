@@ -11,15 +11,16 @@ $$\langle 1, 0, 0, 1, 1, 0 \rangle$$.
 > Give pseudocode to reconstruct an LCS from the completed $$c$$ table and the original sequences $$X = \langle x_1, x_2, \dots, x_m \rangle$$ and $$Y = \langle y_1, y_2, \dots, y_n\rangle$$ in $$O(m + n)$$ time, without using the $$b$$ table.
 
 ```
-PRINT-LCS(c, X, i, j)
+PRINT-LCS(c, X, Y, i, j)
  1 if i == 0 or j == 0
  2     return
- 3 if c[i][j] == c[i - 1][j - 1] + 1
- 4     PRINT-LCS(c, X, i - 1, j - 1)
- 5     print xi
- 6 elseif c[i][j] == c[i - 1][j]
- 7     PRINT-LCS(c, X, i - 1, j)
- 8 else PRINT-LCS(c, X, i, j - 1)
+ 3 if X[i] == Y[j]
+ 4     PRINT-LCS(c, X, Y, i - 1, j - 1)
+ 5     print X[i]
+ 6 if c[i - 1][j] > c[i][j - 1]
+ 7     PRINT-LCS(c, X, Y, i - 1, j)
+ 8 else
+ 9     PRINT-LCS(c, X, Y, i, j - 1)
 ```
 
 ### 15.4-3
