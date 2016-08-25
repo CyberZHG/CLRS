@@ -17,7 +17,7 @@ PRINT-LCS(c, X, Y, i, j)
  3 if X[i] == Y[j]
  4     PRINT-LCS(c, X, Y, i - 1, j - 1)
  5     print X[i]
- 6 if c[i - 1][j] > c[i][j - 1]
+ 6 elseif c[i - 1][j] > c[i][j - 1]
  7     PRINT-LCS(c, X, Y, i - 1, j)
  8 else
  9     PRINT-LCS(c, X, Y, i, j - 1)
