@@ -12,7 +12,7 @@ $$\langle 1, 0, 0, 1, 1, 0 \rangle$$.
 
 ```
 PRINT-LCS(c, X, Y, i, j)
- 1 if i == 0 or j == 0
+ 1 if c[i][j] == 0
  2     return
  3 if X[i] == Y[j]
  4     PRINT-LCS(c, X, Y, i - 1, j - 1)
