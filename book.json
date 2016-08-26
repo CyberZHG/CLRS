@@ -23,7 +23,7 @@
             "configuration": "auto"
         },
         "sitemap": {
-            "hostname": "https://www.gitbook.com/book/cyberzhg/clrs_solution/"
+            "hostname": "https://cyberzhg.gitbooks.io/clrs_solution/content/"
         }
     }
 }
