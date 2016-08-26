@@ -22,8 +22,8 @@
             "token": "UA-75597402-1",
             "configuration": "auto"
         },
-        "sitemap": {
-            "hostname": "https://cyberzhg.gitbooks.io/clrs_solution/content/"
+        "sitemap-general": {
+            "prefix": "https://cyberzhg.gitbooks.io/clrs_solution/content/"
         }
     }
 }
