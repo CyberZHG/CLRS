@@ -6,7 +6,8 @@
         "github",
         "search",
         "ga",
-        "mathjax"
+        "mathjax",
+        "meta"
     ],
     "pluginsConfig": {
         "disqus": {
@@ -19,6 +20,14 @@
         "ga": {
             "token": "UA-75597402-1",
             "configuration": "auto"
+        },
+        "meta": {
+            "data": [
+                {
+                  "name": "google-site-verification",
+                  "content": "AJ-kdEF3EADDcL_4CuIJs3V29ZkarsZBX-YmVZ3FCeA"
+                },
+            ]
         }
     }
 }
