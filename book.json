@@ -8,7 +8,7 @@
         "ga",
         "mathjax",
         "meta",
-        "sitemap"
+        "sitemap-general"
     ],
     "pluginsConfig": {
         "disqus": {
