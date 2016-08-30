@@ -22,6 +22,10 @@
             "token": "UA-75597402-1",
             "configuration": "auto"
         },
+        "meta": {
+            "name": "google-site-verification",
+            "content": "AJ-kdEF3EADDcL_4CuIJs3V29ZkarsZBX-YmVZ3FCeA"
+        },
         "sitemap-general": {
             "prefix": "https://cyberzhg.gitbooks.io/clrs_solution/content/"
         }
