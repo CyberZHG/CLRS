@@ -12,7 +12,7 @@
     ],
     "pluginsConfig": {
         "disqus": {
-            "shortName": "clrssolution",
+            "shortName": "clrs",
             "useIdentifier": false
         },
         "github": {
@@ -27,7 +27,7 @@
             "content": "AJ-kdEF3EADDcL_4CuIJs3V29ZkarsZBX-YmVZ3FCeA"
         },
         "sitemap-general": {
-            "prefix": "https://cyberzhg.gitbooks.io/clrs_solution/content/"
+            "prefix": "https://cyberzhg.gitbooks.io/clrs/content/"
         }
     }
 }
