@@ -7,30 +7,29 @@
 Directed:
 
 | $$i$$ \ $$j$$ | WHITE | GRAY | BLACK |
-|:-:|:-:|:-:|:-:|
-|WHITE|TBFC|BC|C|
-|GRAY|TF|TBF|TFC|
-|BLACK||BC|TBFC|
+| :---: | :---: | :---: | :---: |
+| WHITE | TBFC | BC | C |
+| GRAY | TF | TBF | TFC |
+| BLACK |  | BC | TBFC |
 
 Undirected:
 
 | $$i$$ \ $$j$$ | WHITE | GRAY | BLACK |
-|:-:|:-:|:-:|:-:|
-|WHITE|TB|TB||
-|GRAY|TB|TB|TB|
-|BLACK||TB|TB|
+| :---: | :---: | :---: | :---: |
+| WHITE | TB | TB |  |
+| GRAY | TB | TB | TB |
+| BLACK |  | TB | TB |
 
 ### 22.3-2
 
-> Show how depth-first search works on the graph of Figure 22.6. Assume that the __*for*__ loop of lines 5–7 of the DFS procedure considers the vertices in alphabetical order, and assume that each adjacency list is ordered alphabetically. Show the discovery and finishing times for each vertex, and show the classification of each edge.
+> Show how depth-first search works on the graph of Figure 22.6. Assume that the _**for**_ loop of lines 5–7 of the DFS procedure considers the vertices in alphabetical order, and assume that each adjacency list is ordered alphabetically. Show the discovery and finishing times for each vertex, and show the classification of each edge.
 
 ![](./img/22.3-2_1.png)
 
-
-* Tree edges: (q, s) (s, v) (v, w) (q, t) (t, x) (x, z) (t, y) (r, u)
-* Back edges: (w, s) (z, x), (y, q)
-* Forward edges: (q, w)
-* Cross edges: (r, y) (u, y)
+* Tree edges: \(q, s\) \(s, v\) \(v, w\) \(q, t\) \(t, x\) \(x, z\) \(t, y\) \(r, u\)
+* Back edges: \(w, s\) \(z, x\), \(y, q\)
+* Forward edges: \(q, w\)
+* Cross edges: \(r, y\) \(u, y\)
 
 ### 22.3-3
 
@@ -47,16 +46,16 @@ Line 3: color = BLACK
 ### 22.3-5
 
 > Show that edge $$(u, v)$$ is
-
-> __*a*__. a tree edge or forward edge if and only if $$u.v < v.d < v.f < u.f$$,
+>
+> _**a**_. a tree edge or forward edge if and only if $$u.d < v.d < v.f < u.f$$,
 
 $$u$$ is an ancestor of $$v$$.
 
-> __*b*__. a back edge if and only if $$v.d \le u.d < u.f \le v.f$$, and
+> _**b**_. a back edge if and only if $$v.d \le u.d < u.f \le v.f$$, and
 
 $$u$$ is a descendant of $$v$$.
 
-> __*c*__. a cross edge if and only if $$v.d < v.f < u.d < u.f$$.
+> _**c**_. a cross edge if and only if $$v.d < v.f < u.d < u.f$$.
 
 $$v$$ is visited before $$u$$.
 
@@ -64,7 +63,7 @@ $$v$$ is visited before $$u$$.
 
 > Show that in an undirected graph, classifying an edge $$(u, v)$$ as a tree edge or a back edge according to whether $$(u, v)$$ or $$(v, u)$$ is encountered first during the depth-first search is equivalent to classifying it according to the ordering of the four types in the classification scheme.
 
-By changing an undirected graph into a directed graph with two-way edges, an equivalent result is produced. 
+By changing an undirected graph into a directed graph with two-way edges, an equivalent result is produced.
 
 ### 22.3-7
 
@@ -80,8 +79,8 @@ $$E = \{(w, u), (w, v), (u, w)\}$$, search $$w$$ first.
 
 ### 22.3-9
 
-> Give a counterexample to the conjecture that if a directed graph $$G$$ contains a path
-from $$u$$ to $$v$$, then any depth-first search must result in $$v.d \le u.f$$.
+> Give a counterexample to the conjecture that if a directed graph $$G$$ contains a path  
+> from $$u$$ to $$v$$, then any depth-first search must result in $$v.d \le u.f$$.
 
 $$E = \{(w, u), (w, v), (u, w)\}$$, search $$w$$ first.
 
@@ -121,7 +120,8 @@ DFS-VISIT(G, u)
 ```
 
 ### 22.3-13 $$\star$$
- 
-> A directed graph $$G = (V, E)$$ is __*singly connected*__ if $$u \leadsto v$$ implies that $$G$$ contains at most one simple path from $$u$$ to $$v$$ for all vertices $$u, v \in V$$. Give an efficient algorithm to determine whether or not a directed graph is singly connected.
+
+> A directed graph $$G = (V, E)$$ is _**singly connected**_ if $$u \leadsto v$$ implies that $$G$$ contains at most one simple path from $$u$$ to $$v$$ for all vertices $$u, v \in V$$. Give an efficient algorithm to determine whether or not a directed graph is singly connected.
 
 Run DFS for every vertex, if $$v.color$$ is BLACK, then the graph is not singly connected, $$O(V\cdot(V+E))$$.
+
