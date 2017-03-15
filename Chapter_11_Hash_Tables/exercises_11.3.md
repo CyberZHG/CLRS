@@ -10,6 +10,34 @@ Compare the long character strings only when they have the same hash values.
 
 > Suppose that we hash a string of $$r$$ characters into $$m$$ slots by treating it as a radix-128 number and then using the division method. We can easily represent the number $$m$$ as a 32-bit computer word, but the string of $$r$$ characters, treated as a radix-128 number, takes many words. How can we apply the division method to compute the hash value of the character string without using more than a constant number of words of storage outside the string itself?
 
+We should calculate
+
+$$\sum_{i=0}^{r-1} c_i \cdot 128^i \mod m$$
+
+It cannot be calculated with a constant number of words of storage because the sum may exceed 2^32 - 1. However, Equation 31.18 suggests
+
+$$
+\begin{align*}
+\sum_{i=0}^{r-1} c_i \cdot 128^i
+ &\equiv \sum_{i=0}^{r-1} (c_i \cdot 128^i) \bmod m \pmod m \\
+ &\equiv \sum_{i=0}^{r-1} (c_i \cdot 128^i \bmod m) \pmod m \\
+ &\equiv \sum_{i=1}^{r-1} (c_i \cdot 128^i \bmod m) + c_1 \cdot 128 \bmod m+ c_0 \bmod m \pmod m \\
+ &\equiv \sum_{i=1}^{r-1} ((c_i \cdot 128^{i-1} \bmod m) + c_1 \bmod m) \bmod m \cdot (128 \bmod m) \bmod m + c_0 \bmod m \pmod m \\
+ &\equiv ... \\
+ &\equiv (...(c_{r-1} \bmod m \cdot (128 \bmod m) \bmod m + c_{r-2} \bmod m) \bmod m \cdot ... \cdot (128 \bmod m) + c_1 \bmod m) \bmod m + c_0 \bmod m \pmod m
+\end{align*}
+$$
+
+It can be calculated with a loop.
+
+```
+sum := 0
+for i = 1 to r
+    sum := ((sum % m) * (128 % m) % m + s[i] % m) % m
+```
+
+And it fits in a word now. Futhermore, we may apply Equation 31.18 again and get
+
 ```
 sum := 0
 for i = 1 to r
