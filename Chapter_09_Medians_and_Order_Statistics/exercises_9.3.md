@@ -210,7 +210,7 @@ def k_closest(a, k):
 
 > Let $$X[1\dots n]$$ and $$Y[1\dots n]$$ be two arrays, each containing $$n$$ numbers already in sorted order. Give an $$O(\lg n)$$-time algorithm to find the median of all $$2n$$ elements in arrays $$X$$ and $$Y$$.
 
-We can find the median in $$O(1)$$ time in a sorted array, compare the medians of the two array, if the meidan of $$X$$ is less than the median of $$Y$$, then we know the median must located in the right side of $$X$$ or left side of $$Y$$. Do it recursively, when there is only one element left in each array, the smaller one is the median.
+We can find the median in $$O(1)$$ time in a sorted array, compare the medians of the two array, if the median of $$X$$ is less than the median of $$Y$$, then we know the median must located in the right side of $$X$$ or left side of $$Y$$. Do it recursively, when there is only one element left in each array, the smaller one is the median.
 
 ```python
 def median_of_two(a, b):
