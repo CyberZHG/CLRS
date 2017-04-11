@@ -66,9 +66,46 @@ Delete bridges then DFS/BFS.
 
 > __*a*__. Show that $$G$$ has an Euler tour if and only if in-degree$$(v)=$$out-degree$$(v)$$ for each vertex $$v \in V$$.
 
+Part 1 : To prove Euler tour exists ⇒ in-degree(v)=out-degree(v)
+
+Euler tour can be decomposed into a set of edge-disjoint simple cycles, that when combined form the tour.
+First, for each sub-cycle,  since they are simple edge-disjoint cycles, each vertex v in the cycle has one edge coming into it and one edge leading out of it. Therefore, in-degree(v)=out-degree(v) for each of the cycles. 
+Second, for the entire graph, since an Euler tour exists, each simple cycle must be connected together, where each cycle has an edge coming in and an edge going out. 
+Therefore, for each vertex v in the graph, in-degree(v)= out-degree(v).
+
+Part 2: To prove in-degree(v)=out-degree(v) =>  Euler tour exists
+
+Start from v, and chose any outgoing edge of v, say (v, u). Since in-degree(u) = out-degree(u) we can pick some outgoing edge of u and continue visiting edges. Each time we pick an edge, we can remove it from further consideration. At each vertex other than v, at the time we visit an entering edge, there must be an outgoing edge left unvisited, since in-degree = out-degree for all vertices. The only vertex for which there may not be an unvisited outgoing edge is v—because we started the cycle by visiting one of v’s outgoing edges. Since there’s always a leaving edge we can visit for any vertex other than v, eventually the cycle must return to v, thus proving the claim.
+
 > __*b*__. Describe an $$O(E)$$-time algorithm to find an Euler tour of $$G$$ if one exists. (Hint: Merge edge-disjoint cycles.)
 
-$$(u, v) \in E$$ and $$(v, w) \in E$$ in one cycle, $$(u', v) \in E$$ and $$(v, w') \in E$$ in another cycle => $$\dots (u, v), (v, w') \dots (u', v), (v, w) \dots$$.
+```
+  1 //defined a Vertex in a strong-connected directed graph
+  2 class Vertex{
+  3     List<Vertex> nexts;
+  4     List<Vertex> prevs;
+  5 
+  6     static boolean reachable(Vertex v, Vertex u){
+  7         //return true only if exist a path from v - > u
+  8         //can be implemented with BFS or DFS algorithm
+  9     }
+ 10 
+ 11     List<Vertex> eulerTour(){
+ 12         List<Vertex> tour= new LinkedList<>();
+ 13 
+ 14         for(Vertex u : this.nexts){
+ 15             if(this.nexts.size() == 1 || reachable(u, this)){
+ 16                 tour.add(u);
+ 17                 this.nexts.remove(u);
+ 18                 tour.addAll(u.eulerTour());
+ 19             }
+ 20         }
+ 21 
+ 22         return tour;
+ 23     }
+ 24 }
+```
+
 
 ### 22-4 Reachability
 
