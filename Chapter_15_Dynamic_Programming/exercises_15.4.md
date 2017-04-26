@@ -28,14 +28,16 @@ PRINT-LCS(c, X, Y, i, j)
 > Give a memoized version of LCS-LENGTH that runs in $$O(mn)$$ time.
 
 ```
-LCS-LENGTH(X, Y, i, j)
- 1 if c[i, j] > -1
- 2     return c[i, j]
- 3 if i == 0 or j == 0
- 4     return c[i, j] = 0
- 5 if xi = yj
- 6     return c[i, j] = LCS-LENGTH(X, Y, i - 1, j - 1) + 1
- 7 return c[i, j] = max(LCS-LENGTH(X, Y, i - 1, j), LCS-LENGTH(X, Y, i, j - 1))
+  1 def LCS-LENGTH(str1, str2):
+  2     lens = [[0]*len(str1) for i in range(len(str2))]
+  3 
+  4     for i in range(len(str1)):
+  5         for j in range(len(str2)):
+  6             if str1[i] == str2[j]:
+  7                 lens[i+1][j+1] = lens[i][j] + 1
+  8             else:
+  9                 lens[i+1][j+1] = max(lens[i+1][j], lens[i][j+1])
+ 10 return lens[len(str1)][len(str2)]
 ```
 
 ### 15.4-4
