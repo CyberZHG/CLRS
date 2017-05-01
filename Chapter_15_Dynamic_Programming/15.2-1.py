@@ -20,10 +20,10 @@ def matrix_chain_order(p):
 
 def optimal_parens(s, p, i, j):
     if i + 1 == j:
-        return str(p[i]) + 'x' + str(p[j])
+        return 'A_{}'.format(i)
     r = '('
     r += optimal_parens(s, p, i, s[i][j])
-    r += ')('
+    r += ' X '
     r += optimal_parens(s, p, s[i][j], j)
     r += ')'
     return r
@@ -36,12 +36,12 @@ class ProblemTestCase(unittest.TestCase):
         m, s = matrix_chain_order(p)
         s = optimal_parens(s, p, 0, len(p) - 1)
         self.assertEqual(m[0][len(p) - 1], 15125)
-        self.assertEqual(s, '((30x35)((35x15)(15x5)))(((5x10)(10x20))(20x25))')
+        self.assertEqual(s, '((A_0 X (A_1 X A_2)) X ((A_3 X A_4) X A_5))')
         p = [5, 10, 3, 12, 5, 50, 6]
         m, s = matrix_chain_order(p)
         s = optimal_parens(s, p, 0, len(p) - 1)
         self.assertEqual(m[0][len(p) - 1], 2010)
-        self.assertEqual(s, '((5x10)(10x3))(((3x12)(12x5))((5x50)(50x6)))')
+        self.assertEqual(s, '((A_0 X A_1) X ((A_2 X A_3) X (A_4 X A_5)))')
 
 
 if __name__ == '__main__':

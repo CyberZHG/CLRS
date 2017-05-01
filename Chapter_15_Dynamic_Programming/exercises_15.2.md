@@ -4,7 +4,33 @@
 
 > Find an optimal parenthesization of a matrix-chain product whose sequence of dimensions is $$\left \langle 5, 10, 3, 12, 5, 50, 6 \right \rangle$$.
 
-$$\displaystyle \left ( \left ( 5 \times 10\right ) \left ( 10 \times 3\right ) \right ) \left ( \left ( \left ( 3 \times 12\right ) \left ( 12 \times 5\right ) \right ) \left ( \left ( 5 \times 50\right ) \left ( 50 \times 6\right ) \right ) \right )$$
+Table m:
+
+|   | 1 | 2   | 3   | 4   | 5    | 6    |
+|---|---|-----|-----|-----|------|------|
+| 1 | 0 | 150 | 330 | 405 | 1655 | 2010 |
+| 2 |   | 0   | 360 | 330 | 2430 | 1950 |
+| 3 |   |     | 0   | 180 | 930  | 1770 |
+| 4 |   |     |     | 0   | 3000 | 1860 |
+| 5 |   |     |     |     | 0    | 1500 |
+| 6 |   |     |     |     |      | 0    |
+
+Table s:
+
+|   | 1 | 2 | 3 | 4 | 5 | 6 |
+|---|---|---|---|---|---|---|
+| 1 |   | 2 | 2 | 2 | 4 | 2 |
+| 2 |   |   | 2 | 2 | 2 | 2 |
+| 3 |   |   |   | 3 | 3 | 4 |
+| 4 |   |   |   |   | 4 | 4 |
+| 5 |   |   |   |   |   | 5 |
+| 6 |   |   |   |   |   |   |
+
+Optimal parenthesization:
+
+$$
+(A_1 \times A_2) \times ((A_3 \times A_4) \times (A_5 \times A_6))
+$$
 
 ### 15.2-2
 
