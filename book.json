@@ -2,7 +2,6 @@
     "plugins": [
         "scrollablecode",
         "fancybox",
-        "disqus",
         "github",
         "search",
         "ga",
@@ -11,10 +10,6 @@
         "sitemap-general"
     ],
     "pluginsConfig": {
-        "disqus": {
-            "shortName": "clrs",
-            "useIdentifier": false
-        },
         "github": {
             "url": "https://github.com/CyberZHG/CLRS"
         },
