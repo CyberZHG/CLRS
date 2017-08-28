@@ -94,7 +94,11 @@ False, $$f(n)=4^n$$, $$f(n/2)=2^n$$.
 
 > __*h*__. $$f(n)+o(f(n))=\Theta(f(n))$$.
 
-False.
+True.
+
+$$f(n) + o(f(n)) >= f(n) = 1 \cdot f(n)$$
+
+$$f(n) + o(f(n)) < f(n) + f(n) < 2 \cdot f(n)$$
 
 ### 3-5 Variations on $$O$$ and $$\Omega$$
 
