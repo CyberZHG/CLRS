@@ -47,5 +47,6 @@ class ChooseChipTestCase(unittest.TestCase):
             good_chip = choose_good_chip(chips)
             self.assertTrue(good_chip.state)
 
+
 if __name__ == '__main__':
     unittest.main()

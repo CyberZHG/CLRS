@@ -67,16 +67,16 @@ class DaryHeapTestCase(unittest.TestCase):
                 if len(heap) == 0:
                     op = 2
                 if op == 1:
-                    l = len(heap)
+                    le = len(heap)
                     m = heap[0]
                     r = extract_max(d, heap)
                     self.assertEqual(m, r)
-                    self.assertEqual(len(heap), l - 1)
+                    self.assertEqual(len(heap), le - 1)
                     self.assertTrue(self.check_max_heap(d, heap))
                 else:
-                    l = len(heap)
+                    le = len(heap)
                     insert(d, heap, random.randint(1, 10000))
-                    self.assertEqual(len(heap), l + 1)
+                    self.assertEqual(len(heap), le + 1)
                     self.assertTrue(self.check_max_heap(d, heap))
 
 

@@ -3,25 +3,25 @@ import unittest
 
 
 class Interval:
-    def __init__(self, l, r):
-        self.l = l
-        self.r = r
+    def __init__(self, lt, rt):
+        self.lt = lt
+        self.rt = rt
 
     def __lt__(self, other):
-        return self.r < other.l
+        return self.rt < other.lt
 
     def __str__(self):
-        return '(' + str(self.l) + ', ' + str(self.r) + ')'
+        return '(' + str(self.lt) + ', ' + str(self.rt) + ')'
 
     def get_intersect(self, interval):
-        return Interval(max(self.l, interval.l), min(self.r, interval.r))
+        return Interval(max(self.lt, interval.lt), min(self.rt, interval.rt))
 
 
 def partition(a, p, r):
     x = a[r - 1]
     for k in range(p, r - 1):
         next_x = x.get_intersect(a[k])
-        if next_x.l <= next_x.r:
+        if next_x.lt <= next_x.rt:
             x = next_x
     i = p - 1
     for k in range(p, r - 1):
@@ -31,10 +31,9 @@ def partition(a, p, r):
     i += 1
     a[i], a[r - 1] = a[r - 1], a[i]
     j = i
-    inter = a[i]
     for k in range(i + 1, r):
         next_x = x.get_intersect(a[k])
-        if next_x.l <= next_x.r:
+        if next_x.lt <= next_x.rt:
             j += 1
             a[j], a[k] = a[k], a[j]
         k -= 1
@@ -60,21 +59,21 @@ class FuzzySortTestCase(unittest.TestCase):
         for _ in range(1000):
             a = [Interval(0, -1) for _ in range(random.randint(1, 1000))]
             for i in range(len(a)):
-                while a[i].l > a[i].r:
-                    a[i].l = random.randint(-1000, 1000)
-                    a[i].r = random.randint(-1000, 1000)
+                while a[i].lt > a[i].rt:
+                    a[i].lt = random.randint(-1000, 1000)
+                    a[i].rt = random.randint(-1000, 1000)
             quicksort(a, 0, len(a))
-            c = a[0].l
+            c = a[0].lt
             for i in range(1, len(a)):
-                if a[i].l > c:
-                    c = a[i].l
-                self.assertTrue(a[i].l <= c <= a[i].r)
+                if a[i].lt > c:
+                    c = a[i].lt
+                self.assertTrue(a[i].lt <= c <= a[i].rt)
 
     def test_uniform(self):
         for _ in range(1000):
-            l = random.randint(0, 100)
-            r = l + random.randint(0, 100)
-            a = [Interval(l, r) for _ in range(random.randint(1, 1000))]
+            lt = random.randint(0, 100)
+            rt = lt + random.randint(0, 100)
+            a = [Interval(lt, rt) for _ in range(random.randint(1, 1000))]
             q, t = partition(a, 0, len(a))
             self.assertEqual(q, 0)
             self.assertEqual(t, len(a) - 1)

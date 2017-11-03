@@ -17,11 +17,11 @@ def right(i):
 
 def max_heapify(a, i):
     max_idx = i
-    l, r = left(i), right(i)
-    if l < len(a) and a[l] > a[max_idx]:
-        max_idx = l
-    if r < len(a) and a[r] > a[max_idx]:
-        max_idx = r
+    lt, rt = left(i), right(i)
+    if lt < len(a) and a[lt] > a[max_idx]:
+        max_idx = lt
+    if rt < len(a) and a[rt] > a[max_idx]:
+        max_idx = rt
     if max_idx != i:
         a[i], a[max_idx] = a[max_idx], a[i]
         max_heapify(a, max_idx)
@@ -69,16 +69,16 @@ class PriorityQueueTestCase(unittest.TestCase):
             elif op == 2:
                 if len(heap) == 0:
                     continue
-                l = len(heap)
+                le = len(heap)
                 m = heap_maximum(heap)
                 r = heap_extract_max(heap)
                 self.assertEqual(m, r)
-                self.assertEqual(len(heap), l - 1)
+                self.assertEqual(len(heap), le - 1)
                 self.assertTrue(check_max_heap(heap))
             else:
-                l = len(heap)
+                le = len(heap)
                 max_heap_insert(heap, random.randint(1, 10000))
-                self.assertEqual(len(heap), l + 1)
+                self.assertEqual(len(heap), le + 1)
                 self.assertTrue(check_max_heap(heap))
 
 

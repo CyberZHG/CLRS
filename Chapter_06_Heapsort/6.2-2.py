@@ -17,11 +17,11 @@ def right(i):
 
 def min_heapify(a, i):
     min_idx = i
-    l, r = left(i), right(i)
-    if l < len(a) and a[l] < a[min_idx]:
-        min_idx = l
-    if r < len(a) and a[r] < a[min_idx]:
-        min_idx = r
+    lt, rt = left(i), right(i)
+    if lt < len(a) and a[lt] < a[min_idx]:
+        min_idx = lt
+    if rt < len(a) and a[rt] < a[min_idx]:
+        min_idx = rt
     if min_idx != i:
         a[i], a[min_idx] = a[min_idx], a[i]
         min_heapify(a, min_idx)
@@ -32,7 +32,7 @@ class MinHeapifyTestCase(unittest.TestCase):
     def test_random(self):
         for _ in range(10000):
             heap = random_min_heap()
-            idx = random.randint(0, len(heap)-1)
+            idx = random.randint(0, len(heap) - 1)
             if idx == 0:
                 heap[0] = random.randint(1, 100)
             else:

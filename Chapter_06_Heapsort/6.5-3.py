@@ -17,11 +17,11 @@ def right(i):
 
 def min_heapify(a, i):
     min_idx = i
-    l, r = left(i), right(i)
-    if l < len(a) and a[l] < a[min_idx]:
-        min_idx = l
-    if r < len(a) and a[r] < a[min_idx]:
-        min_idx = r
+    lt, rt = left(i), right(i)
+    if lt < len(a) and a[lt] < a[min_idx]:
+        min_idx = lt
+    if rt < len(a) and a[rt] < a[min_idx]:
+        min_idx = rt
     if min_idx != i:
         a[i], a[min_idx] = a[min_idx], a[i]
         min_heapify(a, min_idx)
@@ -69,16 +69,16 @@ class PriorityQueueTestCase(unittest.TestCase):
             elif op == 2:
                 if len(heap) == 0:
                     continue
-                l = len(heap)
+                le = len(heap)
                 m = heap_minimum(heap)
                 r = heap_extract_min(heap)
                 self.assertEqual(m, r)
-                self.assertEqual(len(heap), l - 1)
+                self.assertEqual(len(heap), le - 1)
                 self.assertTrue(check_min_heap(heap))
             else:
-                l = len(heap)
+                le = len(heap)
                 min_heap_insert(heap, random.randint(1, 10000))
-                self.assertEqual(len(heap), l + 1)
+                self.assertEqual(len(heap), le + 1)
                 self.assertTrue(check_min_heap(heap))
 
 
