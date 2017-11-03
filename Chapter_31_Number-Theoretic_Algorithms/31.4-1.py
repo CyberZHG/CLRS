@@ -24,8 +24,8 @@ class ProblemTestCase(unittest.TestCase):
             a = random.randint(1, 10000)
             b = random.randint(1, 10000)
             n = random.randint(1, 10000)
-            l = modular_linear_equation_solver(a, b, n)
-            for v in l:
+            lst = modular_linear_equation_solver(a, b, n)
+            for v in lst:
                 self.assertEqual(a * v % n, b % n)
 
 

@@ -1,4 +1,3 @@
-import random
 import unittest
 
 
@@ -36,17 +35,17 @@ class LinearProbing:
 class ProblemTestCase(unittest.TestCase):
 
     def test_case(self):
-        l = LinearProbing()
-        l.insert(0)
-        l.insert(5)
-        l.insert(10)
-        self.assertEqual(l.slots, [0, 5, 10, None, None])
-        l.delete(5)
-        self.assertEqual(l.slots, [0, '[Deleted]', 10, None, None])
-        l.delete(10)
-        self.assertEqual(l.slots, [0, '[Deleted]', '[Deleted]', None, None])
-        l.insert(15)
-        self.assertEqual(l.slots, [0, 15, '[Deleted]', None, None])
+        li = LinearProbing()
+        li.insert(0)
+        li.insert(5)
+        li.insert(10)
+        self.assertEqual(li.slots, [0, 5, 10, None, None])
+        li.delete(5)
+        self.assertEqual(li.slots, [0, '[Deleted]', 10, None, None])
+        li.delete(10)
+        self.assertEqual(li.slots, [0, '[Deleted]', '[Deleted]', None, None])
+        li.insert(15)
+        self.assertEqual(li.slots, [0, 15, '[Deleted]', None, None])
 
 
 if __name__ == '__main__':

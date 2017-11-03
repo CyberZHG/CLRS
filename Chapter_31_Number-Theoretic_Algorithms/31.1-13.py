@@ -8,8 +8,8 @@ def bin2dec(s):
         return ord(s) - ord('0')
     m = n // 2
     h = bin2dec(s[:m])
-    l = bin2dec(s[m:])
-    return (h << (n - m)) + l
+    r = bin2dec(s[m:])
+    return (h << (n - m)) + r
 
 
 class ProblemTestCase(unittest.TestCase):

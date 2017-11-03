@@ -21,11 +21,11 @@ class BinarySearchTree:
     def __init__(self, a):
         self.root = self.build(a, 0, len(a))
 
-    def build(self, a, l, r):
-        if l >= r:
+    def build(self, a, lt, rt):
+        if lt >= rt:
             return None
-        mid = (l + r) // 2
-        return TreeNode(a[mid], self.build(a, l, mid), self.build(a, mid+1, r))
+        mid = (lt + rt) // 2
+        return TreeNode(a[mid], self.build(a, lt, mid), self.build(a, mid + 1, rt))
 
     def get_size(self, x):
         if x is None:

@@ -1,4 +1,3 @@
-import random
 import unittest
 
 
@@ -58,16 +57,16 @@ class ProblemTestCase(unittest.TestCase):
 
     def test_case(self):
         a = [10, 22, 31, 4, 15, 28, 17, 88, 59]
-        l = LinearProbing()
-        q = QuadraticProbing()
-        d = DoubleHashing()
+        li = LinearProbing()
+        qu = QuadraticProbing()
+        do = DoubleHashing()
         for v in a:
-            l.insert(v)
-            q.insert(v)
-            d.insert(v)
-        self.assertEqual(l.slots, [22, 88, None, None, 4, 15, 28, 17, 59, 31, 10])
-        self.assertEqual(q.slots, [22, None, 88, 17, 4, None, 28, 59, 15, 31, 10])
-        self.assertEqual(d.slots, [22, None, 59, 17, 4, 15, 28, 88, None, 31, 10])
+            li.insert(v)
+            qu.insert(v)
+            do.insert(v)
+        self.assertEqual(li.slots, [22, 88, None, None, 4, 15, 28, 17, 59, 31, 10])
+        self.assertEqual(qu.slots, [22, None, 88, 17, 4, None, 28, 59, 15, 31, 10])
+        self.assertEqual(do.slots, [22, None, 59, 17, 4, 15, 28, 88, None, 31, 10])
 
 
 if __name__ == '__main__':

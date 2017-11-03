@@ -1,38 +1,38 @@
 import unittest
 
 
-def print_matrix(l):
+def print_matrix(m):
     s = '\\left \\{ \\begin{matrix}\n'
-    n = len(l)
+    n = len(m)
     for i in xrange(n):
         for j in xrange(n):
             if j > 0:
                 s += ' & '
-            if l[i][j] > 1e50:
+            if m[i][j] > 1e50:
                 s += '\infty'
             else:
-                s += str(int(l[i][j]))
+                s += str(int(m[i][j]))
         s += '\\\\\n'
     s += '\\end{matrix} \\right \\}\n'
     print s
 
 
-def extend_shortest_paths(l, w):
-    n = len(l)
+def extend_shortest_paths(m, w):
+    n = len(m)
     ll = [[1e100 for _ in xrange(n)] for _ in xrange(n)]
     for i in xrange(n):
         for j in xrange(n):
             for k in xrange(n):
-                ll[i][j] = min(ll[i][j], l[i][k] + w[k][j])
+                ll[i][j] = min(ll[i][j], m[i][k] + w[k][j])
     return ll
 
 
 def slow_all_pairs_shortest_paths(w):
     n = len(w)
-    l = w
-    for m in xrange(n - 2):
-        l = extend_shortest_paths(l, w)
-    return l
+    m = w
+    for _ in xrange(n - 2):
+        m = extend_shortest_paths(m, w)
+    return m
 
 
 def fast_all_pairs_shortest_paths(w):

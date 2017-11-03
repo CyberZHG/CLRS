@@ -19,12 +19,12 @@ class ProblemTestCase(unittest.TestCase):
 
     def print_sorted(self, x, s):
         x = sorted(list(map(lambda (k, v): (k, v), x.items())))
-        l = len(s)
+        le = len(s)
         output = ''
         for i in xrange(len(x)):
-            if i % l == 0:
+            if i % le == 0:
                 print(output)
-                output = str(i / l)
+                output = str(i / le)
             output += ' ' + str(x[i][1])
         print(output)
 
