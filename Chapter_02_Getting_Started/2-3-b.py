@@ -18,5 +18,6 @@ class PolynomialEvaluationTestCase(unittest.TestCase):
     def test_simple(self):
         self.assertEqual(polynomial_evaluation([1, 2, 3], 4), 57)
 
+
 if __name__ == '__main__':
     unittest.main()

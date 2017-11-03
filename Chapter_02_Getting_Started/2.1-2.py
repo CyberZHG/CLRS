@@ -24,5 +24,6 @@ class InsertionSortTestCase(unittest.TestCase):
             insertion_sort(arr)
             self.assertEqual(arr, sorted_arr)
 
+
 if __name__ == '__main__':
     unittest.main()

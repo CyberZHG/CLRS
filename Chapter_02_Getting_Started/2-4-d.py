@@ -2,17 +2,17 @@ import random
 import unittest
 
 
-def count_inversion_sub(arr, l, r):
-    if l >= r:
+def count_inversion_sub(arr, lt, rt):
+    if lt >= rt:
         return 0
-    mid = (l + r) // 2
-    cnt = count_inversion_sub(arr, l, mid) + count_inversion_sub(arr, mid+1, r)
-    arr_l = [arr[i] for i in range(l, mid+1)]
+    mid = (lt + rt) // 2
+    cnt = count_inversion_sub(arr, lt, mid) + count_inversion_sub(arr, mid + 1, rt)
+    arr_l = [arr[i] for i in range(lt, mid + 1)]
     arr_l.append(1e100)
-    arr_r = [arr[j] for j in range(mid+1, r+1)]
+    arr_r = [arr[j] for j in range(mid + 1, rt + 1)]
     arr_r.append(1e100)
     i, j = 0, 0
-    for k in range(l, r+1):
+    for k in range(lt, rt + 1):
         if arr_l[i] <= arr_r[j]:
             arr[k] = arr_l[i]
             i += 1
@@ -59,6 +59,7 @@ class CountInversionTestCase(unittest.TestCase):
             arr = self.random_array()
             cnt = self.brute_force(arr)
             self.assertEqual(count_inversion(arr), cnt)
+
 
 if __name__ == '__main__':
     unittest.main()

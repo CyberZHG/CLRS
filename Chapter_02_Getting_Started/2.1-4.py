@@ -22,5 +22,6 @@ class AddBinaryTestCase(unittest.TestCase):
         b = [1, 1, 1]
         self.assertEqual(add_binary(a, b), [0, 0, 1, 1])
 
+
 if __name__ == '__main__':
     unittest.main()

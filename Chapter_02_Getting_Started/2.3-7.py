@@ -3,14 +3,14 @@ import unittest
 
 
 def two_sum(a, x):
-    l, r = 0, len(a)-1
-    while l < r:
-        if a[l] + a[r] == x:
+    lt, rt = 0, len(a) - 1
+    while lt < rt:
+        if a[lt] + a[rt] == x:
             return True
-        elif a[l] + a[r] < x:
-            l += 1
+        elif a[lt] + a[rt] < x:
+            lt += 1
         else:
-            r -= 1
+            rt -= 1
     return False
 
 
@@ -30,6 +30,7 @@ class BinarySearchTestCase(unittest.TestCase):
             a = sorted(self.random_array())
             x = random.randint(0, 200)
             self.assertEqual(two_sum(a, x), self.brute_force(a, x))
+
 
 if __name__ == '__main__':
     unittest.main()

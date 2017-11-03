@@ -24,5 +24,6 @@ class LinearSearchTestCase(unittest.TestCase):
             else:
                 self.assertEqual(a[ret], v)
 
+
 if __name__ == '__main__':
     unittest.main()

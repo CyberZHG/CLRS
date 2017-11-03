@@ -22,5 +22,6 @@ class SelectionSortTestCase(unittest.TestCase):
             selection_sort(arr)
             self.assertEqual(arr, sorted_arr)
 
+
 if __name__ == '__main__':
     unittest.main()

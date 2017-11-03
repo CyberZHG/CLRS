@@ -2,16 +2,16 @@ import random
 import unittest
 
 
-def merge_sort_sub(arr, l, r):
-    if l >= r:
+def merge_sort_sub(arr, lt, rt):
+    if lt >= rt:
         return
-    mid = (l + r) // 2
-    merge_sort_sub(arr, l, mid)
-    merge_sort_sub(arr, mid+1, r)
-    arr_l = [arr[i] for i in range(l, mid+1)]
-    arr_r = [arr[j] for j in range(mid+1, r+1)]
+    mid = (lt + rt) // 2
+    merge_sort_sub(arr, lt, mid)
+    merge_sort_sub(arr, mid + 1, rt)
+    arr_l = [arr[i] for i in range(lt, mid + 1)]
+    arr_r = [arr[j] for j in range(mid + 1, rt + 1)]
     i, j = 0, 0
-    for k in range(l, r+1):
+    for k in range(lt, rt + 1):
         if j == len(arr_r) or (i != len(arr_l) and arr_l[i] <= arr_r[j]):
             arr[k] = arr_l[i]
             i += 1
@@ -34,6 +34,7 @@ class MergeSortTestCase(unittest.TestCase):
             sorted_arr = sorted(arr)
             merge_sort(arr)
             self.assertEqual(arr, sorted_arr)
+
 
 if __name__ == '__main__':
     unittest.main()
