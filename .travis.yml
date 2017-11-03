@@ -6,6 +6,6 @@ python:
   - "3.3"
   - "3.4"
   - "3.5"
-install: pip install pep8
-before_script: pep8 --max-line-length=100 .
+install: pip install pycodestyle
+before_script: pycodestyle --max-line-length=100 .
 script: sudo bash test.sh
