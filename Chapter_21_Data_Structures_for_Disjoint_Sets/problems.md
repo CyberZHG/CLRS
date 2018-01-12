@@ -54,7 +54,6 @@ class DisjointSetForest:
 
 
 def off_line_minimum(q, n):
-    m = len([0 for v in q if v == 'E'])
     ds = DisjointSetForest(m + 1)
     pos = [-1] * (n + 1)
     i = 0
@@ -63,6 +62,7 @@ def off_line_minimum(q, n):
             i += 1
         else:
             pos[v] = i
+    m = i
     extracted = [None] * m
     for i in xrange(1, n + 1):
         j = ds.find_set(pos[i])
