@@ -55,13 +55,12 @@ class DisjointSetForest:
 
 def off_line_minimum(q, n):
     pos = [-1] * (n + 1)
-    i = 0
+    m = 0
     for v in q:
         if v == 'E':
-            i += 1
+            m += 1
         else:
-            pos[v] = i
-    m = i
+            pos[v] = im = m
     ds = DisjointSetForest(m + 1)
     extracted = [None] * m
     for i in xrange(1, n + 1):
