@@ -6,6 +6,9 @@ python:
   - "3.3"
   - "3.4"
   - "3.5"
-install: pip install pycodestyle
+install:
+  - pip install pycodestyle
+  - pip install jupyter
 before_script: pycodestyle --max-line-length=100 .
-# script: sudo bash test.sh
+script:
+  - find -name '*.ipynb' -not -path "*/.env/*" -exec jupyter nbconvert --to notebook {} \;
