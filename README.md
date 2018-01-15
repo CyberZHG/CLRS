@@ -14,11 +14,11 @@ Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd editi
   * [1.2 Algorithms as a technology](Chapter_01_The_Role_of_Algorithms_in_Computing/exercises_1.2.ipynb)
   * [Problems](Chapter_01_The_Role_of_Algorithms_in_Computing/problems.ipynb)
 
-* [2 Getting Started](Chapter_02_Getting_Started/README.md)
-  * [2.1 Insertion sort](Chapter_02_Getting_Started/exercises_2.1.md)
-  * [2.2 Analyzing algorithms](Chapter_02_Getting_Started/exercises_2.2.md)
-  * [2.3 Designing algorithms](Chapter_02_Getting_Started/exercises_2.3.md)
-  * [Problems](Chapter_02_Getting_Started/problems.md)
+* 2 Getting Started
+  * [2.1 Insertion sort](Chapter_02_Getting_Started/exercises_2.1.ipynb)
+  * [2.2 Analyzing algorithms](Chapter_02_Getting_Started/exercises_2.2.ipynb)
+  * [2.3 Designing algorithms](Chapter_02_Getting_Started/exercises_2.3.ipynb)
+  * [Problems](Chapter_02_Getting_Started/problems.ipynb)
 
 * [3 Growth of Functions](Chapter_03_Growth_of_Functions/README.md)
   * [3.1 Asymptotic notation](Chapter_03_Growth_of_Functions/exercises_3.1.md)
