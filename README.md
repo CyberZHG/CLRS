@@ -59,12 +59,12 @@ Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd editi
   * [7.4 Analysis of quicksort](Chapter_07_Quicksort/exercises_7.4.ipynb)
   * [Problems](Chapter_07_Quicksort/problems.ipynb)
 
-* [8 Sorting in Linear Time](Chapter_08_Sorting_in_Linear_Time/README.md)
-  * [8.1 Lower bounds for sorting](Chapter_08_Sorting_in_Linear_Time/exercises_8.1.md)
-  * [8.2 Counting sort](Chapter_08_Sorting_in_Linear_Time/exercises_8.2.md)
-  * [8.3 Radix sort](Chapter_08_Sorting_in_Linear_Time/exercises_8.3.md)
-  * [8.4 Bucket sort](Chapter_08_Sorting_in_Linear_Time/exercises_8.4.md)
-  * [Problems](Chapter_08_Sorting_in_Linear_Time/problems.md)
+* 8 Sorting in Linear Time
+  * [8.1 Lower bounds for sorting](Chapter_08_Sorting_in_Linear_Time/exercises_8.1.ipynb)
+  * [8.2 Counting sort](Chapter_08_Sorting_in_Linear_Time/exercises_8.2.ipynb)
+  * [8.3 Radix sort](Chapter_08_Sorting_in_Linear_Time/exercises_8.3.ipynb)
+  * [8.4 Bucket sort](Chapter_08_Sorting_in_Linear_Time/exercises_8.4.ipynb)
+  * [Problems](Chapter_08_Sorting_in_Linear_Time/problems.ipynb)
 
 * [9 Medians and Order Statistics](Chapter_09_Medians_and_Order_Statistics/README.md)
   * [9.1 Minimum and maximum](Chapter_09_Medians_and_Order_Statistics/exercises_9.1.md)
