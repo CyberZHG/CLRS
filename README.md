@@ -20,10 +20,10 @@ Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd editi
   * [2.3 Designing algorithms](Chapter_02_Getting_Started/exercises_2.3.ipynb)
   * [Problems](Chapter_02_Getting_Started/problems.ipynb)
 
-* [3 Growth of Functions](Chapter_03_Growth_of_Functions/README.md)
-  * [3.1 Asymptotic notation](Chapter_03_Growth_of_Functions/exercises_3.1.md)
-  * [3.2 Standard notations and common functions](Chapter_03_Growth_of_Functions/exercises_3.2.md)
-  * [Problems](Chapter_03_Growth_of_Functions/problems.md)
+* 3 Growth of Functions
+  * [3.1 Asymptotic notation](Chapter_03_Growth_of_Functions/exercises_3.1.ipynb)
+  * [3.2 Standard notations and common functions](Chapter_03_Growth_of_Functions/exercises_3.2.ipynb)
+  * [Problems](Chapter_03_Growth_of_Functions/problems.ipynb)
 
 * [4 Divide-and-Conquer](Chapter_04_Divide_and_Conquer/README.md)
   * [4.1 The maximum-subarray problem](Chapter_04_Divide_and_Conquer/exercises_4.1.md)
