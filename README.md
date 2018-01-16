@@ -66,11 +66,11 @@ Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd editi
   * [8.4 Bucket sort](Chapter_08_Sorting_in_Linear_Time/exercises_8.4.ipynb)
   * [Problems](Chapter_08_Sorting_in_Linear_Time/problems.ipynb)
 
-* [9 Medians and Order Statistics](Chapter_09_Medians_and_Order_Statistics/README.md)
-  * [9.1 Minimum and maximum](Chapter_09_Medians_and_Order_Statistics/exercises_9.1.md)
-  * [9.2 Selection in expected linear time](Chapter_09_Medians_and_Order_Statistics/exercises_9.2.md)
-  * [9.3 Selection in worst-case linear time](Chapter_09_Medians_and_Order_Statistics/exercises_9.3.md)
-  * [Problems](Chapter_09_Medians_and_Order_Statistics/problems.md)
+* 9 Medians and Order Statistics
+  * [9.1 Minimum and maximum](Chapter_09_Medians_and_Order_Statistics/exercises_9.1.ipynb)
+  * [9.2 Selection in expected linear time](Chapter_09_Medians_and_Order_Statistics/exercises_9.2.ipynb)
+  * [9.3 Selection in worst-case linear time](Chapter_09_Medians_and_Order_Statistics/exercises_9.3.ipynb)
+  * [Problems](Chapter_09_Medians_and_Order_Statistics/problems.ipynb)
 
 
 ## III Data Structures
