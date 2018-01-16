@@ -25,14 +25,14 @@ Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd editi
   * [3.2 Standard notations and common functions](Chapter_03_Growth_of_Functions/exercises_3.2.ipynb)
   * [Problems](Chapter_03_Growth_of_Functions/problems.ipynb)
 
-* [4 Divide-and-Conquer](Chapter_04_Divide_and_Conquer/README.md)
-  * [4.1 The maximum-subarray problem](Chapter_04_Divide_and_Conquer/exercises_4.1.md)
-  * [4.2 Strassen's algorithm for matrix multiplication](Chapter_04_Divide_and_Conquer/exercises_4.2.md)
-  * [4.3 The substitution method for solving recurrences](Chapter_04_Divide_and_Conquer/exercises_4.3.md)
-  * [4.4 The recursion-tree method for solving recurrences](Chapter_04_Divide_and_Conquer/exercises_4.4.md)
-  * [4.5 The master method for solving recurrences](Chapter_04_Divide_and_Conquer/exercises_4.5.md)
-  * [4.6 Proof of the master theorem](Chapter_04_Divide_and_Conquer/exercises_4.6.md)
-  * [Problems](Chapter_04_Divide_and_Conquer/problems.md)
+* 4 Divide-and-Conquer
+  * [4.1 The maximum-subarray problem](Chapter_04_Divide_and_Conquer/exercises_4.1.ipynb)
+  * [4.2 Strassen's algorithm for matrix multiplication](Chapter_04_Divide_and_Conquer/exercises_4.2.ipynb)
+  * [4.3 The substitution method for solving recurrences](Chapter_04_Divide_and_Conquer/exercises_4.3.ipynb)
+  * [4.4 The recursion-tree method for solving recurrences](Chapter_04_Divide_and_Conquer/exercises_4.4.ipynb)
+  * [4.5 The master method for solving recurrences](Chapter_04_Divide_and_Conquer/exercises_4.5.ipynb)
+  * [4.6 Proof of the master theorem](Chapter_04_Divide_and_Conquer/exercises_4.6.ipynb)
+  * [Problems](Chapter_04_Divide_and_Conquer/problems.ipynb)
 
 * [5 Probabilistic Analysis and Randomized Algorithms](Chapter_05_Probabilistic_Analysis_and_Randomized_Algorithms/README.md)
   * [5.1 The hiring problem](Chapter_05_Probabilistic_Analysis_and_Randomized_Algorithms/exercises_5.1.md)
