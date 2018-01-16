@@ -34,12 +34,12 @@ Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd editi
   * [4.6 Proof of the master theorem](Chapter_04_Divide_and_Conquer/exercises_4.6.ipynb)
   * [Problems](Chapter_04_Divide_and_Conquer/problems.ipynb)
 
-* [5 Probabilistic Analysis and Randomized Algorithms](Chapter_05_Probabilistic_Analysis_and_Randomized_Algorithms/README.md)
-  * [5.1 The hiring problem](Chapter_05_Probabilistic_Analysis_and_Randomized_Algorithms/exercises_5.1.md)
-  * [5.2 Indicator random variables](Chapter_05_Probabilistic_Analysis_and_Randomized_Algorithms/exercises_5.2.md)
-  * [5.3 Randomized algorithms](Chapter_05_Probabilistic_Analysis_and_Randomized_Algorithms/exercises_5.3.md)
-  * [5.4 Probabilistic analysis and further uses of indicator random variables](Chapter_05_Probabilistic_Analysis_and_Randomized_Algorithms/exercises_5.4.md)
-  * [Problems](Chapter_05_Probabilistic_Analysis_and_Randomized_Algorithms/problems.md)
+* 5 Probabilistic Analysis and Randomized Algorithms
+  * [5.1 The hiring problem](Chapter_05_Probabilistic_Analysis_and_Randomized_Algorithms/exercises_5.1.ipynb)
+  * [5.2 Indicator random variables](Chapter_05_Probabilistic_Analysis_and_Randomized_Algorithms/exercises_5.2.ipynb)
+  * [5.3 Randomized algorithms](Chapter_05_Probabilistic_Analysis_and_Randomized_Algorithms/exercises_5.3.ipynb)
+  * [5.4 Probabilistic analysis and further uses of indicator random variables](Chapter_05_Probabilistic_Analysis_and_Randomized_Algorithms/exercises_5.4.ipynb)
+  * [Problems](Chapter_05_Probabilistic_Analysis_and_Randomized_Algorithms/problems.ipynb)
 
 
 ## II Sorting and Order Statistics
