@@ -44,20 +44,20 @@ Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd editi
 
 ## II Sorting and Order Statistics
 
-* [6 Heapsort](Chapter_06_Heapsort/README.md)
-  * [6.1 Heaps](Chapter_06_Heapsort/exercises_6.1.md)
-  * [6.2 Maintaining the heap property](Chapter_06_Heapsort/exercises_6.2.md)
-  * [6.3 Building a heap](Chapter_06_Heapsort/exercises_6.3.md)
-  * [6.4 The heapsort algorithm](Chapter_06_Heapsort/exercises_6.4.md)
-  * [6.5 Priority queues](Chapter_06_Heapsort/exercises_6.5.md)
-  * [Problems](Chapter_06_Heapsort/problems.md)
+* 6 Heapsort
+  * [6.1 Heaps](Chapter_06_Heapsort/exercises_6.1.ipynb)
+  * [6.2 Maintaining the heap property](Chapter_06_Heapsort/exercises_6.2.ipynb)
+  * [6.3 Building a heap](Chapter_06_Heapsort/exercises_6.3.ipynb)
+  * [6.4 The heapsort algorithm](Chapter_06_Heapsort/exercises_6.4.ipynb)
+  * [6.5 Priority queues](Chapter_06_Heapsort/exercises_6.5.ipynb)
+  * [Problems](Chapter_06_Heapsort/problems.ipynb)
 
-* [7 Quicksort](Chapter_07_Quicksort/README.md)
-  * [7.1 Description of quicksort](Chapter_07_Quicksort/exercises_7.1.md)
-  * [7.2 Performance of quicksort](Chapter_07_Quicksort/exercises_7.2.md)
-  * [7.3 A randomized version of quicksort](Chapter_07_Quicksort/exercises_7.3.md)
-  * [7.4 Analysis of quicksort](Chapter_07_Quicksort/exercises_7.4.md)
-  * [Problems](Chapter_07_Quicksort/problems.md)
+* 7 Quicksort
+  * [7.1 Description of quicksort](Chapter_07_Quicksort/exercises_7.1.ipynb)
+  * [7.2 Performance of quicksort](Chapter_07_Quicksort/exercises_7.2.ipynb)
+  * [7.3 A randomized version of quicksort](Chapter_07_Quicksort/exercises_7.3.ipynb)
+  * [7.4 Analysis of quicksort](Chapter_07_Quicksort/exercises_7.4.ipynb)
+  * [Problems](Chapter_07_Quicksort/problems.ipynb)
 
 * [8 Sorting in Linear Time](Chapter_08_Sorting_in_Linear_Time/README.md)
   * [8.1 Lower bounds for sorting](Chapter_08_Sorting_in_Linear_Time/exercises_8.1.md)

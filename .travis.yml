@@ -11,3 +11,4 @@ install:
 before_script: pycodestyle --max-line-length=100 .
 script:
   - find -name '*.ipynb' -not -path "*/.env/*" -exec jupyter nbconvert --to notebook {} \;
+  - sudo bash test.sh
