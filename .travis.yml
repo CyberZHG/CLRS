@@ -1,11 +1,14 @@
 language: python
 python:
-  - "2.6"
   - "2.7"
-  - "3.2"
-  - "3.3"
-  - "3.4"
-  - "3.5"
-install: pip install pycodestyle
+  - "3.6"
+  - "nightly"
+  - "pypy"
+  - "pypy3"
+install:
+  - pip install pycodestyle
+  - pip install jupyter
 before_script: pycodestyle --max-line-length=100 .
-script: sudo bash test.sh
+script:
+  - find -name '*.ipynb' -not -path "*/.env/*" -exec jupyter nbconvert --to notebook {} \;
+  - sudo bash test.sh
