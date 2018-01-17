@@ -186,7 +186,7 @@ Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd editi
   * [24.2 Single-source shortest paths in directed acyclic graphs](Chapter_24_Single-Source_Shortest_Paths/exercises_24.2.ipynb)
   * [24.3 Dijkstra's algorithm](Chapter_24_Single-Source_Shortest_Paths/exercises_24.3.ipynb)
   * 24.4 Difference constraints and shortest paths
-  * [24.5 Proofs of shortest-paths properties](Chapter_24_Single-Source_Shortest_Paths/exercises_24.5.ipynb)
+  * 24.5 Proofs of shortest-paths properties
   * Problems
 
 * 25 All-Pairs Shortest Paths
