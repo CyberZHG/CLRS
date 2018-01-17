@@ -168,13 +168,13 @@ Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd editi
 
 ## VI Graph Algorithms
 
-* [22 Elementary Graph Algorithms](Chapter_22_Elementary_Graph_Algorithms/README.md)
-  * [22.1 Representations of graphs](Chapter_22_Elementary_Graph_Algorithms/exercises_22.1.md)
-  * [22.2 Breadth-first search](Chapter_22_Elementary_Graph_Algorithms/exercises_22.2.md)
-  * [22.3 Depth-first search](Chapter_22_Elementary_Graph_Algorithms/exercises_22.3.md)
-  * [22.4 Topological sort](Chapter_22_Elementary_Graph_Algorithms/exercises_22.4.md)
-  * [22.5 Strongly connected components](Chapter_22_Elementary_Graph_Algorithms/exercises_22.5.md)
-  * [Problems](Chapter_22_Elementary_Graph_Algorithms/problems.md)
+* 22 Elementary Graph Algorithms
+  * [22.1 Representations of graphs](Chapter_22_Elementary_Graph_Algorithms/exercises_22.1.ipynb)
+  * [22.2 Breadth-first search](Chapter_22_Elementary_Graph_Algorithms/exercises_22.2.ipynb)
+  * [22.3 Depth-first search](Chapter_22_Elementary_Graph_Algorithms/exercises_22.3.ipynb)
+  * [22.4 Topological sort](Chapter_22_Elementary_Graph_Algorithms/exercises_22.4.ipynb)
+  * [22.5 Strongly connected components](Chapter_22_Elementary_Graph_Algorithms/exercises_22.5.ipynb)
+  * [Problems](Chapter_22_Elementary_Graph_Algorithms/problems.ipynb)
 
 * [23 Minimum Spanning Trees](Chapter_23_Minimum_Spanning_Trees/README.md)
   * [23.1 Growing a minimum spanning tree](Chapter_23_Minimum_Spanning_Trees/exercises_23.1.md)
