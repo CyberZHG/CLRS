@@ -129,13 +129,12 @@ Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd editi
   * [16.5 A task-scheduling problem as a matroid](Chapter_16_Greedy_Algorithm/exercises_16.5.ipynb)
   * Problems
 
-* [17 Amortized Analysis](Chapter_17_Amortized_Analysis/README.md)
-  * [17.1 Aggregate analysis](Chapter_17_Amortized_Analysis/exercises_17.1.md)
-  * [17.2 The accounting method](Chapter_17_Amortized_Analysis/exercises_17.2.md)
-  * [17.3 The potential method](Chapter_17_Amortized_Analysis/exercises_17.3.md)
-  * [17.4 Dynamic tables](Chapter_17_Amortized_Analysis/exercises_17.4.md)
-  * [Problems 1](Chapter_17_Amortized_Analysis/problems_1.md)
-  * [Problems 2](Chapter_17_Amortized_Analysis/problems_2.md)
+* 17 Amortized Analysis
+  * [17.1 Aggregate analysis](Chapter_17_Amortized_Analysis/exercises_17.1.ipynb)
+  * [17.2 The accounting method](Chapter_17_Amortized_Analysis/exercises_17.2.ipynb)
+  * [17.3 The potential method](Chapter_17_Amortized_Analysis/exercises_17.3.ipynb)
+  * [17.4 Dynamic tables](Chapter_17_Amortized_Analysis/exercises_17.4.ipynb)
+  * [Problems](Chapter_17_Amortized_Analysis/problems.ipynb)
 
 
 ## V Advanced Data Structures
