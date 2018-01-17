@@ -3,7 +3,7 @@
 [![travis-ci](https://travis-ci.org/CyberZHG/CLRS.svg)](https://travis-ci.org/CyberZHG/CLRS)
 [![GitHub contributors](https://img.shields.io/github/contributors/CyberZHG/CLRS.svg)](https://github.com/CyberZHG/CLRS/graphs/contributors)
 
-Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd edition.
+Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd edition. Never ever trust a single word of the repo.
 
 # Summary
 
