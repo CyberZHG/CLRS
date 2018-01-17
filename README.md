@@ -177,40 +177,40 @@ Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd editi
   * [Problems](Chapter_22_Elementary_Graph_Algorithms/problems.ipynb)
 
 * 23 Minimum Spanning Trees
-  * [23.1 Growing a minimum spanning tree](Chapter_23_Minimum_Spanning_Trees/exercises_23.1.md)
-  * [23.2 The algorithms of Kruskal and Prim](Chapter_23_Minimum_Spanning_Trees/exercises_23.2.md)
-  * [Problems](Chapter_23_Minimum_Spanning_Trees/problems.md)
+  * [23.1 Growing a minimum spanning tree](Chapter_23_Minimum_Spanning_Trees/exercises_23.1.ipynb)
+  * [23.2 The algorithms of Kruskal and Prim](Chapter_23_Minimum_Spanning_Trees/exercises_23.2.ipynb)
+  * [Problems](Chapter_23_Minimum_Spanning_Trees/problems.ipynb)
 
 * 24 Single-Source Shortest Paths
-  * [24.1 The Bellman-Ford algorithm](Chapter_24_Single-Source_Shortest_Paths/exercises_24.1.md)
-  * [24.2 Single-source shortest paths in directed acyclic graphs](Chapter_24_Single-Source_Shortest_Paths/exercises_24.2.md)
-  * [24.3 Dijkstra's algorithm](Chapter_24_Single-Source_Shortest_Paths/exercises_24.3.md)
-  * [24.4 Difference constraints and shortest paths](Chapter_24_Single-Source_Shortest_Paths/exercises_24.4.md)
-  * [24.5 Proofs of shortest-paths properties](Chapter_24_Single-Source_Shortest_Paths/exercises_24.5.md)
+  * [24.1 The Bellman-Ford algorithm](Chapter_24_Single-Source_Shortest_Paths/exercises_24.1.ipynb)
+  * [24.2 Single-source shortest paths in directed acyclic graphs](Chapter_24_Single-Source_Shortest_Paths/exercises_24.2.ipynb)
+  * [24.3 Dijkstra's algorithm](Chapter_24_Single-Source_Shortest_Paths/exercises_24.3.ipynb)
+  * [24.4 Difference constraints and shortest paths](Chapter_24_Single-Source_Shortest_Paths/exercises_24.4.ipynb)
+  * [24.5 Proofs of shortest-paths properties](Chapter_24_Single-Source_Shortest_Paths/exercises_24.5.ipynb)
   * Problems
 
 * 25 All-Pairs Shortest Paths
-  * [25.1 Shortest paths and matrix multiplication](Chapter_25_All-Pairs_Shortest_Paths/exercises_25.1.md)
-  * [25.2 The Floyd-Warshall algorithm](Chapter_25_All-Pairs_Shortest_Paths/exercises_25.2.md)
-  * [25.3 Johnson's algorithm for sparse graphs](Chapter_25_All-Pairs_Shortest_Paths/exercises_25.3.md)
-  * [Problems](Chapter_25_All-Pairs_Shortest_Paths/problems.md)
+  * [25.1 Shortest paths and matrix multiplication](Chapter_25_All-Pairs_Shortest_Paths/exercises_25.1.ipynb)
+  * [25.2 The Floyd-Warshall algorithm](Chapter_25_All-Pairs_Shortest_Paths/exercises_25.2.ipynb)
+  * [25.3 Johnson's algorithm for sparse graphs](Chapter_25_All-Pairs_Shortest_Paths/exercises_25.3.ipynb)
+  * [Problems](Chapter_25_All-Pairs_Shortest_Paths/problems.ipynb)
 
 * 26 Maximum Flow
-  * [26.1 Flow networks](Chapter_26_Maximum_Flow/exercises_26.1.md)
-  * [26.2 The Ford-Fulkerson method](Chapter_26_Maximum_Flow/exercises_26.2.md)
-  * [26.3 Maximum bipartite matching](Chapter_26_Maximum_Flow/exercises_26.3.md)
-  * [26.4 Push-relabel algorithms](Chapter_26_Maximum_Flow/exercises_26.4.md)
-  * [26.5 The relabel-to-front algorithm](Chapter_26_Maximum_Flow/exercises_26.5.md)
+  * [26.1 Flow networks](Chapter_26_Maximum_Flow/exercises_26.1.ipynb)
+  * [26.2 The Ford-Fulkerson method](Chapter_26_Maximum_Flow/exercises_26.2.ipynb)
+  * [26.3 Maximum bipartite matching](Chapter_26_Maximum_Flow/exercises_26.3.ipynb)
+  * [26.4 Push-relabel algorithms](Chapter_26_Maximum_Flow/exercises_26.4.ipynb)
+  * [26.5 The relabel-to-front algorithm](Chapter_26_Maximum_Flow/exercises_26.5.ipynb)
   * Problems
 
 
 ## VII Selected Topics
 
 * 27 Multithreaded Algorithms
-  * [27.1 The basics of dynamic multithreading](Chapter_27_Multithreaded_Algorithms/exercises_27.1.md)
-  * [27.2 Multithreaded matrix multiplication](Chapter_27_Multithreaded_Algorithms/exercises_27.2.md)
-  * [27.3 Multithreaded merge sort](Chapter_27_Multithreaded_Algorithms/exercises_27.3.md)
-  * [Problems](Chapter_27_Multithreaded_Algorithms/problems.md)
+  * [27.1 The basics of dynamic multithreading](Chapter_27_Multithreaded_Algorithms/exercises_27.1.ipynb)
+  * [27.2 Multithreaded matrix multiplication](Chapter_27_Multithreaded_Algorithms/exercises_27.2.ipynb)
+  * [27.3 Multithreaded merge sort](Chapter_27_Multithreaded_Algorithms/exercises_27.3.ipynb)
+  * [Problems](Chapter_27_Multithreaded_Algorithms/problems.ipynb)
 
 * 28 Matrix Operations
   * 28.1 Solving systems of linear equations
@@ -233,27 +233,27 @@ Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd editi
   * Problems
 
 * 31 Number-Theoretic Algorithms
-  * [31.1 Elementary number-theoretic notions](Chapter_31_Number-Theoretic_Algorithms/exercises_31.1.md)
-  * [31.2 Greatest common divisor](Chapter_31_Number-Theoretic_Algorithms/exercises_31.2.md)
-  * [31.3 Modular arithmetic](Chapter_31_Number-Theoretic_Algorithms/exercises_31.3.md)
-  * [31.4 Solving modular linear equations](Chapter_31_Number-Theoretic_Algorithms/exercises_31.4.md)
-  * [31.5 The Chinese remainder theorem](Chapter_31_Number-Theoretic_Algorithms/exercises_31.5.md)
-  * [31.6 Powers of an element](Chapter_31_Number-Theoretic_Algorithms/exercises_31.6.md)
-  * [31.7 The RSA public-key cryptosystem](Chapter_31_Number-Theoretic_Algorithms/exercises_31.7.md)
-  * [31.8 Primality testing](Chapter_31_Number-Theoretic_Algorithms/exercises_31.8.md)
-  * [31.9 Integer factorization](Chapter_31_Number-Theoretic_Algorithms/exercises_31.9.md)
-  * [Problems](Chapter_31_Number-Theoretic_Algorithms/problems.md)
+  * [31.1 Elementary number-theoretic notions](Chapter_31_Number-Theoretic_Algorithms/exercises_31.1.ipynb)
+  * [31.2 Greatest common divisor](Chapter_31_Number-Theoretic_Algorithms/exercises_31.2.ipynb)
+  * [31.3 Modular arithmetic](Chapter_31_Number-Theoretic_Algorithms/exercises_31.3.ipynb)
+  * [31.4 Solving modular linear equations](Chapter_31_Number-Theoretic_Algorithms/exercises_31.4.ipynb)
+  * [31.5 The Chinese remainder theorem](Chapter_31_Number-Theoretic_Algorithms/exercises_31.5.ipynb)
+  * [31.6 Powers of an element](Chapter_31_Number-Theoretic_Algorithms/exercises_31.6.ipynb)
+  * [31.7 The RSA public-key cryptosystem](Chapter_31_Number-Theoretic_Algorithms/exercises_31.7.ipynb)
+  * [31.8 Primality testing](Chapter_31_Number-Theoretic_Algorithms/exercises_31.8.ipynb)
+  * [31.9 Integer factorization](Chapter_31_Number-Theoretic_Algorithms/exercises_31.9.ipynb)
+  * [Problems](Chapter_31_Number-Theoretic_Algorithms/problems.ipynb)
 
 * 32 String Matching
-  * [32.1 The naive string-matching algorithm](Chapter_32_String_Matching/exercises_32.1.md)
-  * [32.2 The Rabin-Karp algorithm](Chapter_32_String_Matching/exercises_32.2.md)
-  * [32.3 String matching with finite automata](Chapter_32_String_Matching/exercises_32.3.md)
-  * [32.4 The Knuth-Morris-Pratt algorithm](Chapter_32_String_Matching/exercises_32.4.md)
-  * [Problems](Chapter_32_String_Matching/problems.md)
+  * [32.1 The naive string-matching algorithm](Chapter_32_String_Matching/exercises_32.1.ipynb)
+  * [32.2 The Rabin-Karp algorithm](Chapter_32_String_Matching/exercises_32.2.ipynb)
+  * [32.3 String matching with finite automata](Chapter_32_String_Matching/exercises_32.3.ipynb)
+  * [32.4 The Knuth-Morris-Pratt algorithm](Chapter_32_String_Matching/exercises_32.4.ipynb)
+  * [Problems](Chapter_32_String_Matching/problems.ipynb)
 
 * 33 Computational Geometry
-  * [33.1 Line-segment properties](Chapter_33_Computational_Geometry/exercises_33.1.md)
-  * [33.2 Determining whether any pair of segments intersects](Chapter_33_Computational_Geometry/exercises_33.2.md)
+  * [33.1 Line-segment properties](Chapter_33_Computational_Geometry/exercises_33.1.ipynb)
+  * [33.2 Determining whether any pair of segments intersects](Chapter_33_Computational_Geometry/exercises_33.2.ipynb)
   * 33.3 Finding the convex hull
   * 33.4 Finding the closest pair of points
   * Problems
