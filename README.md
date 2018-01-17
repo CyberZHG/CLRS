@@ -258,18 +258,18 @@ Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd editi
   * [33.4 Finding the closest pair of points](Chapter_33_Computational_Geometry/exercises_33.4.md)
   * [Problems](Chapter_33_Computational_Geometry/problems.md)
 
-* [34 NP-Completeness](Chapter_34_NP-Completeness/README.md)
-  * [34.1 Polynomial time](Chapter_34_NP-Completeness/exercises_34.1.md)
-  * [34.2 Polynomial-time verification](Chapter_34_NP-Completeness/exercises_34.2.md)
-  * [34.3 NP-completeness and reducibility](Chapter_34_NP-Completeness/exercises_34.3.md)
-  * [34.4 NP-completeness proofs](Chapter_34_NP-Completeness/exercises_34.4.md)
-  * [34.5 NP-complete problems](Chapter_34_NP-Completeness/exercises_34.5.md)
-  * [Problems](Chapter_34_NP-Completeness/problems.md)
+* 34 NP-Completeness
+  * 34.1 Polynomial time
+  * 34.2 Polynomial-time verification
+  * 34.3 NP-completeness and reducibility
+  * 34.4 NP-completeness proofs
+  * 34.5 NP-complete problems
+  * Problems
 
-* [35 Approximation Algorithms](Chapter_35_Approximation_Algorithms/README.md)
-  * [35.1 The vertex-cover problem](Chapter_35_Approximation_Algorithms/exercises_35.1.md)
-  * [35.2 The traveling-salesman problems](Chapter_35_Approximation_Algorithms/exercises_35.2.md)
-  * [35.3 The set-covering problem](Chapter_35_Approximation_Algorithms/exercises_35.3.md)
-  * [35.4 Randomization and linear programming](Chapter_35_Approximation_Algorithms/exercises_35.4.md)
-  * [35.5 The subset-sum problem](Chapter_35_Approximation_Algorithms/exercises_35.5.md)
-  * [Problem](Chapter_35_Approximation_Algorithms/problems.md)
+* 35 Approximation Algorithms
+  * 35.1 The vertex-cover problem
+  * 35.2 The traveling-salesman problems
+  * 35.3 The set-covering problem
+  * 35.4 Randomization and linear programming
+  * 35.5 The subset-sum problem
+  * Problem
