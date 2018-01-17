@@ -82,13 +82,13 @@ Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd editi
   * [10.4 Representing rooted trees](Chapter_10_Elementary_Data_Structures/exercises_10.4.ipynb)
   * [Problems](Chapter_10_Elementary_Data_Structures/problems.ipynb)
 
-* [11 Hash Tables](Chapter_11_Hash_Tables/README.md)
-  * [11.1 Direct-address tables](Chapter_11_Hash_Tables/exercises_11.1.md)
-  * [11.2 Hash tables](Chapter_11_Hash_Tables/exercises_11.2.md)
-  * [11.3 Hash functions](Chapter_11_Hash_Tables/exercises_11.3.md)
-  * [11.4 Open addressing](Chapter_11_Hash_Tables/exercises_11.4.md)
-  * [11.5 Perfect hashing](Chapter_11_Hash_Tables/exercises_11.5.md)
-  * [Problems](Chapter_11_Hash_Tables/problems.md)
+* 11 Hash Tables
+  * [11.1 Direct-address tables](Chapter_11_Hash_Tables/exercises_11.1.ipynb)
+  * [11.2 Hash tables](Chapter_11_Hash_Tables/exercises_11.2.ipynb)
+  * [11.3 Hash functions](Chapter_11_Hash_Tables/exercises_11.3.ipynb)
+  * [11.4 Open addressing](Chapter_11_Hash_Tables/exercises_11.4.ipynb)
+  * [11.5 Perfect hashing](Chapter_11_Hash_Tables/exercises_11.5.ipynb)
+  * [Problems](Chapter_11_Hash_Tables/problems.ipynb)
 
 * [12 Binary Search Trees](Chapter_12_Binary_Search_Trees/README.md)
   * [12.1 What is a binary search tree?](Chapter_12_Binary_Search_Trees/exercises_12.1.md)
