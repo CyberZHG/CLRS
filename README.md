@@ -185,7 +185,7 @@ Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd editi
   * [24.1 The Bellman-Ford algorithm](Chapter_24_Single-Source_Shortest_Paths/exercises_24.1.ipynb)
   * [24.2 Single-source shortest paths in directed acyclic graphs](Chapter_24_Single-Source_Shortest_Paths/exercises_24.2.ipynb)
   * [24.3 Dijkstra's algorithm](Chapter_24_Single-Source_Shortest_Paths/exercises_24.3.ipynb)
-  * [24.4 Difference constraints and shortest paths](Chapter_24_Single-Source_Shortest_Paths/exercises_24.4.ipynb)
+  * 24.4 Difference constraints and shortest paths
   * [24.5 Proofs of shortest-paths properties](Chapter_24_Single-Source_Shortest_Paths/exercises_24.5.ipynb)
   * Problems
 
