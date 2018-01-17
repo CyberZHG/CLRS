@@ -75,12 +75,12 @@ Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd editi
 
 ## III Data Structures
 
-* [10 Elementary Data Structures](Chapter_10_Elementary_Data_Structures/README.md)
-  * [10.1 Stacks and queues](Chapter_10_Elementary_Data_Structures/exercises_10.1.md)
-  * [10.2 Linked lists](Chapter_10_Elementary_Data_Structures/exercises_10.2.md)
-  * [10.3 Implementing pointers and objects](Chapter_10_Elementary_Data_Structures/exercises_10.3.md)
-  * [10.4 Representing rooted trees](Chapter_10_Elementary_Data_Structures/exercises_10.4.md)
-  * [Problems](Chapter_10_Elementary_Data_Structures/problems.md)
+* 10 Elementary Data Structures
+  * [10.1 Stacks and queues](Chapter_10_Elementary_Data_Structures/exercises_10.1.ipynb)
+  * [10.2 Linked lists](Chapter_10_Elementary_Data_Structures/exercises_10.2.ipynb)
+  * [10.3 Implementing pointers and objects](Chapter_10_Elementary_Data_Structures/exercises_10.3.ipynb)
+  * [10.4 Representing rooted trees](Chapter_10_Elementary_Data_Structures/exercises_10.4.ipynb)
+  * [Problems](Chapter_10_Elementary_Data_Structures/problems.ipynb)
 
 * [11 Hash Tables](Chapter_11_Hash_Tables/README.md)
   * [11.1 Direct-address tables](Chapter_11_Hash_Tables/exercises_11.1.md)
