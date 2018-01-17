@@ -90,12 +90,12 @@ Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd editi
   * [11.5 Perfect hashing](Chapter_11_Hash_Tables/exercises_11.5.ipynb)
   * [Problems](Chapter_11_Hash_Tables/problems.ipynb)
 
-* [12 Binary Search Trees](Chapter_12_Binary_Search_Trees/README.md)
-  * [12.1 What is a binary search tree?](Chapter_12_Binary_Search_Trees/exercises_12.1.md)
-  * [12.2 Querying a binary search tree](Chapter_12_Binary_Search_Trees/exercises_12.2.md)
-  * [12.3 Insertion and deletion](Chapter_12_Binary_Search_Trees/exercises_12.3.md)
-  * [12.4 Randomly built binary search trees](Chapter_12_Binary_Search_Trees/exercises_12.4.md)
-  * [Problems](Chapter_12_Binary_Search_Trees/problems.md)
+* 12 Binary Search Trees
+  * [12.1 What is a binary search tree?](Chapter_12_Binary_Search_Trees/exercises_12.1.ipynb)
+  * [12.2 Querying a binary search tree](Chapter_12_Binary_Search_Trees/exercises_12.2.ipynb)
+  * [12.3 Insertion and deletion](Chapter_12_Binary_Search_Trees/exercises_12.3.ipynb)
+  * [12.4 Randomly built binary search trees](Chapter_12_Binary_Search_Trees/exercises_12.4.ipynb)
+  * [Problems](Chapter_12_Binary_Search_Trees/problems.ipynb)
 
 * [13 Red-Black Trees](Chapter_13_Red-Black_Trees/README.md)
   * [13.1 Properties of red-black trees](Chapter_13_Red-Black_Trees/exercises_13.1.md)
