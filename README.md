@@ -97,12 +97,12 @@ Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd editi
   * [12.4 Randomly built binary search trees](Chapter_12_Binary_Search_Trees/exercises_12.4.ipynb)
   * [Problems](Chapter_12_Binary_Search_Trees/problems.ipynb)
 
-* [13 Red-Black Trees](Chapter_13_Red-Black_Trees/README.md)
-  * [13.1 Properties of red-black trees](Chapter_13_Red-Black_Trees/exercises_13.1.md)
-  * [13.2 Rotations](Chapter_13_Red-Black_Trees/exercises_13.2.md)
-  * [13.3 Insertion](Chapter_13_Red-Black_Trees/exercises_13.3.md)
-  * [13.4 Deletion](Chapter_13_Red-Black_Trees/exercises_13.4.md)
-  * [Problems](Chapter_13_Red-Black_Trees/problems.md)
+* 13 Red-Black Trees
+  * [13.1 Properties of red-black trees](Chapter_13_Red-Black_Trees/exercises_13.1.ipynb)
+  * [13.2 Rotations](Chapter_13_Red-Black_Trees/exercises_13.2.ipynb)
+  * [13.3 Insertion](Chapter_13_Red-Black_Trees/exercises_13.3.ipynb)
+  * [13.4 Deletion](Chapter_13_Red-Black_Trees/exercises_13.4.ipynb)
+  * [Problems](Chapter_13_Red-Black_Trees/problems.ipynb)
 
 * [14 Augmenting Data Structures](Chapter_14_Augmenting_Data_Structures/README.md)
   * [14.1 Dynamic order statistics](Chapter_14_Augmenting_Data_Structures/exercises_14.1.md)
