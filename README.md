@@ -104,11 +104,11 @@ Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd editi
   * [13.4 Deletion](Chapter_13_Red-Black_Trees/exercises_13.4.ipynb)
   * [Problems](Chapter_13_Red-Black_Trees/problems.ipynb)
 
-* [14 Augmenting Data Structures](Chapter_14_Augmenting_Data_Structures/README.md)
-  * [14.1 Dynamic order statistics](Chapter_14_Augmenting_Data_Structures/exercises_14.1.md)
-  * [14.2 How to augment a data structure](Chapter_14_Augmenting_Data_Structures/exercises_14.2.md)
-  * [14.3 Interval trees](Chapter_14_Augmenting_Data_Structures/exercises_14.3.md)
-  * [Problems](Chapter_14_Augmenting_Data_Structures/problems.md)
+* 14 Augmenting Data Structures
+  * [14.1 Dynamic order statistics](Chapter_14_Augmenting_Data_Structures/exercises_14.1.ipynb)
+  * [14.2 How to augment a data structure](Chapter_14_Augmenting_Data_Structures/exercises_14.2.ipynb)
+  * [14.3 Interval trees](Chapter_14_Augmenting_Data_Structures/exercises_14.3.ipynb)
+  * [Problems](Chapter_14_Augmenting_Data_Structures/problems.ipynb)
 
 
 ## IV Advanced Design and Analysis Techniques
