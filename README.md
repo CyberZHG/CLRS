@@ -152,11 +152,11 @@ Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd editi
   * [19.4 Bounding the maximum degree](Chapter_19_Fibonacci_Heaps/exercises_19.4.ipynb)
   * [Problems](Chapter_19_Fibonacci_Heaps/problems.ipynb)
 
-* [20 van Emde Boas Trees](Chapter_20_van_Emde_Boas_Trees/README.md)
-  * [20.1 Preliminary approaches](Chapter_20_van_Emde_Boas_Trees/exercises_20.1.md)
-  * [20.2 A recursive structure](Chapter_20_van_Emde_Boas_Trees/exercises_20.2.md)
-  * [20.3 The van Emde Boas tree](Chapter_20_van_Emde_Boas_Trees/exercises_20.3.md)
-  * [Problems](Chapter_20_van_Emde_Boas_Trees/problems.md)
+* 20 van Emde Boas Trees
+  * [20.1 Preliminary approaches](Chapter_20_van_Emde_Boas_Trees/exercises_20.1.ipynb)
+  * [20.2 A recursive structure](Chapter_20_van_Emde_Boas_Trees/exercises_20.2.ipynb)
+  * [20.3 The van Emde Boas tree](Chapter_20_van_Emde_Boas_Trees/exercises_20.3.ipynb)
+  * [Problems](Chapter_20_van_Emde_Boas_Trees/problems.ipynb)
 
 * [21 Data Structures for Disjoint Sets](Chapter_21_Data_Structures_for_Disjoint_Sets/README.md)
   * [21.1 Disjoint-set operations](Chapter_21_Data_Structures_for_Disjoint_Sets/exercises_21.1.md)
