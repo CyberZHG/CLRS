@@ -176,63 +176,63 @@ Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd editi
   * [22.5 Strongly connected components](Chapter_22_Elementary_Graph_Algorithms/exercises_22.5.ipynb)
   * [Problems](Chapter_22_Elementary_Graph_Algorithms/problems.ipynb)
 
-* [23 Minimum Spanning Trees](Chapter_23_Minimum_Spanning_Trees/README.md)
+* 23 Minimum Spanning Trees
   * [23.1 Growing a minimum spanning tree](Chapter_23_Minimum_Spanning_Trees/exercises_23.1.md)
   * [23.2 The algorithms of Kruskal and Prim](Chapter_23_Minimum_Spanning_Trees/exercises_23.2.md)
   * [Problems](Chapter_23_Minimum_Spanning_Trees/problems.md)
 
-* [24 Single-Source Shortest Paths](Chapter_24_Single-Source_Shortest_Paths/README.md)
+* 24 Single-Source Shortest Paths
   * [24.1 The Bellman-Ford algorithm](Chapter_24_Single-Source_Shortest_Paths/exercises_24.1.md)
   * [24.2 Single-source shortest paths in directed acyclic graphs](Chapter_24_Single-Source_Shortest_Paths/exercises_24.2.md)
   * [24.3 Dijkstra's algorithm](Chapter_24_Single-Source_Shortest_Paths/exercises_24.3.md)
   * [24.4 Difference constraints and shortest paths](Chapter_24_Single-Source_Shortest_Paths/exercises_24.4.md)
   * [24.5 Proofs of shortest-paths properties](Chapter_24_Single-Source_Shortest_Paths/exercises_24.5.md)
-  * [Problems](Chapter_24_Single-Source_Shortest_Paths/problems.md)
+  * Problems
 
-* [25 All-Pairs Shortest Paths](Chapter_25_All-Pairs_Shortest_Paths/README.md)
+* 25 All-Pairs Shortest Paths
   * [25.1 Shortest paths and matrix multiplication](Chapter_25_All-Pairs_Shortest_Paths/exercises_25.1.md)
   * [25.2 The Floyd-Warshall algorithm](Chapter_25_All-Pairs_Shortest_Paths/exercises_25.2.md)
   * [25.3 Johnson's algorithm for sparse graphs](Chapter_25_All-Pairs_Shortest_Paths/exercises_25.3.md)
   * [Problems](Chapter_25_All-Pairs_Shortest_Paths/problems.md)
 
-* [26 Maximum Flow](Chapter_26_Maximum_Flow/README.md)
+* 26 Maximum Flow
   * [26.1 Flow networks](Chapter_26_Maximum_Flow/exercises_26.1.md)
   * [26.2 The Ford-Fulkerson method](Chapter_26_Maximum_Flow/exercises_26.2.md)
   * [26.3 Maximum bipartite matching](Chapter_26_Maximum_Flow/exercises_26.3.md)
   * [26.4 Push-relabel algorithms](Chapter_26_Maximum_Flow/exercises_26.4.md)
   * [26.5 The relabel-to-front algorithm](Chapter_26_Maximum_Flow/exercises_26.5.md)
-  * [Problems](Chapter_26_Maximum_Flow/problems.md)
+  * Problems
 
 
 ## VII Selected Topics
 
-* [27 Multithreaded Algorithms](Chapter_27_Multithreaded_Algorithms/README.md)
+* 27 Multithreaded Algorithms
   * [27.1 The basics of dynamic multithreading](Chapter_27_Multithreaded_Algorithms/exercises_27.1.md)
   * [27.2 Multithreaded matrix multiplication](Chapter_27_Multithreaded_Algorithms/exercises_27.2.md)
   * [27.3 Multithreaded merge sort](Chapter_27_Multithreaded_Algorithms/exercises_27.3.md)
   * [Problems](Chapter_27_Multithreaded_Algorithms/problems.md)
 
-* [28 Matrix Operations](Chapter_28_Matrix_Operations/README.md)
-  * [28.1 Solving systems of linear equations](Chapter_28_Matrix_Operations/exercises_28.1.md)
-  * [28.2 Inverting matrices](Chapter_28_Matrix_Operations/exercises_28.2.md)
-  * [28.3 Symmetric positive-definite matrices and least-squares approximation](Chapter_28_Matrix_Operations/exercises_28.3.md)
-  * [Problems](Chapter_28_Matrix_Operations/problems.md)
+* 28 Matrix Operations
+  * 28.1 Solving systems of linear equations
+  * 28.2 Inverting matrices
+  * 28.3 Symmetric positive-definite matrices and least-squares approximation
+  * Problems
 
-* [29 Linear Programming](Chapter_29_Linear_Programming/README.md)
-  * [29.1 Standard and slack forms](Chapter_29_Linear_Programming/exercises_29.1.md)
-  * [29.2 Formulating problems as linear programs](Chapter_29_Linear_Programming/exercises_29.2.md)
-  * [29.3 The simplex algorithm](Chapter_29_Linear_Programming/exercises_29.3.md)
-  * [29.4 Duality](Chapter_29_Linear_Programming/exercises_29.4.md)
-  * [29.5 The initial basic feasible solution](Chapter_29_Linear_Programming/exercises_29.5.md)
-  * [Problems](Chapter_29_Linear_Programming/problems.md)
+* 29 Linear Programming
+  * 29.1 Standard and slack forms
+  * 29.2 Formulating problems as linear programs
+  * 29.3 The simplex algorithm
+  * 29.4 Duality
+  * 29.5 The initial basic feasible solution
+  * Problems
 
-* [30 Polynomials and the FFT](Chapter_30_Polynomials_and_the_FFT/README.md)
-  * [30.1 Representing polynomials](Chapter_30_Polynomials_and_the_FFT/exercises_30.1.md)
-  * [30.2 The DFT and FFT](Chapter_30_Polynomials_and_the_FFT/exercises_30.2.md)
-  * [30.3 Efficient FFT implementations](Chapter_30_Polynomials_and_the_FFT/exercises_30.3.md)
-  * [Problems](Chapter_30_Polynomials_and_the_FFT/problems.md)
+* 30 Polynomials and the FFT
+  * 30.1 Representing polynomials
+  * 30.2 The DFT and FFT
+  * 30.3 Efficient FFT implementations
+  * Problems
 
-* [31 Number-Theoretic Algorithms](Chapter_31_Number-Theoretic_Algorithms/README.md)
+* 31 Number-Theoretic Algorithms
   * [31.1 Elementary number-theoretic notions](Chapter_31_Number-Theoretic_Algorithms/exercises_31.1.md)
   * [31.2 Greatest common divisor](Chapter_31_Number-Theoretic_Algorithms/exercises_31.2.md)
   * [31.3 Modular arithmetic](Chapter_31_Number-Theoretic_Algorithms/exercises_31.3.md)
@@ -244,19 +244,19 @@ Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd editi
   * [31.9 Integer factorization](Chapter_31_Number-Theoretic_Algorithms/exercises_31.9.md)
   * [Problems](Chapter_31_Number-Theoretic_Algorithms/problems.md)
 
-* [32 String Matching](Chapter_32_String_Matching/README.md)
+* 32 String Matching
   * [32.1 The naive string-matching algorithm](Chapter_32_String_Matching/exercises_32.1.md)
   * [32.2 The Rabin-Karp algorithm](Chapter_32_String_Matching/exercises_32.2.md)
   * [32.3 String matching with finite automata](Chapter_32_String_Matching/exercises_32.3.md)
   * [32.4 The Knuth-Morris-Pratt algorithm](Chapter_32_String_Matching/exercises_32.4.md)
   * [Problems](Chapter_32_String_Matching/problems.md)
 
-* [33 Computational Geometry](Chapter_33_Computational_Geometry/README.md)
+* 33 Computational Geometry
   * [33.1 Line-segment properties](Chapter_33_Computational_Geometry/exercises_33.1.md)
   * [33.2 Determining whether any pair of segments intersects](Chapter_33_Computational_Geometry/exercises_33.2.md)
-  * [33.3 Finding the convex hull](Chapter_33_Computational_Geometry/exercises_33.3.md)
-  * [33.4 Finding the closest pair of points](Chapter_33_Computational_Geometry/exercises_33.4.md)
-  * [Problems](Chapter_33_Computational_Geometry/problems.md)
+  * 33.3 Finding the convex hull
+  * 33.4 Finding the closest pair of points
+  * Problems
 
 * 34 NP-Completeness
   * 34.1 Polynomial time
