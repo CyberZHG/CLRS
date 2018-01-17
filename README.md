@@ -139,11 +139,11 @@ Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd editi
 
 ## V Advanced Data Structures
 
-* [18 B-Trees](Chapter_18_B-Trees/README.md)
-  * [18.1 Definition of B-trees](Chapter_18_B-Trees/exercises_18.1.md)
-  * [18.2 Basic operations on B-trees](Chapter_18_B-Trees/exercises_18.2.md)
-  * [18.3 Deleting a key from a B-tree](Chapter_18_B-Trees/exercises_18.3.md)
-  * [Problems](Chapter_18_B-Trees/problems.md)
+* 18 B-Trees
+  * [18.1 Definition of B-trees](Chapter_18_B-Trees/exercises_18.1.ipynb)
+  * [18.2 Basic operations on B-trees](Chapter_18_B-Trees/exercises_18.2.ipynb)
+  * [18.3 Deleting a key from a B-tree](Chapter_18_B-Trees/exercises_18.3.ipynb)
+  * [Problems](Chapter_18_B-Trees/problems.ipynb)
 
 * [19 Fibonacci Heaps](Chapter_19_Fibonacci_Heaps/README.md)
   * [19.1 Structure of Fibonacci heaps](Chapter_19_Fibonacci_Heaps/exercises_19.1.md)
