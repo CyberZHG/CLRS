@@ -198,9 +198,9 @@ Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd editi
 * 26 Maximum Flow
   * [26.1 Flow networks](Chapter_26_Maximum_Flow/exercises_26.1.ipynb)
   * [26.2 The Ford-Fulkerson method](Chapter_26_Maximum_Flow/exercises_26.2.ipynb)
-  * [26.3 Maximum bipartite matching](Chapter_26_Maximum_Flow/exercises_26.3.ipynb)
-  * [26.4 Push-relabel algorithms](Chapter_26_Maximum_Flow/exercises_26.4.ipynb)
-  * [26.5 The relabel-to-front algorithm](Chapter_26_Maximum_Flow/exercises_26.5.ipynb)
+  * 26.3 Maximum bipartite matching
+  * 26.4 Push-relabel algorithms
+  * 26.5 The relabel-to-front algorithm
   * Problems
 
 
