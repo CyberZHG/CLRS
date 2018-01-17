@@ -145,12 +145,12 @@ Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd editi
   * [18.3 Deleting a key from a B-tree](Chapter_18_B-Trees/exercises_18.3.ipynb)
   * [Problems](Chapter_18_B-Trees/problems.ipynb)
 
-* [19 Fibonacci Heaps](Chapter_19_Fibonacci_Heaps/README.md)
-  * [19.1 Structure of Fibonacci heaps](Chapter_19_Fibonacci_Heaps/exercises_19.1.md)
-  * [19.2 Mergeable-heap operations](Chapter_19_Fibonacci_Heaps/exercises_19.2.md)
-  * [19.3 Decreasing a key and deleting a node](Chapter_19_Fibonacci_Heaps/exercises_19.3.md)
-  * [19.4 Bounding the maximum degree](Chapter_19_Fibonacci_Heaps/exercises_19.4.md)
-  * [Problems](Chapter_19_Fibonacci_Heaps/problems.md)
+* 19 Fibonacci Heaps
+  * 19.1 Structure of Fibonacci heaps
+  * [19.2 Mergeable-heap operations](Chapter_19_Fibonacci_Heaps/exercises_19.2.ipynb)
+  * 19.3 Decreasing a key and deleting a node
+  * [19.4 Bounding the maximum degree](Chapter_19_Fibonacci_Heaps/exercises_19.4.ipynb)
+  * [Problems](Chapter_19_Fibonacci_Heaps/problems.ipynb)
 
 * [20 van Emde Boas Trees](Chapter_20_van_Emde_Boas_Trees/README.md)
   * [20.1 Preliminary approaches](Chapter_20_van_Emde_Boas_Trees/exercises_20.1.md)
