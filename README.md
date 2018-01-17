@@ -113,21 +113,21 @@ Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd editi
 
 ## IV Advanced Design and Analysis Techniques
 
-* [15 Dynamic Programming](Chapter_15_Dynamic_Programming/README.md)
-  * [15.1 Rod cutting](Chapter_15_Dynamic_Programming/exercises_15.1.md)
-  * [15.2 Matrix-chain multiplication](Chapter_15_Dynamic_Programming/exercises_15.2.md)
-  * [15.3 Elements of dynamic programming](Chapter_15_Dynamic_Programming/exercises_15.3.md)
-  * [15.4 Longest common subsequence](Chapter_15_Dynamic_Programming/exercises_15.4.md)
-  * [15.5 Optimal binary search trees](Chapter_15_Dynamic_Programming/exercises_15.5.md)
-  * [Problems](Chapter_15_Dynamic_Programming/problems.md)
+* 15 Dynamic Programming
+  * [15.1 Rod cutting](Chapter_15_Dynamic_Programming/exercises_15.1.ipynb)
+  * [15.2 Matrix-chain multiplication](Chapter_15_Dynamic_Programming/exercises_15.2.ipynb)
+  * [15.3 Elements of dynamic programming](Chapter_15_Dynamic_Programming/exercises_15.3.ipynb)
+  * [15.4 Longest common subsequence](Chapter_15_Dynamic_Programming/exercises_15.4.ipynb)
+  * [15.5 Optimal binary search trees](Chapter_15_Dynamic_Programming/exercises_15.5.ipynb)
+  * [Problems](Chapter_15_Dynamic_Programming/problems.ipynb)
 
-* [16 Greedy Algorithm](Chapter_16_Greedy_Algorithm/README.md)
-  * [16.1 An activity-selection problem](Chapter_16_Greedy_Algorithm/exercises_16.1.md)
-  * [16.2 Elements of the greedy strategy](Chapter_16_Greedy_Algorithm/exercises_16.2.md)
-  * [16.3 Huffman codes](Chapter_16_Greedy_Algorithm/exercises_16.3.md)
-  * [16.4 Matroids and greedy methods](Chapter_16_Greedy_Algorithm/exercises_16.4.md)
-  * [16.5 A task-scheduling problem as a matroid](Chapter_16_Greedy_Algorithm/exercises_16.5.md)
-  * [Problems](Chapter_16_Greedy_Algorithm/problems.md)
+* 16 Greedy Algorithm
+  * [16.1 An activity-selection problem](Chapter_16_Greedy_Algorithm/exercises_16.1.ipynb)
+  * [16.2 Elements of the greedy strategy](Chapter_16_Greedy_Algorithm/exercises_16.2.ipynb)
+  * [16.3 Huffman codes](Chapter_16_Greedy_Algorithm/exercises_16.3.ipynb)
+  * 16.4 Matroids and greedy methods
+  * [16.5 A task-scheduling problem as a matroid](Chapter_16_Greedy_Algorithm/exercises_16.5.ipynb)
+  * Problems
 
 * [17 Amortized Analysis](Chapter_17_Amortized_Analysis/README.md)
   * [17.1 Aggregate analysis](Chapter_17_Amortized_Analysis/exercises_17.1.md)
