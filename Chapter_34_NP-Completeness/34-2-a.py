@@ -1,4 +1,3 @@
-import math
 import random
 import unittest
 
@@ -45,9 +44,9 @@ class DivideATestCase(unittest.TestCase):
                 for a in range(nx + 1):
                     for b in range(ny + 1):
                         self.assertNotEqual(
-                           a * x + b * y,
-                           (nx - a) * x + (ny - b) * y,
-                           (nx, x, ny, y, a, b)
+                            a * x + b * y,
+                            (nx - a) * x + (ny - b) * y,
+                            (nx, x, ny, y, a, b)
                         )
             else:
                 self.assertTrue(0 <= a <= nx, (nx, a))
@@ -63,13 +62,9 @@ class DivideATestCase(unittest.TestCase):
             nx, x, ny, y = self.gen_rand_case(10000000000000000000000000000000)
             a, b = divide_a(nx, x, ny, y)
             if a != -1:
-                self.assertTrue(0 <= a <= nx, (nx, a))
-                self.assertTrue(0 <= b <= ny, (ny, b))
-                self.assertEqual(
-                    a * x + b * y,
-                    (nx - a) * x + (ny - b) * y,
-                    (nx, x, ny, y)
-                )
+                self.assertTrue(0 <= a <= nx)
+                self.assertTrue(0 <= b <= ny)
+                self.assertEqual(a * x + b * y, (nx - a) * x + (ny - b) * y)
 
 
 if __name__ == '__main__':
