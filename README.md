@@ -259,12 +259,12 @@ Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd editi
   * Problems
 
 * 34 NP-Completeness
-  * 34.1 Polynomial time
-  * 34.2 Polynomial-time verification
-  * 34.3 NP-completeness and reducibility
-  * 34.4 NP-completeness proofs
-  * 34.5 NP-complete problems
-  * Problems
+  * [34.1 Polynomial time](Chapter_34_NP-Completeness/exercises_34.1.ipynb)
+  * [34.2 Polynomial-time verification](Chapter_34_NP-Completeness/exercises_34.2.ipynb)
+  * [34.3 NP-completeness and reducibility](Chapter_34_NP-Completeness/exercises_34.3.ipynb)
+  * [34.4 NP-completeness proofs](Chapter_34_NP-Completeness/exercises_34.4.ipynb)
+  * [34.5 NP-complete problems](Chapter_34_NP-Completeness/exercises_34.5.ipynb)
+  * [Problems](Chapter_34_NP-Completeness/problems.ipynb)
 
 * 35 Approximation Algorithms
   * 35.1 The vertex-cover problem
