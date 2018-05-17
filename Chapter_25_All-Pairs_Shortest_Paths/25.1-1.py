@@ -9,7 +9,7 @@ def print_matrix(m):
             if j > 0:
                 s += ' & '
             if m[i][j] > 1e50:
-                s += '\infty'
+                s += '\\infty'
             else:
                 s += str(int(m[i][j]))
         s += '\\\\\n'
