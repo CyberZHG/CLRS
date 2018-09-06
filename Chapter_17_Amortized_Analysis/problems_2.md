@@ -97,15 +97,15 @@ Move: $\text{rank}_L(x) - 1$
 
 > Now we compare move-to-front with any other heuristic $\text{H}$ that processes an access sequence according to the two properties above. Heuristic $\text{H}$ may transpose elements in the list in any way it wants, and it might even know the entire access sequence in advance.
 
-> Let $L_i$ be the list after access $\sigma_i$ using move-to-front, and let $L_i^*$ be the list after access $\sigma_i$ using heuristic $\text{H}$. We denote the cost of access $\sigma_i$ by $c_i$ for move-to-front and by $c_i^*$ for heuristic $\text{H}$. Suppose that heuristic $\text{H}$ performs $t_i^*$ transpositions during access $\sigma_i$.
+> Let $L_i$ be the list after access $\sigma_i$ using move-to-front, and let $L_i^\*$ be the list after access $\sigma_i$ using heuristic $\text{H}$. We denote the cost of access $\sigma_i$ by $c_i$ for move-to-front and by $c_i^\*$ for heuristic $\text{H}$. Suppose that heuristic $\text{H}$ performs $t_i^*$ transpositions during access $\sigma_i$.
 
-> __*c*__. In part (b), you showed that $c_i = 2 \cdot \text{rank}_{L_{i-1}}(x) - 1$. Now show that $c_i^* = \text{rank}_{L_{i-1}^*}(x) + t_i^*$.
+> __*c*__. In part (b), you showed that $c_i = 2 \cdot \text{rank}\_{L\_{i-1}}(x) - 1$. Now show that $c_i^\* = \text{rank}\_{L\_{i-1}^*}(x) + t_i^*$.
 
-Access: $\text{rank}_{L_{i-1}^*}(x)$
+Access: $\text{rank}\_{L\_{i-1}^*}(x)$
 
 Move: $t_i^*$
 
-> We define an __*inversion*__ in list $L_i$ as a pair of elements $y$ and $z$ such that $y$ precedes $z$ in $L_i$ and $z$ precedes $y$ in list $L_i^*$. Suppose that list $L_i$ has $q_i$ inversions after processing the access sequence $\langle \sigma_1, \sigma_2, \dots, \sigma_i \rangle$. Then, we define a potential function $\Phi$ that maps $L_i$ to a real number by $\Phi(L_i) = 2q_i$. For example, if $L_i$ has the elements $\langle e, c, a, d, b \rangle$ and $L_i^*$ has the elements $\langle c, a, b, d, e \rangle$, then $L_i$ has 5 inversions $((e, c), (e, a), (e, d), (e, b), (d, b))$, and so $\Phi(L_i) = 10$. Observe that $\Phi(L_i) \ge 0$ for all $i$ and that, if move-to-front and heuristic $\text{H}$ start with the same list $L_0$, then $\Phi(L_0) = 0$.
+> We define an __*inversion*__ in list $L_i$ as a pair of elements $y$ and $z$ such that $y$ precedes $z$ in $L_i$ and $z$ precedes $y$ in list $L_i^\*$. Suppose that list $L_i$ has $q_i$ inversions after processing the access sequence $\langle \sigma_1, \sigma_2, \dots, \sigma_i \rangle$. Then, we define a potential function $\Phi$ that maps $L_i$ to a real number by $\Phi(L_i) = 2q_i$. For example, if $L_i$ has the elements $\langle e, c, a, d, b \rangle$ and $L_i^*$ has the elements $\langle c, a, b, d, e \rangle$, then $L_i$ has 5 inversions $((e, c), (e, a), (e, d), (e, b), (d, b))$, and so $\Phi(L_i) = 10$. Observe that $\Phi(L_i) \ge 0$ for all $i$ and that, if move-to-front and heuristic $\text{H}$ start with the same list $L_0$, then $\Phi(L_0) = 0$.
 
 > __*d*__. Argue that a transposition either increases the potential by 2 or decreases the potential by 2.
 
@@ -120,7 +120,7 @@ Same after: increase by 2.
 > * Set $C$ consists of elements that follow $x$ in $L_{i-1}$ and precede $x$ in $L_{i-1}^*$.
 > * Set $D$ consists of elements that follow $x$ in both $L_{i-1}$ and $L_{i-1}^*$.
 
-> __*e*__. Argue that $\text{rank}_{L_{i-1}}(x) = |A| + |B| + 1$ and $\text{rank}_{L_{i-1}^*}(x) = |A| + |C| + 1$.
+> __*e*__. Argue that $\text{rank}\_{L\_{i-1}}(x) = |A| + |B| + 1$ and $\text{rank}\_{L\_{i-1}^*}(x) = |A| + |C| + 1$.
 
 Precede.
 
@@ -143,4 +143,4 @@ $$
 \end{array}
 $$
 
-> __*h*__. Conclude that the cost $C_{MTF}(\sigma)$ of access sequence $\sigma$ with move-to-front is at most 4 times the cost $C_H(\sigma)$ of $\sigma$ withany other heuristic $\text{H}$, assuming that both heuristics start with the same list.
+> __*h*__. Conclude that the cost $C_{MTF}(\sigma)$ of access sequence $\sigma$ with move-to-front is at most 4 times the cost $C_H(\sigma)$ of $\sigma$ with any other heuristic $\text{H}$, assuming that both heuristics start with the same list.
