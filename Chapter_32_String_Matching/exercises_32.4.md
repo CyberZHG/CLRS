@@ -16,7 +16,7 @@ $\left | \pi^\*[q] \right | < q$.
 
 > Explain how to determine the occurrences of pattern $P$ in the text $T$ by examining the $\pi$ function for the string $PT$ (the string of length $m+n$ that is the concatenation of $P$ and $T$).
 
-$\{ q ~|~ \pi[q] = m ~\text{and}~ q \ge 2m \}$.
+$\{ q \~|\~ \pi[q] = m \~\text{and}\~ q \ge 2m \}$.
 
 ### 32.4-4
 
@@ -37,9 +37,9 @@ $\Phi = p$.
 > $\displaystyle
 \pi'[q] = \left \{
 \begin{array}{ll}
-0 & \text{if}~ \pi[q] = 0, \\\\
-\pi'[\pi[q]] & \text{if}~ \pi[q] \ne 0 ~\text{and}~ P[\pi[q] + 1] = P[q + 1] \\\\
-\pi[q] & \text{if}~ \pi[q] \ne 0 ~\text{and}~ P[\pi[q] + 1] \ne P[q + 1] \\\\
+0 & \text{if}\~ \pi[q] = 0, \\\\
+\pi'[\pi[q]] & \text{if}\~ \pi[q] \ne 0 \~\text{and}\~ P[\pi[q] + 1] = P[q + 1] \\\\
+\pi[q] & \text{if}\~ \pi[q] \ne 0 \~\text{and}\~ P[\pi[q] + 1] \ne P[q + 1] \\\\
 \end{array}
 \right .
 $$

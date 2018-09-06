@@ -32,7 +32,7 @@ Connect to ancestor => loop.
 > $v.low = \min \left \{ 
 \begin{array}{l}
 v.d,\\\\
-w.d: (u, w) ~\text{is a back edge for some descendant}~u~\text{of}~v
+w.d: (u, w) \~\text{is a back edge for some descendant}\~u\~\text{of}\~v
 \end{array}
 \right .$.
 

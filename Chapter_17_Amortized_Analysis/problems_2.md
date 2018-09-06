@@ -38,10 +38,10 @@ $O(1)$
 
 > $$\displaystyle w(x) = \left \{
 \begin{array}{ll}
-0 & \text{if}~x~\text{is red,} \\\\
-1 & \text{if}~x~\text{is black and has no red children,} \\\\
-0 & \text{if}~x~\text{is black and has one red children,} \\\\
-2 & \text{if}~x~\text{is black and has two red children,} \\\\
+0 & \text{if}\~x\~\text{is red,} \\\\
+1 & \text{if}\~x\~\text{is black and has no red children,} \\\\
+0 & \text{if}\~x\~\text{is black and has one red children,} \\\\
+2 & \text{if}\~x\~\text{is black and has two red children,} \\\\
 \end{array}
 \right .
 $$

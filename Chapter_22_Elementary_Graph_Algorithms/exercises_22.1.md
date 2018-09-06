@@ -101,8 +101,8 @@ Starting from $a\_{11}$, if $a\_{ij} = 0$ then $j = j + 1$, otherwise $i = i + 1
 > $$
 b\_{ij} = \left \{
 \begin{array}{rl}
--1 & \text{if edge}~j~\text{leaves vertex}~i, \\\\
-1 & \text{if edge}~j~\text{enters vertex}~i, \\\\
+-1 & \text{if edge}\~j\~\text{leaves vertex}\~i, \\\\
+1 & \text{if edge}\~j\~\text{enters vertex}\~i, \\\\
 0 & \text{otherwise}. \\\\
 \end{array}
 \right .

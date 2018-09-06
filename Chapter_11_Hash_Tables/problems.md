@@ -122,13 +122,13 @@ $$
 
 > 1. Compute the value $j=h(k)$, and set $i=0$.
 > 2. Probe in position $j$ for the desired key $k$. If you find it, or if this position is empty, terminate the search.
-> 3. Set $i = i + 1$. If $i$ now equals $m$, the table is full, so terminate the search. Otherwise, set $j = (i + j) ~\text{mod}~ m$, and return to step 2.
+> 3. Set $i = i + 1$. If $i$ now equals $m$, the table is full, so terminate the search. Otherwise, set $j = (i + j) \~\text{mod}\~ m$, and return to step 2.
 
 > Assume that $m$ is a power of 2.
 
 > __*a*__. Show that this scheme is an instance of the general "quadratic probing" scheme by exhibiting the appropriate constants $c\_1$ and $c\_2$ for equation (11.5).
 
-The $i$th probing is equivalent to $(j + \frac{i(i+1)}{2}) ~\text{mod}~ m$, thus $c\_1 = 1/2$, $c\_2 = 1/2$.
+The $i$th probing is equivalent to $(j + \frac{i(i+1)}{2}) \~\text{mod}\~ m$, thus $c\_1 = 1/2$, $c\_2 = 1/2$.
 
 > __*b*__. Prove that this algorithm examines every table position in the worst case.
 
@@ -163,7 +163,7 @@ The number of hash functions for which $h(k)=h(l)$ is $\frac{m}{m^2}|\mathcal{H}
 
 > __*b*__. Suppose that the universe $U$ is the set of $n$-tuples of values drawn from $\mathbb{Z}\_p = \{ 0, 1, \dots, p - 1 \}$, where $p$ is prime. Consider an element $x = \langle x\_0, x\_1, \dots, x\_{n-1} \rangle \in U$. For any $n$-tuple $a = \langle a\_0, a\_1, \dots, a\_{n-1} \rangle \in U$, define the hash function $h\_a$ by
 
-> $\displaystyle h\_a(x) = \left ( \sum\_{j=0}^{n-1} a\_j x\_j \right ) ~\text{mod}~ p$.
+> $\displaystyle h\_a(x) = \left ( \sum\_{j=0}^{n-1} a\_j x\_j \right ) \~\text{mod}\~ p$.
 
 > Let $\mathcal{H}=\{h\_a\}$. Show that $\mathcal{H}$ is universal, but not 2-universal.
 
@@ -171,7 +171,7 @@ For $x = \langle 0, 0, \dots, 0 \rangle$, $\mathcal{H}$ could not be 2-universal
 
 > __*c*__. Suppose that we modify $\mathcal{H}$ slightly from part (b): for any $a \in U$ and for any $b \in \mathbb{Z}\_p$, define
 
-> $\displaystyle h'\_{ab}(x)=\left ( \sum\_{j=0}^{n-1} a\_j x\_j \right ) ~\text{mod}~ p$
+> $\displaystyle h'\_{ab}(x)=\left ( \sum\_{j=0}^{n-1} a\_j x\_j \right ) \~\text{mod}\~ p$
 
 > and $\mathcal{H}'=\{h'\_{ab}\}$. Argue that $\mathcal{H}'$ is 2-universal.
 

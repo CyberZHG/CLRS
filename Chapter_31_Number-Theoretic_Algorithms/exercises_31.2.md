@@ -16,15 +16,15 @@ $(29, -6, 11)$.
 
 > $\text{gcd}(a, n) = \text{gcd}(a + kn, n)$.
 
-* $\text{gcd}(a, n) ~|~ \text{gcd}(a + kn, n)$
+* $\text{gcd}(a, n) \~|\~ \text{gcd}(a + kn, n)$
 
-Let $d = \text{gcd}(a, n)$, then $d ~|~ a$ and $d ~|~ n$. Since $(a + kn) ~\text{mod}~ d = a ~\text{mod}~ d + k \cdot (n ~\text{mod}~ d) = 0$ and $d ~|~ n$, then $d ~|~ \text{gcd}(a + kn, n)$, $\text{gcd}(a, n) ~|~ \text{gcd}(a + kn, n)$.
+Let $d = \text{gcd}(a, n)$, then $d \~|\~ a$ and $d \~|\~ n$. Since $(a + kn) \~\text{mod}\~ d = a \~\text{mod}\~ d + k \cdot (n \~\text{mod}\~ d) = 0$ and $d \~|\~ n$, then $d \~|\~ \text{gcd}(a + kn, n)$, $\text{gcd}(a, n) \~|\~ \text{gcd}(a + kn, n)$.
 
-* $\text{gcd}(a + kn, n) ~|~ \text{gcd}(a, n)$
+* $\text{gcd}(a + kn, n) \~|\~ \text{gcd}(a, n)$
 
-Let $d = \text{gcd}(a + kn, n)$, then $d ~|~ n$ and $d ~|~ (a + kn)$. Since $(a + kn) ~\text{mod}~ d = a ~\text{mod}~ d + k \cdot (n ~\text{mod}~ d) = a ~\text{mod}~ d = 0$, then $d ~|~ a$. Since $d ~|~ a$ and $d ~|~ n$, then $d ~|~ \text{gcd}(a, n)$,  $\text{gcd}(a + kn, n) ~|~ \text{gcd}(a, n)$.
+Let $d = \text{gcd}(a + kn, n)$, then $d \~|\~ n$ and $d \~|\~ (a + kn)$. Since $(a + kn) \~\text{mod}\~ d = a \~\text{mod}\~ d + k \cdot (n \~\text{mod}\~ d) = a \~\text{mod}\~ d = 0$, then $d \~|\~ a$. Since $d \~|\~ a$ and $d \~|\~ n$, then $d \~|\~ \text{gcd}(a, n)$,  $\text{gcd}(a + kn, n) \~|\~ \text{gcd}(a, n)$.
 
-Since $\text{gcd}(a, n) ~|~ \text{gcd}(a + kn, n)$ and $\text{gcd}(a + kn, n) ~|~ \text{gcd}(a, n)$, then $\text{gcd}(a, n) = \text{gcd}(a + kn, n)$.
+Since $\text{gcd}(a, n) \~|\~ \text{gcd}(a + kn, n)$ and $\text{gcd}(a + kn, n) \~|\~ \text{gcd}(a, n)$, then $\text{gcd}(a, n) = \text{gcd}(a + kn, n)$.
 
 ### 31.2-4
 
@@ -47,7 +47,7 @@ $k + 1 < \log\_\phi \sqrt{5} + \log\_\phi b \approx 1.67 + \log\_\phi b$
 
 $k < 0.67 + \log\_\phi b < 1 + \log\_\phi b$.
 
-Since $d \cdot a ~\text{mod}~ d \cdot b = d \cdot (a ~\text{mod}~ b)$, $\text{gcd}(d \cdot a, d \cdot b)$ has the same number of recursive calls with $\text{gcd}(a, b)$, therefore we could let $b' = b / \text{gcd}(a, b)$, the inequality $k < 1 + \log\_\phi(b') = 1 + \log\_\phi(b / \text{gcd}(a, b))$. will holds.
+Since $d \cdot a \~\text{mod}\~ d \cdot b = d \cdot (a \~\text{mod}\~ b)$, $\text{gcd}(d \cdot a, d \cdot b)$ has the same number of recursive calls with $\text{gcd}(a, b)$, therefore we could let $b' = b / \text{gcd}(a, b)$, the inequality $k < 1 + \log\_\phi(b') = 1 + \log\_\phi(b / \text{gcd}(a, b))$. will holds.
 
 ## 31.2-6
 

@@ -63,8 +63,8 @@ Cut $V'$.
 > $$
 w'(u, v) = \left \{
 \begin{array}{ll}
-w(u, v) & \text{if}~(u, v) \ne (x, y), \\\\
-w(x, y) - k & \text{if}~(u, v) = (x, y).
+w(u, v) & \text{if}\~(u, v) \ne (x, y), \\\\
+w(x, y) - k & \text{if}\~(u, v) = (x, y).
 \end{array}
 \right .
 $$

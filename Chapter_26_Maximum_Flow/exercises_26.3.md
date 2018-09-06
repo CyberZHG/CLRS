@@ -16,7 +16,7 @@
 
 > A __*perfect matching*__ is a matching in which every vertex is matched. Let $G = (V, E)$ be an undirected bipartite graph with vertex partition $V = L \cup R$, where $|L| = |R|$. For any $X \subseteq V$, define the __*neighborhood*__ of $X$ as
 > 
-> $N(X) = \{ y \in V: (x, y) \in E ~\text{for some}~ x \in X \}$,
+> $N(X) = \{ y \in V: (x, y) \in E \~\text{for some}\~ x \in X \}$,
 > 
 > that is, the set of vertices adjacent to some member of $X$. Prove __*Hall's theorem*__: there exists a perfect matching in $G$ if and only if $|A| \le |N(A)|$ for every subset $A \subseteq L$.
 

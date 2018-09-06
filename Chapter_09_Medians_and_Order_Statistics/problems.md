@@ -114,7 +114,7 @@ Since $x$ and $y$ are independent, the best solution is the medians of $x$ and $
 > __*a*__. Describe an algorithm that uses $U\_i(n)$ comparisons to find the $i$th smallest of $n$ elements, where
 
 > $\displaystyle U\_i(n) = \left \{ \begin{array}{ll}
-T(n) & \text{if}~~i \ge n/2 \\\\
+T(n) & \text{if}\~\~i \ge n/2 \\\\
 \lfloor n / 2 \rfloor + U\_i(\lceil n / 2 \rceil) + T(2i) & \text{otherwise}
 \end{array} \right .$
 

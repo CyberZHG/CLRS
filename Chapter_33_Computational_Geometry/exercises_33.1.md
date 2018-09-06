@@ -46,7 +46,7 @@ A line.
 
 ### 33.1-6
 
-> Given a point $p\_0 = (x\_0, y\_0)$, the __*right horizontal ray*__ from $p\_0$ is the set of points $\{ p\_i = (x\_i, y\_i) : x\_i \ge x\_0 ~\text{and}~ y\_i = y\_0 \}$, that is, it is the set of points due right of $p\_0$ along with $p\_0$ itself. Show how to determine whether a given right horizontal ray from $p\_0$ intersects a line segment $\overline{p\_1 p\_2}$ in $O(1)$ time by reducing the problem to that of determining whether two line segments intersect.
+> Given a point $p\_0 = (x\_0, y\_0)$, the __*right horizontal ray*__ from $p\_0$ is the set of points $\{ p\_i = (x\_i, y\_i) : x\_i \ge x\_0 \~\text{and}\~ y\_i = y\_0 \}$, that is, it is the set of points due right of $p\_0$ along with $p\_0$ itself. Show how to determine whether a given right horizontal ray from $p\_0$ intersects a line segment $\overline{p\_1 p\_2}$ in $O(1)$ time by reducing the problem to that of determining whether two line segments intersect.
 
 $p\_1.y = p\_2.y = 0$ and $\max(p\_1.x, p\_2.x) \ge 0$.
 
@@ -64,4 +64,4 @@ Based on exercise 33.1-6, use $p\_i - p\_0$ as $p\_i$.
 
 > Show how to compute the area of an $n$-vertex simple, but not necessarily convex, polygon in $\Theta(n)$ time. (See Exercise 33.1-5 for definitions pertaining to polygons.)
 
-Half of the sum of the cross products of $\{\overline{p\_1 p\_i}, \overline{p\_1 p\_{i+1}} ~|~ i \in [2, n - 1] \}$.
+Half of the sum of the cross products of $\{\overline{p\_1 p\_i}, \overline{p\_1 p\_{i+1}} \~|\~ i \in [2, n - 1] \}$.

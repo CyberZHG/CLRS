@@ -4,7 +4,7 @@
 
 > Consider implementing a stack in a computer that has a relatively small amount of fast primary memory and a relatively large amount of slower disk storage. The operations PUSH and POP work on single-word values. The stack we wish to support can grow to be much larger than can fit in memory, and thus most of it must be stored on disk.
 
-> A simple, but inefficient, stack implementation keeps the entire stack on disk. We maintain in-memory a stack pointer, which is the disk address of the top element on the stack. If the pointer has value $p$, the top element is the $( p ~\text{mod}~ m )$th word on page $\lfloor p / m \rfloor$ of the disk, where $m$ is the number of words per page.
+> A simple, but inefficient, stack implementation keeps the entire stack on disk. We maintain in-memory a stack pointer, which is the disk address of the top element on the stack. If the pointer has value $p$, the top element is the $( p \~\text{mod}\~ m )$th word on page $\lfloor p / m \rfloor$ of the disk, where $m$ is the number of words per page.
 
 > To implement the PUSH operation, we increment the stack pointer, read the appropriate page into memory from disk, copy the element to be pushed to the appropriate word on the page, and write the page back to disk. A POP operation is similar. We decrement the stack pointer, read in the appropriate page from disk, and return the top of the stack. We need not write back the page, since it was not modified.
 

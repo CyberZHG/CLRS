@@ -13,10 +13,10 @@
 
 $$
 \begin{array}{rlll}
-x^2 &\equiv& 1 & (\text{mod}~ n) \\\\
-x^2 - 1 &\equiv& 0 & (\text{mod}~ n) \\\\
-(x + 1) (x - 1) &\equiv& 0 & (\text{mod}~ n) \\\\
+x^2 &\equiv& 1 & (\text{mod}\~ n) \\\\
+x^2 - 1 &\equiv& 0 & (\text{mod}\~ n) \\\\
+(x + 1) (x - 1) &\equiv& 0 & (\text{mod}\~ n) \\\\
 \end{array}
 $$
 
-$n ~|~ (x + 1)(x - 1)$, suppose $\text{gcd}(x - 1, n) = 1$, then $n ~|~ (x + 1)$, then $x \equiv -1 ~(\text{mod}~ n)$ which is trivial, it contradicts the fact that $x$ is nontrivial, therefore $\text{gcd}(x - 1, n) \ne 1$, $\text{gcd}(x + 1, n) \ne 1$.
+$n \~|\~ (x + 1)(x - 1)$, suppose $\text{gcd}(x - 1, n) = 1$, then $n \~|\~ (x + 1)$, then $x \equiv -1 \~(\text{mod}\~ n)$ which is trivial, it contradicts the fact that $x$ is nontrivial, therefore $\text{gcd}(x - 1, n) \ne 1$, $\text{gcd}(x + 1, n) \ne 1$.

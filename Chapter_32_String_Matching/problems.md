@@ -6,7 +6,7 @@
 
 > __*a*__. Give an efficient algorithm that takes as input a pattern $P[1 \dots m]$ and computes the value $\rho(P\_i)$ for $i = 1, 2, \dots, m$. What is the running time of your algorithm?
 
-Compute $\pi$, let $l = m - \pi[m]$, if $m ~\text{mod}~ l = 0$ and for all $p = m - i \cdot l > 0$, $p - \pi[p] = l$, then $\rho(P\_i) = m / l$, otherwise $\rho(P\_i) = 1$.  The running time is $\Theta(n)$.
+Compute $\pi$, let $l = m - \pi[m]$, if $m \~\text{mod}\~ l = 0$ and for all $p = m - i \cdot l > 0$, $p - \pi[p] = l$, then $\rho(P\_i) = m / l$, otherwise $\rho(P\_i) = 1$.  The running time is $\Theta(n)$.
 
 > __*b*__. For any pattern $P[1 \dots m]$, let $\rho^\*(P)$ be defined as $\max\_{1 \le i \le m} \rho(P\_i)$. Prove that if the pattern $P$ is chosen randomly from the set of all binary strings of length $m$, then the expected value of $\rho^\*(P)$ is $O(1)$.
 

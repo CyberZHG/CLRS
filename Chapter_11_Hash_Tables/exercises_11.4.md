@@ -2,7 +2,7 @@
 
 ### 11.4-1
 
-> Consider inserting the keys $10, 22, 31, 4, 15, 28, 17, 88, 59$ into a hash table of length $m = 11$ using open addressing with the auxiliary hash function $h'(k) = k$. Illustrate the result of inserting these keys using linear probing, using quadratic probing with $c\_1 = 1$ and $c\_2 = 3$, and using double hashing with $h\_1(k) = k$ and $h\_2(k) = 1 + (k ~\text{mod}~ (m - 1))$.
+> Consider inserting the keys $10, 22, 31, 4, 15, 28, 17, 88, 59$ into a hash table of length $m = 11$ using open addressing with the auxiliary hash function $h'(k) = k$. Illustrate the result of inserting these keys using linear probing, using quadratic probing with $c\_1 = 1$ and $c\_2 = 3$, and using double hashing with $h\_1(k) = k$ and $h\_2(k) = 1 + (k \~\text{mod}\~ (m - 1))$.
 
 ```python
 m = 11
@@ -110,11 +110,11 @@ $\alpha=7/8$, unsuccessful: $\displaystyle\frac{1}{1-\frac{7}{8}} = 8$ probes, s
 
 ### 11.4-4 $\star$
 
-> Suppose that we use double hashing to resolve collisions—that is, we use the hash function $h(k, i) = (h\_1(k) + ih\_2(k)) ~\text{mod}~ m$. Show that if $m$ and $h\_2(k)$ have greatest common divisor $d \ge 1$ for some key $k$, then an unsuccessful search for key $k$ examines $(1/d)$th of the hash table before returning to slot $h\_1(k)$. Thus, when $d = 1$, so that $m$ and $h\_2(k)$ are relatively prime, the search may examine the entire hash table.
+> Suppose that we use double hashing to resolve collisions—that is, we use the hash function $h(k, i) = (h\_1(k) + ih\_2(k)) \~\text{mod}\~ m$. Show that if $m$ and $h\_2(k)$ have greatest common divisor $d \ge 1$ for some key $k$, then an unsuccessful search for key $k$ examines $(1/d)$th of the hash table before returning to slot $h\_1(k)$. Thus, when $d = 1$, so that $m$ and $h\_2(k)$ are relatively prime, the search may examine the entire hash table.
 
 Suppose $d = \gcd(m, h\_2(k))$, the LCM $l = m \cdot h\_2(k) / d$.
 
-Since $d | h\_2(k)$, then $m \cdot h\_2(k) / d ~\text{mod}~ m = 0 \cdot (h\_2(k) / d ~\text{mod}~ m) = 0$, therefore $(l + ih\_2(k)) ~\text{mod}~ m = ih\_2(k) ~\text{mod}~ m$, which means $ih\_2(k) ~\text{mod}~ m$ has a period of $m/d$.
+Since $d | h\_2(k)$, then $m \cdot h\_2(k) / d \~\text{mod}\~ m = 0 \cdot (h\_2(k) / d \~\text{mod}\~ m) = 0$, therefore $(l + ih\_2(k)) \~\text{mod}\~ m = ih\_2(k) \~\text{mod}\~ m$, which means $ih\_2(k) \~\text{mod}\~ m$ has a period of $m/d$.
 
 ### 11.4-5 $\star$
 

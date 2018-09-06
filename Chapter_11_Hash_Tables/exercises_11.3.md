@@ -48,17 +48,17 @@ Use `sum` as the key.
 
 ### 11.3-3
 
-> Consider a version of the division method in which $h(k) = k~\text{mod}~m$, where $m = 2^p - 1$ and $k$ is a character string interpreted in radix $2^p$. Show that if we can derive string $x$ from string $y$ by permuting its characters, then $x$ and $y$ hash to the same value. Give an example of an application in which this property would be undesirable in a hash function.
+> Consider a version of the division method in which $h(k) = k\~\text{mod}\~m$, where $m = 2^p - 1$ and $k$ is a character string interpreted in radix $2^p$. Show that if we can derive string $x$ from string $y$ by permuting its characters, then $x$ and $y$ hash to the same value. Give an example of an application in which this property would be undesirable in a hash function.
 
-$2^p ~\text{mod}~ (2^p-1)=1$
+$2^p \~\text{mod}\~ (2^p-1)=1$
 
-$c \cdot (2^p)^x ~\text{mod}~ (2^p-1)= c \cdot 1^x = c$
+$c \cdot (2^p)^x \~\text{mod}\~ (2^p-1)= c \cdot 1^x = c$
 
-Thus the hashing is equivalent to $(\sum c\_i)~\text{mod}~m$, the strings with different permutations will have the same hashing value.
+Thus the hashing is equivalent to $(\sum c\_i)\~\text{mod}\~m$, the strings with different permutations will have the same hashing value.
 
 ### 11.3-4
 
-> Consider a hash table of size $m=1000$ and a corresponding hash function $h(k) = \lfloor m (kA ~\text{mod}~ 1) \rfloor$ for $A=(\sqrt{5}-1)/2$. Compute the locations to which the keys 61, 62, 63, 64, and 65 are mapped.
+> Consider a hash table of size $m=1000$ and a corresponding hash function $h(k) = \lfloor m (kA \~\text{mod}\~ 1) \rfloor$ for $A=(\sqrt{5}-1)/2$. Compute the locations to which the keys 61, 62, 63, 64, and 65 are mapped.
 
 $h(61)=700$
 
@@ -110,7 +110,7 @@ Therefore $\displaystyle \epsilon \ge \frac{1}{|B|} - \frac{1}{|U|}$.
 
 > Let $U$ be the set of $n$-tuples of values drawn from $\mathbb{Z}\_p$, and let $B=\mathbb{Z}\_p$, where $p$ is prime. Define the hash function $h\_b$: $U \rightarrow B$ for $b \in \mathbb{Z}\_p$ on an input $n$-tuple $\langle a\_0, a\_1, \dots, a\_{n-1} \rangle$ from $U$ as
 
-> $\displaystyle h\_b(\langle a\_0, a\_1, \dots, a\_{n-1} \rangle)=\left ( \sum\_{j=0}^{n-1}a\_jb^j \right ) ~\text{mod}~p$,
+> $\displaystyle h\_b(\langle a\_0, a\_1, \dots, a\_{n-1} \rangle)=\left ( \sum\_{j=0}^{n-1}a\_jb^j \right ) \~\text{mod}\~p$,
 
 > and let $\mathcal{H}=\{ h\_b : b \in \mathbb{Z}\_p \}$. Argue that $\mathcal{H}$ is $((n-1)/p)$-universal according to the definition of $\epsilon$-universal in Exercise 11.3-5.
 

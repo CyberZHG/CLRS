@@ -94,8 +94,8 @@ $$
 > $$
 \pi\_{ij}^{(k)} = \left \{ 
 \begin{array}{ll}
-\pi\_{ij}^{(k-1)} & ~\text{if}~ d\_{ij}^{(k-1)} < d\_{ik}^{(k-1)} + d\_{kj}^{(k-1)}, \\\\
-\pi\_{kj}^{(k-1)} & ~\text{if}~ d\_{ij}^{(k-1)} \ge d\_{ik}^{(k-1)} + d\_{kj}^{(k-1)}.
+\pi\_{ij}^{(k-1)} & \~\text{if}\~ d\_{ij}^{(k-1)} < d\_{ik}^{(k-1)} + d\_{kj}^{(k-1)}, \\\\
+\pi\_{kj}^{(k-1)} & \~\text{if}\~ d\_{ij}^{(k-1)} \ge d\_{ik}^{(k-1)} + d\_{kj}^{(k-1)}.
 \end{array}
 \right .
 $$

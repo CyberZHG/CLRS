@@ -37,11 +37,11 @@ Length of subtraction: $\lceil \lg b \rceil$.
 
 Total: $O((1 + \lg q) \lg b)$.
 
-> __*b*__. Define $\mu(a, b) = (1 + \lg a)(1 + \lg b)$. Show that the number of bit operations performed by EUCLID in reducing the problem of computing $\text{gcd}(a, b)$ to that of computing $\text{gcd}(b, a~\text{mod}~b)$ is at most $c(\mu(a, b) - \mu(b, a~\text{mod}~b))$ for some sufficiently large constant $c > 0$.
+> __*b*__. Define $\mu(a, b) = (1 + \lg a)(1 + \lg b)$. Show that the number of bit operations performed by EUCLID in reducing the problem of computing $\text{gcd}(a, b)$ to that of computing $\text{gcd}(b, a\~\text{mod}\~b)$ is at most $c(\mu(a, b) - \mu(b, a\~\text{mod}\~b))$ for some sufficiently large constant $c > 0$.
 
 $$
 \begin{array}{rlll}
-& \mu(a, b) - \mu(b, a~\text{mod}~b) \\\\
+& \mu(a, b) - \mu(b, a\~\text{mod}\~b) \\\\
 =& \mu(a, b) - \mu(b, r) \\\\
 =& (1 + \lg a)(1 + \lg b) - (1 + \lg b)(1 + \lg r) \\\\
 =& (1 + \lg b)(\lg a - \lg r) & (\lg r \le \lg b)\\\\

@@ -68,7 +68,7 @@ def josephus_permutation(n, m):
 
 > __*b*__. Suppose that $m$ is not a constant. Describe an $O(n \lg n)$-time algorithm that, given integers $n$ and $m$, outputs the $(n,m)$-Josephus permutation.
 
-Build a balanced binary search tree in $O(n \lg n)$, maintain $size$ to support order-statistics. In each iteration, we select and delete the $(r + m - 1) ~\text{mod}~ T.root.size + 1$th element.
+Build a balanced binary search tree in $O(n \lg n)$, maintain $size$ to support order-statistics. In each iteration, we select and delete the $(r + m - 1) \~\text{mod}\~ T.root.size + 1$th element.
 
 ```python
 class TreeNode:

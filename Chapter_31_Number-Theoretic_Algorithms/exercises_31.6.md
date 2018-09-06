@@ -23,12 +23,12 @@ def modular_exponentiation(a, b, n):
 
 ### 31.6-3
 
-> Assuming that you know $\phi(n)$, explain how to compute $a^{-1}~\text{mod}~n$ for any $a \in \mathbb{Z}\_n^\*$ using the procedure MODULAR-EXPONENTIATION.
+> Assuming that you know $\phi(n)$, explain how to compute $a^{-1}\~\text{mod}\~n$ for any $a \in \mathbb{Z}\_n^\*$ using the procedure MODULAR-EXPONENTIATION.
 
 $$
 \begin{array}{rlll}
-a^{\phi(n)} &\equiv& 1 &(\text{mod}~n) \\\\
-a\cdot a^{\phi(n)-1} &\equiv& 1 &(\text{mod}~n) \\\\
-a^{-1} &\equiv& a^{\phi(n)-1} &(\text{mod}~n)  \\\\
+a^{\phi(n)} &\equiv& 1 &(\text{mod}\~n) \\\\
+a\cdot a^{\phi(n)-1} &\equiv& 1 &(\text{mod}\~n) \\\\
+a^{-1} &\equiv& a^{\phi(n)-1} &(\text{mod}\~n)  \\\\
 \end{array}
 $$
