@@ -4,13 +4,13 @@
 
 > During the course of an algorithm, we sometimes find that we need to maintain past versions of a dynamic set as it is updated. We call such a set __*persistent*__. One way to implement a persistent set is to copy the entire set whenever it is modified, but this approach can slow down a program and also consume much space. Sometimes, we can do much better.
 
-> __*a*__. For a general persistent binary search tree, identify the nodes that we need to change to insert a key $$k$$ or delete a node $$y$$.
+> __*a*__. For a general persistent binary search tree, identify the nodes that we need to change to insert a key $k$ or delete a node $y$.
 
 Insert: the number of nodes in the simple path plus 1.
 
-Delete: the ancestors of $$y$$.
+Delete: the ancestors of $y$.
 
-> __*b*__. Write a procedure PERSISTENT-TREE-INSERT that, given a persistent tree $$T$$ and a key $$k$$ to insert, returns a new persistent tree $$T'$$ that is the result of inserting $$k$$ into $$T$$.
+> __*b*__. Write a procedure PERSISTENT-TREE-INSERT that, given a persistent tree $T$ and a key $k$ to insert, returns a new persistent tree $T'$ that is the result of inserting $k$ into $T$.
 
 ```python
 class TreeNode:
@@ -33,67 +33,67 @@ def insert(root, x):
     return new_root
 ```
 
-> __*c*__. If the height of the persistent binary search tree $$T$$ is $$h$$, what are the time and space requirements of your implementation of PERSISTENT-TREE-INSERT?
+> __*c*__. If the height of the persistent binary search tree $T$ is $h$, what are the time and space requirements of your implementation of PERSISTENT-TREE-INSERT?
 
-$$\Theta(h)$$ and $$\Theta(h)$$.
+$\Theta(h)$ and $\Theta(h)$.
 
-> __*d*__. Suppose that we had included the parent attribute in each node. In this case, PERSISTENT-TREE-INSERT would need to perform additional copying. Prove that PERSISTENT-TREE-INSERT would then require $$\Omega(n)$$ time and space, where $$n$$ is the number of nodes in the tree.
+> __*d*__. Suppose that we had included the parent attribute in each node. In this case, PERSISTENT-TREE-INSERT would need to perform additional copying. Prove that PERSISTENT-TREE-INSERT would then require $\Omega(n)$ time and space, where $n$ is the number of nodes in the tree.
 
-$$T(n)=2T(n/2)+\Theta(1)$$
+$T(n)=2T(n/2)+\Theta(1)$
 
-> __*e*__. Show how to use red-black trees to guarantee that the worst-case running time and space are $$O(\lg n)$$ per insertion or deletion.
+> __*e*__. Show how to use red-black trees to guarantee that the worst-case running time and space are $O(\lg n)$ per insertion or deletion.
 
 Based on Exercise 13.3-6.
 
 ### 13-2 Join operation on red-black trees
 
-> The __*join*__ operation takes two dynamic sets $$S_1$$ and $$S_2$$ and an element $$x$$ such that for any $$x_1 \in S_1$$ and $$x_2 \in S_2$$, we have $$x_1.key \le x.key \le x_2.key$$. It returns a set $$S = S_1 \cup \{x\} \cup S_2$$. In this problem, we investigate how to implement the join operation on red-black trees.
+> The __*join*__ operation takes two dynamic sets $S_1$ and $S_2$ and an element $x$ such that for any $x_1 \in S_1$ and $x_2 \in S_2$, we have $x_1.key \le x.key \le x_2.key$. It returns a set $S = S_1 \cup \{x\} \cup S_2$. In this problem, we investigate how to implement the join operation on red-black trees.
 
-> __*a*__. Given a red-black tree $$T$$, let us store its black-height as the new attribute $$T.bh$$. Argue that RB-INSERT and RB-DELETE can maintain the $$bh$$ attribute without requiring extra storage in the nodes of the tree and without increasing the asymptotic running times. Show that while descending through $$T$$, we can determine the black-height of each node we visit in $$O(1)$$ time per node visited.
+> __*a*__. Given a red-black tree $T$, let us store its black-height as the new attribute $T.bh$. Argue that RB-INSERT and RB-DELETE can maintain the $bh$ attribute without requiring extra storage in the nodes of the tree and without increasing the asymptotic running times. Show that while descending through $T$, we can determine the black-height of each node we visit in $O(1)$ time per node visited.
 
-Initialize: $$bh = 0$$.
+Initialize: $bh = 0$.
 
-RB-INSERT: if in the last step the root is red, we increase $$bh$$ by 1.
+RB-INSERT: if in the last step the root is red, we increase $bh$ by 1.
 
-RB-DELETE: if $$x$$ is root, we decrease $$bh$$ by 1.
+RB-DELETE: if $x$ is root, we decrease $bh$ by 1.
 
-Each node: in the simple path, decrease $$bh$$ by 1 each time we find a black node.
+Each node: in the simple path, decrease $bh$ by 1 each time we find a black node.
 
-> We wish to implement the operation RB-JOIN$$(T_1, x, T_2)$$, which destroys $$T_1$$ and $$T_2$$ and returns a red-black tree $$T=T_1 \cup \{x\} \cup T_2$$. Let $$n$$ be the total number of nodes in $$T_1$$ and $$T_2$$.
+> We wish to implement the operation RB-JOIN$(T_1, x, T_2)$, which destroys $T_1$ and $T_2$ and returns a red-black tree $T=T_1 \cup \{x\} \cup T_2$. Let $n$ be the total number of nodes in $T_1$ and $T_2$.
 
-> __*b*__. Assume that $$T_1.bh \ge T_2.bh$$. Describe an $$O(\lg n)$$-time algorithm that finds a black node $$y$$ in $$T_1$$ with the largest key from among those nodes whose black-height is $$T2.bh$$.
+> __*b*__. Assume that $T_1.bh \ge T_2.bh$. Describe an $O(\lg n)$-time algorithm that finds a black node $y$ in $T_1$ with the largest key from among those nodes whose black-height is $T2.bh$.
 
-Move to the right child if the node has a right child, otherwise move to the left child. If the node is black, we decease $$bh$$ by 1. Repeat the step until $$bh = T2.bh$$.
+Move to the right child if the node has a right child, otherwise move to the left child. If the node is black, we decease $bh$ by 1. Repeat the step until $bh = T2.bh$.
 
-> __*c*__. Let $$T_y$$ be the subtree rooted at $$y$$. Describe how $$T_y \cup \{ x \} \cup T_2$$ can replace $$T_y$$ in $$O(1)$$ time without destroying the binary-search-tree property.
+> __*c*__. Let $T_y$ be the subtree rooted at $y$. Describe how $T_y \cup \{ x \} \cup T_2$ can replace $T_y$ in $O(1)$ time without destroying the binary-search-tree property.
 
-$$x$$'s parent is $$T_y$$'s parent, $$x$$'s left child is $$T_y$$ and its right child is $$T_2$$.
+$x$'s parent is $T_y$'s parent, $x$'s left child is $T_y$ and its right child is $T_2$.
 
-> __*d*__. What color should we make $$x$$ so that red-black properties 1, 3, and 5 are maintained? Describe how to enforce properties 2 and 4 in $$O(\lg n)$$ time.
+> __*d*__. What color should we make $x$ so that red-black properties 1, 3, and 5 are maintained? Describe how to enforce properties 2 and 4 in $O(\lg n)$ time.
 
 Red. RB-INSERT-FIXUP(T, x).
 
-> __*e*__. Argue that no generality is lost by making the assumption in part (b). Describe the symmetric situation that arises when $$T_1.bh \le T_2.bh$$.
+> __*e*__. Argue that no generality is lost by making the assumption in part (b). Describe the symmetric situation that arises when $T_1.bh \le T_2.bh$.
 
 Symmetric.
 
-> __*f*__. Argue that the running time of RB-JOIN is $$O(\lg n)$$.
+> __*f*__. Argue that the running time of RB-JOIN is $O(\lg n)$.
 
-$$O(1) + O(\lg n) = O(\lg n)$$
+$O(1) + O(\lg n) = O(\lg n)$
 
 ### 13-3 AVL trees
 
-> An __*AVL tree*__ is a binary search tree that is __*height balanced*__: for each node $$x$$, the heights of the left and right subtrees of $$x$$ differ by at most 1. To implement an AVL tree, we maintain an extra attribute in each node: $$x.h$$ is the height of node $$x$$. As for any other binary search tree $$T$$, we assume that $$T.root$$ points to the root node.
+> An __*AVL tree*__ is a binary search tree that is __*height balanced*__: for each node $x$, the heights of the left and right subtrees of $x$ differ by at most 1. To implement an AVL tree, we maintain an extra attribute in each node: $x.h$ is the height of node $x$. As for any other binary search tree $T$, we assume that $T.root$ points to the root node.
 
-> __*a*__. Prove that an AVL tree with $$n$$ nodes has height $$O(\lg n)$$.
+> __*a*__. Prove that an AVL tree with $n$ nodes has height $O(\lg n)$.
 
-$$T(h) = T(h-1) + T(h-2)$$.
+$T(h) = T(h-1) + T(h-2)$.
 
-> __*b*__. To insert into an AVL tree, we first place a node into the appropriate place in binary search tree order. Afterward, the tree might no longer be height balanced. Specifically, the heights of the left and right children of some node might differ by 2. Describe a procedure BALANCE$$(x)$$, which takes a subtree rooted at $$x$$ whose left and right children are height balanced and have heights that differ by at most 2, i.e., $$|x.right.h - x.left.hj|\le 2$$, and alters the subtree rooted at $$x$$ to be height balanced.
+> __*b*__. To insert into an AVL tree, we first place a node into the appropriate place in binary search tree order. Afterward, the tree might no longer be height balanced. Specifically, the heights of the left and right children of some node might differ by 2. Describe a procedure BALANCE$(x)$, which takes a subtree rooted at $x$ whose left and right children are height balanced and have heights that differ by at most 2, i.e., $|x.right.h - x.left.hj|\le 2$, and alters the subtree rooted at $x$ to be height balanced.
 
 See __*c*__.
 
-> __*c*__. Using part (b), describe a recursive procedure AVL-INSERT$$(x, z)$$ that takes a node $$x$$ within an AVL tree and a newly created node $$z$$ (whose key has already been filled in), and adds $$z$$ to the subtree rooted at $$x$$, maintaining the property that $$x$$ is the root of an AVL tree. As in TREE-INSERT from Section 12.3, assume that $$z.key$$ has already been filled in and that $$z.left = NIL$$ and $$z.right = NIL$$; also assume that $$z.h = 0$$. Thus, to insert the node $$z$$ into the AVL tree $$T$$, we call AVL-INSERT$$(T.root, z)$$.
+> __*c*__. Using part (b), describe a recursive procedure AVL-INSERT$(x, z)$ that takes a node $x$ within an AVL tree and a newly created node $z$ (whose key has already been filled in), and adds $z$ to the subtree rooted at $x$, maintaining the property that $x$ is the root of an AVL tree. As in TREE-INSERT from Section 12.3, assume that $z.key$ has already been filled in and that $z.left = NIL$ and $z.right = NIL$; also assume that $z.h = 0$. Thus, to insert the node $z$ into the AVL tree $T$, we call AVL-INSERT$(T.root, z)$.
 
 
 ```python
@@ -190,21 +190,21 @@ class AVL:
         return root
 ```
 
-> __*d*__. Show that AVL-INSERT, run on an n-node AVL tree, takes $$O(\lg n)$$ time and performs $$O(1)$$ rotations.
+> __*d*__. Show that AVL-INSERT, run on an n-node AVL tree, takes $O(\lg n)$ time and performs $O(1)$ rotations.
 
-$$O(\lg n)$$: the length of path from root to the inserted node.
+$O(\lg n)$: the length of path from root to the inserted node.
 
-$$O(1)$$: the height will decrease by 1 after the rotation, therefore the ancestors will not be affected.
+$O(1)$: the height will decrease by 1 after the rotation, therefore the ancestors will not be affected.
 
 ### 13-4 Treaps
 
-> If we insert a set of $$n$$ items into a binary search tree, the resulting tree may be horribly unbalanced, leading to long search times. As we saw in Section 12.4, however, randomly built binary search trees tend to be balanced. Therefore, one strategy that, on average, builds a balanced tree for a fixed set of items would be to randomly permute the items and then insert them in that order into the tree.
+> If we insert a set of $n$ items into a binary search tree, the resulting tree may be horribly unbalanced, leading to long search times. As we saw in Section 12.4, however, randomly built binary search trees tend to be balanced. Therefore, one strategy that, on average, builds a balanced tree for a fixed set of items would be to randomly permute the items and then insert them in that order into the tree.
 
-> __*a*__. Show that given a set of nodes $$x_1, x_2, \dots, x_n$$, with associated keys and priorities, all distinct, the treap associated with these nodes is unique.
+> __*a*__. Show that given a set of nodes $x_1, x_2, \dots, x_n$, with associated keys and priorities, all distinct, the treap associated with these nodes is unique.
 
 The root is the node with smallest priority, the root divides the sets into two subsets based on the key. In each subset, the node with smallest priority is selected as the root, thus we can uniquely determine a treap with a specific input.
 
-> __*b*__. Show that the expected height of a treap is $$\Theta(\lg n)$$, and hence the expected time to search for a value in the treap is $$\Theta(\lg n)$$.
+> __*b*__. Show that the expected height of a treap is $\Theta(\lg n)$, and hence the expected time to search for a value in the treap is $\Theta(\lg n)$.
 
 Same as randomly built BST.
 
@@ -279,36 +279,36 @@ class Treap:
         return root
 ```
 
-> __*d*__. Show that the expected running time of TREAP-INSERT is $$\Theta(\lg n)$$.
+> __*d*__. Show that the expected running time of TREAP-INSERT is $\Theta(\lg n)$.
 
-Rotation is $$\Theta(1)$$, at most $$h$$ rotations, therefore the expected running time is $$\Theta(\lg n)$$.
+Rotation is $\Theta(1)$, at most $h$ rotations, therefore the expected running time is $\Theta(\lg n)$.
 
-> __*e*__. Consider the treap $$T$$ immediately after TREAP-INSERT has inserted node $$x$$. Let $$C$$ be the length of the right spine of the left subtree of $$x$$. Let $$D$$ be the length of the left spine of the right subtree of $$x$$. Prove that the total number of rotations that were performed during the insertion of $$x$$ is equal to $$C + D$$.
+> __*e*__. Consider the treap $T$ immediately after TREAP-INSERT has inserted node $x$. Let $C$ be the length of the right spine of the left subtree of $x$. Let $D$ be the length of the left spine of the right subtree of $x$. Prove that the total number of rotations that were performed during the insertion of $x$ is equal to $C + D$.
 
-Left rotation increase $$C$$ by 1, right rotation increase $$D$$ by 1.
+Left rotation increase $C$ by 1, right rotation increase $D$ by 1.
 
-> __*f*__. Show that $$X_{ik} = 1$$ if and only if $$y.priority > x.priority$$, $$y.key < x.key$$, and, for every $$z$$ such that $$y.key < z.key < x.key$$, we have $$y.priority < z.priority$$.
+> __*f*__. Show that $X_{ik} = 1$ if and only if $y.priority > x.priority$, $y.key < x.key$, and, for every $z$ such that $y.key < z.key < x.key$, we have $y.priority < z.priority$.
 
 The first two are obvious.
 
-The min-heap property will not hold if $$y.priority > z.priority$$.
+The min-heap property will not hold if $y.priority > z.priority$.
 
 > __*g*__. Show that
 
-> $$\begin{array}{rll}
+> $\begin{array}{rll}
 \text{Pr}\{X_{ik}=1\} &=&
 \displaystyle \frac{(k-i-1)!}{(k-i+1)!} \\
 &=& \displaystyle \frac{1}{(k-i+1)(k-i)} \\
 \end{array}
 $$
 
-Total number of permutations: $$(k-i+1)!$$
+Total number of permutations: $(k-i+1)!$
 
-Permutations satisfy the condition: $$(k-i-1)!$$
+Permutations satisfy the condition: $(k-i-1)!$
 
 > __*h*__. Show that
 
-> $$\begin{array}{rll}
+> $\begin{array}{rll}
 \text{E}[C] &=&
 \displaystyle \sum_{j=1}^{k-1} \frac{1}{j(j+1)} \\
 &=& \displaystyle 1 - \frac{1}{k} \\
@@ -326,7 +326,7 @@ $$
 
 > __*i*__. Use a symmetry argument to show that
 
-> $$\displaystyle \text{E}[D] = 1 - \frac{1}{n-k+1}$$
+> $\displaystyle \text{E}[D] = 1 - \frac{1}{n-k+1}$
 
 $$
 \begin{array}{rll}
@@ -338,4 +338,4 @@ $$
 
 > __*j*__. Conclude that the expected number of rotations performed when inserting a node into a treap is less than 2.
 
-$$\text{E}[C] + \text{E}[D] \le 2$$
+$\text{E}[C] + \text{E}[D] \le 2$

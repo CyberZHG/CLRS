@@ -2,25 +2,25 @@
 
 ### 15.1-1
 
-> Show that equation (15.4) follows from equation (15.3) and the initial condition $$T(0) = 1$$.
+> Show that equation (15.4) follows from equation (15.3) and the initial condition $T(0) = 1$.
 
-For $$n=0$$, $$T(0) = 2^0 = 1$$.
+For $n=0$, $T(0) = 2^0 = 1$.
 
-Suppose $$T(i) = 2^i$$ for $$i$$ in $$[0, n - 1]$$, then
+Suppose $T(i) = 2^i$ for $i$ in $[0, n - 1]$, then
 $$
 T(n) = 1 + \sum_{j=0}^{n-1} T(j) = 1 + 1 + 2 + 2^2 + \cdots + 2^{n-1} = 2^n - 1 + 1 = 2^n
 $$
 ### 15.1-2
 
-> Show, by means of a counterexample, that the following "greedy" strategy does not always determine an optimal way to cut rods. Define the density of a rod of length $$i$$ to be $$p_i/i$$, that is, its value per inch. The greedy strategy for a rod of length $$n$$ cuts off a first piece of length $$i$$, where $$1 \le i \le n$$, having maximum density. It then continues by applying the greedy strategy to the remaining piece of length $$n - i$$ .
+> Show, by means of a counterexample, that the following "greedy" strategy does not always determine an optimal way to cut rods. Define the density of a rod of length $i$ to be $p_i/i$, that is, its value per inch. The greedy strategy for a rod of length $n$ cuts off a first piece of length $i$, where $1 \le i \le n$, having maximum density. It then continues by applying the greedy strategy to the remaining piece of length $n - i$ .
 
-Suppose $$p_1  = 1, p_2 = 8, p_3 = 14, p_4 = 0$$, the densities $$p_1 / 1 = 1, p_2 / 4 = 2, p_3 / 3 = 4 \frac{2}{3}$$, for $$n=4$$, the greedy result is $$3$$ and $$1$$, the total value if $$15$$, and the dynamic programming solution is $$2$$ and $$2$$, which is $$16$$.
+Suppose $p_1  = 1, p_2 = 8, p_3 = 14, p_4 = 0$, the densities $p_1 / 1 = 1, p_2 / 4 = 2, p_3 / 3 = 4 \frac{2}{3}$, for $n=4$, the greedy result is $3$ and $1$, the total value if $15$, and the dynamic programming solution is $2$ and $2$, which is $16$.
 
 ### 15.1-3
 
-> Consider a modification of the rod-cutting problem in which, in addition to a price $$p_i$$ for each rod, each cut incurs a fixed cost of $$c$$. The revenue associated with a solution is now the sum of the prices of the pieces minus the costs of making the cuts. Give a dynamic-programming algorithm to solve this modified problem.
+> Consider a modification of the rod-cutting problem in which, in addition to a price $p_i$ for each rod, each cut incurs a fixed cost of $c$. The revenue associated with a solution is now the sum of the prices of the pieces minus the costs of making the cuts. Give a dynamic-programming algorithm to solve this modified problem.
 
-$$r_n = \max(\max_{1 \le i \le {n - 1}} (p_i + r_{n-i}) - c, p_n)$$
+$r_n = \max(\max_{1 \le i \le {n - 1}} (p_i + r_{n-i}) - c, p_n)$
 
 ```python
 def cut_rod(p, n, c):
@@ -63,7 +63,7 @@ def cut_rod(p, n):
 
 ### 15.1-5
 
-> The Fibonacci numbers are defined by recurrence (3.22). Give an $$O(n)$$-time dynamic-programming algorithm to compute the nth Fibonacci number. Draw the subproblem graph. How many vertices and edges are in the graph?
+> The Fibonacci numbers are defined by recurrence (3.22). Give an $O(n)$-time dynamic-programming algorithm to compute the nth Fibonacci number. Draw the subproblem graph. How many vertices and edges are in the graph?
 
 ```python
 def fib(n):

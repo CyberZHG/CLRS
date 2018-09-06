@@ -2,11 +2,11 @@
 
 ### 22.3-1
 
-> Make a 3-by-3 chart with row and column labels WHITE, GRAY, and BLACK. In each cell $$(i, j)$$, indicate whether, at any point during a depth-first search of a directed graph, there can be an edge from a vertex of color $$i$$ to a vertex of color $$j$$. For each possible edge, indicate what edge types it can be. Make a second such chart for depth-first search of an undirected graph.
+> Make a 3-by-3 chart with row and column labels WHITE, GRAY, and BLACK. In each cell $(i, j)$, indicate whether, at any point during a depth-first search of a directed graph, there can be an edge from a vertex of color $i$ to a vertex of color $j$. For each possible edge, indicate what edge types it can be. Make a second such chart for depth-first search of an undirected graph.
 
 Directed:
 
-| $$i$$ \ $$j$$ | WHITE | GRAY | BLACK |
+| $i$ \ $j$ | WHITE | GRAY | BLACK |
 | :---: | :---: | :---: | :---: |
 | WHITE | TBFC | BC | C |
 | GRAY | TF | TBF | TFC |
@@ -14,7 +14,7 @@ Directed:
 
 Undirected:
 
-| $$i$$ \ $$j$$ | WHITE | GRAY | BLACK |
+| $i$ \ $j$ | WHITE | GRAY | BLACK |
 | :---: | :---: | :---: | :---: |
 | WHITE | TB | TB |  |
 | GRAY | TB | TB | TB |
@@ -45,23 +45,23 @@ Line 3: color = BLACK
 
 ### 22.3-5
 
-> Show that edge $$(u, v)$$ is
+> Show that edge $(u, v)$ is
 >
-> _**a**_. a tree edge or forward edge if and only if $$u.d < v.d < v.f < u.f$$,
+> _**a**_. a tree edge or forward edge if and only if $u.d < v.d < v.f < u.f$,
 
-$$u$$ is an ancestor of $$v$$.
+$u$ is an ancestor of $v$.
 
-> _**b**_. a back edge if and only if $$v.d \le u.d < u.f \le v.f$$, and
+> _**b**_. a back edge if and only if $v.d \le u.d < u.f \le v.f$, and
 
-$$u$$ is a descendant of $$v$$.
+$u$ is a descendant of $v$.
 
-> _**c**_. a cross edge if and only if $$v.d < v.f < u.d < u.f$$.
+> _**c**_. a cross edge if and only if $v.d < v.f < u.d < u.f$.
 
-$$v$$ is visited before $$u$$.
+$v$ is visited before $u$.
 
 ### 22.3-6
 
-> Show that in an undirected graph, classifying an edge $$(u, v)$$ as a tree edge or a back edge according to whether $$(u, v)$$ or $$(v, u)$$ is encountered first during the depth-first search is equivalent to classifying it according to the ordering of the four types in the classification scheme.
+> Show that in an undirected graph, classifying an edge $(u, v)$ as a tree edge or a back edge according to whether $(u, v)$ or $(v, u)$ is encountered first during the depth-first search is equivalent to classifying it according to the ordering of the four types in the classification scheme.
 
 By changing an undirected graph into a directed graph with two-way edges, an equivalent result is produced.
 
@@ -73,32 +73,32 @@ Goto.
 
 ### 22.3-8
 
-> Give a counterexample to the conjecture that if a directed graph $$G$$ contains a path from $$u$$ to $$v$$, and if $$u.d < v.d$$ in a depth-first search of $$G$$, then $$v$$ is a descendant of $$u$$ in the depth-first forest produced.
+> Give a counterexample to the conjecture that if a directed graph $G$ contains a path from $u$ to $v$, and if $u.d < v.d$ in a depth-first search of $G$, then $v$ is a descendant of $u$ in the depth-first forest produced.
 
-$$E = \{(w, u), (w, v), (u, w)\}$$, search $$w$$ first.
+$E = \{(w, u), (w, v), (u, w)\}$, search $w$ first.
 
 ### 22.3-9
 
-> Give a counterexample to the conjecture that if a directed graph $$G$$ contains a path  
-> from $$u$$ to $$v$$, then any depth-first search must result in $$v.d \le u.f$$.
+> Give a counterexample to the conjecture that if a directed graph $G$ contains a path  
+> from $u$ to $v$, then any depth-first search must result in $v.d \le u.f$.
 
-$$E = \{(w, u), (w, v), (u, w)\}$$, search $$w$$ first.
+$E = \{(w, u), (w, v), (u, w)\}$, search $w$ first.
 
 ### 22.3-10
 
-> Modify the pseudocode for depth-first search so that it prints out every edge in the directed graph $$G$$, together with its type. Show what modifications, if any, you need to make if $$G$$ is undirected.
+> Modify the pseudocode for depth-first search so that it prints out every edge in the directed graph $G$, together with its type. Show what modifications, if any, you need to make if $G$ is undirected.
 
 See exercises 22.3-5.
 
 ### 22.3-11
 
-> Explain how a vertex $$u$$ of a directed graph can end up in a depth-first tree containing only $$u$$, even though $$u$$ has both incoming and outgoing edges in $$G$$.
+> Explain how a vertex $u$ of a directed graph can end up in a depth-first tree containing only $u$, even though $u$ has both incoming and outgoing edges in $G$.
 
-$$E = \{(w, u), (u, v)\}$$, search $$v$$ then search $$u$$.
+$E = \{(w, u), (u, v)\}$, search $v$ then search $u$.
 
 ### 22.3-12
 
-> Show that we can use a depth-first search of an undirected graph $$G$$ to identify the connected components of $$G$$, and that the depth-first forest contains as many trees as $$G$$ has connected components. More precisely, show how to modify depth-first search so that it assigns to each vertex $$v$$ an integer label $$v.cc$$ between $$1$$ and $$k$$, where $$k$$ is the number of connected components of $$G$$, such that $$u.cc = v.cc$$ if and only if $$u$$ and $$v$$ are in the same connected component.
+> Show that we can use a depth-first search of an undirected graph $G$ to identify the connected components of $G$, and that the depth-first forest contains as many trees as $G$ has connected components. More precisely, show how to modify depth-first search so that it assigns to each vertex $v$ an integer label $v.cc$ between $1$ and $k$, where $k$ is the number of connected components of $G$, such that $u.cc = v.cc$ if and only if $u$ and $v$ are in the same connected component.
 
 ```
 DFS(G)
@@ -119,9 +119,8 @@ DFS-VISIT(G, u)
 ...
 ```
 
-### 22.3-13 $$\star$$
+### 22.3-13 $\star$
 
-> A directed graph $$G = (V, E)$$ is _**singly connected**_ if $$u \leadsto v$$ implies that $$G$$ contains at most one simple path from $$u$$ to $$v$$ for all vertices $$u, v \in V$$. Give an efficient algorithm to determine whether or not a directed graph is singly connected.
+> A directed graph $G = (V, E)$ is _**singly connected**_ if $u \leadsto v$ implies that $G$ contains at most one simple path from $u$ to $v$ for all vertices $u, v \in V$. Give an efficient algorithm to determine whether or not a directed graph is singly connected.
 
-Run DFS for every vertex, if $$v.color$$ is BLACK, then the graph is not singly connected, $$O(V\cdot(V+E))$$.
-
+Run DFS for every vertex, if $v.color$ is BLACK, then the graph is not singly connected, $O(V\cdot(V+E))$.

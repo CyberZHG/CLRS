@@ -10,4 +10,3 @@
 * [31.8 Primality testing](exercises_31.8.md)
 * [31.9 Integer factorization](exercises_31.9.md)
 * [Problems](problems.md)
-

@@ -2,7 +2,7 @@
 
 ### 10.1-1
 
-> Using Figure 10.1 as a model, illustrate the result of each operation in the sequence PUSH$$(S,4)$$, PUSH$$(S,1)$$, PUSH$$(S,3)$$, POP$$(S)$$, PUSH$$(S,8)$$, and POP$$(S)$$ on an initially empty stack $$S$$ stored in array $$S[1 \dots 6]$$.
+> Using Figure 10.1 as a model, illustrate the result of each operation in the sequence PUSH$(S,4)$, PUSH$(S,1)$, PUSH$(S,3)$, POP$(S)$, PUSH$(S,8)$, and POP$(S)$ on an initially empty stack $S$ stored in array $S[1 \dots 6]$.
 
 ![](img/10.1-1_1.png)
 ![](img/10.1-1_2.png)
@@ -13,7 +13,7 @@
 
 ### 10.1-2
 
-> Explain how to implement two stacks in one array $$A[1 \dots n]$$ in such a way that neither stack overflows unless the total number of elements in both stacks together is $$n$$. The PUSH and POP operations should run in $$O(1)$$ time.
+> Explain how to implement two stacks in one array $A[1 \dots n]$ in such a way that neither stack overflows unless the total number of elements in both stacks together is $n$. The PUSH and POP operations should run in $O(1)$ time.
 
 ```python
 n = 100
@@ -58,7 +58,7 @@ class Stack2:
 
 ### 10.1-3
 
-> Using Figure 10.2 as a model, illustrate the result of each operation in the sequence ENQUEUE$$(Q,4)$$, ENQUEUE$$(Q,1)$$, ENQUEUE$$(Q,3)$$, DEQUEUE$$(Q)$$, ENQUEUE$$(Q,8)$$, and DEQUEUE$$(Q)$$ on an initially empty queue $$Q$$ stored in array $$Q[1 \dots 6]$$.
+> Using Figure 10.2 as a model, illustrate the result of each operation in the sequence ENQUEUE$(Q,4)$, ENQUEUE$(Q,1)$, ENQUEUE$(Q,3)$, DEQUEUE$(Q)$, ENQUEUE$(Q,8)$, and DEQUEUE$(Q)$ on an initially empty queue $Q$ stored in array $Q[1 \dots 6]$.
 
 ![](img/10.1-3_1.png)
 ![](img/10.1-3_2.png)
@@ -98,7 +98,7 @@ class Queue:
 
 ### 10.1-5
 
-> Whereas a stack allows insertion and deletion of elements at only one end, and a queue allows insertion at one end and deletion at the other end, a __*deque*__ (doubleended queue) allows insertion and deletion at both ends. Write four $$O(1)$$-time procedures to insert elements into and delete elements from both ends of a deque implemented by an array.
+> Whereas a stack allows insertion and deletion of elements at only one end, and a queue allows insertion at one end and deletion at the other end, a __*deque*__ (doubleended queue) allows insertion and deletion at both ends. Write four $O(1)$-time procedures to insert elements into and delete elements from both ends of a deque implemented by an array.
 
 ```python
 class Deque:
@@ -145,9 +145,9 @@ class Deque:
 
 > Show how to implement a queue using two stacks. Analyze the running time of the queue operations.
 
-Enqueue: $$\Theta(1)$$. 
+Enqueue: $\Theta(1)$. 
 
-Dequeue: worst $$O(n)$$, amortized $$\Theta(1)$$.
+Dequeue: worst $O(n)$, amortized $\Theta(1)$.
 
 ```python
 class BlackBoxStack:
@@ -190,9 +190,9 @@ class Queue:
 
 > Show how to implement a stack using two queues. Analyze the running time of the stack operations.
 
-Push: $$\Theta(1)$$. 
+Push: $\Theta(1)$. 
 
-Pop: $$\Theta(n)$$.
+Pop: $\Theta(n)$.
 
 ```python
 class BlackBoxQueue:

@@ -366,18 +366,18 @@ See exercise 20.3-1 and exercise 20.3-2.
 
 Already/not: nothing changes.
 
-Constant time: add an auxiliary array of size $$u$$.
+Constant time: add an auxiliary array of size $u$.
 
 ### 20.3-5
 
-> Suppose that instead of $$\sqrt[\uparrow]{u}$$ clusters, each with universe size $$\sqrt[\downarrow]{u}$$, we constructed vEB trees to have $$u^{1/k}$$ clusters, each with universe size $$u^{1-1/k}$$, where $$k > 1$$ is a constant. If we were to modify the operations appropriately, what would be their running times? For the purpose of analysis, assume that $$u^{1/k}$$ and $$u^{1-1/k}$$ are always integers.
+> Suppose that instead of $\sqrt[\uparrow]{u}$ clusters, each with universe size $\sqrt[\downarrow]{u}$, we constructed vEB trees to have $u^{1/k}$ clusters, each with universe size $u^{1-1/k}$, where $k > 1$ is a constant. If we were to modify the operations appropriately, what would be their running times? For the purpose of analysis, assume that $u^{1/k}$ and $u^{1-1/k}$ are always integers.
 
-MINIMUM/MAXIMUM: $$O(1)$$.
+MINIMUM/MAXIMUM: $O(1)$.
 
-SUCCESSOR/PREDECESSOR/INSERT/DELETE worst: $$T(u) = T(u^{1/k}) + O(1) = O(\lg \log_{1/k} u)$$.
+SUCCESSOR/PREDECESSOR/INSERT/DELETE worst: $T(u) = T(u^{1/k}) + O(1) = O(\lg \log_{1/k} u)$.
 
 ### 20.3-6
 
-> Creating a vEB tree with universe size $$u$$ requires $$O(u)$$ time. Suppose we wish to explicitly account for that time. What is the smallest number of operations $$n$$ for which the amortized time of each operation in a vEB tree is $$O(\lg\lg u)$$?
+> Creating a vEB tree with universe size $u$ requires $O(u)$ time. Suppose we wish to explicitly account for that time. What is the smallest number of operations $n$ for which the amortized time of each operation in a vEB tree is $O(\lg\lg u)$?
 
-Since MINIMUM/MAXIMUM is $$O(1)$$, we need about $$\displaystyle \left \lceil \frac{u}{\lg\lg u} \right \rceil$$ operations.
+Since MINIMUM/MAXIMUM is $O(1)$, we need about $\displaystyle \left \lceil \frac{u}{\lg\lg u} \right \rceil$ operations.

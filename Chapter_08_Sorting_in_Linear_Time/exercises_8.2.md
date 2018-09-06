@@ -2,7 +2,7 @@
 
 ### 8.2-1
 
-> Using Figure 8.2 as a model, illustrate the operation of COUNTING-SORT on the array $$A = \left \langle6, 0, 2, 0, 1, 3, 4, 6, 1, 3, 2\right \rangle$$.
+> Using Figure 8.2 as a model, illustrate the operation of COUNTING-SORT on the array $A = \left \langle6, 0, 2, 0, 1, 3, 4, 6, 1, 3, 2\right \rangle$.
 
 ![](/img/8.2-1_1.png)
 
@@ -52,9 +52,9 @@ works properly but not stable.
 
 ### 8.2-4
 
-> Describe an algorithm that, given n integers in the range $$0$$ to $$k$$, preprocesses its input and then answers any query about how many of the $$n$$ integers fall into a range $$[a \dots b]$$ in $$O(1)$$ time. Your algorithm should use $$\Theta(n + k)$$ preprocessing time.
+> Describe an algorithm that, given n integers in the range $0$ to $k$, preprocesses its input and then answers any query about how many of the $n$ integers fall into a range $[a \dots b]$ in $O(1)$ time. Your algorithm should use $\Theta(n + k)$ preprocessing time.
 
-Use `C` in the counting sort, the number of integers fall into a range $$[a \dots b]$$ is $$C[b] - C[a-1]$$.
+Use `C` in the counting sort, the number of integers fall into a range $[a \dots b]$ is $C[b] - C[a-1]$.
 
 ```python
 class CountInterval:

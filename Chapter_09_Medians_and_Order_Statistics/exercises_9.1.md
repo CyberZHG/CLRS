@@ -2,9 +2,9 @@
 
 ### 9.1-1
 
-> Show that the second smallest of $$n$$ elements can be found with $$n +  \lceil \lg n\rceil - 2$$ comparisons in the worst case.
+> Show that the second smallest of $n$ elements can be found with $n +  \lceil \lg n\rceil - 2$ comparisons in the worst case.
 
-Divide the elements into the leaves of a binary tree. In each node, we compare the minimum values of its two sub-trees, then in the root node we know which is the smallest element using $$n-1$$ comparisons. Since only the smallest element is less than the second smallest element, the two elements must have been compared in order to knock out the second smallest element when finding the minimum. In other words, the second smallest number must have been appeared as the opponent in the path to the leaf which has the smallest element. The depth of the tree is $$\lceil \lg n\rceil$$, thus we need $$\lceil \lg n\rceil - 1$$ comparisons to find the second smallest element.
+Divide the elements into the leaves of a binary tree. In each node, we compare the minimum values of its two sub-trees, then in the root node we know which is the smallest element using $n-1$ comparisons. Since only the smallest element is less than the second smallest element, the two elements must have been compared in order to knock out the second smallest element when finding the minimum. In other words, the second smallest number must have been appeared as the opponent in the path to the leaf which has the smallest element. The depth of the tree is $\lceil \lg n\rceil$, thus we need $\lceil \lg n\rceil - 1$ comparisons to find the second smallest element.
 
 ```python
 def find_second_smallest(a, l, r):
@@ -27,11 +27,11 @@ def find_second_smallest(a, l, r):
 ```
 
 
-### 9.1-2 $$\star$$
+### 9.1-2 $\star$
 
-> Prove the lower bound of $$\lceil 3n/2 \rceil - 2$$ comparisons in the worst case to find both the maximum and minimum of $$n$$ numbers.
+> Prove the lower bound of $\lceil 3n/2 \rceil - 2$ comparisons in the worst case to find both the maximum and minimum of $n$ numbers.
 
-If $$n$$ is odd, there are
+If $n$ is odd, there are
 
 $$
 1 + \frac{3(n-3)}{2} + 2 = \frac{3n}{2} - \frac{3}{2} = \left ( \left \lceil \frac{3n}{2} \right \rceil - \frac{1}{2} \right ) - \frac{3}{2} = \left \lceil \frac{3n}{2} \right \rceil - 2
@@ -39,7 +39,7 @@ $$
 
 comparisons.
 
-If $$n$$ is even, there are
+If $n$ is even, there are
 
 $$
 1 + \frac{3(n-2)}{2} = \frac{3n}{2} - 2 = \left \lceil \frac{3n}{2} \right \rceil - 2

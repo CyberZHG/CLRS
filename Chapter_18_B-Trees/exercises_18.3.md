@@ -2,7 +2,7 @@
 
 ### 18.3-1
 
-> Show the results of deleting $$C$$, $$P$$, and $$V$$, in order, from the tree of Figure 18.8(f).
+> Show the results of deleting $C$, $P$, and $V$, in order, from the tree of Figure 18.8(f).
 
 ![](./img/18.3-1_1.png)
 
@@ -14,5 +14,4 @@
 
 > Write pseudocode for B-TREE-DELETE.
 
-$$\dots$$
-
+$\dots$

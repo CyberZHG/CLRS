@@ -2,7 +2,7 @@
 
 ### 7.1-1
 
-> Using Figure 7.1 as a model, illustrate the operation of PARTITION on the array $$A = \left \langle 13, 19, 9, 5, 12, 8, 7, 4, 21, 2, 6, 11 \right \rangle$$.
+> Using Figure 7.1 as a model, illustrate the operation of PARTITION on the array $A = \left \langle 13, 19, 9, 5, 12, 8, 7, 4, 21, 2, 6, 11 \right \rangle$.
 
 ![](img/7.1-1_1.png)
 
@@ -32,9 +32,9 @@
 
 ### 7.1-2
 
-> What value of $$q$$ does PARTITION return when all elements in the array $$A[p \dots r]$$ have the same value? Modify PARTITION so that $$q = \left \lfloor(p + r)/2 \right \rfloor$$ when all elements in the array $$A[p \dots r]$$ have the same value.
+> What value of $q$ does PARTITION return when all elements in the array $A[p \dots r]$ have the same value? Modify PARTITION so that $q = \left \lfloor(p + r)/2 \right \rfloor$ when all elements in the array $A[p \dots r]$ have the same value.
 
-PARTITION returns $$r$$.
+PARTITION returns $r$.
 
 ```python
 def partition(a, p, r):
@@ -57,7 +57,7 @@ def partition(a, p, r):
 
 ### 7.1-3
 
-> Give a brief argument that the running time of PARTITION on a subarray of size $$n$$ is $$\Theta(n)$$.
+> Give a brief argument that the running time of PARTITION on a subarray of size $n$ is $\Theta(n)$.
 
 Only one loop.
 

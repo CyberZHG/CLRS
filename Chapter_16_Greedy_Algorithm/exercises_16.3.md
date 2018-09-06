@@ -2,7 +2,7 @@
 
 ### 16.3-1
 
-> Explain why, in the proof of Lemma 16.2, if $$x.freq = b.freq$$, then we must have $$a.freq = b.freq = x.freq = y.freq$$.
+> Explain why, in the proof of Lemma 16.2, if $x.freq = b.freq$, then we must have $a.freq = b.freq = x.freq = y.freq$.
 
 ### 16.3-2
 
@@ -15,7 +15,7 @@ the first 8 Fibonacci numbers?
 
 > a:1 b:1 c:2 d:3 e:5 f:8 g:13 h:21 
 
-> Can you generalize your answer to find the optimal code when the frequencies are the first $$n$$ Fibonacci numbers?
+> Can you generalize your answer to find the optimal code when the frequencies are the first $n$ Fibonacci numbers?
 
 * a: 1111111
 * b: 1111110
@@ -36,9 +36,9 @@ the first 8 Fibonacci numbers?
 
 ### 16.3-6
 
-> Suppose we have an optimal prefix code on a set $$C = \{0, 1, \dots, n - 1\}$$ of characters and we wish to transmit this code using as few bits as possible. Show how to represent any optimal prefix code on $$C$$ using only $$2n - 1 + n \lceil lg n \rceil$$ bits.
+> Suppose we have an optimal prefix code on a set $C = \{0, 1, \dots, n - 1\}$ of characters and we wish to transmit this code using as few bits as possible. Show how to represent any optimal prefix code on $C$ using only $2n - 1 + n \lceil lg n \rceil$ bits.
 
-Use one bit for representing internal or leaf node, which is $$2n - 1$$ bits.
+Use one bit for representing internal or leaf node, which is $2n - 1$ bits.
 
 ### 16.3-7
 
@@ -56,4 +56,4 @@ Full binary tree, another 8-bit encoding.
 
 > Show that no compression scheme can expect to compress a file of randomly chosen 8-bit characters by even a single bit.
 
-$$2^n >> 2^{n-1}$$
+$2^n >> 2^{n-1}$

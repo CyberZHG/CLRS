@@ -127,11 +127,11 @@ class ProtoVEB:
                 self.summary.delete(self.high(x))
 ```
 
-$$T(u) = 2T(\sqrt{u}) + \Theta(\lg \sqrt{u}) = \Theta(\lg u \lg \lg u)$$
+$T(u) = 2T(\sqrt{u}) + \Theta(\lg \sqrt{u}) = \Theta(\lg u \lg \lg u)$
 
 ### 20.2-3
 
-> Add the attribute $$n$$ to each proto-vEB structure, giving the number of elements currently in the set it represents, and write pseudocode for PROTO-VEB-DELETE that uses the attribute $$n$$ to decide when to reset summary bits to 0. What is the worst-case running time of your procedure? What other procedures need to change because of the new attribute? Do these changes affect their running times?
+> Add the attribute $n$ to each proto-vEB structure, giving the number of elements currently in the set it represents, and write pseudocode for PROTO-VEB-DELETE that uses the attribute $n$ to decide when to reset summary bits to 0. What is the worst-case running time of your procedure? What other procedures need to change because of the new attribute? Do these changes affect their running times?
 
 ```python
     def insert(self, x):
@@ -162,7 +162,7 @@ $$T(u) = 2T(\sqrt{u}) + \Theta(\lg \sqrt{u}) = \Theta(\lg u \lg \lg u)$$
         return del_elem
 ```
 
-Worst-case: $$T(u) = 2T(\sqrt{u}) + O(1) = \Theta(\lg n)$$
+Worst-case: $T(u) = 2T(\sqrt{u}) + O(1) = \Theta(\lg n)$
 
 ### 20.2-4
 
@@ -402,7 +402,7 @@ class ProtoVEB:
 
 ### 20.2-6
 
-> Write pseudocode for a procedure that creates a proto-vEB$$(u)$$ structure.
+> Write pseudocode for a procedure that creates a proto-vEB$(u)$ structure.
 
 See exercise 20.2-1.
 
@@ -414,13 +414,12 @@ Obviously.
 
 ### 20.2-8
 
-> Suppose that we designed a proto-vEB structure in which each _cluster_ array had only $$u^{1/4}$$ elements. What would the running times of each operation be?
+> Suppose that we designed a proto-vEB structure in which each _cluster_ array had only $u^{1/4}$ elements. What would the running times of each operation be?
 
-There are $$u^{3/4}$$ clusters in each proto-vEB.
+There are $u^{3/4}$ clusters in each proto-vEB.
 
-MEMBER/INSRT: $$T(u) = T(u^{1/4}) + O(1) = \Theta(\lg \log_4 u) = \Theta(\lg \lg u)$$.
+MEMBER/INSRT: $T(u) = T(u^{1/4}) + O(1) = \Theta(\lg \log_4 u) = \Theta(\lg \lg u)$.
 
-MINIMUM/MAXIMUM: $$T(u) = T(u^{1/4}) + T(u^{3/4}) + O(1) = \Theta(\lg u)$$.
+MINIMUM/MAXIMUM: $T(u) = T(u^{1/4}) + T(u^{3/4}) + O(1) = \Theta(\lg u)$.
 
-SUCCESSOR/PREDECESSOR/DELETE: $$T(u) = T(u^{1/4}) + T(u^{3/4}) + \Theta(\lg u^{1/4}) = \Theta(\lg u \lg \lg u)$$.
-
+SUCCESSOR/PREDECESSOR/DELETE: $T(u) = T(u^{1/4}) + T(u^{3/4}) + \Theta(\lg u^{1/4}) = \Theta(\lg u \lg \lg u)$.

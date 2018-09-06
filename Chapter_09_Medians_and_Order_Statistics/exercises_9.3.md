@@ -4,7 +4,7 @@
 
 > In the algorithm SELECT, the input elements are divided into groups of 5. Will the algorithm work in linear time if they are divided into groups of 7? Argue that SELECT does not run in linear time if groups of 3 are used.
 
-Suppose the input elements are divided into $$7$$ groups, then
+Suppose the input elements are divided into $7$ groups, then
 
 $$
 4 \left (\left \lceil \frac{1}{2} \left \lceil \frac{n}{7} \right \rceil \right \rceil - 2 \right ) \ge \frac{2n}{7} - 8
@@ -14,7 +14,7 @@ $$
 T(n) = T(\lceil n / 7 \rceil) + T(5n/7 + 8) + O(n)
 $$
 
-Suppose $$T(n) \le cn$$,
+Suppose $T(n) \le cn$,
 
 $$
 \begin{array}{rll}
@@ -25,7 +25,7 @@ T(n) &\le& cn/7 + c + 8c + 5cn/7 + an \\
 \end{array}
 $$
 
-Suppose the input elements are divided into $$3$$ groups, then
+Suppose the input elements are divided into $3$ groups, then
 
 $$
 2 \left (\left \lceil \frac{1}{2} \left \lceil \frac{n}{3} \right \rceil \right \rceil - 2 \right ) \ge \frac{n}{3} - 4
@@ -35,7 +35,7 @@ $$
 T(n) = T(\lceil n / 3 \rceil) + T(2n/3 + 4) + O(n)
 $$
 
-Suppose $$T(n)\ge cn$$,
+Suppose $T(n)\ge cn$,
 
 $$
 \begin{array}{rll}
@@ -49,7 +49,7 @@ Therefore SELECT does not run in linear time if groups of 3 are used.
 
 ### 9.3-2
 
-> Analyze SELECT to show that if $$n \ge 140$$, then at least $$\lceil n/4 \rceil$$ elements are greater than the median-of-medians $$x$$ and at least $$\lceil n/4 \rceil$$ elements are less than $$x$$.
+> Analyze SELECT to show that if $n \ge 140$, then at least $\lceil n/4 \rceil$ elements are greater than the median-of-medians $x$ and at least $\lceil n/4 \rceil$ elements are less than $x$.
 
 $$
 \begin{array}{rll}
@@ -62,15 +62,15 @@ $$
 
 ### 9.3-3
 
-> Show how quicksort can be made to run in $$O(n \lg n)$$ time in the worst case, assuming that all elements are distinct.
+> Show how quicksort can be made to run in $O(n \lg n)$ time in the worst case, assuming that all elements are distinct.
 
-Use median as pivot, since we can find median in $$O(n)$$, and based on Problem 7-2 (b), we have $$T(n)=T(n/2)+O(n)$$.
+Use median as pivot, since we can find median in $O(n)$, and based on Problem 7-2 (b), we have $T(n)=T(n/2)+O(n)$.
 
-### 9.3-4 $$\star$$
+### 9.3-4 $\star$
 
-> Suppose that an algorithm uses only comparisons to find the $$i$$th smallest element in a set of $$n$$ elements. Show that it can also find the $$i - 1$$ smaller elements and $$n-i$$ larger elements without performing additional comparisons.
+> Suppose that an algorithm uses only comparisons to find the $i$th smallest element in a set of $n$ elements. Show that it can also find the $i - 1$ smaller elements and $n-i$ larger elements without performing additional comparisons.
 
-$$\dots$$
+$\dots$
 
 ### 9.3-5
 
@@ -111,9 +111,9 @@ def select(a, p, r, i):
 
 ### 9.3-6
 
-> The $$k$$th __*quantiles*__ of an $$n$$-element set are the $$k - 1$$ order statistics that divide the sorted set into $$k$$ equal-sized sets (to within 1). Give an $$O(n \lg k)$$-time algorithm to list the $$k$$th quantiles of a set.
+> The $k$th __*quantiles*__ of an $n$-element set are the $k - 1$ order statistics that divide the sorted set into $k$ equal-sized sets (to within 1). Give an $O(n \lg k)$-time algorithm to list the $k$th quantiles of a set.
 
-Pre-calculate the positions of the quantiles in $$O(k)$$, we use the $$O(n)$$ select algorithm to find the $$\lfloor k/2 \rfloor$$th position, after that the elements are divided into two sets by the pivot the $$\lfloor k/2 \rfloor$$th position, we do it recursively in the two sets to find other positions. Since the maximum depth is $$\lceil \lg k \rceil$$, the total running time is $$O(n \lg k)$$.
+Pre-calculate the positions of the quantiles in $O(k)$, we use the $O(n)$ select algorithm to find the $\lfloor k/2 \rfloor$th position, after that the elements are divided into two sets by the pivot the $\lfloor k/2 \rfloor$th position, we do it recursively in the two sets to find other positions. Since the maximum depth is $\lceil \lg k \rceil$, the total running time is $O(n \lg k)$.
 
 ```python
 def partition(a, p, r):
@@ -177,9 +177,9 @@ def k_quantiles(a, k):
 
 ### 9.3-7
 
-> Describe an $$O(n)$$-time algorithm that, given a set $$S$$ of $$n$$ distinct numbers and a positive integer $$k \le n$$, determines the $$k$$ numbers in $$S$$ that are closest to the median of $$S$$.
+> Describe an $O(n)$-time algorithm that, given a set $S$ of $n$ distinct numbers and a positive integer $k \le n$, determines the $k$ numbers in $S$ that are closest to the median of $S$.
 
-Find the median in $$O(n)$$; create a new array, each element is the absolute value of the original value subtract the median; find the $$k$$th smallest number in $$O(n)$$,  then the desired values are the elements whose absolute difference with the median is less than or equal to the $$k$$th smallest number in the new array.
+Find the median in $O(n)$; create a new array, each element is the absolute value of the original value subtract the median; find the $k$th smallest number in $O(n)$,  then the desired values are the elements whose absolute difference with the median is less than or equal to the $k$th smallest number in the new array.
 
 ```python
 def black_box_kth(a, k):
@@ -208,9 +208,9 @@ def k_closest(a, k):
 
 ### 9.3-8
 
-> Let $$X[1\dots n]$$ and $$Y[1\dots n]$$ be two arrays, each containing $$n$$ numbers already in sorted order. Give an $$O(\lg n)$$-time algorithm to find the median of all $$2n$$ elements in arrays $$X$$ and $$Y$$.
+> Let $X[1\dots n]$ and $Y[1\dots n]$ be two arrays, each containing $n$ numbers already in sorted order. Give an $O(\lg n)$-time algorithm to find the median of all $2n$ elements in arrays $X$ and $Y$.
 
-We can find the median in $$O(1)$$ time in a sorted array, compare the medians of the two array, if the median of $$X$$ is less than the median of $$Y$$, then we know the median must located in the right side of $$X$$ or left side of $$Y$$. Do it recursively, when there is only one element left in each array, the smaller one is the median.
+We can find the median in $O(1)$ time in a sorted array, compare the medians of the two array, if the median of $X$ is less than the median of $Y$, then we know the median must located in the right side of $X$ or left side of $Y$. Do it recursively, when there is only one element left in each array, the smaller one is the median.
 
 ```python
 def median_of_two(a, b):
@@ -225,7 +225,7 @@ def median_of_two(a, b):
 
 ### 9.3-9
 
-> Professor Olay is consulting for an oil company, which is planning a large pipeline running east to west through an oil field of $$n$$ wells. The company wants to connect a spur pipeline from each well directly to the main pipeline along a shortest route (either north or south), as shown in Figure 9.2. Given the $$x$$- and $$y$$-coordinates of the wells, how should the professor pick the optimal location of the main pipeline,
+> Professor Olay is consulting for an oil company, which is planning a large pipeline running east to west through an oil field of $n$ wells. The company wants to connect a spur pipeline from each well directly to the main pipeline along a shortest route (either north or south), as shown in Figure 9.2. Given the $x$- and $y$-coordinates of the wells, how should the professor pick the optimal location of the main pipeline,
 which would be the one that minimizes the total length of the spurs? Show how to determine the optimal location in linear time.
 
-Find the median of $$y$$. Suppose $$n$$ is odd, if we move the main pipeline slightly, then the total distance will be increased by $$(n+1)/2 \cdot d$$ for one side and decreased by $$(n-1)/2\cdot d$$ for the other side, thus the total distance is increased by $$d$$.
+Find the median of $y$. Suppose $n$ is odd, if we move the main pipeline slightly, then the total distance will be increased by $(n+1)/2 \cdot d$ for one side and decreased by $(n-1)/2\cdot d$ for the other side, thus the total distance is increased by $d$.

@@ -2,11 +2,11 @@
 
 ### 16.1-1
 
-> Give a dynamic-programming algorithm for the activity-selection problem, based on recurrence (16.2). Have your algorithm compute the sizes $$c[i, j]$$ as defined above and also produce the maximum-size subset of mutually compatible activities.
+> Give a dynamic-programming algorithm for the activity-selection problem, based on recurrence (16.2). Have your algorithm compute the sizes $c[i, j]$ as defined above and also produce the maximum-size subset of mutually compatible activities.
 >
 > Assume that the inputs have been sorted as in equation (16.1). Compare the running time of your solution to the running time of GREEDY-ACTIVITY-SELECTOR.
 
-$$O(n^3)$$
+$O(n^3)$
 
 ### 16.1-2
 
@@ -34,9 +34,9 @@ Sort the intervals by start time, if the start time of one interval is the same 
 
 ### 16.1-5
 
-> Consider a modification to the activity-selection problem in which each activity $$a_i$$ has, in addition to a start and finish time, a value $$v_i$$. The objective is no longer to maximize the number of activities scheduled, but instead to maximize the total value of the activities scheduled. That is, we wish to choose a set $$A$$ of compatible activities such that $$\sum_{a_k \in A} v_k$$ is maximized. Give a polynomial-time algorithm for this problem.
+> Consider a modification to the activity-selection problem in which each activity $a_i$ has, in addition to a start and finish time, a value $v_i$. The objective is no longer to maximize the number of activities scheduled, but instead to maximize the total value of the activities scheduled. That is, we wish to choose a set $A$ of compatible activities such that $\sum_{a_k \in A} v_k$ is maximized. Give a polynomial-time algorithm for this problem.
 
-Let $$dp[i]$$ be the maximum total value before time $$i$$,
+Let $dp[i]$ be the maximum total value before time $i$,
 
 $$
 dp[i] = \max(dp[i-1], \max_{f_j \le i} dp[s_j] + v_j)
@@ -58,4 +58,4 @@ def activity_selection(s, f, v):
     return last
 ```
 
-$$\Theta(n^2)$$
+$\Theta(n^2)$

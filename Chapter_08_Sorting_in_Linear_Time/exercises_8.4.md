@@ -2,7 +2,7 @@
 
 ### 8.4-1
 
-> Using Figure 8.4 as a model, illustrate the operation of BUCKET-SORT on the array $$A = \left \langle.79, .13, .16, .64, .39, .20, .89, .53, .71, .42\right \rangle$$.
+> Using Figure 8.4 as a model, illustrate the operation of BUCKET-SORT on the array $A = \left \langle.79, .13, .16, .64, .39, .20, .89, .53, .71, .42\right \rangle$.
 
 | R | |
 |:-:|:--|
@@ -17,19 +17,19 @@
 | 8 |.79 .71|
 | 9 |.89|
 
-$$A = \left \langle.13, .16, .20, .39, .42, .53, .64, .71, .79, .89\right \rangle$$
+$A = \left \langle.13, .16, .20, .39, .42, .53, .64, .71, .79, .89\right \rangle$
 
 ### 8.4-2
 
-> Explain why the worst-case running time for bucket sort is $$\Theta(n^2)$$. What simple change to the algorithm preserves its linear average-case running time and makes its worst-case running time $$O(n \lg n)$$?
+> Explain why the worst-case running time for bucket sort is $\Theta(n^2)$. What simple change to the algorithm preserves its linear average-case running time and makes its worst-case running time $O(n \lg n)$?
 
-Worst: all the elements falls in one bucket, $$\Theta(n ^ 2)$$ sorting.
+Worst: all the elements falls in one bucket, $\Theta(n ^ 2)$ sorting.
 
 Change: use merge sort in each bucket.
 
 ### 8.4-3
 
-> Let $$X$$ be a random variable that is equal to the number of heads in two flips of a fair coin. What is $$\text{E}[X^2]$$? What is $$\text{E}^2[X]$$?
+> Let $X$ be a random variable that is equal to the number of heads in two flips of a fair coin. What is $\text{E}[X^2]$? What is $\text{E}^2[X]$?
 
 $$
 \text{E}[X] = 2 \cdot \frac{1}{4} + 1 \cdot \frac{1}{2} + 0 \cdot \frac{1}{4} = 1
@@ -43,9 +43,9 @@ $$
 \text{E}^2[X] = \text{E}[X] \cdot \text{E}[X] = 1 \cdot 1 = 1
 $$
 
-### 8.4-4 $$\star$$
+### 8.4-4 $\star$
 
-> We are given $$n$$ points in the unit circle, $$p_i = (xi, yi)$$, such that $$0 < x_i^2 + y_i^2 \le 1$$ for $$i = 1,2, \dots ,n$$. Suppose that the points are uniformly distributed; that is, the probability of finding a point in any region of the circle is proportional to the area of that region. Design an algorithm with an average-case running time of $$\Theta(n)$$ to sort the $$n$$ points by their distances $$d_i = \sqrt{x_i^2+y_i^2}$$ from the origin. 
+> We are given $n$ points in the unit circle, $p_i = (xi, yi)$, such that $0 < x_i^2 + y_i^2 \le 1$ for $i = 1,2, \dots ,n$. Suppose that the points are uniformly distributed; that is, the probability of finding a point in any region of the circle is proportional to the area of that region. Design an algorithm with an average-case running time of $\Theta(n)$ to sort the $n$ points by their distances $d_i = \sqrt{x_i^2+y_i^2}$ from the origin. 
 
 Bucket sort by radius, 
 
@@ -57,11 +57,11 @@ $$
 r_i = \sqrt{\frac{i}{10}}
 $$
 
-### 8.4-5 $$\star$$
+### 8.4-5 $\star$
 
-> A __*probability distribution function*__ $$P(x)$$ for a random variable $$X$$ is defined by $$P(x) = \text{Pr}\{X \le x\}$$. Suppose that we draw a list of $$n$$ random variables $$X_1,X_2, \dots ,X_n$$ from a continuous probability distribution function $$P$$ that is computable in $$O(1)$$ time. Give an algorithm that sorts these numbers in linear average-case time.
+> A __*probability distribution function*__ $P(x)$ for a random variable $X$ is defined by $P(x) = \text{Pr}\{X \le x\}$. Suppose that we draw a list of $n$ random variables $X_1,X_2, \dots ,X_n$ from a continuous probability distribution function $P$ that is computable in $O(1)$ time. Give an algorithm that sorts these numbers in linear average-case time.
 
-Bucket sort by $$p_i$$,
+Bucket sort by $p_i$,
 
 $$
 P(p_i) = \frac{i}{10}

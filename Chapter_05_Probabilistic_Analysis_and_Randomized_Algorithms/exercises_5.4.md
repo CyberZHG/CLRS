@@ -2,7 +2,7 @@
 
 ### 5.4-1 
 
-> How many people must there be in a room before the probability that someone has the same birthday as you do is at least $$1/2$$? How many people must there be before the probability that at least two people have a birthday on July 4 is greater than $$1/2$$?
+> How many people must there be in a room before the probability that someone has the same birthday as you do is at least $1/2$? How many people must there be before the probability that at least two people have a birthday on July 4 is greater than $1/2$?
 
 $$
 1 - \left ( \frac{n - 1}{n} \right ) ^ {m} \ge \frac{1}{2}
@@ -22,17 +22,17 @@ There must be 613 people.
 
 ### 5.4-2
 
-> Suppose that we toss balls into $$b$$ bins until some bin contains two balls. Each toss is independent, and each ball is equally likely to end up in any bin. What is the expected number of ball tosses?
+> Suppose that we toss balls into $b$ bins until some bin contains two balls. Each toss is independent, and each ball is equally likely to end up in any bin. What is the expected number of ball tosses?
 
 Same as the birthday paradox.
 
-### 5.4-3 $$\star$$
+### 5.4-3 $\star$
 
 > For the analysis of the birthday paradox, is it important that the birthdays be mutually independent, or is pairwise independence sufficient? Justify your answer.
 
-$$X_{ij}$$ uses the pairwise independence, thus it is sufficient for proving.
+$X_{ij}$ uses the pairwise independence, thus it is sufficient for proving.
 
-### 5.4-4 $$\star$$
+### 5.4-4 $\star$
 
 > How many people should be invited to a party in order to make it likely that there are _three_ people with the same birthday?
 
@@ -56,9 +56,9 @@ $$
 
 At least 94 people.
 
-### 5.4-5 $$\star$$
+### 5.4-5 $\star$
 
-> What is the probability that a $$k$$-string over a set of size $$n$$ forms a $$k$$-permutation? How does this question relate to the birthday paradox?
+> What is the probability that a $k$-string over a set of size $n$ forms a $k$-permutation? How does this question relate to the birthday paradox?
 
 Complementary to the birthday paradox.
 
@@ -66,9 +66,9 @@ $$
 Pr = 1 \cdot \frac{n-1}{n} \cdot \frac{n-2}{n} \cdot \cdots \cdot \frac{n-k + 1}{n}
 $$
 
-### 5.4-6 $$\star$$
+### 5.4-6 $\star$
 
-> Suppose that $$n$$ balls are tossed into $$n$$ bins, where each toss is independent and the ball is equally likely to end up in any bin. What is the expected number of empty bins? What is the expected number of bins with exactly one ball?
+> Suppose that $n$ balls are tossed into $n$ bins, where each toss is independent and the ball is equally likely to end up in any bin. What is the expected number of empty bins? What is the expected number of bins with exactly one ball?
 
 * the expected number of empty bins
 
@@ -95,8 +95,8 @@ E[X] = \frac{n}{e}
 $$
 
 
-### 5.4-7 $$\star$$
+### 5.4-7 $\star$
 
-> Sharpen the lower bound on streak length by showing that in $$n$$ flips of a fair coin, the probability is less than $$1/n$$ that no streak longer than $$\lg n - 2 \lg \lg n$$ consecutive heads occurs.
+> Sharpen the lower bound on streak length by showing that in $n$ flips of a fair coin, the probability is less than $1/n$ that no streak longer than $\lg n - 2 \lg \lg n$ consecutive heads occurs.
 
-$$\dots$$
+$\dots$

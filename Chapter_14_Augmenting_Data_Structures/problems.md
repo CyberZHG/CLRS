@@ -10,11 +10,11 @@
 
 ### 14-2 Josephus permutation
 
-> We define the __*Josephus problem*__ as follows. Suppose that $$n$$ people form a circle and that we are given a positive integer $$m \ge n$$. Beginning with a designated first person, we proceed around the circle, removing every $$m$$th person. After each person is removed, counting continues around the circle that remains. This process continues until we have removed all $$n$$ people. The order in which the people are removed from the circle defines the __*$$(n,m)$$-Josephus permutation*__ of the integers $$1,2, \dots ,n$$. For example, the $$(7, 3)$$-Josephus permutation is $$\langle 3, 6, 2, 7, 5, 1, 4 \rangle$$.
+> We define the __*Josephus problem*__ as follows. Suppose that $n$ people form a circle and that we are given a positive integer $m \ge n$. Beginning with a designated first person, we proceed around the circle, removing every $m$th person. After each person is removed, counting continues around the circle that remains. This process continues until we have removed all $n$ people. The order in which the people are removed from the circle defines the __*$(n,m)$-Josephus permutation*__ of the integers $1,2, \dots ,n$. For example, the $(7, 3)$-Josephus permutation is $\langle 3, 6, 2, 7, 5, 1, 4 \rangle$.
 
-> __*a*__. Suppose that $$m$$ is a constant. Describe an $$O(n)$$-time algorithm that, given an integer $$n$$, outputs the $$(n,m)$$-Josephus permutation.
+> __*a*__. Suppose that $m$ is a constant. Describe an $O(n)$-time algorithm that, given an integer $n$, outputs the $(n,m)$-Josephus permutation.
 
-Use doubly linked list, the time is $$O(nm)$$, since $$m$$ is a constant, $$O(nm)$$ = $$O(n)$$.
+Use doubly linked list, the time is $O(nm)$, since $m$ is a constant, $O(nm)$ = $O(n)$.
 
 ```python
 class LinkedListNode:
@@ -66,9 +66,9 @@ def josephus_permutation(n, m):
     return perm
 ```
 
-> __*b*__. Suppose that $$m$$ is not a constant. Describe an $$O(n \lg n)$$-time algorithm that, given integers $$n$$ and $$m$$, outputs the $$(n,m)$$-Josephus permutation.
+> __*b*__. Suppose that $m$ is not a constant. Describe an $O(n \lg n)$-time algorithm that, given integers $n$ and $m$, outputs the $(n,m)$-Josephus permutation.
 
-Build a balanced binary search tree in $$O(n \lg n)$$, maintain $$size$$ to support order-statistics. In each iteration, we select and delete the $$(r + m - 1) ~\text{mod}~ T.root.size + 1$$th element.
+Build a balanced binary search tree in $O(n \lg n)$, maintain $size$ to support order-statistics. In each iteration, we select and delete the $(r + m - 1) ~\text{mod}~ T.root.size + 1$th element.
 
 ```python
 class TreeNode:

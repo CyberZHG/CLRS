@@ -18,7 +18,7 @@ $$
 $$
 Slow:
 
-$$m=2$$:
+$m=2$:
 $$
 \left \{ \begin{matrix}
 0 & 6 & \infty & \infty & -1 & \infty\\
@@ -29,7 +29,7 @@ $$
 6 & 5 & 10 & 7 & \infty & 0\\
 \end{matrix} \right \}
 $$
-$$m=3$$:
+$m=3$:
 $$
 \left \{ \begin{matrix}
 0 & 6 & \infty & 8 & -1 & \infty\\
@@ -40,7 +40,7 @@ $$
 3 & 5 & 10 & 7 & 5 & 0\\
 \end{matrix} \right \}
 $$
-$$m=4$$:
+$m=4$:
 $$
 \left \{ \begin{matrix}
 0 & 6 & \infty & 8 & -1 & \infty\\
@@ -51,7 +51,7 @@ $$
 3 & 5 & 10 & 7 & 2 & 0\\
 \end{matrix} \right \}
 $$
-$$m=5$$:
+$m=5$:
 $$
 \left \{ \begin{matrix}
 0 & 6 & \infty & 8 & -1 & \infty\\
@@ -64,7 +64,7 @@ $$
 $$
 Fast:
 
-$$m=2$$:
+$m=2$:
 $$
 \left \{ \begin{matrix}
 0 & 6 & \infty & \infty & -1 & \infty\\
@@ -76,7 +76,7 @@ $$
 \end{matrix} \right \}
 $$
 
-$$m=4$$:
+$m=4$:
 $$
 \left \{ \begin{matrix}
 0 & 6 & \infty & 8 & -1 & \infty\\
@@ -88,7 +88,7 @@ $$
 \end{matrix} \right \}
 $$
 
-$$m=8$$:
+$m=8$:
 $$
 \left \{ \begin{matrix}
 0 & 6 & \infty & 8 & -1 & \infty\\
@@ -101,7 +101,7 @@ $$
 $$
 ### 25.1-2
 
-> Why do we require that $$w_{ii}=0$$ for all $$1 \le i \le n$$?
+> Why do we require that $w_{ii}=0$ for all $1 \le i \le n$?
 
 To simplify (25.2).
 
@@ -109,7 +109,7 @@ To simplify (25.2).
 
 > What does the matrix
 
-> $$
+> $
 L^{(0)} = \left ( \begin{matrix}
 0 & \infty & \infty & \cdots & \infty \\
 \infty & 0 & \infty & \cdots & \infty \\
@@ -135,19 +135,19 @@ A vector filled with 0 except that the source is 1.
 
 ### 25.1-6
 
-> Suppose we also wish to compute the vertices on shortest paths in the algorithms of this section. Show how to compute the predecessor matrix $$\prod$$ from the completed matrix $$L$$ of shortest-path weights in $$O(n^3)$$ time.
+> Suppose we also wish to compute the vertices on shortest paths in the algorithms of this section. Show how to compute the predecessor matrix $\prod$ from the completed matrix $L$ of shortest-path weights in $O(n^3)$ time.
 
-If $$l_{ik} + w_{kj} = l_{ij}$$, then $$\pi_{ij} = k$$.
+If $l_{ik} + w_{kj} = l_{ij}$, then $\pi_{ij} = k$.
 
 ### 25.1-7
 
-> We can also compute the vertices on shortest paths as we compute the shortestpath weights. Define $$\pi_{ij}^{(m)}$$ as the predecessor of vertex $$j$$ on any minimum-weight path from $$i$$ to $$j$$ that contains at most $$m$$ edges. Modify the EXTEND-SHORTESTPATHS and SLOW-ALL-PAIRS-SHORTEST-PATHS procedures to compute the matrices$$\prod^{(1)}, \prod^{(2)}, \dots, \prod^{(n-1)}$$ as the matrices $$L^{(1)}, L^{(2)}, \dots, L^{(n-1)}$$ are computed.
+> We can also compute the vertices on shortest paths as we compute the shortestpath weights. Define $\pi_{ij}^{(m)}$ as the predecessor of vertex $j$ on any minimum-weight path from $i$ to $j$ that contains at most $m$ edges. Modify the EXTEND-SHORTESTPATHS and SLOW-ALL-PAIRS-SHORTEST-PATHS procedures to compute the matrices$\prod^{(1)}, \prod^{(2)}, \dots, \prod^{(n-1)}$ as the matrices $L^{(1)}, L^{(2)}, \dots, L^{(n-1)}$ are computed.
 
-If $$l_{ik}^{(m-1)} + w_{kj} < l_{ij}^{(m)}$$, then $$\pi_{ij}^{(m)} = k$$.
+If $l_{ik}^{(m-1)} + w_{kj} < l_{ij}^{(m)}$, then $\pi_{ij}^{(m)} = k$.
 
 ### 25.1-8
 
-> The FASTER-ALL-PAIRS-SHORTEST-PATHS procedure, as written, requires us to store $$\lceil \lg (n - 1) \rceil$$ matrices, each with $$n^2$$ elements, for a total space requirement of $$\Theta(n^2 \lg n)$$. Modify the procedure to require only $$\Theta(n^2)$$ space by using only two $$n \times n$$ matrices.
+> The FASTER-ALL-PAIRS-SHORTEST-PATHS procedure, as written, requires us to store $\lceil \lg (n - 1) \rceil$ matrices, each with $n^2$ elements, for a total space requirement of $\Theta(n^2 \lg n)$. Modify the procedure to require only $\Theta(n^2)$ space by using only two $n \times n$ matrices.
 
 ```python
 def fast_all_pairs_shortest_paths(w):
@@ -164,11 +164,10 @@ def fast_all_pairs_shortest_paths(w):
 > Modify FASTER-ALL-PAIRS-SHORTEST-PATHS so that it can determine whether
 the graph contains a negative-weight cycle.
 
-If $$l_{ii} < 0$$, then there is a negative-weight cycle.
+If $l_{ii} < 0$, then there is a negative-weight cycle.
 
 ### 25.1-10
 
 > Give an efficient algorithm to find the length (number of edges) of a minimum-length negative-weight cycle in a graph.
 
-If $$l_{ii}^{(m)} < 0$$ and $$l_{ii}^{(m-1)} = 0$$, then the minimum-length is $$m$$.
-
+If $l_{ii}^{(m)} < 0$ and $l_{ii}^{(m-1)} = 0$, then the minimum-length is $m$.

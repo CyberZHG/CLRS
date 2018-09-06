@@ -29,25 +29,25 @@
 
 Stable: insertion sort, merge sort.
 
-When two values are equals, compare the original index. Additional space: $$\Theta(n)$$
+When two values are equals, compare the original index. Additional space: $\Theta(n)$
 
 
 ### 8.3-3
 
 > Use induction to prove that radix sort works. Where does your proof need the assumption that the intermediate sort is stable?
 
-$$\dots$$
+$\dots$
 
 ### 8.3-4
 
-> Show how to sort n integers in the range $$0$$ to $$n^3 - 1$$ in $$O(n)$$ time.
+> Show how to sort n integers in the range $0$ to $n^3 - 1$ in $O(n)$ time.
 
-$$n$$-ary radix sort, including three $$O(n)$$ counting sort.
+$n$-ary radix sort, including three $O(n)$ counting sort.
 
-### 8.3-5 $$\star$$
+### 8.3-5 $\star$
 
-> In the first card-sorting algorithm in this section, exactly how many sorting passes are needed to sort $$d$$-digit decimal numbers in the worst case? How many piles of cards would an operator need to keep track of in the worst case?
+> In the first card-sorting algorithm in this section, exactly how many sorting passes are needed to sort $d$-digit decimal numbers in the worst case? How many piles of cards would an operator need to keep track of in the worst case?
 
-$$\Theta(k^d)$$ passes.
+$\Theta(k^d)$ passes.
 
-$$\Theta(nk)$$ piles.
+$\Theta(nk)$ piles.

@@ -37,15 +37,15 @@ Obviously
 
 ### 12.3-3
 
-> We can sort a given set of $$n$$ numbers by first building a binary search tree containing these numbers (using TREE-INSERT repeatedly to insert the numbers one by one) and then printing the numbers by an inorder tree walk. What are the worstcase and best-case running times for this sorting algorithm?
+> We can sort a given set of $n$ numbers by first building a binary search tree containing these numbers (using TREE-INSERT repeatedly to insert the numbers one by one) and then printing the numbers by an inorder tree walk. What are the worstcase and best-case running times for this sorting algorithm?
 
-Worst: chain, $$O(n^2)$$.
+Worst: chain, $O(n^2)$.
 
-Best: $$\Theta(n \lg n)$$.
+Best: $\Theta(n \lg n)$.
 
 ### 12.3-4
 
-> Is the operation of deletion "commutative" in the sense that deleting $$x$$ and then $$y$$ from a binary search tree leaves the same tree as deleting $$y$$ and then $$x$$? Argue why it is or give a counterexample.
+> Is the operation of deletion "commutative" in the sense that deleting $x$ and then $y$ from a binary search tree leaves the same tree as deleting $y$ and then $x$? Argue why it is or give a counterexample.
 
 No.
 
@@ -63,9 +63,9 @@ Delete 1 then delete 0:
 
 ### 12.3-5
 
-> Suppose that instead of each node $$x$$ keeping the attribute $$x.p$$, pointing to $$x$$'s parent, it keeps $$x.succ$$, pointing to $$x$$'s successor. Give pseudocode for SEARCH, INSERT, and DELETE on a binary search tree $$T$$ using this representation. These procedures should operate in time $$O(h)$$, where $$h$$ is the height of the tree $$T$$.
+> Suppose that instead of each node $x$ keeping the attribute $x.p$, pointing to $x$'s parent, it keeps $x.succ$, pointing to $x$'s successor. Give pseudocode for SEARCH, INSERT, and DELETE on a binary search tree $T$ using this representation. These procedures should operate in time $O(h)$, where $h$ is the height of the tree $T$.
 
-In SEARCH and INSERT, we do not need to know the parent of $$x$$.
+In SEARCH and INSERT, we do not need to know the parent of $x$.
 
 ```python
 def get_parent(root, node):
@@ -83,10 +83,10 @@ def get_parent(root, node):
     return a
 ```
 
-Therefore we can find $$x$$'s parent in $$O(h)$$, DELETE is $$O(h + h) = O(h)$$.
+Therefore we can find $x$'s parent in $O(h)$, DELETE is $O(h + h) = O(h)$.
 
 ### 12.3-6
 
-> When node $$z$$ in TREE-DELETE has two children, we could choose node $$y$$ as its predecessor rather than its successor. What other changes to TREE-DELETE would be necessary if we did so? Some have argued that a fair strategy, giving equal priority to predecessor and successor, yields better empirical performance. How might TREE-DELETE be changed to implement such a fair strategy?
+> When node $z$ in TREE-DELETE has two children, we could choose node $y$ as its predecessor rather than its successor. What other changes to TREE-DELETE would be necessary if we did so? Some have argued that a fair strategy, giving equal priority to predecessor and successor, yields better empirical performance. How might TREE-DELETE be changed to implement such a fair strategy?
 
 Randomly choose predecessor and successor.

@@ -2,13 +2,13 @@
 
 ### 4.1-1
 
-> What does FIND-MAXIMUM-SUBARRAY return when all elements of $$A$$ are negative?
+> What does FIND-MAXIMUM-SUBARRAY return when all elements of $A$ are negative?
 
 (smallest_index, smallest_index, smallest_value)
 
 ### 4.1-2
 
-> Write pseudocode for the brute-force method of solving the maximum-subarray problem. Your procedure should run in $$\Theta(n^2)$$ time.
+> Write pseudocode for the brute-force method of solving the maximum-subarray problem. Your procedure should run in $\Theta(n^2)$ time.
 
 ```python
 def find_maximum_subarray(arr):
@@ -29,7 +29,7 @@ def find_maximum_subarray(arr):
 
 ### 4.1-3
 
-> Implement both the brute-force and recursive algorithms for the maximumsubarray problem on your own computer. What problem size $$n_0$$ gives the crossover point at which the recursive algorithm beats the brute-force algorithm? Then, change the base case of the recursive algorithm to use the brute-force algorithm whenever the problem size is less than $$n_0$$. Does that change the crossover point?
+> Implement both the brute-force and recursive algorithms for the maximumsubarray problem on your own computer. What problem size $n_0$ gives the crossover point at which the recursive algorithm beats the brute-force algorithm? Then, change the base case of the recursive algorithm to use the brute-force algorithm whenever the problem size is less than $n_0$. Does that change the crossover point?
 
 ```python
 def find_max_crossing_subarray(arr, low, mid, high):
@@ -73,7 +73,7 @@ Return empty if the result is negative.
 
 ### 4.1-5
 
-> Use the following ideas to develop a nonrecursive, linear-time algorithm for the maximum-subarray problem. Start at the left end of the array, and progress toward subarray seen so far. Knowing a maximum subarray of $$A[1 \dots j]$$, extend the answer to find a maximum subarray ending at index $$j+1$$ by using the following observation: a maximum subarray of $$A[1 \dots j+1]$$ is either a maximum subarray of $$A[1 \dots j]$$ or a subarray $$A[i \dots j+1]$$, for some $$1 \le i \le j + 1$$. Determine a maximum subarray of the form $$A[i \dots j+1]$$ in constant time based on knowing a maximum subarray ending at index $$j$$ .
+> Use the following ideas to develop a nonrecursive, linear-time algorithm for the maximum-subarray problem. Start at the left end of the array, and progress toward subarray seen so far. Knowing a maximum subarray of $A[1 \dots j]$, extend the answer to find a maximum subarray ending at index $j+1$ by using the following observation: a maximum subarray of $A[1 \dots j+1]$ is either a maximum subarray of $A[1 \dots j]$ or a subarray $A[i \dots j+1]$, for some $1 \le i \le j + 1$. Determine a maximum subarray of the form $A[i \dots j+1]$ in constant time based on knowing a maximum subarray ending at index $j$ .
 
 ```python
 def find_maximum_subarray(arr):

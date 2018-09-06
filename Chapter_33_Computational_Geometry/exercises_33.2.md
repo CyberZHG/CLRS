@@ -2,15 +2,15 @@
 
 ### 33.2-1
 
-> Show that a set of $$n$$ line segments may contain $$\Theta(n ^ 2)$$ intersections.
+> Show that a set of $n$ line segments may contain $\Theta(n ^ 2)$ intersections.
 
 Star.
 
 ### 33.2-2
 
-> Given two segments $$a$$ and $$b$$ that are comparable at $$x$$, show how to determine in $$O(1)$$ time which of $$a \succeq_x b$$ or $$b \succeq_x a$$ holds. Assume that neither segment is vertical. 
+> Given two segments $a$ and $b$ that are comparable at $x$, show how to determine in $O(1)$ time which of $a \succeq_x b$ or $b \succeq_x a$ holds. Assume that neither segment is vertical. 
 
-Suppose $$a = \overline{(x_1, y_1)(x_2, y_2)}$$ and $$b = \overline{(x_3, y_3)(x_4, y_4)}$$,
+Suppose $a = \overline{(x_1, y_1)(x_2, y_2)}$ and $b = \overline{(x_3, y_3)(x_4, y_4)}$,
 
 $$
 \frac{x - x_1}{x_2 - x_1} = \frac{y - y_1}{y_2 - y_1}
@@ -24,7 +24,7 @@ $$
 y' = (x - x_3) \cdot \frac{y_4 - y_3}{x_4 - x_3} + y_3
 $$
 
-Compare $$y$$ and $$y'$$. To avoid division, compare $$(x_2 - x_1) \cdot y$$ and $$(x_4 - x_3) \cdot y'$$.
+Compare $y$ and $y'$. To avoid division, compare $(x_2 - x_1) \cdot y$ and $(x_4 - x_3) \cdot y'$.
 
 ### 33.2-3
 
@@ -36,25 +36,25 @@ No.
 
 ### 33.2-4
 
-> Give an $$O(n \lg n)$$-time algorithm to determine whether an n-vertex polygon is simple.
+> Give an $O(n \lg n)$-time algorithm to determine whether an n-vertex polygon is simple.
 
 Same as ANY-SEGMENTS-INTERSECT.
 
 ### 33.2-5
 
-> Give an $$O(n \lg n)$$-time algorithm to determine whether two simple polygons with a total of $$n$$ vertices intersect.
+> Give an $O(n \lg n)$-time algorithm to determine whether two simple polygons with a total of $n$ vertices intersect.
 
 Same as ANY-SEGMENTS-INTERSECT.
 
 ### 33.2-6
 
-> A __*disk*__ consists of a circle plus its interior and is represented by its center point and radius. Two disks intersect if they have any point in common. Give an $$O(n \lg n)$$- time algorithm to determine whether any two disks in a set of $$n$$ intersect.
+> A __*disk*__ consists of a circle plus its interior and is represented by its center point and radius. Two disks intersect if they have any point in common. Give an $O(n \lg n)$- time algorithm to determine whether any two disks in a set of $n$ intersect.
 
 Same as ANY-SEGMENTS-INTERSECT.
 
 ### 33.2-7
 
-> Given a set of $$n$$ line segments containing a total of $$k$$ intersections, show how to output all $$k$$ intersections in $$O((n + k) \lg)$$ time.
+> Given a set of $n$ line segments containing a total of $k$ intersections, show how to output all $k$ intersections in $O((n + k) \lg)$ time.
 
 Treat the intersection points as event points.
 

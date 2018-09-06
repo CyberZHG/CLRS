@@ -2,13 +2,13 @@
 
 ### 2.1-1
 
-> Using Figure 2.2 as a model, illustrate the operation of INSERTION-SORT on the array $$A = \left \langle 31, 41, 59, 26, 41, 58 \right \rangle$$.
+> Using Figure 2.2 as a model, illustrate the operation of INSERTION-SORT on the array $A = \left \langle 31, 41, 59, 26, 41, 58 \right \rangle$.
 
-* $$A = \left \langle 31, 41, 59, 26, 41, 58 \right \rangle$$
-* $$A = \left \langle 31, 41, 59, 26, 41, 58 \right \rangle$$
-* $$A = \left \langle 26, 31, 41, 59, 41, 58 \right \rangle$$
-* $$A = \left \langle 26, 31, 41, 41, 59, 58 \right \rangle$$
-* $$A = \left \langle 26, 31, 41, 41, 58, 59 \right \rangle$$
+* $A = \left \langle 31, 41, 59, 26, 41, 58 \right \rangle$
+* $A = \left \langle 31, 41, 59, 26, 41, 58 \right \rangle$
+* $A = \left \langle 26, 31, 41, 59, 41, 58 \right \rangle$
+* $A = \left \langle 26, 31, 41, 41, 59, 58 \right \rangle$
+* $A = \left \langle 26, 31, 41, 41, 58, 59 \right \rangle$
 
 ### 2.1-2
 
@@ -29,11 +29,11 @@ def insertion_sort(a):
 
 > Consider the __searching problem__:
 >
-> __Input__: A sequence of $$n$$ numbers $$A = \left \langle a_1, a_2, \cdots, a_n\right \rangle$$ and a value $$v$$.
+> __Input__: A sequence of $n$ numbers $A = \left \langle a_1, a_2, \cdots, a_n\right \rangle$ and a value $v$.
 >
-> __Output__: An index $$i$$ such that $$v=A[i]$$ or the special value NIL if $$v$$ does not appear in A.
+> __Output__: An index $i$ such that $v=A[i]$ or the special value NIL if $v$ does not appear in A.
 >
-> Write pseudocode for __linear search__, which scans through the sequence, looking for $$v$$. Using a loop invariant, prove that your algorithm is correct. Make sure that your loop invariant fulfills the three necessary properties.
+> Write pseudocode for __linear search__, which scans through the sequence, looking for $v$. Using a loop invariant, prove that your algorithm is correct. Make sure that your loop invariant fulfills the three necessary properties.
 
 ```python
 def linear_search(a, v):
@@ -45,7 +45,7 @@ def linear_search(a, v):
 
 ### 2.1-4
 
-> Consider the problem of adding two n-bit binary integers, stored in two n-element arrays $$A$$ and $$B$$. The sum of the two integers should be stored in binary form in an $$(n+1)$$-element array $$C$$. State the problem formally and write pseudocode for adding the two integers.
+> Consider the problem of adding two n-bit binary integers, stored in two n-element arrays $A$ and $B$. The sum of the two integers should be stored in binary form in an $(n+1)$-element array $C$. State the problem formally and write pseudocode for adding the two integers.
 
 ```python
 def add_binary(a, b):
@@ -62,4 +62,3 @@ def add_binary(a, b):
     c[n] = carry
     return c
 ```
-

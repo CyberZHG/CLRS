@@ -4,7 +4,7 @@
 
 > Show the results of inserting the keys 
 
-> $$F, S, Q, K, C, L, H, T, V, W, M, R, N, P, A, B, X, Y, D, Z, E$$
+> $F, S, Q, K, C, L, H, T, V, W, M, R, N, P, A, B, X, Y, D, Z, E$
 
 > in order into an empty B-tree with minimum degree 2. Draw only the configurations of the tree just before some node must split, and also draw the final configuration.
 
@@ -180,27 +180,27 @@ class BTree:
         return successor_sub(self.root)
 ```
 
-### 18.2-4 $$\star$$
+### 18.2-4 $\star$
 
-> Suppose that we insert the keys $$\{1, 2, \dots, n\}$$ into an empty B-tree with minimum degree 2. How many nodes does the final B-tree have?
+> Suppose that we insert the keys $\{1, 2, \dots, n\}$ into an empty B-tree with minimum degree 2. How many nodes does the final B-tree have?
 
-At least $$n - 2\lg(n+1)$$.
+At least $n - 2\lg(n+1)$.
 
 ### 18.2-5
 
-> Since leaf nodes require no pointers to children, they could conceivably use a different (larger) $$t$$ value than internal nodes for the same disk page size. Show how to modify the procedures for creating and inserting into a B-tree to handle this variation.
+> Since leaf nodes require no pointers to children, they could conceivably use a different (larger) $t$ value than internal nodes for the same disk page size. Show how to modify the procedures for creating and inserting into a B-tree to handle this variation.
 
 .
 
 ### 18.2-6
 
-> Suppose that we were to implement B-TREE-SEARCH to use binary search rather than linear search within each node. Show that this change makes the CPU time required $$O(\lg n)$$, independently of how $$t$$ might be chosen as a function of $$n$$.
+> Suppose that we were to implement B-TREE-SEARCH to use binary search rather than linear search within each node. Show that this change makes the CPU time required $O(\lg n)$, independently of how $t$ might be chosen as a function of $n$.
 
-$$\log_{t} n \cdot \lg t = \lg n$$
+$\log_{t} n \cdot \lg t = \lg n$
 
 ### 18.2-7
 
-> Suppose that disk hardware allows us to choose the size of a disk page arbitrarily, but that the time it takes to read the disk page is $$a + bt$$, where $$a$$ and $$b$$ are specified constants and $$t$$ is the minimum degree for a B-tree using pages of the selected size. Describe how to choose $$t$$ so as to minimize (approximately) the B-tree search time. Suggest an optimal value of $$t$$ for the case in which $$a = 5$$ milliseconds and $$b = 10$$ microseconds.
+> Suppose that disk hardware allows us to choose the size of a disk page arbitrarily, but that the time it takes to read the disk page is $a + bt$, where $a$ and $b$ are specified constants and $t$ is the minimum degree for a B-tree using pages of the selected size. Describe how to choose $t$ so as to minimize (approximately) the B-tree search time. Suggest an optimal value of $t$ for the case in which $a = 5$ milliseconds and $b = 10$ microseconds.
 
 $$
 \min \log_t n \cdot (a + bt) = \min \frac{a + bt}{\ln t}
@@ -217,5 +217,4 @@ t &=& \displaystyle e^{W \left ( \frac{1}{2e} \right ) + 1} \\
 \end{array}
 $$
 
-where $$W$$ is the LambertW function, and we should choose $$t=3$$.
-
+where $W$ is the LambertW function, and we should choose $t=3$.

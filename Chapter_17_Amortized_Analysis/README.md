@@ -6,4 +6,3 @@
 * [17.4 Dynamic tables](exercises_17.4.md)
 * [Problems 1](problems_1.md)
 * [Problems 2](problems_2.md)
-

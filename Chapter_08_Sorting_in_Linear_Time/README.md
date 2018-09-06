@@ -5,4 +5,3 @@
 * [8.3 Radix sort](exercises_8.3.md)
 * [8.4 Bucket sort](exercises_8.4.md)
 * [Problems](problems.md)
-

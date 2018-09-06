@@ -10,16 +10,16 @@ Drive navigation.
 
 > Suppose we are comparing implementations of insertion sort and merge sort on the same machine. For inputs of size $n$, insertion sort runs in $8n^2$ steps, while merge sort runs in $64nlgn$ steps. For which values of $n$ does insertion sort beat merge sort?
 
-$$8n^2 < 64nlgn$$
+$8n^2 < 64nlgn$
 
-$$2^n < n^8$$
+$2^n < n^8$
 
-$$n \le 43$$
+$n \le 43$
 
 ### 1.2-3
 
 > What is the smallest value of $n$ such that an algorithm whose running time is $100n^2$ runs faster than an algorithm whose running time is $2^n$ on the same machine?
 
-$$100n^2 < 2^n$$
+$100n^2 < 2^n$
 
-$$n \ge 15$$
+$n \ge 15$

@@ -4,7 +4,7 @@
 
 > Prove equation (12.3).
 
-> $$\displaystyle \sum_{i=0}^{n-1} \binom{i+3}{3} = \binom{n+3}{4}$$.
+> $\displaystyle \sum_{i=0}^{n-1} \binom{i+3}{3} = \binom{n+3}{4}$.
 
 $$
 \begin{array}{rll}
@@ -19,15 +19,15 @@ $$
 
 ### 12.4-2
 
-> Describe a binary search tree on n nodes such that the average depth of a node in the tree is $$\Theta(\lg n)$$ but the height of the tree is $$\omega(\lg n)$$. Give an asymptotic upper bound on the height of an $$n$$-node binary search tree in which the average depth of a node is $$\Theta(\lg n)$$.
+> Describe a binary search tree on n nodes such that the average depth of a node in the tree is $\Theta(\lg n)$ but the height of the tree is $\omega(\lg n)$. Give an asymptotic upper bound on the height of an $n$-node binary search tree in which the average depth of a node is $\Theta(\lg n)$.
 
-$$\Theta(\sqrt{n \lg n})$$
+$\Theta(\sqrt{n \lg n})$
 
 ### 12.4-3
 
-> Show that the notion of a randomly chosen binary search tree on $$n$$ keys, where each binary search tree of $$n$$ keys is equally likely to be chosen, is different from the notion of a randomly built binary search tree given in this section.
+> Show that the notion of a randomly chosen binary search tree on $n$ keys, where each binary search tree of $n$ keys is equally likely to be chosen, is different from the notion of a randomly built binary search tree given in this section.
 
-For $$n=3$$, there are 5 binary search trees. However, if we build the trees will a random permutation, the first tree will built twice.
+For $n=3$, there are 5 binary search trees. However, if we build the trees will a random permutation, the first tree will built twice.
 
 ![](img/12.4-3_1.png)
 ![](img/12.4-3_2.png)
@@ -37,7 +37,7 @@ For $$n=3$$, there are 5 binary search trees. However, if we build the trees wil
 
 ### 12.4-4
 
-> Show that the function $$f(x) = 2^x$$ is convex.
+> Show that the function $f(x) = 2^x$ is convex.
 
 $$
 \begin{array}{rll}
@@ -48,10 +48,10 @@ $$
 \end{array}
 $$
 
-Therefore $$f(x) = 2^x$$ is convex.
+Therefore $f(x) = 2^x$ is convex.
 
-### 12.4-5 $$\star$$
+### 12.4-5 $\star$
 
-> Consider RANDOMIZED-QUICKSORT operating on a sequence of $$n$$ distinct input numbers. Prove that for any constant $$k > 0$$, all but $$O(1/n^k)$$ of the $$n!$$ input permutations yield an $$O(n\lg n)$$ running time.
+> Consider RANDOMIZED-QUICKSORT operating on a sequence of $n$ distinct input numbers. Prove that for any constant $k > 0$, all but $O(1/n^k)$ of the $n!$ input permutations yield an $O(n\lg n)$ running time.
 
-$$\dots$$
+$\dots$
