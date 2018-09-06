@@ -5,7 +5,7 @@
 
 Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd edition. Never ever trust a single word of the repo.
 
-You can use [TeX All the Things](https://chrome.google.com/webstore/detail/tex-all-the-things/cbimabofgmfdkicghcadidpemeenbffn) Chrome extension to read the Markdown files. Please let me know if you found wrong formatting since there are conflicts in the grammars of Markdown and TeX.
+You can use [TeX All the Things](https://chrome.google.com/webstore/detail/tex-all-the-things/cbimabofgmfdkicghcadidpemeenbffn) Chrome extension to read the [Markdown files](./SUMMARY.md). Please let me know if you found wrong formatting since there are conflicts in the grammars of Markdown and TeX.
 
 # Notebook Summary
 
