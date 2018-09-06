@@ -18,7 +18,7 @@
 
 ### 24.5-5
 
-> Let $G = (V, E)$ be a weighted, directed graph with no negative-weight edges. Let $s \in V$ be the source vertex, and suppose that we allow $v.\pi$ to be the predecessor of $v$ on any shortest path to $v$ from source $s$ if $v \in V - \{s\}$ is reachable from $s$, and NIL otherwise. Give an example of such a graph $G$ and an assignment of $\pi$ values that produces a cycle in $G\_\pi$. (By Lemma 24.16, such an assignment cannot be produced by a sequence of relaxation steps.)
+> Let $G = (V, E)$ be a weighted, directed graph with no negative-weight edges. Let $s \in V$ be the source vertex, and suppose that we allow $v.\pi$ to be the predecessor of $v$ on any shortest path to $v$ from source $s$ if $v \in V - \\{s\\}$ is reachable from $s$, and NIL otherwise. Give an example of such a graph $G$ and an assignment of $\pi$ values that produces a cycle in $G\_\pi$. (By Lemma 24.16, such an assignment cannot be produced by a sequence of relaxation steps.)
 
 ### 24.5-6
 

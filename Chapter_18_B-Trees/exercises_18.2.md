@@ -182,7 +182,7 @@ class BTree:
 
 ### 18.2-4 $\star$
 
-> Suppose that we insert the keys $\{1, 2, \dots, n\}$ into an empty B-tree with minimum degree 2. How many nodes does the final B-tree have?
+> Suppose that we insert the keys $\\{1, 2, \dots, n\\}$ into an empty B-tree with minimum degree 2. How many nodes does the final B-tree have?
 
 At least $n - 2\lg(n+1)$.
 

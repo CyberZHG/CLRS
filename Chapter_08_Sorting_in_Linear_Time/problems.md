@@ -12,9 +12,9 @@ There should be only $n!$ leaves.
 
 Add $T$ means all the $k$ depths of leaves increase by 1.
 
-> __*c*__. Let $d(k)$ be the minimum value of $D(T)$ over all decision trees $T$ with $k > 1$ leaves. Show that $d(k)=\min \_{1 \le i \le k - 1}\{d(i)+d(k-i)+k\}$.
+> __*c*__. Let $d(k)$ be the minimum value of $D(T)$ over all decision trees $T$ with $k > 1$ leaves. Show that $d(k)=\min \_{1 \le i \le k - 1}\\{d(i)+d(k-i)+k\\}$.
 
-$D(T)=D(LT)+D(RT)+k$, $d(k)=\min \_{1 \le i \le k - 1}\{d(i)+d(k-i)+k\}$ iterates all the possibilities.
+$D(T)=D(LT)+D(RT)+k$, $d(k)=\min \_{1 \le i \le k - 1}\\{d(i)+d(k-i)+k\\}$ iterates all the possibilities.
 
 > __*d*__. Prove that for a given value of $k > 1$ and $i$ in the range $1 \le i \le k - 1$, the function $i \lg i + (k - i) \lg(k - i)$ is minimized at $i = k/2$. Conclude that $d(k) = \Omega(k \lg k)$.
 

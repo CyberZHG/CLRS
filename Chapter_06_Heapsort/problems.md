@@ -111,7 +111,7 @@ def increase_key(d, a, i, key):
 
 > An $m \times n$ __*Young tableau*__ is an $m \times n$ matrix such that the entries of each row are in sorted order from left to right and the entries of each column are in sorted order from top to bottom. Some of the entries of a Young tableau may be $\infty$, which we treat as nonexistent elements. Thus, a Young tableau can be used to hold $r \le mn$ finite numbers.
 
-> __*a*__. Draw a $4\times4$ Young tableau containing the elements $\left \{ 9, 16, 3, 2, 4, 8, 5, 14, 12\right \}$.
+> __*a*__. Draw a $4\times4$ Young tableau containing the elements $\left \\{ 9, 16, 3, 2, 4, 8, 5, 14, 12\right \\}$.
 
 $$
 \begin{matrix}

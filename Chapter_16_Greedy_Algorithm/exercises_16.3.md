@@ -36,7 +36,7 @@ the first 8 Fibonacci numbers?
 
 ### 16.3-6
 
-> Suppose we have an optimal prefix code on a set $C = \{0, 1, \dots, n - 1\}$ of characters and we wish to transmit this code using as few bits as possible. Show how to represent any optimal prefix code on $C$ using only $2n - 1 + n \lceil lg n \rceil$ bits.
+> Suppose we have an optimal prefix code on a set $C = \\{0, 1, \dots, n - 1\\}$ of characters and we wish to transmit this code using as few bits as possible. Show how to represent any optimal prefix code on $C$ using only $2n - 1 + n \lceil lg n \rceil$ bits.
 
 Use one bit for representing internal or leaf node, which is $2n - 1$ bits.
 

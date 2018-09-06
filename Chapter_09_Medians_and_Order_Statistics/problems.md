@@ -113,7 +113,7 @@ Since $x$ and $y$ are independent, the best solution is the medians of $x$ and $
 
 > __*a*__. Describe an algorithm that uses $U\_i(n)$ comparisons to find the $i$th smallest of $n$ elements, where
 
-> $\displaystyle U\_i(n) = \left \{ \begin{array}{ll}
+> $\displaystyle U\_i(n) = \left \\{ \begin{array}{ll}
 T(n) & \text{if}\~\~i \ge n/2 \\\\
 \lfloor n / 2 \rfloor + U\_i(\lceil n / 2 \rceil) + T(2i) & \text{otherwise}
 \end{array} \right .$
@@ -162,12 +162,12 @@ $$
 
 > For $1 \le i < j \le n$, let 
 
-> $X\_{ijk} = I \{z\_i$ is compared with $z\_j$ sometime during the execution of the algorithm to find $z\_k\}$.
+> $X\_{ijk} = I \\{z\_i$ is compared with $z\_j$ sometime during the execution of the algorithm to find $z\_k\\}$.
 
 > __*a*__. Give an exact expression for $\text{E}[X\_{ijk}]$.
 
 $$
-\text{E}[X\_{ijk}] = \left \{ 
+\text{E}[X\_{ijk}] = \left \\{ 
 \begin{array}{ll}
 \displaystyle \frac{2}{j - k + 1} & (k \le i < j) \\\\
 \displaystyle \frac{2}{j - i + 1} & (i \le k \le j) \\\\

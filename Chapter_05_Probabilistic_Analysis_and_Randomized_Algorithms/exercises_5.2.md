@@ -50,7 +50,7 @@ The probability of one customer get his/her hat back is $1/n$, therefore the exp
 > Let $A[1 \dots n]$ be an array of $n$ distinct numbers. If $i < j$ and $A[i] > A[j]$, then the pair $(i,j)$ is called an __*inversion*__ of $A$. (See Problem 2-4 for more on inversions.) Suppose that the elements of $A$ form a uniform random permutation of $\left \langle 1, 2, \dots, n \right \rangle$. Use indicator random variables to compute the expected number of
 inversions.
 
-Suppose $X\_{ij} = I\{(i, j) \text{ is an inversion}\}$,
+Suppose $X\_{ij} = I\\{(i, j) \text{ is an inversion}\\}$,
 
 $$
 E[X\_{ij}] = \frac{1}{2}

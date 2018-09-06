@@ -24,4 +24,4 @@ push-relabel method run in $O(V^3)$ time.
 
 ### 26.5-5
 
-> Suppose that at some point in the execution of a push-relabel algorithm, there exists an integer $0 < k \le |V| - 1$ for which no vertex has $v.h = k$. Show that all vertices with $v.h > k$ are on the source side of a minimum cut. If such a $k$ exists, the __*gap heuristic*__ updates every vertex $v \in V - \{s\}$ for which $v.h > k$, to set $v.h = \max(v.h, |V| + 1)$. Show that the resulting attribute $h$ is a height function. (The gap heuristic is crucial in making implementations of the push-relabel method perform well in practice.)
+> Suppose that at some point in the execution of a push-relabel algorithm, there exists an integer $0 < k \le |V| - 1$ for which no vertex has $v.h = k$. Show that all vertices with $v.h > k$ are on the source side of a minimum cut. If such a $k$ exists, the __*gap heuristic*__ updates every vertex $v \in V - \\{s\\}$ for which $v.h > k$, to set $v.h = \max(v.h, |V| + 1)$. Show that the resulting attribute $h$ is a height function. (The gap heuristic is crucial in making implementations of the push-relabel method perform well in practice.)

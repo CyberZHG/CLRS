@@ -18,7 +18,7 @@ Based on exercise 27.1-6, the product of two vectors is $\Theta(\lg n)$, thus $T
 
 > Give pseudocode for an efficient multithreaded algorithm that multiplies a $p \times q$ matrix by a $q \times r$ matrix. Your algorithm should be highly parallel even if any of $p$, $q$, and $r$ are 1. Analyze your algorithm.
 
-$T\_\infty = \Theta(\min \{ \lg p, \lg q, \lg r \})$
+$T\_\infty = \Theta(\min \\{ \lg p, \lg q, \lg r \\})$
 
 ### 27.2-5
 

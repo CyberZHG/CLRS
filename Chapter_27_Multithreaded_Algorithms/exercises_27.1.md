@@ -36,11 +36,11 @@ The critical path is twice the length of the other path.
 
 Based on span law:
 
-$T\_\infty \le T\_P = \min\{ 80, 42, 10 \} = 10$
+$T\_\infty \le T\_P = \min\\{ 80, 42, 10 \\} = 10$
 
 Based on inequality (27.5):
 
-$\left \{ 
+$\left \\{ 
 \begin{array}{rll}
 T\_1 + 3T\_\infty &\ge& 320 \\\\
 T\_1 + 9T\_\infty &\ge& 420

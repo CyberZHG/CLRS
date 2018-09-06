@@ -29,7 +29,7 @@ Connect to ancestor => loop.
 
 > __*c*__. Let
 > 
-> $v.low = \min \left \{ 
+> $v.low = \min \left \\{ 
 \begin{array}{l}
 v.d,\\\\
 w.d: (u, w) \~\text{is a back edge for some descendant}\~u\~\text{of}\~v
@@ -109,6 +109,6 @@ Start from v, and chose any outgoing edge of v, say (v, u). Since in-degree(u) =
 
 ### 22-4 Reachability
 
-> Let $G = (V, E)$ be a directed graph in which each vertex $u \in V$ is labeled with a unique integer $L(U)$ from the set $\{1, 2, \dots, |V|\}$. For each vertex $u \in V$, let $R(u) = \{v \in V: u \leadsto v \}$ be the set of vertices that are reachable from $u$. Define $\min(u)$ to be the vertex in $R(u)$ whose label is minimum, i.e., $\min(u)$ is the vertex $v$ such that $L(v) = \min \{L(w): w \in R(u) \}$. Give an $O(V + E)$-time algorithm that computes $\min(u)$ for all vertices $u \in V$.
+> Let $G = (V, E)$ be a directed graph in which each vertex $u \in V$ is labeled with a unique integer $L(U)$ from the set $\\{1, 2, \dots, |V|\\}$. For each vertex $u \in V$, let $R(u) = \\{v \in V: u \leadsto v \\}$ be the set of vertices that are reachable from $u$. Define $\min(u)$ to be the vertex in $R(u)$ whose label is minimum, i.e., $\min(u)$ is the vertex $v$ such that $L(v) = \min \\{L(w): w \in R(u) \\}$. Give an $O(V + E)$-time algorithm that computes $\min(u)$ for all vertices $u \in V$.
 
 DFS from the minimum $L(U)$ in $G^T$.

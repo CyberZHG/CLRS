@@ -2,7 +2,7 @@
 
 ### 21-1 Off-line minimum
 
-> The __*off-line minimum problem*__ asks us to maintain a dynamic set $T$ of elements from the domain $\{1, 2, \dots, n\}$ under the operations INSERT and EXTRACT-MIN. We are given a sequence $S$ of $n$ INSERT and $m$ EXTRACT-MIN calls, where each key in $\{1, 2, \dots, n\}$ is inserted exactly once. We wish to determine which key is returned by each EXTRACT-MIN call. Specifically, we wish to fill in an array $extracted[1 \dots m]$, where for $i = 1, 2, \dots, m$, $extracted[i]$ is the key returned by the $i$th EXTRACT-MIN call. The problem is "off-line" in the sense that we are allowed to process the entire sequence $S$ before determining any of the returned keys.
+> The __*off-line minimum problem*__ asks us to maintain a dynamic set $T$ of elements from the domain $\\{1, 2, \dots, n\\}$ under the operations INSERT and EXTRACT-MIN. We are given a sequence $S$ of $n$ INSERT and $m$ EXTRACT-MIN calls, where each key in $\\{1, 2, \dots, n\\}$ is inserted exactly once. We wish to determine which key is returned by each EXTRACT-MIN call. Specifically, we wish to fill in an array $extracted[1 \dots m]$, where for $i = 1, 2, \dots, m$, $extracted[i]$ is the key returned by the $i$th EXTRACT-MIN call. The problem is "off-line" in the sense that we are allowed to process the entire sequence $S$ before determining any of the returned keys.
 
 > __*a*__. In the following instance of the off-line minimum problem, each operation INSERT$(i)$ is represented by the value of $i$ and each EXTRACT-MIN is represented by the letter E:
 
@@ -73,7 +73,7 @@ def off_line_minimum(q, n):
 
 ### 21-2 Depth determination
 
-> In the __*depth-determination problem*__, we maintain a forest $\mathcal{F} = \{T\_i\}$ of rooted trees under three operations:
+> In the __*depth-determination problem*__, we maintain a forest $\mathcal{F} = \\{T\_i\\}$ of rooted trees under three operations:
 
 > MAKE-TREE$(v)$ creates a tree whose only node is $v$.
 
@@ -85,7 +85,7 @@ def off_line_minimum(q, n):
 
 $m/3$ MAKE-TREE, $m/3$ GRAFT to make a chain, $m/3$ FIND-DEPTH.
 
-> By using the union-by-rank and path-compression heuristics, we can reduce the worst-case running time. We use the disjoint-set forest $\mathcal{S} = \{S\_i\}$, where each set $S\_i$ (which is itself a tree) corresponds to a tree $T\_i$ in the forest $\mathcal{F}$. The tree structure within a set $S\_i$, however, does not necessarily correspond to that of $T\_i$. In fact, the implementation of $S\_i$ does not record the exact parent-child relationships but nevertheless allows us to determine any node's depth in $T\_i$.
+> By using the union-by-rank and path-compression heuristics, we can reduce the worst-case running time. We use the disjoint-set forest $\mathcal{S} = \\{S\_i\\}$, where each set $S\_i$ (which is itself a tree) corresponds to a tree $T\_i$ in the forest $\mathcal{F}$. The tree structure within a set $S\_i$, however, does not necessarily correspond to that of $T\_i$. In fact, the implementation of $S\_i$ does not record the exact parent-child relationships but nevertheless allows us to determine any node's depth in $T\_i$.
 
 > The key idea is to maintain in each node $v$ a "pseudodistance" $v.d$, which is defined so that the sum of the pseudodistances along the simple path from $v$ to the root of its set $S\_i$ equals the depth of $v$ in $T\_i$. That is, if the simple path from $v$ to its root in $S\_i$ is $v\_0, v\_1, \dots, v\_k$, where $v\_0 = v$ and $v\_k$ is $S\_i$'s root, then the depth of $v$ in $T\_i$ is $\sum\_{j=0}^k v\_j.d$.
 
@@ -134,7 +134,7 @@ $O(m\alpha(n))$.
 
 ### 21-3 Tarjan's off-line least-common-ancestors algorithm
 
-> The least common ancestor of two nodes $u$ and $v$ in a rooted tree $T$ is the node $w$ that is an ancestor of both $u$ and $v$ and that has the greatest depth in $T$. In the off-line least-common-ancestors problem, we are given a rooted tree $T$ and an arbitrary set $P = \{\{u, v\}\}$ of unordered pairs of nodes in $T$, and we wish to determine the least common ancestor of each pair in $P$.
+> The least common ancestor of two nodes $u$ and $v$ in a rooted tree $T$ is the node $w$ that is an ancestor of both $u$ and $v$ and that has the greatest depth in $T$. In the off-line least-common-ancestors problem, we are given a rooted tree $T$ and an arbitrary set $P = \{\\{u, v\}\\}$ of unordered pairs of nodes in $T$, and we wish to determine the least common ancestor of each pair in $P$.
 
 > To solve the off-line least-common-ancestors problem, the following procedure performs a tree walk of $T$ with the initial call LCA$(T.root)$. We assume that each node is colored WHITE prior to the walk.
 
@@ -153,7 +153,7 @@ LCA(u)
                     u "and" v "is" FIND-SET(v).ancestor
 ```
 
-> __*a*__. Argue that line 10 executes exactly once for each pair $\{u, v\} \in P$.
+> __*a*__. Argue that line 10 executes exactly once for each pair $\\{u, v\\} \in P$.
 
 Each node is visited exactly once, if $u$ is visited before $v$, then $v$ is WHITE, line 10 will not be executed.
 
@@ -161,7 +161,7 @@ Each node is visited exactly once, if $u$ is visited before $v$, then $v$ is WHI
 
 LCA(v) increase the number of sets by 1, UNION(u, v) decrease the number of sets by 1.
 
-> __*c*__. Prove that LCA correctly prints the least common ancestor of $u$ and $v$ for each pair $\{u, v\} \in P$.
+> __*c*__. Prove that LCA correctly prints the least common ancestor of $u$ and $v$ for each pair $\\{u, v\\} \in P$.
 
 The visited nodes always point to the current chain of search path.
 

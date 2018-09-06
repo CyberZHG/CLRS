@@ -2,7 +2,7 @@
 
 ### 13.1-1
 
-> In the style of Figure 13.1(a), draw the complete binary search tree of height 3 on the keys $\{1,2, \dots ,15\}$. Add the NIL leaves and color the nodes in three different ways such that the black-heights of the resulting red-black trees are 2, 3, and 4.
+> In the style of Figure 13.1(a), draw the complete binary search tree of height 3 on the keys $\\{1,2, \dots ,15\\}$. Add the NIL leaves and color the nodes in three different ways such that the black-heights of the resulting red-black trees are 2, 3, and 4.
 
 ![](img/13.1-1_1.png)
 

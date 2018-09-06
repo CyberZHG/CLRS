@@ -20,13 +20,13 @@ $(u, v)$ is a bridge in the minimum spanning tree, thus $V$ can be divided into 
 
 ### 23.1-4
 
-> Give a simple example of a connected graph such that the set of edges $\{(u, v):$ there exists a cut $(S, V - S)$ such that $(u, v)$ is a light edge crossing $(S, V - S)\}$ does not form a minimum spanning tree.
+> Give a simple example of a connected graph such that the set of edges $\\{(u, v):$ there exists a cut $(S, V - S)$ such that $(u, v)$ is a light edge crossing $(S, V - S)\\}$ does not form a minimum spanning tree.
 
-$E = \{(u, v), (v, w), (w, u)\}$ with the same weight.
+$E = \\{(u, v), (v, w), (w, u)\\}$ with the same weight.
 
 ### 23.1-5
 
-> Let $e$ be a maximum-weight edge on some cycle of connected graph $G = (V, E)$. Prove that there is a minimum spanning tree of $G' = (V, E - \{e\})$ that is also a minimum spanning tree of $G$. That is, there is a minimum spanning tree of $G$ that does not include $e$.
+> Let $e$ be a maximum-weight edge on some cycle of connected graph $G = (V, E)$. Prove that there is a minimum spanning tree of $G' = (V, E - \\{e\\})$ that is also a minimum spanning tree of $G$. That is, there is a minimum spanning tree of $G$ that does not include $e$.
 
 The edges in the cycle are lighter than the maximum-weight edge.
 
@@ -34,7 +34,7 @@ The edges in the cycle are lighter than the maximum-weight edge.
 
 > Show that a graph has a unique minimum spanning tree if, for every cut of the graph, there is a unique light edge crossing the cut. Show that the converse is not true by giving a counterexample.
 
-Counterexample: $E = \{(u, v), (u, w)\}$ with the same weight.
+Counterexample: $E = \\{(u, v), (u, w)\\}$ with the same weight.
 
 ### 23.1-7
 
@@ -42,7 +42,7 @@ Counterexample: $E = \{(u, v), (u, w)\}$ with the same weight.
 
 Not a tree: remove one edge from the cycle.
 
-Nonpositive: $E = \{(u, v), (v, w), (w, u)\}$ with the same weight -1.
+Nonpositive: $E = \\{(u, v), (v, w), (w, u)\\}$ with the same weight -1.
 
 ### 23.1-8
 
@@ -61,7 +61,7 @@ Cut $V'$.
 > Given a graph $G$ and a minimum spanning tree $T$, suppose that we decrease the weight of one of the edges in $T$. Show that $T$ is still a minimum spanning tree for $G$. More formally, let $T$ be a minimum spanning tree for $G$ with edge weights given by weight function $w$. Choose one edge $(x, y) \in T$ and a positive number $k$, and define the weight function $w'$ by
 
 > $$
-w'(u, v) = \left \{
+w'(u, v) = \left \\{
 \begin{array}{ll}
 w(u, v) & \text{if}\~(u, v) \ne (x, y), \\\\
 w(x, y) - k & \text{if}\~(u, v) = (x, y).

@@ -4,8 +4,8 @@
 
 > Draw the group operation tables for the groups $(\mathbb{Z}\_4, +\_4)$ and $(\mathbb{Z}\_5^\*, \cdot\_5)$. Show that these groups are isomorphic by exhibiting a one-to-one correspondence $\alpha$ between their elements such that $a + b \equiv c \~(\text{mod}\~4)$ if and only if $\alpha(a) \cdot \alpha(b) \equiv \alpha(c) \~(\text{mod}\~5)$.
 
-* $(\mathbb{Z}\_4, +\_4)$: $\{ 0, 1, 2, 3 \}$.
-* $(\mathbb{Z}\_5^\*, \cdot\_5)$: $\{ 1,2,3,4 \}$.
+* $(\mathbb{Z}\_4, +\_4)$: $\\{ 0, 1, 2, 3 \\}$.
+* $(\mathbb{Z}\_5^\*, \cdot\_5)$: $\\{ 1,2,3,4 \\}$.
 
 $\alpha(x) = 2^{x-1}$.
 
@@ -14,12 +14,12 @@ $\alpha(x) = 2^{x-1}$.
 > List all subgroups of $\mathbb{Z}\_9$ and of $\mathbb{Z}\_{13}^\*$.
 
 * $\mathbb{Z}\_9$
-   * $\langle 0 \rangle = \{ 0 \}$,
-   * $\langle 1 \rangle = \{ 0, 1, 2, 3, 4, 5, 6, 7, 8 \}$,
-   * $\langle 2 \rangle = \{ 0, 2, 4, 6, 8 \}$.
+   * $\langle 0 \rangle = \\{ 0 \\}$,
+   * $\langle 1 \rangle = \\{ 0, 1, 2, 3, 4, 5, 6, 7, 8 \\}$,
+   * $\langle 2 \rangle = \\{ 0, 2, 4, 6, 8 \\}$.
 * $\mathbb{Z}\_{13}^\*$
-   * $\langle 1 \rangle = \{ 1 \}$,
-   * $\langle 2 \rangle = \{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 \}$.
+   * $\langle 1 \rangle = \\{ 1 \\}$,
+   * $\langle 2 \rangle = \\{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 \\}$.
 
 ### 31.3-3
 

@@ -66,11 +66,11 @@ There is no $f(n)$ that $f(n) < g(n)$ and $f(n) > g(n)$.
 
 > We can extend our notation to the case of two parameters $n$ and $m$ that can go to infinity independently at different rates. For a given function $g(n,m)$, we denote by $O(g(n,m))$ the set of functions
 >
-> $O(g(n,m))=\{f(n,m)$: there exist positive constants $c$, $n\_0$, and $m\_0$ such that $0 \le f(n,m) \le c g(n,m)$ for all $n \ge n\_0$ or $m \ge m\_0$ $\}$.
+> $O(g(n,m))=\\{f(n,m)$: there exist positive constants $c$, $n\_0$, and $m\_0$ such that $0 \le f(n,m) \le c g(n,m)$ for all $n \ge n\_0$ or $m \ge m\_0$ $\\}$.
 >
 > Give corresponding definitions for $\Omega(g(n,m))$ and $\Theta(g(n,m))$.
 
 
-$\Omega(g(n,m))=\{f(n,m)$: there exist positive constants $c$, $n\_0$, and $m\_0$ such that $0 \le c g(n,m) \le f(n,m)$ for all $n \ge n\_0$ or $m \ge m\_0$ $\}$.
+$\Omega(g(n,m))=\\{f(n,m)$: there exist positive constants $c$, $n\_0$, and $m\_0$ such that $0 \le c g(n,m) \le f(n,m)$ for all $n \ge n\_0$ or $m \ge m\_0$ $\\}$.
 
-$\Theta(g(n,m))=\{f(n,m)$: there exist positive constants $c\_1$, $c\_2$, $n\_0$, and $m\_0$ such that $c\_1 g(n,m) \le f(n,m) \le c\_2 g(n,m)$ for all $n \ge n\_0$ or $m \ge m\_0$ $\}$.
+$\Theta(g(n,m))=\\{f(n,m)$: there exist positive constants $c\_1$, $c\_2$, $n\_0$, and $m\_0$ such that $c\_1 g(n,m) \le f(n,m) \le c\_2 g(n,m)$ for all $n \ge n\_0$ or $m \ge m\_0$ $\\}$.

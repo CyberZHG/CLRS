@@ -22,7 +22,7 @@
 
 ### 26.4-6
 
-> Suppose that all edge capacities in a flow network $G = (V, E)$ are in the set $\{ 1, 2, \dots, k \}$. Analyze the running time of the generic push-relabel algorithm in terms of $|V|$, $|E|$, and $k$. (Hint: How many times can each edge support a nonsaturating push before it becomes saturated?)
+> Suppose that all edge capacities in a flow network $G = (V, E)$ are in the set $\\{ 1, 2, \dots, k \\}$. Analyze the running time of the generic push-relabel algorithm in terms of $|V|$, $|E|$, and $k$. (Hint: How many times can each edge support a nonsaturating push before it becomes saturated?)
 
 ### 26.4-7
 

@@ -26,7 +26,7 @@ DFS, if there is a back edge, then it contains cycle. At most $|V| - 1$ edges ar
  
 > Prove or disprove: If a directed graph $G$ contains cycles, then TOPOLOGICAL-SORT$(G)$ produces a vertex ordering that minimizes the number of "bad" edges that are inconsistent with the ordering produced.
 
-$E = \{ (a, b), (b, c), (c, b), (c, a) \}$
+$E = \\{ (a, b), (b, c), (c, b), (c, a) \\}$
 
 Bad edges if begins from $b$: $(c, b), (a, b)$.
 Bad edge if begins from $c$: $(b, c)$.

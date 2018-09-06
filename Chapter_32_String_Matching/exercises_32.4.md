@@ -4,7 +4,7 @@
 
 > Compute the prefix function $\pi$ for the pattern $\text{ababbabbabbababbabb}$.
 
-$\pi = \{ 0, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 3, 4, 5, 6, 7, 8 \}$.
+$\pi = \\{ 0, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 3, 4, 5, 6, 7, 8 \\}$.
 
 ### 32.4-2
 
@@ -16,7 +16,7 @@ $\left | \pi^\*[q] \right | < q$.
 
 > Explain how to determine the occurrences of pattern $P$ in the text $T$ by examining the $\pi$ function for the string $PT$ (the string of length $m+n$ that is the concatenation of $P$ and $T$).
 
-$\{ q \~|\~ \pi[q] = m \~\text{and}\~ q \ge 2m \}$.
+$\\{ q \~|\~ \pi[q] = m \~\text{and}\~ q \ge 2m \\}$.
 
 ### 32.4-4
 
@@ -35,7 +35,7 @@ $\Phi = p$.
 > Show how to improve KMP-MATCHER by replacing the occurrence of $\pi$ in line 7 (but not line 12) by $\pi'$, where $\pi'$ is defined recursively for $q = 1, 2, \dots, m - 1$ by the equation
 
 > $\displaystyle
-\pi'[q] = \left \{
+\pi'[q] = \left \\{
 \begin{array}{ll}
 0 & \text{if}\~ \pi[q] = 0, \\\\
 \pi'[\pi[q]] & \text{if}\~ \pi[q] \ne 0 \~\text{and}\~ P[\pi[q] + 1] = P[q + 1] \\\\

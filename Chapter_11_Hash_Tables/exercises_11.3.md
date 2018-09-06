@@ -74,7 +74,7 @@ $h(65)=172$
 
 > Define a family $\mathcal{H}$ of hash functions from a finite set $U$ to a finite set $B$ to be __*$\epsilon$-universal*__ if for all pairs of distinct elements $k$ and $l$ in $U$,
 
-> $\text{Pr}\{h(k)=h(l)\} \le \epsilon$,
+> $\text{Pr}\\{h(k)=h(l)\\} \le \epsilon$,
 
 > where the probability is over the choice of the hash function $h$ drawn at random from the family $\mathcal{H}$. Show that an $\epsilon$-universal family of hash functions must have
 
@@ -112,6 +112,6 @@ Therefore $\displaystyle \epsilon \ge \frac{1}{|B|} - \frac{1}{|U|}$.
 
 > $\displaystyle h\_b(\langle a\_0, a\_1, \dots, a\_{n-1} \rangle)=\left ( \sum\_{j=0}^{n-1}a\_jb^j \right ) \~\text{mod}\~p$,
 
-> and let $\mathcal{H}=\{ h\_b : b \in \mathbb{Z}\_p \}$. Argue that $\mathcal{H}$ is $((n-1)/p)$-universal according to the definition of $\epsilon$-universal in Exercise 11.3-5.
+> and let $\mathcal{H}=\\{ h\_b : b \in \mathbb{Z}\_p \\}$. Argue that $\mathcal{H}$ is $((n-1)/p)$-universal according to the definition of $\epsilon$-universal in Exercise 11.3-5.
 
 $\dots$

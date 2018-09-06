@@ -4,7 +4,7 @@
 
 > Draw a table showing the order of every element in $\mathbb{Z}\_{11}^\*$. Pick the smallest primitive root $g$ and compute a table giving $\text{ind}\_{11,g}(x)$ for all $x \in \mathbb{Z}\_{11}^\*$.
 
-$g = 2$, $\{1, 2, 4, 8, 5, 10, 9, 7, 3, 6\}$.
+$g = 2$, $\\{1, 2, 4, 8, 5, 10, 9, 7, 3, 6\\}$.
 
 ### 31.6-2
 

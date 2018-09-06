@@ -29,7 +29,7 @@ $7 \rightarrow 3$
 
 * Adjacency-matrix representation
 
-$\left \{ \begin{matrix}
+$\left \\{ \begin{matrix}
 0 & 1 & 1 & 0 & 0 & 0 & 0 \\\\
 1 & 0 & 0 & 1 & 1 & 0 & 0 \\\\
 1 & 0 & 0 & 0 & 0 & 1 & 1 \\\\
@@ -37,11 +37,11 @@ $\left \{ \begin{matrix}
 0 & 1 & 0 & 0 & 0 & 0 & 0 \\\\
 0 & 0 & 1 & 0 & 0 & 0 & 0 \\\\
 0 & 0 & 1 & 0 & 0 & 0 & 0 \\\\
-\end{matrix} \right \}$
+\end{matrix} \right \\}$
 
 ### 22.1-3
 
-> The __*transpose*__ of a directed graph $G = (V, E)$ is the graph $G^\text{T} = (V, E^\text{T})$, where $E^\text{T} = \{ (v, u) \in V \times V: (u, v) \in E \}$. Thus, $G^\text{T}$ is $G$ with all its edges reversed. Describe efficient algorithms for computing $G^\text{T}$ from $G$, for both the adjacency-list and adjacency-matrix representations of $G$. Analyze the running times of your algorithms.
+> The __*transpose*__ of a directed graph $G = (V, E)$ is the graph $G^\text{T} = (V, E^\text{T})$, where $E^\text{T} = \\{ (v, u) \in V \times V: (u, v) \in E \\}$. Thus, $G^\text{T}$ is $G$ with all its edges reversed. Describe efficient algorithms for computing $G^\text{T}$ from $G$, for both the adjacency-list and adjacency-matrix representations of $G$. Analyze the running times of your algorithms.
 
 * Adjacency-list representation
 
@@ -99,7 +99,7 @@ Starting from $a\_{11}$, if $a\_{ij} = 0$ then $j = j + 1$, otherwise $i = i + 1
 > The __*incidence matrix*__ of a directed graph $G = (V, E)$ with no self-loops is a $|V| \times |E|$ matrix $B = (b\_{ij})$ such that
 
 > $$
-b\_{ij} = \left \{
+b\_{ij} = \left \\{
 \begin{array}{rl}
 -1 & \text{if edge}\~j\~\text{leaves vertex}\~i, \\\\
 1 & \text{if edge}\~j\~\text{enters vertex}\~i, \\\\

@@ -80,7 +80,7 @@ Regenerate.
 
 ### 5.3-7
 
-> Suppose we want to create a __*random sample*__ of the set $\{1,2,3,\dots,n\}$, that is, an $m$-element subset $S$, where $0 \le m \le n$, such that each $m$-subset is equally likely to be created. One way would be to set $A[i] = i$ for $i = 1, 2, 3, \dots, n$, call RANDOMIZE-IN-PLACE($A$), and then take just the first $m$ array elements. This method would make $n$ calls to the RANDOM procedure. If $n$ is much larger than $m$, we can create a random sample with fewer calls to RANDOM. Show that the following recursive procedure returns a random $m$-subset $S$ of $\{1,2,3,\dots,n\}$, in which each $m$-subset is equally likely, while making only $m$ calls to RANDOM:
+> Suppose we want to create a __*random sample*__ of the set $\\{1,2,3,\dots,n\\}$, that is, an $m$-element subset $S$, where $0 \le m \le n$, such that each $m$-subset is equally likely to be created. One way would be to set $A[i] = i$ for $i = 1, 2, 3, \dots, n$, call RANDOMIZE-IN-PLACE($A$), and then take just the first $m$ array elements. This method would make $n$ calls to the RANDOM procedure. If $n$ is much larger than $m$, we can create a random sample with fewer calls to RANDOM. Show that the following recursive procedure returns a random $m$-subset $S$ of $\\{1,2,3,\dots,n\\}$, in which each $m$-subset is equally likely, while making only $m$ calls to RANDOM:
 
 > ```
 RANDOM-SAMPLE(m, n)

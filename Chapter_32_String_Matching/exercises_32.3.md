@@ -11,7 +11,7 @@ $0 \rightarrow 1 \rightarrow 2 \rightarrow 2 \rightarrow 3 \rightarrow 4 \righta
 ### 32.3-2
 
 > Draw a state-transition diagram for a string-matching automaton for the pattern
-$ababbabbababbababbabb$ over the alphabet $\sigma = \{a, b\}$.
+$ababbabbababbababbabb$ over the alphabet $\sigma = \\{a, b\\}$.
 
 | State | a | b |
 |:-----:|:-:|:-:|
@@ -42,7 +42,7 @@ $ababbabbababbababbabb$ over the alphabet $\sigma = \{a, b\}$.
 
 > We call a pattern $P$ __*nonoverlappable*__ if $P\_k \sqsupset P\_q$ implies $k = 0$ or $k = q$. Describe the state-transition diagram of the string-matching automaton for a nonoverlappable pattern.
 
-$\delta(q, a) \in \{q+1, 0\}$.
+$\delta(q, a) \in \\{q+1, 0\\}$.
 
 ### 32.3-4 $\star$
 

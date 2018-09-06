@@ -109,7 +109,7 @@ integers $n$.
 
 > We can apply the iteration operator $\ast$ used in the $\lg^\ast$ function to any monotonically increasing function $f(n)$ over the reals. For a given constant $c \in \mathbb{R}$, we define the iterated function $f\_c^\ast$ by
 >
-> $f\_c^\ast(n)=\min\{i \ge 0: f^{(i)}(n) \le c\}$,
+> $f\_c^\ast(n)=\min\\{i \ge 0: f^{(i)}(n) \le c\\}$,
 >
 > which need not be well defined in all cases. In other words, the quantity $f\_c^\ast(n)$ is the number of iterated applications of the function f required to reduce its argument down to $c$ or less.
 >

@@ -59,7 +59,7 @@ $$
 
 ### 8.4-5 $\star$
 
-> A __*probability distribution function*__ $P(x)$ for a random variable $X$ is defined by $P(x) = \text{Pr}\{X \le x\}$. Suppose that we draw a list of $n$ random variables $X\_1,X\_2, \dots ,X\_n$ from a continuous probability distribution function $P$ that is computable in $O(1)$ time. Give an algorithm that sorts these numbers in linear average-case time.
+> A __*probability distribution function*__ $P(x)$ for a random variable $X$ is defined by $P(x) = \text{Pr}\\{X \le x\\}$. Suppose that we draw a list of $n$ random variables $X\_1,X\_2, \dots ,X\_n$ from a continuous probability distribution function $P$ that is computable in $O(1)$ time. Give an algorithm that sorts these numbers in linear average-case time.
 
 Bucket sort by $p\_i$,
 

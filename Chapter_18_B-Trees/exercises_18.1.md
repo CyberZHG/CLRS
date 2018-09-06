@@ -14,7 +14,7 @@ No key.
 
 ### 18.1-3
 
-> Show all legal B-trees of minimum degree 2 that represent $\{1, 2, 3, 4, 5\}$.
+> Show all legal B-trees of minimum degree 2 that represent $\\{1, 2, 3, 4, 5\\}$.
 
 ![](./img/18.1-3_1.png)
 

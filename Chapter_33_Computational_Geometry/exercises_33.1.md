@@ -40,13 +40,13 @@ Based on exercise 33.1-3, for each point $p\_i$, let $p\_i$ be $p\_0$ and sort o
 
 > A __*polygon*__ is a piecewise-linear, closed curve in the plane. That is, it is a curve ending on itself that is formed by a sequence of straight-line segments, called the __*sides*__ of the polygon. A point joining two consecutive sides is a __*vertex*__ of the polygon. If the polygon is __*simple*__, as we shall generally assume, it does not cross itself. The set of points in the plane enclosed by a simple polygon forms the __*interior*__ of the polygon, the set of points on the polygon itself forms its __*boundary*__, and the set of points surrounding the polygon forms its __*exterior*__. A simple polygon is convex if, given any two points on its boundary or in its interior, all points on the line segment drawn between them are contained in the polygon's boundary or interior. A vertex of a convex polygon cannot be expressed as a convex combination of any two distinct points on the boundary or in the interior of the polygon.
 
-> Professor Amundsen proposes the following method to determine whether a sequence $\langle p\_1, p\_2, \dots, p\_{n-1} \rangle$ of $n$ points forms the consecutive vertices of a convex polygon. Output "yes" if the set $\{ \angle p\_i p\_{i+1} p\_{i+2}: i = 0, 1, \dots, n - 1 \}$, where subscript addition is performed modulo $n$, does not contain both left turns and right turns; otherwise, output "no." Show that although this method runs in linear time, it does not always produce the correct answer. Modify the professor's method so that it always produces the correct answer in linear time.
+> Professor Amundsen proposes the following method to determine whether a sequence $\langle p\_1, p\_2, \dots, p\_{n-1} \rangle$ of $n$ points forms the consecutive vertices of a convex polygon. Output "yes" if the set $\\{ \angle p\_i p\_{i+1} p\_{i+2}: i = 0, 1, \dots, n - 1 \\}$, where subscript addition is performed modulo $n$, does not contain both left turns and right turns; otherwise, output "no." Show that although this method runs in linear time, it does not always produce the correct answer. Modify the professor's method so that it always produces the correct answer in linear time.
 
 A line.
 
 ### 33.1-6
 
-> Given a point $p\_0 = (x\_0, y\_0)$, the __*right horizontal ray*__ from $p\_0$ is the set of points $\{ p\_i = (x\_i, y\_i) : x\_i \ge x\_0 \~\text{and}\~ y\_i = y\_0 \}$, that is, it is the set of points due right of $p\_0$ along with $p\_0$ itself. Show how to determine whether a given right horizontal ray from $p\_0$ intersects a line segment $\overline{p\_1 p\_2}$ in $O(1)$ time by reducing the problem to that of determining whether two line segments intersect.
+> Given a point $p\_0 = (x\_0, y\_0)$, the __*right horizontal ray*__ from $p\_0$ is the set of points $\\{ p\_i = (x\_i, y\_i) : x\_i \ge x\_0 \~\text{and}\~ y\_i = y\_0 \\}$, that is, it is the set of points due right of $p\_0$ along with $p\_0$ itself. Show how to determine whether a given right horizontal ray from $p\_0$ intersects a line segment $\overline{p\_1 p\_2}$ in $O(1)$ time by reducing the problem to that of determining whether two line segments intersect.
 
 $p\_1.y = p\_2.y = 0$ and $\max(p\_1.x, p\_2.x) \ge 0$.
 
@@ -64,4 +64,4 @@ Based on exercise 33.1-6, use $p\_i - p\_0$ as $p\_i$.
 
 > Show how to compute the area of an $n$-vertex simple, but not necessarily convex, polygon in $\Theta(n)$ time. (See Exercise 33.1-5 for definitions pertaining to polygons.)
 
-Half of the sum of the cross products of $\{\overline{p\_1 p\_i}, \overline{p\_1 p\_{i+1}} \~|\~ i \in [2, n - 1] \}$.
+Half of the sum of the cross products of $\{\overline{p\_1 p\_i}, \overline{p\_1 p\_{i+1}} \~|\~ i \in [2, n - 1] \\}$.

@@ -47,7 +47,7 @@ Based on Exercise 13.3-6.
 
 ### 13-2 Join operation on red-black trees
 
-> The __*join*__ operation takes two dynamic sets $S\_1$ and $S\_2$ and an element $x$ such that for any $x\_1 \in S\_1$ and $x\_2 \in S\_2$, we have $x\_1.key \le x.key \le x\_2.key$. It returns a set $S = S\_1 \cup \{x\} \cup S\_2$. In this problem, we investigate how to implement the join operation on red-black trees.
+> The __*join*__ operation takes two dynamic sets $S\_1$ and $S\_2$ and an element $x$ such that for any $x\_1 \in S\_1$ and $x\_2 \in S\_2$, we have $x\_1.key \le x.key \le x\_2.key$. It returns a set $S = S\_1 \cup \\{x\\} \cup S\_2$. In this problem, we investigate how to implement the join operation on red-black trees.
 
 > __*a*__. Given a red-black tree $T$, let us store its black-height as the new attribute $T.bh$. Argue that RB-INSERT and RB-DELETE can maintain the $bh$ attribute without requiring extra storage in the nodes of the tree and without increasing the asymptotic running times. Show that while descending through $T$, we can determine the black-height of each node we visit in $O(1)$ time per node visited.
 
@@ -59,13 +59,13 @@ RB-DELETE: if $x$ is root, we decrease $bh$ by 1.
 
 Each node: in the simple path, decrease $bh$ by 1 each time we find a black node.
 
-> We wish to implement the operation RB-JOIN$(T\_1, x, T\_2)$, which destroys $T\_1$ and $T\_2$ and returns a red-black tree $T=T\_1 \cup \{x\} \cup T\_2$. Let $n$ be the total number of nodes in $T\_1$ and $T\_2$.
+> We wish to implement the operation RB-JOIN$(T\_1, x, T\_2)$, which destroys $T\_1$ and $T\_2$ and returns a red-black tree $T=T\_1 \cup \\{x\\} \cup T\_2$. Let $n$ be the total number of nodes in $T\_1$ and $T\_2$.
 
 > __*b*__. Assume that $T\_1.bh \ge T\_2.bh$. Describe an $O(\lg n)$-time algorithm that finds a black node $y$ in $T\_1$ with the largest key from among those nodes whose black-height is $T2.bh$.
 
 Move to the right child if the node has a right child, otherwise move to the left child. If the node is black, we decease $bh$ by 1. Repeat the step until $bh = T2.bh$.
 
-> __*c*__. Let $T\_y$ be the subtree rooted at $y$. Describe how $T\_y \cup \{ x \} \cup T\_2$ can replace $T\_y$ in $O(1)$ time without destroying the binary-search-tree property.
+> __*c*__. Let $T\_y$ be the subtree rooted at $y$. Describe how $T\_y \cup \\{ x \\} \cup T\_2$ can replace $T\_y$ in $O(1)$ time without destroying the binary-search-tree property.
 
 $x$'s parent is $T\_y$'s parent, $x$'s left child is $T\_y$ and its right child is $T\_2$.
 
@@ -296,7 +296,7 @@ The min-heap property will not hold if $y.priority > z.priority$.
 > __*g*__. Show that
 
 > $\begin{array}{rll}
-\text{Pr}\{X\_{ik}=1\} &=&
+\text{Pr}\\{X\_{ik}=1\\} &=&
 \displaystyle \frac{(k-i-1)!}{(k-i+1)!} \\\\
 &=& \displaystyle \frac{1}{(k-i+1)(k-i)} \\\\
 \end{array}

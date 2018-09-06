@@ -120,9 +120,9 @@ $\sum y\_i = P(x)$
 * $(8, 1)$
 * $(6, 1)$
 
-> __*b*__. What array with elements from the set $\{1,2,\cdots,n\}$ has the most inversions? How many does it have?
+> __*b*__. What array with elements from the set $\\{1,2,\cdots,n\\}$ has the most inversions? How many does it have?
 
-* Most: $\{n,n-1,\cdots,1\}$
+* Most: $\\{n,n-1,\cdots,1\\}$
 * How many: $\frac{n(n-1)}{2}$
 
 > __*c*__. What is the relationship between the running time of insertion sort and the number of inversions in the input array? Justify your answer.

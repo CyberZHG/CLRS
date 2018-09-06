@@ -12,13 +12,13 @@
 
 > Show that if $(S, I)$ is a matroid, then $(S, I')$ is a matroid, where
 
-> $I' = \{ A': S - A'$ contains some maximal $A \in I \}$.
+> $I' = \\{ A': S - A'$ contains some maximal $A \in I \\}$.
 
 > That is, the maximal independent sets of $(S, I')$ are just the complements of the maximal independent sets of $(S, I)$.
 
 ### 16.4-4 $\star$
 
-> Let $S$ be a finite set and let $S\_1, S\_2, \dots, S\_k$ be a partition of $S$ into nonempty disjoint subsets. Define the structure $(S, I)$ by the condition that $I = \{ A : | A \cap S\_i | \le 1$ for $i = 1, 2, \dots, k \}$. Show that $(S, I)$ is a matroid. That is, the set of all sets $A$ that contain at most one member of each subset in the partition determines the independent sets of a matroid.
+> Let $S$ be a finite set and let $S\_1, S\_2, \dots, S\_k$ be a partition of $S$ into nonempty disjoint subsets. Define the structure $(S, I)$ by the condition that $I = \\{ A : | A \cap S\_i | \le 1$ for $i = 1, 2, \dots, k \\}$. Show that $(S, I)$ is a matroid. That is, the set of all sets $A$ that contain at most one member of each subset in the partition determines the independent sets of a matroid.
 
 ### 16.4-5
 

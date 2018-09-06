@@ -7,97 +7,97 @@
 Initial:
 
 $$
-\left \{ \begin{matrix}
+\left \\{ \begin{matrix}
 0 & \infty & \infty & \infty & -1 & \infty\\\\
 1 & 0 & \infty & 2 & \infty & \infty\\\\
 \infty & 2 & 0 & \infty & \infty & -8\\\\
 -4 & \infty & \infty & 0 & 3 & \infty\\\\
 \infty & 7 & \infty & \infty & 0 & \infty\\\\
 \infty & 5 & 10 & \infty & \infty & 0\\\\
-\end{matrix} \right \}
+\end{matrix} \right \\}
 $$
 Slow:
 
 $m=2$:
 $$
-\left \{ \begin{matrix}
+\left \\{ \begin{matrix}
 0 & 6 & \infty & \infty & -1 & \infty\\\\
 -2 & 0 & \infty & 2 & 0 & \infty\\\\
 3 & -3 & 0 & 4 & \infty & -8\\\\
 -4 & 10 & \infty & 0 & -5 & \infty\\\\
 8 & 7 & \infty & 9 & 0 & \infty\\\\
 6 & 5 & 10 & 7 & \infty & 0\\\\
-\end{matrix} \right \}
+\end{matrix} \right \\}
 $$
 $m=3$:
 $$
-\left \{ \begin{matrix}
+\left \\{ \begin{matrix}
 0 & 6 & \infty & 8 & -1 & \infty\\\\
 -2 & 0 & \infty & 2 & -3 & \infty\\\\
 -2 & -3 & 0 & -1 & 2 & -8\\\\
 -4 & 2 & \infty & 0 & -5 & \infty\\\\
 5 & 7 & \infty & 9 & 0 & \infty\\\\
 3 & 5 & 10 & 7 & 5 & 0\\\\
-\end{matrix} \right \}
+\end{matrix} \right \\}
 $$
 $m=4$:
 $$
-\left \{ \begin{matrix}
+\left \\{ \begin{matrix}
 0 & 6 & \infty & 8 & -1 & \infty\\\\
 -2 & 0 & \infty & 2 & -3 & \infty\\\\
 -5 & -3 & 0 & -1 & -3 & -8\\\\
 -4 & 2 & \infty & 0 & -5 & \infty\\\\
 5 & 7 & \infty & 9 & 0 & \infty\\\\
 3 & 5 & 10 & 7 & 2 & 0\\\\
-\end{matrix} \right \}
+\end{matrix} \right \\}
 $$
 $m=5$:
 $$
-\left \{ \begin{matrix}
+\left \\{ \begin{matrix}
 0 & 6 & \infty & 8 & -1 & \infty\\\\
 -2 & 0 & \infty & 2 & -3 & \infty\\\\
 -5 & -3 & 0 & -1 & -6 & -8\\\\
 -4 & 2 & \infty & 0 & -5 & \infty\\\\
 5 & 7 & \infty & 9 & 0 & \infty\\\\
 3 & 5 & 10 & 7 & 2 & 0\\\\
-\end{matrix} \right \}
+\end{matrix} \right \\}
 $$
 Fast:
 
 $m=2$:
 $$
-\left \{ \begin{matrix}
+\left \\{ \begin{matrix}
 0 & 6 & \infty & \infty & -1 & \infty\\\\
 -2 & 0 & \infty & 2 & 0 & \infty\\\\
 3 & -3 & 0 & 4 & \infty & -8\\\\
 -4 & 10 & \infty & 0 & -5 & \infty\\\\
 8 & 7 & \infty & 9 & 0 & \infty\\\\
 6 & 5 & 10 & 7 & \infty & 0\\\\
-\end{matrix} \right \}
+\end{matrix} \right \\}
 $$
 
 $m=4$:
 $$
-\left \{ \begin{matrix}
+\left \\{ \begin{matrix}
 0 & 6 & \infty & 8 & -1 & \infty\\\\
 -2 & 0 & \infty & 2 & -3 & \infty\\\\
 -5 & -3 & 0 & -1 & -3 & -8\\\\
 -4 & 2 & \infty & 0 & -5 & \infty\\\\
 5 & 7 & \infty & 9 & 0 & \infty\\\\
 3 & 5 & 10 & 7 & 2 & 0\\\\
-\end{matrix} \right \}
+\end{matrix} \right \\}
 $$
 
 $m=8$:
 $$
-\left \{ \begin{matrix}
+\left \\{ \begin{matrix}
 0 & 6 & \infty & 8 & -1 & \infty\\\\
 -2 & 0 & \infty & 2 & -3 & \infty\\\\
 -5 & -3 & 0 & -1 & -6 & -8\\\\
 -4 & 2 & \infty & 0 & -5 & \infty\\\\
 5 & 7 & \infty & 9 & 0 & \infty\\\\
 3 & 5 & 10 & 7 & 2 & 0\\\\
-\end{matrix} \right \}
+\end{matrix} \right \\}
 $$
 ### 25.1-2
 

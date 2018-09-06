@@ -8,7 +8,7 @@ $\sum\_{v \in V\_2} f(s, v) = 0$, $\sum\_{v \in V\_1} f(v, s)$.
 
 ### 26.2-2
 
-> In Figure 26.1(b), what is the flow across the cut $(\{s, v\_2, v\_4\}, \{v\_1, v\_3, t\})$? What is the capacity of this cut?
+> In Figure 26.1(b), what is the flow across the cut $(\\{s, v\_2, v\_4\\}, \\{v\_1, v\_3, t\\})$? What is the capacity of this cut?
 
 $f(S, T) = f(s, v\_1) + f(v\_2, v\_1) + f(v\_4, v\_3) + f(v\_4, t) - f(v\_3, v\_2) = 11 + 1 + 7 + 4 - 4 = 19$.
 

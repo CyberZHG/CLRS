@@ -32,4 +32,4 @@ No. Think about an extreme condition $100 \rightarrow 99 \rightarrow 1$, since l
 
 ### 21.4-6 $\star$
 
-> Consider the function $\alpha'(n) = \min \{k: A\_k(1) \ge \lg(n + 1)\}$. Show that $\alpha'(n) \le 3$ for all practical values of $n$ and, using Exercise 21.4-2, show how to modify the potential-function argument to prove that we can perform a sequence of $m$ MAKESET, UNION, and FIND-SET operations, $n$ of which are MAKE-SET operations, on a disjoint-set forest with union by rank and path compression in worst-case time $O(m \alpha'(n))$.
+> Consider the function $\alpha'(n) = \min \\{k: A\_k(1) \ge \lg(n + 1)\\}$. Show that $\alpha'(n) \le 3$ for all practical values of $n$ and, using Exercise 21.4-2, show how to modify the potential-function argument to prove that we can perform a sequence of $m$ MAKESET, UNION, and FIND-SET operations, $n$ of which are MAKE-SET operations, on a disjoint-set forest with union by rank and path compression in worst-case time $O(m \alpha'(n))$.

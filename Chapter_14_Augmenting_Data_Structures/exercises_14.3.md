@@ -64,7 +64,7 @@ Search for nodes which has exactly the same low value.
 
 ### 14.3-6
 
-> Show how to maintain a dynamic set $Q$ of numbers that supports the operation MIN-GAP, which gives the magnitude of the difference of the two closest numbers in $Q$. For example, if $Q = \{1, 5, 9, 15, 18, 22\}$, then MIN-GAP$(Q)$ returns $18 - 15 = 3$, since $15$ and $18$ are the two closest numbers in $Q$. Make the operations INSERT, DELETE, SEARCH, and MIN-GAP as efficient as possible, and analyze their running times.
+> Show how to maintain a dynamic set $Q$ of numbers that supports the operation MIN-GAP, which gives the magnitude of the difference of the two closest numbers in $Q$. For example, if $Q = \\{1, 5, 9, 15, 18, 22\\}$, then MIN-GAP$(Q)$ returns $18 - 15 = 3$, since $15$ and $18$ are the two closest numbers in $Q$. Make the operations INSERT, DELETE, SEARCH, and MIN-GAP as efficient as possible, and analyze their running times.
 
 Based on Exercise 14.2-1, we can maintain SUCCESSOR in $O(1)$ time, each time after updating the SUCCESSOR, we can update $x.gap$ to $x.successor.key - x.key$. And based on Exercise 14.2-1 we can also maintain the minimum $gap$ of the subtree in $O(1)$ time.
 

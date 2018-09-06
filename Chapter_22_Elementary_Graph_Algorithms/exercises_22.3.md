@@ -75,14 +75,14 @@ Goto.
 
 > Give a counterexample to the conjecture that if a directed graph $G$ contains a path from $u$ to $v$, and if $u.d < v.d$ in a depth-first search of $G$, then $v$ is a descendant of $u$ in the depth-first forest produced.
 
-$E = \{(w, u), (w, v), (u, w)\}$, search $w$ first.
+$E = \\{(w, u), (w, v), (u, w)\\}$, search $w$ first.
 
 ### 22.3-9
 
 > Give a counterexample to the conjecture that if a directed graph $G$ contains a path  
 > from $u$ to $v$, then any depth-first search must result in $v.d \le u.f$.
 
-$E = \{(w, u), (w, v), (u, w)\}$, search $w$ first.
+$E = \\{(w, u), (w, v), (u, w)\\}$, search $w$ first.
 
 ### 22.3-10
 
@@ -94,7 +94,7 @@ See exercises 22.3-5.
 
 > Explain how a vertex $u$ of a directed graph can end up in a depth-first tree containing only $u$, even though $u$ has both incoming and outgoing edges in $G$.
 
-$E = \{(w, u), (u, v)\}$, search $v$ then search $u$.
+$E = \\{(w, u), (u, v)\\}$, search $v$ then search $u$.
 
 ### 22.3-12
 

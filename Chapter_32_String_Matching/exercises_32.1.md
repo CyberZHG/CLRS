@@ -14,7 +14,7 @@ Suppose $T[i] \ne P[j]$, then for $k \in [1, j)$, $T[i - k] = P[j - k] \ne P[0]$
 
 ### 32.1-3
 
-> Suppose that pattern $P$ and text $T$ are randomly chosen strings of length $m$ and $n$, respectively, from the $d$-ary alphabet $\Sigma\_d = \{0, 1, \dots, d - 1 \}$, where $d \ge 2$. Show that the expected number of character-to-character comparisons made by the implicit loop in line 4 of the naive algorithm is
+> Suppose that pattern $P$ and text $T$ are randomly chosen strings of length $m$ and $n$, respectively, from the $d$-ary alphabet $\Sigma\_d = \\{0, 1, \dots, d - 1 \\}$, where $d \ge 2$. Show that the expected number of character-to-character comparisons made by the implicit loop in line 4 of the naive algorithm is
 
 > $\displaystyle (n - m + 1) \frac{1 - d^{-m}}{1 - d^{-1}} \le 2 (n - m + 1)$
 

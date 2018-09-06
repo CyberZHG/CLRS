@@ -136,7 +136,7 @@ def quicksort(a, p, r):
 
 > An alternative analysis of the running time of randomized quicksort focuses on the expected running time of each individual recursive call to RANDOMIZED-QUICKSORT, rather than on the number of comparisons performed.
 
-> __*a*__. Argue that, given an array of size $n$, the probability that any particular element is chosen as the pivot is $1/n$. Use this to define indicator random variables $X\_i = I \{i$th smallest element is chosen as the pivot$\}$. What is $\text{E}[X\_i]$?
+> __*a*__. Argue that, given an array of size $n$, the probability that any particular element is chosen as the pivot is $1/n$. Use this to define indicator random variables $X\_i = I \\{i$th smallest element is chosen as the pivot$\\}$. What is $\text{E}[X\_i]$?
 
 $\text{E}[X\_i] = 1/n$
 
@@ -262,7 +262,7 @@ def quicksort(a, p, r):
 ### 7-5 Median-of-3 partition
 
 > One way to improve the RANDOMIZED-QUICKSORT procedure is to partition
-around a pivot that is chosen more carefully than by picking a random element from the subarray. One common approach is the median-of-3 method: choose the pivot as the median (middle element) of a set of 3 elements randomly selected from the subarray. (See Exercise 7.4-6.) For this problem, let us assume that the elements in the input array $A[1 \dots n]$ are distinct and that $n \ge 3$. We denote the sorted output array by $A'[1 \dots n]$. Using the median-of-3 method to choose the pivot element $x$, define $p\_i = \text{Pr} \{ x = A'[i] \}$.
+around a pivot that is chosen more carefully than by picking a random element from the subarray. One common approach is the median-of-3 method: choose the pivot as the median (middle element) of a set of 3 elements randomly selected from the subarray. (See Exercise 7.4-6.) For this problem, let us assume that the elements in the input array $A[1 \dots n]$ are distinct and that $n \ge 3$. We denote the sorted output array by $A'[1 \dots n]$. Using the median-of-3 method to choose the pivot element $x$, define $p\_i = \text{Pr} \\{ x = A'[i] \\}$.
 
 > __*a*__. Give an extract formula for $p\_i$ as a function of $n$ and $i$ for $i=2,3, \dots, n-1$. (Note that $p\_1 = p\_n = 0$.)
 

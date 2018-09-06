@@ -36,7 +36,7 @@ Go to the furthest stop within $m$ miles in each iteration.
 
 ### 16.2-5
 
-> Describe an efficient algorithm that, given a set $\{ x\_1, x\_2, \dots, x\_n \}$ of points on the real line, determines the smallest set of unit-length closed intervals that contains all of the given points. Argue that your algorithm is correct.
+> Describe an efficient algorithm that, given a set $\\{ x\_1, x\_2, \dots, x\_n \\}$ of points on the real line, determines the smallest set of unit-length closed intervals that contains all of the given points. Argue that your algorithm is correct.
 
 Place the left side of the unit-interval to the first left-most uncovered point in each iteration.
 

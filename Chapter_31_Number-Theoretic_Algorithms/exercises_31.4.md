@@ -4,7 +4,7 @@
 
 > Find all solutions to the equation $35x \equiv 10 (\text{mod}\~50)$.
 
-$\{6, 16, 26, 36, 46\}$.
+$\\{6, 16, 26, 36, 46\\}$.
 
 ### 31.4-2
 

@@ -74,4 +74,4 @@ $\dots$
 > 
 > Either argue that the algorithm correctly computes a minimum spanning tree of $G$, or provide an example for which the algorithm fails.
 
-The algorithm fails. Suppose $E = \{ (u, v), (u, w), (v, w) \}$, the weight of $(u, v)$ and $(u, w)$ is 1, and the weight of $(v, w)$ is 1000, partition the set into two sets $V\_1 = \{u\}$ and $V\_2 = \{ v, w \}$.
+The algorithm fails. Suppose $E = \\{ (u, v), (u, w), (v, w) \\}$, the weight of $(u, v)$ and $(u, w)$ is 1, and the weight of $(v, w)$ is 1000, partition the set into two sets $V\_1 = \\{u\\}$ and $V\_2 = \\{ v, w \\}$.

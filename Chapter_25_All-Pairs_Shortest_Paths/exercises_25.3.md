@@ -18,7 +18,7 @@ $h(u) = h(v) = 0$, $w = \hat{w}$.
 
 ## 25.3-4
 
-> Professor Greenstreet claims that there is a simpler way to reweight edges than the method used in Johnson's algorithm. Letting $w^\* = \min\_{(u, v) \in E} \{ w(u, v) \}$, just define $\hat{w}(u, v) = w(u, v) - w^\*$ for all edges $(u, v) \in E$. What is wrong with the professor's method of reweighting?
+> Professor Greenstreet claims that there is a simpler way to reweight edges than the method used in Johnson's algorithm. Letting $w^\* = \min\_{(u, v) \in E} \\{ w(u, v) \\}$, just define $\hat{w}(u, v) = w(u, v) - w^\*$ for all edges $(u, v) \in E$. What is wrong with the professor's method of reweighting?
 
 $\hat{w}(p) = w(p) - (k-1)w^\*$.
 
@@ -34,4 +34,4 @@ $\delta(s, v) - \delta(s, u) \le w(u, v)$, if $\delta(s, v) - \delta(s, u) < w(u
 
 > Professor Michener claims that there is no need to create a new source vertex in line 1 of JOHNSON. He claims that instead we can just use $G' = G$ and let $s$ be any vertex. Give an example of a weighted, directed graph $G$ for which incorporating the professor's idea into JOHNSON causes incorrect answers. Then show that if $G$ is strongly connected (every vertex is reachable from every other vertex), the results returned by JOHNSON with the professor's modification are correct.
 
-$E = \{ (u, s) \}$.
+$E = \\{ (u, s) \\}$.
