@@ -142,7 +142,7 @@ $\text{E}[X_i] = 1/n$
 
 > __*b*__. Let $T(n)$ be a random variable denoting the running time of quicksort on an array of size $n$. Argue that
 
-> $
+> $$
 \text{E}[T(n)] = \text{E} \left [ \sum_{q=1}^n X_q (T(q-1) + T(n-q) + \Theta(n)) \right ]
 $$
 
@@ -150,7 +150,7 @@ Obviously.
 
 > __*c*__. Show that we can rewrite equation (7.5) as
 
-> $
+> $$
 \text{E}[T(n)] = \frac{2}{n} \sum_{q=2}^{n-1} \text{E}[T(q)] + \Theta(n)
 $$
 
@@ -166,7 +166,7 @@ $$
 
 > __*d*__. Show that
 
-> $
+> $$
 \sum_{k=2}^{n-1}k \lg k \le \frac{1}{2} n^2 \lg n - \frac{1}{8} n^2
 $$
 

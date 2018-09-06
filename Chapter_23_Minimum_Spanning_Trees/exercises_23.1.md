@@ -60,7 +60,7 @@ Cut $V'$.
 
 > Given a graph $G$ and a minimum spanning tree $T$, suppose that we decrease the weight of one of the edges in $T$. Show that $T$ is still a minimum spanning tree for $G$. More formally, let $T$ be a minimum spanning tree for $G$ with edge weights given by weight function $w$. Choose one edge $(x, y) \in T$ and a positive number $k$, and define the weight function $w'$ by
 
-> $
+> $$
 w'(u, v) = \left \{
 \begin{array}{ll}
 w(u, v) & \text{if}~(u, v) \ne (x, y), \\

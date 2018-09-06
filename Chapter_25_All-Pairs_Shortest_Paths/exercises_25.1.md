@@ -109,7 +109,7 @@ To simplify (25.2).
 
 > What does the matrix
 
-> $
+> $$
 L^{(0)} = \left ( \begin{matrix}
 0 & \infty & \infty & \cdots & \infty \\
 \infty & 0 & \infty & \cdots & \infty \\

@@ -112,7 +112,7 @@ $\hat{\phi}^2=\frac{6-2\sqrt{5}}{4}=\frac{1 - \sqrt{5}}{2} + 1 = \hat{\phi} + 1$
 
 > Prove by induction that the $i$th Fibonacci number satisfies the equality
 >
-> $
+> $$
 F_i=\frac{\phi^{i}-\hat{\phi^i}}{\sqrt{5}}
 $$
 >

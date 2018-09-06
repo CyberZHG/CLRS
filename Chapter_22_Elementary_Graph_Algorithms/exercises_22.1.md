@@ -98,7 +98,7 @@ Starting from $a_{11}$, if $a_{ij} = 0$ then $j = j + 1$, otherwise $i = i + 1$.
 
 > The __*incidence matrix*__ of a directed graph $G = (V, E)$ with no self-loops is a $|V| \times |E|$ matrix $B = (b_{ij})$ such that
 
-> $
+> $$
 b_{ij} = \left \{
 \begin{array}{rl}
 -1 & \text{if edge}~j~\text{leaves vertex}~i, \\

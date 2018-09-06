@@ -150,7 +150,7 @@ $\therefore$ $T(n)=\Theta(n \lg \lg n)$
 
 > This problem develops properties of the Fibonacci numbers, which are defined by recurrence (3.22). We shall use the technique of generating functions to solve the Fibonacci recurrence. Define the __generating function__ (or __formal power series__) $\mathcal{F}$ as
 
-> $
+> $$
 \begin{array}{lll}
 \mathcal{F}(z) & = & \sum_{i=0}^\infty F_i z^i \\
                & = & 0 + z + z^2 + 2z^3 + 3z^4 + 5z^5 + 8z^6 + 13z^7 + 21z^8+\dots
@@ -174,7 +174,7 @@ $$
 
 > __*b*__. Show that
 >
-> $
+> $$
 \begin{array}{lll}
 \mathcal{F}(z) & = & \displaystyle \frac{z}{1-z-z^2} \\
                & = & \displaystyle \frac{z}{(1-\phi z)(1 - \hat{\phi}z)} \\

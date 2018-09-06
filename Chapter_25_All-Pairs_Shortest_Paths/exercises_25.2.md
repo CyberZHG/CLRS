@@ -91,7 +91,7 @@ $$
 
 > Suppose that we modify the way in which equation (25.7) handles equality:
 
-> $
+> $$
 \pi_{ij}^{(k)} = \left \{ 
 \begin{array}{ll}
 \pi_{ij}^{(k-1)} & ~\text{if}~ d_{ij}^{(k-1)} < d_{ik}^{(k-1)} + d_{kj}^{(k-1)}, \\

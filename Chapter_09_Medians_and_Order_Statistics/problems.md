@@ -178,7 +178,7 @@ $$
 
 > __*b*__. Let $X_k$ denote the total number of comparisons between elements of array $A$ when finding $z_k$. Show that
 
-> $
+> $$
 \text{E}[X_k] \le 2 \left ( 
 \sum_{i=1}^{k}\sum_{j=k}^n \frac{1}{j-i+1} +
 \sum_{j=k+1}^{n} \frac{j-k-1}{j-k+1} +

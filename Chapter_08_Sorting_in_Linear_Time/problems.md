@@ -237,7 +237,7 @@ def quick_sort(a, b, p, r):
 
 > Suppose that, instead of sorting an array, we just require that the elements increase on average. More precisely, we call an $n$-element array $A$ __*k-sorted*__ if, for all $i=1,2, \dots,n-k$, the following holds:
 
-> $
+> $$
 \frac{\sum_{j=i}^{i+k-1}A[j]}{k} \le \frac{\sum_{j=i+1}^{i+k}A[j]}{k}
 $$
 
