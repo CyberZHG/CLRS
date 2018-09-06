@@ -5,7 +5,9 @@
 
 Some exercises and problems in __*Introduction to Algorithms (CLRS)*__ 3rd edition. Never ever trust a single word of the repo.
 
-# Summary
+You can use [TeX All the Things](https://chrome.google.com/webstore/detail/tex-all-the-things/cbimabofgmfdkicghcadidpemeenbffn) Chrome extension to read the Markdown files.
+
+# Notebook Summary
 
 ## I Foundations
 
