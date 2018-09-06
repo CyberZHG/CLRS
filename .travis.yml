@@ -1,10 +1,8 @@
 language: python
 python:
-  - "2.7"
   - "3.6"
-  - "nightly"
-  - "pypy"
   - "pypy3"
+  - "nightly"
 install:
   - pip install pycodestyle
   - pip install jupyter
