@@ -30,13 +30,13 @@ Optimal parenthesization:
 
 
 $$
-(A_1 \times A_2) \times ((A_3 \times A_4) \times (A_5 \times A_6))
+(A\_1 \times A\_2) \times ((A\_3 \times A\_4) \times (A\_5 \times A\_6))
 $$
 
 
 ### 15.2-2
 
-> Give a recursive algorithm MATRIX-CHAIN-MULTIPLY$(A, s, i, j)$ that actually performs the optimal matrix-chain multiplication, given the sequence of matrices $\langle A_1, A_2, \dots ,A_{n_i} \rangle$, the $s$ table computed by MATRIX-CHAIN-ORDER, and the indices $i$ and $j$. \(The initial call would be MATRIX-CHAIN-MULTIPLY$(A, s, 1, n)$.\)
+> Give a recursive algorithm MATRIX-CHAIN-MULTIPLY$(A, s, i, j)$ that actually performs the optimal matrix-chain multiplication, given the sequence of matrices $\langle A\_1, A\_2, \dots ,A\_{n\_i} \rangle$, the $s$ table computed by MATRIX-CHAIN-ORDER, and the indices $i$ and $j$. \(The initial call would be MATRIX-CHAIN-MULTIPLY$(A, s, 1, n)$.\)
 
 ```
 MATRIX-CHAIN-MULTIPLY(A, s, i, j)
@@ -58,10 +58,10 @@ Suppose $P(n) \ge c2^n$,
 
 $$
 \begin{array}{rlll}
-P(n) &\ge& \displaystyle \sum_{k=1}^{n-1} c2^k \cdot c2^{n-k} \\
-&=& \displaystyle \sum_{k=1}^{n-1} c^2 2^n \\
-&=& \displaystyle c^2 (n - 1) 2^n \\
-&\ge& \displaystyle c^2 2^n & (n > 1) \\
+P(n) &\ge& \displaystyle \sum\_{k=1}^{n-1} c2^k \cdot c2^{n-k} \\\\
+&=& \displaystyle \sum\_{k=1}^{n-1} c^2 2^n \\\\
+&=& \displaystyle c^2 (n - 1) 2^n \\\\
+&\ge& \displaystyle c^2 2^n & (n > 1) \\\\
 &\ge& \displaystyle c 2^n & (0 < c \le 1)
 \end{array}
 $$
@@ -76,11 +76,11 @@ Vertice: $O(n^2)$, edges: $O(n^3)$.
 ### 15.2-5
 
 > Let $R(i, j)$ be the number of times that table entry $m[i, j]$ is referenced while computing other table entries in a call of MATRIX-CHAIN-ORDER. Show that the total number of references for the entire table is  
-> $\displaystyle \sum_{i=1}^n \sum_{j=i}^n R(i, j) = \frac{n^3 - n}{3}$.
+> $\displaystyle \sum\_{i=1}^n \sum\_{j=i}^n R(i, j) = \frac{n^3 - n}{3}$.
 
 
 $$
-\sum_{i=1}^n \sum_{j=i}^n R(i, j) = \sum_{l=2}^n 2 (n - l + 1) (l - 1) = \frac{n^3 - n}{3}
+\sum\_{i=1}^n \sum\_{j=i}^n R(i, j) = \sum\_{l=2}^n 2 (n - l + 1) (l - 1) = \frac{n^3 - n}{3}
 $$
 
 

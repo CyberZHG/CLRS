@@ -6,7 +6,7 @@
 
 > __a__. $T(n)=2T(n/4)+1$.
 
-$\Theta(n^{\log_42}=\Theta(\sqrt{n})$
+$\Theta(n^{\log\_42}=\Theta(\sqrt{n})$
 
 > __b__. $T(n)=2T(n/4)+\sqrt{n}$.
 
@@ -24,7 +24,7 @@ $\Theta(n^2)$
 
 > Professor Caesar wishes to develop a matrix-multiplication algorithm that is asymptotically faster than Strassen’s algorithm. His algorithm will use the divide and conquer method, dividing each matrix into pieces of size $n/4\times n/4$, and the divide and combine steps together will take $\Theta(n^2)$ time. He needs to determine how many subproblems his algorithm has to create in order to beat Strassen’s algorithm. If his algorithm creates a subproblems, then the recurrence for the running time $T(n)$ becomes $T(n)=aT(n/4)+\Theta(n^2)$. What is the largest integer value of $a$ for which Professor Caesar’s algorithm would be asymptotically faster than Strassen’s algorithm?
 
-$\log_4a<\log_27$
+$\log\_4a<\log\_27$
 
 The largest $a$ is 48.
 
@@ -32,7 +32,7 @@ The largest $a$ is 48.
 
 > Use the master method to show that the solution to the binary-search recurrence $T(n)=T(n/2)+\Theta(1)$ is $T(n)=\Theta(\lg n)$. (See Exercise 2.3-5 for a description of binary search.)
 
-$n^{log_21}=1$
+$n^{log\_21}=1$
 
 $T(n)=\lg n$
 

@@ -8,9 +8,9 @@ Suppose $T(n) \le cn^2-an$,
 
 $$
 \begin{array}{rlll}
-T(n) &\le& c(n-1)^2-a(n-1) + dn \\
-&=&  cn^2 + (d - 2c)n + c & \displaystyle (d < 2c, n \ge \frac{c}{2c-d}) \\
-&\le& cn^2 \\
+T(n) &\le& c(n-1)^2-a(n-1) + dn \\\\
+&=&  cn^2 + (d - 2c)n + c & \displaystyle (d < 2c, n \ge \frac{c}{2c-d}) \\\\
+&\le& cn^2 \\\\
 \end{array}
 $$
 
@@ -45,10 +45,10 @@ Let $x$ be the minimum depth,
 
 $$
 \begin{array}{rll}
-n\alpha^x &\le& 1 \\
-\alpha^x &\le& n^{-1} \\
-x &\ge& \log_\alpha{n^{-1}} \\
-x &\ge& -\lg n / \lg \alpha \\
+n\alpha^x &\le& 1 \\\\
+\alpha^x &\le& n^{-1} \\\\
+x &\ge& \log\_\alpha{n^{-1}} \\\\
+x &\ge& -\lg n / \lg \alpha \\\\
 \end{array}
 $$
 
@@ -56,10 +56,10 @@ Let $y$ be the maximum depth,
 
 $$
 \begin{array}{rll}
-n(1-\alpha)^y &\le& 1 \\
-(1-\alpha)^y &\le& n^{-1} \\
-y &\ge& \log_{(1-\alpha)}{n^{-1}} \\
-y &\ge& -\lg n / \lg (1-\alpha) \\
+n(1-\alpha)^y &\le& 1 \\\\
+(1-\alpha)^y &\le& n^{-1} \\\\
+y &\ge& \log\_{(1-\alpha)}{n^{-1}} \\\\
+y &\ge& -\lg n / \lg (1-\alpha) \\\\
 \end{array}
 $$
 

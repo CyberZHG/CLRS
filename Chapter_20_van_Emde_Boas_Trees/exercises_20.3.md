@@ -374,7 +374,7 @@ Constant time: add an auxiliary array of size $u$.
 
 MINIMUM/MAXIMUM: $O(1)$.
 
-SUCCESSOR/PREDECESSOR/INSERT/DELETE worst: $T(u) = T(u^{1/k}) + O(1) = O(\lg \log_{1/k} u)$.
+SUCCESSOR/PREDECESSOR/INSERT/DELETE worst: $T(u) = T(u^{1/k}) + O(1) = O(\lg \log\_{1/k} u)$.
 
 ### 20.3-6
 

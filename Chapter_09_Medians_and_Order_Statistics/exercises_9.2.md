@@ -8,7 +8,7 @@ $\dots$
 
 ### 9.2-2
 
-> Argue that the indicator random variable $X_k$ and the value $T(max(k - 1, n - k))$ are independent.
+> Argue that the indicator random variable $X\_k$ and the value $T(max(k - 1, n - k))$ are independent.
 
 $\dots$
 

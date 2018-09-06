@@ -8,7 +8,7 @@ $x = 84, y = 814$.
 
 ### 31.9-2
 
-> Suppose that we are given a function $f : \mathbb{Z}_n \rightarrow \mathbb{Z}_n$ and an initial value $x_0 \in \mathbb{Z}_n$. Define $x_i = f(x_{i - 1})$ for $i = 1,2,\dots$. Let $t$ and $u > 0$ be the smallest values such that $x_{t+i} = x_{t+u+i}$ for $i = 0, 1, \dots$. In the terminology of Pollard's rho algorithm, $t$ is the length of the tail and $u$ is the length of the cycle of the rho. Give an efficient algorithm to determine $t$ and $u$ exactly, and analyze its running time.
+> Suppose that we are given a function $f : \mathbb{Z}\_n \rightarrow \mathbb{Z}\_n$ and an initial value $x\_0 \in \mathbb{Z}\_n$. Define $x\_i = f(x\_{i - 1})$ for $i = 1,2,\dots$. Let $t$ and $u > 0$ be the smallest values such that $x\_{t+i} = x\_{t+u+i}$ for $i = 0, 1, \dots$. In the terminology of Pollard's rho algorithm, $t$ is the length of the tail and $u$ is the length of the cycle of the rho. Give an efficient algorithm to determine $t$ and $u$ exactly, and analyze its running time.
 
 ### 31.9-3
 
@@ -18,4 +18,4 @@ $\Theta(\sqrt{p})$.
 
 ### 31.9-4 $\star$
 
-> One disadvantage of POLLARD-RHO as written is that it requires one gcd computation for each step of the recurrence. Instead, we could batch the gcd computations by accumulating the product of several $x_i$ values in a row and then using this product instead of $x_i$ in the gcd computation. Describe carefully how you would implement this idea, why it works, and what batch size you would pick as the most effective when working on a $\beta$-bit number $n$.
+> One disadvantage of POLLARD-RHO as written is that it requires one gcd computation for each step of the recurrence. Instead, we could batch the gcd computations by accumulating the product of several $x\_i$ values in a row and then using this product instead of $x\_i$ in the gcd computation. Describe carefully how you would implement this idea, why it works, and what batch size you would pick as the most effective when working on a $\beta$-bit number $n$.

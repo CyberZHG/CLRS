@@ -4,7 +4,7 @@
 
 > Let $G = (V, E)$ be an undirected, connected graph whose weight function is $w: E \rightarrow \mathbb{R}$, and suppose that $|E| \ge |V|$ and all edge weights are distinct.
 
-> We define a second-best minimum spanning tree as follows. Let $\mathcal{T}$ be the set of all spanning trees of $G$, and let $T'$ be a minimum spanning tree of $G$. Then a __*second-best minimum spanning tree*__ is a spanning tree $T$ such that $W(T) = \min_{T'' \in \mathcal{T}-\{T'\}}\{w(T'')\}$.
+> We define a second-best minimum spanning tree as follows. Let $\mathcal{T}$ be the set of all spanning trees of $G$, and let $T'$ be a minimum spanning tree of $G$. Then a __*second-best minimum spanning tree*__ is a spanning tree $T$ such that $W(T) = \min\_{T'' \in \mathcal{T}-\{T'\}}\{w(T'')\}$.
 
 > __*a*__. Show that the minimum spanning tree is unique, but that the second-best minimum spanning tree need not be unique.
 

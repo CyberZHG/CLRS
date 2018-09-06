@@ -4,16 +4,16 @@
 
 > Suppose we use a hash function $h$ to hash $n$ distinct keys into an array $T$ of length $m$. Assuming simple uniform hashing, what is the expected number of collisions? More precisely, what is the expected cardinality of $\{\{k,l\}:k\ne l~\text{and}~h(k)=h(l)\}$?
 
-$\text{Pr}\{h(k_i)=h(k_j)\}=1/m$
+$\text{Pr}\{h(k\_i)=h(k\_j)\}=1/m$
 
-$X_{ij}=\text{I}\{h(k_i)=h(k_j)\}$
+$X\_{ij}=\text{I}\{h(k\_i)=h(k\_j)\}$
 
-$\text{E}[X_{ij}]=1/m$
+$\text{E}[X\_{ij}]=1/m$
 
 $\begin{array}{rll}
 \text{E}[\{\{k,l\}:k\ne l~\text{and}~h(k)=h(l)\}] 
-&=& \displaystyle \sum_{i=1}^n \sum_{j=i+1}^n \text{E}[X_{ij}] \\
-&=& \displaystyle \sum_{i=1}^n \sum_{j=i+1}^n \frac{1}{m} \\
+&=& \displaystyle \sum\_{i=1}^n \sum\_{j=i+1}^n \text{E}[X\_{ij}] \\\\
+&=& \displaystyle \sum\_{i=1}^n \sum\_{j=i+1}^n \frac{1}{m} \\\\
 &=& \displaystyle \frac{n(n-1)}{2m}
 \end{array}
 $$

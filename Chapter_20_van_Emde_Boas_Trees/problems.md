@@ -22,9 +22,9 @@ Suppose $P(u) \le cu - d$,
 
 $$
 \begin{array}{rlll}
-P(u) &=& (\sqrt{u} + 1) P(\sqrt{u}) + \Theta(\sqrt{u}) \\
-&\le& (\sqrt{u} + 1) \cdot c \cdot (\sqrt{u} - d) + \Theta(\sqrt{u}) \\
-&=& cu + c(1-d)\sqrt{u} - cd + \Theta(\sqrt{u}) & (d > 1)\\
+P(u) &=& (\sqrt{u} + 1) P(\sqrt{u}) + \Theta(\sqrt{u}) \\\\
+&\le& (\sqrt{u} + 1) \cdot c \cdot (\sqrt{u} - d) + \Theta(\sqrt{u}) \\\\
+&=& cu + c(1-d)\sqrt{u} - cd + \Theta(\sqrt{u}) & (d > 1)\\\\
 &\le& cu
 \end{array}
 $$

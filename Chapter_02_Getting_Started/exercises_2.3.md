@@ -39,7 +39,7 @@ def merge_sort(arr):
 
 > Use mathematical induction to show that when $n$ is an exact power of 2, the solution of the recurrence
 >
-> $T(n)=\left\{\begin{matrix}2 & \text{if}\; n = 2 \\ 2T(n/2)+n & \text{if}\; n = 2^k, \text{for}\; k>1\end{matrix}\right.$
+> $T(n)=\left\{\begin{matrix}2 & \text{if}\; n = 2 \\\\ 2T(n/2)+n & \text{if}\; n = 2^k, \text{for}\; k>1\end{matrix}\right.$
 >
 > is $T(n)=n\lg n$.
 
@@ -50,7 +50,7 @@ def merge_sort(arr):
 
 > We can express insertion sort as a recursive procedure as follows. In order to sort $A[1..n]$, we recursively sort $A[1..n-1]$ and then insert $A[n]$ into the sorted array $A[1..n-1]$. Write a recurrence for the running time of this recursive version of insertion sort.
 
-$$T(n)=\left\{\begin{matrix}1 & \text{if}\; n=1 \\ T(n-1)+n-1 & \text{if}\; n>1\end{matrix}\right.$$
+$$T(n)=\left\{\begin{matrix}1 & \text{if}\; n=1 \\\\ T(n-1)+n-1 & \text{if}\; n>1\end{matrix}\right.$$
 
 ### 2.3-5
 

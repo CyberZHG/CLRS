@@ -64,11 +64,11 @@ $n! \nmid n$
 
 $$
 \begin{array}{rll}
-P &=& 1 \cdot (1 - \frac{1}{n^3}) \cdot (1 - \frac{2}{n^3}) \cdots (1 - \frac{n}{n^3}) \\
-&\ge& 1 \cdot (1 - \frac{n}{n^3}) \cdot (1 - \frac{n}{n^3}) \cdots (1 - \frac{n}{n^3}) \\
-&\ge& (1 - \frac{1}{n^2})^n \\
-&\ge& 1 - n \cdot \frac{1}{n^2} \\
-&=& 1 - 1/n \\
+P &=& 1 \cdot (1 - \frac{1}{n^3}) \cdot (1 - \frac{2}{n^3}) \cdots (1 - \frac{n}{n^3}) \\\\
+&\ge& 1 \cdot (1 - \frac{n}{n^3}) \cdot (1 - \frac{n}{n^3}) \cdots (1 - \frac{n}{n^3}) \\\\
+&\ge& (1 - \frac{1}{n^2})^n \\\\
+&\ge& 1 - n \cdot \frac{1}{n^2} \\\\
+&=& 1 - 1/n \\\\
 \end{array}
 $$
 
@@ -101,11 +101,11 @@ Suppose RANDOM-SAMPLE$(m - 1, n - 1)$ creates an uniform subset,
 for RANDOM-SAMPLE$(m, n)$, the probability of choosing $n$ is:
 
 $$
-\underbrace{\frac{n-1}{n}}_{i \in [1, n-1]} \underbrace{\cdot \frac{m-1}{n-1}}_{i \in S_{m-1}} + \underbrace{\frac{1}{n}}_{i=n} = \frac{m}{n}  
+\underbrace{\frac{n-1}{n}}\_{i \in [1, n-1]} \underbrace{\cdot \frac{m-1}{n-1}}\_{i \in S\_{m-1}} + \underbrace{\frac{1}{n}}\_{i=n} = \frac{m}{n}  
 $$
 
 the probability of $k$ $(k < n)$ is choosed is:
 
 $$
-\underbrace{\frac{1}{n}}_{i = k} \cdot \underbrace{\frac{(n-1)-(m-1)}{n-1}}_{k \notin S_{m-1}}+\underbrace{\frac{m-1}{n-1}}_{k \in S_{m-1}} = \frac{m}{n} 
+\underbrace{\frac{1}{n}}\_{i = k} \cdot \underbrace{\frac{(n-1)-(m-1)}{n-1}}\_{k \notin S\_{m-1}}+\underbrace{\frac{m-1}{n-1}}\_{k \in S\_{m-1}} = \frac{m}{n} 
 $$

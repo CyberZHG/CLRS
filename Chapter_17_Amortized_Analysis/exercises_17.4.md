@@ -6,13 +6,13 @@
 
 ### 17.4-2
 
-> Show that if $\alpha_{i-1} \ge 1/2$ and the $i$th operation on a dynamic table is TABLE-DELETE, then the amortized cost of the operation with respect to the potential function (17.6) is bounded above by a constant.
+> Show that if $\alpha\_{i-1} \ge 1/2$ and the $i$th operation on a dynamic table is TABLE-DELETE, then the amortized cost of the operation with respect to the potential function (17.6) is bounded above by a constant.
 
 $$
 \begin{array}{rll}
-\displaystyle \hat{c_i} 
-&=& \displaystyle c_i + \Phi_i - \Phi_{i-1} \\
-&=& \displaystyle 1 + (2 \cdot num_i - size_i) - (2 \cdot (num_i + 1) - size_i) \\
+\displaystyle \hat{c\_i} 
+&=& \displaystyle c\_i + \Phi\_i - \Phi\_{i-1} \\\\
+&=& \displaystyle 1 + (2 \cdot num\_i - size\_i) - (2 \cdot (num\_i + 1) - size\_i) \\\\
 &=& -1
 \end{array}
 $$
@@ -25,27 +25,27 @@ $$
 
 > show that the amortized cost of a TABLE-DELETE that uses this strategy is bounded above by a constant.
 
-If $1/3 < \alpha_i \le 1/2$,
+If $1/3 < \alpha\_i \le 1/2$,
 
 $$
 \begin{array}{rll}
-\hat{c_i} &=& c_i + \Phi_i - \Phi_{i-1} \\
-&=& 1 + (size_i - 2 \cdot num_i) - (size_i - 2 \cdot (num_i + 1)) \\
+\hat{c\_i} &=& c\_i + \Phi\_i - \Phi\_{i-1} \\\\
+&=& 1 + (size\_i - 2 \cdot num\_i) - (size\_i - 2 \cdot (num\_i + 1)) \\\\
 &=& 3
 \end{array}
 $$
 If the $i$th operation does trigger a contraction,
 
 $$
-\frac{1}{3} size_{i-1} = num_i + 1 \\
-size_{i-1} = 3 (num_i + 1) \\
-size_{i} = \frac{2}{3} size_{i-1} = 2 (num_i + 1)
+\frac{1}{3} size\_{i-1} = num\_i + 1 \\\\
+size\_{i-1} = 3 (num\_i + 1) \\\\
+size\_{i} = \frac{2}{3} size\_{i-1} = 2 (num\_i + 1)
 $$
 
 $$
 \begin{array}{rll}
-\hat{c_i} &=& c_i + \Phi_i - \Phi_{i-1} \\
-&=& (num_i + 1) + [2 \cdot (num_i + 1) - 2 \cdot num_i] - [3 \cdot (num_i + 1) - 2 \cdot (num_i + 1)] \\
+\hat{c\_i} &=& c\_i + \Phi\_i - \Phi\_{i-1} \\\\
+&=& (num\_i + 1) + [2 \cdot (num\_i + 1) - 2 \cdot num\_i] - [3 \cdot (num\_i + 1) - 2 \cdot (num\_i + 1)] \\\\
 &=& 2
 \end{array}
 $$

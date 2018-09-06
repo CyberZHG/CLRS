@@ -188,7 +188,7 @@ class Dict:
 
 ### 10.2-6
 
-> The dynamic-set operation UNION takes two disjoint sets $S_1$ and $S_2$ as input, and it returns a set $S = S1 \cup S2$ consisting of all the elements of $S_1$ and $S_2$. The sets $S_1$ and $S_2$ are usually destroyed by the operation. Show how to support UNION in $O(1)$ time using a suitable list data structure.
+> The dynamic-set operation UNION takes two disjoint sets $S\_1$ and $S\_2$ as input, and it returns a set $S = S1 \cup S2$ consisting of all the elements of $S\_1$ and $S\_2$. The sets $S\_1$ and $S\_2$ are usually destroyed by the operation. Show how to support UNION in $O(1)$ time using a suitable list data structure.
 
 ```python
 class LinkListNode:

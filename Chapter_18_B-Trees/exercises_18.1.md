@@ -31,7 +31,7 @@ No key.
 
 $$
 \begin{array}{rll}
-n &=& (1 + 2t + (2t) ^ 2 + \cdots + (2t) ^ {h}) \cdot (2t - 1) \\
+n &=& (1 + 2t + (2t) ^ 2 + \cdots + (2t) ^ {h}) \cdot (2t - 1) \\\\
 &=& (2t)^{h + 1} - 1
 \end{array}
 $$

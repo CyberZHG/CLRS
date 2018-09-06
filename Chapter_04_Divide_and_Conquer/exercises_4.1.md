@@ -29,7 +29,7 @@ def find_maximum_subarray(arr):
 
 ### 4.1-3
 
-> Implement both the brute-force and recursive algorithms for the maximumsubarray problem on your own computer. What problem size $n_0$ gives the crossover point at which the recursive algorithm beats the brute-force algorithm? Then, change the base case of the recursive algorithm to use the brute-force algorithm whenever the problem size is less than $n_0$. Does that change the crossover point?
+> Implement both the brute-force and recursive algorithms for the maximumsubarray problem on your own computer. What problem size $n\_0$ gives the crossover point at which the recursive algorithm beats the brute-force algorithm? Then, change the base case of the recursive algorithm to use the brute-force algorithm whenever the problem size is less than $n\_0$. Does that change the crossover point?
 
 ```python
 def find_max_crossing_subarray(arr, low, mid, high):

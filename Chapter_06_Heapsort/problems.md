@@ -41,11 +41,11 @@ Thus if the index begins with 1, the $k$th children is $(i-1)d+k+1$, the parent 
 
 > __*b*__. What is the height of a $d$-ary heap of $n$ elements in terms of $n$ and $d$?
 
-$\log_dn$
+$\log\_dn$
 
 > __*c*__. Give an efficient implementation of EXTRACT-MAX in a $d$-ary max-heap. Analyze its running time in terms of $d$ and $n$.
 
-$\Theta(d \log_dn)$
+$\Theta(d \log\_dn)$
 
 ```python
 def parent(d, i):
@@ -78,7 +78,7 @@ def extract_max(d, a):
 
 > __*d*__. Give an efficient implementation of INSERT in a $d$-ary max-heap. Analyze its running time in terms of $d$ and $n$.
 
-$\Theta(\log_dn)$
+$\Theta(\log\_dn)$
 
 ```python
 def increase_key(d, a, i, key):
@@ -96,7 +96,7 @@ def insert(d, a, key):
 
 > __*e*__. Give an efficient implementation of INCREASE-KEY$(A, i, k)$, which flags an error if $k < A[i]$, but otherwise sets $A[i] = k$ and then updates the $d$-ary maxheap structure appropriately. Analyze its running time in terms of $d$ and $n$.
 
-$\Theta(\log_dn)$
+$\Theta(\log\_dn)$
 
 ```python
 def increase_key(d, a, i, key):
@@ -115,10 +115,10 @@ def increase_key(d, a, i, key):
 
 $$
 \begin{matrix}
-2 & 3 & 4 & 5 \\
-8 & 9 & 12 & 14 \\
-16 & \infty & \infty & \infty \\
-\infty & \infty & \infty & \infty \\
+2 & 3 & 4 & 5 \\\\
+8 & 9 & 12 & 14 \\\\
+16 & \infty & \infty & \infty \\\\
+\infty & \infty & \infty & \infty \\\\
 \end{matrix}
 $$
 

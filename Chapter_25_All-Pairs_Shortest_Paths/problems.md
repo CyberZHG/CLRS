@@ -4,7 +4,7 @@
 
 > Suppose that we wish to maintain the transitive closure of a directed graph $G = (V, E)$ as we insert edges into $E$. That is, after each edge has been inserted, we want to update the transitive closure of the edges inserted so far. Assume that the graph $G$ has no edges initially and that we represent the transitive closure as a boolean matrix.
 
-> __*a*__. Show how to update the transitive closure $G^* = (V, E^*)$ of a graph $G = (V, E)$ in $O(V^2)$ time when a new edge is added to $G$.
+> __*a*__. Show how to update the transitive closure $G^\* = (V, E^\*)$ of a graph $G = (V, E)$ in $O(V^2)$ time when a new edge is added to $G$.
 
 Suppose the inverted edge is $(u, v)$, then if $(a, u)$ is true and $(v, b)$ is true, then $(a, b)$ is true.
 
@@ -12,7 +12,7 @@ Suppose the inverted edge is $(u, v)$, then if $(a, u)$ is true and $(v, b)$ is 
 
 Two connected components.
 
-> __*c*__. Describe an efficient algorithm for updating the transitive closure as edges are inserted into the graph. For any sequence of $n$ insertions, your algorithm should run in total time $\sum_{i=1}^n t_i = O(V^3)$, where $t_i$ is the time to update the transitive closure upon inserting the $i$th edge. Prove that your algorithm attains this time bound.
+> __*c*__. Describe an efficient algorithm for updating the transitive closure as edges are inserted into the graph. For any sequence of $n$ insertions, your algorithm should run in total time $\sum\_{i=1}^n t\_i = O(V^3)$, where $t\_i$ is the time to update the transitive closure upon inserting the $i$th edge. Prove that your algorithm attains this time bound.
 
 If $(a, u)$ is true, $(a, v)$ is not true and $(v, b)$ is true, then $(a, b)$ is true.
 
@@ -22,20 +22,20 @@ If $(a, u)$ is true, $(a, v)$ is not true and $(v, b)$ is true, then $(a, b)$ is
 
 > __*a*__. What are the asymptotic running times for INSERT, EXTRACT-MIN, and DECREASE-KEY, as a function of $d$ and the number $n$ of elements in a $d$-ary min-heap? What are these running times if we choose $d = \Theta(n^\alpha)$ for some constant $0 < \alpha \le 1$? Compare these running times to the amortized costs of these operations for a Fibonacci heap.
 
-* INSERT: $\Theta(\log_d n) = \Theta(1/\alpha)$.
-* EXTRACT-MIN: $\Theta(d \log_d n) = \Theta(n^\alpha / \alpha)$.
-* DECREASE-KEY: $\Theta(\log_d n) = \Theta(1/\alpha)$.
+* INSERT: $\Theta(\log\_d n) = \Theta(1/\alpha)$.
+* EXTRACT-MIN: $\Theta(d \log\_d n) = \Theta(n^\alpha / \alpha)$.
+* DECREASE-KEY: $\Theta(\log\_d n) = \Theta(1/\alpha)$.
 
 > __*b*__. Show how to compute shortest paths from a single source on an $\epsilon$-dense directed graph $G = (V, E)$ with no negative-weight edges in $O(E)$ time. (Hint: Pick $d$ as a function of $\epsilon$.)
 
-Dijkstra, $O(d \log_d V \cdot V + \log_d V \cdot E)$, if $d = V^\epsilon$, then
+Dijkstra, $O(d \log\_d V \cdot V + \log\_d V \cdot E)$, if $d = V^\epsilon$, then
 
 $$
 \begin{array}{ll}
-& O(d \log_d V \cdot V + \log_d V \cdot E) \\
-=& O(V^\epsilon \cdot V / \epsilon + E / \epsilon) \\
-=& O((V^{1+\epsilon} + E) / \epsilon) \\
-=& O((E + E) / \epsilon) \\
+& O(d \log\_d V \cdot V + \log\_d V \cdot E) \\\\
+=& O(V^\epsilon \cdot V / \epsilon + E / \epsilon) \\\\
+=& O((V^{1+\epsilon} + E) / \epsilon) \\\\
+=& O((E + E) / \epsilon) \\\\
 =& O(E)
 \end{array}
 $$

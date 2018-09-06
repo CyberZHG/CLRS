@@ -8,9 +8,9 @@ $\pi = \{ 0, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 3, 4, 5, 6, 7, 8 \}$.
 
 ### 32.4-2
 
-> Give an upper bound on the size of $\pi^*[q]$ as a function of $q$. Give an example to show that your bound is tight.
+> Give an upper bound on the size of $\pi^\*[q]$ as a function of $q$. Give an example to show that your bound is tight.
 
-$\left | \pi^*[q] \right | < q$.
+$\left | \pi^\*[q] \right | < q$.
 
 ### 32.4-3
 
@@ -37,9 +37,9 @@ $\Phi = p$.
 > $\displaystyle
 \pi'[q] = \left \{
 \begin{array}{ll}
-0 & \text{if}~ \pi[q] = 0, \\
-\pi'[\pi[q]] & \text{if}~ \pi[q] \ne 0 ~\text{and}~ P[\pi[q] + 1] = P[q + 1] \\
-\pi[q] & \text{if}~ \pi[q] \ne 0 ~\text{and}~ P[\pi[q] + 1] \ne P[q + 1] \\
+0 & \text{if}~ \pi[q] = 0, \\\\
+\pi'[\pi[q]] & \text{if}~ \pi[q] \ne 0 ~\text{and}~ P[\pi[q] + 1] = P[q + 1] \\\\
+\pi[q] & \text{if}~ \pi[q] \ne 0 ~\text{and}~ P[\pi[q] + 1] \ne P[q + 1] \\\\
 \end{array}
 \right .
 $$

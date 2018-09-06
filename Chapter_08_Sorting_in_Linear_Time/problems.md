@@ -2,9 +2,9 @@
 
 ### 8-1 Probabilistic lower bounds on comparison sorting
 
-> In this problem, we prove a probabilistic $\Omega(n \lg n)$ lower bound on the running time of any deterministic or randomized comparison sort on $n$ distinct input elements. We begin by examining a deterministic comparison sort $A$ with decision tree $T_A$. We assume that every permutation of $A$'s inputs is equally likely.
+> In this problem, we prove a probabilistic $\Omega(n \lg n)$ lower bound on the running time of any deterministic or randomized comparison sort on $n$ distinct input elements. We begin by examining a deterministic comparison sort $A$ with decision tree $T\_A$. We assume that every permutation of $A$'s inputs is equally likely.
 
-> __*a*__. Suppose that each leaf of $T_A$ is labeled with the probability that it is reached given a random input. Prove that exactly $n!$ leaves are labeled $1/n!$ and that the rest are labeled 0.
+> __*a*__. Suppose that each leaf of $T\_A$ is labeled with the probability that it is reached given a random input. Prove that exactly $n!$ leaves are labeled $1/n!$ and that the rest are labeled 0.
 
 There should be only $n!$ leaves.
 
@@ -12,25 +12,25 @@ There should be only $n!$ leaves.
 
 Add $T$ means all the $k$ depths of leaves increase by 1.
 
-> __*c*__. Let $d(k)$ be the minimum value of $D(T)$ over all decision trees $T$ with $k > 1$ leaves. Show that $d(k)=\min _{1 \le i \le k - 1}\{d(i)+d(k-i)+k\}$.
+> __*c*__. Let $d(k)$ be the minimum value of $D(T)$ over all decision trees $T$ with $k > 1$ leaves. Show that $d(k)=\min \_{1 \le i \le k - 1}\{d(i)+d(k-i)+k\}$.
 
-$D(T)=D(LT)+D(RT)+k$, $d(k)=\min _{1 \le i \le k - 1}\{d(i)+d(k-i)+k\}$ iterates all the possibilities.
+$D(T)=D(LT)+D(RT)+k$, $d(k)=\min \_{1 \le i \le k - 1}\{d(i)+d(k-i)+k\}$ iterates all the possibilities.
 
 > __*d*__. Prove that for a given value of $k > 1$ and $i$ in the range $1 \le i \le k - 1$, the function $i \lg i + (k - i) \lg(k - i)$ is minimized at $i = k/2$. Conclude that $d(k) = \Omega(k \lg k)$.
 
 $$
 \begin{array}{rll}
-f(i) &=& i \lg i + (k - i) \lg (k - i) \\
-f'(i) &=& \lg i - \lg (k - i) \\
-0 &=& \displaystyle \lg \frac{i}{k-i} \\
-1 &=& \displaystyle \frac{i}{k-i} \\
-i &=& k / 2 \\
+f(i) &=& i \lg i + (k - i) \lg (k - i) \\\\
+f'(i) &=& \lg i - \lg (k - i) \\\\
+0 &=& \displaystyle \lg \frac{i}{k-i} \\\\
+1 &=& \displaystyle \frac{i}{k-i} \\\\
+i &=& k / 2 \\\\
 \end{array}
 $$
 
-> __*e*__. Prove that $D(T_A)=\Omega(n!\lg (n!))$, and conclude that the average-case time to sort $n$ elements is $\Omega(n \lg n)$.
+> __*e*__. Prove that $D(T\_A)=\Omega(n!\lg (n!))$, and conclude that the average-case time to sort $n$ elements is $\Omega(n \lg n)$.
 
-$d(T_A) = d(n!) = \Omega(n! \lg n!)$
+$d(T\_A) = d(n!) = \Omega(n! \lg n!)$
 
 Average:
 $$
@@ -99,10 +99,10 @@ Not stable.
 
 > __*a*__. You are given an array of integers, where different integers may have different numbers of digits, but the total number of digits over all the integers in the array is $n$. Show how to sort the array in $O(n)$ time.
 
-Suppose the number of integers which have $b_i$ digits is $n_i$, divide the integers into different buckets using counting sort, the integers in the same bucket have the same $b_i$, then use radix sort in each bucket:
+Suppose the number of integers which have $b\_i$ digits is $n\_i$, divide the integers into different buckets using counting sort, the integers in the same bucket have the same $b\_i$, then use radix sort in each bucket:
 
 $$
-\sum_{i} b_i n_i = n
+\sum\_{i} b\_i n\_i = n
 $$
 
 therefore the algorithm is $O(n)$.
@@ -192,7 +192,7 @@ Compare each red jug with each blue jug.
 
 $$
 \begin{array}{rll}
-n! &\le& 3^h \\
+n! &\le& 3^h \\\\
 h &=& \Omega(n \lg n)
 \end{array}
 $$
@@ -238,7 +238,7 @@ def quick_sort(a, b, p, r):
 > Suppose that, instead of sorting an array, we just require that the elements increase on average. More precisely, we call an $n$-element array $A$ __*k-sorted*__ if, for all $i=1,2, \dots,n-k$, the following holds:
 
 > $$
-\frac{\sum_{j=i}^{i+k-1}A[j]}{k} \le \frac{\sum_{j=i+1}^{i+k}A[j]}{k}
+\frac{\sum\_{j=i}^{i+k-1}A[j]}{k} \le \frac{\sum\_{j=i+1}^{i+k}A[j]}{k}
 $$
 
 > __*a*__. What does it mean for an array to be 1-sorted?
@@ -253,8 +253,8 @@ Sorted.
 
 $$
 \begin{array}{rll}
-\displaystyle \frac{\sum_{j=i}^{i+k-1}A[j]}{k} &\le& \displaystyle \frac{\sum_{j=i+1}^{i+k}A[j]}{k} \\
-\displaystyle \sum_{j=i}^{i+k-1}A[j] &\le& \displaystyle \sum_{j=i+1}^{i+k}A[j] \\
+\displaystyle \frac{\sum\_{j=i}^{i+k-1}A[j]}{k} &\le& \displaystyle \frac{\sum\_{j=i+1}^{i+k}A[j]}{k} \\\\
+\displaystyle \sum\_{j=i}^{i+k-1}A[j] &\le& \displaystyle \sum\_{j=i+1}^{i+k}A[j] \\\\
 A[i] &\le& A[i + k]
 \end{array}
 $$
@@ -298,11 +298,11 @@ Based on Exercise C.1.13,
 
 $$
 \begin{array}{rll}
-\displaystyle \binom{2n}{n} &\le& \displaystyle 2^h \\
-h &\ge& \displaystyle \lg\frac{(2n)!}{(n!)^2} \\
-&=& \displaystyle \lg (2n!) - 2\lg (n!) \\
-&=& \displaystyle \Theta(2n\lg 2n) - 2\Theta(n \lg n) \\
-&=& \displaystyle \Theta(2n) \\
+\displaystyle \binom{2n}{n} &\le& \displaystyle 2^h \\\\
+h &\ge& \displaystyle \lg\frac{(2n)!}{(n!)^2} \\\\
+&=& \displaystyle \lg (2n!) - 2\lg (n!) \\\\
+&=& \displaystyle \Theta(2n\lg 2n) - 2\Theta(n \lg n) \\\\
+&=& \displaystyle \Theta(2n) \\\\
 \end{array}
 $$
 

@@ -41,12 +41,12 @@ Total: $O((1 + \lg q) \lg b)$.
 
 $$
 \begin{array}{rlll}
-& \mu(a, b) - \mu(b, a~\text{mod}~b) \\
-=& \mu(a, b) - \mu(b, r) \\
-=& (1 + \lg a)(1 + \lg b) - (1 + \lg b)(1 + \lg r) \\
-=& (1 + \lg b)(\lg a - \lg r) & (\lg r \le \lg b)\\
-\ge& (1 + \lg b)(\lg a - \lg b) \\
-=& (1 + \lg b) (\lg q + 1) \\
+& \mu(a, b) - \mu(b, a~\text{mod}~b) \\\\
+=& \mu(a, b) - \mu(b, r) \\\\
+=& (1 + \lg a)(1 + \lg b) - (1 + \lg b)(1 + \lg r) \\\\
+=& (1 + \lg b)(\lg a - \lg r) & (\lg r \le \lg b)\\\\
+\ge& (1 + \lg b)(\lg a - \lg b) \\\\
+=& (1 + \lg b) (\lg q + 1) \\\\
 \ge& (1 + \lg q) \lg b
 \end{array}
 $$
@@ -57,13 +57,13 @@ $\mu(a, b) = (1 + \lg a)(1 + \lg b) \approx \beta^2$
 
 ### 31-3 Three algorithms for Fibonacci numbers
 
-> This problem compares the efficiency of three methods for computing the $n$th Fibonacci number $F_n$, given $n$. Assume that the cost of adding, subtracting, or multiplying two numbers is $O(1)$, independent of the size of the numbers.
+> This problem compares the efficiency of three methods for computing the $n$th Fibonacci number $F\_n$, given $n$. Assume that the cost of adding, subtracting, or multiplying two numbers is $O(1)$, independent of the size of the numbers.
 
-> __*a*__. Show that the running time of the straightforward recursive method for computing $F_n$ based on recurrence (3.22) is exponential in $n$. (See, for example, the FIB procedure on page 775.)
+> __*a*__. Show that the running time of the straightforward recursive method for computing $F\_n$ based on recurrence (3.22) is exponential in $n$. (See, for example, the FIB procedure on page 775.)
 
 $T(n) = T(n - 1) + T(n - 2) + \Theta(1) = \Theta(2^n)$
 
-> __*b*__. Show how to compute $F_n$ in $O(n)$ time using memoization.
+> __*b*__. Show how to compute $F\_n$ in $O(n)$ time using memoization.
 
 ```python
 def fib(n):
@@ -76,12 +76,12 @@ def fib(n):
     return fib_sub(n)
 ```
 
-> __*c*__. Show how to compute $F_n$ in $O(\lg n)$ time using only integer addition and multiplication.
+> __*c*__. Show how to compute $F\_n$ in $O(\lg n)$ time using only integer addition and multiplication.
 (Hint: Consider the matrix
 
 > $\displaystyle \left (
 \begin{matrix}
-0 & 1 \\
+0 & 1 \\\\
 1 & 1
 \end{matrix}
 \right )
@@ -91,17 +91,17 @@ $$
 
 ```python
 class Matrix:
-    def __init__(self, data):
+    def \_\_init\_\_(self, data):
         self.data = data
 
-    def __mul__(self, x):
+    def \_\_mul\_\_(self, x):
         a = self.data
         b = x.data
         c = [[0, 0], [0, 0]]
         for i in xrange(2):
             for j in xrange(2):
                 for k in xrange(2):
-                    c[i][j] += a[i][k] * b[k][j]
+                    c[i][j] += a[i][k] \* b[k][j]
         return Matrix(c)
 
 
@@ -116,14 +116,14 @@ def fib(n):
     n -= 1
     while (1 << i) <= n:
         if (n & (1 << i)) > 0:
-            r *= m
-        m *= m
+            r \*= m
+        m \*= m
         i += 1
     return r.data[0][0]
 ```
 
 
-> __*d*__. Assume now that adding two $\beta$-bit numbers takes $\Theta(\beta)$ time and that multiplying two $\beta$-bit numbers takes $\Theta(\beta^2)$ time. What is the running time of these three methods under this more reasonable cost measure for the elementary arithmetic operations?
+> \_\_\*d\*\_\_. Assume now that adding two $\beta$-bit numbers takes $\Theta(\beta)$ time and that multiplying two $\beta$-bit numbers takes $\Theta(\beta^2)$ time. What is the running time of these three methods under this more reasonable cost measure for the elementary arithmetic operations?
 
 1. $\Theta(2^{2^\beta})$.
 2. $\Theta(2^\beta)$.
@@ -131,17 +131,17 @@ def fib(n):
 
 ### 31-4 Quadratic residues
 
-> Let $p$ be an odd prime. A number $a \in Z_p^*$ is a __*quadratic residue*__ if the equation $x^2 = a ~(\text{mod}~p)$ has a solution for the unknown $x$.
+> Let $p$ be an odd prime. A number $a \in Z_p^*$ is a \_\_\*quadratic residue\*\_\_ if the equation $x^2 = a ~(\text{mod}~p)$ has a solution for the unknown $x$.
 
-> __*a*__. Show that there are exactly $(p - 1) / 2$ quadratic residues, modulo $p$.
+> \_\_\*a\*\_\_. Show that there are exactly $(p - 1) / 2$ quadratic residues, modulo $p$.
 
 
-> __*b*__. If $p$ is prime, we define the __*Legendre symbol*__ $(\frac{a}{p})$, for $a \in \mathbb{Z}_p^*$, to be $1$ if $a$ is a quadratic residue modulo $p$ and $-1$ otherwise. Prove that if $a \in \mathbb{Z}_p^*$, then
+> \_\_\*b\*\_\_. If $p$ is prime, we define the \_\_\*Legendre symbol\*\_\_ $(\frac{a}{p})$, for $a \in \mathbb{Z}_p^*$, to be $1$ if $a$ is a quadratic residue modulo $p$ and $-1$ otherwise. Prove that if $a \in \mathbb{Z}_p^*$, then
 
 > $\displaystyle \left ( \frac{a}{p} \right ) \equiv a^{(p - 1) / 2} ~(\text{mod}~ p)$.
 
 > Give an efficient algorithm that determines whether a given number $a$ is a quadratic residue modulo $p$. Analyze the efficiency of your algorithm.
 
-> __*c*__. Prove that if $p$ is a prime of the form $4k + 3$ and $a$ is a quadratic residue in $\mathbb{Z}_b^*$, then $a^{k+1} ~\text{mod}~ p$ is a square root of $a$, modulo $p$. How much time is required to find the square root of a quadratic residue $a$ modulo $p$?
+> \_\_\*c\*\_\_. Prove that if $p$ is a prime of the form $4k + 3$ and $a$ is a quadratic residue in $\mathbb{Z}_b^*$, then $a^{k+1} ~\text{mod}~ p$ is a square root of $a$, modulo $p$. How much time is required to find the square root of a quadratic residue $a$ modulo $p$?
 
-> __*d*__. Describe an efficient randomized algorithm for finding a nonquadratic residue, modulo an arbitrary prime $p$, that is, a member of $\mathbb{Z}_p^*$ that is not a quadratic residue. How many arithmetic operations does your algorithm require on average?
+> \_\_\*d\*\_\_. Describe an efficient randomized algorithm for finding a nonquadratic residue, modulo an arbitrary prime $p$, that is, a member of $\mathbb{Z}_p^*$ that is not a quadratic residue. How many arithmetic operations does your algorithm require on average?

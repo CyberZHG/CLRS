@@ -40,7 +40,7 @@ $ababbabbababbababbabb$ over the alphabet $\sigma = \{a, b\}$.
 
 ### 32.3-3
 
-> We call a pattern $P$ __*nonoverlappable*__ if $P_k \sqsupset P_q$ implies $k = 0$ or $k = q$. Describe the state-transition diagram of the string-matching automaton for a nonoverlappable pattern.
+> We call a pattern $P$ __*nonoverlappable*__ if $P\_k \sqsupset P\_q$ implies $k = 0$ or $k = q$. Describe the state-transition diagram of the string-matching automaton for a nonoverlappable pattern.
 
 $\delta(q, a) \in \{q+1, 0\}$.
 

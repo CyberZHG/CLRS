@@ -63,11 +63,11 @@ For average case insertion sort is better.
 > The following code fragment implements Horner’s rule for evaluating a polynomial
 >
 > $\begin{matrix}
-P(x) & = & \sum_{k=0}^n a_k x^k \\ 
- & = & a_0 + x(a_1 + x(a_x + \cdots + x(a_{n-1} + xa_n)\cdots))
+P(x) & = & \sum\_{k=0}^n a\_k x^k \\\\ 
+ & = & a\_0 + x(a\_1 + x(a\_x + \cdots + x(a\_{n-1} + xa\_n)\cdots))
 \end{matrix}$
 >
-> given the coefficients $a_0, a_1, \cdots, a_n$ and a value for $x$:
+> given the coefficients $a\_0, a\_1, \cdots, a\_n$ and a value for $x$:
 >
 > ```
 > 1 y = 0
@@ -95,18 +95,18 @@ $\Theta(n^2)$
 > 
 > At the start of each iteration of the for loop of lines 2–3,
 > 
-> $y=\sum_{k=0}^{n-(i+1)} a_{k+i+1}x^k$.
+> $y=\sum\_{k=0}^{n-(i+1)} a\_{k+i+1}x^k$.
 >
-> Interpret a summation with no terms as equaling 0. Following the structure of the loop invariant proof presented in this chapter, use this loop invariant to show that, at termination, $y=\sum_{k=0}^n a_k x^k$.
+> Interpret a summation with no terms as equaling 0. Following the structure of the loop invariant proof presented in this chapter, use this loop invariant to show that, at termination, $y=\sum\_{k=0}^n a\_k x^k$.
 
 * Initialization: $y=0$
-* Maintenance: $y=a_i+x\sum_{k=0}^{n-(i+1)} a_{k+i+1}x^k$ $=a_ix^0+\sum_{k=0}^{n-(i+1)} a_{k+i+1}x^{k+1}$ $=a_ix^0+\sum_{k=1}^{n-i} a_{k+i}x^{k}$ $=\sum_{k=0}^{n-i} a_{k+i}x^{k}$
-* Termination: $y=\sum_{k=0}^{n} a_{k}x^k$
+* Maintenance: $y=a\_i+x\sum\_{k=0}^{n-(i+1)} a\_{k+i+1}x^k$ $=a\_ix^0+\sum\_{k=0}^{n-(i+1)} a\_{k+i+1}x^{k+1}$ $=a\_ix^0+\sum\_{k=1}^{n-i} a\_{k+i}x^{k}$ $=\sum\_{k=0}^{n-i} a\_{k+i}x^{k}$
+* Termination: $y=\sum\_{k=0}^{n} a\_{k}x^k$
 
 > __*d*__. Conclude by arguing that the given code fragment correctly evaluates a polynomial characterized by the coefficients
-$a_0, a_1, \cdots, a_n$.
+$a\_0, a\_1, \cdots, a\_n$.
 
-$\sum y_i = P(x)$
+$\sum y\_i = P(x)$
 
 ### 2-4 Inversions
 

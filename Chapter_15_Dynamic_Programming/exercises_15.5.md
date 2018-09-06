@@ -22,17 +22,17 @@ CONSTRUCT-OPTIMAL-BST(root, i, j, last=0)
 
 > Determine the cost and structure of an optimal binary search tree for a set of $n = 7$ keys with the following probabilities
 
-$k_4$ is the root
-$k_2$ is the left child of $k_4$
-$k_1$ is the left child of $k_2$
-$d_0$ is the right child of $k_1$
-$d_1$ is the right child of $k_1$
-$k_3$ is the right child of $k_2$
-$d_2$ is the left child of $k_3$
-$d_3$ is the right child of $k_3$
-$k_5$ is the right child of $k_4$
-$d_4$ is the left child of $k_5$
-$d_5$ is the right child of $k_5$
+$k\_4$ is the root
+$k\_2$ is the left child of $k\_4$
+$k\_1$ is the left child of $k\_2$
+$d\_0$ is the right child of $k\_1$
+$d\_1$ is the right child of $k\_1$
+$k\_3$ is the right child of $k\_2$
+$d\_2$ is the left child of $k\_3$
+$d\_3$ is the right child of $k\_3$
+$k\_5$ is the right child of $k\_4$
+$d\_4$ is the left child of $k\_5$
+$d\_5$ is the right child of $k\_5$
 
 ### 15.5-3
 

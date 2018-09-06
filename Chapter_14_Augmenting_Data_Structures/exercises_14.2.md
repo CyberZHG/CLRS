@@ -20,7 +20,7 @@ $x.h = max(x.left.h, y.left.h) + 1$
 
 ### 14.2-3 $\star$
 
-> Let $\otimes$ be an associative binary operator, and let $a$ be an attribute maintained in each node of a red-black tree. Suppose that we want to include in each node $x$ an additional attribute $f$ such that $x.f = x_1.a \otimes x_2.a \otimes \cdots \otimes x_m.a$, where $x_1, x_2, \dots ,x_m$ is the inorder listing of nodes in the subtree rooted at $x$. Show how to update the $f$ attributes in $O(1)$ time after a rotation. Modify your argument slightly to apply it to the size attributes in order-statistic trees.
+> Let $\otimes$ be an associative binary operator, and let $a$ be an attribute maintained in each node of a red-black tree. Suppose that we want to include in each node $x$ an additional attribute $f$ such that $x.f = x\_1.a \otimes x\_2.a \otimes \cdots \otimes x\_m.a$, where $x\_1, x\_2, \dots ,x\_m$ is the inorder listing of nodes in the subtree rooted at $x$. Show how to update the $f$ attributes in $O(1)$ time after a rotation. Modify your argument slightly to apply it to the size attributes in order-statistic trees.
 
 $x.f = x.left.f \otimes x.a \otimes x.right.f$
 

@@ -30,13 +30,13 @@ $7 \rightarrow 3$
 * Adjacency-matrix representation
 
 $\left \{ \begin{matrix}
-0 & 1 & 1 & 0 & 0 & 0 & 0 \\
-1 & 0 & 0 & 1 & 1 & 0 & 0 \\
-1 & 0 & 0 & 0 & 0 & 1 & 1 \\
-0 & 1 & 0 & 0 & 0 & 0 & 0 \\
-0 & 1 & 0 & 0 & 0 & 0 & 0 \\
-0 & 0 & 1 & 0 & 0 & 0 & 0 \\
-0 & 0 & 1 & 0 & 0 & 0 & 0 \\
+0 & 1 & 1 & 0 & 0 & 0 & 0 \\\\
+1 & 0 & 0 & 1 & 1 & 0 & 0 \\\\
+1 & 0 & 0 & 0 & 0 & 1 & 1 \\\\
+0 & 1 & 0 & 0 & 0 & 0 & 0 \\\\
+0 & 1 & 0 & 0 & 0 & 0 & 0 \\\\
+0 & 0 & 1 & 0 & 0 & 0 & 0 \\\\
+0 & 0 & 1 & 0 & 0 & 0 & 0 \\\\
 \end{matrix} \right \}$
 
 ### 22.1-3
@@ -92,24 +92,24 @@ $O(V^3)$.
 
 > Most graph algorithms that take an adjacency-matrix representation as input require time $\Omega(V^2)$, but there are some exceptions. Show how to determine whether a directed graph $G$ contains a __*universal sink*__ - a vertex with in-degree $|V| - 1$ and out-degree 0 - in time $O(V)$, given an adjacency matrix for $G$.
 
-Starting from $a_{11}$, if $a_{ij} = 0$ then $j = j + 1$, otherwise $i = i + 1$.
+Starting from $a\_{11}$, if $a\_{ij} = 0$ then $j = j + 1$, otherwise $i = i + 1$.
 
 ### 22.1-7
 
-> The __*incidence matrix*__ of a directed graph $G = (V, E)$ with no self-loops is a $|V| \times |E|$ matrix $B = (b_{ij})$ such that
+> The __*incidence matrix*__ of a directed graph $G = (V, E)$ with no self-loops is a $|V| \times |E|$ matrix $B = (b\_{ij})$ such that
 
 > $$
-b_{ij} = \left \{
+b\_{ij} = \left \{
 \begin{array}{rl}
--1 & \text{if edge}~j~\text{leaves vertex}~i, \\
-1 & \text{if edge}~j~\text{enters vertex}~i, \\
-0 & \text{otherwise}. \\
+-1 & \text{if edge}~j~\text{leaves vertex}~i, \\\\
+1 & \text{if edge}~j~\text{enters vertex}~i, \\\\
+0 & \text{otherwise}. \\\\
 \end{array}
 \right .
 $$
 > Describe what the entries of the matrix product $BB^T$ represent, where $B^T$ is the transpose of $B$.
 
-$(BB^T)_{ij} = \sum_{k \in E} b_{ik} \cdot b_{jk}$, the result of $b_{ik} \cdot b_{jk}$ could be 0, 1 and -1. 0 indicates $i$ and $j$ are not connected by edge $k$; 1 indicates $i = j$; -1 indicates there is an edge from $i$ to $j$ or from $j$ to $i$. Therefore, if $i=j$, $(BB^T)_{ij}$ is the degree of vertex $i$; if $i \ne j$, $(BB^T)_{ij}$ is the negative of number of edges connecting $i$ and $j$.
+$(BB^T)\_{ij} = \sum\_{k \in E} b\_{ik} \cdot b\_{jk}$, the result of $b\_{ik} \cdot b\_{jk}$ could be 0, 1 and -1. 0 indicates $i$ and $j$ are not connected by edge $k$; 1 indicates $i = j$; -1 indicates there is an edge from $i$ to $j$ or from $j$ to $i$. Therefore, if $i=j$, $(BB^T)\_{ij}$ is the degree of vertex $i$; if $i \ne j$, $(BB^T)\_{ij}$ is the negative of number of edges connecting $i$ and $j$.
 
 ### 22.1-8
 

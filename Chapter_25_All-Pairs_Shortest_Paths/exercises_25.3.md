@@ -18,9 +18,9 @@ $h(u) = h(v) = 0$, $w = \hat{w}$.
 
 ## 25.3-4
 
-> Professor Greenstreet claims that there is a simpler way to reweight edges than the method used in Johnson's algorithm. Letting $w^* = \min_{(u, v) \in E} \{ w(u, v) \}$, just define $\hat{w}(u, v) = w(u, v) - w^*$ for all edges $(u, v) \in E$. What is wrong with the professor's method of reweighting?
+> Professor Greenstreet claims that there is a simpler way to reweight edges than the method used in Johnson's algorithm. Letting $w^\* = \min\_{(u, v) \in E} \{ w(u, v) \}$, just define $\hat{w}(u, v) = w(u, v) - w^\*$ for all edges $(u, v) \in E$. What is wrong with the professor's method of reweighting?
 
-$\hat{w}(p) = w(p) - (k-1)w^*$.
+$\hat{w}(p) = w(p) - (k-1)w^\*$.
 
 ![](./img/25.3-4_1.png)
 

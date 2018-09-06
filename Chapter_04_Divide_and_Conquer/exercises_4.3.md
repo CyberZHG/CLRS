@@ -8,9 +8,9 @@ Suppose $T(n) \le n^2$
 
 $$
 \begin{array}{lll}
-T(n) & \le & \displaystyle (n-1)^2 + n  \\
-     &   = & \displaystyle n^2 - 2n + 1 + n \\
-     &   = & \displaystyle n^2 - n + 1 \\
+T(n) & \le & \displaystyle (n-1)^2 + n  \\\\
+     &   = & \displaystyle n^2 - 2n + 1 + n \\\\
+     &   = & \displaystyle n^2 - n + 1 \\\\
      & \le & \displaystyle n^2
 \end{array}
 $$
@@ -23,10 +23,10 @@ Suppose $T(n) \le c\lg(n-1)$
 
 $$
 \begin{array}{llll}
-T(n) & \le & \displaystyle c\lg(\left \lceil n/2 \right \rceil - a) + 1 & \\
-     & \le & \displaystyle c\lg(\frac{n+1}{2} - a) + 1 & \\
-     &  =  & \displaystyle c\lg(n + 1 - 2a) - c + 1 & \\
-     & \le & \displaystyle c\lg(n - a) - c + 1 & \displaystyle (a \ge \frac{1}{3}) \\
+T(n) & \le & \displaystyle c\lg(\left \lceil n/2 \right \rceil - a) + 1 & \\\\
+     & \le & \displaystyle c\lg(\frac{n+1}{2} - a) + 1 & \\\\
+     &  =  & \displaystyle c\lg(n + 1 - 2a) - c + 1 & \\\\
+     & \le & \displaystyle c\lg(n - a) - c + 1 & \displaystyle (a \ge \frac{1}{3}) \\\\
      & \le & \displaystyle c\lg(n - a) & \displaystyle (c \ge 1)
 \end{array}
 $$
@@ -39,8 +39,8 @@ Suppose $T(n) \ge cn \lg n$
 
 $$
 \begin{array}{llll}
-T(n) & \ge & \displaystyle 2c(n/2)\lg(n/2)+n & \\
-     &  =  & \displaystyle cn\lg n - cn + n & \\
+T(n) & \ge & \displaystyle 2c(n/2)\lg(n/2)+n & \\\\
+     &  =  & \displaystyle cn\lg n - cn + n & \\\\
      & \ge & \displaystyle cn\lg n & (c \le 1)
 \end{array}
 $$
@@ -53,7 +53,7 @@ Suppose $T(n) \le cn \lg n + n$
 
 $$
 \begin{array}{llll}
-T(n) & \le & \displaystyle cn\lg n - 2n + n & \\
+T(n) & \le & \displaystyle cn\lg n - 2n + n & \\\\
      & \le & \displaystyle cn\lg n + n &
 \end{array}
 $$
@@ -78,27 +78,27 @@ Suppose $T(n) \le c(n-a)\lg(n-a)$
 
 $$
 \begin{array}{llll}
-T(n) & \le & \displaystyle c(n+34-2a)\lg(n+34-2a) & \\
+T(n) & \le & \displaystyle c(n+34-2a)\lg(n+34-2a) & \\\\
      & \le & \displaystyle c(n-a)\lg(n-a) & (a \ge 34)
 \end{array}
 $$
 
 ### 4.3-7
 
-> Using the master method in Section 4.5, you can show that the solution to the recurrence $T(n)=4T(n/3)+N$ is $T(n)=\Theta(n^{\log_34})$. Show that a substitution proof with the assumption $T(n) \le n^{\log_34}$ fails. Then show how to subtract off a lower-order term to make a substitution proof work.
+> Using the master method in Section 4.5, you can show that the solution to the recurrence $T(n)=4T(n/3)+N$ is $T(n)=\Theta(n^{\log\_34})$. Show that a substitution proof with the assumption $T(n) \le n^{\log\_34}$ fails. Then show how to subtract off a lower-order term to make a substitution proof work.
 
-Suppose $T(n) \le cn^{\log_34}$
+Suppose $T(n) \le cn^{\log\_34}$
 
 $$
-T(n) \le cn^{\log_34}+n
+T(n) \le cn^{\log\_34}+n
 $$
 
-Suppose $T(n) \le cn^{\log_34} - an$
+Suppose $T(n) \le cn^{\log\_34} - an$
 
 $$
 \begin{array}{llll}
-T(n) & \le & \displaystyle cn^{\log_34} + (1 - \frac{4}{3})n & \\
-     & \le & \displaystyle cn^{\log_34} - an & (a \ge 3)
+T(n) & \le & \displaystyle cn^{\log\_34} + (1 - \frac{4}{3})n & \\\\
+     & \le & \displaystyle cn^{\log\_34} - an & (a \ge 3)
 \end{array}
 $$
 
@@ -116,7 +116,7 @@ Suppose $T(n) \le cn^2 - an$
 
 $$
 \begin{array}{llll}
-T(n) & \le & cn^2 + (1 - 2a)n & \\
+T(n) & \le & cn^2 + (1 - 2a)n & \\\\
      & \le & cn^2 - an & (a \ge \frac{1}{3})
 \end{array}
 $$

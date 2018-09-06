@@ -38,7 +38,7 @@ $w(u, v) = \lg r(u, v)$.
 
 > Let $G = (V, E)$ be a weighted, directed graph with positive weight function $w: E \rightarrow \{ 1, 2, \dots, W \}$ for some positive integer $W$, and assume that no two vertices have the same shortest-path weights from source vertex $s$. Now suppose that we define an unweighted, directed graph $G' = (V \cup V', E')$ by replacing each edge $(u, v) \in E$ with $w(u, v)$ unit-weight edges in series. How many vertices does $G'$ have? Now suppose that we run a breadth-first search on $G'$. Show that the order in which the breadth-first search of $G'$ colors vertices in $V$ black is the same as the order in which Dijkstra's algorithm extracts the vertices of $V$ from the priority queue when it runs on $G$.
 
-$V + \sum_{(u, v) \in E} w(u, v) - E$.
+$V + \sum\_{(u, v) \in E} w(u, v) - E$.
 
 ### 24.3-8
 

@@ -28,9 +28,9 @@ $kn / 2 < 3d - 1 < 3d < 3n$, then $k < 6$, then we can solve $3d - 1 = n - p - n
 
 > Prove that RSA is multiplicative in the sense that
 > 
-> $P_A(M_1) P_A(M_2) \equiv P_A(M_1, M_2) ~(\text{mod}~n)$.
+> $P\_A(M\_1) P\_A(M\_2) \equiv P\_A(M\_1, M\_2) ~(\text{mod}~n)$.
 > 
-> Use this fact to prove that if an adversary had a procedure that could efficiently decrypt $1$ percent of messages from $\mathbb{Z}_n$ encrypted with $P_A$, then he could employ a probabilistic algorithm to decrypt every message encrypted with $P_A$ with high probability.
+> Use this fact to prove that if an adversary had a procedure that could efficiently decrypt $1$ percent of messages from $\mathbb{Z}\_n$ encrypted with $P\_A$, then he could employ a probabilistic algorithm to decrypt every message encrypted with $P\_A$ with high probability.
 
 Multiplicative:
 $e$ is relatively prime to $n$.

@@ -37,7 +37,7 @@ if v.d > u.d + w(u, v)
 
 ### 24.1-5 $\star$
 
-> Let $G = (V, E)$ be a weighted, directed graph with weight function $w : E \rightarrow \mathbb{R}$. Give an $O(VE)$-time algorithm to find, for each vertex $v \in V$, the value $\delta^*(v)=\min_{u \in V} \{ \delta(u, v) \}$.
+> Let $G = (V, E)$ be a weighted, directed graph with weight function $w : E \rightarrow \mathbb{R}$. Give an $O(VE)$-time algorithm to find, for each vertex $v \in V$, the value $\delta^\*(v)=\min\_{u \in V} \{ \delta(u, v) \}$.
 
 ```
 RELAX(u, v, w)

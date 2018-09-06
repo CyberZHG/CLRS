@@ -45,24 +45,24 @@ $$
 
 ### 8.4-4 $\star$
 
-> We are given $n$ points in the unit circle, $p_i = (xi, yi)$, such that $0 < x_i^2 + y_i^2 \le 1$ for $i = 1,2, \dots ,n$. Suppose that the points are uniformly distributed; that is, the probability of finding a point in any region of the circle is proportional to the area of that region. Design an algorithm with an average-case running time of $\Theta(n)$ to sort the $n$ points by their distances $d_i = \sqrt{x_i^2+y_i^2}$ from the origin. 
+> We are given $n$ points in the unit circle, $p\_i = (xi, yi)$, such that $0 < x\_i^2 + y\_i^2 \le 1$ for $i = 1,2, \dots ,n$. Suppose that the points are uniformly distributed; that is, the probability of finding a point in any region of the circle is proportional to the area of that region. Design an algorithm with an average-case running time of $\Theta(n)$ to sort the $n$ points by their distances $d\_i = \sqrt{x\_i^2+y\_i^2}$ from the origin. 
 
 Bucket sort by radius, 
 
 $$
-\pi r_i^2 = \frac{i}{10} \cdot \pi 1^2
+\pi r\_i^2 = \frac{i}{10} \cdot \pi 1^2
 $$
 
 $$
-r_i = \sqrt{\frac{i}{10}}
+r\_i = \sqrt{\frac{i}{10}}
 $$
 
 ### 8.4-5 $\star$
 
-> A __*probability distribution function*__ $P(x)$ for a random variable $X$ is defined by $P(x) = \text{Pr}\{X \le x\}$. Suppose that we draw a list of $n$ random variables $X_1,X_2, \dots ,X_n$ from a continuous probability distribution function $P$ that is computable in $O(1)$ time. Give an algorithm that sorts these numbers in linear average-case time.
+> A __*probability distribution function*__ $P(x)$ for a random variable $X$ is defined by $P(x) = \text{Pr}\{X \le x\}$. Suppose that we draw a list of $n$ random variables $X\_1,X\_2, \dots ,X\_n$ from a continuous probability distribution function $P$ that is computable in $O(1)$ time. Give an algorithm that sorts these numbers in linear average-case time.
 
-Bucket sort by $p_i$,
+Bucket sort by $p\_i$,
 
 $$
-P(p_i) = \frac{i}{10}
+P(p\_i) = \frac{i}{10}
 $$

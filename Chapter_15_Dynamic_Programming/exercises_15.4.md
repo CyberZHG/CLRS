@@ -8,7 +8,7 @@ $\langle 1, 0, 0, 1, 1, 0 \rangle$.
 
 ### 15.4-2
 
-> Give pseudocode to reconstruct an LCS from the completed $c$ table and the original sequences $X = \langle x_1, x_2, \dots, x_m \rangle$ and $Y = \langle y_1, y_2, \dots, y_n\rangle$ in $O(m + n)$ time, without using the $b$ table.
+> Give pseudocode to reconstruct an LCS from the completed $c$ table and the original sequences $X = \langle x\_1, x\_2, \dots, x\_m \rangle$ and $Y = \langle y\_1, y\_2, \dots, y\_n\rangle$ in $O(m + n)$ time, without using the $b$ table.
 
 ```
 PRINT-LCS(c, X, Y, i, j)

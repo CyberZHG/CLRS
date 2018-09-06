@@ -2,7 +2,7 @@
 
 ### 16.4-1
 
-> Show that $(S, I_k)$ is a matroid, where $S$ is any finite set and $I_k$ is the set of all subsets of $S$ of size at most $k$, where $k \le |S|$.
+> Show that $(S, I\_k)$ is a matroid, where $S$ is any finite set and $I\_k$ is the set of all subsets of $S$ of size at most $k$, where $k \le |S|$.
 
 ### 16.4-2 $\star$
 
@@ -18,7 +18,7 @@
 
 ### 16.4-4 $\star$
 
-> Let $S$ be a finite set and let $S_1, S_2, \dots, S_k$ be a partition of $S$ into nonempty disjoint subsets. Define the structure $(S, I)$ by the condition that $I = \{ A : | A \cap S_i | \le 1$ for $i = 1, 2, \dots, k \}$. Show that $(S, I)$ is a matroid. That is, the set of all sets $A$ that contain at most one member of each subset in the partition determines the independent sets of a matroid.
+> Let $S$ be a finite set and let $S\_1, S\_2, \dots, S\_k$ be a partition of $S$ into nonempty disjoint subsets. Define the structure $(S, I)$ by the condition that $I = \{ A : | A \cap S\_i | \le 1$ for $i = 1, 2, \dots, k \}$. Show that $(S, I)$ is a matroid. That is, the set of all sets $A$ that contain at most one member of each subset in the partition determines the independent sets of a matroid.
 
 ### 16.4-5
 

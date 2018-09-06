@@ -4,7 +4,7 @@
 
 > Show that in the recurrence 
 
-> $\displaystyle T(n) = \max_{0 \le q \le n-1}(T(q)+T(n-q-1)) + \Theta(n)$,
+> $\displaystyle T(n) = \max\_{0 \le q \le n-1}(T(q)+T(n-q-1)) + \Theta(n)$,
 
 > $T(n) = \Omega(n^2)$.
 
@@ -12,10 +12,10 @@ Suppose $T(n) \ge cn^2$,
 
 $$
 \begin{array}{rlll}
-T(n) &\ge& \displaystyle \max_{0 \le q \le n-1}(cq^2+c(n-q-1)^2) + dn \\
-&\ge&  c(n-1)^2+dn & \displaystyle \left ( q=\frac{n-1}{2} \right ) \\
-&=& cn^2 +(d-2c)n+c & \displaystyle \left (d>2c\right ) \\
-&\ge& cn^2\\
+T(n) &\ge& \displaystyle \max\_{0 \le q \le n-1}(cq^2+c(n-q-1)^2) + dn \\\\
+&\ge&  c(n-1)^2+dn & \displaystyle \left ( q=\frac{n-1}{2} \right ) \\\\
+&=& cn^2 +(d-2c)n+c & \displaystyle \left (d>2c\right ) \\\\
+&\ge& cn^2\\\\
 &=& \Omega(n^2)
 \end{array}
 $$
@@ -38,10 +38,10 @@ Based on the first order derivation on $q$, we know the minimum is achieved when
 
 $$
 \begin{array}{rll}
-\text{E}[X] &=& \displaystyle \sum_{i=1}^{n-1} \sum_{j=i+1}^n \frac{2}{j-i+1} \\
-&=& \displaystyle \sum_{i=1}^{n-1} \sum_{k=1}^{n-i} \frac{2}{k+1} \\
-&>& \displaystyle \sum_{i=1}^{n-1} \sum_{k=1}^n \frac{1}{k} \\
-&=& \displaystyle \sum_{i=1}^{n-1} \Omega(\lg n) \\
+\text{E}[X] &=& \displaystyle \sum\_{i=1}^{n-1} \sum\_{j=i+1}^n \frac{2}{j-i+1} \\\\
+&=& \displaystyle \sum\_{i=1}^{n-1} \sum\_{k=1}^{n-i} \frac{2}{k+1} \\\\
+&>& \displaystyle \sum\_{i=1}^{n-1} \sum\_{k=1}^n \frac{1}{k} \\\\
+&=& \displaystyle \sum\_{i=1}^{n-1} \Omega(\lg n) \\\\
 &=& n\Omega \lg n
 \end{array}
 $$

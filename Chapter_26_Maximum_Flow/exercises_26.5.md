@@ -2,12 +2,12 @@
 
 ### 26.5-1
 
-> Illustrate the execution of RELABEL-TO-FRONT in the manner of Figure 26.10 for the flow network in Figure 26.1(a). Assume that the initial ordering of vertices in $L$ is $\langle v_1, v_2, v_3, v_4 \rangle$ and that the neighbor lists are
+> Illustrate the execution of RELABEL-TO-FRONT in the manner of Figure 26.10 for the flow network in Figure 26.1(a). Assume that the initial ordering of vertices in $L$ is $\langle v\_1, v\_2, v\_3, v\_4 \rangle$ and that the neighbor lists are
 > 
-> $v_1.N = \langle s, v_2, v_3 \rangle$,
-> $v_2.N = \langle s, v_1, v_3, v_4 \rangle$,
-> $v_3.N = \langle v_1, v_2, v_4, t \rangle$,
-> $v_4.N = \langle v_2, v_3, t \rangle$,
+> $v\_1.N = \langle s, v\_2, v\_3 \rangle$,
+> $v\_2.N = \langle s, v\_1, v\_3, v\_4 \rangle$,
+> $v\_3.N = \langle v\_1, v\_2, v\_4, t \rangle$,
+> $v\_4.N = \langle v\_2, v\_3, t \rangle$,
 
 ### 26.5-2 $\star$
 

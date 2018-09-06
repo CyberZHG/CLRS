@@ -72,6 +72,6 @@ Based on Exercise 14.2-1, we can maintain SUCCESSOR in $O(1)$ time, each time af
 
 > VLSI databases commonly represent an integrated circuit as a list of rectangles. Assume that each rectangle is rectilinearly oriented (sides parallel to the $x$- and $y$-axes), so that we represent a rectangle by its minimum and maximum $x$ and $y$-coordinates. Give an $O(n \lg n)$-time algorithm to decide whether or not a set of $n$ rectangles so represented contains two rectangles that overlap. Your algorithm need not report all intersecting pairs, but it must report that an overlap exists if one rectangle entirely covers another, even if the boundary lines do not intersect.
 
-Suppose we represent a rectangle by $(x_{min}, x_{max}, y_{min}, y_{max})$.
+Suppose we represent a rectangle by $(x\_{min}, x\_{max}, y\_{min}, y\_{max})$.
 
-Sort the $x_{min}$s and $x_{max}$s in ascending order. From left to right, if we meet a $x_{min}$, before we add $(y_{min}, y_{max})$ to the interval tree, if the interval $(y_{min}, y_{max})$ is overlapped with some node in the interval tree, then there is an overlap of rectangles. And when we meet a $x_{max}$, we remove $(y_{min}, y_{max})$ from the interval tree.
+Sort the $x\_{min}$s and $x\_{max}$s in ascending order. From left to right, if we meet a $x\_{min}$, before we add $(y\_{min}, y\_{max})$ to the interval tree, if the interval $(y\_{min}, y\_{max})$ is overlapped with some node in the interval tree, then there is an overlap of rectangles. And when we meet a $x\_{max}$, we remove $(y\_{min}, y\_{max})$ from the interval tree.

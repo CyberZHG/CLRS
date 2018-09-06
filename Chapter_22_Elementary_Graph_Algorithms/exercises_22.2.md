@@ -38,7 +38,7 @@ $\delta$
 
 ### 22.2-6
 
-> Give an example of a directed graph $G = (V, E)$, a source vertex $s \in V$, and a set of tree edges $E_\pi \subseteq E$ such that for each vertex $v \in V$, the unique simple path in the graph $(V, E_\pi)$ from $s$ to $v$ is a shortest path in $G$, yet the set of edges $E_\pi$ cannot be produced by running BFS on $G$, no matter how the vertices are ordered in each adjacency list.
+> Give an example of a directed graph $G = (V, E)$, a source vertex $s \in V$, and a set of tree edges $E\_\pi \subseteq E$ such that for each vertex $v \in V$, the unique simple path in the graph $(V, E\_\pi)$ from $s$ to $v$ is a shortest path in $G$, yet the set of edges $E\_\pi$ cannot be produced by running BFS on $G$, no matter how the vertices are ordered in each adjacency list.
 
 ![](./img/22.2-6_1.png)
 
@@ -50,7 +50,7 @@ BFS, the new reachable node should have a different type. If the new node alread
 
 ### 22.2-8 $\star$
 
-> The __*diameter*__ of a tree $T = (V, E)$ is defined as $\max_{u,v \in V}\delta(u,v)$, that is, the largest of all shortest-path distances in the tree. Give an efficient algorithm to compute the diameter of a tree, and analyze the running time of your algorithm.
+> The __*diameter*__ of a tree $T = (V, E)$ is defined as $\max\_{u,v \in V}\delta(u,v)$, that is, the largest of all shortest-path distances in the tree. Give an efficient algorithm to compute the diameter of a tree, and analyze the running time of your algorithm.
 
 BFS with a random node as the source, then BFS from the node with the largest $\delta$, the largest $\delta$ in the second BFS is the diameter of the tree, $O(V + E)$.
 

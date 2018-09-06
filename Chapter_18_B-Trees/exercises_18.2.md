@@ -196,14 +196,14 @@ At least $n - 2\lg(n+1)$.
 
 > Suppose that we were to implement B-TREE-SEARCH to use binary search rather than linear search within each node. Show that this change makes the CPU time required $O(\lg n)$, independently of how $t$ might be chosen as a function of $n$.
 
-$\log_{t} n \cdot \lg t = \lg n$
+$\log\_{t} n \cdot \lg t = \lg n$
 
 ### 18.2-7
 
 > Suppose that disk hardware allows us to choose the size of a disk page arbitrarily, but that the time it takes to read the disk page is $a + bt$, where $a$ and $b$ are specified constants and $t$ is the minimum degree for a B-tree using pages of the selected size. Describe how to choose $t$ so as to minimize (approximately) the B-tree search time. Suggest an optimal value of $t$ for the case in which $a = 5$ milliseconds and $b = 10$ microseconds.
 
 $$
-\min \log_t n \cdot (a + bt) = \min \frac{a + bt}{\ln t}
+\min \log\_t n \cdot (a + bt) = \min \frac{a + bt}{\ln t}
 $$
 
 $$
@@ -211,9 +211,9 @@ $$
 $$
 $$
 \begin{array}{rll}
-a + bt &=& bt \ln t \\
-5 + 10t &=& 10t \ln t \\
-t &=& \displaystyle e^{W \left ( \frac{1}{2e} \right ) + 1} \\
+a + bt &=& bt \ln t \\\\
+5 + 10t &=& 10t \ln t \\\\
+t &=& \displaystyle e^{W \left ( \frac{1}{2e} \right ) + 1} \\\\
 \end{array}
 $$
 

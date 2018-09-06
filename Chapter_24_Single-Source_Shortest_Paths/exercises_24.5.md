@@ -18,11 +18,11 @@
 
 ### 24.5-5
 
-> Let $G = (V, E)$ be a weighted, directed graph with no negative-weight edges. Let $s \in V$ be the source vertex, and suppose that we allow $v.\pi$ to be the predecessor of $v$ on any shortest path to $v$ from source $s$ if $v \in V - \{s\}$ is reachable from $s$, and NIL otherwise. Give an example of such a graph $G$ and an assignment of $\pi$ values that produces a cycle in $G_\pi$. (By Lemma 24.16, such an assignment cannot be produced by a sequence of relaxation steps.)
+> Let $G = (V, E)$ be a weighted, directed graph with no negative-weight edges. Let $s \in V$ be the source vertex, and suppose that we allow $v.\pi$ to be the predecessor of $v$ on any shortest path to $v$ from source $s$ if $v \in V - \{s\}$ is reachable from $s$, and NIL otherwise. Give an example of such a graph $G$ and an assignment of $\pi$ values that produces a cycle in $G\_\pi$. (By Lemma 24.16, such an assignment cannot be produced by a sequence of relaxation steps.)
 
 ### 24.5-6
 
-> Let $G = (V, E)$ be a weighted, directed graph with weight function $w: E \rightarrow \mathbb{R}$ and no negative-weight cycles. Let $s \in V$ be the source vertex, and let $G$ be initialized by INITIALIZE-SINGLE-SOURCE$(G, s)$. Prove that for every vertex $v \in V_\pi$, there exists a path from $s$ to $v$ in $G_\pi$ and that this property is maintained as an invariant over any sequence of relaxations.
+> Let $G = (V, E)$ be a weighted, directed graph with weight function $w: E \rightarrow \mathbb{R}$ and no negative-weight cycles. Let $s \in V$ be the source vertex, and let $G$ be initialized by INITIALIZE-SINGLE-SOURCE$(G, s)$. Prove that for every vertex $v \in V\_\pi$, there exists a path from $s$ to $v$ in $G\_\pi$ and that this property is maintained as an invariant over any sequence of relaxations.
 
 ### 24.5-7
 

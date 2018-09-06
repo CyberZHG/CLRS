@@ -17,13 +17,13 @@
 
 ### 22-2 Articulation points, bridges, and biconnected components
 
-> Let $G = (V, E)$ be a connected, undirected graph. An articulation point of $G$ is a vertex whose removal disconnects $G$. A bridge of $G$ is an edge whose removal disconnects $G$. A biconnected component of $G$ is a maximal set of edges such that any two edges in the set lie on a common simple cycle. Figure 22.10 illustrates these definitions. We can determine articulation points, bridges, and biconnected components using depth-first search. Let $G_\pi = (V, E_\pi)$ be a depth-first tree of $G$.
+> Let $G = (V, E)$ be a connected, undirected graph. An articulation point of $G$ is a vertex whose removal disconnects $G$. A bridge of $G$ is an edge whose removal disconnects $G$. A biconnected component of $G$ is a maximal set of edges such that any two edges in the set lie on a common simple cycle. Figure 22.10 illustrates these definitions. We can determine articulation points, bridges, and biconnected components using depth-first search. Let $G\_\pi = (V, E\_\pi)$ be a depth-first tree of $G$.
 
-> __*a*__. Prove that the root of $G_\pi$ is an articulation point of $G$ if and only if it has at least two children in $G_\pi$.
+> __*a*__. Prove that the root of $G\_\pi$ is an articulation point of $G$ if and only if it has at least two children in $G\_\pi$.
 
 At least two children => at least two components that are not connected.
 
-> __*b*__. Let $v$ be a nonroot vertex of $G_\pi$. Prove that $v$ is an articulation point of $G$ if and only if $v$ has a child $s$ such that there is no back edge from $s$ or any descendant of $s$ to a proper ancestor of $v$.
+> __*b*__. Let $v$ be a nonroot vertex of $G\_\pi$. Prove that $v$ is an articulation point of $G$ if and only if $v$ has a child $s$ such that there is no back edge from $s$ or any descendant of $s$ to a proper ancestor of $v$.
 
 Connect to ancestor => loop.
 
@@ -31,7 +31,7 @@ Connect to ancestor => loop.
 > 
 > $v.low = \min \left \{ 
 \begin{array}{l}
-v.d,\\
+v.d,\\\\
 w.d: (u, w) ~\text{is a back edge for some descendant}~u~\text{of}~v
 \end{array}
 \right .$.

@@ -12,7 +12,7 @@ $f(u, x) = f(x, v)$.
 
 Capacity constraint: for all $u, v \in V$, we require $0 \le f(u, v) \le c(u, v)$.
 
-Flow conservation: for all $u \in V - S - T$, we require $\sum_{v \in V} f(v, u) = \sum_{v \in V} f(u, v)$.
+Flow conservation: for all $u \in V - S - T$, we require $\sum\_{v \in V} f(v, u) = \sum\_{v \in V} f(u, v)$.
 
 ### 26.1-3
 
@@ -26,7 +26,7 @@ Cannot flow in or flow out.
 > 
 > $(\alpha f)(u, v) = \alpha \cdot f(u, v)$.
 > 
-> Prove that the flows in a network form a __*convex set*__. That is, show that if $f_1$ and $f_2$ are flows, then so is $\alpha f_1 + (1 - \alpha) f_2$ for all $\alpha$ in the range $0 \le \alpha \le 1$.
+> Prove that the flows in a network form a __*convex set*__. That is, show that if $f\_1$ and $f\_2$ are flows, then so is $\alpha f\_1 + (1 - \alpha) f\_2$ for all $\alpha$ in the range $0 \le \alpha \le 1$.
 
 ### 26.1-5
 
@@ -34,9 +34,9 @@ Cannot flow in or flow out.
 
 $$
 \begin{array}{ll}
-\max & \displaystyle \sum_{v \in V} f(s, v) - \sum_{v \in V} f(v, s) \\
-s.t. & 0 \le f(u, v) \le c(u, v) \\
-& \displaystyle \sum_{v \in V} f(v, u) - \sum_{v \in V} f(u, v) = 0
+\max & \displaystyle \sum\_{v \in V} f(s, v) - \sum\_{v \in V} f(v, s) \\\\
+s.t. & 0 \le f(u, v) \le c(u, v) \\\\
+& \displaystyle \sum\_{v \in V} f(v, u) - \sum\_{v \in V} f(u, v) = 0
 \end{array}
 $$
 

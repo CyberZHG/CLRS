@@ -2,7 +2,7 @@
 
 ### 26.4-1
 
-> Prove that, after the procedure INITIALIZE-PREFLOW$(G, S)$ terminates, we have $s.e \le -|f^*|$, where $f^*$ is a maximum flow for $G$.
+> Prove that, after the procedure INITIALIZE-PREFLOW$(G, S)$ terminates, we have $s.e \le -|f^\*|$, where $f^\*$ is a maximum flow for $G$.
 
 ### 26.4-2
 
@@ -34,11 +34,11 @@
 
 ### 26.4-8
 
-> Let $\delta_f(u, v)$ be the distance (number of edges) from $u$ to $v$ in the residual network $G_f$. Show that the GENERIC-PUSH-RELABEL procedure maintains the properties that $u.h < |V|$ implies $u.h \le \delta_f(u, t)$ and that $u.h \ge |V|$ implies $u.h - |V| \le \delta_f(u, s)$.
+> Let $\delta\_f(u, v)$ be the distance (number of edges) from $u$ to $v$ in the residual network $G\_f$. Show that the GENERIC-PUSH-RELABEL procedure maintains the properties that $u.h < |V|$ implies $u.h \le \delta\_f(u, t)$ and that $u.h \ge |V|$ implies $u.h - |V| \le \delta\_f(u, s)$.
 
 ### 26.4-9 $\star$
 
-> As in the previous exercise, let $\delta_f(u, v)$ be the distance from $u$ to $v$ in the residual network $G_f$. Show how to modify the generic push-relabel algorithm to maintain the property that $u.h < |V|$ implies $u.h = \delta_f(u, t)$ and that $u.h \ge |V|$ implies $u.h - |V| = \delta_f(u, s)$. The total time that your implementation dedicates to maintaining this property should be $O(VE)$.
+> As in the previous exercise, let $\delta\_f(u, v)$ be the distance from $u$ to $v$ in the residual network $G\_f$. Show how to modify the generic push-relabel algorithm to maintain the property that $u.h < |V|$ implies $u.h = \delta\_f(u, t)$ and that $u.h \ge |V|$ implies $u.h - |V| = \delta\_f(u, s)$. The total time that your implementation dedicates to maintaining this property should be $O(VE)$.
 
 ### 26.4-10
 

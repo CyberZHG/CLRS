@@ -2,35 +2,35 @@
 
 ### 17.3-1
 
-> Suppose we have a potential function $\Phi$ such that $\Phi(D_i) \ge \Phi(D_0)$ for all $i$, but $\Phi(D_0) \ne 0$. Show that there exists a potential fuction $\Phi'$ such that $\Phi'(D_0) = 0$, $\Phi'(D_i) \ge 0$ for all $i \ge 1$, and the amortized costs using $\Phi'$ are the same as the amortized costs using $\Phi$.
+> Suppose we have a potential function $\Phi$ such that $\Phi(D\_i) \ge \Phi(D\_0)$ for all $i$, but $\Phi(D\_0) \ne 0$. Show that there exists a potential fuction $\Phi'$ such that $\Phi'(D\_0) = 0$, $\Phi'(D\_i) \ge 0$ for all $i \ge 1$, and the amortized costs using $\Phi'$ are the same as the amortized costs using $\Phi$.
 
-$\Phi'(D_i) = \Phi(D_i) - \Phi(D_0)$
+$\Phi'(D\_i) = \Phi(D\_i) - \Phi(D\_0)$
 
 ### 17.3-2
 
 > Redo Exercise 17.1-3 using a potential method of analysis.
 
-$\Phi(D_i) = 2 \cdot 2 ^ {\lceil \lg i \rceil} - i$
+$\Phi(D\_i) = 2 \cdot 2 ^ {\lceil \lg i \rceil} - i$
 
 ### 17.3-3
 
 > Consider an ordinary binary min-heap data structure with $n$ elements supporting the instructions INSERT and EXTRACT-MIN in $O(\lg n)$ worst-case time. Give a potential function $\Phi$ such that the amortized cost of INSERT is $O(\lg n)$ and the amortized cost of EXTRACT-MIN is $O(1)$, and show that it works.
 
-$\Phi(D_i)=$ number of elements in the heap$\times \lg n$.
+$\Phi(D\_i)=$ number of elements in the heap$\times \lg n$.
 
-INSERT: $\Phi(D_i) = O(\lg n) + \lg n = O(\lg n)$.
+INSERT: $\Phi(D\_i) = O(\lg n) + \lg n = O(\lg n)$.
 
-EXTRACT-MIN: $\Phi(D_i) = O(\lg n) - \lg n = O(1)$.
+EXTRACT-MIN: $\Phi(D\_i) = O(\lg n) - \lg n = O(1)$.
 
 ### 17.3-4
 
-> What is the total cost of executing $n$ of the stack operations PUSH, POP, and MULTIPOP, assuming that the stack begins with $s_0$ objects and finishes with $s_n$ objects?
+> What is the total cost of executing $n$ of the stack operations PUSH, POP, and MULTIPOP, assuming that the stack begins with $s\_0$ objects and finishes with $s\_n$ objects?
 
 $$
 \begin{array}{rll}
-\displaystyle \sum_{i=1}^n c_i 
-&=& \displaystyle \sum_{i=1}^n \hat{c_i} - \Phi(D_n) + \Phi(D_0) \\
-&=& n - s_n + s_0
+\displaystyle \sum\_{i=1}^n c\_i 
+&=& \displaystyle \sum\_{i=1}^n \hat{c\_i} - \Phi(D\_n) + \Phi(D\_0) \\\\
+&=& n - s\_n + s\_0
 \end{array}
 $$
 ### 17.3-5
@@ -39,10 +39,10 @@ $$
 
 $$
 \begin{array}{rll}
-\displaystyle \sum_{i=1}^n c_i 
-&=& \displaystyle \sum_{i=1}^n \hat{c_i} - \Phi(D_n) + \Phi(D_0) \\
-&=& n - x + b \\
-&\le& n - x + n \\
+\displaystyle \sum\_{i=1}^n c\_i 
+&=& \displaystyle \sum\_{i=1}^n \hat{c\_i} - \Phi(D\_n) + \Phi(D\_0) \\\\
+&=& n - x + b \\\\
+&\le& n - x + n \\\\
 &=& O(n)
 \end{array}
 $$
@@ -50,7 +50,7 @@ $$
 
 > Show how to implement a queue with two ordinary stacks (Exercise 10.1-6) so that the amortized cost of each ENQUEUE and each DEQUEUE operation is $O(1)$.
 
-$\Phi(D_i) = $ number of elements in the first stack.
+$\Phi(D\_i) = $ number of elements in the first stack.
 
 ### 17.3-7
 

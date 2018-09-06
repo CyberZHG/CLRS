@@ -12,20 +12,20 @@ Compare the long character strings only when they have the same hash values.
 
 We should calculate
 
-$\sum_{i=0}^{r-1} c_i \cdot 128^i \mod m$
+$\sum\_{i=0}^{r-1} c\_i \cdot 128^i \mod m$
 
 It cannot be calculated with a constant number of words of storage because the sum may exceed 2^32 - 1. However, Equation 31.18 suggests
 
 $$
-\begin{align*}
-\sum_{i=0}^{r-1} c_i \cdot 128^i
- &\equiv \sum_{i=0}^{r-1} (c_i \cdot 128^i) \bmod m \pmod m \\
- &\equiv \sum_{i=0}^{r-1} (c_i \cdot 128^i \bmod m) \pmod m \\
- &\equiv \sum_{i=1}^{r-1} (c_i \cdot 128^i \bmod m) + c_1 \cdot 128 \bmod m+ c_0 \bmod m \pmod m \\
- &\equiv \sum_{i=1}^{r-1} ((c_i \cdot 128^{i-1} \bmod m) + c_1 \bmod m) \bmod m \cdot (128 \bmod m) \bmod m + c_0 \bmod m \pmod m \\
- &\equiv ... \\
- &\equiv (...(c_{r-1} \bmod m \cdot (128 \bmod m) \bmod m + c_{r-2} \bmod m) \bmod m \cdot ... \cdot (128 \bmod m) + c_1 \bmod m) \bmod m + c_0 \bmod m \pmod m
-\end{align*}
+\begin{align\*}
+\sum\_{i=0}^{r-1} c\_i \cdot 128^i
+ &\equiv \sum\_{i=0}^{r-1} (c\_i \cdot 128^i) \bmod m \pmod m \\\\
+ &\equiv \sum\_{i=0}^{r-1} (c\_i \cdot 128^i \bmod m) \pmod m \\\\
+ &\equiv \sum\_{i=1}^{r-1} (c\_i \cdot 128^i \bmod m) + c\_1 \cdot 128 \bmod m+ c\_0 \bmod m \pmod m \\\\
+ &\equiv \sum\_{i=1}^{r-1} ((c\_i \cdot 128^{i-1} \bmod m) + c\_1 \bmod m) \bmod m \cdot (128 \bmod m) \bmod m + c\_0 \bmod m \pmod m \\\\
+ &\equiv ... \\\\
+ &\equiv (...(c\_{r-1} \bmod m \cdot (128 \bmod m) \bmod m + c\_{r-2} \bmod m) \bmod m \cdot ... \cdot (128 \bmod m) + c\_1 \bmod m) \bmod m + c\_0 \bmod m \pmod m
+\end{align\*}
 $$
 
 It can be calculated with a loop.
@@ -54,7 +54,7 @@ $2^p ~\text{mod}~ (2^p-1)=1$
 
 $c \cdot (2^p)^x ~\text{mod}~ (2^p-1)= c \cdot 1^x = c$
 
-Thus the hashing is equivalent to $(\sum c_i)~\text{mod}~m$, the strings with different permutations will have the same hashing value.
+Thus the hashing is equivalent to $(\sum c\_i)~\text{mod}~m$, the strings with different permutations will have the same hashing value.
 
 ### 11.3-4
 
@@ -80,27 +80,27 @@ $h(65)=172$
 
 > $\displaystyle \epsilon \ge \frac{1}{|B|} - \frac{1}{|U|}$.
 
-Suppose $n_i$ is the number of elements in slot $i$, then the total number of collisions is:
+Suppose $n\_i$ is the number of elements in slot $i$, then the total number of collisions is:
 
 Suppose $|U|=n$ and $|B|=m$
 
 $$
 \begin{array}{rll}
-\displaystyle \sum_{i=1}^{m} \frac{n_i (n_i - 1)}{2}
-&=& \displaystyle \frac{1}{2}\sum_{i=1}^{m} n_i^2 - \frac{1}{2}\sum_{i=1}^{m} n_i \\
-&\ge& \displaystyle \frac{1}{2}\sum_{i=1}^{m} \left (\frac{n}{m} \right )^2 - \frac{n}{2} \\
-&=& \displaystyle \frac{n^2}{2{m}} - \frac{n}{2} \\
+\displaystyle \sum\_{i=1}^{m} \frac{n\_i (n\_i - 1)}{2}
+&=& \displaystyle \frac{1}{2}\sum\_{i=1}^{m} n\_i^2 - \frac{1}{2}\sum\_{i=1}^{m} n\_i \\\\
+&\ge& \displaystyle \frac{1}{2}\sum\_{i=1}^{m} \left (\frac{n}{m} \right )^2 - \frac{n}{2} \\\\
+&=& \displaystyle \frac{n^2}{2{m}} - \frac{n}{2} \\\\
 \end{array}
 $$
 
 $$
 \begin{array}{rll}
-\displaystyle \epsilon &\ge& \displaystyle \frac{\displaystyle \sum_{i=1}^{m} \frac{n_i (n_i - 1)}{2}}{\displaystyle \frac{n(n-1)}{2}} \\
-&=& \displaystyle \frac{\displaystyle \frac{n^2}{m} - n}{n(n-1)} \\
-&=& \displaystyle \frac{n - m}{m(n - 1)} \\
-&=& \displaystyle \frac{n}{m(n - 1)} - \frac{1}{n - 1} \\
-&\ge& \displaystyle \frac{n}{mn} - \frac{1}{n} \\
-&=& \displaystyle \frac{1}{m} - \frac{1}{n} \\
+\displaystyle \epsilon &\ge& \displaystyle \frac{\displaystyle \sum\_{i=1}^{m} \frac{n\_i (n\_i - 1)}{2}}{\displaystyle \frac{n(n-1)}{2}} \\\\
+&=& \displaystyle \frac{\displaystyle \frac{n^2}{m} - n}{n(n-1)} \\\\
+&=& \displaystyle \frac{n - m}{m(n - 1)} \\\\
+&=& \displaystyle \frac{n}{m(n - 1)} - \frac{1}{n - 1} \\\\
+&\ge& \displaystyle \frac{n}{mn} - \frac{1}{n} \\\\
+&=& \displaystyle \frac{1}{m} - \frac{1}{n} \\\\
 \end{array}
 $$
 
@@ -108,10 +108,10 @@ Therefore $\displaystyle \epsilon \ge \frac{1}{|B|} - \frac{1}{|U|}$.
 
 ### 11.3-6 $\star$
 
-> Let $U$ be the set of $n$-tuples of values drawn from $\mathbb{Z}_p$, and let $B=\mathbb{Z}_p$, where $p$ is prime. Define the hash function $h_b$: $U \rightarrow B$ for $b \in \mathbb{Z}_p$ on an input $n$-tuple $\langle a_0, a_1, \dots, a_{n-1} \rangle$ from $U$ as
+> Let $U$ be the set of $n$-tuples of values drawn from $\mathbb{Z}\_p$, and let $B=\mathbb{Z}\_p$, where $p$ is prime. Define the hash function $h\_b$: $U \rightarrow B$ for $b \in \mathbb{Z}\_p$ on an input $n$-tuple $\langle a\_0, a\_1, \dots, a\_{n-1} \rangle$ from $U$ as
 
-> $\displaystyle h_b(\langle a_0, a_1, \dots, a_{n-1} \rangle)=\left ( \sum_{j=0}^{n-1}a_jb^j \right ) ~\text{mod}~p$,
+> $\displaystyle h\_b(\langle a\_0, a\_1, \dots, a\_{n-1} \rangle)=\left ( \sum\_{j=0}^{n-1}a\_jb^j \right ) ~\text{mod}~p$,
 
-> and let $\mathcal{H}=\{ h_b : b \in \mathbb{Z}_p \}$. Argue that $\mathcal{H}$ is $((n-1)/p)$-universal according to the definition of $\epsilon$-universal in Exercise 11.3-5.
+> and let $\mathcal{H}=\{ h\_b : b \in \mathbb{Z}\_p \}$. Argue that $\mathcal{H}$ is $((n-1)/p)$-universal according to the definition of $\epsilon$-universal in Exercise 11.3-5.
 
 $\dots$

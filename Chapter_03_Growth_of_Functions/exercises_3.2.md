@@ -33,9 +33,9 @@ $f(n) \cdot g(n) \le f(m) \cdot g(m)$
 
 > Prove equation (3.16).
 >
-> $a^{log_bc}=c^{log_ba}$ (3.16)
+> $a^{log\_bc}=c^{log\_ba}$ (3.16)
 
-$a^{log_bc}=a^{\frac{log_ac}{log_ab}}=c^{\frac{1}{log_ab}}=c^{log_ba}$
+$a^{log\_bc}=a^{\frac{log\_ac}{log\_ab}}=c^{\frac{1}{log\_ab}}=c^{log\_ba}$
 
 ### 3.2-3
 
@@ -113,50 +113,50 @@ $\hat{\phi}^2=\frac{6-2\sqrt{5}}{4}=\frac{1 - \sqrt{5}}{2} + 1 = \hat{\phi} + 1$
 > Prove by induction that the $i$th Fibonacci number satisfies the equality
 >
 > $$
-F_i=\frac{\phi^{i}-\hat{\phi^i}}{\sqrt{5}}
+F\_i=\frac{\phi^{i}-\hat{\phi^i}}{\sqrt{5}}
 $$
 >
 > where $\phi$ is the golden ratio and $\hat{\phi}$ is its conjugate.
 
-$F_0=0$, $\frac{\phi^{0}-\hat{\phi^0}}{\sqrt{5}}=0$
+$F\_0=0$, $\frac{\phi^{0}-\hat{\phi^0}}{\sqrt{5}}=0$
 
-$F_1=1$, $\frac{\phi-\hat{\phi}}{\sqrt{5}}=1$
+$F\_1=1$, $\frac{\phi-\hat{\phi}}{\sqrt{5}}=1$
 
-Suppose $F_{i-2}=\frac{\phi^{i-2}-\hat{\phi^{i-2}}}{\sqrt{5}}$ and $F_{i-1}=\frac{\phi^{i-1}-\hat{\phi^{i-1}}}{\sqrt{5}}$,
+Suppose $F\_{i-2}=\frac{\phi^{i-2}-\hat{\phi^{i-2}}}{\sqrt{5}}$ and $F\_{i-1}=\frac{\phi^{i-1}-\hat{\phi^{i-1}}}{\sqrt{5}}$,
 
-$F_i=F_{i-2}+F_{i-1}=\frac{1}{\sqrt{5}}(\phi^{i-2}-\hat{\phi^{i-2}} + \phi^{i-1}-\hat{\phi^{i-1}})$
+$F\_i=F\_{i-2}+F\_{i-1}=\frac{1}{\sqrt{5}}(\phi^{i-2}-\hat{\phi^{i-2}} + \phi^{i-1}-\hat{\phi^{i-1}})$
 
 Based on the previous exercise,
 
 $\phi^{i-2} + \phi^{i-1} = \phi^{i-2}(1+\phi) = \phi^{i-2}\phi^2 = \phi ^ i$
 
-$\therefore$ $F_i=\frac{\phi^{i}-\hat{\phi^i}}{\sqrt{5}}$
+$\therefore$ $F\_i=\frac{\phi^{i}-\hat{\phi^i}}{\sqrt{5}}$
 
 
 ### 3.2-8
 
 > Show that $k \ln k = \Theta(n)$ implies $k = \Theta(n / \ln n)$.
 
-$c_1n \le k \ln k \le c_2n$
+$c\_1n \le k \ln k \le c\_2n$
 
-$\ln (c_1n) \le \ln(k \ln k) \le \ln (c_2n)$
+$\ln (c\_1n) \le \ln(k \ln k) \le \ln (c\_2n)$
 
-$\ln c_1 + \ln n \le \ln k + \ln \ln k \le \ln c_2 + \ln n$
+$\ln c\_1 + \ln n \le \ln k + \ln \ln k \le \ln c\_2 + \ln n$
 
-$\because$ $\ln k + \ln \ln k \le 2\ln k \ge \ln c_1 + \ln n$
+$\because$ $\ln k + \ln \ln k \le 2\ln k \ge \ln c\_1 + \ln n$
 
 $\therefore$ $\frac{\ln k}{\ln n} \ge \frac{1}{2}$
 
-$\because$ $\ln k + \ln \ln k \ge \ln k \le \ln c_2 + \ln n$
+$\because$ $\ln k + \ln \ln k \ge \ln k \le \ln c\_2 + \ln n$
 
 $\therefore$ $\frac{\ln k}{\ln n} \le 1$
 
-$\because$ $c_1n \le k \ln k \le c_2n$
+$\because$ $c\_1n \le k \ln k \le c\_2n$
 
-$\therefore$ $\frac{c_1 n}{\ln n} \le \frac{k \ln k}{\ln n} \le \frac{c_2 n}{\ln n}$
+$\therefore$ $\frac{c\_1 n}{\ln n} \le \frac{k \ln k}{\ln n} \le \frac{c\_2 n}{\ln n}$
 
-$\therefore$ $\frac{c_1 n}{\ln n} \le \frac{k \ln k}{\ln n} \le k$ and $\frac{c_2 n}{\ln n} \ge \frac{k \ln k}{\ln n} \ge \frac{1}{2}k$
+$\therefore$ $\frac{c\_1 n}{\ln n} \le \frac{k \ln k}{\ln n} \le k$ and $\frac{c\_2 n}{\ln n} \ge \frac{k \ln k}{\ln n} \ge \frac{1}{2}k$
 
-$\therefore$ $c_1\frac{n}{\ln n} \le k \le (2c_2)\frac{n}{\ln n}$
+$\therefore$ $c\_1\frac{n}{\ln n} \le k \le (2c\_2)\frac{n}{\ln n}$
 
 $\therefore$ $k = \Theta(n / \ln n)$

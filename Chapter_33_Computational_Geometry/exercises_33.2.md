@@ -8,23 +8,23 @@ Star.
 
 ### 33.2-2
 
-> Given two segments $a$ and $b$ that are comparable at $x$, show how to determine in $O(1)$ time which of $a \succeq_x b$ or $b \succeq_x a$ holds. Assume that neither segment is vertical. 
+> Given two segments $a$ and $b$ that are comparable at $x$, show how to determine in $O(1)$ time which of $a \succeq\_x b$ or $b \succeq\_x a$ holds. Assume that neither segment is vertical. 
 
-Suppose $a = \overline{(x_1, y_1)(x_2, y_2)}$ and $b = \overline{(x_3, y_3)(x_4, y_4)}$,
-
-$$
-\frac{x - x_1}{x_2 - x_1} = \frac{y - y_1}{y_2 - y_1}
-$$
+Suppose $a = \overline{(x\_1, y\_1)(x\_2, y\_2)}$ and $b = \overline{(x\_3, y\_3)(x\_4, y\_4)}$,
 
 $$
-y = (x - x_1) \cdot \frac{y_2 - y_1}{x_2 - x_1} + y_1
+\frac{x - x\_1}{x\_2 - x\_1} = \frac{y - y\_1}{y\_2 - y\_1}
 $$
 
 $$
-y' = (x - x_3) \cdot \frac{y_4 - y_3}{x_4 - x_3} + y_3
+y = (x - x\_1) \cdot \frac{y\_2 - y\_1}{x\_2 - x\_1} + y\_1
 $$
 
-Compare $y$ and $y'$. To avoid division, compare $(x_2 - x_1) \cdot y$ and $(x_4 - x_3) \cdot y'$.
+$$
+y' = (x - x\_3) \cdot \frac{y\_4 - y\_3}{x\_4 - x\_3} + y\_3
+$$
+
+Compare $y$ and $y'$. To avoid division, compare $(x\_2 - x\_1) \cdot y$ and $(x\_4 - x\_3) \cdot y'$.
 
 ### 33.2-3
 

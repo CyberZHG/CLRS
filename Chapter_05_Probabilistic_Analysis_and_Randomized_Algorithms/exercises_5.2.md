@@ -19,7 +19,7 @@ The candidates presented in ascending order, which is $\frac{1}{n!}$.
 Suppose the first candidate is of rank $k$, followed by some candidates with rank less than $k$, then followed the candidate with rank $n$.
 
 $$
-P=\sum_{k=1}^{n-1}\frac{1}{n}\frac{1}{n-k}=\frac{1}{n}\sum_{i=1}^{n-1}\frac{1}{i}=O \left ( \frac{\lg n}{n} \right )
+P=\sum\_{k=1}^{n-1}\frac{1}{n}\frac{1}{n-k}=\frac{1}{n}\sum\_{i=1}^{n-1}\frac{1}{i}=O \left ( \frac{\lg n}{n} \right )
 $$
 
 ### 5.2-3
@@ -27,14 +27,14 @@ $$
 > Use indicator random variables to compute the expected value of the sum of $n$ dice.
 
 $$
-E[X_i] = \frac{1+2+3+4+5+6}{6} = 3.5
+E[X\_i] = \frac{1+2+3+4+5+6}{6} = 3.5
 $$
 
 $$
 \begin{array}{rll}
-E[X] &=& \displaystyle E \left [ \sum_{i=1}^n X_i \right ] \\
-&=& \displaystyle \sum_{i=1}^n E[X_i] \\
-&=& \displaystyle \sum_{i=1}^n 3.5 \\
+E[X] &=& \displaystyle E \left [ \sum\_{i=1}^n X\_i \right ] \\\\
+&=& \displaystyle \sum\_{i=1}^n E[X\_i] \\\\
+&=& \displaystyle \sum\_{i=1}^n 3.5 \\\\
 &=& \displaystyle 3.5n
 \end{array}
 $$
@@ -50,13 +50,13 @@ The probability of one customer get his/her hat back is $1/n$, therefore the exp
 > Let $A[1 \dots n]$ be an array of $n$ distinct numbers. If $i < j$ and $A[i] > A[j]$, then the pair $(i,j)$ is called an __*inversion*__ of $A$. (See Problem 2-4 for more on inversions.) Suppose that the elements of $A$ form a uniform random permutation of $\left \langle 1, 2, \dots, n \right \rangle$. Use indicator random variables to compute the expected number of
 inversions.
 
-Suppose $X_{ij} = I\{(i, j) \text{ is an inversion}\}$,
+Suppose $X\_{ij} = I\{(i, j) \text{ is an inversion}\}$,
 
 $$
-E[X_{ij}] = \frac{1}{2}
+E[X\_{ij}] = \frac{1}{2}
 $$
 
 $$
-E[X] = \sum_{i=1}^{n-1} \sum_{j=i+1}^{n} E[X_{ij}]
+E[X] = \sum\_{i=1}^{n-1} \sum\_{j=i+1}^{n} E[X\_{ij}]
 = \frac{n(n-1)}{4}
 $$

@@ -18,9 +18,9 @@ Suppose $T(n) \le cn$,
 
 $$
 \begin{array}{rll}
-T(n) &\le& cn/7 + c + 8c + 5cn/7 + an \\
-&=& 6cn / 7 + 9c + an \\
-&=& cn + (-cn/7+9c+an) \\
+T(n) &\le& cn/7 + c + 8c + 5cn/7 + an \\\\
+&=& 6cn / 7 + 9c + an \\\\
+&=& cn + (-cn/7+9c+an) \\\\
 &\le& cn
 \end{array}
 $$
@@ -39,9 +39,9 @@ Suppose $T(n)\ge cn$,
 
 $$
 \begin{array}{rll}
-T(n) &\ge& cn/3 + c + 4c + 2cn/3 + an \\
-&=& cn + 5c + an \\
-&>& cn \\
+T(n) &\ge& cn/3 + c + 4c + 2cn/3 + an \\\\
+&=& cn + 5c + an \\\\
+&>& cn \\\\
 \end{array}
 $$
 
@@ -53,10 +53,10 @@ Therefore SELECT does not run in linear time if groups of 3 are used.
 
 $$
 \begin{array}{rll}
-\displaystyle \frac{3n}{10} - 6 &\ge& \displaystyle \left \lceil \frac{n}{4} \right \rceil \\
-\displaystyle \frac{3n}{10} - 6 &\ge& \displaystyle \frac{n}{4} + 1 \\
-12n - 240 &\ge& 10n + 40 \\
-n &\ge& 140 \\
+\displaystyle \frac{3n}{10} - 6 &\ge& \displaystyle \left \lceil \frac{n}{4} \right \rceil \\\\
+\displaystyle \frac{3n}{10} - 6 &\ge& \displaystyle \frac{n}{4} + 1 \\\\
+12n - 240 &\ge& 10n + 40 \\\\
+n &\ge& 140 \\\\
 \end{array}
 $$
 

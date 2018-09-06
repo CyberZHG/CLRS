@@ -4,15 +4,15 @@
 
 > Prove that the summations in equation (26.6) equal the summations in equation (26.7).
 
-$\sum_{v \in V_2} f(s, v) = 0$, $\sum_{v \in V_1} f(v, s)$.
+$\sum\_{v \in V\_2} f(s, v) = 0$, $\sum\_{v \in V\_1} f(v, s)$.
 
 ### 26.2-2
 
-> In Figure 26.1(b), what is the flow across the cut $(\{s, v_2, v_4\}, \{v_1, v_3, t\})$? What is the capacity of this cut?
+> In Figure 26.1(b), what is the flow across the cut $(\{s, v\_2, v\_4\}, \{v\_1, v\_3, t\})$? What is the capacity of this cut?
 
-$f(S, T) = f(s, v_1) + f(v_2, v_1) + f(v_4, v_3) + f(v_4, t) - f(v_3, v_2) = 11 + 1 + 7 + 4 - 4 = 19$.
+$f(S, T) = f(s, v\_1) + f(v\_2, v\_1) + f(v\_4, v\_3) + f(v\_4, t) - f(v\_3, v\_2) = 11 + 1 + 7 + 4 - 4 = 19$.
 
-$c(S, T) = c(s, v_1) + c(v_2, v_1) + c(v_4, v_3) + c(v_4, t) = 16 + 4 + 7 + 4 = 31$.
+$c(S, T) = c(s, v\_1) + c(v\_2, v\_1) + c(v\_4, v\_3) + c(v\_4, t) = 16 + 4 + 7 + 4 = 31$.
 
 ### 26.2-3
 
@@ -30,9 +30,9 @@ Flow in equals flow out.
 
 ### 26.2-6
 
-> Suppose that each source $s_i$ in a flow network with multiple sources and sinks produces exactly $p_i$ units of flow, so that $\sum_{v \in V} f(s_i, v) = p_i$. Suppose also that each sink $t_j$ consumes exactly $q_j$ units, so that $\sum_{v \in V} f(v, t_j) = q_j$, where $\sum_i p_i = \sum_j q_j$. Show how to convert the problem of finding a flow $f$ that obeys these additional constraints into the problem of finding a maximum flow in a single-source, single-sink flow network.
+> Suppose that each source $s\_i$ in a flow network with multiple sources and sinks produces exactly $p\_i$ units of flow, so that $\sum\_{v \in V} f(s\_i, v) = p\_i$. Suppose also that each sink $t\_j$ consumes exactly $q\_j$ units, so that $\sum\_{v \in V} f(v, t\_j) = q\_j$, where $\sum\_i p\_i = \sum\_j q\_j$. Show how to convert the problem of finding a flow $f$ that obeys these additional constraints into the problem of finding a maximum flow in a single-source, single-sink flow network.
 
-$c(s, s_i) = p_i$, $c(t_j, t) = q_j$.
+$c(s, s\_i) = p\_i$, $c(t\_j, t) = q\_j$.
 
 ### 26.2-7
 

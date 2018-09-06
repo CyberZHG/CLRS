@@ -46,8 +46,8 @@ Since we can transform every tree into a right-going chain, and the operation is
 
 ### 13.2-5 $\star$
 
-> We say that a binary search tree $T_1$ can be right-converted to binary search tree $T_2$ if it is possible to obtain $T_2$ from $T_1$ via a series of calls to RIGHT-ROTATE. Give an example of two trees $T_1$ and $T_2$ such that $T_1$ cannot be right-converted to $T_2$. Then, show that if a tree $T_1$ can be right-converted to $T_2$, it can be right-converted using $O(n^2)$ calls to RIGHT-ROTATE.
+> We say that a binary search tree $T\_1$ can be right-converted to binary search tree $T\_2$ if it is possible to obtain $T\_2$ from $T\_1$ via a series of calls to RIGHT-ROTATE. Give an example of two trees $T\_1$ and $T\_2$ such that $T\_1$ cannot be right-converted to $T\_2$. Then, show that if a tree $T\_1$ can be right-converted to $T\_2$, it can be right-converted using $O(n^2)$ calls to RIGHT-ROTATE.
 
 ![](img/13.2-5_1.png) ![](img/13.2-5_2.png)
 
-We can use $O(n)$ calls to rotate the node which is the root in $T_2$ to $T_1$'s root, then use the same operation in the two subtrees. There are $n$ nodes, therefore the upper bound is $O(n^2)$.
+We can use $O(n)$ calls to rotate the node which is the root in $T\_2$ to $T\_1$'s root, then use the same operation in the two subtrees. There are $n$ nodes, therefore the upper bound is $O(n^2)$.

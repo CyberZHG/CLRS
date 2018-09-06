@@ -12,17 +12,17 @@ No change.
 
 ![](./img/27.1-2_1.png)
 
-* Work: $T_1 = 29$.
-* Span: $T_\infty = 9$.
-* Parallelism: $T_1 / T_\infty \approx 3.2$.
+* Work: $T\_1 = 29$.
+* Span: $T\_\infty = 9$.
+* Parallelism: $T\_1 / T\_\infty \approx 3.2$.
 
 ### 27.1-3
 
 > Prove that a greedy scheduler achieves the following time bound, which is slightly stronger than the bound proven in Theorem 27.1:
 
-> $\displaystyle T_P \le \frac{T_1 - T_\infty}{P} + T_\infty$.
+> $\displaystyle T\_P \le \frac{T\_1 - T\_\infty}{P} + T\_\infty$.
 
-$T_1 - T_\infty$ is the number of  strands that are not belong to the longest path.
+$T\_1 - T\_\infty$ is the number of  strands that are not belong to the longest path.
 
 ### 27.1-4
 
@@ -32,22 +32,22 @@ The critical path is twice the length of the other path.
 
 ### 27.1-5
 
-> Professor Karan measures her deterministic multithreaded algorithm on $4$, $10$, and $64$ processors of an ideal parallel computer using a greedy scheduler. She claims that the three runs yielded $T_4 = 80$ seconds, $T_{10} = 42$ seconds, and $T_{64} = 10$ seconds. Argue that the professor is either lying or incompetent. (Hint: Use the work law (27.2), the span law (27.3), and inequality (27.5) from Exercise 27.1-3.)
+> Professor Karan measures her deterministic multithreaded algorithm on $4$, $10$, and $64$ processors of an ideal parallel computer using a greedy scheduler. She claims that the three runs yielded $T\_4 = 80$ seconds, $T\_{10} = 42$ seconds, and $T\_{64} = 10$ seconds. Argue that the professor is either lying or incompetent. (Hint: Use the work law (27.2), the span law (27.3), and inequality (27.5) from Exercise 27.1-3.)
 
 Based on span law:
 
-$T_\infty \le T_P = \min\{ 80, 42, 10 \} = 10$
+$T\_\infty \le T\_P = \min\{ 80, 42, 10 \} = 10$
 
 Based on inequality (27.5):
 
 $\left \{ 
 \begin{array}{rll}
-T_1 + 3T_\infty &\ge& 320 \\
-T_1 + 9T_\infty &\ge& 420
+T\_1 + 3T\_\infty &\ge& 320 \\\\
+T\_1 + 9T\_\infty &\ge& 420
 \end{array}
 \right .$
 
-$6 T_\infty \ge 100$, $T_\infty \ge 16$, which contradicts the span law.
+$6 T\_\infty \ge 100$, $T\_\infty \ge 16$, which contradicts the span law.
 
 ### 27.1-6
 
@@ -64,7 +64,7 @@ VEC-TIMES-VEC(a, b, l, r)
 6  return sum_l + sum_r
 ```
 
-The multiply of two vectors is thus $\Theta(\lg n)$, there are $n$ vectors to multiply simultaneously, and the outer parallel for is optimized to $\Theta(\lg n)$, therefore $T_\infty = \Theta(\lg n) + \Theta(\lg n) = \Theta(\lg n)$, since $T_1 = \Theta(n^2)$, then the parallelism $T_1 / T_\infty = \Theta(n^2 / \lg n)$.
+The multiply of two vectors is thus $\Theta(\lg n)$, there are $n$ vectors to multiply simultaneously, and the outer parallel for is optimized to $\Theta(\lg n)$, therefore $T\_\infty = \Theta(\lg n) + \Theta(\lg n) = \Theta(\lg n)$, since $T\_1 = \Theta(n^2)$, then the parallelism $T\_1 / T\_\infty = \Theta(n^2 / \lg n)$.
 
 ### 27.1-7
 
@@ -80,27 +80,27 @@ P-TRANSPOSE(A)
 >
 > Analyze the work, span, and parallelism of this algorithm.
 
-* Work: $T_1 = \Theta(n^2)$.
-* Span: $T_\infty = \Theta(\lg n) + \Theta(\lg n) + \Theta(1) = \Theta(\lg n)$.
-* Parallelism: $T_1 / T_\infty = \Theta(n^2 / \lg n)$.
+* Work: $T\_1 = \Theta(n^2)$.
+* Span: $T\_\infty = \Theta(\lg n) + \Theta(\lg n) + \Theta(1) = \Theta(\lg n)$.
+* Parallelism: $T\_1 / T\_\infty = \Theta(n^2 / \lg n)$.
 
 ### 27.1-8
 
 > Suppose that we replace the__*parallel for*__ loop in line 3 of P-TRANSPOSE (see Exercise 27.1-7) with an ordinary __*for*__ loop. Analyze the work, span, and parallelism of the resulting algorithm.
 
-* Work: $T_1 = \Theta(n^2)$.
-* Span: $T_\infty = \Theta(\lg n) + \Theta(n) = \Theta(n)$.
-* Parallelism: $T_1 / T_\infty = \Theta(n)$.
+* Work: $T\_1 = \Theta(n^2)$.
+* Span: $T\_\infty = \Theta(\lg n) + \Theta(n) = \Theta(n)$.
+* Parallelism: $T\_1 / T\_\infty = \Theta(n)$.
 
 ### 27.1-9
 
-> For how many processors do the two versions of the chess programs run equally fast, assuming that $T_P = T_1 / P + T_\infty$?
+> For how many processors do the two versions of the chess programs run equally fast, assuming that $T\_P = T\_1 / P + T\_\infty$?
 
 $$
 \begin{array}{rll}
-T_1 / P + T_\infty &=& T_1' / P + T_\infty' \\
-2048 + P &=& 1024 + 8P \\
-P &=& 1024 / 7 \\
+T\_1 / P + T\_\infty &=& T\_1' / P + T\_\infty' \\\\
+2048 + P &=& 1024 + 8P \\\\
+P &=& 1024 / 7 \\\\
 &\approx & 146
 \end{array}
 $$

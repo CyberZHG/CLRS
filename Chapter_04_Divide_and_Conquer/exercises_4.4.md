@@ -6,9 +6,9 @@
 
 $$
 \begin{array}{lll}
-T(n) & = & \displaystyle \sum_{i=0}^{\lg n - 1}(\frac{3}{2})^i n + \Theta(n^{\lg 3}) \\
-& = & \displaystyle \frac{(3/2)^{\lg n}-1}{(3/2)-1}n + \Theta(n^{\lg 3}) \\
-& = & \displaystyle 2n^{\lg 3} - 2n + \Theta({n^{\lg 3}}) \\
+T(n) & = & \displaystyle \sum\_{i=0}^{\lg n - 1}(\frac{3}{2})^i n + \Theta(n^{\lg 3}) \\\\
+& = & \displaystyle \frac{(3/2)^{\lg n}-1}{(3/2)-1}n + \Theta(n^{\lg 3}) \\\\
+& = & \displaystyle 2n^{\lg 3} - 2n + \Theta({n^{\lg 3}}) \\\\
 & = & \displaystyle \Theta({n^{\lg 3}})
 \end{array}
 $$
@@ -19,10 +19,10 @@ $$
 
 $$
 \begin{array}{lll}
-T(n) & = & \displaystyle \sum_{i=0}^{\lg n - 1}(\frac{1}{2})^i n^2 + \Theta(1) \\
-& = & \displaystyle \frac{(1/2)^{\lg n}-1}{(1/2)-1}n^2 + \Theta(1) \\
-& = & \displaystyle 2n^2 - \frac{2}{n} + \Theta(1) \\
-& = & \displaystyle \Theta(n^2) \\
+T(n) & = & \displaystyle \sum\_{i=0}^{\lg n - 1}(\frac{1}{2})^i n^2 + \Theta(1) \\\\
+& = & \displaystyle \frac{(1/2)^{\lg n}-1}{(1/2)-1}n^2 + \Theta(1) \\\\
+& = & \displaystyle 2n^2 - \frac{2}{n} + \Theta(1) \\\\
+& = & \displaystyle \Theta(n^2) \\\\
 \end{array}
 $$
 
@@ -32,10 +32,10 @@ $$
 
 $$
 \begin{array}{lll}
-T(n) & = & \displaystyle \sum_{i=0}^{\lg n - 1}(2^in) + \sum_{i=0}^{\lg n - 1}(2^{2i+1}) + \Theta(n^2) \\
-& = & \displaystyle \frac{2^{\lg n}-1}{2-1}n + \Theta(n^2) \\
-& = & \displaystyle n^2 - n + \Theta(n^2) \\
-& = & \displaystyle \Theta(n^2) \\
+T(n) & = & \displaystyle \sum\_{i=0}^{\lg n - 1}(2^in) + \sum\_{i=0}^{\lg n - 1}(2^{2i+1}) + \Theta(n^2) \\\\
+& = & \displaystyle \frac{2^{\lg n}-1}{2-1}n + \Theta(n^2) \\\\
+& = & \displaystyle n^2 - n + \Theta(n^2) \\\\
+& = & \displaystyle \Theta(n^2) \\\\
 \end{array}
 $$
 
@@ -45,10 +45,10 @@ $$
 
 $$
 \begin{array}{lll}
-T(n) & = & \displaystyle \sum_{i=0}^{n - 1}(2^i) + \Theta(2^n) \\
-& = & \displaystyle \frac{2^n-1}{2-1} + \Theta(2^n) \\
-& = & \displaystyle 2^n - 1 + \Theta(2^n) \\
-& = & \displaystyle \Theta(2^n) \\
+T(n) & = & \displaystyle \sum\_{i=0}^{n - 1}(2^i) + \Theta(2^n) \\\\
+& = & \displaystyle \frac{2^n-1}{2-1} + \Theta(2^n) \\\\
+& = & \displaystyle 2^n - 1 + \Theta(2^n) \\\\
+& = & \displaystyle \Theta(2^n) \\\\
 \end{array}
 $$
 
@@ -64,7 +64,7 @@ $$
 
 > Argue that the solution to the recurrence $T(n)=T(n/3)+T(2n/3)+cn$, where $c$ is a constant, is $\Omega(n \lg n)$ by appealing to a recursion tree.
 
-Shortest path is $\log_3n$.
+Shortest path is $\log\_3n$.
 
 ### 4.4-7
 
@@ -78,8 +78,8 @@ $\Theta(n^2)$.
 
 $$
 \begin{array}{lll}
-T(n) & = & \displaystyle \sum_{i=0}^{n/a}(c(n-ai) )+ cn \\
-& = & \displaystyle \Theta(n^2) \\
+T(n) & = & \displaystyle \sum\_{i=0}^{n/a}(c(n-ai) )+ cn \\\\
+& = & \displaystyle \Theta(n^2) \\\\
 \end{array}
 $$
 
@@ -89,7 +89,7 @@ $$
 
 $$
 \begin{array}{lll}
-T(n) & = & \displaystyle \sum_{i=0}^{\log_{1/\alpha}n}cn + \Theta(n) \\
-& = & \displaystyle \Theta(n\lg n) \\
+T(n) & = & \displaystyle \sum\_{i=0}^{\log\_{1/\alpha}n}cn + \Theta(n) \\\\
+& = & \displaystyle \Theta(n\lg n) \\\\
 \end{array}
 $$

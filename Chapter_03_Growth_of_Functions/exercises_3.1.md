@@ -44,11 +44,11 @@ $2^n \le c$ which is impossible, thus $2^{2n} \ne O(2^n)$.
 >
 > For any two function $f(n)$ and $g(n)$, we have $f(n)=\Theta(g(n))$ if and only if $f(n)=O(g(n))$ and $f(n)=\Omega(g(n))$.
 
-$f(n)=O(g(n))$ implies $0 \le f(n) \le c_2 g(n)$
+$f(n)=O(g(n))$ implies $0 \le f(n) \le c\_2 g(n)$
 
-$f(n)=\Omega(g(n))$ implies $0 \le c_1 g(n) \le f(n)$
+$f(n)=\Omega(g(n))$ implies $0 \le c\_1 g(n) \le f(n)$
 
-Thus $c_1 g(n) \le f(n) \le c_2 g(n)$, $f(n)=\Theta(g(n))$, and vice versa.
+Thus $c\_1 g(n) \le f(n) \le c\_2 g(n)$, $f(n)=\Theta(g(n))$, and vice versa.
 
 ### 3.1-6
 
@@ -66,11 +66,11 @@ There is no $f(n)$ that $f(n) < g(n)$ and $f(n) > g(n)$.
 
 > We can extend our notation to the case of two parameters $n$ and $m$ that can go to infinity independently at different rates. For a given function $g(n,m)$, we denote by $O(g(n,m))$ the set of functions
 >
-> $O(g(n,m))=\{f(n,m)$: there exist positive constants $c$, $n_0$, and $m_0$ such that $0 \le f(n,m) \le c g(n,m)$ for all $n \ge n_0$ or $m \ge m_0$ $\}$.
+> $O(g(n,m))=\{f(n,m)$: there exist positive constants $c$, $n\_0$, and $m\_0$ such that $0 \le f(n,m) \le c g(n,m)$ for all $n \ge n\_0$ or $m \ge m\_0$ $\}$.
 >
 > Give corresponding definitions for $\Omega(g(n,m))$ and $\Theta(g(n,m))$.
 
 
-$\Omega(g(n,m))=\{f(n,m)$: there exist positive constants $c$, $n_0$, and $m_0$ such that $0 \le c g(n,m) \le f(n,m)$ for all $n \ge n_0$ or $m \ge m_0$ $\}$.
+$\Omega(g(n,m))=\{f(n,m)$: there exist positive constants $c$, $n\_0$, and $m\_0$ such that $0 \le c g(n,m) \le f(n,m)$ for all $n \ge n\_0$ or $m \ge m\_0$ $\}$.
 
-$\Theta(g(n,m))=\{f(n,m)$: there exist positive constants $c_1$, $c_2$, $n_0$, and $m_0$ such that $c_1 g(n,m) \le f(n,m) \le c_2 g(n,m)$ for all $n \ge n_0$ or $m \ge m_0$ $\}$.
+$\Theta(g(n,m))=\{f(n,m)$: there exist positive constants $c\_1$, $c\_2$, $n\_0$, and $m\_0$ such that $c\_1 g(n,m) \le f(n,m) \le c\_2 g(n,m)$ for all $n \ge n\_0$ or $m \ge m\_0$ $\}$.

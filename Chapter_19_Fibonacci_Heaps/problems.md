@@ -34,18 +34,18 @@ $O(x.degree + c) + x.degree + 4 - c = O(x.degree + c) = O(\lg n)$ is worse than 
 
 ### 19-2 Binomial trees and binomial heaps
 
-> The __*binomial tree*__ $B_k$ is an ordered tree (see Section B.5.2) defined recursively. As shown in Figure 19.6(a), the binomial tree $B_0$ consists of a single node. The binomial tree $B_k$ consists of two binomial trees $B_{k-1}$ that are linked together so that the root of one is the leftmost child of the root of the other. Figure 19.6(b) shows the binomial trees $B_0$ through $B_4$.
+> The __*binomial tree*__ $B\_k$ is an ordered tree (see Section B.5.2) defined recursively. As shown in Figure 19.6(a), the binomial tree $B\_0$ consists of a single node. The binomial tree $B\_k$ consists of two binomial trees $B\_{k-1}$ that are linked together so that the root of one is the leftmost child of the root of the other. Figure 19.6(b) shows the binomial trees $B\_0$ through $B\_4$.
 
-> __*a*__. Show that for the binomial tree $B_k$,
+> __*a*__. Show that for the binomial tree $B\_k$,
 
 > 1. there are $2^k$ nodes,
 > 2. the height of the tree is $k$,
 > 3. there are exactly $\binom{k}{i}$ nodes at depth $i$ for $i = 0, 1, \dots, k$, and
-> 4. the root has degree $k$, which is greater than that of any other node; moreover, as Figure 19.6(c) shows, if we number the children of the root from left to right by $k-1, k-2, \dots, 0$, then child $i$ is the root of a subtree $B_i$.
+> 4. the root has degree $k$, which is greater than that of any other node; moreover, as Figure 19.6(c) shows, if we number the children of the root from left to right by $k-1, k-2, \dots, 0$, then child $i$ is the root of a subtree $B\_i$.
 
-1. $B_k$ consists of two binomial trees $B_{k-1}$.
-2. The height of one $B_{k-1}$ is increased by 1.
-3. For $i=0$, $\binom{k}{0}=1$ and only root is at depth $0$. Suppose in $B_{k-1}$, the number of nodes at depth $i$ is $\binom{k-1}{i}$, in $B_k$, the number of nodes at depth $i$ is $\binom{k-1}{i} + \binom{k-1}{i-1} = \binom{k}{i}$.
+1. $B\_k$ consists of two binomial trees $B\_{k-1}$.
+2. The height of one $B\_{k-1}$ is increased by 1.
+3. For $i=0$, $\binom{k}{0}=1$ and only root is at depth $0$. Suppose in $B\_{k-1}$, the number of nodes at depth $i$ is $\binom{k-1}{i}$, in $B\_k$, the number of nodes at depth $i$ is $\binom{k-1}{i} + \binom{k-1}{i-1} = \binom{k}{i}$.
 4. The degree of the root increase by 1.
 
 > A __*binomial heap*__ $H$ is a set of binomial trees that satisfies the following properties:

@@ -70,8 +70,8 @@ $\dots$
 
 ### 23.2-8
 
-> Professor Borden proposes a new divide-and-conquer algorithm for computing minimum spanning trees, which goes as follows. Given a graph $G = (V, E)$, partition the set $V$ of vertices into two sets $V_1$ and $V_2$ such that $|V_1|$ and $|V_2|$ differ by at most $1$. Let $E_1$ be the set of edges that are incident only on vertices in $V_1$, and let $E_2$ be the set of edges that are incident only on vertices in $V_2$. Recursively solve a minimum-spanning-tree problem on each of the two subgraphs $G_1 = (V_1, E_1)$ and $G_2 = (V_2, E_2)$. Finally, select the minimum-weight edge in $E$ that crosses the cut $(V_1, V_2)$, and use this edge to unite the resulting two minimum spanning trees into a single spanning tree.
+> Professor Borden proposes a new divide-and-conquer algorithm for computing minimum spanning trees, which goes as follows. Given a graph $G = (V, E)$, partition the set $V$ of vertices into two sets $V\_1$ and $V\_2$ such that $|V\_1|$ and $|V\_2|$ differ by at most $1$. Let $E\_1$ be the set of edges that are incident only on vertices in $V\_1$, and let $E\_2$ be the set of edges that are incident only on vertices in $V\_2$. Recursively solve a minimum-spanning-tree problem on each of the two subgraphs $G\_1 = (V\_1, E\_1)$ and $G\_2 = (V\_2, E\_2)$. Finally, select the minimum-weight edge in $E$ that crosses the cut $(V\_1, V\_2)$, and use this edge to unite the resulting two minimum spanning trees into a single spanning tree.
 > 
 > Either argue that the algorithm correctly computes a minimum spanning tree of $G$, or provide an example for which the algorithm fails.
 
-The algorithm fails. Suppose $E = \{ (u, v), (u, w), (v, w) \}$, the weight of $(u, v)$ and $(u, w)$ is 1, and the weight of $(v, w)$ is 1000, partition the set into two sets $V_1 = \{u\}$ and $V_2 = \{ v, w \}$.
+The algorithm fails. Suppose $E = \{ (u, v), (u, w), (v, w) \}$, the weight of $(u, v)$ and $(u, w)$ is 1, and the weight of $(v, w)$ is 1000, partition the set into two sets $V\_1 = \{u\}$ and $V\_2 = \{ v, w \}$.

@@ -14,7 +14,7 @@ Suppose $T[i] \ne P[j]$, then for $k \in [1, j)$, $T[i - k] = P[j - k] \ne P[0]$
 
 ### 32.1-3
 
-> Suppose that pattern $P$ and text $T$ are randomly chosen strings of length $m$ and $n$, respectively, from the $d$-ary alphabet $\Sigma_d = \{0, 1, \dots, d - 1 \}$, where $d \ge 2$. Show that the expected number of character-to-character comparisons made by the implicit loop in line 4 of the naive algorithm is
+> Suppose that pattern $P$ and text $T$ are randomly chosen strings of length $m$ and $n$, respectively, from the $d$-ary alphabet $\Sigma\_d = \{0, 1, \dots, d - 1 \}$, where $d \ge 2$. Show that the expected number of character-to-character comparisons made by the implicit loop in line 4 of the naive algorithm is
 
 > $\displaystyle (n - m + 1) \frac{1 - d^{-m}}{1 - d^{-1}} \le 2 (n - m + 1)$
 
@@ -25,7 +25,7 @@ Suppose for each shift, the number of compared characters is $L$, then:
 $$
 \begin{array}{rll}
 \text{E}[L] &=& 
-\displaystyle 1 \cdot \frac{d - 1}{d} + 2 \cdot \left ( \frac{1}{d} \right )^1 \frac{d - 1}{d} + \cdots + m \cdot \left ( \frac{1}{d} \right )^{m - 1} \frac{d - 1}{d} + m \cdot \left ( \frac{1}{d} \right )^{m} \\
+\displaystyle 1 \cdot \frac{d - 1}{d} + 2 \cdot \left ( \frac{1}{d} \right )^1 \frac{d - 1}{d} + \cdots + m \cdot \left ( \frac{1}{d} \right )^{m - 1} \frac{d - 1}{d} + m \cdot \left ( \frac{1}{d} \right )^{m} \\\\
 &=& 
 \displaystyle \left (1 + 2 \cdot \left ( \frac{1}{d} \right )^1  + \cdots + m \cdot \left ( \frac{1}{d} \right )^{m} \right ) \frac{d - 1}{d} + m \cdot \left ( \frac{1}{d} \right )^{m}
 \end{array}
@@ -33,23 +33,23 @@ $$
 
 $$
 \begin{array}{rllcl}
-S &=& 1 + &\displaystyle 2 \cdot \left ( \frac{1}{d} \right )^1  + \cdots + m \cdot \left ( \frac{1}{d} \right )^{m - 1} \\
+S &=& 1 + &\displaystyle 2 \cdot \left ( \frac{1}{d} \right )^1  + \cdots + m \cdot \left ( \frac{1}{d} \right )^{m - 1} \\\\
 \displaystyle \frac{1}{d}S &=& &
-\displaystyle 1 \cdot \left ( \frac{1}{d} \right )^1  + \cdots + (m - 1) \cdot \left ( \frac{1}{d} \right )^{m - 1} &\displaystyle  + m \cdot \left ( \frac{1}{d} \right )^{m} \\
-\displaystyle \frac{d - 1}{d}S &=& &\displaystyle 1 +  \left ( \frac{1}{d} \right )^1  + \cdots + \cdot \left ( \frac{1}{d} \right )^{m - 1}&\displaystyle  - m \cdot \left ( \frac{1}{d} \right )^{m} \\
+\displaystyle 1 \cdot \left ( \frac{1}{d} \right )^1  + \cdots + (m - 1) \cdot \left ( \frac{1}{d} \right )^{m - 1} &\displaystyle  + m \cdot \left ( \frac{1}{d} \right )^{m} \\\\
+\displaystyle \frac{d - 1}{d}S &=& &\displaystyle 1 +  \left ( \frac{1}{d} \right )^1  + \cdots + \cdot \left ( \frac{1}{d} \right )^{m - 1}&\displaystyle  - m \cdot \left ( \frac{1}{d} \right )^{m} \\\\
 \displaystyle \frac{d - 1}{d}S &=& &
 \displaystyle \frac{1 - d^{-m}}{1 - d^{-1}}
-&\displaystyle  - m \cdot \left ( \frac{1}{d} \right )^{m} \\
+&\displaystyle  - m \cdot \left ( \frac{1}{d} \right )^{m} \\\\
 \end{array}
 $$
 
 $$
 \begin{array}{rll}
 \text{E}[L] &=& 
-\displaystyle \left (1 + 2 \cdot \left ( \frac{1}{d} \right )^1  + \cdots + m \cdot \left ( \frac{1}{d} \right )^{m} \right ) \frac{d - 1}{d} + m \cdot \left ( \frac{1}{d} \right )^{m} \\
+\displaystyle \left (1 + 2 \cdot \left ( \frac{1}{d} \right )^1  + \cdots + m \cdot \left ( \frac{1}{d} \right )^{m} \right ) \frac{d - 1}{d} + m \cdot \left ( \frac{1}{d} \right )^{m} \\\\
 &=&\displaystyle 
  \frac{1 - d^{-m}}{1 - d^{-1}}
- - m \cdot \left ( \frac{1}{d} \right )^{m}  + m \cdot \left ( \frac{1}{d} \right )^{m} \\
+ - m \cdot \left ( \frac{1}{d} \right )^{m}  + m \cdot \left ( \frac{1}{d} \right )^{m} \\\\
  &=&\displaystyle 
  \frac{1 - d^{-m}}{1 - d^{-1}}
 \end{array}
@@ -65,11 +65,11 @@ And since $d \ge 2$, $1 - d^{-1} \ge 0.5$, and since $1 - d^{-m} < 1$, $\display
 
 > Suppose we allow the pattern $P$ to contain occurrences of a __*gap character*__ $\diamond$ that can match an _arbitrary_ string of characters (even one of zero length). For example, the pattern $ab\diamond ba\diamond c$ occurs in the text $cabccbacbacab$ as
 
-> $\displaystyle c \underbrace{ab}_{ab} \underbrace{cc}_{\diamond} \underbrace{ba}_{ba} \underbrace{cba}_{\diamond} \underbrace{c}_{c} ab$
+> $\displaystyle c \underbrace{ab}\_{ab} \underbrace{cc}\_{\diamond} \underbrace{ba}\_{ba} \underbrace{cba}\_{\diamond} \underbrace{c}\_{c} ab$
 
 > and as
 
-> $\displaystyle c \underbrace{ab}_{ab} \underbrace{ccbac}_{\diamond} \underbrace{ba}_{ba} \underbrace{ }_{\diamond} \underbrace{c}_{c} ab$
+> $\displaystyle c \underbrace{ab}\_{ab} \underbrace{ccbac}\_{\diamond} \underbrace{ba}\_{ba} \underbrace{ }\_{\diamond} \underbrace{c}\_{c} ab$
 
 > Note that the gap character may occur an arbitrary number of times in the pattern but not at all in the text. Give a polynomial-time algorithm to determine whether such a pattern $P$ occurs in a given text $T$, and analyze the running time of your algorithm.
 

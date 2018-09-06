@@ -29,7 +29,7 @@ def insertion_sort(a):
 
 > Consider the __searching problem__:
 >
-> __Input__: A sequence of $n$ numbers $A = \left \langle a_1, a_2, \cdots, a_n\right \rangle$ and a value $v$.
+> __Input__: A sequence of $n$ numbers $A = \left \langle a\_1, a\_2, \cdots, a\_n\right \rangle$ and a value $v$.
 >
 > __Output__: An index $i$ such that $v=A[i]$ or the special value NIL if $v$ does not appear in A.
 >

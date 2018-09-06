@@ -9,7 +9,7 @@ $$
 $$
 
 $$
-m \ge \log_{364/365}\frac{1}{2} = 252.6519888441586
+m \ge \log\_{364/365}\frac{1}{2} = 252.6519888441586
 $$
 
 Thus there must be 253 people.
@@ -30,22 +30,22 @@ Same as the birthday paradox.
 
 > For the analysis of the birthday paradox, is it important that the birthdays be mutually independent, or is pairwise independence sufficient? Justify your answer.
 
-$X_{ij}$ uses the pairwise independence, thus it is sufficient for proving.
+$X\_{ij}$ uses the pairwise independence, thus it is sufficient for proving.
 
 ### 5.4-4 $\star$
 
 > How many people should be invited to a party in order to make it likely that there are _three_ people with the same birthday?
 
 $$
-X_{ijk}=\frac{1}{n^2}
+X\_{ijk}=\frac{1}{n^2}
 $$
 
 $$
 \begin{array}{rll}
-E[X] &=& \displaystyle E \left [ \sum_{i=1}^m \sum_{j=i+1}^m \sum_{k=j+1}^m X_{ijk} \right ] \\
-&=& \displaystyle \sum_{i=1}^m \sum_{j=i+1}^m \sum_{k=j+1}^m E \left [ X_{ijk} \right ] \\
-&=& \displaystyle \sum_{i=1}^m \sum_{j=i+1}^m \sum_{k=j+1}^m \frac{1}{n^2} \\
-&=& \displaystyle \binom{m}{3} \frac{1}{n^2} \\
+E[X] &=& \displaystyle E \left [ \sum\_{i=1}^m \sum\_{j=i+1}^m \sum\_{k=j+1}^m X\_{ijk} \right ] \\\\
+&=& \displaystyle \sum\_{i=1}^m \sum\_{j=i+1}^m \sum\_{k=j+1}^m E \left [ X\_{ijk} \right ] \\\\
+&=& \displaystyle \sum\_{i=1}^m \sum\_{j=i+1}^m \sum\_{k=j+1}^m \frac{1}{n^2} \\\\
+&=& \displaystyle \binom{m}{3} \frac{1}{n^2} \\\\
 &=& \displaystyle \frac{m \cdot (m-1) \cdot (m-2)}{6n^2}
 \end{array}
 $$
@@ -73,21 +73,21 @@ $$
 * the expected number of empty bins
 
 $$
-E[X_i] = \left ( 1 - \frac{1}{n} \right )^n \approx \frac{1}{e}
+E[X\_i] = \left ( 1 - \frac{1}{n} \right )^n \approx \frac{1}{e}
 $$
 
 $$
 \begin{array}{rll}
-E[X] &=& \displaystyle \sum_{i=1}^n E[X_i] \\
-&=& \displaystyle \sum_{i=1}^n \frac{1}{e} \\
-&=& \displaystyle \frac{n}{e} \\
+E[X] &=& \displaystyle \sum\_{i=1}^n E[X\_i] \\\\
+&=& \displaystyle \sum\_{i=1}^n \frac{1}{e} \\\\
+&=& \displaystyle \frac{n}{e} \\\\
 \end{array}
 $$
 
 * the expected number of bins with exactly one ball
 
 $$
-E[X_i] = \binom{n}{1}\frac{1}{n}\left ( 1 - \frac{1}{n} \right )^{n-1} = \left ( 1 - \frac{1}{n} \right )^n\frac{n}{n-1} \approx \frac{1}{e}
+E[X\_i] = \binom{n}{1}\frac{1}{n}\left ( 1 - \frac{1}{n} \right )^{n-1} = \left ( 1 - \frac{1}{n} \right )^n\frac{n}{n-1} \approx \frac{1}{e}
 $$
 
 $$

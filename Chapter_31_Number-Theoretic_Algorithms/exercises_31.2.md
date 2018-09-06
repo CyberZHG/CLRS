@@ -39,28 +39,28 @@ def euclid(a, b):
 
 ### 31.2-5
 
-> If $a > b \ge 0$, show that the call EUCLID$(a, b)$ makes at most $1 + \log_\phi b$ recursive calls. Improve this bound to $1 + \log_\phi(b / \text{gcd}(a, b))$.
+> If $a > b \ge 0$, show that the call EUCLID$(a, b)$ makes at most $1 + \log\_\phi b$ recursive calls. Improve this bound to $1 + \log\_\phi(b / \text{gcd}(a, b))$.
 
-$b \ge F_{k+1} \approx \phi^{k+1} / \sqrt{5}$
+$b \ge F\_{k+1} \approx \phi^{k+1} / \sqrt{5}$
 
-$k + 1 < \log_\phi \sqrt{5} + \log_\phi b \approx 1.67 + \log_\phi b$
+$k + 1 < \log\_\phi \sqrt{5} + \log\_\phi b \approx 1.67 + \log\_\phi b$
 
-$k < 0.67 + \log_\phi b < 1 + \log_\phi b$.
+$k < 0.67 + \log\_\phi b < 1 + \log\_\phi b$.
 
-Since $d \cdot a ~\text{mod}~ d \cdot b = d \cdot (a ~\text{mod}~ b)$, $\text{gcd}(d \cdot a, d \cdot b)$ has the same number of recursive calls with $\text{gcd}(a, b)$, therefore we could let $b' = b / \text{gcd}(a, b)$, the inequality $k < 1 + \log_\phi(b') = 1 + \log_\phi(b / \text{gcd}(a, b))$. will holds.
+Since $d \cdot a ~\text{mod}~ d \cdot b = d \cdot (a ~\text{mod}~ b)$, $\text{gcd}(d \cdot a, d \cdot b)$ has the same number of recursive calls with $\text{gcd}(a, b)$, therefore we could let $b' = b / \text{gcd}(a, b)$, the inequality $k < 1 + \log\_\phi(b') = 1 + \log\_\phi(b / \text{gcd}(a, b))$. will holds.
 
 ## 31.2-6
 
-> What does EXTENDED-EUCLID$(F_{k+1}, F_k)$ return? Prove your answer correct.
+> What does EXTENDED-EUCLID$(F\_{k+1}, F\_k)$ return? Prove your answer correct.
 
-* If $k$ is odd, then $(1, -F_{k-2}, F_{k-1})$.
-* If $k$ is even, then $(1, F_{k-2}, -F_{k-1})$.
+* If $k$ is odd, then $(1, -F\_{k-2}, F\_{k-1})$.
+* If $k$ is even, then $(1, F\_{k-2}, -F\_{k-1})$.
 
 ### 31.2-7
 
-> Define the $\text{gcd}$ function for more than two arguments by the recursive equation $\text{gcd}(a_0, a_1, \cdots, a_n) = \text{gcd}(a_0, \text{gcd}(a_1, a_2, \cdots, a_n))$. Show that the $\text{gcd}$ function returns the same answer independent of the order in which its arguments are specified. Also show how to find integers $x_0, x_1, \cdots, x_n$ such that $\text{gcd}(a_0, a_1, \dots, a_n) = a_0 x_0 + a_1 x_1 + \cdots + a_n x_n$. Show that the number of divisions performed by your algorithm is $O(n + \lg (max \{a_0, a_1, \cdots, a_n \}))$.
+> Define the $\text{gcd}$ function for more than two arguments by the recursive equation $\text{gcd}(a\_0, a\_1, \cdots, a\_n) = \text{gcd}(a\_0, \text{gcd}(a\_1, a\_2, \cdots, a\_n))$. Show that the $\text{gcd}$ function returns the same answer independent of the order in which its arguments are specified. Also show how to find integers $x\_0, x\_1, \cdots, x\_n$ such that $\text{gcd}(a\_0, a\_1, \dots, a\_n) = a\_0 x\_0 + a\_1 x\_1 + \cdots + a\_n x\_n$. Show that the number of divisions performed by your algorithm is $O(n + \lg (max \{a\_0, a\_1, \cdots, a\_n \}))$.
 
-Suppose $\text{gcd}(a_0, \text{gcd}(a_1, a_2, \cdots, a_n))  = a_0 \cdot x + \text{gcd}(a_1, a_2, \cdots, a_n) \cdot y$ and $\text{gcd}(a_1, \text{gcd}(a_2, a_3, \cdots, a_n))  = a_1 \cdot x' + \text{gcd}(a_2, a_3, \cdots, a_n) \cdot y'$, then the coefficient of $a_1$ is $y \cdot x'$.
+Suppose $\text{gcd}(a\_0, \text{gcd}(a\_1, a\_2, \cdots, a\_n))  = a\_0 \cdot x + \text{gcd}(a\_1, a\_2, \cdots, a\_n) \cdot y$ and $\text{gcd}(a\_1, \text{gcd}(a\_2, a\_3, \cdots, a\_n))  = a\_1 \cdot x' + \text{gcd}(a\_2, a\_3, \cdots, a\_n) \cdot y'$, then the coefficient of $a\_1$ is $y \cdot x'$.
 
 ```python
 def extended_euclid(a, b):
@@ -87,7 +87,7 @@ def extended_eculid_multi(a):
 
 ### 31.2-8
 
-> Define $\text{lcm}(a_1, a_2, \dots, a_n)$ to be the __*least common multiple*__ of the $n$ integers $a_1, a_2, \dots, a_n$, that is, the smallest nonnegative integer that is a multiple of each $a_i$. Show how to compute $\text{lcm}(a_1, a_2, \dots, a_n)$ efficiently using the (two-argument) $\text{gcd}$ operation as a subroutine.
+> Define $\text{lcm}(a\_1, a\_2, \dots, a\_n)$ to be the __*least common multiple*__ of the $n$ integers $a\_1, a\_2, \dots, a\_n$, that is, the smallest nonnegative integer that is a multiple of each $a\_i$. Show how to compute $\text{lcm}(a\_1, a\_2, \dots, a\_n)$ efficiently using the (two-argument) $\text{gcd}$ operation as a subroutine.
 
 ```python
 def gcd(a, b):
@@ -109,14 +109,14 @@ def lcm_multi(lst):
 
 ### 31.2-9
 
-> Prove that $n_1$, $n_2$, $n_3$, and $n_4$ are pairwise relatively prime if and only if
+> Prove that $n\_1$, $n\_2$, $n\_3$, and $n\_4$ are pairwise relatively prime if and only if
 > 
-> $\text{gcd}(n_1n_2,n_3n_4) = \text{gcd}(n_1n_3, n_2n_4) = 1$
+> $\text{gcd}(n\_1n\_2,n\_3n\_4) = \text{gcd}(n\_1n\_3, n\_2n\_4) = 1$
 > 
-> More generally, show that $n_1, n_2, \dots, n_k$ are pairwise relatively prime if and only if a set of $\lceil \lg k \rceil$ pairs of numbers derived from the $n_i$ are relatively prime.
+> More generally, show that $n\_1, n\_2, \dots, n\_k$ are pairwise relatively prime if and only if a set of $\lceil \lg k \rceil$ pairs of numbers derived from the $n\_i$ are relatively prime.
 
-Suppose $n_1 n_2 x + n_3 n_4 y = 1$, then $n_1 (n_2 x) + n_3 (n_4 y) = 1$, thus $n_1$ and $n_3$ are relatively prime, $n_1$ and $n_4$, $n_2$ and $n_3$, $n_2$ and $n_4$ are the all relatively prime. And since $\text{gcd}(n_1n_3, n_2n_4) = 1$, all the pairs are relatively prime.
+Suppose $n\_1 n\_2 x + n\_3 n\_4 y = 1$, then $n\_1 (n\_2 x) + n\_3 (n\_4 y) = 1$, thus $n\_1$ and $n\_3$ are relatively prime, $n\_1$ and $n\_4$, $n\_2$ and $n\_3$, $n\_2$ and $n\_4$ are the all relatively prime. And since $\text{gcd}(n\_1n\_3, n\_2n\_4) = 1$, all the pairs are relatively prime.
 
-General: in the first round, divide the elements into two sets with equal number of elements, calculate the products of the two set separately, if the two products are relatively prime, then the element in one set is pairwise relatively prime with the element in the other set. In the next iterations, for each set, we divide the elements into two subsets, suppose we have subsets $\{ (s_1, s_2), (s_3, s_4), \dots \}$, then we calculate the products of $\{s_1, s_3, \dots\}$ and $\{s_2, s_4, \dots\}$, if the two products are relatively prime, then all the pairs of subset are pairwise relatively prime similar to the first round. In each iteration, the number of elements in a subset is half of the original set, thus there are $\lceil \lg k \rceil$ pairs of products.
+General: in the first round, divide the elements into two sets with equal number of elements, calculate the products of the two set separately, if the two products are relatively prime, then the element in one set is pairwise relatively prime with the element in the other set. In the next iterations, for each set, we divide the elements into two subsets, suppose we have subsets $\{ (s\_1, s\_2), (s\_3, s\_4), \dots \}$, then we calculate the products of $\{s\_1, s\_3, \dots\}$ and $\{s\_2, s\_4, \dots\}$, if the two products are relatively prime, then all the pairs of subset are pairwise relatively prime similar to the first round. In each iteration, the number of elements in a subset is half of the original set, thus there are $\lceil \lg k \rceil$ pairs of products.
 
 To choose the subsets efficiently, in the $k$th iteration, we could divide the numbers based on the value of the index's $k$th bit.

@@ -34,12 +34,12 @@ Sort the intervals by start time, if the start time of one interval is the same 
 
 ### 16.1-5
 
-> Consider a modification to the activity-selection problem in which each activity $a_i$ has, in addition to a start and finish time, a value $v_i$. The objective is no longer to maximize the number of activities scheduled, but instead to maximize the total value of the activities scheduled. That is, we wish to choose a set $A$ of compatible activities such that $\sum_{a_k \in A} v_k$ is maximized. Give a polynomial-time algorithm for this problem.
+> Consider a modification to the activity-selection problem in which each activity $a\_i$ has, in addition to a start and finish time, a value $v\_i$. The objective is no longer to maximize the number of activities scheduled, but instead to maximize the total value of the activities scheduled. That is, we wish to choose a set $A$ of compatible activities such that $\sum\_{a\_k \in A} v\_k$ is maximized. Give a polynomial-time algorithm for this problem.
 
 Let $dp[i]$ be the maximum total value before time $i$,
 
 $$
-dp[i] = \max(dp[i-1], \max_{f_j \le i} dp[s_j] + v_j)
+dp[i] = \max(dp[i-1], \max\_{f\_j \le i} dp[s\_j] + v\_j)
 $$
 ```python
 def activity_selection(s, f, v):

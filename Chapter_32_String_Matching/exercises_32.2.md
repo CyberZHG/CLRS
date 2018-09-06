@@ -20,8 +20,8 @@ Calculate the hashes in each column just like the Rabin-Karp in one-dimension, t
 
 ### 32.2-4
 
-> Alice has a copy of a long $n$-bit file $A = \langle a_{n-1}, a_{n-2}, \dots, a_0 \rangle$, and Bob similarly has an $n$-bit file $B = \langle b_{n-1}, b_{n-2}, \dots, b_0 \rangle$. Alice and Bob wish to know if their files are identical. To avoid transmitting all of $A$ or $B$, they use the following fast probabilistic check. Together, they select a prime $q > 1000n$ and randomly select an integer $x$ from $\{ 0, 1, \dots, q - 1 \}$. Then, Alice evaluates
+> Alice has a copy of a long $n$-bit file $A = \langle a\_{n-1}, a\_{n-2}, \dots, a\_0 \rangle$, and Bob similarly has an $n$-bit file $B = \langle b\_{n-1}, b\_{n-2}, \dots, b\_0 \rangle$. Alice and Bob wish to know if their files are identical. To avoid transmitting all of $A$ or $B$, they use the following fast probabilistic check. Together, they select a prime $q > 1000n$ and randomly select an integer $x$ from $\{ 0, 1, \dots, q - 1 \}$. Then, Alice evaluates
 
-> $\displaystyle A(x) = \left ( \sum_{i=0}^{n-1} a_i x^i \right ) ~\text{mod}~ q$
+> $\displaystyle A(x) = \left ( \sum\_{i=0}^{n-1} a\_i x^i \right ) ~\text{mod}~ q$
 
 > and Bob similarly evaluates $B(x)$. Prove that if $A \ne B$, there is at most one chance in $1000$ that $A(x) = B(x)$, whereas if the two files are the same, $A(x)$ is necessarily the same as $B(x)$. (Hint: See Exercise 31.4-4.)

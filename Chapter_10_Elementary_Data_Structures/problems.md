@@ -166,13 +166,13 @@ Same as __*b*__.
 
 > __*a*__. Suppose that COMPACT-LIST-SEARCH$(L, n, k)$ takes $t$ iterations of the while loop of lines 2–8. Argue that COMPACT-LIST-SEARCH'$(L, n, k, t)$ returns the same answer and that the total number of iterations of both the for and while loops within COMPACT-LIST-SEARCH' is at least $t$.
 
-> __*b*__. Argue that the expected running time of COMPACT-LIST-SEARCH'$(L, n, k, t)$ is $O(t+\text{E}[X_t])$.
+> __*b*__. Argue that the expected running time of COMPACT-LIST-SEARCH'$(L, n, k, t)$ is $O(t+\text{E}[X\_t])$.
 
-> __*c*__. Show that $\text{E}[X_t] \le \sum_{r=1}^n (1-r/n)^t$.
+> __*c*__. Show that $\text{E}[X\_t] \le \sum\_{r=1}^n (1-r/n)^t$.
 
-> __*d*__. Show that $\sum_{r=0}^{n-1} r^t \le n^{t+1}/(t+1)$.
+> __*d*__. Show that $\sum\_{r=0}^{n-1} r^t \le n^{t+1}/(t+1)$.
 
-> __*e*__. Prove that $\text{E}[X_t] \le n/(t+1)$.
+> __*e*__. Prove that $\text{E}[X\_t] \le n/(t+1)$.
 
 > __*f*__. Show that COMPACT-LIST-SEARCH'$(L, n, k, t)$ runs in $O(t+n/t)$ expected time.
 

@@ -136,14 +136,14 @@ def quicksort(a, p, r):
 
 > An alternative analysis of the running time of randomized quicksort focuses on the expected running time of each individual recursive call to RANDOMIZED-QUICKSORT, rather than on the number of comparisons performed.
 
-> __*a*__. Argue that, given an array of size $n$, the probability that any particular element is chosen as the pivot is $1/n$. Use this to define indicator random variables $X_i = I \{i$th smallest element is chosen as the pivot$\}$. What is $\text{E}[X_i]$?
+> __*a*__. Argue that, given an array of size $n$, the probability that any particular element is chosen as the pivot is $1/n$. Use this to define indicator random variables $X\_i = I \{i$th smallest element is chosen as the pivot$\}$. What is $\text{E}[X\_i]$?
 
-$\text{E}[X_i] = 1/n$
+$\text{E}[X\_i] = 1/n$
 
 > __*b*__. Let $T(n)$ be a random variable denoting the running time of quicksort on an array of size $n$. Argue that
 
 > $$
-\text{E}[T(n)] = \text{E} \left [ \sum_{q=1}^n X_q (T(q-1) + T(n-q) + \Theta(n)) \right ]
+\text{E}[T(n)] = \text{E} \left [ \sum\_{q=1}^n X\_q (T(q-1) + T(n-q) + \Theta(n)) \right ]
 $$
 
 Obviously.
@@ -151,35 +151,35 @@ Obviously.
 > __*c*__. Show that we can rewrite equation (7.5) as
 
 > $$
-\text{E}[T(n)] = \frac{2}{n} \sum_{q=2}^{n-1} \text{E}[T(q)] + \Theta(n)
+\text{E}[T(n)] = \frac{2}{n} \sum\_{q=2}^{n-1} \text{E}[T(q)] + \Theta(n)
 $$
 
 $$
 \begin{array}{rll}
-\text{E}[T(n)] &=& \displaystyle \text{E} \left [ \sum_{q=1}^n X_q (T(q-1) + T(n-q) + \Theta(n)) \right ] \\
-&=& \displaystyle \frac{1}{n} \left [ \sum_{q=1}^{n} \text{E}[T(q - 1)] + \sum_{q=1}^{n} \text{E}[T(n - q)] \right ] + \Theta(n) \\
-&=& \displaystyle \frac{1}{n} \left [ \sum_{q=0}^{n-1} \text{E}[T(q)] + \sum_{q=0}^{n-1} \text{E}[T(q)] \right ] + \Theta(n) \\
-&=& \displaystyle \frac{2}{n} \sum_{q=0}^{n-1} \text{E}[T(q)] + \Theta(n) \\
-&=& \displaystyle \frac{2}{n} \sum_{q=2}^{n-1} \text{E}[T(q)] + \Theta(n) \\
+\text{E}[T(n)] &=& \displaystyle \text{E} \left [ \sum\_{q=1}^n X\_q (T(q-1) + T(n-q) + \Theta(n)) \right ] \\\\
+&=& \displaystyle \frac{1}{n} \left [ \sum\_{q=1}^{n} \text{E}[T(q - 1)] + \sum\_{q=1}^{n} \text{E}[T(n - q)] \right ] + \Theta(n) \\\\
+&=& \displaystyle \frac{1}{n} \left [ \sum\_{q=0}^{n-1} \text{E}[T(q)] + \sum\_{q=0}^{n-1} \text{E}[T(q)] \right ] + \Theta(n) \\\\
+&=& \displaystyle \frac{2}{n} \sum\_{q=0}^{n-1} \text{E}[T(q)] + \Theta(n) \\\\
+&=& \displaystyle \frac{2}{n} \sum\_{q=2}^{n-1} \text{E}[T(q)] + \Theta(n) \\\\
 \end{array}
 $$
 
 > __*d*__. Show that
 
 > $$
-\sum_{k=2}^{n-1}k \lg k \le \frac{1}{2} n^2 \lg n - \frac{1}{8} n^2
+\sum\_{k=2}^{n-1}k \lg k \le \frac{1}{2} n^2 \lg n - \frac{1}{8} n^2
 $$
 
 $$
 \begin{array}{rll}
-\displaystyle \sum_{k=2}^{n-1} k \lg k &=& \displaystyle \sum_{k=2}^{\left \lceil n / 2 \right \rceil - 1} k \lg k + \sum_{k=\left \lceil n / 2 \right \rceil}^{n-1} k \lg k \\
-&\le& \displaystyle \sum_{k=2}^{\left \lceil n / 2 \right \rceil - 1} k \lg (n/2) + \sum_{k=\left \lceil n / 2 \right \rceil}^{n-1} k \lg n \\
-&=&  \displaystyle \sum_{k=2}^{\left \lceil n / 2 \right \rceil - 1} k \lg n -  \displaystyle \sum_{k=2}^{\left \lceil n / 2 \right \rceil - 1} k + \sum_{k=\left \lceil n / 2 \right \rceil}^{n-1} k \lg n \\
-&=& \displaystyle \sum_{k=2}^{n - 1} k \lg n -  \displaystyle \sum_{k=2}^{\left \lceil n / 2 \right \rceil - 1} k \\
-&\le& \displaystyle \frac{\left [ 2 + (n - 1) \right ] \cdot (n - 2)}{2} \cdot \lg n -  \frac{\left [ 2 + (n / 2 - 1) \right ] \cdot (n / 2 - 2)}{2} \cdot \lg k \\
-&=& \displaystyle \frac{n^2 - n - 2}{2} \cdot \lg n - \frac{n^2 - 2n - 8}{8} \cdot \lg k \\
-&=& \displaystyle \frac{1}{2} n^2 \lg n - \frac{1}{8} n^2 - \frac{1}{2} (n + 2) \lg n + \frac{1}{4} (n + 4) \\
-&=& \displaystyle \frac{1}{2} n^2 \lg n - \frac{1}{8} n^2 + \frac{1}{4} n (1 - 2 \lg n) + (1 - \lg n) \\
+\displaystyle \sum\_{k=2}^{n-1} k \lg k &=& \displaystyle \sum\_{k=2}^{\left \lceil n / 2 \right \rceil - 1} k \lg k + \sum\_{k=\left \lceil n / 2 \right \rceil}^{n-1} k \lg k \\\\
+&\le& \displaystyle \sum\_{k=2}^{\left \lceil n / 2 \right \rceil - 1} k \lg (n/2) + \sum\_{k=\left \lceil n / 2 \right \rceil}^{n-1} k \lg n \\\\
+&=&  \displaystyle \sum\_{k=2}^{\left \lceil n / 2 \right \rceil - 1} k \lg n -  \displaystyle \sum\_{k=2}^{\left \lceil n / 2 \right \rceil - 1} k + \sum\_{k=\left \lceil n / 2 \right \rceil}^{n-1} k \lg n \\\\
+&=& \displaystyle \sum\_{k=2}^{n - 1} k \lg n -  \displaystyle \sum\_{k=2}^{\left \lceil n / 2 \right \rceil - 1} k \\\\
+&\le& \displaystyle \frac{\left [ 2 + (n - 1) \right ] \cdot (n - 2)}{2} \cdot \lg n -  \frac{\left [ 2 + (n / 2 - 1) \right ] \cdot (n / 2 - 2)}{2} \cdot \lg k \\\\
+&=& \displaystyle \frac{n^2 - n - 2}{2} \cdot \lg n - \frac{n^2 - 2n - 8}{8} \cdot \lg k \\\\
+&=& \displaystyle \frac{1}{2} n^2 \lg n - \frac{1}{8} n^2 - \frac{1}{2} (n + 2) \lg n + \frac{1}{4} (n + 4) \\\\
+&=& \displaystyle \frac{1}{2} n^2 \lg n - \frac{1}{8} n^2 + \frac{1}{4} n (1 - 2 \lg n) + (1 - \lg n) \\\\
 &\le& \displaystyle \frac{1}{2} n^2 \lg n - \frac{1}{8} n^2
 \end{array}
 $$
@@ -190,11 +190,11 @@ Suppose $\text{E}[T(n)] \le cn \lg n$,
 
 $$
 \begin{array}{rll}
-\text{E}[T(n)] &=& \displaystyle \frac{2}{n} \sum_{q=2}^{n-1} \text{E}[T(q)] + \Theta(n) \\
-&\le& \displaystyle \frac{2}{n} \sum_{q=2}^{n-1} cq\lg q + \Theta(n) \\
-&\le& \displaystyle \frac{2c}{n} \left ( \frac{1}{2}n^2 \lg n - \frac{1}{8}n^2 \right ) + \Theta(n) \\
-&=& \displaystyle cn \lg n - \frac{1}{4}cn + \Theta(n) \\
-&=& \displaystyle \Theta(n \lg n) \\
+\text{E}[T(n)] &=& \displaystyle \frac{2}{n} \sum\_{q=2}^{n-1} \text{E}[T(q)] + \Theta(n) \\\\
+&\le& \displaystyle \frac{2}{n} \sum\_{q=2}^{n-1} cq\lg q + \Theta(n) \\\\
+&\le& \displaystyle \frac{2c}{n} \left ( \frac{1}{2}n^2 \lg n - \frac{1}{8}n^2 \right ) + \Theta(n) \\\\
+&=& \displaystyle cn \lg n - \frac{1}{4}cn + \Theta(n) \\\\
+&=& \displaystyle \Theta(n \lg n) \\\\
 \end{array}
 $$
 
@@ -262,23 +262,23 @@ def quicksort(a, p, r):
 ### 7-5 Median-of-3 partition
 
 > One way to improve the RANDOMIZED-QUICKSORT procedure is to partition
-around a pivot that is chosen more carefully than by picking a random element from the subarray. One common approach is the median-of-3 method: choose the pivot as the median (middle element) of a set of 3 elements randomly selected from the subarray. (See Exercise 7.4-6.) For this problem, let us assume that the elements in the input array $A[1 \dots n]$ are distinct and that $n \ge 3$. We denote the sorted output array by $A'[1 \dots n]$. Using the median-of-3 method to choose the pivot element $x$, define $p_i = \text{Pr} \{ x = A'[i] \}$.
+around a pivot that is chosen more carefully than by picking a random element from the subarray. One common approach is the median-of-3 method: choose the pivot as the median (middle element) of a set of 3 elements randomly selected from the subarray. (See Exercise 7.4-6.) For this problem, let us assume that the elements in the input array $A[1 \dots n]$ are distinct and that $n \ge 3$. We denote the sorted output array by $A'[1 \dots n]$. Using the median-of-3 method to choose the pivot element $x$, define $p\_i = \text{Pr} \{ x = A'[i] \}$.
 
-> __*a*__. Give an extract formula for $p_i$ as a function of $n$ and $i$ for $i=2,3, \dots, n-1$. (Note that $p_1 = p_n = 0$.)
+> __*a*__. Give an extract formula for $p\_i$ as a function of $n$ and $i$ for $i=2,3, \dots, n-1$. (Note that $p\_1 = p\_n = 0$.)
 
 
 $$
-p_i = \binom{3}{1} \frac{1}{n} \cdot \binom{2}{1} \frac{i-1}{n-1} \cdot \frac{n-i}{n-2} = \frac{6(i-1)(n-i)}{n(n-1)(n-2)}
+p\_i = \binom{3}{1} \frac{1}{n} \cdot \binom{2}{1} \frac{i-1}{n-1} \cdot \frac{n-i}{n-2} = \frac{6(i-1)(n-i)}{n(n-1)(n-2)}
 $$
 
 > __*b*__. By what amount have we increased the likelihood of choosing the pivot as $x = A'[\left \lfloor (n+1)/2 \right \rfloor]$, the median of $A[1 \dots n]$, compared with the ordinary implementaiton? Assume that $n \rightarrow \infty$, and give the limiting ratio of these probabilities.
 
 $$
-p_{\left \lfloor (n+1)/2 \right \rfloor} \approx \frac{6(\frac{n+1}{2}-1)(n-\frac{n+1}{2})}{n(n-1)(n-2)}=\frac{3(n-1)}{2n(n-2)}
+p\_{\left \lfloor (n+1)/2 \right \rfloor} \approx \frac{6(\frac{n+1}{2}-1)(n-\frac{n+1}{2})}{n(n-1)(n-2)}=\frac{3(n-1)}{2n(n-2)}
 $$
 
 $$
-\lim_{n \rightarrow \infty}\frac{\frac{3(n-1)}{2n(n-2)}}{\frac{1}{n}} = \lim_{n \rightarrow \infty} \frac{3(n-1)}{2(n-2)} = \frac{3}{2}
+\lim\_{n \rightarrow \infty}\frac{\frac{3(n-1)}{2n(n-2)}}{\frac{1}{n}} = \lim\_{n \rightarrow \infty} \frac{3(n-1)}{2(n-2)} = \frac{3}{2}
 $$
 
 
@@ -286,12 +286,12 @@ $$
 
 $$
 \begin{array}{rll}
-\displaystyle \lim_{n \rightarrow \infty} \sum_{i=n/3}^{2n/3} \frac{6(i-1)(n-i)}{n(n-1)(n-2)} &=& \displaystyle \lim_{n \rightarrow \infty} \frac{6}{n(n-1)(n-2)} \sum_{i=n/3}^{2n/3} (i-1)(n-i) \\
-&\approx& \displaystyle \lim_{n \rightarrow \infty} \frac{6}{n(n-1)(n-2)} \int_{n/3}^{2n/3} (x-1)(n-x) dx \\
-&=& \displaystyle \lim_{n \rightarrow \infty} \frac{6}{n(n-1)(n-2)} \left (-\frac{1}{3}x^3+\frac{1}{2}(n+1)x^2-nx \right ) \Bigr|_{n/3}^{2n/3} \\
-&=& \displaystyle \lim_{n \rightarrow \infty} \frac{6}{n(n-1)(n-2)} \left ( -\frac{7}{81}n^3+\frac{1}{6}n^3 - \frac{1}{6}n^2 \right ) \\
-&=& \displaystyle \lim_{n \rightarrow \infty} \frac{1}{n(n-1)(n-2)} \left ( -\frac{14}{27}n^3+n^3 - n^2 \right ) \\
-&=& \displaystyle \lim_{n \rightarrow \infty} \frac{\frac{13}{27}n^3 - n^2}{n(n-1)(n-2)} \\
+\displaystyle \lim\_{n \rightarrow \infty} \sum\_{i=n/3}^{2n/3} \frac{6(i-1)(n-i)}{n(n-1)(n-2)} &=& \displaystyle \lim\_{n \rightarrow \infty} \frac{6}{n(n-1)(n-2)} \sum\_{i=n/3}^{2n/3} (i-1)(n-i) \\\\
+&\approx& \displaystyle \lim\_{n \rightarrow \infty} \frac{6}{n(n-1)(n-2)} \int\_{n/3}^{2n/3} (x-1)(n-x) dx \\\\
+&=& \displaystyle \lim\_{n \rightarrow \infty} \frac{6}{n(n-1)(n-2)} \left (-\frac{1}{3}x^3+\frac{1}{2}(n+1)x^2-nx \right ) \Bigr|\_{n/3}^{2n/3} \\\\
+&=& \displaystyle \lim\_{n \rightarrow \infty} \frac{6}{n(n-1)(n-2)} \left ( -\frac{7}{81}n^3+\frac{1}{6}n^3 - \frac{1}{6}n^2 \right ) \\\\
+&=& \displaystyle \lim\_{n \rightarrow \infty} \frac{1}{n(n-1)(n-2)} \left ( -\frac{14}{27}n^3+n^3 - n^2 \right ) \\\\
+&=& \displaystyle \lim\_{n \rightarrow \infty} \frac{\frac{13}{27}n^3 - n^2}{n(n-1)(n-2)} \\\\
 &=& \frac{13}{27}
 \end{array}
 $$
@@ -302,9 +302,9 @@ Even if median-of-3 choose the median of $A[p \dots r]$, the running time is sti
 
 ### 7-6 Fuzzy sorting of intervals
 
-> Consider a sorting problem in which we do not know the numbers exactly. Instead, for each number, we know an interval on the real line to which it belongs. That is, we are given $n$ closed intervals of the form $[a_i, b_i]$, where $a_i \le b_i$. We wish to __*fuzzy-sort*__ these intervals, i.e., to produce a permutation $\left \langle i_1, i_2, \dots, i_n \right \rangle$ of the intervals such that for $j=1,2,\dots,n$, there exist $c_j \in [a_{ij}, b_{ij}]$ satisfying $c_1 \le c_2 \le \dots \le c_n$.
+> Consider a sorting problem in which we do not know the numbers exactly. Instead, for each number, we know an interval on the real line to which it belongs. That is, we are given $n$ closed intervals of the form $[a\_i, b\_i]$, where $a\_i \le b\_i$. We wish to __*fuzzy-sort*__ these intervals, i.e., to produce a permutation $\left \langle i\_1, i\_2, \dots, i\_n \right \rangle$ of the intervals such that for $j=1,2,\dots,n$, there exist $c\_j \in [a\_{ij}, b\_{ij}]$ satisfying $c\_1 \le c\_2 \le \dots \le c\_n$.
 
-> __*a*__. Design a randomized algorithm for fuzzy-sorting $n$ intervals. Your algorithm should have the general structure of an algorithm that quicksorts the left endpoints (the $a_i$ values), but it should take advantage of overlapping intervals to improve the running time. (As the intervals overlap more and more, the problem of fuzzy-sorting the intervals becomes progressively easier. Your algorithm should take advantage of such overlapping, to the extent that it exists.)
+> __*a*__. Design a randomized algorithm for fuzzy-sorting $n$ intervals. Your algorithm should have the general structure of an algorithm that quicksorts the left endpoints (the $a\_i$ values), but it should take advantage of overlapping intervals to improve the running time. (As the intervals overlap more and more, the problem of fuzzy-sorting the intervals becomes progressively easier. Your algorithm should take advantage of such overlapping, to the extent that it exists.)
 
 Find the intervals that all have a common overlapping with the pivot, these intervals could be seen as equal since there is a $c$ in the common overlapping. The following is the same as 7.2.
 
@@ -361,7 +361,7 @@ def quicksort(a, p, r):
         quicksort(a, t + 1, r)
 ```
 
-> __*b*__. Argue that your algorithm runs in expected time $\Theta(n \lg n)$ in general, but runs in expected time $\Theta(n)$ when all of the intervals overlap (i.e., when there exists a value $x$ such that $x \in [a_i, b_i]$ for all $i$ ). Your algorithm should not be checking
+> __*b*__. Argue that your algorithm runs in expected time $\Theta(n \lg n)$ in general, but runs in expected time $\Theta(n)$ when all of the intervals overlap (i.e., when there exists a value $x$ such that $x \in [a\_i, b\_i]$ for all $i$ ). Your algorithm should not be checking
 for this case explicitly; rather, its performance should naturally improve as the amount of overlap increases.
 
 The algorithm is based on quick-sort, therefore it is $\Theta(n \lg n)$.

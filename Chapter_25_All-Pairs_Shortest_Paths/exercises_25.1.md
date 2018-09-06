@@ -8,12 +8,12 @@ Initial:
 
 $$
 \left \{ \begin{matrix}
-0 & \infty & \infty & \infty & -1 & \infty\\
-1 & 0 & \infty & 2 & \infty & \infty\\
-\infty & 2 & 0 & \infty & \infty & -8\\
--4 & \infty & \infty & 0 & 3 & \infty\\
-\infty & 7 & \infty & \infty & 0 & \infty\\
-\infty & 5 & 10 & \infty & \infty & 0\\
+0 & \infty & \infty & \infty & -1 & \infty\\\\
+1 & 0 & \infty & 2 & \infty & \infty\\\\
+\infty & 2 & 0 & \infty & \infty & -8\\\\
+-4 & \infty & \infty & 0 & 3 & \infty\\\\
+\infty & 7 & \infty & \infty & 0 & \infty\\\\
+\infty & 5 & 10 & \infty & \infty & 0\\\\
 \end{matrix} \right \}
 $$
 Slow:
@@ -21,45 +21,45 @@ Slow:
 $m=2$:
 $$
 \left \{ \begin{matrix}
-0 & 6 & \infty & \infty & -1 & \infty\\
--2 & 0 & \infty & 2 & 0 & \infty\\
-3 & -3 & 0 & 4 & \infty & -8\\
--4 & 10 & \infty & 0 & -5 & \infty\\
-8 & 7 & \infty & 9 & 0 & \infty\\
-6 & 5 & 10 & 7 & \infty & 0\\
+0 & 6 & \infty & \infty & -1 & \infty\\\\
+-2 & 0 & \infty & 2 & 0 & \infty\\\\
+3 & -3 & 0 & 4 & \infty & -8\\\\
+-4 & 10 & \infty & 0 & -5 & \infty\\\\
+8 & 7 & \infty & 9 & 0 & \infty\\\\
+6 & 5 & 10 & 7 & \infty & 0\\\\
 \end{matrix} \right \}
 $$
 $m=3$:
 $$
 \left \{ \begin{matrix}
-0 & 6 & \infty & 8 & -1 & \infty\\
--2 & 0 & \infty & 2 & -3 & \infty\\
--2 & -3 & 0 & -1 & 2 & -8\\
--4 & 2 & \infty & 0 & -5 & \infty\\
-5 & 7 & \infty & 9 & 0 & \infty\\
-3 & 5 & 10 & 7 & 5 & 0\\
+0 & 6 & \infty & 8 & -1 & \infty\\\\
+-2 & 0 & \infty & 2 & -3 & \infty\\\\
+-2 & -3 & 0 & -1 & 2 & -8\\\\
+-4 & 2 & \infty & 0 & -5 & \infty\\\\
+5 & 7 & \infty & 9 & 0 & \infty\\\\
+3 & 5 & 10 & 7 & 5 & 0\\\\
 \end{matrix} \right \}
 $$
 $m=4$:
 $$
 \left \{ \begin{matrix}
-0 & 6 & \infty & 8 & -1 & \infty\\
--2 & 0 & \infty & 2 & -3 & \infty\\
--5 & -3 & 0 & -1 & -3 & -8\\
--4 & 2 & \infty & 0 & -5 & \infty\\
-5 & 7 & \infty & 9 & 0 & \infty\\
-3 & 5 & 10 & 7 & 2 & 0\\
+0 & 6 & \infty & 8 & -1 & \infty\\\\
+-2 & 0 & \infty & 2 & -3 & \infty\\\\
+-5 & -3 & 0 & -1 & -3 & -8\\\\
+-4 & 2 & \infty & 0 & -5 & \infty\\\\
+5 & 7 & \infty & 9 & 0 & \infty\\\\
+3 & 5 & 10 & 7 & 2 & 0\\\\
 \end{matrix} \right \}
 $$
 $m=5$:
 $$
 \left \{ \begin{matrix}
-0 & 6 & \infty & 8 & -1 & \infty\\
--2 & 0 & \infty & 2 & -3 & \infty\\
--5 & -3 & 0 & -1 & -6 & -8\\
--4 & 2 & \infty & 0 & -5 & \infty\\
-5 & 7 & \infty & 9 & 0 & \infty\\
-3 & 5 & 10 & 7 & 2 & 0\\
+0 & 6 & \infty & 8 & -1 & \infty\\\\
+-2 & 0 & \infty & 2 & -3 & \infty\\\\
+-5 & -3 & 0 & -1 & -6 & -8\\\\
+-4 & 2 & \infty & 0 & -5 & \infty\\\\
+5 & 7 & \infty & 9 & 0 & \infty\\\\
+3 & 5 & 10 & 7 & 2 & 0\\\\
 \end{matrix} \right \}
 $$
 Fast:
@@ -67,41 +67,41 @@ Fast:
 $m=2$:
 $$
 \left \{ \begin{matrix}
-0 & 6 & \infty & \infty & -1 & \infty\\
--2 & 0 & \infty & 2 & 0 & \infty\\
-3 & -3 & 0 & 4 & \infty & -8\\
--4 & 10 & \infty & 0 & -5 & \infty\\
-8 & 7 & \infty & 9 & 0 & \infty\\
-6 & 5 & 10 & 7 & \infty & 0\\
+0 & 6 & \infty & \infty & -1 & \infty\\\\
+-2 & 0 & \infty & 2 & 0 & \infty\\\\
+3 & -3 & 0 & 4 & \infty & -8\\\\
+-4 & 10 & \infty & 0 & -5 & \infty\\\\
+8 & 7 & \infty & 9 & 0 & \infty\\\\
+6 & 5 & 10 & 7 & \infty & 0\\\\
 \end{matrix} \right \}
 $$
 
 $m=4$:
 $$
 \left \{ \begin{matrix}
-0 & 6 & \infty & 8 & -1 & \infty\\
--2 & 0 & \infty & 2 & -3 & \infty\\
--5 & -3 & 0 & -1 & -3 & -8\\
--4 & 2 & \infty & 0 & -5 & \infty\\
-5 & 7 & \infty & 9 & 0 & \infty\\
-3 & 5 & 10 & 7 & 2 & 0\\
+0 & 6 & \infty & 8 & -1 & \infty\\\\
+-2 & 0 & \infty & 2 & -3 & \infty\\\\
+-5 & -3 & 0 & -1 & -3 & -8\\\\
+-4 & 2 & \infty & 0 & -5 & \infty\\\\
+5 & 7 & \infty & 9 & 0 & \infty\\\\
+3 & 5 & 10 & 7 & 2 & 0\\\\
 \end{matrix} \right \}
 $$
 
 $m=8$:
 $$
 \left \{ \begin{matrix}
-0 & 6 & \infty & 8 & -1 & \infty\\
--2 & 0 & \infty & 2 & -3 & \infty\\
--5 & -3 & 0 & -1 & -6 & -8\\
--4 & 2 & \infty & 0 & -5 & \infty\\
-5 & 7 & \infty & 9 & 0 & \infty\\
-3 & 5 & 10 & 7 & 2 & 0\\
+0 & 6 & \infty & 8 & -1 & \infty\\\\
+-2 & 0 & \infty & 2 & -3 & \infty\\\\
+-5 & -3 & 0 & -1 & -6 & -8\\\\
+-4 & 2 & \infty & 0 & -5 & \infty\\\\
+5 & 7 & \infty & 9 & 0 & \infty\\\\
+3 & 5 & 10 & 7 & 2 & 0\\\\
 \end{matrix} \right \}
 $$
 ### 25.1-2
 
-> Why do we require that $w_{ii}=0$ for all $1 \le i \le n$?
+> Why do we require that $w\_{ii}=0$ for all $1 \le i \le n$?
 
 To simplify (25.2).
 
@@ -111,11 +111,11 @@ To simplify (25.2).
 
 > $$
 L^{(0)} = \left ( \begin{matrix}
-0 & \infty & \infty & \cdots & \infty \\
-\infty & 0 & \infty & \cdots & \infty \\
-\infty & \infty & 0 & \cdots & \infty \\
-\vdots & \vdots & \vdots & \ddots & \vdots \\
-\infty & \infty & \infty & \cdots & 0 \\
+0 & \infty & \infty & \cdots & \infty \\\\
+\infty & 0 & \infty & \cdots & \infty \\\\
+\infty & \infty & 0 & \cdots & \infty \\\\
+\vdots & \vdots & \vdots & \ddots & \vdots \\\\
+\infty & \infty & \infty & \cdots & 0 \\\\
 \end{matrix} \right )
 $$
 
@@ -137,13 +137,13 @@ A vector filled with 0 except that the source is 1.
 
 > Suppose we also wish to compute the vertices on shortest paths in the algorithms of this section. Show how to compute the predecessor matrix $\prod$ from the completed matrix $L$ of shortest-path weights in $O(n^3)$ time.
 
-If $l_{ik} + w_{kj} = l_{ij}$, then $\pi_{ij} = k$.
+If $l\_{ik} + w\_{kj} = l\_{ij}$, then $\pi\_{ij} = k$.
 
 ### 25.1-7
 
-> We can also compute the vertices on shortest paths as we compute the shortestpath weights. Define $\pi_{ij}^{(m)}$ as the predecessor of vertex $j$ on any minimum-weight path from $i$ to $j$ that contains at most $m$ edges. Modify the EXTEND-SHORTESTPATHS and SLOW-ALL-PAIRS-SHORTEST-PATHS procedures to compute the matrices$\prod^{(1)}, \prod^{(2)}, \dots, \prod^{(n-1)}$ as the matrices $L^{(1)}, L^{(2)}, \dots, L^{(n-1)}$ are computed.
+> We can also compute the vertices on shortest paths as we compute the shortestpath weights. Define $\pi\_{ij}^{(m)}$ as the predecessor of vertex $j$ on any minimum-weight path from $i$ to $j$ that contains at most $m$ edges. Modify the EXTEND-SHORTESTPATHS and SLOW-ALL-PAIRS-SHORTEST-PATHS procedures to compute the matrices$\prod^{(1)}, \prod^{(2)}, \dots, \prod^{(n-1)}$ as the matrices $L^{(1)}, L^{(2)}, \dots, L^{(n-1)}$ are computed.
 
-If $l_{ik}^{(m-1)} + w_{kj} < l_{ij}^{(m)}$, then $\pi_{ij}^{(m)} = k$.
+If $l\_{ik}^{(m-1)} + w\_{kj} < l\_{ij}^{(m)}$, then $\pi\_{ij}^{(m)} = k$.
 
 ### 25.1-8
 
@@ -164,10 +164,10 @@ def fast_all_pairs_shortest_paths(w):
 > Modify FASTER-ALL-PAIRS-SHORTEST-PATHS so that it can determine whether
 the graph contains a negative-weight cycle.
 
-If $l_{ii} < 0$, then there is a negative-weight cycle.
+If $l\_{ii} < 0$, then there is a negative-weight cycle.
 
 ### 25.1-10
 
 > Give an efficient algorithm to find the length (number of edges) of a minimum-length negative-weight cycle in a graph.
 
-If $l_{ii}^{(m)} < 0$ and $l_{ii}^{(m-1)} = 0$, then the minimum-length is $m$.
+If $l\_{ii}^{(m)} < 0$ and $l\_{ii}^{(m-1)} = 0$, then the minimum-length is $m$.

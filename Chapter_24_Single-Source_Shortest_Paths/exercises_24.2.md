@@ -29,6 +29,6 @@ $s.d = s.w$, $w(u, v) = v.w$.
 
 > Give an efficient algorithm to count the total number of paths in a directed acyclic graph. Analyze your algorithm.
 
-$s.num = 1$, $v.num = \sum_{(u, v) \in E} u.num$.
+$s.num = 1$, $v.num = \sum\_{(u, v) \in E} u.num$.
 
 Time: $\Theta(V + E)$.

@@ -32,11 +32,11 @@ SUM-ARRAYS(A, B, C)
 
 > __*b*__. Suppose that we set $grain\text{-}size = 1$. What is the parallelism of this implementation?
 
-$T_1 = \Theta(n)$, $T_\infty = \Theta(n)$, $T_1 / T_\infty = \Theta(1)$.
+$T\_1 = \Theta(n)$, $T\_\infty = \Theta(n)$, $T\_1 / T\_\infty = \Theta(1)$.
 
 > __*c*__. Give a formula for the span of SUM-ARRAYS' in terms of $n$ and $grain\text{-}size$. Derive the best value for grain-size to maximize parallelism.
 
-$T_\infty(n) = \Theta(\max(grain\text{-}size, n / grain\text{-}size))$
+$T\_\infty(n) = \Theta(\max(grain\text{-}size, n / grain\text{-}size))$
 
 ### 27-2 Saving temporary space in matrix multiplication
 
@@ -44,16 +44,16 @@ $T_\infty(n) = \Theta(\max(grain\text{-}size, n / grain\text{-}size))$
 
 > __*a*__. Describe a recursive multithreaded algorithm that eliminates the need for the temporary matrix $T$ at the cost of increasing the span to $\Theta(n)$.
 
-Initialize $C = 0$ in parallel in $\Theta(\lg n)$, add __sync__ after the 4th __spawn__, $c_{11} = c_{11} + a_{11} \cdot b_{11}$, $T_\infty(n) = 2 T_\infty(n / 2) + \Theta(\lg n) = \Theta(n)$
+Initialize $C = 0$ in parallel in $\Theta(\lg n)$, add __sync__ after the 4th __spawn__, $c\_{11} = c\_{11} + a\_{11} \cdot b\_{11}$, $T\_\infty(n) = 2 T\_\infty(n / 2) + \Theta(\lg n) = \Theta(n)$
 
 > __*b*__. Give and solve recurrences for the work and span of your implementation.
 
-* Work: $T_1 = \Theta(n^3)$.
-* Span: $T_\infty = \Theta(n)$.
+* Work: $T\_1 = \Theta(n^3)$.
+* Span: $T\_\infty = \Theta(n)$.
 
 > __*c*__. Analyze the parallelism of your implementation. Ignoring the constants in the $\Theta$-notation, estimate the parallelism on $1000 \times 1000$ matrices. Compare with the parallelism of P-MATRIX-MULTIPLY-RECURSIVE.
 
-Parallelism: $T_1 / T_\infty = \Theta(n^2) = 1000^2 = 10^6$.
+Parallelism: $T\_1 / T\_\infty = \Theta(n^2) = 1000^2 = 10^6$.
 
 Most parallel computers still have far fewer than 1 million processors.
 
@@ -104,17 +104,17 @@ REDUCE(x, i, j)
 
 > __*b*__. Analyze the work, span, and parallelism of P-SCAN-1.
 
-* Work: $T_1 = \Theta(n^2)$.
-* Span: $T_\infty = \Theta(\lg n) + \Theta(\lg n) = \Theta(\lg n)$.
-* Parallelism: $T_1 / T_\infty = \Theta(n^2 / \lg n)$.
+* Work: $T\_1 = \Theta(n^2)$.
+* Span: $T\_\infty = \Theta(\lg n) + \Theta(\lg n) = \Theta(\lg n)$.
+* Parallelism: $T\_1 / T\_\infty = \Theta(n^2 / \lg n)$.
 
 > By using nested parallelism, we can obtain a more efficient $\otimes$-prefix computation
 
 > __*c*__. Argue that P-SCAN-2 is correct, and analyze its work, span, and parallelism.
 
-* Work: $T_1(n) = 2 T_1(n / 2) + \Theta(n) = \Theta(n \lg n)$.
-* Span: $T_\infty(n) = T_\infty(n / 2) + \Theta(\lg n) = \Theta(\lg^2n)$.
-* Parallelism: $T_1 / T_\infty = \Theta(n / \lg n)$.
+* Work: $T\_1(n) = 2 T\_1(n / 2) + \Theta(n) = \Theta(n \lg n)$.
+* Span: $T\_\infty(n) = T\_\infty(n / 2) + \Theta(\lg n) = \Theta(\lg^2n)$.
+* Parallelism: $T\_1 / T\_\infty = \Theta(n / \lg n)$.
 
 > __*d*__. Fill in the three missing expressions in line 8 of P-SCAN-UP and lines 5 and 6 of P-SCAN-DOWN. Argue that with expressions you supplied, P-SCAN-3 is correct.
 
@@ -124,9 +124,9 @@ REDUCE(x, i, j)
 
 > __*e*__. Analyze the work, span, and parallelism of P-SCAN-3.
 
-* Work: $T_1 = \Theta(n)$.
-* Span: $T_\infty = \Theta(\lg n)$.
-* Parallelism: $T_1 / T_\infty = \Theta(n / \lg n)$.
+* Work: $T\_1 = \Theta(n)$.
+* Span: $T\_\infty = \Theta(\lg n)$.
+* Parallelism: $T\_1 / T\_\infty = \Theta(n / \lg n)$.
 
 ### 27-5 Multithreading a simple stencil calculation
 
@@ -143,9 +143,9 @@ SIMPLE-STENCIL(A)
 5  SIMPLE-STENCIL(A22)
 ```
 
-* Work: $T_1 = \Theta(n^2)$.
-* Span: $T_\infty(n) = 3 T_\infty(n / 2) + \Theta(1) = \Theta(n^{\lg 3}) \approx \Theta(n^{1.58})$.
-* Parallelism: $T_1 / T_\infty = \Theta(n^{2/\lg 3}) \approx \Theta(n^{1.26})$.
+* Work: $T\_1 = \Theta(n^2)$.
+* Span: $T\_\infty(n) = 3 T\_\infty(n / 2) + \Theta(1) = \Theta(n^{\lg 3}) \approx \Theta(n^{1.58})$.
+* Parallelism: $T\_1 / T\_\infty = \Theta(n^{2/\lg 3}) \approx \Theta(n^{1.26})$.
 
 > __*b*__. Modify your solution to part (a) to divide an $n \times n$ array into nine $n / 3 \times n / 3$ subarrays, again recursing with as much parallelism as possible. Analyze this algorithm. How much more or less parallelism does this algorithm have compared with the algorithm from part (a)?
 
@@ -157,15 +157,15 @@ spawn 23 32 sync
 33
 ```
 
-* Work: $T_1 = \Theta(n^2)$.
-* Span: $T_\infty(n) = 5 T_\infty(n / 3) + \Theta(1) = \Theta(n^{\log_3 5}) \approx \Theta(n^{1.46})$.
-* Parallelism: $T_1 / T_\infty = \Theta(n^{2/\log_3 5}) \approx \Theta(n^{1.37})$.
+* Work: $T\_1 = \Theta(n^2)$.
+* Span: $T\_\infty(n) = 5 T\_\infty(n / 3) + \Theta(1) = \Theta(n^{\log\_3 5}) \approx \Theta(n^{1.46})$.
+* Parallelism: $T\_1 / T\_\infty = \Theta(n^{2/\log\_3 5}) \approx \Theta(n^{1.37})$.
 
 > __*c*__. Generalize your solutions to parts (a) and (b) as follows. Choose an integer $b \ge 2$. Divide an $n \times n$ array into $b^2$ subarrays, each of size $n / b \times n / b$, recursing with as much parallelism as possible. In terms of $n$ and $b$, what are the work, span, and parallelism of your algorithm? Argue that, using this approach, the parallelism must be $o(n)$ for any choice of $b \ge 2$. (Hint: For this last argument, show that the exponent of $n$ in the parallelism is strictly less than 1 for any choice of $b \ge 2$.)
 
-* Work: $T_1 = \Theta(n^2)$.
-* Span: $T_\infty(n) = (2b - 1) T_\infty(n / b) + \Theta(1) = \Theta(n^{\log_b (2b - 1)})$.
-* Parallelism: $T_1 / T_\infty = \Theta(n^{2/\log_b (2b-1)}) = \Theta(n^{\log_{2b - 1}b^2})$.
+* Work: $T\_1 = \Theta(n^2)$.
+* Span: $T\_\infty(n) = (2b - 1) T\_\infty(n / b) + \Theta(1) = \Theta(n^{\log\_b (2b - 1)})$.
+* Parallelism: $T\_1 / T\_\infty = \Theta(n^{2/\log\_b (2b-1)}) = \Theta(n^{\log\_{2b - 1}b^2})$.
 
 $b^2 \le 2b - 1$, $(b - 1)^2 \le 0$, since $b \ge 2$, the parallelism must be $o(n)$.
 
@@ -175,21 +175,21 @@ $b^2 \le 2b - 1$, $(b - 1)^2 \le 0$, since $b \ge 2$, the parallelism must be $o
 
 > Just as with ordinary serial algorithms, we sometimes want to implement randomized multithreaded algorithms. This problem explores how to adapt the various performance measures in order to handle the expected behavior of such algorithms. It also asks you to design and analyze a multithreaded algorithm for randomized quicksort.
 
-> __*a*__. Explain how to modify the work law (27.2), span law (27.3), and greedy scheduler bound (27.4) to work with expectations when $T_P$, $T_1$, and $T_\infty$ are all random variables.
+> __*a*__. Explain how to modify the work law (27.2), span law (27.3), and greedy scheduler bound (27.4) to work with expectations when $T\_P$, $T\_1$, and $T\_\infty$ are all random variables.
 
-$\text{E}[T_P] \ge \text{E}[T_1] / P$
+$\text{E}[T\_P] \ge \text{E}[T\_1] / P$
 
-$\text{E}[T_P] \ge \text{E}[T_\infty]$
+$\text{E}[T\_P] \ge \text{E}[T\_\infty]$
 
-$\text{E}[T_P] \le \text{E}[T_1]/P + \text{E}[T_\infty]$
+$\text{E}[T\_P] \le \text{E}[T\_1]/P + \text{E}[T\_\infty]$
 
-> __*b*__. Consider a randomized multithreaded algorithm for which 1% of the time we have $T_1 = 10^4$ and $T_{10,000} = 1$, but for 99% of the time we have $T_1 = T_{10,000} = 10^9$. Argue that the __*speedup*__ of a randomized multithreaded algorithm should be defined as $\text{E}[T_1]/\text{E}[T_P]$, rather than $\text{E}[T_1 / T_P]$.
+> __*b*__. Consider a randomized multithreaded algorithm for which 1% of the time we have $T\_1 = 10^4$ and $T\_{10,000} = 1$, but for 99% of the time we have $T\_1 = T\_{10,000} = 10^9$. Argue that the __*speedup*__ of a randomized multithreaded algorithm should be defined as $\text{E}[T\_1]/\text{E}[T\_P]$, rather than $\text{E}[T\_1 / T\_P]$.
 
-$\text{E}[T_1] \approx \text{E}[T_{10,000}] \approx 9.9 \times 10^8$, $\text{E}[T_1]/\text{E}[T_P] = 1$.
+$\text{E}[T\_1] \approx \text{E}[T\_{10,000}] \approx 9.9 \times 10^8$, $\text{E}[T\_1]/\text{E}[T\_P] = 1$.
 
-$\text{E}[T_1 / T_{10,000}] = 10^4 * 0.01 + 0.99 = 100.99$.
+$\text{E}[T\_1 / T\_{10,000}] = 10^4 \* 0.01 + 0.99 = 100.99$.
 
-> __*c*__. Argue that the __*parallelism*__ of a randomized multithreaded algorithm should be defined as the ratio $\text{E}[T_1] / \text{E}[T_\infty]$.
+> __*c*__. Argue that the __*parallelism*__ of a randomized multithreaded algorithm should be defined as the ratio $\text{E}[T\_1] / \text{E}[T\_\infty]$.
 
 Same as the above.
 
@@ -206,8 +206,8 @@ RANDOMIZED-QUICKSORT(A, p, r)
 
 > __*e*__. Analyze your multithreaded algorithm for randomized quicksort. (Hint: Review the analysis of RANDOMIZED-SELECT on page 216.)
 
-$\text{E}[T_1] = O(n \lg n)$
+$\text{E}[T\_1] = O(n \lg n)$
 
-$\text{E}[T_\infty] = O(\lg n)$
+$\text{E}[T\_\infty] = O(\lg n)$
 
-$\text{E}[T_1] / \text{E}[T_\infty] = O(n)$
+$\text{E}[T\_1] / \text{E}[T\_\infty] = O(n)$

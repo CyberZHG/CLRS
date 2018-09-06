@@ -60,23 +60,23 @@ $\Theta(n^3)$
 
 > __*a*__. $T(n) = 4T(n/3) + n\lg n$.
 
-$\Theta(n^{\log_3^4})$
+$\Theta(n^{\log\_3^4})$
 
 > __*b*__. $T(n) = 3T(n/3) + n/\lg n$.
 
 For harmonic series:
 
 $$
-\ln (n+1) \le \int_1^{n+1} \frac{1}{t}dt \le \sum_{i=1}^n \frac{1}{i} \le 1 + \int_1^n \frac{1}{t}dt = 1 + \ln n
+\ln (n+1) \le \int\_1^{n+1} \frac{1}{t}dt \le \sum\_{i=1}^n \frac{1}{i} \le 1 + \int\_1^n \frac{1}{t}dt = 1 + \ln n
 $$
 
 Therefore, harmonic series are $\Theta(\lg n)$
 
 $$
 \begin{array}{rll}
-T(n) & = & \displaystyle n\sum_{i=0}^{\log_3{n} - 1}\frac{1}{\lg \frac{n}{3^i}} \\
-& = & \displaystyle \Theta(n\sum_{i=0}^{\log_3{n} - 1}\frac{1}{\log_3 \frac{n}{3^i}}) \\
-& = & \displaystyle \Theta(n\sum_{i=1}^{\log_3{n}}\frac{1}{i}) \\
+T(n) & = & \displaystyle n\sum\_{i=0}^{\log\_3{n} - 1}\frac{1}{\lg \frac{n}{3^i}} \\\\
+& = & \displaystyle \Theta(n\sum\_{i=0}^{\log\_3{n} - 1}\frac{1}{\log\_3 \frac{n}{3^i}}) \\\\
+& = & \displaystyle \Theta(n\sum\_{i=1}^{\log\_3{n}}\frac{1}{i}) \\\\
 & = & \displaystyle \Theta(n\lg \lg n)
 \end{array}
 $$
@@ -103,7 +103,7 @@ $\Theta(n)$
 
 $$
 \begin{array}{rll}
-T(n) & = & \displaystyle \sum_{i=1}^n \frac{1}{i} \\
+T(n) & = & \displaystyle \sum\_{i=1}^n \frac{1}{i} \\\\
 & = & \displaystyle \Theta(\lg n)
 \end{array}
 $$
@@ -112,9 +112,9 @@ $$
 
 $$
 \begin{array}{rll}
-T(n) & = & \displaystyle \sum_{i=1}^n \lg{i} \\
-& = & \displaystyle \lg{n!} \\
-& \le & \displaystyle \lg{n^n} \\
+T(n) & = & \displaystyle \sum\_{i=1}^n \lg{i} \\\\
+& = & \displaystyle \lg{n!} \\\\
+& \le & \displaystyle \lg{n^n} \\\\
 & = & \displaystyle \Theta(n\lg n)
 \end{array}
 $$
@@ -123,7 +123,7 @@ $$
 
 $$
 \begin{array}{rll}
-T(n) & = & \displaystyle \sum_{i=1}^{n/2} \frac{1}{\lg{2i}} \\
+T(n) & = & \displaystyle \sum\_{i=1}^{n/2} \frac{1}{\lg{2i}} \\\\
 & = & \displaystyle \Theta(\lg \lg n)
 \end{array}
 $$
@@ -134,9 +134,9 @@ Let $n = 2^m$,
 
 $$
 \begin{array}{rll}
-T(n) &=& \sqrt{n} T(\sqrt{n}) + n \\
-T(2^m) &=& 2^{m/2}T(2^{m/2}) + 2^m \\
-\frac{T(2^m)}{2^m} &=& \frac{T(2^{m/2})}{2^{m/2}} + 1 \\
+T(n) &=& \sqrt{n} T(\sqrt{n}) + n \\\\
+T(2^m) &=& 2^{m/2}T(2^{m/2}) + 2^m \\\\
+\frac{T(2^m)}{2^m} &=& \frac{T(2^{m/2})}{2^{m/2}} + 1 \\\\
 \end{array}
 $$
 
@@ -152,22 +152,22 @@ $\therefore$ $T(n)=\Theta(n \lg \lg n)$
 
 > $$
 \begin{array}{lll}
-\mathcal{F}(z) & = & \sum_{i=0}^\infty F_i z^i \\
+\mathcal{F}(z) & = & \sum\_{i=0}^\infty F\_i z^i \\\\
                & = & 0 + z + z^2 + 2z^3 + 3z^4 + 5z^5 + 8z^6 + 13z^7 + 21z^8+\dots
 \end{array}
 $$
 
-> where $\mathcal{F}_i$ is the $i$th Fibonacci number.
+> where $\mathcal{F}\_i$ is the $i$th Fibonacci number.
 
 > __*a*__. Show that $\mathcal{F}(z) = z + z \mathcal{F}(z) + z^2\mathcal{F}(z)$.
 
 $$
 \begin{array}{rll}
-z + z \mathcal{F}(z) + z^2\mathcal{F}(z) &=& z + z\sum_{i=0}^\infty F_i z^i + z^2\sum_{i=0}^\infty F_i z^i \\ 
-&=& z + \sum_{i=1}^\infty F_{i-1} z^i + \sum_{i=2}^\infty F_{i-2} z^i \\
-&=& z + z^2 + \sum_{i=2}^\infty(F_{i-1} + F_{i-2})z^i \\
-&=& z + z^2 + \sum_{i=2}^\infty F_iz^i \\
-&=& \sum_{i=0}^\infty F_iz^i \\
+z + z \mathcal{F}(z) + z^2\mathcal{F}(z) &=& z + z\sum\_{i=0}^\infty F\_i z^i + z^2\sum\_{i=0}^\infty F\_i z^i \\\\ 
+&=& z + \sum\_{i=1}^\infty F\_{i-1} z^i + \sum\_{i=2}^\infty F\_{i-2} z^i \\\\
+&=& z + z^2 + \sum\_{i=2}^\infty(F\_{i-1} + F\_{i-2})z^i \\\\
+&=& z + z^2 + \sum\_{i=2}^\infty F\_iz^i \\\\
+&=& \sum\_{i=0}^\infty F\_iz^i \\\\
 & = & \mathcal{F}(z)
 \end{array}
 $$
@@ -176,9 +176,9 @@ $$
 >
 > $$
 \begin{array}{lll}
-\mathcal{F}(z) & = & \displaystyle \frac{z}{1-z-z^2} \\
-               & = & \displaystyle \frac{z}{(1-\phi z)(1 - \hat{\phi}z)} \\
-               & = & \displaystyle \frac{1}{\sqrt{5}}(\frac{1}{1-\phi z}-\frac{1}{1-\hat{\phi} z}) \\
+\mathcal{F}(z) & = & \displaystyle \frac{z}{1-z-z^2} \\\\
+               & = & \displaystyle \frac{z}{(1-\phi z)(1 - \hat{\phi}z)} \\\\
+               & = & \displaystyle \frac{1}{\sqrt{5}}(\frac{1}{1-\phi z}-\frac{1}{1-\hat{\phi} z}) \\\\
 \end{array}
 $$
 
@@ -190,43 +190,43 @@ $$
 
 $$
 \begin{array}{rll}
-\mathcal{F}(z) &=& \displaystyle z + z \mathcal{F}(z) + z^2\mathcal{F}(z) \\
-(1-z-z^2)\mathcal{F}(z) &=& \displaystyle z \\
+\mathcal{F}(z) &=& \displaystyle z + z \mathcal{F}(z) + z^2\mathcal{F}(z) \\\\
+(1-z-z^2)\mathcal{F}(z) &=& \displaystyle z \\\\
 \mathcal{F}(z) &=& \displaystyle \frac{z}{1-z-z^2}
 \end{array}
 $$
 
 $$
 \begin{array}{rll}
-(1-\phi z)(1 - \hat{\phi}z) &=& 1 - (\phi + \hat{\phi})z + \phi \hat{\phi} z^2 \\
-\phi + \hat{\phi} &=& 1 \\
-\phi \hat{\phi} &=& \displaystyle \frac{1-5}{4} = -1 \\
-\therefore (1-\phi z)(1 - \hat{\phi}z) &=& 1 - z - z^2 \\
+(1-\phi z)(1 - \hat{\phi}z) &=& 1 - (\phi + \hat{\phi})z + \phi \hat{\phi} z^2 \\\\
+\phi + \hat{\phi} &=& 1 \\\\
+\phi \hat{\phi} &=& \displaystyle \frac{1-5}{4} = -1 \\\\
+\therefore (1-\phi z)(1 - \hat{\phi}z) &=& 1 - z - z^2 \\\\
 \therefore \mathcal{F}(z) & = & \displaystyle \frac{z}{(1-\phi z)(1 - \hat{\phi}z)}
 \end{array}
 $$
 
 $$
 \begin{array}{rll}
-\displaystyle \frac{1}{\sqrt{5}}(\frac{1}{1-\phi z}-\frac{1}{1-\hat{\phi} z}) &=& \displaystyle \frac{1}{\sqrt{5}}(\frac{(\hat{\phi} - \phi)z}{(1-\phi z)(1-\hat{\phi} z)}) \\
-\mathcal{F}(z) &=& \displaystyle \frac{1}{\sqrt{5}}(\frac{1}{1-\phi z}-\frac{1}{1-\hat{\phi} z}) \\
+\displaystyle \frac{1}{\sqrt{5}}(\frac{1}{1-\phi z}-\frac{1}{1-\hat{\phi} z}) &=& \displaystyle \frac{1}{\sqrt{5}}(\frac{(\hat{\phi} - \phi)z}{(1-\phi z)(1-\hat{\phi} z)}) \\\\
+\mathcal{F}(z) &=& \displaystyle \frac{1}{\sqrt{5}}(\frac{1}{1-\phi z}-\frac{1}{1-\hat{\phi} z}) \\\\
 \end{array}
 $$
 
 > __*c*__. Show that
 
-> $\mathcal{F}(z)=\sum_{i=0}^{\infty}\frac{1}{\sqrt{5}}(\phi^i-\hat{\phi^i})z^i$.
+> $\mathcal{F}(z)=\sum\_{i=0}^{\infty}\frac{1}{\sqrt{5}}(\phi^i-\hat{\phi^i})z^i$.
 
-$\displaystyle \sum_{i=0}^\infty x^i=\frac{1}{1-x}$,
+$\displaystyle \sum\_{i=0}^\infty x^i=\frac{1}{1-x}$,
 
 $$
 \begin{array}{rll}
-\mathcal{F}(z) &=& \displaystyle \frac{1}{\sqrt{5}}(\frac{1}{1-\phi z}-\frac{1}{1-\hat{\phi} z}) \\
-&=& \displaystyle \sum_{i=0}^{\infty}\frac{1}{\sqrt{5}}(\phi^i-\hat{\phi^i})z^i
+\mathcal{F}(z) &=& \displaystyle \frac{1}{\sqrt{5}}(\frac{1}{1-\phi z}-\frac{1}{1-\hat{\phi} z}) \\\\
+&=& \displaystyle \sum\_{i=0}^{\infty}\frac{1}{\sqrt{5}}(\phi^i-\hat{\phi^i})z^i
 \end{array}
 $$
 
-> __*d*__. Use part (c) to prove that $F_i=\phi^i/\sqrt{5}$ for $i>0$, rounded to the nearest integer. (Hint: Observe that $| \hat{\phi} | < 1$.)
+> __*d*__. Use part (c) to prove that $F\_i=\phi^i/\sqrt{5}$ for $i>0$, rounded to the nearest integer. (Hint: Observe that $| \hat{\phi} | < 1$.)
 
 $\displaystyle \frac{\hat{\phi^i}}{\sqrt{5}} \le 0.5$
 
@@ -249,7 +249,7 @@ Symmetric.
 
 First assume $n$ is even, then divide the chips in two groups, test each pair of chips with the same index from the two groups. If the result are is good, we keep one of chips; otherwise we remove both the chips. If $n$ is odd, if there are odd number of chips left after the selections, then there must be more good chips than bad chips, we can simply discard the odd chip; otherwise if there are even number of chips, then if there are equal number of good and bad chips, the odd one must be good, and if there are more good chips than bad chips, the difference must be larger or equal to 2, therefore we can safely add the odd one to the set for next iteration.
 
-$\displaystyle T(n)=T(n/2)+n/2 = \sum_{i=0}^{\lg n - 1} \frac{n}{2^i} \le n/2$
+$\displaystyle T(n)=T(n/2)+n/2 = \sum\_{i=0}^{\lg n - 1} \frac{n}{2^i} \le n/2$
 
 ```python
 import random
@@ -296,13 +296,13 @@ Based on master method, $T(n)=T(n/2)+n/2=\Theta(n)$
 > In other words, whenever we pick two rows and two columns of a Monge array and consider the four elements at the intersections of the rows and the columns, the sum of the upper-left and lower-right elements is less than or equal to the sum of the lower-left and upper-right elements. For example, the following array is Monge:
 
 > $\begin{matrix}
-10 & 17 & 13 & 28 & 23 \\
-17 & 22 & 16 & 29 & 23 \\
-24 & 28 & 22 & 34 & 24 \\
-11 & 13 & 6 & 17 & 7 \\
-45 & 44 & 32 & 37 & 23 \\
-36 & 33 & 19 & 21 & 6 \\
-75 & 66 & 51 & 53 & 34 \\
+10 & 17 & 13 & 28 & 23 \\\\
+17 & 22 & 16 & 29 & 23 \\\\
+24 & 28 & 22 & 34 & 24 \\\\
+11 & 13 & 6 & 17 & 7 \\\\
+45 & 44 & 32 & 37 & 23 \\\\
+36 & 33 & 19 & 21 & 6 \\\\
+75 & 66 & 51 & 53 & 34 \\\\
 \end{matrix}$
 
 > __*a*__. Prove that an array is Monge if and only if for all $i=1,2,\dots,m-1$ and $j=1,2,\dots,n-1$, we have
@@ -330,20 +330,20 @@ therefore $A[i,j]+A[k,l] \le A[i,l]+A[k,j]$.
 > __*b*__. The following array is not Monge. Change one element in order to make it Monge. (Hint: Use part (a).)
 
 > $\begin{matrix}
-37 & 23 & 22 & 32 \\
-21 & 6 & 7 & 10 \\
-53 & 34 & 30 & 31 \\
-32 & 13 & 9 & 6 \\
-43 & 21 & 15 & 8 \\
+37 & 23 & 22 & 32 \\\\
+21 & 6 & 7 & 10 \\\\
+53 & 34 & 30 & 31 \\\\
+32 & 13 & 9 & 6 \\\\
+43 & 21 & 15 & 8 \\\\
 \end{matrix}$
 
 $$
 \begin{matrix}
-37 & 23 & \mathbf{24} & 32 \\
-21 & 6 & 7 & 10 \\
-53 & 34 & 30 & 31 \\
-32 & 13 & 9 & 6 \\
-43 & 21 & 15 & 8 \\
+37 & 23 & \mathbf{24} & 32 \\\\
+21 & 6 & 7 & 10 \\\\
+53 & 34 & 30 & 31 \\\\
+32 & 13 & 9 & 6 \\\\
+43 & 21 & 15 & 8 \\\\
 \end{matrix}
 $$
 
@@ -367,18 +367,18 @@ the inequality is satisfied only when $i = j$, therefore $i \le j$.
 
 Search in the interval $[f(i-1), f(i+1)]$.
 
-$c_1m/2 + c_2n = O(m+n)$
+$c\_1m/2 + c\_2n = O(m+n)$
 
 > __*e*__. Write the recurrence describing the running time of the algorithm described in part (d). Show that its solution is $O(m+n\log m)$.
 
 $$
 \begin{array}{rll}
-T(m,n)&=&\displaystyle T(m/2,n) + m + n \\
-&=&\displaystyle \sum_{i=0}^{\lg m - 1}(\frac{m}{2^i} + n) \\
-&=&\displaystyle \sum_{i=0}^{\lg m - 1}(\frac{m}{2^i} + n) \\
-&=&\displaystyle \frac{1}{1-1/2}m + n \lg m \\
-&=&\displaystyle 2m + n \lg m \\
-&=&\displaystyle O(m+n\log m) \\
+T(m,n)&=&\displaystyle T(m/2,n) + m + n \\\\
+&=&\displaystyle \sum\_{i=0}^{\lg m - 1}(\frac{m}{2^i} + n) \\\\
+&=&\displaystyle \sum\_{i=0}^{\lg m - 1}(\frac{m}{2^i} + n) \\\\
+&=&\displaystyle \frac{1}{1-1/2}m + n \lg m \\\\
+&=&\displaystyle 2m + n \lg m \\\\
+&=&\displaystyle O(m+n\log m) \\\\
 \end{array}
 $$
 

@@ -13,9 +13,9 @@
 
 $$
 \begin{array}{rlll}
-x^2 &\equiv& 1 & (\text{mod}~ n) \\
-x^2 - 1 &\equiv& 0 & (\text{mod}~ n) \\
-(x + 1) (x - 1) &\equiv& 0 & (\text{mod}~ n) \\
+x^2 &\equiv& 1 & (\text{mod}~ n) \\\\
+x^2 - 1 &\equiv& 0 & (\text{mod}~ n) \\\\
+(x + 1) (x - 1) &\equiv& 0 & (\text{mod}~ n) \\\\
 \end{array}
 $$
 

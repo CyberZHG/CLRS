@@ -6,9 +6,9 @@
 
 $$
 \begin{array}{rll}
-c ~\text{mod}~ a &=& (a + b) ~\text{mod}~ a \\
-&=& (a ~\text{mod}~ a) + (b ~\text{mod}~ a) \\
-&=& 0 + b \\
+c ~\text{mod}~ a &=& (a + b) ~\text{mod}~ a \\\\
+&=& (a ~\text{mod}~ a) + (b ~\text{mod}~ a) \\\\
+&=& 0 + b \\\\
 &=& b
 \end{array}
 $$
@@ -19,9 +19,9 @@ $$
 
 $$
 \begin{array}{rl}
-& ((p_1 p_2 \cdots p_k) + 1) ~\text{mod}~ p_i \\
-=& (p_1 p_2 \cdots p_k) ~\text{mod}~ p_i + (1 ~\text{mod}~ p_i) \\
-=& 0 + 1 \\
+& ((p\_1 p\_2 \cdots p\_k) + 1) ~\text{mod}~ p\_i \\\\
+=& (p\_1 p\_2 \cdots p\_k) ~\text{mod}~ p\_i + (1 ~\text{mod}~ p\_i) \\\\
+=& 0 + 1 \\\\
 =& 1
 \end{array}
 $$
@@ -30,8 +30,8 @@ $$
 
 > Prove that if $a ~|~ b$ and $b ~|~ c$, then $a ~|~ c$.
 
-* If $a ~|~ b$, then $b = a \cdot k_1$.
-* If $b ~|~ c$, then $c = b \cdot k_2 = a \cdot (k_1 \cdot k_2) = a \cdot k_3$, then $a | c$.
+* If $a ~|~ b$, then $b = a \cdot k\_1$.
+* If $b ~|~ c$, then $c = b \cdot k\_2 = a \cdot (k\_1 \cdot k\_2) = a \cdot k\_3$, then $a | c$.
 
 ### 31.1-4
 
@@ -56,9 +56,9 @@ If $n ~|~ ab$, then $ab = kn$, then $b = nk / a$; since $\text{gcd}(a, n) = 1$, 
 
 $$
 \begin{array}{rlll}
-(a + b) ^ p &\equiv& \displaystyle a^p + \binom{p}{1} a^{p-1}b^{1} + \cdots + \binom{p}{p-1} a^{1}b^{p-1} + b^p &(\text{mod}~ p) \\
-&\equiv& a^p + 0 + \cdots + 0 + b^p &(\text{mod}~ p) \\
-&\equiv& a^p + b^p &(\text{mod} p)~ \\
+(a + b) ^ p &\equiv& \displaystyle a^p + \binom{p}{1} a^{p-1}b^{1} + \cdots + \binom{p}{p-1} a^{1}b^{p-1} + b^p &(\text{mod}~ p) \\\\
+&\equiv& a^p + 0 + \cdots + 0 + b^p &(\text{mod}~ p) \\\\
+&\equiv& a^p + b^p &(\text{mod} p)~ \\\\
 \end{array}
 $$
 

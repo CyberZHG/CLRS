@@ -14,9 +14,9 @@
 
 > To develop an algorithm for this problem, we break the sequence $S$ into homogeneous subsequences. That is, we represent $S$ by
 
-> $I_1, E, I_2, E, I_3, \dots, I_m, E, I_{m+1}$
+> $I\_1, E, I\_2, E, I\_3, \dots, I\_m, E, I\_{m+1}$
 
-> where each $E$ represents a single EXTRACT-MIN call and each $\text{I}_j$ represents a (possibly empty) sequence of INSERT calls. For each subsequence $\text{I}_j$ , we initially place the keys inserted by these operations into a set $K_j$ , which is empty if $\text{I}_j$ is empty. We then do the following:
+> where each $E$ represents a single EXTRACT-MIN call and each $\text{I}\_j$ represents a (possibly empty) sequence of INSERT calls. For each subsequence $\text{I}\_j$ , we initially place the keys inserted by these operations into a set $K\_j$ , which is empty if $\text{I}\_j$ is empty. We then do the following:
 
 > ```
 OFF-LINE-MINIMUM(m, n)
@@ -73,7 +73,7 @@ def off_line_minimum(q, n):
 
 ### 21-2 Depth determination
 
-> In the __*depth-determination problem*__, we maintain a forest $\mathcal{F} = \{T_i\}$ of rooted trees under three operations:
+> In the __*depth-determination problem*__, we maintain a forest $\mathcal{F} = \{T\_i\}$ of rooted trees under three operations:
 
 > MAKE-TREE$(v)$ creates a tree whose only node is $v$.
 
@@ -85,9 +85,9 @@ def off_line_minimum(q, n):
 
 $m/3$ MAKE-TREE, $m/3$ GRAFT to make a chain, $m/3$ FIND-DEPTH.
 
-> By using the union-by-rank and path-compression heuristics, we can reduce the worst-case running time. We use the disjoint-set forest $\mathcal{S} = \{S_i\}$, where each set $S_i$ (which is itself a tree) corresponds to a tree $T_i$ in the forest $\mathcal{F}$. The tree structure within a set $S_i$, however, does not necessarily correspond to that of $T_i$. In fact, the implementation of $S_i$ does not record the exact parent-child relationships but nevertheless allows us to determine any node's depth in $T_i$.
+> By using the union-by-rank and path-compression heuristics, we can reduce the worst-case running time. We use the disjoint-set forest $\mathcal{S} = \{S\_i\}$, where each set $S\_i$ (which is itself a tree) corresponds to a tree $T\_i$ in the forest $\mathcal{F}$. The tree structure within a set $S\_i$, however, does not necessarily correspond to that of $T\_i$. In fact, the implementation of $S\_i$ does not record the exact parent-child relationships but nevertheless allows us to determine any node's depth in $T\_i$.
 
-> The key idea is to maintain in each node $v$ a "pseudodistance" $v.d$, which is defined so that the sum of the pseudodistances along the simple path from $v$ to the root of its set $S_i$ equals the depth of $v$ in $T_i$. That is, if the simple path from $v$ to its root in $S_i$ is $v_0, v_1, \dots, v_k$, where $v_0 = v$ and $v_k$ is $S_i$'s root, then the depth of $v$ in $T_i$ is $\sum_{j=0}^k v_j.d$.
+> The key idea is to maintain in each node $v$ a "pseudodistance" $v.d$, which is defined so that the sum of the pseudodistances along the simple path from $v$ to the root of its set $S\_i$ equals the depth of $v$ in $T\_i$. That is, if the simple path from $v$ to its root in $S\_i$ is $v\_0, v\_1, \dots, v\_k$, where $v\_0 = v$ and $v\_k$ is $S\_i$'s root, then the depth of $v$ in $T\_i$ is $\sum\_{j=0}^k v\_j.d$.
 
 > __*b*__. Give an implementation of MAKE-TREE.
 
@@ -112,7 +112,7 @@ def find_depth(v):
     return (d, p)
 ```
 
-> __*d*__. Show how to implement GRAFT$(r, v)$, which combines the sets containing $r$ and $v$, by modifying the UNION and LINK procedures. Make sure that your implementation updates pseudodistances correctly. Note that the root of a set $S_i$ is not necessarily the root of the corresponding tree $T_i$.
+> __*d*__. Show how to implement GRAFT$(r, v)$, which combines the sets containing $r$ and $v$, by modifying the UNION and LINK procedures. Make sure that your implementation updates pseudodistances correctly. Note that the root of a set $S\_i$ is not necessarily the root of the corresponding tree $T\_i$.
 
 ```python
 def graft(r, v):

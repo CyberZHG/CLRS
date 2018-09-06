@@ -2,14 +2,14 @@
 
 ### 16.5-1
 
-> Solve the instance of the scheduling problem given in Figure 16.7, but with each penalty $w_i$ replaced by $80 - wi$.
+> Solve the instance of the scheduling problem given in Figure 16.7, but with each penalty $w\_i$ replaced by $80 - wi$.
 
-| $a_i$ |  1 |  2 |  3 |  4 |  5 |  6 |  7 |
+| $a\_i$ |  1 |  2 |  3 |  4 |  5 |  6 |  7 |
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| $d_i$ |  4 |  2 |  4 |  3 |  1 |  4 |  6 |
-| $w_i$ | 10 | 20 | 30 | 40 | 50 | 60 | 70 |
+| $d\_i$ |  4 |  2 |  4 |  3 |  1 |  4 |  6 |
+| $w\_i$ | 10 | 20 | 30 | 40 | 50 | 60 | 70 |
 
-$\langle a_5, a_4, a_3, a_6, a_7 \rangle$, $w_1 + w_2 = 30$.
+$\langle a\_5, a\_4, a\_3, a\_6, a\_7 \rangle$, $w\_1 + w\_2 = 30$.
 
 ### 16.5-2
 

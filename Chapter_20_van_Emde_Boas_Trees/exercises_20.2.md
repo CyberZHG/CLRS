@@ -418,7 +418,7 @@ Obviously.
 
 There are $u^{3/4}$ clusters in each proto-vEB.
 
-MEMBER/INSRT: $T(u) = T(u^{1/4}) + O(1) = \Theta(\lg \log_4 u) = \Theta(\lg \lg u)$.
+MEMBER/INSRT: $T(u) = T(u^{1/4}) + O(1) = \Theta(\lg \log\_4 u) = \Theta(\lg \lg u)$.
 
 MINIMUM/MAXIMUM: $T(u) = T(u^{1/4}) + T(u^{3/4}) + O(1) = \Theta(\lg u)$.
 
