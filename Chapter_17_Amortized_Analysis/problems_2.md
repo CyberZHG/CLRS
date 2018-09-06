@@ -36,7 +36,7 @@ $O(1)$
 
 > We now wish to prove that there are $O(m)$ structural modifications when there are both insertions and deletions. Let us define, for each node $x$,
 
-> $\displaystyle w(x) = \left \{
+> $$\displaystyle w(x) = \left \{
 \begin{array}{ll}
 0 & \text{if}~x~\text{is red,} \\
 1 & \text{if}~x~\text{is black and has no red children,} \\
