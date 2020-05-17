@@ -3,7 +3,7 @@ import unittest
 
 
 def parent(d, i):
-    return (i - 1) / d
+    return (i - 1) // d
 
 
 def child(d, i, k):
@@ -51,7 +51,7 @@ class DaryHeapTestCase(unittest.TestCase):
                 c = child(d, i, k)
                 if c < len(a):
                     if a[i] < a[c]:
-                        print d, a, i
+                        print(d, a, i)
                         return False
                     if not check_heap_rec(c):
                         return False

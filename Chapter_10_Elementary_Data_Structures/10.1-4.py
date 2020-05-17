@@ -4,7 +4,7 @@ import unittest
 
 class Queue:
     def __init__(self, size):
-        self.q = [-1 for _ in xrange(size)]
+        self.q = [-1 for _ in range(size)]
         self.head = 0
         self.tail = 0
 

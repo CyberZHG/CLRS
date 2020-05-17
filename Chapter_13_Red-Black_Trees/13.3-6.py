@@ -192,9 +192,9 @@ class ProblemTestCase(unittest.TestCase):
         self.assertEqual(rb_to_list(T), [8, 12, 19, 31, 38, 41])
 
     def test_random(self):
-        for _ in xrange(1000):
+        for _ in range(1000):
             T = RedBlackTree()
-            a = random.sample(xrange(10000000), 1000)
+            a = random.sample(range(10000000), 1000)
             for v in a:
                 rb_insert(T, RedBlackTreeNode(v))
             self.check_rb(T)

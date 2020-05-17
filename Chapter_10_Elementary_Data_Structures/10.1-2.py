@@ -3,7 +3,7 @@ import unittest
 
 
 n = 100
-a = [-1 for _ in xrange(n)]
+a = [-1 for _ in range(n)]
 
 
 class Stack1:

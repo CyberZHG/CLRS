@@ -15,8 +15,8 @@ class ProblemTestCase(unittest.TestCase):
 
     def random_case(self):
         n = random.randint(1, 16)
-        v = [random.randint(1, 100) for _ in xrange(n)]
-        w = [random.randint(1, 100) for _ in xrange(n)]
+        v = [random.randint(1, 100) for _ in range(n)]
+        w = [random.randint(1, 100) for _ in range(n)]
         W = random.randint(1, 1000)
         return v, w, W
 
@@ -35,7 +35,7 @@ class ProblemTestCase(unittest.TestCase):
         return max_val
 
     def test_random(self):
-        for _ in xrange(1000):
+        for _ in range(1000):
             v, w, W = self.random_case()
             self.assertEqual(zero_one_knapsack(v, w, W), self.brute_force(v, w, W))
 

@@ -1,4 +1,5 @@
 import random
+import functools
 import unittest
 
 
@@ -12,13 +13,13 @@ def black_box_median(a):
 
 def k_closest(a, k):
     median = black_box_median(a)
-    b = [abs(a[i] - median) for i in xrange(len(a))]
+    b = [abs(a[i] - median) for i in range(len(a))]
     kth = black_box_kth(b, k)
     closest = []
-    for i in xrange(len(a)):
+    for i in range(len(a)):
         if abs(a[i] - median) < kth:
             closest.append(a[i])
-    for i in xrange(len(a)):
+    for i in range(len(a)):
         if abs(a[i] - median) == kth:
             closest.append(a[i])
         if len(closest) >= k:
@@ -33,9 +34,10 @@ class ProblemTestCase(unittest.TestCase):
             a = random.sample(range(100000), 1000)
             k = random.randint(0, len(a))
             m = black_box_median(a)
-            b = sorted(a, lambda x, y: abs(x - m) - abs(y - m))[:k]
-            c = sorted(k_closest(a, k), lambda x, y: abs(x - m) - abs(y - m))
-            for i in xrange(k):
+            b = sorted(a, key=functools.cmp_to_key(lambda x, y: abs(x - m) - abs(y - m)))[:k]
+            c = sorted(k_closest(a, k),
+                       key=functools.cmp_to_key(lambda x, y: abs(x - m) - abs(y - m)))
+            for i in range(k):
                 self.assertEqual(c[i] - m, b[i] - m)
 
 

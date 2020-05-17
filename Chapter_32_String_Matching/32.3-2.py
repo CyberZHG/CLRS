@@ -18,10 +18,10 @@ def compute_transition_function(p, s):
 class ProblemTestCase(unittest.TestCase):
 
     def print_sorted(self, x, s):
-        x = sorted(list(map(lambda (k, v): (k, v), x.items())))
+        x = sorted(list(map(lambda y: (y[0], y[1]), x.items())))
         le = len(s)
         output = ''
-        for i in xrange(len(x)):
+        for i in range(len(x)):
             if i % le == 0:
                 print(output)
                 output = str(i / le)

@@ -3,7 +3,7 @@ import unittest
 
 
 def cut_rod(p, n, c):
-    r = [0 for _ in xrange(n + 1)]
+    r = [0 for _ in range(n + 1)]
     for j in range(1, n + 1):
         r[j] = p[j]
         for i in range(1, j):
@@ -20,8 +20,8 @@ class ProblemTestCase(unittest.TestCase):
         return r
 
     def test_random(self):
-        for _ in xrange(1000):
-            p = [random.randint(0, 100) for _ in xrange(random.randint(1, 20))]
+        for _ in range(1000):
+            p = [random.randint(0, 100) for _ in range(random.randint(1, 20))]
             p[0] = 0
             n = random.randint(1, 20)
             c = random.randint(1, 100)

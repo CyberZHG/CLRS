@@ -19,14 +19,14 @@ class VanEmdeBoasTree:
         if not self.is_leaf():
             self.summary = VanEmdeBoasTree(self.sqrt_h)
             self.cluster = []
-            for _ in xrange(self.sqrt_h):
+            for _ in range(self.sqrt_h):
                 self.cluster.append(VanEmdeBoasTree(self.sqrt_l))
 
     def is_leaf(self):
         return self.u == 2
 
     def high(self, x):
-        return x / self.sqrt_l
+        return x // self.sqrt_l
 
     def low(self, x):
         return x % self.sqrt_l
@@ -207,7 +207,7 @@ class ProblemTestCase(unittest.TestCase):
             veb.delete(v)
         self.assertEqual(veb.minimum(), 2)
         self.assertEqual(veb.maximum(), 15)
-        for i in xrange(16):
+        for i in range(16):
             succ = veb.successor(i)
             expect = None
             for v in a:
@@ -225,10 +225,10 @@ class ProblemTestCase(unittest.TestCase):
 
     def test_random(self):
         u = 16
-        for _ in xrange(100):
+        for _ in range(100):
             veb = VanEmdeBoasTree(u)
             n = random.randint(100, 10000)
-            a = [random.randint(0, u - 1) for i in xrange(n)]
+            a = [random.randint(0, u - 1) for i in range(n)]
             b = random.sample(a, random.randint(1, len(a) - 1))
             c = [0] * u
             for v in a:
@@ -238,13 +238,13 @@ class ProblemTestCase(unittest.TestCase):
                 veb.delete(v)
                 c[v] -= 1
             d = []
-            for i in xrange(u):
+            for i in range(u):
                 if c[i] > 0:
                     d.append(i)
             if len(d) > 0:
                 self.assertEqual(veb.minimum(), d[0])
                 self.assertEqual(veb.maximum(), d[-1])
-            for i in xrange(u):
+            for i in range(u):
                 succ = veb.successor(i)
                 expect = None
                 for v in d:

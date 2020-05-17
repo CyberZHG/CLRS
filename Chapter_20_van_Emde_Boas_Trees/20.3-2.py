@@ -19,14 +19,14 @@ class VanEmdeBoasTree:
         if not self.is_leaf():
             self.summary = VanEmdeBoasTree(self.sqrt_h)
             self.cluster = []
-            for _ in xrange(self.sqrt_h):
+            for _ in range(self.sqrt_h):
                 self.cluster.append(VanEmdeBoasTree(self.sqrt_l))
 
     def is_leaf(self):
         return self.u == 2
 
     def high(self, x):
-        return x / self.sqrt_l
+        return x // self.sqrt_l
 
     def low(self, x):
         return x % self.sqrt_l
@@ -167,22 +167,22 @@ class VanEmdeBoasTree:
 class ProblemTestCase(unittest.TestCase):
 
     def test_random(self):
-        for _ in xrange(1000):
+        for _ in range(1000):
             veb = VanEmdeBoasTree(256)
-            a = random.sample(xrange(256), random.randint(2, 256))
-            d = [random.randint(0, 100000) for _ in xrange(len(a))]
+            a = random.sample(range(256), random.randint(2, 256))
+            d = [random.randint(0, 100000) for _ in range(len(a))]
             b = random.sample(a, random.randint(1, len(a) - 1))
             for k, v in zip(a, d):
                 veb.insert(k, v)
             for k in b:
                 veb.delete(k)
             c = []
-            for i in xrange(256):
+            for i in range(256):
                 if i in a and i not in b:
                     c.append(i)
             self.assertEqual(veb.minimum(), c[0])
             self.assertEqual(veb.maximum(), c[-1])
-            for i in xrange(256):
+            for i in range(256):
                 if i in c:
                     self.assertTrue(veb.get_data(i) is not None)
                 else:

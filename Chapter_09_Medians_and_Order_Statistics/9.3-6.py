@@ -43,20 +43,20 @@ def k_quantiles_sub(a, p, r, pos, f, e, quantiles):
     quantiles[mid] = val
     k_quantiles_sub(a, p, q, pos, f, mid, quantiles)
     k = q - p + 1
-    for i in xrange(mid + 1, e):
+    for i in range(mid + 1, e):
         pos[i] -= k
     k_quantiles_sub(a, q + 1, r, pos, mid + 1, e, quantiles)
 
 
 def k_quantiles(a, k):
-    num = len(a) / k
+    num = len(a) // k
     mod = len(a) % k
-    pos = [num for _ in xrange(k)]
-    for i in xrange(mod):
+    pos = [num for _ in range(k)]
+    for i in range(mod):
         pos[i] += 1
-    for i in xrange(1, k):
+    for i in range(1, k):
         pos[i] += pos[i - 1]
-    quantiles = [0 for _ in xrange(k)]
+    quantiles = [0 for _ in range(k)]
     k_quantiles_sub(a, 0, len(a), pos, 0, len(pos), quantiles)
     return quantiles
 
@@ -71,7 +71,7 @@ class ProblemTestCase(unittest.TestCase):
             j = 0
             r = k_quantiles(a, k)
             for i in range(k):
-                j += len(a) / k
+                j += len(a) // k
                 if i < len(a) % k:
                     j += 1
             self.assertTrue(r[i], b[j - 1])

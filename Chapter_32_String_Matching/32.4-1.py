@@ -7,7 +7,7 @@ def compute_prefix_function(p):
     pi = [0] * (m + 1)
     pi[1] = 0
     k = 0
-    for q in xrange(2, m + 1):
+    for q in range(2, m + 1):
         while k > 0 and p[k + 1] != p[q]:
             k = pi[k]
         if p[k + 1] == p[q]:

@@ -15,9 +15,9 @@ def bin2dec(s):
 class ProblemTestCase(unittest.TestCase):
 
     def test_random(self):
-        for _ in xrange(10000):
+        for _ in range(10000):
             n = random.randint(1, 1000)
-            b = [random.randint(0, 1) for _ in xrange(n)]
+            b = [random.randint(0, 1) for _ in range(n)]
             num = 0
             for c in b:
                 num = (num << 1) + c

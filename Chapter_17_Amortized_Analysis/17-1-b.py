@@ -8,7 +8,7 @@ class BitReversedCounter:
         self.c = 0
 
     def increment(self):
-        for i in xrange(self.k - 1, -1, -1):
+        for i in range(self.k - 1, -1, -1):
             self.c ^= 1 << i
             if self.c & (1 << i) > 0:
                 break

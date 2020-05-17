@@ -17,8 +17,8 @@ class ProblemTestCase(unittest.TestCase):
     def test_random(self):
         for _ in range(1000):
             n = random.randint(1, 1000)
-            a = sorted([random.randint(1, 100000) for _ in xrange(n)])
-            b = sorted([random.randint(1, 100000) for _ in xrange(n)])
+            a = sorted([random.randint(1, 100000) for _ in range(n)])
+            b = sorted([random.randint(1, 100000) for _ in range(n)])
             median = sorted(a + b)[(2 * n - 1) // 2]
             self.assertEqual(median_of_two(a, b), median)
 

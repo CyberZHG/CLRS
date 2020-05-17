@@ -22,9 +22,9 @@ class ProblemTestCase(unittest.TestCase):
 
     def random_activity(self):
         n = random.randint(1, 16)
-        s = [random.randint(1, 100) for _ in xrange(n)]
-        f = [s[i] + random.randint(1, 100) for i in xrange(n)]
-        v = [random.randint(1, 100) for _ in xrange(n)]
+        s = [random.randint(1, 100) for _ in range(n)]
+        f = [s[i] + random.randint(1, 100) for i in range(n)]
+        v = [random.randint(1, 100) for _ in range(n)]
         return s, f, v
 
     def brute_force(self, s, f, v):
@@ -51,7 +51,7 @@ class ProblemTestCase(unittest.TestCase):
         return max_val
 
     def test_random(self):
-        for _ in xrange(1000):
+        for _ in range(1000):
             s, f, v = self.random_activity()
             self.assertEqual(activity_selection(s, f, v), self.brute_force(s, f, v))
 

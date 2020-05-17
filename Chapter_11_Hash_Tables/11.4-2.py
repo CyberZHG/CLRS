@@ -7,7 +7,7 @@ m = 5
 class LinearProbing:
     def __init__(self):
         global m
-        self.slots = [None for _ in xrange(m)]
+        self.slots = [None for _ in range(m)]
 
     def insert(self, key):
         global m

@@ -15,10 +15,10 @@ def extended_eculid_multi(a):
     g = a[-1]
     xs = [1] * len(a)
     ys = [0] * len(a)
-    for i in xrange(len(a) - 2, -1, -1):
+    for i in range(len(a) - 2, -1, -1):
         g, xs[i], ys[i + 1] = extended_euclid(a[i], g)
     m = 1
-    for i in xrange(1, len(a)):
+    for i in range(1, len(a)):
         m *= ys[i]
         xs[i] *= m
     return (g, xs)
@@ -27,12 +27,12 @@ def extended_eculid_multi(a):
 class ProblemTestCase(unittest.TestCase):
 
     def test_random(self):
-        for _ in xrange(10000):
+        for _ in range(10000):
             n = random.randint(1, 1000)
             k = random.randint(1, 10)
-            lst = [k * random.randint(0, 10000) for _ in xrange(n)]
+            lst = [k * random.randint(0, 10000) for _ in range(n)]
             d, xs = extended_eculid_multi(lst)
-            s = sum(map(lambda (x, y): x * y, zip(lst, xs)))
+            s = sum(map(lambda x: x[0] * x[1], zip(lst, xs)))
             self.assertEqual(s, d)
 
 

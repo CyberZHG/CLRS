@@ -44,7 +44,7 @@ class PartitionTestCase(unittest.TestCase):
             if p >= r:
                 continue
             q = partition(a, p, r)
-            self.assertEqual(q, (p + r - 1) / 2)
+            self.assertEqual(q, (p + r - 1) // 2)
 
 
 if __name__ == '__main__':

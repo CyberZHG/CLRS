@@ -5,7 +5,7 @@ def bellman_ford(vs, es, s):
     d = {v: 1e100 for v in vs}
     p = {v: None for v in vs}
     d[s] = 0
-    for _ in xrange(len(vs) - 1):
+    for _ in range(len(vs) - 1):
         for (u, v, w) in es:
             if d[v] > d[u] + w:
                 d[v] = d[u] + w

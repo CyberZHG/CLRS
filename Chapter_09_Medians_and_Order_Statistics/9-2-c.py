@@ -9,11 +9,11 @@ def black_box_median(a, p, r):
 def partition(a, p, r, x):
     s = x
     i = p - 1
-    for j in xrange(p, r - 1):
+    for j in range(p, r - 1):
         if a[j] == x:
             a[j], a[r - 1] = a[r - 1], a[j]
             break
-    for j in xrange(p, r - 1):
+    for j in range(p, r - 1):
         if a[j] < x:
             i += 1
             s += a[j]
@@ -38,8 +38,8 @@ def weighted_median(a, p, r, w=0.5):
 class ProblemTestCase(unittest.TestCase):
 
     def test_random(self):
-        for _ in xrange(1000):
-            a = random.sample(xrange(10000), 1000)
+        for _ in range(1000):
+            a = random.sample(range(10000), 1000)
             s = sum(a)
             x = [float(v) / s for v in a]
             w = weighted_median(x, 0, len(x))

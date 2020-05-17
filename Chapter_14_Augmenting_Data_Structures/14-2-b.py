@@ -104,11 +104,11 @@ class ProblemTestCase(unittest.TestCase):
         self.assertEqual(a, [3, 6, 2, 7, 5, 1, 4])
 
     def test_random(self):
-        for _ in xrange(1000):
+        for _ in range(1000):
             n = random.randint(1, 1000)
             m = random.randint(1, 1000)
             p = josephus_permutation(n, m)
-            a = [i for i in xrange(1, n + 1)]
+            a = [i for i in range(1, n + 1)]
             b = []
             idx = 0
             while len(a) > 0:

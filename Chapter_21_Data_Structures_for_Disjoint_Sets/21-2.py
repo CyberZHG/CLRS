@@ -34,7 +34,7 @@ def graft(r, v):
 class ProblemTestCase(unittest.TestCase):
 
     def test_case(self):
-        nodes = [TreeNode() for _ in xrange(6)]
+        nodes = [TreeNode() for _ in range(6)]
         graft(nodes[0], nodes[1])
         self.assertEqual(find_depth(nodes[0]), (1, nodes[1]))
         self.assertEqual(find_depth(nodes[1]), (0, nodes[1]))

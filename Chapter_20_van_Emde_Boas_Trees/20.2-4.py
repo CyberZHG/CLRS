@@ -13,14 +13,14 @@ class ProtoVEB:
         else:
             self.summary = ProtoVEB(self.sqrt)
             self.cluster = []
-            for _ in xrange(self.sqrt):
+            for _ in range(self.sqrt):
                 self.cluster.append(ProtoVEB(self.sqrt))
 
     def is_leaf(self):
         return self.u == 2
 
     def high(self, x):
-        return x / self.sqrt
+        return x // self.sqrt
 
     def low(self, x):
         return x % self.sqrt
@@ -127,10 +127,10 @@ class ProtoVEB:
 class ProblemTestCase(unittest.TestCase):
 
     def test_random(self):
-        for _ in xrange(100):
+        for _ in range(100):
             veb = ProtoVEB(256)
             n = random.randint(100, 10000)
-            a = [random.randint(0, 255) for i in xrange(n)]
+            a = [random.randint(0, 255) for i in range(n)]
             b = random.sample(a, random.randint(1, len(a) - 1))
             c = [0] * 256
             for v in a:
@@ -140,13 +140,13 @@ class ProblemTestCase(unittest.TestCase):
                 veb.delete(v)
                 c[v] -= 1
             d = []
-            for i in xrange(256):
+            for i in range(256):
                 if c[i] > 0:
                     d.append(i)
             if len(d) > 0:
                 self.assertEqual(veb.minimum(), d[0])
                 self.assertEqual(veb.maximum(), d[-1])
-            for i in xrange(256):
+            for i in range(256):
                 succ = veb.successor(i)
                 expect = None
                 for v in d:

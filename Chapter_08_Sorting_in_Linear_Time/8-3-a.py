@@ -23,7 +23,7 @@ def radix_sort(a):
 
 
 def count_and_divide(a):
-    a = map(str, a)
+    a = list(map(str, a))
     b = [0 for _ in range(len(a))]
     k = 0
     for s in a:
@@ -40,7 +40,7 @@ def count_and_divide(a):
     for i in range(k + 1):
         if c[i] < r[i]:
             b[c[i]:r[i]] = radix_sort(b[c[i]:r[i]])
-    return map(int, b)
+    return list(map(int, b))
 
 
 class SortTestCase(unittest.TestCase):

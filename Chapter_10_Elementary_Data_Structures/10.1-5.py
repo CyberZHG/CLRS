@@ -4,7 +4,7 @@ import unittest
 
 class Deque:
     def __init__(self, size):
-        self.q = [-1 for _ in xrange(size)]
+        self.q = [-1 for _ in range(size)]
         self.front = 0
         self.back = 0
 

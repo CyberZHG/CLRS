@@ -1,14 +1,13 @@
-import random
 import unittest
 
 
 def matrix_chain_order(p):
     n = len(p)
-    m = [[0 for _ in xrange(n)] for _ in xrange(n)]
-    s = [[0 for _ in xrange(n)] for _ in xrange(n)]
-    for l in range(2, n):
-        for i in range(0, n - l):
-            j = i + l
+    m = [[0 for _ in range(n)] for _ in range(n)]
+    s = [[0 for _ in range(n)] for _ in range(n)]
+    for length in range(2, n):
+        for i in range(0, n - length):
+            j = i + length
             m[i][j] = 1e300
             for k in range(i + 1, j):
                 q = m[i][k] + m[k][j] + p[i] * p[k] * p[j]

@@ -57,7 +57,7 @@ class ProblemTestCase(unittest.TestCase):
             x = random.randint(0, 100)
             if op == 1:
                 delete(head, x)
-                lst = filter(lambda v: v != x, lst)
+                lst = list(filter(lambda v: v != x, lst))
             else:
                 insert(head, x)
                 lst.append(x)

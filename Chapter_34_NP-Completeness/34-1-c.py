@@ -24,7 +24,7 @@ def isp_in_deg_2(graph):
         if color[u] == 0:
             search(u)
 
-    return len(filter(lambda x: x == 1, color))
+    return len(list(filter(lambda x: x == 1, color)))
 
 
 class IspInDeg2TestCase(unittest.TestCase):

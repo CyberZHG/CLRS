@@ -15,7 +15,7 @@ def modular_exponentiation(a, b, n):
 class ProblemTestCase(unittest.TestCase):
 
     def test_random(self):
-        for _ in xrange(10000):
+        for _ in range(10000):
             a = random.randint(1, 10000)
             b = random.randint(1, 10000)
             n = random.randint(1, 10000)

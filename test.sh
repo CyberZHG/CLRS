@@ -4,8 +4,8 @@ file_names=(${file_string//\\n/})
 exit_code=0
 for i in "${!file_names[@]}"
 do
-  if [ -d "${file_names[i]}" ]; then
-    if [ "${file_names[i]}" == ".." ]; then
+  if [[ -d "${file_names[i]}" ]]; then
+    if [[ "${file_names[i]}" == ".." ]]; then
       continue
     fi
     sub_file_string=$(ls -a "${file_names[i]}")
@@ -13,10 +13,10 @@ do
     for j in "${!sub_file_names[@]}"
     do
       extension="${sub_file_names[j]##*.}"
-      if [ "$extension" == "py" ]; then
+      if [[ "$extension" == "py" ]]; then
         echo "${file_names[i]}/${sub_file_names[j]}"
         python "${file_names[i]}/${sub_file_names[j]}"
-        if [ "$?" -ne 0 ]; then
+        if [[ "$?" -ne 0 ]]; then
           exit_code=1
         fi
         echo ""

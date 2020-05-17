@@ -15,8 +15,8 @@ def cut_rod_sub(p, n, r, s):
 
 
 def cut_rod(p, n):
-    r = [-1 for _ in xrange(n + 1)]
-    s = [i for i in xrange(n + 1)]
+    r = [-1 for _ in range(n + 1)]
+    s = [i for i in range(n + 1)]
     cut_rod_sub(p, n, r, s)
     r = r[n]
     subs = []
@@ -29,7 +29,7 @@ def cut_rod(p, n):
 class ProblemTestCase(unittest.TestCase):
 
     def brute_force(self, p, n):
-        r = [0 for _ in xrange(n + 1)]
+        r = [0 for _ in range(n + 1)]
         for j in range(1, n + 1):
             r[j] = p[j]
             for i in range(1, j):
@@ -37,7 +37,7 @@ class ProblemTestCase(unittest.TestCase):
         return r[n]
 
     def test_random(self):
-        for _ in xrange(1000):
+        for _ in range(1000):
             p = [random.randint(0, 100) for _ in range(random.randint(1, 500))]
             p[0] = 0
             n = random.randint(1, 500)

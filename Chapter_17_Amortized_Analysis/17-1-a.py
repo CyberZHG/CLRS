@@ -4,7 +4,7 @@ import unittest
 
 def rev_k(k, a):
     x = 0
-    for _ in xrange(k):
+    for _ in range(k):
         x <<= 1
         x += a & 1
         a >>= 1

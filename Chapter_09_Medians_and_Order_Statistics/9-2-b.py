@@ -5,7 +5,7 @@ import unittest
 def weighted_median(x):
     x.sort()
     s = 0.0
-    for i in xrange(len(x)):
+    for i in range(len(x)):
         s += x[i]
         if s >= 0.5:
             return x[i]
@@ -14,8 +14,8 @@ def weighted_median(x):
 class ProblemTestCase(unittest.TestCase):
 
     def test_random(self):
-        for _ in xrange(1000):
-            a = random.sample(xrange(10000), 1000)
+        for _ in range(1000):
+            a = random.sample(range(10000), 1000)
             s = sum(a)
             x = [float(v) / s for v in a]
             w = weighted_median(x)

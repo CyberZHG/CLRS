@@ -12,7 +12,7 @@ def extended_euclid(a, b):
 class ProblemTestCase(unittest.TestCase):
 
     def test_random(self):
-        for _ in xrange(10000):
+        for _ in range(10000):
             a = random.randint(0, 100000)
             b = random.randint(0, 100000)
             (d, x, y) = extended_euclid(a, b)

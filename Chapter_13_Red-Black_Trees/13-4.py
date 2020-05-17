@@ -121,9 +121,9 @@ class ProblemTestCase(unittest.TestCase):
         self.assertEqual(T.to_list(), [8, 12, 19, 31, 38, 41])
 
     def test_random(self):
-        for _ in xrange(1000):
+        for _ in range(1000):
             T = Treap()
-            a = random.sample(xrange(100000000), 1000)
+            a = random.sample(range(100000000), 1000)
             for v in a:
                 T.insert(v)
             self.check_trep(T)

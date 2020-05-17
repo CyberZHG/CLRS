@@ -94,7 +94,7 @@ class BTree:
         def predecessor_sub(x):
             if x is None:
                 return None
-            for i in xrange(x.n - 1, -1, -1):
+            for i in range(x.n - 1, -1, -1):
                 if k > x.key[i]:
                     c = predecessor_sub(x.c[i + 1])
                     if c is None:
@@ -109,7 +109,7 @@ class BTree:
         def successor_sub(x):
             if x is None:
                 return None
-            for i in xrange(x.n):
+            for i in range(x.n):
                 if k < x.key[i]:
                     c = successor_sub(x.c[i])
                     if c is None:
@@ -142,26 +142,26 @@ class ProblemTestCase(unittest.TestCase):
         tree.display()
         self.assertEqual(tree.minimum(), 'A')
         v = sorted(v)
-        for i in xrange(1, len(v)):
+        for i in range(1, len(v)):
             self.assertEqual(tree.predecessor(v[i]), v[i - 1])
         self.assertEqual(tree.predecessor(v[0]), None)
-        for i in xrange(len(v) - 1):
+        for i in range(len(v) - 1):
             self.assertEqual(tree.successor(v[i]), v[i + 1])
         self.assertEqual(tree.successor(v[len(v) - 1]), None)
 
     def test_random(self):
-        for _ in xrange(1000):
-            v = random.sample(xrange(100000), 1000)
+        for _ in range(1000):
+            v = random.sample(range(100000), 1000)
             t = random.randint(2, 5)
             tree = BTree(t)
             for c in v:
                 tree.insert(c)
             v = sorted(v)
             self.assertEqual(tree.minimum(), v[0])
-            for i in xrange(1, len(v)):
+            for i in range(1, len(v)):
                 self.assertEqual(tree.predecessor(v[i]), v[i - 1])
             self.assertEqual(tree.predecessor(v[0]), None)
-            for i in xrange(len(v) - 1):
+            for i in range(len(v) - 1):
                 self.assertEqual(tree.successor(v[i]), v[i + 1])
             self.assertEqual(tree.successor(v[len(v) - 1]), None)
 

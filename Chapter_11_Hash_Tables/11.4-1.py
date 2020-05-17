@@ -7,7 +7,7 @@ m = 11
 class LinearProbing:
     def __init__(self):
         global m
-        self.slots = [None for _ in xrange(m)]
+        self.slots = [None for _ in range(m)]
 
     def insert(self, key):
         global m
@@ -23,7 +23,7 @@ class LinearProbing:
 class QuadraticProbing:
     def __init__(self):
         global m
-        self.slots = [None for _ in xrange(m)]
+        self.slots = [None for _ in range(m)]
 
     def insert(self, key):
         global m
@@ -39,7 +39,7 @@ class QuadraticProbing:
 class DoubleHashing:
     def __init__(self):
         global m
-        self.slots = [None for _ in xrange(m)]
+        self.slots = [None for _ in range(m)]
 
     def insert(self, key):
         global m

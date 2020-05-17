@@ -25,7 +25,7 @@ class ProblemTestCase(unittest.TestCase):
         return c
 
     def test_random(self):
-        for n in xrange(500):
+        for n in range(500):
             self.assertEqual(fib(n), self.fib(n))
 
 

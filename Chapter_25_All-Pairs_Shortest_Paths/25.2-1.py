@@ -2,29 +2,29 @@ import unittest
 import copy
 
 
-def print_matrix(l):
+def print_matrix(m):
     s = '\\left \\{ \\begin{matrix}\n'
-    n = len(l)
-    for i in xrange(n):
-        for j in xrange(n):
+    n = len(m)
+    for i in range(n):
+        for j in range(n):
             if j > 0:
                 s += ' & '
-            if l[i][j] > 1e50:
+            if m[i][j] > 1e50:
                 s += '\\infty'
             else:
-                s += str(int(l[i][j]))
+                s += str(int(m[i][j]))
         s += '\\\\\n'
     s += '\\end{matrix} \\right \\}\n'
-    print s
+    print(s)
 
 
-def extend_shortest_paths(l, w):
-    n = len(l)
-    ll = [[1e100 for _ in xrange(n)] for _ in xrange(n)]
-    for i in xrange(n):
-        for j in xrange(n):
-            for k in xrange(n):
-                ll[i][j] = min(ll[i][j], l[i][k] + w[k][j])
+def extend_shortest_paths(m, w):
+    n = len(m)
+    ll = [[1e100 for _ in range(n)] for _ in range(n)]
+    for i in range(n):
+        for j in range(n):
+            for k in range(n):
+                ll[i][j] = min(ll[i][j], m[i][k] + w[k][j])
     return ll
 
 
@@ -40,10 +40,10 @@ def fast_all_pairs_shortest_paths(w):
 def floyd_warshall(w):
     n = len(w)
     d = copy.deepcopy(w)
-    for k in xrange(n):
+    for k in range(n):
         dd = copy.deepcopy(d)
-        for i in xrange(n):
-            for j in xrange(n):
+        for i in range(n):
+            for j in range(n):
                 dd[i][j] = min(d[i][j], d[i][k] + d[k][j])
         d = dd
     return d

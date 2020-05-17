@@ -9,9 +9,9 @@ class Matrix:
         a = self.data
         b = x.data
         c = [[0, 0], [0, 0]]
-        for i in xrange(2):
-            for j in xrange(2):
-                for k in xrange(2):
+        for i in range(2):
+            for j in range(2):
+                for k in range(2):
                     c[i][j] += a[i][k] * b[k][j]
         return Matrix(c)
 
@@ -47,7 +47,7 @@ class ProblemTestCase(unittest.TestCase):
         return c
 
     def test_random(self):
-        for n in xrange(5000):
+        for n in range(5000):
             self.assertEqual(fib(n), self.fib(n))
 
 

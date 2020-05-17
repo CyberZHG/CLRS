@@ -30,7 +30,7 @@ class CountTestCase(unittest.TestCase):
                 if a > b:
                     continue
                 num = c.count(a, b)
-                self.assertEqual(num, len(filter(lambda x: a <= x <= b, arr)))
+                self.assertEqual(num, len(list(filter(lambda x: a <= x <= b, arr))))
 
 
 if __name__ == '__main__':

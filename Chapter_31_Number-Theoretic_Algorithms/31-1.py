@@ -24,7 +24,7 @@ class ProblemTestCase(unittest.TestCase):
         return self.gcd(b, a % b)
 
     def test_random(self):
-        for _ in xrange(100000):
+        for _ in range(100000):
             a = random.randint(1, 1000000)
             b = random.randint(1, 1000000)
             self.assertEqual(binary_gcd(a, b), self.gcd(a, b))

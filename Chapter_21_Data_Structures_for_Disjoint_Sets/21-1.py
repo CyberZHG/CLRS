@@ -31,7 +31,7 @@ def off_line_minimum(q, n):
             pos[v] = im = m
     ds = DisjointSetForest(m + 1)
     extracted = [None] * m
-    for i in xrange(1, n + 1):
+    for i in range(1, n + 1):
         j = ds.find_set(pos[i])
         if j < m:
             extracted[j] = i
@@ -48,12 +48,12 @@ class ProblemTestCase(unittest.TestCase):
         self.assertEqual(e, [4, 3, 2, 6, 8, 1])
 
     def test_random(self):
-        for _ in xrange(1000):
+        for _ in range(1000):
             n = random.randint(10, 1000)
             q = list(range(1, n + 1))
             random.shuffle(q)
             m = random.randint(10, 1000)
-            for _ in xrange(m):
+            for _ in range(m):
                 p = random.randint(0, len(q))
                 if p == len(q):
                     q.append('E')
